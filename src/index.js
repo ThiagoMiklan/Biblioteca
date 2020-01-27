@@ -1,0 +1,108 @@
+import React from 'react';
+import ReactDOM from 'react-dom';
+import Table from './biblioteca/Table.jsx';
+import Tag from './biblioteca/Tag.jsx';
+import ProgressBar from './biblioteca/ProgressBar.jsx';
+import './css/bulma.css';
+
+
+var elements_header = [];
+elements_header.push({"value":"Pos","abbr_text":"Position"});
+elements_header.push({"value":"Pld","abbr_text":"PLayed"});
+elements_header.push({"value":"W","abbr_text":"Won"});
+elements_header.push({"value":"D","abbr_text":"Drawn"});
+elements_header.push({"value":"L","abbr_text":"Lost"});
+elements_header.push({"value":"Gl","abbr_text":"Goals for"});
+elements_header.push({"value":"GA","abbr_text":"Gaols Against"});
+elements_header.push({"value":"GD","abbr_text":"Goal diferrence"});
+elements_header.push({"value":"PTS","abbr_text":"Points"});
+elements_header.push("Qualification or Relegation");
+
+var elements_footer = [];
+elements_footer.push("Somália");
+elements_footer.push("Panamá");
+elements_footer.push("Nova Zelândia");
+elements_footer.push("Austrália");
+
+var elements_body1= [];
+elements_body1.push(1);
+elements_body1.push({"value":"Leicester", "have_link":true});
+elements_body1.push(38);
+elements_body1.push(23);
+elements_body1.push(12);
+elements_body1.push(3);
+elements_body1.push(6);
+elements_body1.push(36);
+elements_body1.push(32);
+elements_body1.push("Qualification for the Champions League Group Stage")
+
+
+var elements_body2 = [];
+elements_body2.push(1);
+elements_body2.push({"value":"Leicester", "have_link":true});
+elements_body2.push(38);
+elements_body2.push(23);
+elements_body2.push(12);
+elements_body2.push(3);
+elements_body2.push(6);
+elements_body2.push(36);
+elements_body2.push(32);
+elements_body2.push("Qualification for the Champions League Group Stage")
+
+var elements_body = [];
+
+elements_body[0] = elements_body1;
+elements_body[1] = elements_body2;
+
+  /*
+=================================================
+TESTE TABLE   
+
+ReactDOM.render(
+    <Table rows_header={elements_header} 
+           rows_footer={elements_footer} 
+           rows_body={elements_body}/>,
+
+    document.getElementById('root')
+  );
+==================================================  
+*/
+
+/*
+==================================================  
+TESTE PROGRESS BAR
+ReactDOM.render(
+        <div class="container is-fluid">
+          <ProgressBar definition ="progress" value ="15" max ="100"/>
+          <ProgressBar definition ="progress primary" value ="15" max ="100"/>
+          <ProgressBar definition ="progress link" value ="30" max ="100"/>
+          <ProgressBar definition ="progress info" value ="45" max ="100"/>
+          <ProgressBar definition ="progress sucess" value ="60" max ="100"/>
+          <ProgressBar definition ="progress warning" value ="75" max ="100"/>
+          <ProgressBar definition ="progress danger" value ="90" max ="100"/>
+          <ProgressBar definition ="progress small" value ="15" max="100"/>
+          <ProgressBar definition ="progress medium" value ="15" max="100"/>
+          <ProgressBar definition ="progress large" value ="15" max="100"/>
+        </div>
+       
+    ,
+       document.getElementById('root')
+     );
+
+  //ReactDOM.render(<Button />,document.getElementById('root'));*/
+
+  var tags = [];
+  tags[0] = {"definition": "tag", value:"tag1"} ;
+  tags[1] = {"definition": "tag", value:"tag2"} ;
+
+
+
+  ReactDOM.render(
+    
+    <div>
+    <Tag tag={tags}/>
+   
+    </div>
+  
+  ,document.getElementById('root'));
+  
