@@ -6,14 +6,25 @@ import button_props from '../props/ButtonProps';
 
 class Button extends React.Component {
 
+    constructor(props){
+        super(props);
+
+        this.state  = {definition:props.definition};
+       // this.props.onClick.bind(this);
+    }
+
+   
+
     render() {
         return (
             <button
-                className={classnames(getClassNames(this.props))}>
+                className={classnames(getClassNames(this.state))} onClick={this.props.onClick.bind(this)}>
                 {this.props.button_name}
          </button>);
     }
 }
+
+
 
 function getClassNames(props){
     var definition  = props.definition;

@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import Table from './biblioteca/Table.jsx';
 import Tag from './biblioteca/Tag.jsx';
 import ProgressBar from './biblioteca/ProgressBar.jsx';
+import Button from './biblioteca/Button.jsx';
 import './css/bulma.css';
 
 
@@ -91,6 +92,7 @@ ReactDOM.render(
 
   //ReactDOM.render(<Button />,document.getElementById('root'));*/
 
+  /*
   var tags = [];
   tags[0] = {"definition": "tag", value:"tag1"} ;
   tags[1] = {"definition": "tag", value:"tag2"} ;
@@ -105,4 +107,23 @@ ReactDOM.render(
     </div>
   
   ,document.getElementById('root'));
-  
+  */
+    var count = 0 ;
+  function onClick(){
+    
+    if(count == 0 ){
+      this.setState({definition:"button primary"});
+    }else if(count == 1){
+      this.setState({definition:"button warning"});
+    }else if(count == 2){
+      this.setState({definition:"button info"});
+    }
+
+    count++;
+    
+    //alert("teste");
+  }
+
+  ReactDOM.render(
+    <Button button_name ="Teste" definition="button danger" onClick ={onClick}/>,document.getElementById("root")
+  )
