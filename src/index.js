@@ -5,7 +5,11 @@ import Tag from './biblioteca/Tag.jsx';
 import ProgressBar from './biblioteca/ProgressBar.jsx';
 import Button from './biblioteca/Button.jsx';
 import Content from './biblioteca/Content.jsx';
+import Box from './biblioteca/Box.jsx';
+import Image from './biblioteca/Image.jsx';
+import Notification from './biblioteca/Notification.jsx';
 import './css/bulma.css';
+
 
 /*
 
@@ -122,22 +126,46 @@ ReactDOM.render(
     <Button button_name ="Teste" definition="button danger" onClick ={onClick}/>,document.getElementById("root")
   )*/
 
-  /*
-  var value_content =  [];
-  var value_content_when_list = [
-  {
-    "value" : ["coffeee","tea","milk"],
-    "definition": "UR"
-  },
-  {
-    "value" : ["milk","tea","coffee"],
-    "definition": "UA"
-  }
- ] ;
-  
-  var value_content_when_single = {
-    "value" : ["coffeee","tea","milk"],
-    "definition": "UR"
-  };
+/*
 
-  ReactDOM.render(<Content value ={value_content_when_list}/>,document.getElementById("root"))*/
+==================================================  
+TESTE CONTENT
+var value_content =  [];
+var value_content_when_list = [
+{
+  "value" : ["coffeee","tea","milk"],
+  "definition": "UR"
+},
+{
+  "value" : ["milk","tea","coffee"],
+  "definition": "UA"
+}
+] ;
+ 
+var value_content_when_single = {
+  "value" : ["coffeee","tea","milk"],
+  "definition": "UR"
+};
+
+ReactDOM.render(<Content value ={value_content_when_list}/>,document.getElementById("root"))*/
+
+/*
+ ==================================================  
+  TESTE IMAGE 
+ ReactDOM.render(
+  <div>
+<Image src ="https://versions.bulma.io/0.7.2/images/placeholders/16x16.png" definition ="16x"/>
+<Image src ="https://versions.bulma.io/0.7.2/images/placeholders/128x128.png" definition ="24x"/>
+<Image src ="https://versions.bulma.io/0.7.2/images/placeholders/128x128.png" definition ="32x"/>
+<Image src ="https://versions.bulma.io/0.7.2/images/placeholders/128x128.png" definition ="48x"/>
+<Image src ="https://versions.bulma.io/0.7.2/images/placeholders/128x128.png" definition ="64x"/>
+<Image src ="https://versions.bulma.io/0.7.2/images/placeholders/128x128.png" definition ="96x"/>
+<Image src ="https://versions.bulma.io/0.7.2/images/placeholders/128x128.png" definition ="128x"/>
+</div>
+
+  ,document.getElementById("root")) */
+
+  ReactDOM.render(<Notification definition ="primary" delete ={false} value ="Primar lorem ipsum dolor sit amet, consectetur
+  adipiscing elit lorem ipsum dolor. <strong>Pellentesque risus mi</strong>, tempus quis placerat ut, porta nec nulla. Vestibulum rhoncus ac ex sit amet fringilla. Nullam gravida purus diam, et dictum <a>felis venenatis</a> efficitur. Sit amet,
+  consectetur adipiscing elit"
+  />,document.getElementById("root"))

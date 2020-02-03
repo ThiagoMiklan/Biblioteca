@@ -19,7 +19,7 @@ class Button extends React.Component {
         return (
             <button
                 className={classnames(getClassNames(this.state))} onClick={this.props.onClick.bind(this)}>
-                {this.props.button_name}
+                {this.props.value}
          </button>);
     }
 }
@@ -43,7 +43,7 @@ function getClassNames(props){
 
 
 Button.propTypes = {
-    button_name: PropTypes.string,
+    value: PropTypes.string,
     definition: PropTypes.string,
     onClick: PropTypes.func
 };

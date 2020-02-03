@@ -14,7 +14,8 @@ const button_props = {
     "outlined": "is-outlined",
     "rounded": "is-rounded",
     "hovered":"is-hovered",
-    "active":"is-active"
+    "active":"is-active",
+    "delete": "delete"
 
 }
 
