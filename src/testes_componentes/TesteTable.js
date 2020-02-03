@@ -80,7 +80,7 @@ elements_body[1] = elements_body2;
     
 */
 ReactDOM.render(
-    <Table rows_header={{"value":"Leicester", "have_link":true}} 
+    <Table rows_header={elements_header} 
            rows_footer={elements_footer} 
            rows_body={elements_body}/>,
    document.getElementById('root')
