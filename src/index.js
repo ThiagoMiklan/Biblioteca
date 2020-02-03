@@ -4,8 +4,14 @@ import Table from './biblioteca/Table.jsx';
 import Tag from './biblioteca/Tag.jsx';
 import ProgressBar from './biblioteca/ProgressBar.jsx';
 import Button from './biblioteca/Button.jsx';
+import Content from './biblioteca/Content.jsx';
 import './css/bulma.css';
 
+/*
+
+  
+=================================================
+TESTE TABLE
 
 var elements_header = [];
 elements_header.push({"value":"Pos","abbr_text":"Position"});
@@ -55,10 +61,6 @@ var elements_body = [];
 elements_body[0] = elements_body1;
 elements_body[1] = elements_body2;
 
-  /*
-=================================================
-TESTE TABLE   
-
 ReactDOM.render(
     <Table rows_header={elements_header} 
            rows_footer={elements_footer} 
@@ -66,7 +68,7 @@ ReactDOM.render(
 
     document.getElementById('root')
   );
-==================================================  
+
 */
 
 /*
@@ -93,24 +95,19 @@ ReactDOM.render(
   //ReactDOM.render(<Button />,document.getElementById('root'));*/
 
   /*
+  ==================================================  
+  TESTE TAG
   var tags = [];
-  tags[0] = {"definition": "tag", value:"tag1"} ;
-  tags[1] = {"definition": "tag", value:"tag2"} ;
-
-
-
-  ReactDOM.render(
-    
-    <div>
-    <Tag tag={tags}/>
-   
-    </div>
-  
-  ,document.getElementById('root'));
+  tags[0] = {"definition": "tag primary rounded large light", value:"tag1"} ;
+  tags[1] = {"definition": "tag primary", value:"tag2"} ;
+  ReactDOM.render(<Tag tag={tags}/>,document.getElementById('root'));
   */
-    var count = 0 ;
+
+  /*
+  ==================================================  
+  TESTE STATE BUTTON
+  var count = 0 ;
   function onClick(){
-    
     if(count == 0 ){
       this.setState({definition:"button primary"});
     }else if(count == 1){
@@ -118,12 +115,29 @@ ReactDOM.render(
     }else if(count == 2){
       this.setState({definition:"button info"});
     }
-
     count++;
-    
     //alert("teste");
   }
-
-  ReactDOM.render(
+   ReactDOM.render(
     <Button button_name ="Teste" definition="button danger" onClick ={onClick}/>,document.getElementById("root")
-  )
+  )*/
+
+  /*
+  var value_content =  [];
+  var value_content_when_list = [
+  {
+    "value" : ["coffeee","tea","milk"],
+    "definition": "UR"
+  },
+  {
+    "value" : ["milk","tea","coffee"],
+    "definition": "UA"
+  }
+ ] ;
+  
+  var value_content_when_single = {
+    "value" : ["coffeee","tea","milk"],
+    "definition": "UR"
+  };
+
+  ReactDOM.render(<Content value ={value_content_when_list}/>,document.getElementById("root"))*/

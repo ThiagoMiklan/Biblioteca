@@ -2,7 +2,7 @@ var tag_props ={
     "tag":"tag",
     "black":"is-black",
     "dark": "is-dark",
-    "ligth":"is-ligth",
+    "light":"is-light",
     "white": "is-white",
     "primary": "is-primary",
     "link":"is-link",
