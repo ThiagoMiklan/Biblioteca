@@ -1,5 +1,5 @@
 import React from 'react';
-import getClassName from '../tools/getClassName';
+import getClassName from '../../tools/getClassName';
 import className from 'classnames';
 import {renderToString} from 'react-dom/server'
 

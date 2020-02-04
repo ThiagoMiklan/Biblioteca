@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
-import getClassName from '../tools/getClassName'
+import getClassName from '../../tools/getClassName'
 
 
 class ProgressBar extends React.Component{
@@ -13,7 +13,7 @@ class ProgressBar extends React.Component{
             <progress className={classnames(getClassName(this.props,"ProgressBar"))}
              max={this.props.max} 
              value ={this.props.value}>  
-                15%
+            
             </progress>
         );
 
