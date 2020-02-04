@@ -15,15 +15,32 @@ class Button extends React.Component {
 
    
 
-    render() {
+   /* render() {
         return (
             <button
                 className={classnames(getClassNames(this.state))} onClick={this.props.onClick.bind(this)}>
                 {this.props.value}
          </button>);
+    }*/
+    render() {
+        return (
+            <button
+                className={classnames(getClassNames(this.state))} onClick={getClickEvent(this.props.onClick).bind(this)}>
+                {this.props.value}
+         </button>);
     }
 }
 
+// caso seja informado onClick ele retorna a função retornada, senão retorna uma função vazia. Método criado para evitar problemas com undefined
+function getClickEvent(onClick){
+
+    if(typeof onClick == "function"){
+        return onClick;
+    }else{
+        return ()=> {};
+    }
+    
+}
 
 
 function getClassNames(props){

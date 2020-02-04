@@ -77,6 +77,12 @@ elements_body[1] = elements_body2;
     
     TESTE 5 - Retirar todos
     Resultado: Página em branco, porém sem erros.
+
+    TESTE 6 - Adicionando tipos inválidos ao invés de array
+    Resultado: Não exibe nenhum dos dados quando tipo errado é informado.
+    Para o teste 6 foram informados objetos,string no rows_header, rows_footer e rows_body  e o resultado foi de não aparecer nada
+    Ao informar vazio ex: rows_header ={},o erro é de compilação
+    
     
 */
 ReactDOM.render(

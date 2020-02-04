@@ -20,36 +20,58 @@ class Table extends React.Component {
 
 function assembleHeader(props) {
     var header = "";
-    if (props.rows_header != undefined) {
-        header =
-            <thead>
-                <tr>
-                    {props.rows_header.map(row => assembleRow(row))}
-                </tr>
-            </thead>;
+    try{
+        if(Array.isArray(props.rows_header)){
+            throw new Error("Invalid Argument Object");
+        }
+    
+        if (props.rows_header != undefined) {
+            header =
+                <thead>
+                    <tr>
+                        {props.rows_header.map(row => assembleRow(row))}
+                    </tr>
+                </thead>;
+        }
+    }catch(e){
+        console.log(e.message);
     }
+    
     return header;
 }
 
 function assembleBody(props) {
     var body = "";
-    if (props.rows_body != undefined) {
-        body = <tbody>
-                {props.rows_body.map(row_array => <tr>{row_array.map(row => assembleRowBody(row))}</tr>)}
-        </tbody>;
+    try{
+        if(!Array.isArray(props.rows_body)){
+            throw new Error("Invalid Argument Exception");
+        }
+        if (props.rows_body != undefined) {
+            body = <tbody>
+                    {props.rows_body.map(row_array => <tr>{row_array.map(row => assembleRowBody(row))}</tr>)}
+            </tbody>;
+        }
+    }catch(e){
+        console.log(e.message);
     }
+    
     return body;
 }
 
 function assembleFooter(props) {
     var footer = "";
-    if (props.rows_footer != undefined) {
-        footer = <tfoot>
-            <tr>
-                {props.rows_footer.map(row => assembleRow(row))}
-            </tr>
-        </tfoot>;
+    try{
+        if (props.rows_footer != undefined) {
+            footer = <tfoot>
+                <tr>
+                    {props.rows_footer.map(row => assembleRow(row))}
+                </tr>
+            </tfoot>;
+        }
+    }catch(e){
+        console.log(e.message);
     }
+    
     return footer;
 }
 
