@@ -9,9 +9,9 @@ var object_item = { "value": "More",
                     "localization_menu": "start"
                    };
 
-var itens = [{"value": "teste 1" },
-             {"value": "teste 2"},
-             {"value": "teste 2"}
+var itens = [{"value": "teste 1","start" : true},
+             {"value": "teste 2", "start" : true},
+             {"value": "teste 2", "end": true}
             ];           
 
 ReactDOM.render(
