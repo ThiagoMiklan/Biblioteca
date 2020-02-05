@@ -9,8 +9,8 @@ class NavigationBar extends React.Component {
 
 
     render() {
-        var startItens = getStartItens(this.props.itens);
-        var endItens  =  getEndItens(this.props.itens);
+       // var startItens = getStartItens(this.props.itens);
+        //var endItens  =  getEndItens(this.props.itens);
         return (
             <nav class="navbar">
                 <div class="navbar-brand">
@@ -20,10 +20,10 @@ class NavigationBar extends React.Component {
                 </div>
                 <div className="navbar-menu">
                     <div className="navbar-start">
-                        {assemble(startItens)};
+                        {assemble(this.props.itens_start)}
                     </div>
                     <div className="navbar-end">
-                        {assemble(endItens)}
+                        {assemble(this.props.itens_end)}
                     </div>
                 </div>
             </nav>
@@ -78,7 +78,7 @@ function assembleItens(itens) {
                 More
             </a>
             <div className="navbar-dropdown">
-                {itens.map(item => assembleItem(item, ""))};
+                {itens.map(item => assembleItem(item, ""))}
         </div>
         </div>;
     return itens_code;
@@ -97,7 +97,9 @@ NavigationBar.propTypes = {
     link_brand: PropTypes.string,
     width_brand: PropTypes.number,
     height_brand: PropTypes.number,
-    alt_brand: PropTypes.string
+    alt_brand: PropTypes.string,
+    itens_start : PropTypes.array,
+    itens_end : PropTypes.array
 }
 
 export default NavigationBar;

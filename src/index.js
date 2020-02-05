@@ -4,27 +4,34 @@ import Button from './biblioteca/elements/Button.jsx';
 import NavigationBar from './biblioteca/components/NavigationBar.jsx';
 import './css/bulma.css';
 
-var object_item = { "value": "More",
-                    "definition": "link",
-                    "localization_menu": "start"
-                   };
+var object_item = {
+    "value": "More",
+    "definition": "link",
+    "localization_menu": "start"
+};
 
-var itens = [{"value": "teste 1","start" : true},
-             {"value": "teste 2", "start" : true},
-             {"value": "teste 2", "end": true}
-            ];           
+var itens_start = [ { "value": "teste 1" },
+                    { "value": "teste 2" },
+                    { "value": "teste 3" },
+                  ];
+
+var itens_end = [ { "value": <Button value="testando" definition="primary button"/> },
+                   ];
+
 
 ReactDOM.render(
-    <NavigationBar src_brand ="https://versions.bulma.io/0.7.2/images/bulma-logo.png" 
-                    link_brand ="https://bulma.io"
-                    width_brand = {112}
-                    height_brand ={28}
-                    alt_brand ="Bulma: a modern CSS framework based on Flexbox"
-                    itens ={itens}
-
-                    
-                    />,
-   document.getElementById('root')
-  );
+    <div className="container is-fluid">
+        <NavigationBar src_brand="https://versions.bulma.io/0.7.2/images/bulma-logo.png"
+            link_brand="https://bulma.io"
+            width_brand={112}
+            height_brand={28}
+            alt_brand="Bulma: a modern CSS framework based on Flexbox"
+            itens_start={itens_start}
+            itens_end={itens_end}
+        />
+    </div>
+    ,
+    document.getElementById('root')
+);
 
  
