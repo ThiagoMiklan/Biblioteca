@@ -10,13 +10,36 @@ var object_item = {
     "localization_menu": "start"
 };
 
-var itens_start = [ { "value": "teste 1" },
+var itens_start = [ 
+                    { "value": "teste 1" },
                     { "value": "teste 2" },
                     { "value": "teste 3" },
                   ];
 
-var itens_end = [ { "value": <Button value="testando" definition="primary button"/> },
-                   ];
+var itens_start_2 = [   {"value":"teste 1"},
+                        {"value" :"teste 2"},
+                        [{"value":"teste 1"}, {"value":"teste 2"},{"value": "teste 3"}]
+                    ];
+
+var itens_start_3  = [
+                        {"value":"teste 1"},
+                        {"value":"teste 2"},
+                        {"value":"teste 3"}
+                    ];
+var itens_start_4 = {"value" : "teste 1"}
+var itens_start_5  = [];
+
+var itens_start_6 = [   { "value": <Button value="testando" definition="primary button"/> },
+                        { "value": <Button value="testando" definition="primary button"/> },
+                        [ { "value": <Button value="testando" definition="primary button"/> }, { "value": <Button value="testando" definition="primary button"/> },{"value": "teste 3"}]
+                    ];
+
+
+
+
+var itens_end = [ { "value": <Button value="testando" definition="primary button"/> }];
+
+
 
 
 ReactDOM.render(
@@ -26,8 +49,8 @@ ReactDOM.render(
             width_brand={112}
             height_brand={28}
             alt_brand="Bulma: a modern CSS framework based on Flexbox"
-            itens_start={itens_start}
-            itens_end={itens_end}
+            itens_start={itens_start_3}
+            itens_end={itens_start_3}
         />
     </div>
     ,

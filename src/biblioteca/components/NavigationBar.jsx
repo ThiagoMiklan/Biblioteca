@@ -9,8 +9,7 @@ class NavigationBar extends React.Component {
 
 
     render() {
-       // var startItens = getStartItens(this.props.itens);
-        //var endItens  =  getEndItens(this.props.itens);
+     
         return (
             <nav class="navbar">
                 <div class="navbar-brand">
@@ -32,33 +31,12 @@ class NavigationBar extends React.Component {
     }
 
 }
-// Método passado para função filter da propriedade itens para que filter os itens que irão no start da barra
-function filterStartItens(item) {
-    var start_condition = (item["start"] == true && (item["end"] == false || item["end"] == undefined)) ;
-    // default condition para casa não seja informado nem start e nem end, acontecendo isso é inserido no start
-    var default_condition = (item["start"] == undefined || item["end"] == undefined);
-
-    return start_condition || default_condition; 
-}
-
-//Método passado para função filter da propriedade itens para que filter os itens que irão no start da barra
-function filterEndItens(item) {
-    return item["end"] == true && (item["start"] == false || item["start"] == undefined);
-}
-
-function getStartItens(itens) {
-    return itens.filter(filterStartItens);
-}
-
-function getEndItens(itens) {
-    return itens.filter(filterEndItens);
-}
 
 function assemble(itens) {
     var itens_code = "";
     
     if (Array.isArray(itens)) {
-        // no caso é necessário adicionar primeiro um item para que o dropdown possa funcionar
+       // elimina um array vazio
         if(itens.length > 0){
             itens_code = assembleItens(itens);
         }
@@ -71,24 +49,59 @@ function assemble(itens) {
 }
 
 function assembleItens(itens) {
-
-    var itens_code =
-        <div className="navbar-item has-dropdown is-hoverable">
-            <a className="navbar-link">
-                More
-            </a>
-            <div className="navbar-dropdown">
-                {itens.map(item => assembleItem(item, ""))}
-        </div>
-        </div>;
+    let size = itens.length;
+    var itens_code  = itens.map(item => decideTypeOfItem(item));
     return itens_code;
+}
 
+function decideTypeOfItem(item){
+    var itens_code ="";
+     // se um item for um array (array dentro do array), então ele é um dropdown
+    if(Array.isArray(item)){
+        itens_code = assembleItensDropDown(item);
+    }else{
+    // se não ele conjunto de itens encadeados
+        itens_code = assembleItem(item, "");
+    }
+    return itens_code;
+}
+
+function assembleItensDropDown(itens){
+    var firstitemDropDown = assembleFirstItemDropDown(itens[0]);
+   
+    if(itens.length > 0){
+        itens.splice(0,1);
+    }
+    var itens_code =
+    <div className="navbar-item has-dropdown is-hoverable">
+        {firstitemDropDown}
+        <div className="navbar-dropdown">
+            {itens.map(item => assembleItem(item, ""))}
+        </div>
+    </div>;
+
+    var code = renderToString(itens_code);
+
+    return itens_code;
+}
+
+function assembleFirstItemDropDown(item) {
+    var first_item = "";
+    if (item != undefined) {
+        first_item = <a className="navbar-link">
+            {item["value"]}
+        </a>
+    }
+
+    var code = renderToString(first_item);
+    return first_item;
 }
 
 function assembleItem(item, definition) {
-    var className = "navbar-item " + classname(getClassName(definition, "NavigationBar"));
+    var className = "navbar-item "; //+ classname(getClassName(definition, "NavigationBar"));
+    var x = item["value"];
     var item_code = <a className={className}>{item["value"]}</a>;
-    
+    //var code = renderToString(item_code);
     return item_code;
 }
 
