@@ -6,6 +6,7 @@ import box_props from './BoxProps';
 import image_props from './ImageProps';
 import notification_props from './NotificationProps';
 import navigation_bar_props from './NavigationBarProps';
+import drop_down_props from './DropDown';
 
 const component_path = {
     "ProgressBar": progress_bar_props,
@@ -15,7 +16,8 @@ const component_path = {
     "Box": box_props,
     "Image" : image_props,
     "Notification" : notification_props,
-    "NavigationBar" : navigation_bar_props
+    "NavigationBar" : navigation_bar_props,
+    "DropDown" : drop_down_props
 }
 
 export default component_path;
