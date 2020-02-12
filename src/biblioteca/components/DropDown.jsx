@@ -43,17 +43,18 @@ function decideTypeOfItens(item) {
     } else {
         item_code =  assembleComponentsItens(item)
     }
-
+    var code = renderToString(item_code);
     return item_code;
 }
 
 function assembleItensLinks(item) {
-    return <div className="dropdown-item">{item["value"]}</div>
+    var definition = classname(getClassName("dropdown-item "+item["definition"], "DropDown"));
+    return <a className={definition} href={item["href"]}>{item["value"]}</a>;
 }
 
 function assembleComponentsItens(item) {
-
-    return <a className={item["definition"]} href={item["link"]}>{item["value"]}</a>
+    var definition = classname(getClassName("dropdown-item "+item["definition"],"DropDown"));
+    return <div className="dropdown-item">{item["value"]}</div>;
 }
 
 DropDown.propTypes = {
