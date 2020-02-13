@@ -3,6 +3,13 @@ import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import button_props from '../../props/ButtonProps.js'
 
+/*
+Para construção do button, foi usado um pouco da ideia presente no trabalho correlato
+react-bootstrap, onde o componente button é chamado através do react e lhe é passado um valor
+que definirá sua cor, esse valor é único, como "danger,primary" exatamente como boa parte
+dos componentes foram desenvolvidos, porém sem o uso de tantas tags quanto foi usada pela biblioteca react-bootstrap
+
+*/
 
 class Button extends React.Component {
 

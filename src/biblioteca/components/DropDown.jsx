@@ -8,13 +8,21 @@ import { renderToString } from 'react-dom/server';
 class DropDown extends React.Component {
 
     render() {
+      /*
+      Sério problema ao exibir um dropdown, caso o nome do primeiro não seja um nome muito extenso
+      corre o risco dos itens do dropdown não serem exibidos, necessário checagem completa do problema
+      para evitar bugs no componente
+      !! Problema identificado ao utilizar right(is-right), no caso de erro usado is-active e is-right
+      
+      Não existe
+      */
         var definition = "dropdown " + classname(getClassName(this.props.definition, "DropDown"));
         var dropdown_name = this.props.dropdown_name;
         var code = "";
         return (
           <div class={definition}>
                 <div class="dropdown-trigger">
-                    <Button definition="button primary" value={dropdown_name} />
+                    {this.props.button_dropdown}
                 </div>
                 <div class="dropdown-menu" id="dropdown-menu" role="menu">
                     <div class="dropdown-content">
@@ -60,7 +68,8 @@ function assembleComponentsItens(item) {
 DropDown.propTypes = {
     definition: PropTypes.string,
     dropdown_name: PropTypes.string,
-    itens: PropTypes.array
+    itens: PropTypes.array,
+    button_dropdown: PropTypes.element
 }
 
 export default DropDown;
