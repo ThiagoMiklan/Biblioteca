@@ -15,20 +15,9 @@ class Button extends React.Component {
 
     constructor(props){
         super(props);
-
         this.state  = {definition:props.definition};
-       // this.props.onClick.bind(this);
     }
 
-   
-
-   /* render() {
-        return (
-            <button
-                className={classnames(getClassNames(this.state))} onClick={this.props.onClick.bind(this)}>
-                {this.props.value}
-         </button>);
-    }*/
     render() {
         return (
             <button
@@ -48,7 +37,6 @@ function getClickEvent(onClick){
     }
     
 }
-
 
 function getClassNames(props){
     var definition  = props.definition;

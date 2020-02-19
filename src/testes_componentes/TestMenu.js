@@ -23,4 +23,18 @@ ReactDOM.render(
     document.getElementById('root')
 );
 
-        
+// Observações do estado da arte
+/*
+Biblioteca react-bulma-components
+Componente menu não possibilita a inclusão de interação sobre estrutura de dados,
+observando o fato de que na maioria dos casos é interessante não escrever estaticamente
+o valor de cada item, mas sim ter uma certa dinâmica ao popular os componentes, o que não se 
+alcança com a biblioteca referida, sendo necessário sempre que deseja-se um valor no item
+digitá-lo, tornando-o estático. Ao contrário do que foi desenvolvido no componente Menu.jsx da nossa
+biblioteca, que permite o envio de um array para popular, caso queira-se montar uma tabela
+a partir de dados de um banco, é plenamente possível criar um metódo que monta o dado na estrutura
+exigida pelo componente.
+
+
+*/
+
