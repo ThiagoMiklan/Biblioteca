@@ -1,22 +1,22 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './css/bulma.css';
-import BreadCrumb from './biblioteca/components/BreadCrumb';
+import Title from './biblioteca/elements/Title';
+import {renderToString} from 'react-dom/server';
 
-/*
-Caso queira informar vários itens passar um array de itens
-Caso não queira passar definição, apenas não informar "definition no corpo do componente"
-Caso queira passar um único item, apenas passar um objeto
+var x = <>
+<Title definition="1" value="Título 1"/>
+<Title definition="2" value="Título 2"/>
+<Title definition="3" value="Título 3"/>
+<Title definition="4" value="Título 4"/>
+<Title definition="5" value="Título 5"/>
+<Title definition="6" value="Título 6"/>
+</>;
+var z = renderToString(x);
 
-*/
-
-var itens = [
-            {value: "Bulma",link:"https://bulma.io/", definition: "active"}, {value:"Documentation"}, {value:"Componentes"},{value: "BreadCrumb" ,definition:"active"}
-];
-
+var y = 0;
 ReactDOM.render( 
-<div className ="container is-fluid">
-    <BreadCrumb  itens = {{value:"Componentes", }}/>
-</div>,
-    document.getElementById('root')
+    x
+,
+document.getElementById('root')
 );

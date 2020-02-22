@@ -10,6 +10,7 @@ import drop_down_props from './DropDown';
 import menu_props from './MenuProps';
 import message_props from './MessageProps';
 import bread_crumb_props from './BreadCrumbProps';
+import title_props from './TitleProps';
 
 const component_path = {
     "ProgressBar": progress_bar_props,
@@ -23,7 +24,8 @@ const component_path = {
     "DropDown" : drop_down_props,
     "Menu": menu_props,
     "Message": message_props,
-    "BreadCrumb" : bread_crumb_props
+    "BreadCrumb" : bread_crumb_props,
+    "Title": title_props
 }
 
 export default component_path;

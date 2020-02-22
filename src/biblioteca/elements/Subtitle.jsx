@@ -1,15 +1,16 @@
-import React from 'react';
+import {React,useState} from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import getClassName from '../../tools/getClassName'
 import {renderToString} from 'react-dom/server'
 
 
-const Title = (props)=>{
-    return assembleSubTitle(props)
-};
-     
-function assembleSubTitle(props){
+const Subtitle = (props)=>{
+    
+    return assembleTitle(props);
+}
+
+function assembleTitle(props){
      var map = mapFunctionsTitle();
      var definition =  "subtitle "+ classnames(getClassName(props.definition,"Title"));
      var title = map.get(props.definition)(definition,props.value);
@@ -56,9 +57,5 @@ var assembleH6 = (definition,value) =>{
 }
 
 
-Title.propTypes ={
-    value: PropTypes.string.isRequired,
-    definition: PropTypes.string.isRequired
-}
 
-export default Title;
+export default Subtitle;

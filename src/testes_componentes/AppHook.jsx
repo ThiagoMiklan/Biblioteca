@@ -1,27 +1,34 @@
 import React from 'react';
-import Button from '../biblioteca/elements/Button';
+import {useState} from 'react';
+import ReactDOM from 'react-dom';
+import '../css/bulma.css';
+import ButtonHook from '../hooks/ButtonHook'
 
-class App extends React.Component {
-   
-    state = {
-      modalOpen: false,
-    }
-  
-    render() {
-      return (
-        <div>
-          <button onClick={() => this.setState({ modalOpen: true })}>
-            Exibir modal
-          </button>
-          <button onClick={() => this.setState({ modalOpen: false })}>
-            Remover modal
-          </button>
-  
-          { this.state.modalOpen && <Button definition="button primary" value="testando
-          "/> }
-        </div>
-      );
-    }
+var estadoInicial = {
+  definition: 'button is-primary'
+}
+
+function useModelo() {
+
+  const [estado, setEstado] = useState(estadoInicial)
+
+  function onDataValida () {
+    //setEstado({definition: 'button is-danger'})
+    alert("deu certo");
   }
 
-  export default App;
+  return [ estado,  {onDataValida} ]
+}
+
+
+function App () {
+  const [ estado,  {onDataValida} ] = useModelo()
+ 
+        return (
+        <ButtonHook definition ={estado.definition} onClick={onDataValida} />
+          
+  )  
+}
+
+
+export default App;
