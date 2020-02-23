@@ -4,10 +4,9 @@ import component_path from '../props/ComponentPath'
 
 const getClassName = function getClassNames(definition,component_name){
     // consult component_path defined in ComponentPath and pass the component name, in order to return its properties defined in component
-    if(definition != undefined){
-        var classObj = new Object();
+    if(definition !== undefined){
+        var classObj = {};
         var component_props = component_path[component_name];
-        var definition  = definition;
         var array_definition = definition.split(" ");
         var size = array_definition.length;
         

@@ -21,7 +21,6 @@ const image_props ={
         "3by2" : "image is-3by2",
         "5by3" : "image is-5by3",
         "16by9": "image is-16by9",
-        "2by1" : "image is-2by1",
         "3by1": "image is-3by1",
         "4by5" : "image is-4by5",
         "3by4" : "image is-3by4",

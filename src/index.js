@@ -1,22 +1,34 @@
-import React from 'react';
+import React, { useState } from 'react';
 import ReactDOM from 'react-dom';
 import './css/bulma.css';
-import Title from './biblioteca/elements/Title';
-import {renderToString} from 'react-dom/server';
+import Button from './hooks/ButtonHook';
 
-var x = <>
-<Title definition="1" value="Título 1"/>
-<Title definition="2" value="Título 2"/>
-<Title definition="3" value="Título 3"/>
-<Title definition="4" value="Título 4"/>
-<Title definition="5" value="Título 5"/>
-<Title definition="6" value="Título 6"/>
-</>;
-var z = renderToString(x);
+var clickCount = 0;
 
-var y = 0;
+const Helper = (props)=>{
+    const[definition,setDefinition] =  useState("button is-primary");
+    
+    var onClickFunc = ()=>{
+       
+        if(clickCount == 0){
+            setDefinition("button is-danger");
+        }else if(clickCount == 1){
+            setDefinition("button is-warning");
+        }else if(clickCount == 2){
+            setDefinition("button is-info");
+        }else if(clickCount == 3){
+            setDefinition("button is-info");
+        }
+        
+        clickCount =  clickCount + 1;
+    };
+
+    return <Button definition={definition} value="testando hooks denovo" onClick={onClickFunc}/>
+}
+
+
+
 ReactDOM.render( 
-    x
-,
-document.getElementById('root')
-);
+   <Helper/>
+ ,
+document.getElementById('root'));
