@@ -12,6 +12,10 @@ import message_props from './MessageProps';
 import bread_crumb_props from './BreadCrumbProps';
 import title_props from './TitleProps';
 import pagination_props from './PaginationProps';
+import card_props from './CardProps';
+import panel_props from './PanelProps';
+import input_props from './InputProps';
+import tabs_props from './TabsProps';
 
 const component_path = {
     "ProgressBar": progress_bar_props,
@@ -27,7 +31,11 @@ const component_path = {
     "Message": message_props,
     "BreadCrumb" : bread_crumb_props,
     "Title": title_props,
-    "Pagination" : pagination_props
+    "Pagination" : pagination_props,
+    "Card" : card_props,
+    "Panel" : panel_props,
+    "Input" : input_props,
+    "Tabs" : tabs_props
 }
 
 export default component_path;
