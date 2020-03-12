@@ -14,7 +14,7 @@ class Notification extends React.Component{
         return(
             <div className={definition}>
                 {addButtonDelete(this.props)}
-                {this.props.value}
+                {this.props.children}
             </div>
         );
     }
@@ -35,9 +35,7 @@ function addButtonDelete(props){
 
 Notification.propTypes = {
     definition: PropTypes.string,
-    value: PropTypes.string,
     delete : PropTypes.bool
-
 }
 
 export default Notification;

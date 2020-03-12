@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import button_props from '../../props/ButtonProps.js'
+import getClassNames from '../../tools/getClassName';
 
 /*
 Para construção do button, foi usado um pouco da ideia presente no trabalho correlato
@@ -20,8 +21,8 @@ class Button extends React.Component {
 
     render() {
         return (
-            <button
-                className={classnames(getClassNames(this.state))} onClick={getClickEvent(this.props.onClick).bind(this)}>
+            
+            <button disabled = {this.props.disabled == true? true: false } className={classnames(getClassNames("button "+ this.state.definition,"Button"))} onClick={getClickEvent(this.props.onClick).bind(this)}>
                 {this.props.value}
          </button>);
     }
@@ -38,20 +39,6 @@ function getClickEvent(onClick){
     
 }
 
-function getClassNames(props){
-    var definition  = props.definition;
-    var array_definition = definition.split(" ");
-    var size = array_definition.length;
-    var classObj = new Object();
-    
-    for(let i = 0 ; i < size ;i++){
-        let key =  (button_props[array_definition[i]]);
-        let value = (button_props[array_definition[i]]);
-        classObj[key] = value;
-    }
-    
-    return classObj;
-}
 
 
 Button.propTypes = {

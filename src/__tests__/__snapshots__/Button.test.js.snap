@@ -1,0 +1,747 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`button list size correctly 1`] = `
+<div
+  className="buttons are-small"
+>
+  <button
+    className="button"
+    disabled={false}
+    onClick={[Function]}
+  >
+    Small
+  </button>
+  <button
+    className="button"
+    disabled={false}
+    onClick={[Function]}
+  >
+    Small
+  </button>
+  <button
+    className="button"
+    disabled={false}
+    onClick={[Function]}
+  >
+    Small
+  </button>
+</div>
+`;
+
+exports[`button list size correctly 2`] = `
+<div
+  className="buttons are-medium"
+>
+  <button
+    className="button"
+    disabled={false}
+    onClick={[Function]}
+  >
+    Medium
+  </button>
+  <button
+    className="button"
+    disabled={false}
+    onClick={[Function]}
+  >
+    Medium
+  </button>
+  <button
+    className="button"
+    disabled={false}
+    onClick={[Function]}
+  >
+    Medium
+  </button>
+</div>
+`;
+
+exports[`button list size correctly 3`] = `
+<div
+  className="buttons are-large"
+>
+  <button
+    className="button"
+    disabled={false}
+    onClick={[Function]}
+  >
+    Large
+  </button>
+  <button
+    className="button"
+    disabled={false}
+    onClick={[Function]}
+  >
+    Large
+  </button>
+  <button
+    className="button"
+    disabled={false}
+    onClick={[Function]}
+  >
+    Large
+  </button>
+</div>
+`;
+
+exports[`buttons size correctly 1`] = `
+<div
+  className="buttons"
+>
+  <button
+    className="button is-small"
+    disabled={false}
+    onClick={[Function]}
+  >
+    testando
+  </button>
+  <button
+    className="button"
+    disabled={false}
+    onClick={[Function]}
+  >
+    testando
+  </button>
+  <button
+    className="button is-normal"
+    disabled={false}
+    onClick={[Function]}
+  >
+    testando
+  </button>
+  <button
+    className="button is-medium"
+    disabled={false}
+    onClick={[Function]}
+  >
+    testando
+  </button>
+  <button
+    className="button is-large"
+    disabled={false}
+    onClick={[Function]}
+  >
+    testando
+  </button>
+</div>
+`;
+
+exports[`color correctly 1`] = `
+<div
+  className="buttons"
+>
+  <button
+    className="button"
+    disabled={false}
+    onClick={[Function]}
+  >
+    testando
+  </button>
+  <button
+    className="button is-primary"
+    disabled={false}
+    onClick={[Function]}
+  >
+    testando
+  </button>
+  <button
+    className="button is-link"
+    disabled={false}
+    onClick={[Function]}
+  >
+    testando
+  </button>
+  <button
+    className="button is-info"
+    disabled={false}
+    onClick={[Function]}
+  >
+    testando
+  </button>
+  <button
+    className="button is-success"
+    disabled={false}
+    onClick={[Function]}
+  >
+    testando
+  </button>
+  <button
+    className="button is-warning"
+    disabled={false}
+    onClick={[Function]}
+  >
+    testando
+  </button>
+  <button
+    className="button is-danger"
+    disabled={false}
+    onClick={[Function]}
+  >
+    testando
+  </button>
+</div>
+`;
+
+exports[`color secundary correctly 1`] = `
+<div
+  className="buttons"
+>
+  <button
+    className="button is-white"
+    disabled={false}
+    onClick={[Function]}
+  >
+    testando
+  </button>
+  <button
+    className="button is-light"
+    disabled={false}
+    onClick={[Function]}
+  >
+    testando
+  </button>
+  <button
+    className="button is-dark"
+    disabled={false}
+    onClick={[Function]}
+  >
+    testando
+  </button>
+  <button
+    className="button is-black"
+    disabled={false}
+    onClick={[Function]}
+  >
+    testando
+  </button>
+  <button
+    className="button is-text"
+    disabled={false}
+    onClick={[Function]}
+  >
+    testando
+  </button>
+</div>
+`;
+
+exports[`colors light correctly 1`] = `
+<div
+  className="buttons"
+>
+  <button
+    className="button is-primary is-light"
+    disabled={false}
+    onClick={[Function]}
+  >
+    testando
+  </button>
+  <button
+    className="button is-link is-light"
+    disabled={false}
+    onClick={[Function]}
+  >
+    testando
+  </button>
+  <button
+    className="button is-info is-light"
+    disabled={false}
+    onClick={[Function]}
+  >
+    testando
+  </button>
+  <button
+    className="button is-success is-light"
+    disabled={false}
+    onClick={[Function]}
+  >
+    testando
+  </button>
+  <button
+    className="button is-warning is-light"
+    disabled={false}
+    onClick={[Function]}
+  >
+    testando
+  </button>
+  <button
+    className="button is-danger is-light"
+    disabled={false}
+    onClick={[Function]}
+  >
+    testando
+  </button>
+</div>
+`;
+
+exports[`disabled corretly 1`] = `
+<div
+  className="buttons"
+>
+  <button
+    className="button"
+    disabled={true}
+    onClick={[Function]}
+  >
+    testando
+  </button>
+  <button
+    className="button is-primary"
+    disabled={true}
+    onClick={[Function]}
+  >
+    testando
+  </button>
+  <button
+    className="button is-link"
+    disabled={true}
+    onClick={[Function]}
+  >
+    testando
+  </button>
+  <button
+    className="button is-info"
+    disabled={true}
+    onClick={[Function]}
+  >
+    testando
+  </button>
+  <button
+    className="button is-success"
+    disabled={true}
+    onClick={[Function]}
+  >
+    testando
+  </button>
+  <button
+    className="button is-warning"
+    disabled={true}
+    onClick={[Function]}
+  >
+    testando
+  </button>
+  <button
+    className="button is-danger"
+    disabled={true}
+    onClick={[Function]}
+  >
+    testando
+  </button>
+</div>
+`;
+
+exports[`fullwidth  correctly 1`] = `
+<div
+  className="buttons"
+>
+  <button
+    className="button is-small is-fullwidth"
+    disabled={false}
+    onClick={[Function]}
+  >
+    Small
+  </button>
+  <button
+    className="button is-fullwidth"
+    disabled={false}
+    onClick={[Function]}
+  >
+    Normal
+  </button>
+  <button
+    className="button is-medium is-fullwidth"
+    disabled={false}
+    onClick={[Function]}
+  >
+    Medium
+  </button>
+  <button
+    className="button is-large is-fullwidth"
+    disabled={false}
+    onClick={[Function]}
+  >
+    Large
+  </button>
+</div>
+`;
+
+exports[`inverted  correctly 1`] = `
+<div
+  className="buttons"
+>
+  <button
+    className="button is-primary is-inverted"
+    disabled={false}
+    onClick={[Function]}
+  >
+    testando
+  </button>
+  <button
+    className="button is-link is-inverted"
+    disabled={false}
+    onClick={[Function]}
+  >
+    testando
+  </button>
+  <button
+    className="button is-info is-inverted"
+    disabled={false}
+    onClick={[Function]}
+  >
+    testando
+  </button>
+  <button
+    className="button is-success is-inverted"
+    disabled={false}
+    onClick={[Function]}
+  >
+    testando
+  </button>
+  <button
+    className="button is-danger is-inverted"
+    disabled={false}
+    onClick={[Function]}
+  >
+    testando
+  </button>
+</div>
+`;
+
+exports[`loading corretly 1`] = `
+<div
+  className="buttons"
+>
+  <button
+    className="button is-loading"
+    disabled={false}
+    onClick={[Function]}
+  >
+    testando
+  </button>
+  <button
+    className="button is-primary is-loading"
+    disabled={false}
+    onClick={[Function]}
+  >
+    testando
+  </button>
+  <button
+    className="button is-link is-loading"
+    disabled={false}
+    onClick={[Function]}
+  >
+    testando
+  </button>
+  <button
+    className="button is-info is-loading"
+    disabled={false}
+    onClick={[Function]}
+  >
+    testando
+  </button>
+  <button
+    className="button is-success is-loading"
+    disabled={false}
+    onClick={[Function]}
+  >
+    testando
+  </button>
+  <button
+    className="button is-warning is-loading"
+    disabled={false}
+    onClick={[Function]}
+  >
+    testando
+  </button>
+  <button
+    className="button is-danger is-loading"
+    disabled={false}
+    onClick={[Function]}
+  >
+    testando
+  </button>
+</div>
+`;
+
+exports[`outlined  correctly 1`] = `
+<div
+  className="buttons"
+>
+  <button
+    className="button is-primary is-outlined"
+    disabled={false}
+    onClick={[Function]}
+  >
+    testando
+  </button>
+  <button
+    className="button is-link is-outlined"
+    disabled={false}
+    onClick={[Function]}
+  >
+    testando
+  </button>
+  <button
+    className="button is-info is-outlined"
+    disabled={false}
+    onClick={[Function]}
+  >
+    testando
+  </button>
+  <button
+    className="button is-success is-outlined"
+    disabled={false}
+    onClick={[Function]}
+  >
+    testando
+  </button>
+  <button
+    className="button is-warning is-outlined"
+    disabled={false}
+    onClick={[Function]}
+  >
+    testando
+  </button>
+  <button
+    className="button is-danger is-outlined"
+    disabled={false}
+    onClick={[Function]}
+  >
+    testando
+  </button>
+</div>
+`;
+
+exports[`rounded  correctly 1`] = `
+<div
+  className="buttons"
+>
+  <button
+    className="button is-primary is-rounded"
+    disabled={false}
+    onClick={[Function]}
+  >
+    testando
+  </button>
+  <button
+    className="button is-link is-rounded"
+    disabled={false}
+    onClick={[Function]}
+  >
+    testando
+  </button>
+  <button
+    className="button is-info is-rounded"
+    disabled={false}
+    onClick={[Function]}
+  >
+    testando
+  </button>
+  <button
+    className="button is-success is-rounded"
+    disabled={false}
+    onClick={[Function]}
+  >
+    testando
+  </button>
+  <button
+    className="button is-warning is-rounded"
+    disabled={false}
+    onClick={[Function]}
+  >
+    testando
+  </button>
+  <button
+    className="button is-danger is-rounded"
+    disabled={false}
+    onClick={[Function]}
+  >
+    testando
+  </button>
+</div>
+`;
+
+exports[`rounded  correctly 2`] = `
+<div
+  className="buttons"
+>
+  <button
+    className="button"
+    disabled={false}
+    onClick={[Function]}
+  >
+    testando
+  </button>
+  <button
+    className="button is-primary is-hovered"
+    disabled={false}
+    onClick={[Function]}
+  >
+    testando
+  </button>
+  <button
+    className="button is-link is-hovered"
+    disabled={false}
+    onClick={[Function]}
+  >
+    testando
+  </button>
+  <button
+    className="button is-info is-hovered"
+    disabled={false}
+    onClick={[Function]}
+  >
+    testando
+  </button>
+  <button
+    className="button is-success is-hovered"
+    disabled={false}
+    onClick={[Function]}
+  >
+    testando
+  </button>
+  <button
+    className="button is-warning is-hovered"
+    disabled={false}
+    onClick={[Function]}
+  >
+    testando
+  </button>
+  <button
+    className="button is-danger is-hovered"
+    disabled={false}
+    onClick={[Function]}
+  >
+    testando
+  </button>
+</div>
+`;
+
+exports[`rounded  correctly 3`] = `
+<div
+  className="buttons"
+>
+  <button
+    className="button"
+    disabled={false}
+    onClick={[Function]}
+  >
+    testando
+  </button>
+  <button
+    className="button is-primary is-focused"
+    disabled={false}
+    onClick={[Function]}
+  >
+    testando
+  </button>
+  <button
+    className="button is-link is-focused"
+    disabled={false}
+    onClick={[Function]}
+  >
+    testando
+  </button>
+  <button
+    className="button is-info is-focused"
+    disabled={false}
+    onClick={[Function]}
+  >
+    testando
+  </button>
+  <button
+    className="button is-success is-focused"
+    disabled={false}
+    onClick={[Function]}
+  >
+    testando
+  </button>
+  <button
+    className="button is-warning is-focused"
+    disabled={false}
+    onClick={[Function]}
+  >
+    testando
+  </button>
+  <button
+    className="button is-danger is-focused"
+    disabled={false}
+    onClick={[Function]}
+  >
+    testando
+  </button>
+</div>
+`;
+
+exports[`rounded  correctly 4`] = `
+<div
+  className="buttons"
+>
+  <button
+    className="button"
+    disabled={false}
+    onClick={[Function]}
+  >
+    testando
+  </button>
+  <button
+    className="button is-primary is-active"
+    disabled={false}
+    onClick={[Function]}
+  >
+    testando
+  </button>
+  <button
+    className="button is-link is-active"
+    disabled={false}
+    onClick={[Function]}
+  >
+    testando
+  </button>
+  <button
+    className="button is-info is-active"
+    disabled={false}
+    onClick={[Function]}
+  >
+    testando
+  </button>
+  <button
+    className="button is-success is-active"
+    disabled={false}
+    onClick={[Function]}
+  >
+    testando
+  </button>
+  <button
+    className="button is-warning is-active"
+    disabled={false}
+    onClick={[Function]}
+  >
+    testando
+  </button>
+  <button
+    className="button is-danger is-active"
+    disabled={false}
+    onClick={[Function]}
+  >
+    testando
+  </button>
+</div>
+`;
+
+exports[`value correctly 1`] = `
+<button
+  className="button"
+  disabled={false}
+  onClick={[Function]}
+>
+  Facebook
+</button>
+`;
+
+exports[`value correctly 2`] = `
+<button
+  className="button"
+  disabled={false}
+  onClick={[Function]}
+/>
+`;

@@ -16,8 +16,12 @@ import card_props from './CardProps';
 import panel_props from './PanelProps';
 import input_props from './InputProps';
 import tabs_props from './TabsProps';
+import button_props from './ButtonProps';
+import button_list from './ButtonListProps';
 
 const component_path = {
+    "Button": button_props,
+    "ButtonList" :button_list,
     "ProgressBar": progress_bar_props,
     "Table": table_props,
     "Tag": tag_props,
