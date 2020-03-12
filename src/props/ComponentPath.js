@@ -18,6 +18,7 @@ import input_props from './InputProps';
 import tabs_props from './TabsProps';
 import button_props from './ButtonProps';
 import button_list from './ButtonListProps';
+import icon_props from './IconProps';
 
 const component_path = {
     "Button": button_props,
@@ -39,7 +40,8 @@ const component_path = {
     "Card" : card_props,
     "Panel" : panel_props,
     "Input" : input_props,
-    "Tabs" : tabs_props
+    "Tabs" : tabs_props,
+    "Icon": icon_props
 }
 
 export default component_path;

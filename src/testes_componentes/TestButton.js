@@ -11,139 +11,140 @@ var onClick = ()=>{
 ReactDOM.render(
 <>
 <ButtonList>
-<Button value="testando" />
-<Button value="testando" definition="primary"/>
-<Button value="testando" definition="link"/>
-<Button value="testando" definition="info"/> 
-<Button value="testando" definition="success"/> 
-<Button value="testando" definition="warning"/>
-<Button value="testando" definition="danger"/>
+<Button>Testando</Button>
+<Button  definition="primary">Testando</Button>
+<Button  definition="link"> Testando</Button>
+<Button  definition="info"> Testando</Button>
+<Button  definition="success"> Testando</Button>
+<Button  definition="warning"> Testando</Button>
+<Button  definition="danger"> Testando</Button>
 </ButtonList>
 
 <ButtonList>
-<Button value="testando" definition="white"/>
-<Button value="testando" definition="light"/> 
-<Button value="testando" definition="dark"/> 
-<Button value="testando" definition="black"/>
-<Button value="testando" definition="text"/>
+<Button  definition="white"> Testando</Button>
+<Button  definition="light"> Testando</Button>
+<Button  definition="dark"> Testando</Button>
+<Button  definition="black"> Testando</Button>
+<Button  definition="text"> Testando</Button>
 </ButtonList>
 
 <ButtonList>
-<Button value="testando" definition="primary light"/>
-<Button value="testando" definition="link light"/>
-<Button value="testando" definition="info light"/> 
-<Button value="testando" definition="success light"/> 
-<Button value="testando" definition="warning light"/>
-<Button value="testando" definition="danger light"/>
+<Button  definition="primary light"> Testando</Button>
+<Button  definition="link light"> Testando</Button>
+<Button  definition="info light"> Testando</Button>
+<Button  definition="success light"> Testando</Button>
+<Button  definition="warning light"> Testando</Button>
+<Button  definition="danger light"> Testando</Button>
+
 </ButtonList>
 
 <ButtonList>
-<Button value="testando" definition="button small"/> 
-<Button value="testando" />
-<Button value="testando" definition="button normal"/>
-<Button value="testando" definition="button medium"/>
-<Button value="testando" definition="button large"/>
+<Button  definition="button small"> Testando</Button>
+<Button  > Testando</Button>
+<Button  definition="button normal"> Testando</Button>
+<Button  definition="button medium"> Testando</Button>
+<Button  definition="button large"> Testando</Button>
 </ButtonList>
 
 <ButtonList definition="small">
-<Button value="Small" />
-<Button value="Small" />
-<Button value="Small" />
+<Button  > Testando</Button>
+<Button  > Testando</Button>
+<Button  > Testando</Button>
 </ButtonList>
 
 <ButtonList definition="medium">
-<Button value="Medium"/>
-<Button value="Medium"/>
-<Button value="Medium"/>
+<Button > Testando</Button>
+<Button > Testando</Button>
+<Button > Testando</Button>
 </ButtonList>
 
 <ButtonList definition="large">
-<Button value="Large"/>
-<Button value="Large"/>
-<Button value="Large"/>
+<Button > Testando</Button>
+<Button > Testando</Button>
+<Button > Testando</Button>
 </ButtonList>
 
 <ButtonList>
-<Button value="Small" definition="small fullwidth"/>
-<Button value="Normal" definition="fullwidth"/>
-<Button value="Medium" definition="medium fullwidth"/>
-<Button value="Large"definition="large fullwidth"/>
+<Button  definition="small fullwidth"> Testando</Button>
+<Button  definition="fullwidth"> Testando</Button>
+<Button  definition="medium fullwidth"> Testando</Button>
+<Button definition="large fullwidth"> Testando</Button>
 </ButtonList>
 
 <ButtonList>
-<Button value="testando" definition="primary outlined"/>
-<Button value="testando" definition="link outlined"/>
-<Button value="testando" definition="info outlined"/> 
-<Button value="testando" definition="success outlined"/> 
-<Button value="testando" definition="warning outlined"/>
-<Button value="testando" definition="danger outlined"/>
+<Button  definition="primary outlined"> Testando</Button>
+<Button  definition="link outlined"> Testando</Button>
+<Button  definition="info outlined"> Testando</Button>
+<Button  definition="success outlined"> Testando</Button>
+<Button  definition="warning outlined"> Testando</Button>
+<Button  definition="danger outlined"> Testando</Button>
 </ButtonList>
 
 <ButtonList definition="primary">
-<Button value="testando" definition="primary inverted"/>
-<Button value="testando" definition="link inverted"/>
-<Button value="testando" definition="info inverted"/> 
-<Button value="testando" definition="success inverted"/> 
-<Button value="testando" definition="danger inverted"/>
+<Button  definition="primary inverted"> Testando</Button>
+<Button  definition="link inverted"> Testando</Button>
+<Button  definition="info inverted"> Testando</Button>
+<Button  definition="success inverted"> Testando</Button>
+<Button  definition="danger inverted"> Testando</Button>
 </ButtonList>
 
 <ButtonList>
-<Button value="testando" definition="primary rounded"/>
-<Button value="testando" definition="link rounded"/>
-<Button value="testando" definition="info rounded"/> 
-<Button value="testando" definition="success rounded"/> 
-<Button value="testando" definition="warning rounded"/>
-<Button value="testando" definition="danger rounded"/>
+<Button  definition="primary rounded"> Testando</Button>
+<Button  definition="link rounded"> Testando</Button>
+<Button  definition="info rounded"> Testando</Button>
+<Button  definition="success rounded"> Testando</Button>
+<Button  definition="warning rounded"> Testando</Button>
+<Button  definition="danger rounded"> Testando</Button>
 </ButtonList>
 
 <ButtonList>
-<Button value="testando" />
-<Button value="testando" definition="primary hovered"/>
-<Button value="testando" definition="link hovered"/>
-<Button value="testando" definition="info hovered"/> 
-<Button value="testando" definition="success hovered"/> 
-<Button value="testando" definition="warning hovered"/>
-<Button value="testando" definition="danger hovered"/>
+<Button  > Testando</Button>
+<Button  definition="primary hovered"> Testando</Button>
+<Button  definition="link hovered"> Testando</Button>
+<Button  definition="info hovered"> Testando</Button>
+<Button  definition="success hovered"> Testando</Button>
+<Button  definition="warning hovered"> Testando</Button>
+<Button  definition="danger hovered"> Testando</Button>
 </ButtonList>
 
 <ButtonList>
-<Button value="testando" />
-<Button value="testando" definition="primary focused"/>
-<Button value="testando" definition="link focused"/>
-<Button value="testando" definition="info focused"/> 
-<Button value="testando" definition="success focused"/> 
-<Button value="testando" definition="warning focused"/>
-<Button value="testando" definition="danger focused"/>
+<Button  />
+<Button  definition="primary focused"> Testando</Button>
+<Button  definition="link focused"> Testando</Button>
+<Button  definition="info focused"> Testando</Button>
+<Button  definition="success focused"> Testando</Button>
+<Button  definition="warning focused"> Testando</Button>
+<Button  definition="danger focused"> Testando</Button>
 </ButtonList>
 
 <ButtonList>
-<Button value="testando" />
-<Button value="testando" definition="primary active"/>
-<Button value="testando" definition="link active"/>
-<Button value="testando" definition="info active"/> 
-<Button value="testando" definition="success active"/> 
-<Button value="testando" definition="warning active"/>
-<Button value="testando" definition="danger active"/>
+<Button  />
+<Button  definition="primary active"> Testando</Button>
+<Button  definition="link active"> Testando</Button>
+<Button  definition="info active"> Testando</Button>
+<Button  definition="success active"> Testando</Button>
+<Button  definition="warning active"> Testando</Button>
+<Button  definition="danger active"> Testando</Button>
 </ButtonList>
 
 <ButtonList>
-<Button value="testando" definition="loading"/>
-<Button value="testando" definition="primary loading"/>
-<Button value="testando" definition="link loading"/>
-<Button value="testando" definition="info loading"/> 
-<Button value="testando" definition="success loading"/> 
-<Button value="testando" definition="warning loading"/>
-<Button value="testando" definition="danger loading"/>
+<Button  definition="loading"> Testando</Button>
+<Button  definition="primary loading"> Testando</Button>
+<Button  definition="link loading"> Testando</Button>
+<Button  definition="info loading"> Testando</Button>
+<Button  definition="success loading"> Testando</Button>
+<Button  definition="warning loading"> Testando</Button>
+<Button  definition="danger loading"> Testando</Button>
 </ButtonList>
 
 <ButtonList>
-<Button value="testando" disabled={true} />
-<Button value="testando" definition="primary" disabled={true} />
-<Button value="testando" definition="link"  disabled={true} />
-<Button value="testando" definition="info" disabled={true} /> 
-<Button value="testando" definition="success" disabled={true} /> 
-<Button value="testando" definition="warning" disabled={true} />
-<Button value="testando" definition="danger" disabled={true} />
+<Button  disabled={true} > Testando</Button>
+<Button  definition="primary" disabled={true} > Testando</Button>
+<Button  definition="link"  disabled={true} > Testando</Button>
+<Button  definition="info" disabled={true} > Testando</Button>
+<Button  definition="success" disabled={true} > Testando</Button>
+<Button  definition="warning" disabled={true} > Testando</Button>
+<Button  definition="danger" disabled={true} > Testando</Button>
 </ButtonList>
 
 

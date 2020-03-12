@@ -23,7 +23,7 @@ class Button extends React.Component {
         return (
             
             <button disabled = {this.props.disabled == true? true: false } className={classnames(getClassNames("button "+ this.state.definition,"Button"))} onClick={getClickEvent(this.props.onClick).bind(this)}>
-                {this.props.value}
+                {this.props.children}
          </button>);
     }
 }
@@ -44,7 +44,8 @@ function getClickEvent(onClick){
 Button.propTypes = {
     value: PropTypes.string,
     definition: PropTypes.string,
-    onClick: PropTypes.func
+    onClick: PropTypes.func,
+    icon: PropTypes.element
 };
 
 

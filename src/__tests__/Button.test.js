@@ -2,6 +2,7 @@ import React from 'react';
 import { toHaveClass, toHaveAttribute } from '@testing-library/jest-dom'
 import Button from '../biblioteca/elements/Button';
 import ButtonList from '../biblioteca/elements/ButtonList';
+import Icon from '../biblioteca/elements/Icon';
 import renderer from 'react-test-renderer';
 import { render } from 'react-dom';
 
@@ -27,14 +28,15 @@ test('value correctly', () => {
 test('color correctly', () => {
 
   const simple_color = renderer.create(<ButtonList>
-    <Button value="testando" />
-    <Button value="testando" definition="primary" />
-    <Button value="testando" definition="link" />
-    <Button value="testando" definition="info" />
-    <Button value="testando" definition="success" />
-    <Button value="testando" definition="warning" />
-    <Button value="testando" definition="danger" />
-  </ButtonList>).toJSON();
+    <Button>Testando</Button>
+    <Button  definition="primary">Testando</Button>
+    <Button  definition="link"> Testando</Button>
+    <Button  definition="info"> Testando</Button>
+    <Button  definition="success"> Testando</Button>
+    <Button  definition="warning"> Testando</Button>
+    <Button  definition="danger"> Testando</Button>
+    </ButtonList>
+    ).toJSON();
 
   expect(simple_color).toMatchSnapshot();
 });
@@ -42,13 +44,14 @@ test('color correctly', () => {
 // testa se as cores estão corretas, cores secundárias dos botões
 test('color secundary correctly', () => {
 
-  const secundary_color = renderer.create(<ButtonList>
-    <Button value="testando" definition="white" />
-    <Button value="testando" definition="light" />
-    <Button value="testando" definition="dark" />
-    <Button value="testando" definition="black" />
-    <Button value="testando" definition="text" />
-  </ButtonList>).toJSON();
+  const secundary_color = renderer.create(
+    <ButtonList>
+    <Button  definition="white"> Testando</Button>
+    <Button  definition="light"> Testando</Button>
+    <Button  definition="dark"> Testando</Button>
+    <Button  definition="black"> Testando</Button>
+    <Button  definition="text"> Testando</Button>
+    </ButtonList>).toJSON();
 
   expect(secundary_color).toMatchSnapshot();
 });
@@ -57,13 +60,14 @@ test('color secundary correctly', () => {
 test('colors light correctly', () => {
 
   const light_color = renderer.create(<ButtonList>
-    <Button value="testando" definition="primary light" />
-    <Button value="testando" definition="link light" />
-    <Button value="testando" definition="info light" />
-    <Button value="testando" definition="success light" />
-    <Button value="testando" definition="warning light" />
-    <Button value="testando" definition="danger light" />
-  </ButtonList>).toJSON();
+    <Button  definition="primary light"> Testando</Button>
+    <Button  definition="link light"> Testando</Button>
+    <Button  definition="info light"> Testando</Button>
+    <Button  definition="success light"> Testando</Button>
+    <Button  definition="warning light"> Testando</Button>
+    <Button  definition="danger light"> Testando</Button>
+    
+    </ButtonList>).toJSON();
 
   expect(light_color).toMatchSnapshot();
 });
@@ -72,12 +76,13 @@ test('colors light correctly', () => {
 test('buttons size correctly', () => {
 
   const light_color = renderer.create(<ButtonList>
-    <Button value="testando" definition="button small" />
-    <Button value="testando" />
-    <Button value="testando" definition="button normal" />
-    <Button value="testando" definition="button medium" />
-    <Button value="testando" definition="button large" />
-  </ButtonList>).toJSON();
+    <Button  definition="button small"> Testando</Button>
+    <Button  > Testando</Button>
+    <Button  definition="button normal"> Testando</Button>
+    <Button  definition="button medium"> Testando</Button>
+    <Button  definition="button large"> Testando</Button>
+    </ButtonList>
+    ).toJSON();
 
   expect(light_color).toMatchSnapshot();
 });
@@ -87,26 +92,26 @@ test('button list size correctly', () => {
 
   const small = renderer.create(
     <ButtonList definition="small">
-      <Button value="Small" />
-      <Button value="Small" />
-      <Button value="Small" />
-    </ButtonList>).toJSON();
+<Button  > Testando</Button>
+<Button  > Testando</Button>
+<Button  > Testando</Button>
+</ButtonList>).toJSON();
   expect(small).toMatchSnapshot();
 
   const medium = renderer.create(
     <ButtonList definition="medium">
-      <Button value="Medium" />
-      <Button value="Medium" />
-      <Button value="Medium" />
-    </ButtonList>).toJSON();
+<Button > Testando</Button>
+<Button > Testando</Button>
+<Button > Testando</Button>
+</ButtonList>).toJSON();
   expect(medium).toMatchSnapshot();
 
   const large = renderer.create(
     <ButtonList definition="large">
-      <Button value="Large" />
-      <Button value="Large" />
-      <Button value="Large" />
-    </ButtonList>).toJSON();
+<Button > Testando</Button>
+<Button > Testando</Button>
+<Button > Testando</Button>
+</ButtonList>).toJSON();
   expect(large).toMatchSnapshot();
 });
 
@@ -114,11 +119,12 @@ test('button list size correctly', () => {
 test('fullwidth  correctly', () => {
 
   const fullwidth = renderer.create(<ButtonList>
-    <Button value="Small" definition="small fullwidth" />
-    <Button value="Normal" definition="fullwidth" />
-    <Button value="Medium" definition="medium fullwidth" />
-    <Button value="Large" definition="large fullwidth" />
-  </ButtonList>).toJSON();
+    <Button  definition="small fullwidth"> Testando</Button>
+    <Button  definition="fullwidth"> Testando</Button>
+    <Button  definition="medium fullwidth"> Testando</Button>
+    <Button definition="large fullwidth"> Testando</Button>
+    </ButtonList>
+    ).toJSON();
 
   expect(fullwidth).toMatchSnapshot();
 });
@@ -126,13 +132,14 @@ test('fullwidth  correctly', () => {
 // testa se a característica outlined está correta
 test('outlined  correctly', () => {
   const outlined = renderer.create(<ButtonList>
-    <Button value="testando" definition="primary outlined" />
-    <Button value="testando" definition="link outlined" />
-    <Button value="testando" definition="info outlined" />
-    <Button value="testando" definition="success outlined" />
-    <Button value="testando" definition="warning outlined" />
-    <Button value="testando" definition="danger outlined" />
-  </ButtonList>).toJSON();
+    <Button  definition="primary outlined"> Testando</Button>
+    <Button  definition="link outlined"> Testando</Button>
+    <Button  definition="info outlined"> Testando</Button>
+    <Button  definition="success outlined"> Testando</Button>
+    <Button  definition="warning outlined"> Testando</Button>
+    <Button  definition="danger outlined"> Testando</Button>
+    </ButtonList>
+    ).toJSON();
 
   expect(outlined).toMatchSnapshot();
 });
@@ -141,12 +148,12 @@ test('outlined  correctly', () => {
 test('inverted  correctly', () => {
   const inverted = renderer.create(
     <ButtonList definition="primary">
-      <Button value="testando" definition="primary inverted" />
-      <Button value="testando" definition="link inverted" />
-      <Button value="testando" definition="info inverted" />
-      <Button value="testando" definition="success inverted" />
-      <Button value="testando" definition="danger inverted" />
-    </ButtonList>
+<Button  definition="primary inverted"> Testando</Button>
+<Button  definition="link inverted"> Testando</Button>
+<Button  definition="info inverted"> Testando</Button>
+<Button  definition="success inverted"> Testando</Button>
+<Button  definition="danger inverted"> Testando</Button>
+</ButtonList>
   ).toJSON();
 
   expect(inverted).toMatchSnapshot();
@@ -156,13 +163,14 @@ test('inverted  correctly', () => {
 test('rounded  correctly', () => {
   const rounded = renderer.create(
     <ButtonList>
-      <Button value="testando" definition="primary rounded" />
-      <Button value="testando" definition="link rounded" />
-      <Button value="testando" definition="info rounded" />
-      <Button value="testando" definition="success rounded" />
-      <Button value="testando" definition="warning rounded" />
-      <Button value="testando" definition="danger rounded" />
+    <Button  definition="primary rounded"> Testando</Button>
+    <Button  definition="link rounded"> Testando</Button>
+    <Button  definition="info rounded"> Testando</Button>
+    <Button  definition="success rounded"> Testando</Button>
+    <Button  definition="warning rounded"> Testando</Button>
+    <Button  definition="danger rounded"> Testando</Button>
     </ButtonList>
+    
 
   ).toJSON();
 
@@ -170,40 +178,45 @@ test('rounded  correctly', () => {
 });
 
 // testa os estados
-test('rounded  correctly', () => {
+test('state  correctly', () => {
 
   const hovered = renderer.create(<ButtonList>
-    <Button value="testando" />
-    <Button value="testando" definition="primary hovered" />
-    <Button value="testando" definition="link hovered" />
-    <Button value="testando" definition="info hovered" />
-    <Button value="testando" definition="success hovered" />
-    <Button value="testando" definition="warning hovered" />
-    <Button value="testando" definition="danger hovered" />
-  </ButtonList>).toJSON();
+    <Button  > Testando</Button>
+    <Button  definition="primary hovered"> Testando</Button>
+    <Button  definition="link hovered"> Testando</Button>
+    <Button  definition="info hovered"> Testando</Button>
+    <Button  definition="success hovered"> Testando</Button>
+    <Button  definition="warning hovered"> Testando</Button>
+    <Button  definition="danger hovered"> Testando</Button>
+    </ButtonList>
+    
+    ).toJSON();
   expect(hovered).toMatchSnapshot();
 
   const focused = renderer.create(<ButtonList>
-    <Button value="testando" />
-    <Button value="testando" definition="primary focused" />
-    <Button value="testando" definition="link focused" />
-    <Button value="testando" definition="info focused" />
-    <Button value="testando" definition="success focused" />
-    <Button value="testando" definition="warning focused" />
-    <Button value="testando" definition="danger focused" />
-  </ButtonList>).toJSON();
+    <Button  />
+    <Button  definition="primary focused"> Testando</Button>
+    <Button  definition="link focused"> Testando</Button>
+    <Button  definition="info focused"> Testando</Button>
+    <Button  definition="success focused"> Testando</Button>
+    <Button  definition="warning focused"> Testando</Button>
+    <Button  definition="danger focused"> Testando</Button>
+    </ButtonList>).toJSON();
 
   expect(focused).toMatchSnapshot();
 
-  const active = renderer.create(<ButtonList>
-    <Button value="testando" />
-    <Button value="testando" definition="primary active" />
-    <Button value="testando" definition="link active" />
-    <Button value="testando" definition="info active" />
-    <Button value="testando" definition="success active" />
-    <Button value="testando" definition="warning active" />
-    <Button value="testando" definition="danger active" />
-  </ButtonList>).toJSON();
+  const active = renderer.create(
+    <ButtonList>
+    <Button  />
+    <Button  definition="primary active"> Testando</Button>
+    <Button  definition="link active"> Testando</Button>
+    <Button  definition="info active"> Testando</Button>
+    <Button  definition="success active"> Testando</Button>
+    <Button  definition="warning active"> Testando</Button>
+    <Button  definition="danger active"> Testando</Button>
+    </ButtonList>
+    
+    ).toJSON();
 
   expect(active).toMatchSnapshot();
 
@@ -211,14 +224,14 @@ test('rounded  correctly', () => {
 
 test('loading corretly', () => {
   const loading = renderer.create(<ButtonList>
-    <Button value="testando" definition="loading" />
-    <Button value="testando" definition="primary loading" />
-    <Button value="testando" definition="link loading" />
-    <Button value="testando" definition="info loading" />
-    <Button value="testando" definition="success loading" />
-    <Button value="testando" definition="warning loading" />
-    <Button value="testando" definition="danger loading" />
-  </ButtonList>).toJSON();
+    <Button  definition="loading"> Testando</Button>
+    <Button  definition="primary loading"> Testando</Button>
+    <Button  definition="link loading"> Testando</Button>
+    <Button  definition="info loading"> Testando</Button>
+    <Button  definition="success loading"> Testando</Button>
+    <Button  definition="warning loading"> Testando</Button>
+    <Button  definition="danger loading"> Testando</Button>
+    </ButtonList>).toJSON();
 
   expect(loading).toMatchSnapshot();
 
@@ -226,15 +239,60 @@ test('loading corretly', () => {
 
 test('disabled corretly', () => {
   const disabled = renderer.create(<ButtonList>
-    <Button value="testando" disabled={true} />
-    <Button value="testando" definition="primary" disabled={true} />
-    <Button value="testando" definition="link" disabled={true} />
-    <Button value="testando" definition="info" disabled={true} />
-    <Button value="testando" definition="success" disabled={true} />
-    <Button value="testando" definition="warning" disabled={true} />
-    <Button value="testando" definition="danger" disabled={true} />
-  </ButtonList>).toJSON();
+    <Button  disabled={true} > Testando</Button>
+    <Button  definition="primary" disabled={true} > Testando</Button>
+    <Button  definition="link"  disabled={true} > Testando</Button>
+    <Button  definition="info" disabled={true} > Testando</Button>
+    <Button  definition="success" disabled={true} > Testando</Button>
+    <Button  definition="warning" disabled={true} > Testando</Button>
+    <Button  definition="danger" disabled={true} > Testando</Button>
+    </ButtonList>).toJSON();
 
   expect(disabled).toMatchSnapshot();
 
+});
+
+test('buttons with icons',()=>{
+  const buttons_icons = renderer.create( <ButtonList>
+    <Button>
+    <Icon icon_definition="fas fa-bold"></Icon>
+    </Button>
+    
+    <Button>
+    <Icon icon_definition="fas fa-italic"></Icon>
+    </Button>
+
+    <Button>
+    <Icon icon_definition="fas fa-underline"></Icon>
+    </Button>
+
+    <Button>
+    <Icon icon_definition="fab fa-github">
+      Github
+    </Icon>
+    </Button>
+    
+    <Button definition="primary">
+    <Icon icon_definition="fab fa-twitter">
+      Twitter
+    </Icon>
+    </Button>
+    
+    <Button definition="success">
+    <Icon icon_definition="fas fa-check">
+      
+    </Icon>
+    </Button>
+
+    <Button definition="danger">
+    <Icon icon_definition="fas fa-times">
+      Delete
+    </Icon>
+    </Button>
+
+  </ButtonList>
+  
+ );
+
+ expect(buttons_icons).toMatchSnapshot();
 });
