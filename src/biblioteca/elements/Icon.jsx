@@ -6,13 +6,15 @@ import getClassNames from '../../tools/getClassName';
 const Icon = (props) => {
     var definition =  classnames(getClassNames("icon "+props.definition, "Icon"));
     return (
-        <div>
-            <span class={definition}>
-                <i class={props.icon_definition}></i>
+        <>  
+            {props.icon_right == true && <span>{props.children}</span>}
+            <span className={definition}>
+                <i className={props.icon_definition}></i>
             </span>
-            <span>{props.children}</span> 
-        </div>
+            {(props.icon_right == false || props.icon_right == undefined) && <span>{props.children}</span>}
+        </>
     );
 }
+
 
 export default Icon;

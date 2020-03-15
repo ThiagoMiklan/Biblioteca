@@ -3,38 +3,17 @@ import getClassName from '../../tools/getClassName';
 import className from 'classnames';
 import {renderToString} from 'react-dom/server'
 
-class Content extends React.Component {
+// Componente que funciona como um tipo de container
+// Semelhante ao ButtonList, fornece um componente para servir de base para outros
 
-    render() {
-        return (
-        <div class="content">
-            {assembleList(this.props)}
+const Content = (props) =>{
+    var definition =  className(getClassName("content "+props.definition,"Content"));
+     return (
+        <div class={definition}>
+            {props.children}
         </div>
         );
-    }
-}
-
- // monta o esqueleto da(s) lista(s) através do map e depois monta cada linha de cada lista
- function assembleList(props) {
-    var list = props.value;
     
-    var list_tags =
-        <div className="content">
-            {list.map(list_item =>
-                <ol className={className(getClassName(list_item["definition"], "Content"))}>
-                    {assembleRow(list_item["value"])}
-                </ol>
-            )}
-        </div>
-
-        return list_tags;
 }
-
-function assembleRow(value){
-    return value.map(item => <li>{item}</li>);
-}
-
-
-
 
 export default Content;

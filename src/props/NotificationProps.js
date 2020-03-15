@@ -5,10 +5,13 @@ const notification_props = {
     "warning": "is-warning",
     "info": "is-info",
     "danger": "is-danger",
-    "sucess": "is-sucess",
+    "success": "is-success",
    
     // opção do botão delete
-    "delete" :"delete"
+    "delete" :"delete",
+
+    //light
+    'light' : "is-light"
 }
 
 export default notification_props;

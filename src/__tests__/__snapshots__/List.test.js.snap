@@ -1,0 +1,60 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`test list 1`] = `
+<div
+  class="content"
+>
+  <ol
+    className="is-lower-alpha"
+  >
+    <li>
+      coffee
+    </li>
+    <li>
+      tea
+    </li>
+    <li>
+      milk
+    </li>
+  </ol>
+  <ol
+    className="is-lower-roman"
+  >
+    <li>
+      coffee
+    </li>
+    <li>
+      tea
+    </li>
+    <li>
+      milk
+    </li>
+  </ol>
+  <ol
+    className="is-upper-alpha"
+  >
+    <li>
+      coffee
+    </li>
+    <li>
+      tea
+    </li>
+    <li>
+      milk
+    </li>
+  </ol>
+  <ol
+    className="is-upper-roman"
+  >
+    <li>
+      coffee
+    </li>
+    <li>
+      tea
+    </li>
+    <li>
+      milk
+    </li>
+  </ol>
+</div>
+`;

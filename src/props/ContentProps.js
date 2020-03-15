@@ -1,10 +1,8 @@
-const content_props = 
-{
-    "LA":"is-lower-alpha",
-    "LR":"is-lower-roman",
-    "UA": "is-upper-alpha",
-    "UR": "is-upper-roman"
+const content_props = {
+        "small" : "is-small",
+        "medium" : "is-medium",
+        "large" : "is-large",
+        "content" : "content"
 }
-
 
 export default content_props;

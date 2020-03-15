@@ -146,13 +146,152 @@ ReactDOM.render(
 <Button  definition="warning" disabled={true} > Testando</Button>
 <Button  definition="danger" disabled={true} > Testando</Button>
 </ButtonList>
-
-
-
-
-
-
 </>
     ,
   
   document.getElementById("root"))
+
+
+//============================================================================================
+// Abaixo outra bateria de teste usando icons, addons,fields, selected
+
+/*
+import React, { useState } from 'react';
+import ReactDOM from 'react-dom';
+import './css/bulma.css';
+import './css/all.js';
+import Icon from './biblioteca/elements/Icon';
+import ButtonList from './biblioteca/elements/ButtonList';
+import Button from './biblioteca/elements/Button';
+
+ReactDOM.render(
+  <>
+  <div className="container is-fluid">
+  <ButtonList>
+  <Button>
+  <Icon icon_definition="fas fa-bold"></Icon>
+  </Button>
+  
+  <Button>
+  <Icon icon_definition="fas fa-italic"></Icon>
+  </Button>
+
+  <Button>
+  <Icon icon_definition="fas fa-underline"></Icon>
+  </Button>
+
+  <Button>
+  <Icon icon_definition="fab fa-github">
+    Github
+  </Icon>
+  </Button>
+  
+  <Button definition="primary">
+  <Icon icon_definition="fab fa-twitter">
+    Twitter
+  </Icon>
+  </Button>
+  
+  <Button definition="success">
+  <Icon icon_definition="fas fa-check">
+    Save
+  </Icon>
+  </Button>
+
+  <Button definition="danger outlined">
+  <Icon icon_definition="fas fa-times" icon_right={true}>
+    Delete
+  </Icon>
+  </Button>
+
+  <Button definition="small">
+  <Icon icon_definition="fab fa-github">
+    Github
+  </Icon>
+  </Button>
+
+  <Button >
+  <Icon icon_definition="fab fa-github">
+    Github
+  </Icon>
+  </Button>
+
+  <Button definition="medium">
+  <Icon icon_definition="fab fa-github">
+    Github
+  </Icon>
+  </Button>
+
+  <Button definition="large">
+  <Icon icon_definition="fab fa-github">
+    Github
+  </Icon>
+  </Button>
+  
+  
+</ButtonList>
+</div>
+
+  <div className="container is-fluid">
+  <ButtonList  definition ="grouped">
+    <Button definition="info"> Save Changes </Button>
+    <Button> Cancel </Button>
+    <Button definition="danger"> Delete post </Button>
+  </ButtonList>
+  </div>
+  
+
+  <div className="container is-fluid">
+  <ButtonList definition="addons" field={true}> 
+    <Button>
+      <Icon icon_definition="fas fa-align-left">Left</Icon>
+    </Button>
+    <Button>
+      <Icon icon_definition="fas fa-align-center">Center</Icon>
+    </Button>
+    <Button>
+      <Icon icon_definition="fas fa-align-right">Right</Icon>
+    </Button>
+  </ButtonList>
+
+  <ButtonList definition="addons" field={true}> 
+    <Button>
+      <Icon icon_definition="fas fa-bold">Bold</Icon>
+    </Button>
+    <Button>
+      <Icon icon_definition="fas fa-italic">Italic</Icon>
+    </Button>
+    <Button>
+    <Icon icon_definition="fas fa-underline">Underline</Icon>
+    </Button>
+  </ButtonList>
+  </div>
+
+  
+  <div className="container is-fluid"> 
+  <ButtonList definition="addons">
+    <Button definition="success selected">Yes</Button>
+    <Button>Maybe</Button>
+    <Button>No</Button>
+  </ButtonList>
+
+  <ButtonList definition="addons centered">
+    <Button>Yes</Button>
+    <Button definition="info selected">Maybe</Button>
+    <Button>No</Button>
+  </ButtonList>
+
+  <ButtonList definition="addons right">
+    <Button>Yes</Button>
+    <Button>Maybe</Button>
+    <Button definition="danger selected">No</Button>
+  </ButtonList>
+  </div>
+  
+</>
+
+
+    ,
+  document.getElementById("root"));
+
+*/

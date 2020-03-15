@@ -4,23 +4,13 @@ import classnames from 'classnames';
 import getClassName from '../../tools/getClassName'
 
 
-class ProgressBar extends React.Component{
-
-
-    render(){
-
+const ProgressBar = (props)=>{
         return (
-            <progress className={classnames(getClassName(this.props,"ProgressBar"))}
-             max={this.props.max} 
-             value ={this.props.value}>  
-            
+            <progress className={classnames(getClassName("progress "+ props.definition,"ProgressBar"))}
+             max={props.max} 
+             value ={props.value}>  
             </progress>
         );
-
-    }
-
-
-
 }
 
 ProgressBar.propTypes = {

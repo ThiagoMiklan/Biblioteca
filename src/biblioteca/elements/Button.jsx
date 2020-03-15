@@ -16,18 +16,30 @@ class Button extends React.Component {
 
     constructor(props){
         super(props);
-        this.state  = {definition:props.definition, value: props.value};
+        this.state  = {definition:props.definition};
     }
 
     render() {
+        var definition = getDefinition(this.props.delete, this.state.definition);
+
         return (
-            
-            <button disabled = {this.props.disabled == true? true: false } className={classnames(getClassNames("button "+ this.state.definition,"Button"))} onClick={getClickEvent(this.props.onClick).bind(this)}>
+            <button disabled = {this.props.disabled == true? true: false } className={definition} onClick={getClickEvent(this.props.onClick).bind(this)}>
                 {this.props.children}
-         </button>);
+         </button>
+         );
     }
 }
 
+/* Método usado para pegar a definição do componente caso ele seja do tipo delete,
+   pois caso seja a definição é apenas de "delete", não envolvendo outras classes Bulma
+*/
+function getDefinition(isDelete,definition){
+    if(isDelete){
+       return "delete";
+    }else{
+        return classnames(getClassNames("button "+ definition,"Button"));
+    }
+}
 // caso seja informado onClick ele retorna a função retornada, senão retorna uma função vazia. Método criado para evitar problemas com undefined
 function getClickEvent(onClick){
 
@@ -42,10 +54,14 @@ function getClickEvent(onClick){
 
 
 Button.propTypes = {
-    value: PropTypes.string,
+    // definição CSS Bulma
     definition: PropTypes.string,
+    // Método Onclick disponível
     onClick: PropTypes.func,
-    icon: PropTypes.element
+    // Caso exista um ícone, informar através da prop icon, passando o componente Icon
+    icon: PropTypes.element,
+    // Caso o botão seja do tipo delete
+    delete: PropTypes.bool
 };
 
 

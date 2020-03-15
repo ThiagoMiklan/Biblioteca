@@ -1,7 +1,7 @@
 import progress_bar_props from './ProgressBarProps';
 import table_props from './TableProps';
 import tag_props from './TagProps';
-import content_props from './ContentProps';
+import list_props from './ListProps';
 import box_props from './BoxProps';
 import image_props from './ImageProps';
 import notification_props from './NotificationProps';
@@ -19,6 +19,7 @@ import tabs_props from './TabsProps';
 import button_props from './ButtonProps';
 import button_list from './ButtonListProps';
 import icon_props from './IconProps';
+import content_props from './ContentProps';
 
 const component_path = {
     "Button": button_props,
@@ -41,7 +42,8 @@ const component_path = {
     "Panel" : panel_props,
     "Input" : input_props,
     "Tabs" : tabs_props,
-    "Icon": icon_props
+    "Icon": icon_props,
+    "List" : list_props
 }
 
 export default component_path;

@@ -1,10 +1,9 @@
 import React from 'react';
-import { toHaveClass, toHaveAttribute } from '@testing-library/jest-dom'
 import Button from '../biblioteca/elements/Button';
 import ButtonList from '../biblioteca/elements/ButtonList';
 import Icon from '../biblioteca/elements/Icon';
 import renderer from 'react-test-renderer';
-import { render } from 'react-dom';
+
 
 function onClick() {
   alert(testando);
@@ -253,46 +252,71 @@ test('disabled corretly', () => {
 });
 
 test('buttons with icons',()=>{
-  const buttons_icons = renderer.create( <ButtonList>
-    <Button>
-    <Icon icon_definition="fas fa-bold"></Icon>
-    </Button>
-    
-    <Button>
-    <Icon icon_definition="fas fa-italic"></Icon>
-    </Button>
+  const buttons_icons = renderer.create(
+    <ButtonList>
+  <Button>
+  <Icon icon_definition="fas fa-bold"></Icon>
+  </Button>
+  
+  <Button>
+  <Icon icon_definition="fas fa-italic"></Icon>
+  </Button>
 
-    <Button>
-    <Icon icon_definition="fas fa-underline"></Icon>
-    </Button>
+  <Button>
+  <Icon icon_definition="fas fa-underline"></Icon>
+  </Button>
 
-    <Button>
-    <Icon icon_definition="fab fa-github">
-      Github
-    </Icon>
-    </Button>
-    
-    <Button definition="primary">
-    <Icon icon_definition="fab fa-twitter">
-      Twitter
-    </Icon>
-    </Button>
-    
-    <Button definition="success">
-    <Icon icon_definition="fas fa-check">
-      
-    </Icon>
-    </Button>
+  <Button>
+  <Icon icon_definition="fab fa-github">
+    Github
+  </Icon>
+  </Button>
+  
+  <Button definition="primary">
+  <Icon icon_definition="fab fa-twitter">
+    Twitter
+  </Icon>
+  </Button>
+  
+  <Button definition="success">
+  <Icon icon_definition="fas fa-check">
+    Save
+  </Icon>
+  </Button>
 
-    <Button definition="danger">
-    <Icon icon_definition="fas fa-times">
-      Delete
-    </Icon>
-    </Button>
+  <Button definition="danger outlined">
+  <Icon icon_definition="fas fa-times" icon_right={true}>
+    Delete
+  </Icon>
+  </Button>
 
-  </ButtonList>
+  <Button definition="small">
+  <Icon icon_definition="fab fa-github">
+    Github
+  </Icon>
+  </Button>
+
+  <Button >
+  <Icon icon_definition="fab fa-github">
+    Github
+  </Icon>
+  </Button>
+
+  <Button definition="medium">
+  <Icon icon_definition="fab fa-github">
+    Github
+  </Icon>
+  </Button>
+
+  <Button definition="large">
+  <Icon icon_definition="fab fa-github">
+    Github
+  </Icon>
+  </Button>
+</ButtonList>
   
  );
 
  expect(buttons_icons).toMatchSnapshot();
 });
+

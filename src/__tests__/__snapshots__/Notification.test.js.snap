@@ -1,0 +1,245 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`test colors light notification 1`] = `
+Array [
+  <div
+    className="notification is-primary is-light"
+  >
+    <button
+      className="delete"
+      disabled={false}
+      onClick={[Function]}
+    />
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit lorem ipsum dolor. 
+    <strong>
+      Pellentesque risus mi
+    </strong>
+    , tempus quis placerat ut, porta nec nulla. Vestibulum rhoncus ac ex sit amet fringilla. Nullam gravida purus diam, et dictum 
+    <a>
+      felis venenatis
+    </a>
+     efficitur. Sit amet, consectetur adipiscing elit
+  </div>,
+  <div
+    className="notification is-link is-light"
+  >
+    <button
+      className="delete"
+      disabled={false}
+      onClick={[Function]}
+    />
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit lorem ipsum dolor. 
+    <strong>
+      Pellentesque risus mi
+    </strong>
+    , tempus quis placerat ut, porta nec nulla. Vestibulum rhoncus ac ex sit amet fringilla. Nullam gravida purus diam, et dictum 
+    <a>
+      felis venenatis
+    </a>
+     efficitur. Sit amet, consectetur adipiscing elit
+  </div>,
+  <div
+    className="notification is-info is-light"
+  >
+    <button
+      className="delete"
+      disabled={false}
+      onClick={[Function]}
+    />
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit lorem ipsum dolor. 
+    <strong>
+      Pellentesque risus mi
+    </strong>
+    , tempus quis placerat ut, porta nec nulla. Vestibulum rhoncus ac ex sit amet fringilla. Nullam gravida purus diam, et dictum 
+    <a>
+      felis venenatis
+    </a>
+     efficitur. Sit amet, consectetur adipiscing elit
+  </div>,
+  <div
+    className="notification is-success is-light"
+  >
+    <button
+      className="delete"
+      disabled={false}
+      onClick={[Function]}
+    />
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit lorem ipsum dolor. 
+    <strong>
+      Pellentesque risus mi
+    </strong>
+    , tempus quis placerat ut, porta nec nulla. Vestibulum rhoncus ac ex sit amet fringilla. Nullam gravida purus diam, et dictum 
+    <a>
+      felis venenatis
+    </a>
+     efficitur. Sit amet, consectetur adipiscing elit
+  </div>,
+  <div
+    className="notification is-warning is-light"
+  >
+    <button
+      className="delete"
+      disabled={false}
+      onClick={[Function]}
+    />
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit lorem ipsum dolor. 
+    <strong>
+      Pellentesque risus mi
+    </strong>
+    , tempus quis placerat ut, porta nec nulla. Vestibulum rhoncus ac ex sit amet fringilla. Nullam gravida purus diam, et dictum 
+    <a>
+      felis venenatis
+    </a>
+     efficitur. Sit amet, consectetur adipiscing elit
+  </div>,
+  <div
+    className="notification is-danger is-light"
+  >
+    <button
+      className="delete"
+      disabled={false}
+      onClick={[Function]}
+    />
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit lorem ipsum dolor. 
+    <strong>
+      Pellentesque risus mi
+    </strong>
+    , tempus quis placerat ut, porta nec nulla. Vestibulum rhoncus ac ex sit amet fringilla. Nullam gravida purus diam, et dictum 
+    <a>
+      felis venenatis
+    </a>
+     efficitur. Sit amet, consectetur adipiscing elit
+  </div>,
+]
+`;
+
+exports[`test colors notification 1`] = `
+Array [
+  <div
+    className="notification "
+  >
+    <button
+      className="delete"
+      disabled={false}
+      onClick={[Function]}
+    />
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit lorem ipsum dolor. 
+    <strong>
+      Pellentesque risus mi
+    </strong>
+    , tempus quis placerat ut, porta nec nulla. Vestibulum rhoncus ac ex sit amet fringilla. Nullam gravida purus diam, et dictum 
+    <a>
+      felis venenatis
+    </a>
+     efficitur. Sit amet, consectetur adipiscing elit
+  </div>,
+  <div
+    className="notification is-primary"
+  >
+    <button
+      className="delete"
+      disabled={false}
+      onClick={[Function]}
+    />
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit lorem ipsum dolor. 
+    <strong>
+      Pellentesque risus mi
+    </strong>
+    , tempus quis placerat ut, porta nec nulla. Vestibulum rhoncus ac ex sit amet fringilla. Nullam gravida purus diam, et dictum 
+    <a>
+      felis venenatis
+    </a>
+     efficitur. Sit amet, consectetur adipiscing elit
+  </div>,
+  <div
+    className="notification is-link"
+  >
+    <button
+      className="delete"
+      disabled={false}
+      onClick={[Function]}
+    />
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit lorem ipsum dolor. 
+    <strong>
+      Pellentesque risus mi
+    </strong>
+    , tempus quis placerat ut, porta nec nulla. Vestibulum rhoncus ac ex sit amet fringilla. Nullam gravida purus diam, et dictum 
+    <a>
+      felis venenatis
+    </a>
+     efficitur. Sit amet, consectetur adipiscing elit
+  </div>,
+  <div
+    className="notification is-info"
+  >
+    <button
+      className="delete"
+      disabled={false}
+      onClick={[Function]}
+    />
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit lorem ipsum dolor. 
+    <strong>
+      Pellentesque risus mi
+    </strong>
+    , tempus quis placerat ut, porta nec nulla. Vestibulum rhoncus ac ex sit amet fringilla. Nullam gravida purus diam, et dictum 
+    <a>
+      felis venenatis
+    </a>
+     efficitur. Sit amet, consectetur adipiscing elit
+  </div>,
+  <div
+    className="notification is-success"
+  >
+    <button
+      className="delete"
+      disabled={false}
+      onClick={[Function]}
+    />
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit lorem ipsum dolor. 
+    <strong>
+      Pellentesque risus mi
+    </strong>
+    , tempus quis placerat ut, porta nec nulla. Vestibulum rhoncus ac ex sit amet fringilla. Nullam gravida purus diam, et dictum 
+    <a>
+      felis venenatis
+    </a>
+     efficitur. Sit amet, consectetur adipiscing elit
+  </div>,
+  <div
+    className="notification is-warning"
+  >
+    <button
+      className="delete"
+      disabled={false}
+      onClick={[Function]}
+    />
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit lorem ipsum dolor. 
+    <strong>
+      Pellentesque risus mi
+    </strong>
+    , tempus quis placerat ut, porta nec nulla. Vestibulum rhoncus ac ex sit amet fringilla. Nullam gravida purus diam, et dictum 
+    <a>
+      felis venenatis
+    </a>
+     efficitur. Sit amet, consectetur adipiscing elit
+  </div>,
+  <div
+    className="notification is-danger"
+  >
+    <button
+      className="delete"
+      disabled={false}
+      onClick={[Function]}
+    />
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit lorem ipsum dolor. 
+    <strong>
+      Pellentesque risus mi
+    </strong>
+    , tempus quis placerat ut, porta nec nulla. Vestibulum rhoncus ac ex sit amet fringilla. Nullam gravida purus diam, et dictum 
+    <a>
+      felis venenatis
+    </a>
+     efficitur. Sit amet, consectetur adipiscing elit
+  </div>,
+]
+`;
