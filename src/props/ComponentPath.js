@@ -20,6 +20,10 @@ import button_props from './ButtonProps';
 import button_list from './ButtonListProps';
 import icon_props from './IconProps';
 import content_props from './ContentProps';
+import hero_props from './HeroProps';
+import control_props from './ControlProps';
+import columns_props from './ColumnsProps';
+import column_props from './ColumnProps';
 
 const component_path = {
     "Button": button_props,
@@ -43,7 +47,11 @@ const component_path = {
     "Input" : input_props,
     "Tabs" : tabs_props,
     "Icon": icon_props,
-    "List" : list_props
+    "List" : list_props,
+    "Hero" : hero_props,
+    "Control" : control_props,
+    "Columns" : columns_props,
+    "Column" : column_props
 }
 
 export default component_path;

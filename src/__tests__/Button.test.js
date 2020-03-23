@@ -255,61 +255,61 @@ test('buttons with icons',()=>{
   const buttons_icons = renderer.create(
     <ButtonList>
   <Button>
-  <Icon icon_definition="fas fa-bold"></Icon>
+  <Icon icon_name="fas fa-bold"></Icon>
   </Button>
   
   <Button>
-  <Icon icon_definition="fas fa-italic"></Icon>
+  <Icon icon_name="fas fa-italic"></Icon>
   </Button>
 
   <Button>
-  <Icon icon_definition="fas fa-underline"></Icon>
+  <Icon icon_name="fas fa-underline"></Icon>
   </Button>
 
   <Button>
-  <Icon icon_definition="fab fa-github">
+  <Icon icon_name="fab fa-github">
     Github
   </Icon>
   </Button>
   
   <Button definition="primary">
-  <Icon icon_definition="fab fa-twitter">
+  <Icon icon_name="fab fa-twitter">
     Twitter
   </Icon>
   </Button>
   
   <Button definition="success">
-  <Icon icon_definition="fas fa-check">
+  <Icon icon_name="fas fa-check">
     Save
   </Icon>
   </Button>
 
   <Button definition="danger outlined">
-  <Icon icon_definition="fas fa-times" icon_right={true}>
+  <Icon icon_name="fas fa-times" icon_right={true}>
     Delete
   </Icon>
   </Button>
 
   <Button definition="small">
-  <Icon icon_definition="fab fa-github">
+  <Icon icon_name="fab fa-github">
     Github
   </Icon>
   </Button>
 
   <Button >
-  <Icon icon_definition="fab fa-github">
+  <Icon icon_name="fab fa-github">
     Github
   </Icon>
   </Button>
 
   <Button definition="medium">
-  <Icon icon_definition="fab fa-github">
+  <Icon icon_name="fab fa-github">
     Github
   </Icon>
   </Button>
 
   <Button definition="large">
-  <Icon icon_definition="fab fa-github">
+  <Icon icon_name="fab fa-github">
     Github
   </Icon>
   </Button>

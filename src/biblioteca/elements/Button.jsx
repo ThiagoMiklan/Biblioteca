@@ -5,12 +5,22 @@ import button_props from '../../props/ButtonProps.js'
 import getClassNames from '../../tools/getClassName';
 
 /*
-Para construção do button, foi usado um pouco da ideia presente no trabalho correlato
-react-bootstrap, onde o componente button é chamado através do react e lhe é passado um valor
-que definirá sua cor, esse valor é único, como "danger,primary" exatamente como boa parte
-dos componentes foram desenvolvidos, porém sem o uso de tantas tags quanto foi usada pela biblioteca react-bootstrap
+Observações: 
 
+    1 - Caso exista a necessidade de adicionar um ícone ao componente Button, é necessário seguir
+             a seguinte estrutura:
+
+            <Button definition="info" >
+                <Icon icon_name="fas fa-check" [right={true} OR empty prop right]>
+                    Nome do botão
+                </Icon>
+            </Button >
+
+            Sendo necessário informar o componente Icon como filho do componente Button
+            e o nome do botão deve ser informado no Icon e não no Button como em outras
+            situações onde usa-se o componente isolado.
 */
+
 
 class Button extends React.Component {
 
@@ -30,8 +40,9 @@ class Button extends React.Component {
     }
 }
 
-/* Método usado para pegar a definição do componente caso ele seja do tipo delete,
-   pois caso seja a definição é apenas de "delete", não envolvendo outras classes Bulma
+/* Se propriedade isDelete é verdadeira, então
+    retorna somente o className "definition", não
+    envolvendo outras classes do Bulma.
 */
 function getDefinition(isDelete,definition){
     if(isDelete){

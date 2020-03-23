@@ -1,4 +1,4 @@
-import React from 'react'
+import React,{useState} from 'react'
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import getClassName from '../../tools/getClassName';
@@ -6,10 +6,14 @@ import { renderToString } from 'react-dom/server';
 
 // sem icon ainda
 const Input = (props) => {
-
+    
     return (
         assemble(props)
     );
+}
+
+function createHook(){
+
 }
 
 function assemble(props) {
@@ -40,20 +44,20 @@ function assembleInput(props) {
         if (props.readonly) {
             input_code =
                 <div className="control">
-                    <input className={definition} type={props.type} placeholder={props.placeholder} value={props.value} disabled readonly></input>;
+                    <input onChange={props.onChangeEvent}  className={definition} type={props.type} placeholder={props.placeholder} value={props.value} disabled readonly></input>
                     {props.icon}
         </div>
         } else {
             input_code =
                 <div className="control">
-                    <input className={definition} type={props.type} placeholder={props.placeholder} value={props.value} disabled></input>;
+                    <input  onChange={props.onChangeEvent}  className={definition} type={props.type} placeholder={props.placeholder} value={props.value} disabled></input>
                     {props.icon}
         </div>
         }
     } else {
         input_code =
             <div className="control">
-                <input className={definition} type={props.type} placeholder={props.placeholder} value={props.value}></input>;
+                <input onChange={props.onChangeEvent}  className={definition} type={props.type} placeholder={props.placeholder} value={props.value}></input>
                 {props.icon}
         </div>
     }
@@ -66,7 +70,8 @@ Input.propTypes = {
     placeholder: PropTypes.string,
     value: PropTypes.string,
     loading: PropTypes.bool,
-    readonly: PropTypes.bool
+    readonly: PropTypes.bool,
+    onChangeEvent : PropTypes.func
 
 };
 

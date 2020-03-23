@@ -8,9 +8,9 @@ class Message extends React.Component {
 
     render() {
         var definition = "message " + classname(getClassName(this.props.definition, "Message"));
-        return (<article class={definition}>
+        return (<article className={definition}>
             {assembleHeader(this.props.name_header,this.props.button)}
-            {assembleBody(this.props.message)}
+            {assembleBody(this.props.children)}
         </article>);
     }
 
@@ -18,7 +18,7 @@ class Message extends React.Component {
 function assembleHeader(name_header, button) {
     var header = "";
     if (name_header != undefined) {
-        header = <div class="message-header">
+        header = <div className="message-header">
             <p>{name_header}</p>
             {button}
         </div>
@@ -29,8 +29,14 @@ function assembleHeader(name_header, button) {
 
 
 function assembleBody(message) {
-    return (<div class="message-body">
+    return (<div className="message-body">
       {message}
     </div>);
+}
+
+Message.propTypes ={
+    definition: PropTypes.string,
+    button : PropTypes.element,
+    name_header: PropTypes.string
 }
 export default Message;

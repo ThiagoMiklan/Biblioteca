@@ -1,0 +1,141 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`test and subtitle using spaced 1`] = `
+Array [
+  <p
+    className="title is-1 is-spaced"
+  >
+    Title 1
+  </p>,
+  <p
+    className="subtitle is-3"
+  >
+    Subtitle 3
+  </p>,
+  <p
+    className="title is-2"
+  >
+    Title 2
+  </p>,
+  <p
+    className="subtitle is-4"
+  >
+    Subtitle 4
+  </p>,
+  <p
+    className="title is-3"
+  >
+    Title 3
+  </p>,
+  <p
+    className="subtitle is-5"
+  >
+    Subtitle 5
+  </p>,
+]
+`;
+
+exports[`test subtitle between 1 and 6 1`] = `
+Array [
+  <h1
+    className="subtitle is-1"
+  >
+     Título 1
+  </h1>,
+  <h2
+    className="subtitle is-2"
+  >
+     Título 2
+  </h2>,
+  <h3
+    className="subtitle is-3"
+  >
+     Título 3
+  </h3>,
+  <h4
+    className="subtitle is-4"
+  >
+     Título 4
+  </h4>,
+  <h5
+    className="subtitle is-5"
+  >
+     Título 5
+  </h5>,
+  <h6
+    className="subtitle is-6"
+  >
+     Título 6
+  </h6>,
+]
+`;
+
+exports[`test title between 1 and 6 1`] = `
+Array [
+  <h1
+    className="title is-1"
+  >
+     Título 1
+  </h1>,
+  <h2
+    className="title is-2"
+  >
+     Título 2
+  </h2>,
+  <h3
+    className="title is-3"
+  >
+     Título 3
+  </h3>,
+  <h4
+    className="title is-4"
+  >
+     Título 4
+  </h4>,
+  <h5
+    className="title is-5"
+  >
+     Título 5
+  </h5>,
+  <h6
+    className="title is-6"
+  >
+     Título 6
+  </h6>,
+]
+`;
+
+exports[`test title between 1 and 6 using p 1`] = `
+Array [
+  <p
+    className="title is-1"
+  >
+     Título 1
+  </p>,
+  <p
+    className="title is-2"
+  >
+     Título 2
+  </p>,
+  <p
+    className="title is-3"
+  >
+     Título 3
+  </p>,
+  <p
+    className="title is-4"
+  >
+     Título 4
+  </p>,
+  <p
+    className="title is-5"
+  >
+     Título 5
+  </p>,
+  <p
+    className="title is-6"
+  >
+     Título 6
+  </p>,
+]
+`;
