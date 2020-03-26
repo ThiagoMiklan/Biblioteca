@@ -1,0 +1,156 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`test table 1`] = `
+<div
+  className="table"
+>
+  
+  <tfoot>
+    <tr>
+      <th>
+        <abbr
+          title="Position"
+        >
+          Pos
+        </abbr>
+      </th>
+      <th>
+        <abbr
+          title="PLayed"
+        >
+          Pld
+        </abbr>
+      </th>
+      <th>
+        <abbr
+          title="Won"
+        >
+          W
+        </abbr>
+      </th>
+      <th>
+        <abbr
+          title="Drawn"
+        >
+          D
+        </abbr>
+      </th>
+      <th>
+        <abbr
+          title="Lost"
+        >
+          L
+        </abbr>
+      </th>
+      <th>
+        <abbr
+          title="Goals for"
+        >
+          Gl
+        </abbr>
+      </th>
+      <th>
+        <abbr
+          title="Gaols Against"
+        >
+          GA
+        </abbr>
+      </th>
+      <th>
+        <abbr
+          title="Goal diferrence"
+        >
+          GD
+        </abbr>
+      </th>
+      <th>
+        <abbr
+          title="Points"
+        >
+          PTS
+        </abbr>
+      </th>
+      <th>
+        Qualification or Relegation
+      </th>
+    </tr>
+  </tfoot>
+  <tbody>
+    <tr>
+      <td>
+        1
+      </td>
+      <th>
+        <a
+          href="https://en.wikipedia.org/wiki/Manchester_United_F.C."
+          title="Leicester"
+        >
+           
+          Leicester
+        </a>
+      </th>
+      <td>
+        38
+      </td>
+      <td>
+        23
+      </td>
+      <td>
+        12
+      </td>
+      <td>
+        3
+      </td>
+      <td>
+        6
+      </td>
+      <td>
+        36
+      </td>
+      <td>
+        32
+      </td>
+      <td>
+        Qualification for the Champions League Group Stage
+      </td>
+    </tr>
+    <tr>
+      <td>
+        1
+      </td>
+      <th>
+        <a
+          title="Leicester"
+        >
+           
+          Leicester
+        </a>
+      </th>
+      <td>
+        38
+      </td>
+      <td>
+        23
+      </td>
+      <td>
+        12
+      </td>
+      <td>
+        3
+      </td>
+      <td>
+        6
+      </td>
+      <td>
+        36
+      </td>
+      <td>
+        32
+      </td>
+      <td>
+        Qualification for the Champions League Group Stage
+      </td>
+    </tr>
+  </tbody>
+</div>
+`;

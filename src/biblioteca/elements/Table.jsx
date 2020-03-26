@@ -1,27 +1,25 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import classnames from 'classnames';
+import getlClassName from '../../tools/getClassName';
+import {renderToString} from 'react-dom/server';
 
-
-class Table extends React.Component {
-
-
-    render() {
+const Table = (props)=> {
+    var definition = classnames(getlClassName("table "+props.definition,"Table"));
         return (
-            <div className="table">
-                {assembleHeader(this.props)}
-                {assembleFooter(this.props)}
-                {assembleBody(this.props)}
-            </div>
+            <table className={definition}>
+                {assembleHeader(props)}
+                {assembleFooter(props)}
+                {assembleBody(props)}
+            </table>
         );
-
-    }
 }
 
 
 function assembleHeader(props) {
     var header = "";
     try{
-        if(Array.isArray(props.rows_header)){
+        if(!Array.isArray(props.rows_header)){
             throw new Error("Invalid Argument Object");
         }
     
@@ -46,7 +44,11 @@ function assembleBody(props) {
         if(!Array.isArray(props.rows_body)){
             throw new Error("Invalid Argument Exception");
         }
-        if (props.rows_body != undefined) {
+        if(props.isQuery ==  true){
+            body = <tbody>
+                    {assembleRowQuery(props.rows_body)}
+                </tbody>
+        }else if (props.rows_body != undefined) {
             body = <tbody>
                     {props.rows_body.map(row_array => <tr>{row_array.map(row => assembleRowBody(row))}</tr>)}
             </tbody>;
@@ -54,6 +56,8 @@ function assembleBody(props) {
     }catch(e){
         console.log(e.message);
     }
+    var x = renderToString(body);
+  
     
     return body;
 }
@@ -86,7 +90,7 @@ function assembleRow(row) {
 function assembleRowBody(row) {
 
     var array1 = row[0];
-
+   
     if (typeof (row) != "object") {
         return <td>{row}</td>;
     } else {
@@ -97,17 +101,25 @@ function assembleRowBody(row) {
     }
 }
 
+function assembleRowQuery(rows_body){
+    var code = "";
 
-
-
+    var getRow= (item)=>{
+        var row = "";
+        var values =  Object.values(item);
+        row  = values.map(value => <th>{value}</th>)
+        return row;
+    }
+    code = rows_body.map(item => <tr>{getRow(item)}</tr>);
+    return code;
+}
 
 Table.propTypes = {
     definition: PropTypes.string,
-    table_footer: PropTypes.bool,
-    table_header: PropTypes.bool,
     rows_header: PropTypes.array,
     rows_footer: PropTypes.array,
-    rows_body: PropTypes.array
+    rows_body: PropTypes.array,
+    isQuery: PropTypes.bool
 }
 
 export default Table;

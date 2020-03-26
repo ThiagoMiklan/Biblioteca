@@ -1,5 +1,5 @@
 const tabs_props ={
-    "center" : "is-centered",
+    "centered" : "is-centered",
     "right" : "is-right",
     "small" : "is-small",
     "medium": "is-medium",

@@ -35,3 +35,24 @@ ReactDOM.render(
    
    ,
 document.getElementById('root'));
+
+
+/*
+import React from 'react';
+import ReactDOM from 'react-dom';
+import Tabs from './biblioteca/components/Tabs';
+import './css/bulma.css';
+
+
+var itens = [
+    { value: "Home", href: "www.facebook.com", onClick: () => { alert("Home")}, icon_definition:"warning", icon_name:"fas fa-home"},
+    { value: "Clientes", href: "www.facebook.com", onClick: () => { alert("Clientes") }, icon_definition:"danger",icon_name:"far fa-user" },
+    { value: "Usuários", href: "www.facebook.com", onClick: () => { alert("Usuários") } ,icon_name: "fas fa-users"}, 
+    { value: "Pedidos", href: "www.facebook.com", onClick: () => { alert("Pedidos") } ,icon_definition:"success" ,icon_name:"fas fa-hand-holding-usd"}
+]
+
+
+ReactDOM.render(<Tabs definition="medium centered boxed" itens={itens} />
+    , document.getElementById('root'));
+
+*/

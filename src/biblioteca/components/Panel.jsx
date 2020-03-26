@@ -4,26 +4,41 @@ import classnames from 'classnames';
 import getClassName from '../../tools/getClassName';
 import { renderToString } from 'react-dom/server';
 
+// v.01
 const Panel = (props) => {
     return (
         <nav class="panel">
-            {assembleHeading()}
-            {assembleTabs()}
-            {assembleBlocks()}
+            {assembleHeading(props.header)}
+            {assemblePanelTabs(props.itens_tabs)}
+            {props.children}
         </nav>
     );
 }
 
-function assembleHeading(heading) {
-    return <p class="panel-heading">
-            {heading}
-            </p>
+function assembleHeading(header) {
+    return <p class="panel-heading">{header}</p>
 }
 
-function assembleTabs() {
+function assemblePanelTabs(itens) {
+    if (itens != undefined && Array.isArray(itens)) {
+        return <p className="panel-tabs">
+            {itens.map(item => assembleLink(item))}
+        </p>
+    } else {
+        return <></>
+    }
 
 }
-
-function assembleBlocks() {
-
+function assembleLink(item) {
+    return <a>{item["value"]}</a>
 }
+
+
+
+Panel.propTypes = {
+    header: PropTypes.string,
+    itens_tabs: PropTypes.array,
+    itens_blocks: PropTypes.array
+}
+
+export default Panel;
