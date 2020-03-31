@@ -10,7 +10,7 @@ const Icon = (props) => {
     return (
         <>  
             {props.icon_right == true && <span>{props.children}</span>}
-            <span className={definition}>
+            <span onClick={props.onClick} className={definition}>
                 <i className={props.icon_name}></i>
             </span>
             {(props.icon_right == false || props.icon_right == undefined) && <span>{props.children}</span>}

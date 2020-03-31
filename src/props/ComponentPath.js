@@ -25,6 +25,8 @@ import control_props from './ControlProps';
 import columns_props from './ColumnsProps';
 import column_props from './ColumnProps';
 import section_props from './SectionProps';
+import text_area_props from './TextAreaProps';
+import select_props from './SelectProps';
 
 const component_path = {
     "Button": button_props,
@@ -53,7 +55,10 @@ const component_path = {
     "Control" : control_props,
     "Columns" : columns_props,
     "Column" : column_props,
-    "Section" : section_props
+    "Section" : section_props,
+    "NavigationBar": navigation_bar_props,
+    "Text": text_area_props,
+    "Select": select_props
 }
 
 export default component_path;

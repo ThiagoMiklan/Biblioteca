@@ -21,24 +21,17 @@ Observações:
             situações onde usa-se o componente isolado.
 */
 
+const Button= (props)=>{
 
-class Button extends React.Component {
-
-    constructor(props){
-        super(props);
-        this.state  = {definition:props.definition};
-    }
-
-    render() {
-        var definition = getDefinition(this.props.delete, this.state.definition);
+var definition = getDefinition(props.delete, props.definition);
 
         return (
-            <button disabled = {this.props.disabled == true? true: false } className={definition} onClick={getClickEvent(this.props.onClick).bind(this)}>
-                {this.props.children}
+            <button disabled = {props.disabled == true? true: false } className={definition} onClick={getClickEvent(props.onClick)}>
+                {props.children}
          </button>
          );
     }
-}
+
 
 /* Se propriedade isDelete é verdadeira, então
     retorna somente o className "definition", não

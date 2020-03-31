@@ -4,10 +4,12 @@ import classnames from 'classnames';
 import getClassName from '../../tools/getClassName';
 import { renderToString } from 'react-dom/server';
 
+
 // v.01
 const Panel = (props) => {
+    var definition =  "panel "+ classnames(getClassName(props.definition,"Panel"));
     return (
-        <nav class="panel">
+        <nav class={definition}>
             {assembleHeading(props.header)}
             {assemblePanelTabs(props.itens_tabs)}
             {props.children}

@@ -1,50 +1,60 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import classname from 'classnames';
+import classnames from 'classnames';
 import getClassName from '../../tools/getClassName';
 import { renderToString } from 'react-dom/server';
 
-class NavigationBar extends React.Component {
+/*
+Existem algumas maneira de fornecer os itens de "start" e "end" ao usar o presente componente 
+1 - Fornecer através da props itens_start ou itens_end um objeto contendo um atributo "value"
+2 - Fornecer um array de objetos contendo em cada objeto o atributo value
+3 - Fornecer um array de objetos com um dropdown, nesse caso o um array de objetos dentro do array em que está contido
+4 - É possível fornecer componentes diversos, como Botões no start ou end da barra, para tal faz-se necessário
+    informar o código do elemento.
+    Exemplo:
 
+    var itens_end = [{value: <Button>Login</Button>}, {value: <Button>Log Out</Button>}] 
 
-
-    render() {
-     
+    <NavigationBar
+            itens_end={itens_start_3}
+        />
+*/
+const NavigationBar = (props)=>{
+    var definition= classnames(getClassName("navbar "+ props.definition,"NavigationBar"));
         return (
-            <nav class="navbar">
+            <nav className="navbar is-dark">
                 <div class="navbar-brand">
-                    <a class="navbar-item" href={this.props.link_brand}>
-                        <img src={this.props.src_brand} alt={this.props.alt} width={this.props.width_brand} height={this.props.height_brand}></img>
+                    <a class="navbar-item" href={props.link_brand}>
+                        <img src={props.src_brand} alt={props.alt} width={props.width_brand} height={props.height_brand}></img>
                     </a>
                 </div>
                 <div className="navbar-menu">
                     <div className="navbar-start">
-                        {assemble(this.props.itens_start)}
+                        {assemble(props.itens_start)}
                     </div>
                     <div className="navbar-end">
-                        {assemble(this.props.itens_end)}
+                        {assemble(props.itens_end)}
                     </div>
                 </div>
             </nav>
 
         );
-    }
-
+    
 }
 
 function assemble(itens) {
     var itens_code = "";
-    
+    // verifica se array
     if (Array.isArray(itens)) {
-       // elimina um array vazio
+        // elimina vazio
         if(itens.length > 0){
+            // se não estiver vazio monta uma lista de itens
             itens_code = assembleItens(itens);
         }
-    } else {
+    } else  if(typeof itens =='object'  && itens != undefined){
+        //se não for array, não for undefined e for objeto realiza operação
         itens_code = assembleItem(itens, itens["definition"]);
     }
-
-    var itens_code_string = renderToString(itens_code);
     return itens_code;
 }
 
@@ -53,6 +63,7 @@ function assembleItens(itens) {
     var itens_code  = itens.map(item => decideTypeOfItem(item));
     return itens_code;
 }
+
 
 function decideTypeOfItem(item){
     var itens_code ="";
@@ -100,7 +111,7 @@ function assembleFirstItemDropDown(item) {
 function assembleItem(item, definition) {
     var className = "navbar-item "; //+ classname(getClassName(definition, "NavigationBar"));
     var x = item["value"];
-    var item_code = <a className={className}>{item["value"]}</a>;
+    var item_code = <a onClick={item["onClick"]}className={className}>{item["value"]}</a>;
     //var code = renderToString(item_code);
     return item_code;
 }

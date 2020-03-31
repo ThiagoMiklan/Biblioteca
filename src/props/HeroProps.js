@@ -10,7 +10,8 @@ const hero_props ={
     "bold" : 'is-bold',
     "medium":"is-medium",
     "large": "is-large",
-    "fullheight" : "is-fullheight"
+    "fullheight" : "is-fullheight",
+    "with-navbar": "is-fullheight-with-navbar"
 }
 
 export default hero_props;
