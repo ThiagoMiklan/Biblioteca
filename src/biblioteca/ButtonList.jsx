@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import getClassNames from '../tools/getClassName';
-import { renderToString } from 'react-dom/server';
+ ;
 
 // Componente criado com o objetivo de servir de containe para diversos botões
 // Oferece possibiidade de escolher se o container é "field" ou "buttons", para escolher field informar field={true}

@@ -1,0 +1,8 @@
+/node_modules
+/gitignore
+/package-lock.json
+/webpack.config.json
+/src/__tests__
+/src/html_testes
+/src/testes_componentes
+/src/AlterStateInput.jsx

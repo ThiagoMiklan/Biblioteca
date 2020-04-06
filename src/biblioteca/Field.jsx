@@ -1,6 +1,4 @@
 import React from 'react';
-import classnames from 'classnames';
-import getClassName from '../tools/getClassName';
 import PropTypes from 'prop-types'
 import Icon from './Icon';
 import Control from './Control';

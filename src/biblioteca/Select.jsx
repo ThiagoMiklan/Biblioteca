@@ -1,15 +1,13 @@
 import React from 'react'
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
-import getClassName from '../../tools/getClassName';
-import { renderToString } from 'react-dom/server';
+import getClassName from '../tools/getClassName';
+
 
 const Select = (props) => {
     var definition = classnames(getClassName("select " + props.definition, "Select"));
     var definitionSelect= classnames(getClassName(getDefinitionCssEvents(props.definition), "Select"));
     
-    
-
     var code = <div className={definition}>
         {props.multiple_size == undefined
             ? <select className={definitionSelect}> {assembleItens(props.itens)}</select>
@@ -21,11 +19,17 @@ const Select = (props) => {
 }
 
 function getDefinitionCssEvents(definition) {
-    var focused = (definition.includes("focused") == true ? "focused " : "");
-    var hovered = (definition.includes("hovered") == true ? "hovered " : "");
-    var active = (definition.includes("active") == true ? "active " : "");
+    var focused = "";
+    var hovered = "";
+    var active = "";
+    
+    if(definition != undefined){
+    focused = (definition.includes("focused") == true ? "focused " : "");
+    hovered = (definition.includes("hovered") == true ? "hovered " : "");
+    active = (definition.includes("active") == true ? "active " : "");
+    }
+    
     return focused + hovered + active;
-
 }
 
 function assembleItens(itens) {

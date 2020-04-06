@@ -2,8 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import getClassName from '../tools/getClassName'
-import {renderToString} from 'react-dom/server'
-import { render } from 'react-dom';
 
 
 const SubTitle = (props)=>{
@@ -17,8 +15,7 @@ function assembleSubTitle(props) {
         var title =  getTitle(props);
         code_title = title;
     }
-    var x = renderToString(code_title);
-    
+   
     return code_title;
 }
 

@@ -2,7 +2,6 @@ import React from 'react';
 import getClassName from '../tools/getClassName';
 import className from 'classnames';
 import PropTypes from 'prop-types';
-import {renderToString} from 'react-dom/server'
 
 /*
 Componente que funciona fornece a opção de criar uma lista

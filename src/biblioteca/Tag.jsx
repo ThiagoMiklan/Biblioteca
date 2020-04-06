@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import getClassName from '../tools/getClassName';
 import Button from './Button';
-import { renderToString } from 'react-dom/server';
+
 
 const Tag = (props)=>{
     var definition = classnames(getClassName("tag "+ props.definition, "Tag"));
@@ -47,7 +47,7 @@ function assembleListOfTags(props) {
                 {props.tag.map(tag => assembleSingleTag(tag["definition"],tag["value"]))}
              </div>
 
-    var x = renderToString(tag);
+  
     return tag;
 }
 

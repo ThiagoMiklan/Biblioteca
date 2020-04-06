@@ -1,8 +1,8 @@
 import React from 'react'
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
-import getClassName from '../../tools/getClassName';
-import Control from '../elements/Control';
+import getClassName from '../tools/getClassName';
+import Control from './Control';
 
 const TextArea = (props)=>{
      return assembleTextArea(props);

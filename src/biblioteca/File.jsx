@@ -1,8 +1,8 @@
 import React from 'react'
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
-import getClassName from '../../tools/getClassName';
-import Icon from '../elements/Icon';
+import getClassName from '../tools/getClassName';
+import Icon from './Icon';
 
 const File = (props)=>{
   var definition= classnames(getClassName("file "+props.definition,"File"));

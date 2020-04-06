@@ -2,8 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classname from 'classnames';
 import getClassName from '../tools/getClassName';
-import Button from './Button.jsx';
-import { renderToString } from 'react-dom/server';
+
 
 class DropDown extends React.Component {
 
@@ -51,7 +50,7 @@ function decideTypeOfItens(item) {
     } else {
         item_code =  assembleComponentsItens(item)
     }
-    var code = renderToString(item_code);
+    
     return item_code;
 }
 

@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import getClassName from '../tools/getClassName';
-import { renderToString } from 'react-dom/server';
+
 
 const TagList = (props)=>{
     return assembleTagList(props);
@@ -28,7 +28,7 @@ function assembleListWithItens(props){
          <div className={definition}>
         {itens.map(item => assembleTag(item["definition"],item["value"]))}
          </div>
-    var x = renderToString(code);
+  
     return code;
 }
 

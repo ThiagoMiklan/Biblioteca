@@ -1,9 +1,5 @@
 import React from 'react';
-import PropTypes from 'prop-types';
-import classname from 'classnames';
-import getClassName from '../tools/getClassName';
-import Button from './Button.jsx';
-import { renderToString } from 'react-dom/server';
+
 /*
     Menu Item foi desenvolvido para representar uma parte de um menu, 
     representando não somente o menu em si, mas também o label de cada item/itens
@@ -78,7 +74,7 @@ function decideTypeOfItem(item) {
                 {item["sub_itens"].map(item => assembleSubItens(item))}
             </ul>
         </li>
-        var code = renderToString(item_code);
+      
         var x = 0;
     } else {
         item_code = assembleSingleItem(item);

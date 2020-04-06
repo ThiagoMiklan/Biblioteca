@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types';
-import Control from '../elements/Control';
-import {renderToString} from 'react-dom/server'
+import Control from './Control';
+
 
 const Radio = (props)=>{
     return <Control>
@@ -19,7 +19,7 @@ function assembleItens(props){
        });
     }
 
-    var x = renderToString(code);
+ 
     return code;
 }
 

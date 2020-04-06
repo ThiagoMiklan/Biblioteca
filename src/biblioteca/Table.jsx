@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import getlClassName from '../tools/getClassName';
-import {renderToString} from 'react-dom/server';
+
 
 const Table = (props)=> {
     var definition = classnames(getlClassName("table "+props.definition,"Table"));
@@ -56,8 +56,7 @@ function assembleBody(props) {
     }catch(e){
         console.log(e.message);
     }
-    var x = renderToString(body);
-  
+
     
     return body;
 }

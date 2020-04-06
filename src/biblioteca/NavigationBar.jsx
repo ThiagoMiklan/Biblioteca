@@ -2,7 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import getClassName from '../tools/getClassName';
-import { renderToString } from 'react-dom/server';
 
 /*
 Existem algumas maneira de fornecer os itens de "start" e "end" ao usar o presente componente 
@@ -91,7 +90,7 @@ function assembleItensDropDown(itens){
         </div>
     </div>;
 
-    var code = renderToString(itens_code);
+    
 
     return itens_code;
 }
@@ -104,7 +103,7 @@ function assembleFirstItemDropDown(item) {
         </a>
     }
 
-    var code = renderToString(first_item);
+   
     return first_item;
 }
 
@@ -112,7 +111,7 @@ function assembleItem(item, definition) {
     var className = "navbar-item "; //+ classname(getClassName(definition, "NavigationBar"));
     var x = item["value"];
     var item_code = <a onClick={item["onClick"]}className={className}>{item["value"]}</a>;
-    //var code = renderToString(item_code);
+  
     return item_code;
 }
 
