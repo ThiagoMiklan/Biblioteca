@@ -27,6 +27,8 @@ import column_props from './ColumnProps';
 import section_props from './SectionProps';
 import text_area_props from './TextAreaProps';
 import select_props from './SelectProps';
+import file_props from './FileProps';
+import tag_list_props from './TagListProps';
 
 const component_path = {
     "Button": button_props,
@@ -58,7 +60,9 @@ const component_path = {
     "Section" : section_props,
     "NavigationBar": navigation_bar_props,
     "Text": text_area_props,
-    "Select": select_props
+    "Select": select_props,
+    "File": file_props,
+    "TagList": tag_list_props
 }
 
 export default component_path;

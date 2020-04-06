@@ -1,5 +1,5 @@
 import React from 'react';
-import Icon from '../biblioteca/elements/Icon';
+import Icon from '../biblioteca/Icon';
 import classnames from 'classnames';
 import getClassName from './getClassName'
 // Função criada para reaproveitar o método assembleList do componente Tabs

@@ -1,7 +1,8 @@
 
 const columns_props ={
         "centered" : "is-centered",
-        "columns": "columns"
+        "columns": "columns",
+        "multiline": "is-multiline"
 }
 
 export default columns_props;
