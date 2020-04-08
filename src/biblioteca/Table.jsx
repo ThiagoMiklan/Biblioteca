@@ -44,11 +44,8 @@ function assembleBody(props) {
         if(!Array.isArray(props.rows_body)){
             throw new Error("Invalid Argument Exception");
         }
-        if(props.isQuery ==  true){
-            body = <tbody>
-                    {assembleRowQuery(props.rows_body)}
-                </tbody>
-        }else if (props.rows_body != undefined) {
+    
+        if (props.rows_body != undefined) {
             body = <tbody>
                     {props.rows_body.map(row_array => <tr>{row_array.map(row => assembleRowBody(row))}</tr>)}
             </tbody>;
@@ -100,18 +97,6 @@ function assembleRowBody(row) {
     }
 }
 
-function assembleRowQuery(rows_body){
-    var code = "";
-
-    var getRow= (item)=>{
-        var row = "";
-        var values =  Object.values(item);
-        row  = values.map(value => <td>{value}</td>)
-        return row;
-    }
-    code = rows_body.map(item => <tr>{getRow(item)}</tr>);
-    return code;
-}
 
 Table.propTypes = {
     definition: PropTypes.string,

@@ -2,6 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import getClassName from '../tools/getClassName';
+import '../css/bulma.css';
 
 
 const Select = (props) => {
@@ -10,8 +11,8 @@ const Select = (props) => {
     
     var code = <div className={definition}>
         {props.multiple_size == undefined
-            ? <select className={definitionSelect}> {assembleItens(props.itens)}</select>
-            : <select className={definitionSelect} multiple size={props.multiple_size}> {assembleItens(props.itens)}</select>
+            ? <select onChange={props.onChange} className={definitionSelect}> {assembleItens(props.itens)}</select>
+            : <select onChange={props.onChange} className={definitionSelect} multiple size={props.multiple_size}> {assembleItens(props.itens)}</select>
         }
     </div>
     return code;
@@ -46,6 +47,7 @@ function assembleItens(itens) {
 Select.propTypes = {
     multiple_size: PropTypes.number,
     itens: PropTypes.array,
+    onChange: PropTypes.func
 }
 
 export default Select;

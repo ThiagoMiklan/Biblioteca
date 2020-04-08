@@ -1,8 +1,8 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import BreadCrumb from './biblioteca/BreadCrumb.jsx';
-import Icon from './biblioteca/Icon';
-import './css/bulma.css';
+import BreadCrumb from '../biblioteca/BreadCrumb';
+import Icon from '../biblioteca/Icon';
+
+import renderer from 'react-test-renderer';
 
 
 // Array comum sem eventos
@@ -81,28 +81,111 @@ var itens_merge = [
     { value: <Icon icon_name="fas fa-thumbs-up" onClick={onClickItem}>BreadCrumb</Icon>, key: "breadcrumb_item", onClick: onClickItem, href: "https://ufsc.br" }
 ];
 
-ReactDOM.render(
-    <div className="container is-fluid">
-        <BreadCrumb itens={itens} />
-        <BreadCrumb itens={itens} />
-        <BreadCrumb definition="centered" itens={itens} />,
-        <BreadCrumb definition="right" itens={itens} />
-        <BreadCrumb itens={itens_with_icons} />
+test('breadcrumb normal',()=>{
+    const component = renderer
+    .create(<BreadCrumb itens={itens} />)
+    .toJSON();
+    
+    expect(component).toMatchSnapshot();
+});
+
+test('breadcrumb positions',()=>{
+    const component = renderer
+    .create(<><BreadCrumb definition="centered" itens={itens}/>,
+                <BreadCrumb definition="right" itens={itens}/>
+                </>)
+                .toJSON();
+    
+    expect(component).toMatchSnapshot();
+});
+
+test('breadcrumb with icons',()=>{
+    const component = renderer
+    .create(<BreadCrumb itens={itens_with_icons} />)
+    .toJSON();
+    
+    expect(component).toMatchSnapshot();
+});
+
+
+test('breadcrumb separators',()=>{
+    const component = renderer
+    .create(<>
         <BreadCrumb definition="arrow" itens={itens} />
         <BreadCrumb definition="bullet" itens={itens} />
         <BreadCrumb definition="dot" itens={itens} />
-        <BreadCrumb definition="succeeds" itens={itens} />
-        <BreadCrumb definition="small" itens={itens} />
-        <BreadCrumb definition="medium" itens={itens} />
-        <BreadCrumb definition="large" itens={itens} />
-        <h1>Usando Href Abaixo</h1>
-        <BreadCrumb itens={itens_with_href} />
-        <h1>Usando onClick Abaixo</h1>
-        <BreadCrumb itens={itens_with_onClick} />
-        <BreadCrumb itens={itens_with_id} />
-        <br></br>
-        <BreadCrumb itens={itens_merge} />
-    </div>
-    , document.getElementById('root')
-);
+        <BreadCrumb definition="succeeds" itens={itens}/>
+        </>)
+    .toJSON();
+    
+    expect(component).toMatchSnapshot();
+});
+
+test('breadcrumb sizes', () => {
+    const component = renderer
+        .create(<>
+            <BreadCrumb definition="small" itens={itens} />
+            <BreadCrumb definition="medium" itens={itens} />
+            <BreadCrumb definition="large" itens={itens} />
+            </>)
+            .toJSON();
+    
+    expect(component).toMatchSnapshot();
+});
+
+
+test('breadcrumb with href', () => {
+    const component = renderer
+        .create(<>
+                <BreadCrumb itens={itens_with_href} />
+            </>)
+            .toJSON();
+    
+    expect(component).toMatchSnapshot();
+});
+
+test('breadcrumb with internal onClick', () => {
+    const component = renderer
+        .create(<>
+                <BreadCrumb itens={itens_with_onClick} />
+            </>)
+            .toJSON();
+    
+    expect(component).toMatchSnapshot();
+});
+
+test('breadcrumb with onCLick on component Icon', () => {
+    const component = renderer
+        .create(<>
+                <BreadCrumb itens={itens_with_onClick} />
+            </>)
+            .toJSON();
+    expect(component).toMatchSnapshot();
+});
+
+test('breadcrumb with onCLick on component Icon', () => {
+    const component = renderer
+        .create(<>
+                <BreadCrumb itens={itens_with_id} />
+            </>)
+            .toJSON();
+    expect(component).toMatchSnapshot();
+});
+
+test('breadcrumb with onCLick on component Icon', () => {
+    const component = renderer
+        .create(<>
+                <BreadCrumb itens={itens_merge} />
+               </>)
+            .toJSON();
+    expect(component).toMatchSnapshot();
+});
+
+
+
+
+
+
+
+
 

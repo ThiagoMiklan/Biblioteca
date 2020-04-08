@@ -1,6 +1,6 @@
 import React from 'react';
-import Content from '../biblioteca/elements/Content';
-import List from '../biblioteca/elements/List';
+import Content from '../biblioteca/Content';
+import List from '../biblioteca/List';
 import renderer from 'react-test-renderer';
 
 var itens =  ["coffee","tea","milk"]; 

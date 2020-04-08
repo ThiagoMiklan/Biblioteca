@@ -1,5 +1,5 @@
 import React from 'react';
-import Table from '../biblioteca/elements/Table';
+import Table from '../biblioteca/Table';
 import renderer from 'react-test-renderer';
 
 var elements_header = [];

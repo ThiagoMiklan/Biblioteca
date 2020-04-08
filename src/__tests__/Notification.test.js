@@ -1,5 +1,5 @@
 import React from 'react';
-import Notification from '../biblioteca/elements/Notification';
+import Notification from '../biblioteca/Notification';
 import renderer from 'react-test-renderer';
 
 //  ALERTA: NOTIFICATION IS-LIGHT NÃO FUNCIONANDO, NEM COM O CÓDIGO DA DOCUMENTAÇÃO BULMA

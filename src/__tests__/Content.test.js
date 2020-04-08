@@ -1,5 +1,5 @@
 import React from 'react';
-import Content from '../biblioteca/elements/Content';
+import Content from '../biblioteca/Content';
 import renderer from 'react-test-renderer';
 
 test('teste content small', () => {

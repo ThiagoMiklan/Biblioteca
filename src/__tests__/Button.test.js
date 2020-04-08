@@ -1,7 +1,7 @@
 import React from 'react';
-import Button from '../biblioteca/elements/Button';
-import ButtonList from '../biblioteca/elements/ButtonList';
-import Icon from '../biblioteca/elements/Icon';
+import Button from '../biblioteca/Button';
+import ButtonList from '../biblioteca/ButtonList';
+import Icon from '../biblioteca/Icon';
 import renderer from 'react-test-renderer';
 
 

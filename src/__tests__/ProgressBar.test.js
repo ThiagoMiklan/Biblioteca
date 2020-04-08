@@ -1,5 +1,5 @@
 import React from 'react';
-import ProgressBar from '../biblioteca/elements/ProgressBar';
+import ProgressBar from '../biblioteca/ProgressBar';
 import renderer from 'react-test-renderer';
 
 test('progressbar fixed', () => {

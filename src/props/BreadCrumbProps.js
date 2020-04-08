@@ -6,9 +6,9 @@ const bread_crumb_props = {
     "active" : "is-active",
     "succeeds" : "has-succeeds-separator",
     "dot" : "has-dot-separator",
-    "bullter" : "has-bullet-separator",
+    "bullet" : "has-bullet-separator",
     "arrow" : "has-arrow-separator",
-    "center" : "is-centered",
+    "centered" : "is-centered",
     "right" : "is-right"
 }
 

@@ -1,8 +1,7 @@
 import React from 'react';
-import ProgressBar from '../biblioteca/elements/ProgressBar';
 import renderer from 'react-test-renderer';
-import Title from '../biblioteca/elements/Title';
-import SubTitle  from '../biblioteca/elements/Subtitle';
+import Title from '../biblioteca/Title';
+import SubTitle  from '../biblioteca/Subtitle';
 
 
 test('test title between 1 and 6',()=>{

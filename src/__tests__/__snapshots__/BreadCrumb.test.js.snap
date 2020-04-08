@@ -1,0 +1,566 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`breadcrumb normal 1`] = `
+<nav
+  className="breadcrumb "
+>
+  <ul>
+    <li>
+      <a>
+        Bulma
+      </a>
+    </li>
+    <li>
+      <a>
+        Documentation
+      </a>
+    </li>
+    <li>
+      <a>
+        Componentes
+      </a>
+    </li>
+    <li>
+      <a>
+        BreadCrumb
+      </a>
+    </li>
+  </ul>
+</nav>
+`;
+
+exports[`breadcrumb positions 1`] = `
+Array [
+  <nav
+    className="breadcrumb is-centered"
+  >
+    <ul>
+      <li>
+        <a>
+          Bulma
+        </a>
+      </li>
+      <li>
+        <a>
+          Documentation
+        </a>
+      </li>
+      <li>
+        <a>
+          Componentes
+        </a>
+      </li>
+      <li>
+        <a>
+          BreadCrumb
+        </a>
+      </li>
+    </ul>
+  </nav>,
+  ",",
+  <nav
+    className="breadcrumb is-right"
+  >
+    <ul>
+      <li>
+        <a>
+          Bulma
+        </a>
+      </li>
+      <li>
+        <a>
+          Documentation
+        </a>
+      </li>
+      <li>
+        <a>
+          Componentes
+        </a>
+      </li>
+      <li>
+        <a>
+          BreadCrumb
+        </a>
+      </li>
+    </ul>
+  </nav>,
+]
+`;
+
+exports[`breadcrumb separators 1`] = `
+Array [
+  <nav
+    className="breadcrumb has-arrow-separator"
+  >
+    <ul>
+      <li>
+        <a>
+          Bulma
+        </a>
+      </li>
+      <li>
+        <a>
+          Documentation
+        </a>
+      </li>
+      <li>
+        <a>
+          Componentes
+        </a>
+      </li>
+      <li>
+        <a>
+          BreadCrumb
+        </a>
+      </li>
+    </ul>
+  </nav>,
+  <nav
+    className="breadcrumb has-bullet-separator"
+  >
+    <ul>
+      <li>
+        <a>
+          Bulma
+        </a>
+      </li>
+      <li>
+        <a>
+          Documentation
+        </a>
+      </li>
+      <li>
+        <a>
+          Componentes
+        </a>
+      </li>
+      <li>
+        <a>
+          BreadCrumb
+        </a>
+      </li>
+    </ul>
+  </nav>,
+  <nav
+    className="breadcrumb has-dot-separator"
+  >
+    <ul>
+      <li>
+        <a>
+          Bulma
+        </a>
+      </li>
+      <li>
+        <a>
+          Documentation
+        </a>
+      </li>
+      <li>
+        <a>
+          Componentes
+        </a>
+      </li>
+      <li>
+        <a>
+          BreadCrumb
+        </a>
+      </li>
+    </ul>
+  </nav>,
+  <nav
+    className="breadcrumb has-succeeds-separator"
+  >
+    <ul>
+      <li>
+        <a>
+          Bulma
+        </a>
+      </li>
+      <li>
+        <a>
+          Documentation
+        </a>
+      </li>
+      <li>
+        <a>
+          Componentes
+        </a>
+      </li>
+      <li>
+        <a>
+          BreadCrumb
+        </a>
+      </li>
+    </ul>
+  </nav>,
+]
+`;
+
+exports[`breadcrumb sizes 1`] = `
+Array [
+  <nav
+    className="breadcrumb is-small"
+  >
+    <ul>
+      <li>
+        <a>
+          Bulma
+        </a>
+      </li>
+      <li>
+        <a>
+          Documentation
+        </a>
+      </li>
+      <li>
+        <a>
+          Componentes
+        </a>
+      </li>
+      <li>
+        <a>
+          BreadCrumb
+        </a>
+      </li>
+    </ul>
+  </nav>,
+  <nav
+    className="breadcrumb is-medium"
+  >
+    <ul>
+      <li>
+        <a>
+          Bulma
+        </a>
+      </li>
+      <li>
+        <a>
+          Documentation
+        </a>
+      </li>
+      <li>
+        <a>
+          Componentes
+        </a>
+      </li>
+      <li>
+        <a>
+          BreadCrumb
+        </a>
+      </li>
+    </ul>
+  </nav>,
+  <nav
+    className="breadcrumb is-large"
+  >
+    <ul>
+      <li>
+        <a>
+          Bulma
+        </a>
+      </li>
+      <li>
+        <a>
+          Documentation
+        </a>
+      </li>
+      <li>
+        <a>
+          Componentes
+        </a>
+      </li>
+      <li>
+        <a>
+          BreadCrumb
+        </a>
+      </li>
+    </ul>
+  </nav>,
+]
+`;
+
+exports[`breadcrumb with href 1`] = `
+<nav
+  className="breadcrumb "
+>
+  <ul>
+    <li>
+      <a
+        href="https://ufsc.br"
+      >
+        Bulma
+      </a>
+    </li>
+    <li>
+      <a
+        href="https://ufsc.br"
+      >
+        Documentation
+      </a>
+    </li>
+    <li>
+      <a
+        href="https://ufsc.br"
+      >
+        Componentes
+      </a>
+    </li>
+    <li>
+      <a
+        href="https://ufsc.br"
+      >
+        BreadCrumb
+      </a>
+    </li>
+  </ul>
+</nav>
+`;
+
+exports[`breadcrumb with icons 1`] = `
+<nav
+  className="breadcrumb "
+>
+  <ul>
+    <li>
+      <a>
+        <span
+          className="icon"
+        >
+          <i
+            className="fas fa-home"
+          />
+        </span>
+        <span>
+          Bulma
+        </span>
+      </a>
+    </li>
+    <li>
+      <a>
+        <span
+          className="icon"
+        >
+          <i
+            className="fas fa-book"
+          />
+        </span>
+        <span>
+          Documentation
+        </span>
+      </a>
+    </li>
+    <li>
+      <a>
+        <span
+          className="icon"
+        >
+          <i
+            className="fas fa-puzzle-piece"
+          />
+        </span>
+        <span>
+          Componentes
+        </span>
+      </a>
+    </li>
+    <li>
+      <a>
+        <span
+          className="icon"
+        >
+          <i
+            className="fas fa-thumbs-up"
+          />
+        </span>
+        <span>
+          BreadCrumb
+        </span>
+      </a>
+    </li>
+  </ul>
+</nav>
+`;
+
+exports[`breadcrumb with internal onClick 1`] = `
+<nav
+  className="breadcrumb "
+>
+  <ul>
+    <li>
+      <a
+        onClick={[Function]}
+      >
+        Bulma
+      </a>
+    </li>
+    <li>
+      <a
+        onClick={[Function]}
+      >
+        Documentation
+      </a>
+    </li>
+    <li>
+      <a
+        onClick={[Function]}
+      >
+        Componentes
+      </a>
+    </li>
+    <li>
+      <a
+        onClick={[Function]}
+      >
+        BreadCrumb
+      </a>
+    </li>
+  </ul>
+</nav>
+`;
+
+exports[`breadcrumb with onCLick on component Icon 1`] = `
+<nav
+  className="breadcrumb "
+>
+  <ul>
+    <li>
+      <a
+        onClick={[Function]}
+      >
+        Bulma
+      </a>
+    </li>
+    <li>
+      <a
+        onClick={[Function]}
+      >
+        Documentation
+      </a>
+    </li>
+    <li>
+      <a
+        onClick={[Function]}
+      >
+        Componentes
+      </a>
+    </li>
+    <li>
+      <a
+        onClick={[Function]}
+      >
+        BreadCrumb
+      </a>
+    </li>
+  </ul>
+</nav>
+`;
+
+exports[`breadcrumb with onCLick on component Icon 2`] = `
+<nav
+  className="breadcrumb "
+>
+  <ul>
+    <li>
+      <a>
+        Bulma
+      </a>
+    </li>
+    <li>
+      <a>
+        Documentation
+      </a>
+    </li>
+    <li>
+      <a>
+        Componentes
+      </a>
+    </li>
+    <li>
+      <a>
+        BreadCrumb
+      </a>
+    </li>
+  </ul>
+</nav>
+`;
+
+exports[`breadcrumb with onCLick on component Icon 3`] = `
+<nav
+  className="breadcrumb "
+>
+  <ul>
+    <li>
+      <a
+        href="https://ufsc.br"
+        onClick={[Function]}
+      >
+        <span
+          className="icon"
+          onClick={[Function]}
+        >
+          <i
+            className="fas fa-home"
+          />
+        </span>
+        <span>
+          Bulma
+        </span>
+      </a>
+    </li>
+    <li>
+      <a
+        href="https://ufsc.br"
+        onClick={[Function]}
+      >
+        <span
+          className="icon"
+          onClick={[Function]}
+        >
+          <i
+            className="fas fa-book"
+          />
+        </span>
+        <span>
+          Documentation
+        </span>
+      </a>
+    </li>
+    <li>
+      <a
+        href="https://ufsc.br"
+        onClick={[Function]}
+      >
+        <span
+          className="icon"
+          onClick={[Function]}
+        >
+          <i
+            className="fas fa-puzzle-piece"
+          />
+        </span>
+        <span>
+          Componentes
+        </span>
+      </a>
+    </li>
+    <li>
+      <a
+        href="https://ufsc.br"
+        onClick={[Function]}
+      >
+        <span
+          className="icon"
+          onClick={[Function]}
+        >
+          <i
+            className="fas fa-thumbs-up"
+          />
+        </span>
+        <span>
+          BreadCrumb
+        </span>
+      </a>
+    </li>
+  </ul>
+</nav>
+`;
