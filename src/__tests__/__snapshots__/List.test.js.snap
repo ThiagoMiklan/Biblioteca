@@ -7,53 +7,77 @@ exports[`test list 1`] = `
   <ol
     className="is-lower-alpha"
   >
-    <li>
-      coffee
+    <li
+      onClick={[Function]}
+    >
+      Thiago
     </li>
-    <li>
-      tea
+    <li
+      onClick={[Function]}
+    >
+      João
     </li>
-    <li>
-      milk
+    <li
+      onClick={[Function]}
+    >
+      Mathias
     </li>
   </ol>
   <ol
     className="is-lower-roman"
   >
-    <li>
-      coffee
+    <li
+      onClick={[Function]}
+    >
+      Thiago
     </li>
-    <li>
-      tea
+    <li
+      onClick={[Function]}
+    >
+      João
     </li>
-    <li>
-      milk
+    <li
+      onClick={[Function]}
+    >
+      Mathias
     </li>
   </ol>
   <ol
     className="is-upper-alpha"
   >
-    <li>
-      coffee
+    <li
+      onClick={[Function]}
+    >
+      Thiago
     </li>
-    <li>
-      tea
+    <li
+      onClick={[Function]}
+    >
+      João
     </li>
-    <li>
-      milk
+    <li
+      onClick={[Function]}
+    >
+      Mathias
     </li>
   </ol>
   <ol
     className="is-upper-roman"
   >
-    <li>
-      coffee
+    <li
+      onClick={[Function]}
+    >
+      Thiago
     </li>
-    <li>
-      tea
+    <li
+      onClick={[Function]}
+    >
+      João
     </li>
-    <li>
-      milk
+    <li
+      onClick={[Function]}
+    >
+      Mathias
     </li>
   </ol>
 </div>

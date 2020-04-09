@@ -4,13 +4,15 @@ import classnames from 'classnames';
 import getClassName from '../tools/getClassName';
 import Icon from './Icon';
 
+
+
 const File = (props)=>{
   var definition= classnames(getClassName("file "+props.definition,"File"));
 
     return <div className={definition}>
     <label class="file-label">
 
-      <input class="file-input" type="file" name={props.input_name}/>
+      <input onChange={props.onChange} class="file-input" type="file" name={props.input_name}/>
       <span className="file-cta">
         <Icon definition={props.icon_definition} icon_name={props.icon_name}/>
         <span class="file-label">
@@ -31,7 +33,8 @@ File.propTypes ={
     icon_name: PropTypes.string,
     icon_definition: PropTypes.string,
     definition: PropTypes.string,
-    label: PropTypes.string
+    label: PropTypes.string,
+    onChange: PropTypes.func
 }
 
 export default File;

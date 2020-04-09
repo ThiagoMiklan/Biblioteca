@@ -1,0 +1,70 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`checkbox disabled 1`] = `
+<div
+  className="control has-icons-left"
+>
+  <label
+    className="checkbox"
+    disabled={true}
+  >
+    <input
+      disabled={true}
+      onClick={[Function]}
+      type="checkbox"
+    />
+    disabled with onClick
+  </label>
+</div>
+`;
+
+exports[`checkbox normal 1`] = `
+<div
+  className="control has-icons-left"
+>
+  <label
+    className="checkbox"
+  >
+    <input
+      type="checkbox"
+    />
+    normal
+  </label>
+</div>
+`;
+
+exports[`checkbox with differents tags inside 1`] = `
+<div
+  className="control has-icons-left"
+>
+  <label
+    className="checkbox"
+  >
+    <input
+      type="checkbox"
+    />
+    with link 
+    <a
+      href="#"
+    >
+      here
+    </a>
+  </label>
+</div>
+`;
+
+exports[`checkbox with onClick 1`] = `
+<div
+  className="control has-icons-left"
+>
+  <label
+    className="checkbox"
+  >
+    <input
+      onClick={[Function]}
+      type="checkbox"
+    />
+    with on click
+  </label>
+</div>
+`;

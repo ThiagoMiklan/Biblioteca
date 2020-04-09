@@ -3,7 +3,10 @@ import Content from '../biblioteca/Content';
 import List from '../biblioteca/List';
 import renderer from 'react-test-renderer';
 
-var itens =  ["coffee","tea","milk"]; 
+var itens = [{value:"Thiago",onClick:()=>{alert("Clicou")}}
+            ,{value:"João",onClick:()=>{alert("Clicou")}},
+             {value:"Mathias",onClick:()=>{alert("Clicou")}}]
+             
 test('test list', ()=>{
     const lists = renderer.create(
     <Content>

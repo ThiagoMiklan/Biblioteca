@@ -7,9 +7,9 @@ import PropTypes from 'prop-types';
 Componente que funciona fornece a opção de criar uma lista
 Não consta na documentação do Bulma um componente para Lista, sendo criado 
 a partir da documentação do componente Content.
-Obs: Para o correto funcionamento das listas, recomenda-se o uso do componente Content
-como pai da lista desejada ou algum outro container. Caso não se use um container para
-List, provalvemente existirá problemas de exibição
+Eventos: onClick na tag <li>
+Obs: Recomendável o uso do componente Content como pai do componente List, 
+para evitar problemas de exibição.
 */
 const List = (props)=> {
         return (assembleList(props));    
@@ -32,7 +32,7 @@ function assembleList(props) {
 }
 
 function assembleRow(list){
-    return (list.map(item =><li>{item}</li> ));
+    return (list.map(item =><li onClick={item["onClick"]}>{item["value"]}</li> ));
 }
 
 List.propTypes ={

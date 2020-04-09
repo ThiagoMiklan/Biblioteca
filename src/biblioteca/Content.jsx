@@ -4,7 +4,7 @@ import className from 'classnames';
 
 
 // Componente que funciona como um tipo de container
-// Semelhante ao ButtonList, fornece um componente para servir de base para outros
+// Fornece um componente para servir de base para outros
 
 const Content = (props) =>{
     var definition =  className(getClassName("content "+props.definition,"Content"));

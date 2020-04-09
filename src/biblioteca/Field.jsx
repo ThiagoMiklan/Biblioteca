@@ -5,11 +5,12 @@ import Control from './Control';
 import Input from './Input';
 
 // O presente componente foi criado como maneira de facilitar
-// o uso do componente Input,Control e Label,
+// o uso do componente Input,Control,Label e Icon,
 // Buscando fornecer um componente visual que mostra um campo de texto
-// comum, com um rótulo e um espaço para digitação, mesclando os três componentes
+// comum, com um rótulo e um espaço para digitação, mesclando os quatro componentes
 // antes citado
 // Obs: Principal motivação, o excesso de código, assim como sua repetição
+// Eventos : onChange do componente Input
 
 // Para fim  de organização. Considera-se esse um componente misto.
 

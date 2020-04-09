@@ -1,18 +1,20 @@
-import React, { useState } from 'react';
+import React from 'react';
 import ReactDOM from 'react-dom';
+import Content from './biblioteca/Content';
+import List from './biblioteca/List';
 import './css/bulma.css';
-import './css/all.js';
-import List from './biblioteca/elements/List';
-import Content from './biblioteca/elements/Content';
 
-var itens =  ["coffee","tea","milk"];
+var itens = [{value:"Thiago",onClick:()=>{alert("Clicou")}}
+            ,{value:"João",onClick:()=>{alert("Clicou")}},
+             {value:"Mathias",onClick:()=>{alert("Clicou")}}]
 
 ReactDOM.render(
-  <Content>
+    <>
+    <Content>
     <List definition="lower-alpha" itens={itens}></List>
     <List definition = "lower-roman" itens={itens}></List>
     <List definition = "upper-alpha" itens={itens}></List>
     <List definition = "upper-roman" itens={itens}></List>
-  </Content>
-  ,
-  document.getElementById("root"))
+    </Content>
+    </>
+  , document.getElementById("root"))

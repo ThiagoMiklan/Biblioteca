@@ -1,6 +1,11 @@
 import React from 'react';
 import Content from '../biblioteca/Content';
 import renderer from 'react-test-renderer';
+import List from '../biblioteca/List';
+
+test('test with list',()=>{
+
+});
 
 test('teste content small', () => {
     const content = renderer.create(

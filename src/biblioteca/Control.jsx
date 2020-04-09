@@ -2,7 +2,11 @@ import React from 'react'
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import getClassName from '../tools/getClassName';
- ;
+
+/*
+    - Componente que funciona como container
+    - Sem eventos
+*/
 
 const Control = (props)=>{
     var definition = getDefinition(props.definition);
@@ -25,5 +29,10 @@ function getDefinition(definition){
     }
 }
 
+
+Control.propTypes = {
+    // Características do Bulma 
+    definition: PropTypes.string
+}
 
 export default Control;

@@ -1,18 +1,35 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Button from './biblioteca/elements/Button.jsx';
-import DropDown from './biblioteca/components/DropDown.jsx';
+import DropDown from './biblioteca/DropDown';
+import Columns from './biblioteca/Columns';
+import Column from './biblioteca/Column';
+import {renderToString} from 'react-dom/server';
 import './css/bulma.css';
 
-var itens =[{"value": "Estrela",link:true, href:"http://www.insulartc.com.br/estrela/","definition": "active"},
-            {"value":"Insular",link:true},{"value":"teste 3", link:true, "definition": "active"}];
 
+var itens_link =[{value: "Dropdown Button" ,link:true, href:"https://ufsc.br", onClick:()=>{alert("Clicou")}},
+            {value: "Dropdown Item",link:true, href:"https://ufsc.br"},
+            {value: "Other Dropdown Item",link:true, href:"https://ufsc.br"},
+            {value: "Active Dropdown Item", link:true , definition:"active", href:"https://ufsc.br"},
+            {value: "Other Dropdown Item",link:true, href:"https://ufsc.br"},
+            {value: "With a divider",link:true, href:"https://ufsc.br"}
+            ];
 
-ReactDOM.render(
-    <DropDown dropdown_name="Nome do DropDown" definition="active" 
-    itens={itens} 
-    button_dropdown ={<Button definition="button" value={"Nome DropDown"}/>}/>,
-    document.getElementById('root')
-);
+var itens_div =[
+{value: <p>You can insert <strong>any type of content</strong> within the dropdown menu.</p>, onClick:()=>{alert("Clicou")}},
+{value: <p>You simply need to use a <code>&lt;div&gt;</code> instead.</p>},
+{value: "This is a link", link:true}
 
- 
+];
+
+var code = renderToString(<DropDown dropdown_name="teste" definition="right" itens={itens_div} />);
+var y  =0;
+
+ ReactDOM.render(
+        <>
+          <DropDown definition="active" itens={itens_link}/>    
+          <DropDown definition="active right" itens={itens_div}/>
+        </>
+     ,
+     document.getElementById('root')
+ );

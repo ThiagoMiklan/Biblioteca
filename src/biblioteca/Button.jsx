@@ -4,6 +4,9 @@ import classnames from 'classnames';
 import getClassNames from '../tools/getClassName';
 
 /*
+
+Possui children
+Eventos: onClick no <button> </button>
 Observações: 
 
     1 - Caso exista a necessidade de adicionar um ícone ao componente Button, é necessário seguir
@@ -56,12 +59,10 @@ function getClickEvent(onClick){
 
 
 Button.propTypes = {
-    // definição CSS Bulma
+    // definição de características do Bulma
     definition: PropTypes.string,
-    // Método Onclick disponível
+    // Evento para quando clicar no botão
     onClick: PropTypes.func,
-    // Caso exista um ícone, informar através da prop icon, passando o componente Icon
-    icon: PropTypes.element,
     // Caso o botão seja do tipo delete
     delete: PropTypes.bool
 };
