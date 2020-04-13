@@ -135,57 +135,61 @@ exports[`buttons with icons 1`] = `
     disabled={false}
     onClick={[Function]}
   >
+    <span />
     <span
       className="icon"
     >
       <i
+        aria-hidden="true"
         className="fas fa-bold"
       />
     </span>
-    <span />
   </button>
   <button
     className="button"
     disabled={false}
     onClick={[Function]}
   >
+    <span />
     <span
       className="icon"
     >
       <i
+        aria-hidden="true"
         className="fas fa-italic"
       />
     </span>
-    <span />
   </button>
   <button
     className="button"
     disabled={false}
     onClick={[Function]}
   >
+    <span />
     <span
       className="icon"
     >
       <i
+        aria-hidden="true"
         className="fas fa-underline"
       />
     </span>
-    <span />
   </button>
   <button
     className="button"
     disabled={false}
     onClick={[Function]}
   >
+    <span>
+      Github
+    </span>
     <span
       className="icon"
     >
       <i
+        aria-hidden="true"
         className="fab fa-github"
       />
-    </span>
-    <span>
-      Github
     </span>
   </button>
   <button
@@ -193,15 +197,16 @@ exports[`buttons with icons 1`] = `
     disabled={false}
     onClick={[Function]}
   >
+    <span>
+      Twitter
+    </span>
     <span
       className="icon"
     >
       <i
+        aria-hidden="true"
         className="fab fa-twitter"
       />
-    </span>
-    <span>
-      Twitter
     </span>
   </button>
   <button
@@ -209,15 +214,16 @@ exports[`buttons with icons 1`] = `
     disabled={false}
     onClick={[Function]}
   >
+    <span>
+      Save
+    </span>
     <span
       className="icon"
     >
       <i
+        aria-hidden="true"
         className="fas fa-check"
       />
-    </span>
-    <span>
-      Save
     </span>
   </button>
   <button
@@ -225,15 +231,16 @@ exports[`buttons with icons 1`] = `
     disabled={false}
     onClick={[Function]}
   >
-    <span>
-      Delete
-    </span>
     <span
       className="icon"
     >
       <i
+        aria-hidden="true"
         className="fas fa-times"
       />
+    </span>
+    <span>
+      Delete
     </span>
   </button>
   <button
@@ -241,15 +248,16 @@ exports[`buttons with icons 1`] = `
     disabled={false}
     onClick={[Function]}
   >
+    <span>
+      Github
+    </span>
     <span
       className="icon"
     >
       <i
+        aria-hidden="true"
         className="fab fa-github"
       />
-    </span>
-    <span>
-      Github
     </span>
   </button>
   <button
@@ -257,15 +265,16 @@ exports[`buttons with icons 1`] = `
     disabled={false}
     onClick={[Function]}
   >
+    <span>
+      Github
+    </span>
     <span
       className="icon"
     >
       <i
+        aria-hidden="true"
         className="fab fa-github"
       />
-    </span>
-    <span>
-      Github
     </span>
   </button>
   <button
@@ -273,15 +282,16 @@ exports[`buttons with icons 1`] = `
     disabled={false}
     onClick={[Function]}
   >
+    <span>
+      Github
+    </span>
     <span
       className="icon"
     >
       <i
+        aria-hidden="true"
         className="fab fa-github"
       />
-    </span>
-    <span>
-      Github
     </span>
   </button>
   <button
@@ -289,15 +299,16 @@ exports[`buttons with icons 1`] = `
     disabled={false}
     onClick={[Function]}
   >
+    <span>
+      Github
+    </span>
     <span
       className="icon"
     >
       <i
+        aria-hidden="true"
         className="fab fa-github"
       />
-    </span>
-    <span>
-      Github
     </span>
   </button>
 </div>

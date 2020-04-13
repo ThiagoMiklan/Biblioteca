@@ -5,6 +5,7 @@ import getClassName from '../tools/getClassName';
 import Icon from './Icon';
 
 
+// Evento : onChange no Input do tipo File
 
 const File = (props)=>{
   var definition= classnames(getClassName("file "+props.definition,"File"));

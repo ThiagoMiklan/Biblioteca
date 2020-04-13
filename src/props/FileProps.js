@@ -14,9 +14,9 @@ const file_props = {
     "success": "is-success",
     "warning": "is-warning",
     "danger": "is-danger",
-    "small": "small",
-    "medium": "medium",
-    "large": "large",
+    "small": "is-small",
+    "medium": "is-medium",
+    "large": "is-large",
     "centered": "is-centered",
     "right": "is-right"
 }

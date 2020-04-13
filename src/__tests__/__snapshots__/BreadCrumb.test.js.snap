@@ -323,57 +323,61 @@ exports[`breadcrumb with icons 1`] = `
   <ul>
     <li>
       <a>
-        <span
-          className="icon"
-        >
-          <i
-            className="fas fa-home"
-          />
-        </span>
         <span>
           Bulma
         </span>
-      </a>
-    </li>
-    <li>
-      <a>
         <span
           className="icon"
         >
           <i
-            className="fas fa-book"
+            aria-hidden="true"
+            className="fas fa-home"
           />
         </span>
+      </a>
+    </li>
+    <li>
+      <a>
         <span>
           Documentation
         </span>
-      </a>
-    </li>
-    <li>
-      <a>
         <span
           className="icon"
         >
           <i
-            className="fas fa-puzzle-piece"
+            aria-hidden="true"
+            className="fas fa-book"
           />
         </span>
+      </a>
+    </li>
+    <li>
+      <a>
         <span>
           Componentes
         </span>
-      </a>
-    </li>
-    <li>
-      <a>
         <span
           className="icon"
         >
           <i
-            className="fas fa-thumbs-up"
+            aria-hidden="true"
+            className="fas fa-puzzle-piece"
           />
         </span>
+      </a>
+    </li>
+    <li>
+      <a>
         <span>
           BreadCrumb
+        </span>
+        <span
+          className="icon"
+        >
+          <i
+            aria-hidden="true"
+            className="fas fa-thumbs-up"
+          />
         </span>
       </a>
     </li>
@@ -494,17 +498,18 @@ exports[`breadcrumb with onCLick on component Icon 3`] = `
         href="https://ufsc.br"
         onClick={[Function]}
       >
-        <span
-          className="icon"
-          onClick={[Function]}
-        >
-          <i
-            className="fas fa-home"
-          />
-        </span>
         <span>
           Bulma
         </span>
+        <span
+          className="icon"
+          onClick={[Function]}
+        >
+          <i
+            aria-hidden="true"
+            className="fas fa-home"
+          />
+        </span>
       </a>
     </li>
     <li>
@@ -512,17 +517,18 @@ exports[`breadcrumb with onCLick on component Icon 3`] = `
         href="https://ufsc.br"
         onClick={[Function]}
       >
-        <span
-          className="icon"
-          onClick={[Function]}
-        >
-          <i
-            className="fas fa-book"
-          />
-        </span>
         <span>
           Documentation
         </span>
+        <span
+          className="icon"
+          onClick={[Function]}
+        >
+          <i
+            aria-hidden="true"
+            className="fas fa-book"
+          />
+        </span>
       </a>
     </li>
     <li>
@@ -530,17 +536,18 @@ exports[`breadcrumb with onCLick on component Icon 3`] = `
         href="https://ufsc.br"
         onClick={[Function]}
       >
-        <span
-          className="icon"
-          onClick={[Function]}
-        >
-          <i
-            className="fas fa-puzzle-piece"
-          />
-        </span>
         <span>
           Componentes
         </span>
+        <span
+          className="icon"
+          onClick={[Function]}
+        >
+          <i
+            aria-hidden="true"
+            className="fas fa-puzzle-piece"
+          />
+        </span>
       </a>
     </li>
     <li>
@@ -548,16 +555,17 @@ exports[`breadcrumb with onCLick on component Icon 3`] = `
         href="https://ufsc.br"
         onClick={[Function]}
       >
+        <span>
+          BreadCrumb
+        </span>
         <span
           className="icon"
           onClick={[Function]}
         >
           <i
+            aria-hidden="true"
             className="fas fa-thumbs-up"
           />
-        </span>
-        <span>
-          BreadCrumb
         </span>
       </a>
     </li>

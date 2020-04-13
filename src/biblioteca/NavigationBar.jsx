@@ -19,11 +19,12 @@ Existem algumas maneira de fornecer os itens de "start" e "end" ao usar o presen
         />
 */
 const NavigationBar = (props)=>{
-    var definition= classnames(getClassName("navbar "+ props.definition,"NavigationBar"));
+    var definition="navbar " + classnames(getClassName(props.definition,"NavigationBar"));
         return (
-            <nav className="navbar is-dark">
-                <div class="navbar-brand">
-                    <a class="navbar-item" href={props.link_brand}>
+            <nav className={definition}>
+                
+                <div className="navbar-brand">
+                    <a className="navbar-item" href={props.link_brand}>
                         <img src={props.src_brand} alt={props.alt} width={props.width_brand} height={props.height_brand}></img>
                     </a>
                 </div>
@@ -122,7 +123,8 @@ NavigationBar.propTypes = {
     height_brand: PropTypes.number,
     alt_brand: PropTypes.string,
     itens_start : PropTypes.array,
-    itens_end : PropTypes.array
+    itens_end : PropTypes.array,
+    definition: PropTypes.string
 }
 
 export default NavigationBar;

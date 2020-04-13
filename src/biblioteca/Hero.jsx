@@ -22,8 +22,11 @@ const Hero = (props)=>{
 }
 
 Hero.propTypes ={
+    // Título do Banner
     title: PropTypes.string,
+    // Subtítulo do Banner
     subtitle: PropTypes.string,
+    // Características do Bulma
     definition: PropTypes.string
 }
 

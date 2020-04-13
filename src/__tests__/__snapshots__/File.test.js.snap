@@ -1,0 +1,349 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`test files 1`] = `
+<div
+  className="container is-fluid"
+>
+  <div
+    className="file"
+  >
+    <label
+      class="file-label"
+    >
+      <input
+        class="file-input"
+        onChange={[Function]}
+        type="file"
+      />
+      <span
+        className="file-cta"
+      >
+        <span />
+        <span
+          className="icon"
+        >
+          <i
+            aria-hidden="true"
+            className="fas fa-upload"
+          />
+        </span>
+        <span
+          class="file-label"
+        >
+          Choose a File
+        </span>
+      </span>
+    </label>
+  </div>
+  <br />
+  <div
+    className="file has-name"
+  >
+    <label
+      class="file-label"
+    >
+      <input
+        class="file-input"
+        type="file"
+      />
+      <span
+        className="file-cta"
+      >
+        <span />
+        <span
+          className="icon"
+        >
+          <i
+            aria-hidden="true"
+            className="fas fa-upload"
+          />
+        </span>
+        <span
+          class="file-label"
+        >
+          Choose File
+        </span>
+      </span>
+      <span
+        className="file-name"
+      >
+        Screenshot 2020/01/01
+      </span>
+    </label>
+  </div>
+  <br />
+  <div
+    className="file has-name is-right"
+  >
+    <label
+      class="file-label"
+    >
+      <input
+        class="file-input"
+        type="file"
+      />
+      <span
+        className="file-cta"
+      >
+        <span />
+        <span
+          className="icon"
+        >
+          <i
+            aria-hidden="true"
+            className="fas fa-upload"
+          />
+        </span>
+        <span
+          class="file-label"
+        >
+          Choose File
+        </span>
+      </span>
+      <span
+        className="file-name"
+      >
+        Screenshot 2020/01/01
+      </span>
+    </label>
+  </div>
+  <br />
+  <div
+    className="file has-name is-fullwidth"
+  >
+    <label
+      class="file-label"
+    >
+      <input
+        class="file-input"
+        type="file"
+      />
+      <span
+        className="file-cta"
+      >
+        <span />
+        <span
+          className="icon"
+        >
+          <i
+            aria-hidden="true"
+            className="fas fa-upload"
+          />
+        </span>
+        <span
+          class="file-label"
+        >
+          Choose File
+        </span>
+      </span>
+      <span
+        className="file-name"
+      >
+        Screenshot 2020/01/01
+      </span>
+    </label>
+  </div>
+  <br />
+  <div
+    className="file is-boxed"
+  >
+    <label
+      class="file-label"
+    >
+      <input
+        class="file-input"
+        type="file"
+      />
+      <span
+        className="file-cta"
+      >
+        <span />
+        <span
+          className="icon"
+        >
+          <i
+            aria-hidden="true"
+            className="fas fa-upload"
+          />
+        </span>
+        <span
+          class="file-label"
+        >
+          Choose a File
+        </span>
+      </span>
+    </label>
+  </div>
+  <br />
+  <div
+    className="file is-boxed has-name"
+  >
+    <label
+      class="file-label"
+    >
+      <input
+        class="file-input"
+        type="file"
+      />
+      <span
+        className="file-cta"
+      >
+        <span />
+        <span
+          className="icon"
+        >
+          <i
+            aria-hidden="true"
+            className="fas fa-upload"
+          />
+        </span>
+        <span
+          class="file-label"
+        >
+          Choose a File
+        </span>
+      </span>
+      <span
+        className="file-name"
+      >
+        Screenshot 2020/01/01
+      </span>
+    </label>
+  </div>
+  <br />
+  <div
+    className="file is-primary"
+  >
+    <label
+      class="file-label"
+    >
+      <input
+        class="file-input"
+        type="file"
+      />
+      <span
+        className="file-cta"
+      >
+        <span />
+        <span
+          className="icon"
+        >
+          <i
+            aria-hidden="true"
+            className="fas fa-upload"
+          />
+        </span>
+        <span
+          class="file-label"
+        >
+          Choose a File
+        </span>
+      </span>
+    </label>
+  </div>
+  <br />
+  <div
+    className="file has-name is-info"
+  >
+    <label
+      class="file-label"
+    >
+      <input
+        class="file-input"
+        type="file"
+      />
+      <span
+        className="file-cta"
+      >
+        <span />
+        <span
+          className="icon"
+        >
+          <i
+            aria-hidden="true"
+            className="fas fa-upload"
+          />
+        </span>
+        <span
+          class="file-label"
+        >
+          Choose File
+        </span>
+      </span>
+      <span
+        className="file-name"
+      >
+        Screenshot 2020/01/01
+      </span>
+    </label>
+  </div>
+  <br />
+  <div
+    className="file is-boxed is-warning"
+  >
+    <label
+      class="file-label"
+    >
+      <input
+        class="file-input"
+        type="file"
+      />
+      <span
+        className="file-cta"
+      >
+        <span />
+        <span
+          className="icon"
+        >
+          <i
+            aria-hidden="true"
+            className="fas fa-upload"
+          />
+        </span>
+        <span
+          class="file-label"
+        >
+          Choose a File
+        </span>
+      </span>
+    </label>
+  </div>
+  <br />
+  <div
+    className="file is-boxed has-name is-danger"
+  >
+    <label
+      class="file-label"
+    >
+      <input
+        class="file-input"
+        type="file"
+      />
+      <span
+        className="file-cta"
+      >
+        <span />
+        <span
+          className="icon has-text-info"
+        >
+          <i
+            aria-hidden="true"
+            className="fas fa-upload"
+          />
+        </span>
+        <span
+          class="file-label"
+        >
+          Choose a File
+        </span>
+      </span>
+      <span
+        className="file-name"
+      >
+        Screenshot 2020/01/01
+      </span>
+    </label>
+  </div>
+  <br />
+</div>
+`;

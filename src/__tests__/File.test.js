@@ -1,12 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import File from './biblioteca/File';
-import './css/bulma.css';
+import File from '../biblioteca/File';
+import renderer from 'react-test-renderer';
 
+var onChange = (e)=>{
+    alert("Escolheu o arquivo!")
+}
 
-ReactDOM.render(
-  <div className="container is-fluid">
-    <File filename="Screenshot 2020/01/01"
+test('test files',()=>{
+    const component = renderer
+    .create(<div className="container is-fluid">
+    <File onChange={onChange} filename="Screenshot 2020/01/01"
       label="Choose a File"
       icon_name="fas fa-upload" />
       <br></br>
@@ -41,25 +45,7 @@ ReactDOM.render(
       icon_name="fas fa-upload" />
       <br></br>
       <File 
-      definition="primary small"
-      filename="Screenshot 2020/01/01"
-      label="Choose a File"
-      icon_name="fas fa-upload" />
-      <br></br>
-      <File 
       definition="primary"
-      filename="Screenshot 2020/01/01"
-      label="Choose a File"
-      icon_name="fas fa-upload" />
-      <br></br>
-      <File 
-      definition="primary medium"
-      filename="Screenshot 2020/01/01"
-      label="Choose a File"
-      icon_name="fas fa-upload" />
-      <br></br>
-      <File 
-      definition="primary large"
       filename="Screenshot 2020/01/01"
       label="Choose a File"
       icon_name="fas fa-upload" />
@@ -80,9 +66,12 @@ ReactDOM.render(
       definition="boxed has-name danger"
       filename="Screenshot 2020/01/01"
       label="Choose a File"
+      icon_definition="info"
       icon_name="fas fa-upload" />
       <br></br>
-
-  </div>
-  , document.getElementById("root"))
-
+  </div>)
+        .toJSON();
+ 
+ 
+    expect(component).toMatchSnapshot();
+})

@@ -1,75 +1,28 @@
-import React from 'react';
+import React, { useState } from 'react';
 import ReactDOM from 'react-dom';
-import File from './biblioteca/File';
 import './css/bulma.css';
+import NavigationBar from './biblioteca/NavigationBar';
+import HeroThreeParts from './biblioteca/HeroThreeParts';
+import Title from './biblioteca/Title';
+import Subtitle from './biblioteca/Subtitle';
+import Tabs from './biblioteca/Tabs';
+import Button from './biblioteca/Button';
+import Icon from './biblioteca/Icon';
+import {renderToString} from 'react-dom/server';
 
+var itens_navbar_end = [
+  {value: "Home"},
+  {value: "Examples"},
+  {value: "Documentation"},
+  { value: <Button definition="info inverted"><Icon icon_name="fab fa-github">Github</Icon></Button> }]
 
-var onChange = (e)=>{
-  var x = e.target.value;
-  var  u = 0;
-}
+var itens_tabs = [{value: "Overview",definition:"active"},{ value: "Modifiers" }, { value: "Grid" }, { value: "Elements" },{ value: "Components" }, { value: "Layout" }]
 
-ReactDOM.render(
-  <div className="container is-fluid">
-    <File onChange={onChange} filename="Screenshot 2020/01/01"
-      label="Choose a File"
-      icon_name="fas fa-upload" />
-      <br></br>
-    <File
-      definition="has-name"
-      filename="Screenshot 2020/01/01"
-      label="Choose File"
-      icon_name="fas fa-upload" />
-    <br></br>
-    <File
-      definition="has-name right"
-      filename="Screenshot 2020/01/01"
-      label="Choose File"
-      icon_name="fas fa-upload" />
-    <br></br>
-    <File
-      definition="has-name fullwidth"
-      filename="Screenshot 2020/01/01"
-      label="Choose File"
-      icon_name="fas fa-upload" />
-    <br></br>
-    <File 
-      definition="boxed"
-      filename="Screenshot 2020/01/01"
-      label="Choose a File"
-      icon_name="fas fa-upload" />
-    <br></br>
-      <File 
-      definition="boxed has-name"
-      filename="Screenshot 2020/01/01"
-      label="Choose a File"
-      icon_name="fas fa-upload" />
-      <br></br>
-      <File 
-      definition="primary"
-      filename="Screenshot 2020/01/01"
-      label="Choose a File"
-      icon_name="fas fa-upload" />
-      <br></br>
-      <File
-      definition="has-name info"
-      filename="Screenshot 2020/01/01"
-      label="Choose File"
-      icon_name="fas fa-upload" />  
-      <br></br>
-      <File 
-      definition="boxed warning"
-      filename="Screenshot 2020/01/01"
-      label="Choose a File"
-      icon_name="fas fa-upload" />
-      <br></br>
-      <File 
-      definition="boxed has-name danger"
-      filename="Screenshot 2020/01/01"
-      label="Choose a File"
-      icon_name="fas fa-upload" />
-      <br></br>
-
-  </div>
-  , document.getElementById("root"))
-
+ReactDOM.render(<HeroThreeParts definition="fullheight info">
+    <NavigationBar  src_brand="https://bulma.io/images/bulma-type-white.png" alt_brand="logo" itens_end={itens_navbar_end} />
+    <div className="container has-text-centered">
+        <Title definition={1}>Title</Title>
+        <Subtitle definition={2}>Subtitle</Subtitle>
+    </div>
+    <Tabs definition="boxed fullwidth" itens={itens_tabs}></Tabs>
+</HeroThreeParts>, document.getElementById('root'));
