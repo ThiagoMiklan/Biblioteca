@@ -13,7 +13,10 @@ function assembleTextArea(props){
     var definitionControl = props.loading == true ? "loading": "";
     
     return <Control definition={definitionControl}>
-                <textarea className={definition} placeholder={props.placeholder}
+                <textarea 
+                onChange={props.onChange}
+                className={definition} 
+                placeholder={props.placeholder}
                  rows={props.rows} 
                  readOnly={props.readonly}
                  disabled={props.disabled}
@@ -27,7 +30,8 @@ TextArea.propTypes ={
     rows: PropTypes.string,
     loading: PropTypes.bool,
     disabled: PropTypes.bool,
-    readonly: PropTypes.bools   
+    readonly: PropTypes.bools,
+    onChange: PropTypes.func
 }
 
 export default TextArea;

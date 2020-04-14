@@ -2,18 +2,11 @@ import React,{useState} from 'react'
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import getClassName from '../tools/getClassName';
- ;
 
-// sem icon ainda
 const Input = (props) => {
-    
     return (
         assemble(props)
     );
-}
-
-function createHook(){
-
 }
 
 function assemble(props) {

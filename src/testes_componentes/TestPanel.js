@@ -5,6 +5,7 @@ import Column from './biblioteca/Column';
 import Columns from './biblioteca/Columns';
 import './css/bulma.css';
 import Button from './biblioteca/Button';
+import CheckBox from './biblioteca/CheckBox';
 
 
 
@@ -20,15 +21,22 @@ var itens_tabs = [
 var itens_blocks = [
   { value: "Bulma", href: "www.facebook.com", onClick: () => { alert("clicou Bulma")}, icon_definition:"warning", icon_name:"fab fa-css3-alt"},
   { value: "Github", href: "www.facebook.com", onClick: () => { alert("clicou github") }, icon_definition:"danger",icon_name:"fab fa-github" },
-  { value: "Twitter", href: "www.facebook.com", onClick: () => { alert("clicou Usuario") } ,icon_name: "fab fa-twitter"}, 
-  { value: "Facebook", href: "www.facebook.com", onClick: () => { alert("clicou Pedido") } ,icon_definition:"success" ,icon_name:"fas fa-hand-holding-usd"},
+  { value: "Twitter", href: "www.facebook.com", onClick: () => { alert("clicou twitter") } ,icon_name: "fab fa-twitter"}, 
+  { value: "Facebook", href: "www.facebook.com", onClick: () => { alert("clicou dinheiro") } ,icon_definition:"success" ,icon_name:"fas fa-hand-holding-usd"},
+  { value: <CheckBox onClick={()=>{alert("Clicou checkbox")}}>remember me</CheckBox>}
+  ,
   { value: <Button definition="primary light fullwidth" onClick={()=>{alert("Clicou no botao")}}> Reset All</Button>}
 ]
 
 ReactDOM.render(
   <Columns>
     <Column definition="half">
-      <Panel header="Find" definition ="primary" itens_tabs={itens_tabs} itens_blocks={itens_blocks}></Panel>
+      <Panel header="Primary" definition ="primary" itens_tabs={itens_tabs} itens_blocks={itens_blocks}></Panel>
+      <Panel header="Link" definition ="link" itens_tabs={itens_tabs} itens_blocks={itens_blocks}></Panel>
+      <Panel header="Info" definition ="info" itens_tabs={itens_tabs} itens_blocks={itens_blocks}></Panel>
+      <Panel header="Success" definition ="success" itens_tabs={itens_tabs} itens_blocks={itens_blocks}></Panel>
+      <Panel header="Warning" definition ="warning" itens_tabs={itens_tabs} itens_blocks={itens_blocks}></Panel>
+      <Panel header="Danger" definition ="danger" itens_tabs={itens_tabs} itens_blocks={itens_blocks}></Panel>
     </Column>
  </Columns>
     , document.getElementById('root'));

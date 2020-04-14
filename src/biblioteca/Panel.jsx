@@ -47,7 +47,7 @@ function assemblePanelBlocks(itens){
 }
 
 function assembleBlock(item) {
-    return <PanelItem>
+    return <PanelItem onClick={item["onClick"]}>
             {(item["icon_name"] != undefined && item["icon_name"] != '') && 
              <Icon icon_name={item["icon_name"]} definition={item["icon_definition"]}></Icon>
             }

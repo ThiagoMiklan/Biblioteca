@@ -4,6 +4,8 @@ import getClassName from '../tools/getClassName';
 import PropTypes from 'prop-types';
 import {InvalidNumberChilds,assembleDefaultMessage} from '../exception/InvalidNumberChilds';
 
+// Com filhos
+// Sem eventos
 // Especialização do componente Hero
 // Suporte a header,body and footer
 // Deve ser informar como filhos em sequência header,body e footer

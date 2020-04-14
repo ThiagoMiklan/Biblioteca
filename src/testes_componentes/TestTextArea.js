@@ -1,13 +1,37 @@
-import React from 'react';
+import React,{useState} from 'react';
 import ReactDOM from 'react-dom';
-import TextArea from './biblioteca/form/TextArea';
-import Column from './biblioteca/columns/Columns';
-import Columns from './biblioteca/columns/Column';
+import TextArea from './biblioteca/TextArea';
 import './css/bulma.css';
+
+
+
+const TextAreaHook = ()=>{
+  var initial = {
+    definition : '',
+    count: 0
+  }
+  
+  const [state,setState] = useState(initial);
+    
+    function onChange() {
+      if(state.count == 0){
+        setState({ ...state, definition: "primary", count:state.count+1});
+      }else if(state.count == 1){
+        setState({ ...state, definition: "info", count:state.count+1});
+      }else if(state.count == 2){
+        setState({ ...state, definition: "warning", count:state.count+1});
+      }else if(state.count == 3){
+        setState({ ...state, definition: "danger", count:state.count+1});
+      }
+      
+    }
+  return  <TextArea definition={state.definition} onChange={onChange} placeholder="Testando onChange"></TextArea>
+}
 
 ReactDOM.render(
   <>
     <div className="container is-fluid">
+    <TextAreaHook/>
     <TextArea placeholder="e.g. Hello world"></TextArea>
     <TextArea rows="10" placeholder="10 lines of text"></TextArea>
     <TextArea definition="primary" placeholder="e.g. Hello world"></TextArea>

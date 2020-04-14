@@ -1,27 +1,44 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Menu from './biblioteca/components/Menu.jsx';
-import MenuItem from './biblioteca/components/MenuItem.jsx';
+import Menu from './biblioteca/Menu.jsx';
+import MenuItem from './biblioteca/MenuItem.jsx';
 import './css/bulma.css';
-// informa objetos com label que o título de uma série de itens e um array com os nomes dos itens
-var menu_itens= [{label:"General",itens:["DashBoard","Customers"], definition: "active"},
-                 {label:"Administration",itens:["Team Settings","Manage your Team"]}
-                ];
-                
-// para adicionar os subitens, informa o nome do iteam, o label e os itens de subitem
 
-var x = {item:"Manage your team", sub_itens:["Member","Plugin","Add a member"]}
-var y = [{item:"Dashboard"}, {item:"Customers",sub_itens:["Member","Plugin","Add a member"]}];
+var onClickItem = ()=>{alert("Clicou")};
+
+// para adicionar os subitens, informa o nome do iteam, o label e os itens de subitem
+var itens_general_without_event = {value:"Manage your team", sub_itens:[{value:"Member"},{value:"Plugin"},{value:"Add a member"}]}
+var itens_administration_without_event = [{value:"Dashboard"}, {value:"Customers",sub_itens:[{value:"Member"},{value:"Plugin"},{value:"Add a member"}]}];
+var itens_merge = [{value:"item 1",sub_itens:[{value:"1"},{value:"2"}]} ,{value:"item 2",sub_itens:[{value:1},{value:2}]}]
+
+
+var itens_general_with_event = 
+{value:"Manage your team",onClick:onClickItem ,sub_itens:[{value:"Member", onClick:onClickItem},{value:"Plugin"},{value:"Add a member"}]}
+
+var itens_administration_with_event =
+[{value:"Dashboard",onClick:onClickItem }, {value:"Customers",sub_itens:["Member","Plugin","Add a member"]}];
+
 
 ReactDOM.render(
       <div className="container is-fluid">
       <Menu >
-          <MenuItem  item={x} label="General"/>
-          <MenuItem  item={y} label ="Administration"/>
+          <MenuItem  itens={itens_general_with_event} label="General"/>
+          <MenuItem  itens={itens_administration_with_event} label ="Administration"/>
       </Menu>
-      </div>,
+      <br></br>
+      <Menu >
+          <MenuItem  itens={itens_general_without_event} label="General"/>
+          <MenuItem  itens={itens_administration_without_event} label ="Administration"/>
+      </Menu>
+      <br></br>
+      <Menu>
+          <MenuItem label="Merge" itens={itens_merge}></MenuItem>
+      </Menu>
+     </div>,
     document.getElementById('root')
 );
+
+
 
 // Observações do estado da arte
 /*

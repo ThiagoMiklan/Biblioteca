@@ -7,28 +7,22 @@ import Button from './Button.jsx';
 
 const Notification = (props) =>{
     var definition = "notification " + classnames(getClassName(props.definition,"Notification"));
-    
     return(
             <div className={definition}>
-                {addButtonDelete(props)}
+                {props.delete == true && assembleDelete(props.onClickDelete)}
                 {props.children}
             </div>
     );
     
 }
 
-function addButtonDelete(props){
-    var button_del_code = "";
-    if(props.delete == true){
-        button_del_code = <Button delete={true} onClick ={props.onClickDelete}/>
-    }
-
-    return button_del_code;
+function assembleDelete(onClickDelete){
+    return <Button onClick={onClickDelete} delete={true}></Button>
 }
 
 Notification.propTypes = {
     definition: PropTypes.string,
-    button : PropTypes.element,
+    delete : PropTypes.bool,
     onClickDelete : PropTypes.func
 }
 

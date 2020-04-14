@@ -6,7 +6,7 @@ import getClassName from '../tools/getClassName'
 
 const ProgressBar = (props)=>{
         return (
-            <progress className={classnames(getClassName("progress "+ props.definition,"ProgressBar"))}
+            <progress onChange={props.onChange} className={classnames(getClassName("progress "+ props.definition,"ProgressBar"))}
              max={props.max} 
              value ={props.value}>  
             </progress>
@@ -17,6 +17,7 @@ ProgressBar.propTypes = {
     definition: PropTypes.string,
     max: PropTypes.string,
     value: PropTypes.string,
+    onChange: PropTypes.func
 
 }
 

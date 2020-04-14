@@ -1,9 +1,8 @@
 import React, { useState } from 'react';
 import ReactDOM from 'react-dom';
 import './css/bulma.css';
-import './css/all.js';
-import Notification from './biblioteca/elements/Notification';
-import Button from './biblioteca/elements/Button';
+import Notification from './biblioteca/Notification';
+
 
 function onClick() {
   alert("testando delete");
@@ -91,6 +90,13 @@ ReactDOM.render(
         adipiscing elit lorem ipsum dolor. <strong>Pellentesque risus mi</strong>, tempus quis placerat ut, porta nec nulla. Vestibulum rhoncus ac ex sit amet fringilla. Nullam gravida purus diam, et dictum <a>felis venenatis</a> efficitur. Sit amet,
         consectetur adipiscing elit
   </Notification>
+
+  <div class="notification is-primary is-light">
+  <button class="delete"></button>
+  Primar lorem ipsum dolor sit amet, consectetur
+  adipiscing elit lorem ipsum dolor. <strong>Pellentesque risus mi</strong>, tempus quis placerat ut, porta nec nulla. Vestibulum rhoncus ac ex sit amet fringilla. Nullam gravida purus diam, et dictum <a>felis venenatis</a> efficitur. Sit amet,
+  consectetur adipiscing elit
+</div>
 
 </>
 ,

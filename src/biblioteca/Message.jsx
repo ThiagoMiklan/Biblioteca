@@ -2,25 +2,27 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classname from 'classnames';
 import getClassName from '../tools/getClassName';
- ;
+import Button from '../biblioteca/Button';
 
-class Message extends React.Component {
-
-    render() {
-        var definition = "message " + classname(getClassName(this.props.definition, "Message"));
+const Message = (props)=> {
+    var definition = "message " + classname(getClassName(props.definition, "Message"));
         return (<article className={definition}>
-            {assembleHeader(this.props.name_header,this.props.button)}
-            {assembleBody(this.props.children)}
-        </article>);
-    }
-
+            {assembleHeader(props.header,props.delete,props.onClickDelete)}
+            {assembleBody(props.children)}
+          
+        </article>);    
 }
-function assembleHeader(name_header, button) {
+
+function assembleDelete(onClickDelete){
+    return <Button onClick={onClickDelete} delete={true}></Button>
+}
+
+function assembleHeader(name_header, isDelete, onClickDelete) {
     var header = "";
     if (name_header != undefined) {
         header = <div className="message-header">
             <p>{name_header}</p>
-            {button}
+            {isDelete ==  true && assembleDelete(onClickDelete)}
         </div>
     }
 
@@ -36,7 +38,8 @@ function assembleBody(message) {
 
 Message.propTypes ={
     definition: PropTypes.string,
-    button : PropTypes.element,
-    name_header: PropTypes.string
+    delete : PropTypes.bool,
+    onClickDelete: PropTypes.func,
+    header: PropTypes.string
 }
 export default Message;

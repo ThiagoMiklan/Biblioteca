@@ -25,7 +25,7 @@ var itens_2 = [
 ReactDOM.render(
   <>
     <div className="field">
-      <Select definition="rounded" itens={itens_1}></Select>
+      <Select  onChange={onClick} definition="rounded" itens={itens_1}></Select>
     </div>
 
     <div className="field">

@@ -3,40 +3,62 @@ import React from 'react';
 /*
     Menu Item foi desenvolvido para representar uma parte de um menu, 
     representando não somente o menu em si, mas também o label de cada item/itens
-*/
-class MenuItem extends React.Component {
 
-    render() {
+    Funcionamento: Para criar um menu é possível passar como props.itens um objeto ou um array
+    Objeto -> Informar quando for necessário somente um item
+    Ex: 
+     GENERAL -> label
+        Manage your team -> item
+            Member  -> subitem
+            Plugin  -> subitem
+            Add a member -> subitem
+
+    Nota-se que nesse caso é informado junto com o item, seus subitens(que são opcionais)
+
+    Array-> Informar quando necessário mais de um item
+    Ex:
+    ADMINISTRATION -> label
+        Dashboard -> item
+        Customers -> item
+
+    Existem a possibilidade de mesclar itens com subitens
+
+
+
+*/
+const MenuItem = (props)=>{
+    return (
         
-        return (
             <div>
-                {assembleLabel(this.props.label)}
-                <ul className="menu-list">
-                {assembleItem(this.props.item)}
-                </ul>
+                {props.itens != undefined && 
+                 <>
+                 {assembleLabel(props.label)}
+                 <ul className="menu-list">
+                 {props.itens != undefined && assembleItem(props.itens)}
+                 </ul>
+                 </>
+                }
             </div>
             );
-    }
 }
 
 function assembleLabel(label){
     return <p class="menu-label">
-    {label}
-  </p>;
-  
+            {label}
+           </p>;
 }
 /*
 
 */
-function assembleItem(item) {
+function assembleItem(itens) {
     var item_code = "";
-    // item é um array²
-    if (Array.isArray(item)) {
+    // item é um array²z
+    if (Array.isArray(itens)) {
         // [sim] = monta o item baseado em um array
-       item_code = assembleItemWithSubList(item);
+       item_code = assembleItemWithSubList(itens);
     } else {
         // [não] = monta um item normal, o item mais simples
-       item_code = assembleSingleItem(item);
+       item_code = assembleSingleItem(itens);
     }
 
     return item_code;
@@ -48,12 +70,12 @@ function assembleSingleItem(item) {
     if(item["sub_itens"]!= undefined){
         item_code = decideTypeOfItem(item);
     }else{
-        item_code = <li><a>{item["item"]}</a></li>; 
+        item_code = <li><a onClick={item["onClick"]}>{item["value"]}</a></li>; 
     }
     return item_code;
 }
-function assembleSubItens(sub_item){
-    return <li><a>{sub_item}</a></li>;
+function assembleSubItens(item){
+    return <li><a onClick={item["onClick"]}>{item["value"]}</a></li>;
 }
 
 // caso mais complexo onde um item possui uma sublista
@@ -69,7 +91,7 @@ function decideTypeOfItem(item) {
     // se possuir sub_itens
     if (item["sub_itens"] != undefined) {
         item_code = <li>
-            <a> {item["item"]}</a>
+            <a onClick={item["onClick"]}> {item["value"]}</a>
             <ul>
                 {item["sub_itens"].map(item => assembleSubItens(item))}
             </ul>

@@ -11,6 +11,7 @@ const navigation_bar_props = {
     "dark"  : "is-dark",
     "light": "is-light",
     "white": "is-white", 
+    "active": "is-active"
 }
 
 export default navigation_bar_props;

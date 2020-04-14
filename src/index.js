@@ -1,28 +1,71 @@
-import React, { useState } from 'react';
+import React,{useState} from 'react';
 import ReactDOM from 'react-dom';
+import TextArea from './biblioteca/TextArea';
 import './css/bulma.css';
-import NavigationBar from './biblioteca/NavigationBar';
-import HeroThreeParts from './biblioteca/HeroThreeParts';
-import Title from './biblioteca/Title';
-import Subtitle from './biblioteca/Subtitle';
-import Tabs from './biblioteca/Tabs';
-import Button from './biblioteca/Button';
-import Icon from './biblioteca/Icon';
-import {renderToString} from 'react-dom/server';
 
-var itens_navbar_end = [
-  {value: "Home"},
-  {value: "Examples"},
-  {value: "Documentation"},
-  { value: <Button definition="info inverted"><Icon icon_name="fab fa-github">Github</Icon></Button> }]
 
-var itens_tabs = [{value: "Overview",definition:"active"},{ value: "Modifiers" }, { value: "Grid" }, { value: "Elements" },{ value: "Components" }, { value: "Layout" }]
 
-ReactDOM.render(<HeroThreeParts definition="fullheight info">
-    <NavigationBar  src_brand="https://bulma.io/images/bulma-type-white.png" alt_brand="logo" itens_end={itens_navbar_end} />
-    <div className="container has-text-centered">
-        <Title definition={1}>Title</Title>
-        <Subtitle definition={2}>Subtitle</Subtitle>
+const TextAreaHook = ()=>{
+  var initial = {
+    definition : '',
+    count: 0
+  }
+  
+  const [state,setState] = useState(initial);
+    
+    function onChange() {
+      if(state.count == 0){
+        setState({ ...state, definition: "primary", count:state.count+1});
+      }else if(state.count == 1){
+        setState({ ...state, definition: "info", count:state.count+1});
+      }else if(state.count == 2){
+        setState({ ...state, definition: "warning", count:state.count+1});
+      }else if(state.count == 3){
+        setState({ ...state, definition: "danger", count:state.count+1});
+      }
+      
+    }
+  return  <TextArea definition={state.definition} onChange={onChange} placeholder="Testando onChange"></TextArea>
+}
+
+ReactDOM.render(
+  <>
+    <div className="container is-fluid">
+    <TextAreaHook/>
+    <TextArea placeholder="e.g. Hello world"></TextArea>
+    <TextArea rows="10" placeholder="10 lines of text"></TextArea>
+    <TextArea definition="primary" placeholder="e.g. Hello world"></TextArea>
+    <TextArea definition="info" placeholder="e.g. Hello world"></TextArea>
+    <TextArea definition="success" placeholder="e.g. Hello world"></TextArea>
+    <TextArea definition="warning" placeholder="e.g. Hello world"></TextArea>
+    <TextArea definition="danger" placeholder="e.g. Hello world"></TextArea>
+    <TextArea definition="small" placeholder="e.g. Hello world"></TextArea>
+    <TextArea placeholder="e.g. Hello world"></TextArea>
+    <TextArea definition="medium" placeholder="e.g. Hello world"></TextArea>
+    <TextArea definition="large" placeholder="e.g. Hello world"></TextArea>
+    <TextArea placeholder="e.g. Hello world" loading={true} readonly={true}></TextArea>
+    <TextArea placeholder="e.g. Hello world" loading={true} disabled={true}></TextArea>
     </div>
-    <Tabs definition="boxed fullwidth" itens={itens_tabs}></Tabs>
-</HeroThreeParts>, document.getElementById('root'));
+  </>
+  ,document.getElementById("root"))
+
+
+  /*
+  <>
+    <div className="container is-fluid">
+    <TextArea placeholder="e.g. Hello world"></TextArea>
+    <TextArea rows="10" placeholder="10 lines of text"></TextArea>
+    <TextArea definition="primary" placeholder="e.g. Hello world"></TextArea>
+    <TextArea definition="info" placeholder="e.g. Hello world"></TextArea>
+    <TextArea definition="success" placeholder="e.g. Hello world"></TextArea>
+    <TextArea definition="warning" placeholder="e.g. Hello world"></TextArea>
+    <TextArea definition="danger" placeholder="e.g. Hello world"></TextArea>
+    <TextArea definition="small" placeholder="e.g. Hello world"></TextArea>
+    <TextArea placeholder="e.g. Hello world"></TextArea>
+    <TextArea definition="medium" placeholder="e.g. Hello world"></TextArea>
+    <TextArea definition="large" placeholder="e.g. Hello world"></TextArea>
+    <TextArea definition="hovered" placeholder="e.g. Hello world"></TextArea>
+    </div>
+  </>
+  
+  */

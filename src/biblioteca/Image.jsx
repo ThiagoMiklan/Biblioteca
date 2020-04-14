@@ -4,15 +4,10 @@ import classnames from 'classnames';
 import getClassName from '../tools/getClassName';
 
 
-class Image extends React.Component {
-
-    render() {
-        return (
-        <figure className={classnames(getClassName(this.props.definition, "Image"))} >
+const Image = ()=>{
+    return (<figure className={classnames(getClassName(this.props.definition, "Image"))} >
             <img src={this.props.src}/>
         </figure>);
-    }
-
 }
 
 Image.propTypes = {

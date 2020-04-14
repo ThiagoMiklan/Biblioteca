@@ -8,7 +8,7 @@ import '../css/bulma.css';
 const Select = (props) => {
     var definition = classnames(getClassName("select " + props.definition, "Select"));
     var definitionSelect= classnames(getClassName(getDefinitionCssEvents(props.definition), "Select"));
-    
+   
     var code = <div className={definition}>
         {props.multiple_size == undefined
             ? <select onChange={props.onChange} className={definitionSelect}> {assembleItens(props.itens)}</select>

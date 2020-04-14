@@ -1,16 +1,29 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './css/bulma.css';
-import Pagination from './biblioteca/components/Pagination';
+import Pagination from './biblioteca/Pagination';
+
+var onClickItem = ()=>{
+    alert("Clicou");
+}
 
 var itens = [];
-itens.push({value:1, href:"https://pt-br.reactjs.org/docs/hooks-overview.html",definition:"current"});
+itens.push({value:1, href:"https://pt-br.reactjs.org/docs/hooks-overview.html",definition:"current",onClick:onClickItem});
 itens.push({value:2, href:"https://pt-br.reactjs.org/docs/hooks-effect.html",definition:""});
 itens.push({value:3, href:"https://pt-br.reactjs.org/docs/hooks-effect.html",definition:""});
 
 ReactDOM.render( 
     <>
-    <Pagination  itens={itens} href_previous="https://pt-br.reactjs.org/docs/hooks-overview.html" href_next="https://pt-br.reactjs.org/docs/hooks-effect.html"next_name="Previous"previous_name="Next"/>
+        <Pagination
+            itens={itens}
+            href_previous="https://pt-br.reactjs.org/docs/hooks-overview.html"
+            href_next="https://pt-br.reactjs.org/docs/hooks-effect.html"
+            next_name="Previous"
+            previous_name="Next" 
+            previous_disabled={true}
+            next_disabled={true}
+        />
+
     <Pagination  definition="center"itens={itens} href_previous="https://pt-br.reactjs.org/docs/hooks-overview.html" href_next="https://pt-br.reactjs.org/docs/hooks-effect.html"next_name="Previous"previous_name="Next"/>
     <Pagination  definition="right" itens={itens} href_previous="https://pt-br.reactjs.org/docs/hooks-overview.html" href_next="https://pt-br.reactjs.org/docs/hooks-effect.html"next_name="Previous"previous_name="Next"/>
     <Pagination  definition ="rounded" itens={itens} href_previous="https://pt-br.reactjs.org/docs/hooks-overview.html" href_next="https://pt-br.reactjs.org/docs/hooks-effect.html"next_name="Previous"previous_name="Next"/>

@@ -13,8 +13,6 @@ function assembleTagList(props){
     
     if(props.itens != undefined && Array.isArray(props.itens)){
         code = assembleListWithItens(props);
-    }else{
-
     }
     return code;
 }
@@ -26,16 +24,16 @@ function assembleListWithItens(props){
     var definition = classnames(getClassName("tags "+props.definition,"TagList"));
     var code = 
          <div className={definition}>
-        {itens.map(item => assembleTag(item["definition"],item["value"]))}
+        {itens.map(item => assembleTag(item["definition"],item["value"],item["onClick"]))}
          </div>
   
     return code;
 }
 
 // monta a tag 
-function assembleTag(definition,value){
+function assembleTag(definition,value,onClick){
     var definitionTag =  classnames(getClassName("tag "+definition, "Tag"));
-   return <span className={definitionTag}>{value}</span>
+   return <span onClick={onClick} className={definitionTag}>{value}</span>
 }
 
 // monta lista conforme as props.children
