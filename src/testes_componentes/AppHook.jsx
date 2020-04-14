@@ -1,7 +1,7 @@
 import React from 'react';
 import {useState} from 'react';
 import ReactDOM from 'react-dom';
-import '../css/bulma.css';
+
 import ButtonHook from '../hooks/ButtonHook'
 
 var estadoInicial = {

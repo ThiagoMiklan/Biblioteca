@@ -159,7 +159,7 @@ ReactDOM.render(
 import React, { useState } from 'react';
 import ReactDOM from 'react-dom';
  
-import './css/all.js';
+
 import Icon from './biblioteca/elements/Icon';
 import ButtonList from './biblioteca/elements/ButtonList';
 import Button from './biblioteca/elements/Button';

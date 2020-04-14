@@ -1,7 +1,5 @@
 import React, { useState } from 'react';
 import ReactDOM from 'react-dom';
- 
-import './css/all.js';
 import List from './biblioteca/elements/List';
 import Content from './biblioteca/elements/Content';
 

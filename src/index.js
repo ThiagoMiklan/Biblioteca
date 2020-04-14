@@ -1,3 +1,4 @@
+import 'bulma/css/bulma.css';
 import BreadCrumb from './biblioteca/BreadCrumb';
 import Button from './biblioteca/Button';
 import ButtonList from './biblioteca/ButtonList';
@@ -26,7 +27,7 @@ import Panel from './biblioteca/Panel';
 import PanelItem from './biblioteca/PanelItem';
 import ProgressBar from './biblioteca/ProgressBar';
 import Radio from './biblioteca/Radio';
-import Section from './biblioteca/Section';s
+import Section from './biblioteca/Section';
 import Select from './biblioteca/Select';
 import Subtitle from './biblioteca/Subtitle';
 import Table from './biblioteca/Table';

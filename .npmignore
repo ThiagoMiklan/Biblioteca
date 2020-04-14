@@ -1,4 +1,6 @@
+/.vscode
 /node_modules
+/public
 /gitignore
 /package-lock.json
 /webpack.config.json
@@ -7,4 +9,4 @@
 /src/testes_componentes
 /src/AlterStateInput.jsx
 /.flowconfig
-/babel.config.js
+/rollup.config.js
