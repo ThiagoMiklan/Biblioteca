@@ -19,6 +19,7 @@
     Field
     File
     Hero
+	HeroThreeParts
     Icon
     Image
     Input
