@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import Button from './biblioteca/elements/Button.jsx';
 import NavigationBar from './biblioteca/components/NavigationBar.jsx';
-import './css/bulma.css';
+ 
 
 var object_item = {
     "value": "More",

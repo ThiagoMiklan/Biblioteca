@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Message from './biblioteca/Message.jsx';
-import './css/bulma.css';
+ 
 
 var onClickDelete = ()=>{
     alert("Clicou no delete!")

@@ -8,7 +8,7 @@ import Content from './biblioteca/Content.jsx';
 import Box from './biblioteca/Box.jsx';
 import Image from './biblioteca/Image.jsx';
 import Notification from './biblioteca/Notification.jsx';
-import './css/bulma.css';
+ 
 
 
 /*

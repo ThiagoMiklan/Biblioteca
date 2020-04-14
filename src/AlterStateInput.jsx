@@ -2,7 +2,7 @@ import React from 'react';
 import {useState} from 'react';
 import ReactDOM from 'react-dom';
 import Input from './biblioteca/form/Input';
-import './css/bulma.css';
+ 
 
 var estadoInicial = {
   type : 'text',

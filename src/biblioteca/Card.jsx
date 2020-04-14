@@ -12,24 +12,6 @@ const Card = (props)=>{
     );
 }
 
-function assembleHeading(header_title){
-    return (
-    <header class="card-header">
-    <p class="card-header-title">
-      {header_title}
-    </p>
-  </header>
-  );
-}
-
-function assembleContent(){
-    return this.props.card_content;
-}
-function assembleFooter(itens){
-    return <footer className="card-footer">
-            {itens.map(item=> <div></div>)}
-            </footer>
-}
 function assembleImage(props) {
     return (
         <div className="card-image">

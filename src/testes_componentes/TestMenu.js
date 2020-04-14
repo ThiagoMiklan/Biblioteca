@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import Menu from './biblioteca/Menu.jsx';
 import MenuItem from './biblioteca/MenuItem.jsx';
-import './css/bulma.css';
+ 
 
 var onClickItem = ()=>{alert("Clicou")};
 

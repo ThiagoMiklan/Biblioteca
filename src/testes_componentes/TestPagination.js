@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './css/bulma.css';
+ 
 import Pagination from './biblioteca/Pagination';
 
 var onClickItem = ()=>{

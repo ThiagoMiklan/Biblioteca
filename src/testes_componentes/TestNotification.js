@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import ReactDOM from 'react-dom';
-import './css/bulma.css';
+ 
 import Notification from './biblioteca/Notification';
 
 

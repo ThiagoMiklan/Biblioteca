@@ -1,7 +1,7 @@
 import React,{useState} from 'react';
 import ReactDOM from 'react-dom';
 import TextArea from './biblioteca/TextArea';
-import './css/bulma.css';
+ 
 
 
 

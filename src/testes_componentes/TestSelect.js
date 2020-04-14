@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import Control from './biblioteca/elements/Control';
 import Icon from './biblioteca/elements/Icon';
 import Select from './biblioteca/form/Select';
-import './css/bulma.css';
+ 
 
 var click = ()=>{
   alert("Clicou");

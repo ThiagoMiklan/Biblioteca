@@ -1,7 +1,7 @@
 import React, { useState , useEffect} from 'react';
 import ReactDOM from 'react-dom';
 import TableQuery from './biblioteca/TableQuery';
-import './css/bulma.css';
+ 
 
 async function fetchJson(url){
     var respJson = await window.fetch(url).then(res => res.json());

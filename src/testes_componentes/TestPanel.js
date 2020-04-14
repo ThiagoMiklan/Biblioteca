@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import Panel from './biblioteca/Panel';
 import Column from './biblioteca/Column';
 import Columns from './biblioteca/Columns';
-import './css/bulma.css';
+ 
 import Button from './biblioteca/Button';
 import CheckBox from './biblioteca/CheckBox';
 

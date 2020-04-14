@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import CheckBox from './biblioteca/CheckBox';
 import Control from './biblioteca/Control';
-import './css/bulma.css';
+ 
 
 
 ReactDOM.render(

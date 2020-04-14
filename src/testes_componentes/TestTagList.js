@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import Tag from './biblioteca/elements/Tag';
 import TagList from './biblioteca/elements/TagList';
 import Control from './biblioteca/elements/Control';
-import './css/bulma.css';
+ 
 
 var tags = [
   {value:'One', definition:'primary'},

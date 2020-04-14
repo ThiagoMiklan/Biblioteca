@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import File from './biblioteca/File';
-import './css/bulma.css';
+ 
 
 
 ReactDOM.render(

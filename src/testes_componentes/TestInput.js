@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import ReactDOM from 'react-dom';
-import './css/bulma.css';
+ 
 import Input from './biblioteca/form/Input'
 import Icon from './biblioteca/elements/Icon';
 

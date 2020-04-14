@@ -2590,13 +2590,11 @@ HeroThreeParts.propTypes = {
   definition: propTypes.string
 };
 
-var _this = undefined;
-
-var Image = function Image() {
+var Image = function Image(props) {
   return /*#__PURE__*/React__default.createElement("figure", {
-    className: classnames(getClassName(_this.props.definition, "Image"))
+    className: classnames(getClassName(props.definition, "Image"))
   }, /*#__PURE__*/React__default.createElement("img", {
-    src: _this.props.src
+    src: props.src
   }));
 };
 
@@ -3856,7 +3854,7 @@ Title.propTypes = {
   p: propTypes.bool
 };
 
-s;
+
 
 exports.BreadCrumb = BreadCrumb;
 exports.Button = Button;

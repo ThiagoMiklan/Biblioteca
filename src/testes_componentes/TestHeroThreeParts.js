@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './css/bulma.css';
+ 
 import NavigationBar from './biblioteca/NavigationBar';
 import HeroThreeParts from './biblioteca/HeroThreeParts';
 import Title from './biblioteca/Title';

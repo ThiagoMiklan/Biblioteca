@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import Tag from './biblioteca/elements/Tag';
 import Control from './biblioteca/elements/Control';
-import './css/bulma.css';
+ 
 
 var tags = [];
 tags[0] = {"definition": "tag primary rounded large light", value:"tag1"} ;

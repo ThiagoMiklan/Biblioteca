@@ -43,7 +43,7 @@ class AlterStateTeste extends React.Component{
 /*
 import React, { useState } from 'react';
 import ReactDOM from 'react-dom';
-import './css/bulma.css';
+ 
 import Button from './hooks/ButtonHook';
 
 var clickCount = 0;

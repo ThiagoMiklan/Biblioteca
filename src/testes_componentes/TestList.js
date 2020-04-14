@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import Content from './biblioteca/Content';
 import List from './biblioteca/List';
-import './css/bulma.css';
+ 
 
 var itens = [{value:"Thiago",onClick:()=>{alert("Clicou")}}
             ,{value:"João",onClick:()=>{alert("Clicou")}},

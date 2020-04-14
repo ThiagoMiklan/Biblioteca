@@ -4,9 +4,9 @@ import classnames from 'classnames';
 import getClassName from '../tools/getClassName';
 
 
-const Image = ()=>{
-    return (<figure className={classnames(getClassName(this.props.definition, "Image"))} >
-            <img src={this.props.src}/>
+const Image = (props)=>{
+    return (<figure className={classnames(getClassName(props.definition, "Image"))} >
+            <img src={props.src}/>
         </figure>);
 }
 

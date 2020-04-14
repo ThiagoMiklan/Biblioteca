@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import ReactDOM from 'react-dom';
-import './css/bulma.css';
+ 
 import Tabs from './biblioteca/components/Tabs'
 
 var itens = [{value:"kkk",definition :"active"},
@@ -41,7 +41,7 @@ document.getElementById('root'));
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Tabs from './biblioteca/components/Tabs';
-import './css/bulma.css';
+ 
 
 
 var itens = [

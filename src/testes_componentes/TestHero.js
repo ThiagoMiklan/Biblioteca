@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import ReactDOM from 'react-dom';
-import './css/bulma.css';
+ 
 import Hero from './biblioteca/Hero';
 import Button from './biblioteca/Button';
 import NavigationBar from './biblioteca/NavigationBar';

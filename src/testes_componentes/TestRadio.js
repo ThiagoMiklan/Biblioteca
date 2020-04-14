@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import Radio from './biblioteca/form/Radio';
 import Control from './biblioteca/elements/Control';
-import './css/bulma.css';
+ 
 
 
 

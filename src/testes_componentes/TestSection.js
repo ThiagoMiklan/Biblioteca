@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Tabs from './biblioteca/components/Tabs';
-import './css/bulma.css';
+ 
 import Section from './biblioteca/layout/Section';
 import Title from './biblioteca/elements/Title';
 import Subtitle from './biblioteca/elements/Subtitle';

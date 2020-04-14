@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import ReactDOM from 'react-dom';
-import './css/bulma.css';
+ 
 import Button from './biblioteca/elements/Button';
 import ButtonList from './biblioteca/elements/ButtonList';
 
@@ -158,7 +158,7 @@ ReactDOM.render(
 /*
 import React, { useState } from 'react';
 import ReactDOM from 'react-dom';
-import './css/bulma.css';
+ 
 import './css/all.js';
 import Icon from './biblioteca/elements/Icon';
 import ButtonList from './biblioteca/elements/ButtonList';

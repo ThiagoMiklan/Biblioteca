@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Table from './biblioteca/Table.jsx';
-import './css/bulma.css';
+ 
 
 
 
