@@ -2,7 +2,7 @@ import React from 'react';
 import Icon from '../biblioteca/Icon';
 import classnames from 'classnames';
 import getClassName from './getClassName'
-import {renderToString} from 'react-dom/server';
+
 // Função criada para reaproveitar o método assembleList do componente Tabs
 // Pode-se usá-lo por exemplo, dentro do componente Panel para montar um Panel Tabs;
 function assembleListTabs(itens){
@@ -21,8 +21,6 @@ function assembleListTabs(itens){
             </ul>
         }
 
-        var x =  renderToString(tabs_code);
-        var y = 0;
     
          return tabs_code;   
 }

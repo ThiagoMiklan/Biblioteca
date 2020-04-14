@@ -1,10 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import DropDown from './biblioteca/DropDown';
-import Columns from './biblioteca/Columns';
-import Column from './biblioteca/Column';
-import {renderToString} from 'react-dom/server';
-import './css/bulma.css';
+
 
 
 var itens_link =[{value: "Dropdown Button" ,link:true, href:"https://ufsc.br", onClick:()=>{alert("Clicou")}},
@@ -22,8 +19,7 @@ var itens_div =[
 
 ];
 
-var code = renderToString(<DropDown dropdown_name="teste" definition="right" itens={itens_div} />);
-var y  =0;
+
 
  ReactDOM.render(
         <>

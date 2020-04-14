@@ -2,7 +2,7 @@ import React from 'react';
 import classnames from 'classnames';
 import getClassName from '../tools/getClassName';
 import PropTypes from 'prop-types';
-import {renderToString}  from 'react-dom/server';
+
 
 const TableQuery = (props)=>{
     return assembleTable(props);

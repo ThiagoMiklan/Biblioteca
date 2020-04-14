@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import './css/bulma.css';
 import Title from './biblioteca/elements/Title'
 import SubTitle from './biblioteca/elements/Subtitle';
-import { renderToString } from 'react-dom/server';
+
 
 
 ReactDOM.render(

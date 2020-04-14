@@ -1,4 +1,4 @@
-# Assemble React Bulma (0.0.8) - Alfa Version
+# Assemble React Bulma (0.0.9) - Alfa Version
 
  - Set of React components created to assist in development using the Bulma framework
  - Final work to complete the Information System course at the Federal University of Santa Catarina (Brazil)

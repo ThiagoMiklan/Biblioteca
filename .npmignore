@@ -6,3 +6,5 @@
 /src/html_testes
 /src/testes_componentes
 /src/AlterStateInput.jsx
+/.flowconfig
+/babel.config.js

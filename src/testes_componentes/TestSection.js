@@ -6,16 +6,6 @@ import Section from './biblioteca/layout/Section';
 import Title from './biblioteca/elements/Title';
 import Subtitle from './biblioteca/elements/Subtitle';
 import SubTitle from './biblioteca/elements/Subtitle';
-import {renderToString} from 'react-dom/server';
-
-var x = renderToString(<Section>
-    <Title definition={1}>Texto Principal</Title>
-    <Title definition={2}>Texto Secundários</Title>
-    <p>Em linguística, a noção de texto é ampla e ainda aberta a uma definição mais precisa. Grosso modo, pode ser entendido como manifestação linguística das ideias de um autor, que serão interpretadas pelo leitor de acordo com seus conhecimentos linguísticos e culturais. Seu tamanho é variável</p>
-    </Section>);
-
-    var y = 0;
-
 
 ReactDOM.render(
     <Section>
