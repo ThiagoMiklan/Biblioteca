@@ -58,7 +58,6 @@ const component_path = {
     "Columns" : columns_props,
     "Column" : column_props,
     "Section" : section_props,
-    "NavigationBar": navigation_bar_props,
     "Text": text_area_props,
     "Select": select_props,
     "File": file_props,

@@ -1,109 +1,94 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import classnames from 'classnames';
-import getlClassName from '../tools/getClassName';
+import getClassName from '../tools/getClassName';
+import PropTypes from 'prop-types';
 
+// style cursor default pointer
+// cursor ao passar com o mouse em cima de uma linha da table
+var style_cursor = {
+    cursor:"pointer"
+}
 
-const Table = (props)=> {
-    var definition = classnames(getlClassName("table "+props.definition,"Table"));
-        return (
-            <table className={definition}>
-                {assembleHeader(props)}
-                {assembleFooter(props)}
-                {assembleBody(props)}
+const Table = (props) => {
+    return assembleTable(props);
+}
+
+function assembleTable(props) {
+    var definition = classnames(getClassName("table " + props.definition, "Table"));
+    var code = <></>;
+
+    
+    code =  <table className={definition}>
+                {isArrayOk(props.itens_header) && assembleHeader(props.itens_header)}
+                {isArrayOk(props.itens_body) && assembleBody(props.itens_body,props.onClickRow)}
+                {isArrayOk(props.itens_footer) && assembleFooter(props.itens_footer)}
             </table>
-        );
+
+    return code;
 }
 
+// verifica se é viável utilizar o array
+function isArrayOk(array) {
+    var output = false;
 
-function assembleHeader(props) {
-    var header = "";
-    try{
-        if(!Array.isArray(props.rows_header)){
-            throw new Error("Invalid Argument Object");
-        }
-    
-        if (props.rows_header != undefined) {
-            header =
-                <thead>
-                    <tr>
-                        {props.rows_header.map(row => assembleRow(row))}
-                    </tr>
-                </thead>;
-        }
-    }catch(e){
-        console.log(e.message);
-    }
-    
-    return header;
-}
-
-function assembleBody(props) {
-    var body = "";
-    try{
-        if(!Array.isArray(props.rows_body)){
-            throw new Error("Invalid Argument Exception");
-        }
-    
-        if (props.rows_body != undefined) {
-            body = <tbody>
-                    {props.rows_body.map(row_array => <tr>{row_array.map(row => assembleRowBody(row))}</tr>)}
-            </tbody>;
-        }
-    }catch(e){
-        console.log(e.message);
-    }
-
-    
-    return body;
-}
-
-function assembleFooter(props) {
-    var footer = "";
-    try{
-        if (props.rows_footer != undefined) {
-            footer = <tfoot>
-                <tr>
-                    {props.rows_footer.map(row => assembleRow(row))}
-                </tr>
-            </tfoot>;
-        }
-    }catch(e){
-        console.log(e.message);
-    }
-    
-    return footer;
-}
-
-function assembleRow(row) {
-    if (typeof (row) != "object") {
-        return <th>{row}</th>;
-    } else {
-        return <th><abbr title={String(row.abbr_text)}>{String(row.value)}</abbr></th>
-    }
-}
-
-function assembleRowBody(row) {
-
-    var array1 = row[0];
-   
-    if (typeof (row) != "object") {
-        return <td>{row}</td>;
-    } else {
-        var x = row.have_link;
-        if (row.have_link == true) {
-        return <th><a title={row.value} href={row.href}> {row.value}</a></th>
+    if (Array.isArray(array) && array != undefined) {
+        if (array.length > 0) {
+            output = true;
         }
     }
+    return output;
 }
 
+function assembleHeader(itens_header) {
+    var code_header = <></>
+
+    code_header = <thead>
+        <tr>
+            {itens_header.map(item_header => assembleRowHeaderFooter(item_header))}
+        </tr>
+    </thead>
+
+    return code_header;
+}
+
+function assembleFooter(itens_footer) {
+    var code_footer = <></>
+
+    code_footer = <tfoot>
+        <tr>
+            {itens_footer.map(item_footer => assembleRowHeaderFooter(item_footer))}
+        </tr>
+    </tfoot>
+    return code_footer;
+}
+
+function assembleBody(itens,onClickRow) {
+    var code = <></>;
+    
+    var getRow = (item) => {
+        var row = "";
+        var values = Object.values(item);
+        row = values.map(value => <td>{value}</td>)
+        return row;
+    }
+    code = itens.map(item => <tr key={item["key"]} style={style_cursor}  onClick={onClickRow}>{getRow(item)}</tr>);
+    return code;
+}
+
+function assembleRowHeaderFooter(item) {
+    return <th>{item["value"]}</th>
+
+}
 
 Table.propTypes = {
-    definition: PropTypes.string,
-    rows_header: PropTypes.array,
-    rows_footer: PropTypes.array,
-    rows_body: PropTypes.array,
-    isQuery: PropTypes.bool
+    itens_body: PropTypes.array,
+    itens_header: PropTypes.array,
+    itens_footer: PropTypes.Array,
+    // função para quando clicar na tabela
+    // executar alguma ação
+    // evento global para todas as linhas
+    onClickRow: PropTypes.func
 }
+
 
 export default Table;

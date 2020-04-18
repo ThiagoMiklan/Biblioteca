@@ -20,7 +20,6 @@ const button_props = {
     "normal": "is-normal",
     "large": "is-large",
 
-    "focused": "is-focused",
     "loading": "is-loading",
 
     "outlined": "is-outlined",

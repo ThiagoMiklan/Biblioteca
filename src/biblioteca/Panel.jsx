@@ -4,6 +4,7 @@ import classnames from 'classnames';
 import getClassName from '../tools/getClassName';
 import Icon from './Icon';
 import PanelItem from './PanelItem';
+import Field from './Field';
 
 
 // v.01
@@ -12,6 +13,7 @@ const Panel = (props) => {
     return (
         <nav class={definition}>
             {assembleHeading(props.header)}
+            {haveSearch(props) == true &&  assembleSearch(props)}
             {assemblePanelTabs(props.itens_tabs)}
             {assemblePanelBlocks(props.itens_blocks)}
         </nav>
@@ -55,13 +57,33 @@ function assembleBlock(item) {
             </PanelItem>
 } 
 
+function assembleSearch(props){
+    return <Field input_definition={props.search_definition}
+                  icon_name={"fas fa-search"}
+                  control_definition="icons-left"
+                  placeholder={props.search_placeholder}
+                  icon_definition={props.search_icon_definition}
+                  onChange={props.onChangeSearch}
+                  type="text"
+            />
+}
+
+function haveSearch(props){
+    return props.search_definition != undefined ||
+           props.search_placeholder != undefined ||
+           props.search_icon_definition != undefined
+}
 
 
 Panel.propTypes = {
     definition: PropTypes.string,
     header: PropTypes.string,
     itens_tabs: PropTypes.array,
-    itens_blocks: PropTypes.array
+    itens_blocks: PropTypes.array,
+    onChangeSearch: PropTypes.func,
+    search_definition: PropTypes.string,
+    search_placeholder: PropTypes.string,
+    search_icon_definition: PropTypes.string
 }
 
 export default Panel;

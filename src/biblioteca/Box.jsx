@@ -1,4 +1,7 @@
+// @flow
+
 import React from 'react';
+
 
 /* Componente candidato a eliminação, por ser demasiado simples
 class Box extends React.Component{

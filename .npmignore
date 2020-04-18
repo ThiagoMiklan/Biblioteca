@@ -3,10 +3,11 @@
 /public
 /gitignore
 /package-lock.json
-/webpack.config.json
+/webpack.config.js
 /src/__tests__
 /src/html_testes
 /src/testes_componentes
 /src/AlterStateInput.jsx
 /.flowconfig
 /rollup.config.js
+/src

@@ -1,7 +1,6 @@
 const file_props = {
     "file": "file",
     "has-name" : "has-name",
-    "right" : "is-right",
     "fullwidth" : "is-fullwidth",
     "boxed": "is-boxed",
     "white":"is-white",

@@ -19,7 +19,7 @@ const Field = (props) => {
     return <>
         <label className="label">{props.label}</label>
         <Control definition={props.control_definition}>
-            <Input definition={props.input_definition} onChangeEvent={props.onChange} placeholder={props.placeholder} type={props.type}></Input>
+            <Input definition={props.input_definition} onChangeEvent={props.onChange} placeholder={props.placeholder} type={props.type} value={props.value}></Input>
             <Icon definition={props.icon_definition} icon_name={props.icon_name}></Icon>
         </Control>
         </>
@@ -70,7 +70,9 @@ Field.propTypes = {
     // Placeholder Input
     placeholder: PropTypes.string,
     // Type Input
-    type: PropTypes.string
+    type: PropTypes.string,
+    // Valor opcional de valor do input do field
+    value: PropTypes.string
 }
 
 

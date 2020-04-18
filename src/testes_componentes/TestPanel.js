@@ -3,11 +3,14 @@ import ReactDOM from 'react-dom';
 import Panel from './biblioteca/Panel';
 import Column from './biblioteca/Column';
 import Columns from './biblioteca/Columns';
- 
+import 'bulma/css/bulma.css';
 import Button from './biblioteca/Button';
 import CheckBox from './biblioteca/CheckBox';
+import Input from './biblioteca/Input';
 
-
+var onClick = ()=>{
+  alert("Clicou");
+}
 
 var itens_tabs = [
     { value: "All", href: "www.facebook.com", onClick: () => { alert("Home")}, icon_definition:"warning", icon_name:"fas fa-home"},
@@ -30,8 +33,17 @@ var itens_blocks = [
 
 ReactDOM.render(
   <Columns>
+
     <Column definition="half">
-      <Panel header="Primary" definition ="primary" itens_tabs={itens_tabs} itens_blocks={itens_blocks}></Panel>
+     
+      <Panel search_placeholder="Pesquisar Serviços" 
+             header="Primary" definition ="primary" 
+             itens_tabs={itens_tabs} 
+             itens_blocks={itens_blocks}
+             search_icon_definition="success"
+             onChangeSearch={onClick}
+             >
+      </Panel>
       <Panel header="Link" definition ="link" itens_tabs={itens_tabs} itens_blocks={itens_blocks}></Panel>
       <Panel header="Info" definition ="info" itens_tabs={itens_tabs} itens_blocks={itens_blocks}></Panel>
       <Panel header="Success" definition ="success" itens_tabs={itens_tabs} itens_blocks={itens_blocks}></Panel>

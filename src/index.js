@@ -1,79 +1,54 @@
-import 'bulma/css/bulma.css';
-import BreadCrumb from './biblioteca/BreadCrumb';
-import Button from './biblioteca/Button';
-import ButtonList from './biblioteca/ButtonList';
-import Card from './biblioteca/Card';
-import CheckBox from './biblioteca/CheckBox';
+import React from 'react';
+import ReactDOM from 'react-dom';
+import Panel from './biblioteca/Panel';
 import Column from './biblioteca/Column';
 import Columns from './biblioteca/Columns';
-import Content from './biblioteca/Content';
-import Control from './biblioteca/Control';
-import DropDown from './biblioteca/DropDown';
-import Field from './biblioteca/Field';
-import File from './biblioteca/File';
-import Hero from './biblioteca/Hero';
-import HeroThreeParts from './biblioteca/HeroThreeParts';
-import Icon from './biblioteca/Icon';
-import Image from './biblioteca/Image';
+import 'bulma/css/bulma.css';
+import Button from './biblioteca/Button';
+import CheckBox from './biblioteca/CheckBox';
 import Input from './biblioteca/Input';
-import List from './biblioteca/List';
-import Menu from './biblioteca/Menu';
-import MenuItem from './biblioteca/MenuItem';
-import Message from './biblioteca/Message';
-import NavigationBar from './biblioteca/NavigationBar';
-import Notification from './biblioteca/Notification';
-import Pagination from './biblioteca/Pagination';
-import Panel from './biblioteca/Panel';
-import PanelItem from './biblioteca/PanelItem';
-import ProgressBar from './biblioteca/ProgressBar';
-import Radio from './biblioteca/Radio';
-import Section from './biblioteca/Section';
-import Select from './biblioteca/Select';
-import Subtitle from './biblioteca/Subtitle';
-import Table from './biblioteca/Table';
-import TableQuery from './biblioteca/TableQuery';
-import Tabs from './biblioteca/Tabs';
-import Tag from './biblioteca/Tag';
-import TagList from './biblioteca/TagList';
-import TextArea from './biblioteca/TextArea';
-import Title from './biblioteca/Title';
+
+var onClick = ()=>{
+  alert("Clicou");
+}
+
+var itens_tabs = [
+    { value: "All", href: "www.facebook.com", onClick: () => { alert("Home")}, icon_definition:"warning", icon_name:"fas fa-home"},
+    { value: "Public", href: "www.facebook.com", onClick: () => { alert("Clientes") }, icon_definition:"danger",icon_name:"far fa-user" },
+    { value: "Private", href: "www.facebook.com", onClick: () => { alert("Usuários") } ,icon_name: "fas fa-users"}, 
+    { value: "Sources", href: "www.facebook.com", onClick: () => { alert("Pedidos") } ,icon_definition:"success" ,icon_name:"fas fa-hand-holding-usd"},
+    { value: "Forks", href: "www.facebook.com", onClick: () => { alert("Pedidos") } ,icon_definition:"success" ,icon_name:"fas fa-hand-holding-usd"}
+]
 
 
-export {BreadCrumb};
-export {Button};
-export {ButtonList};
-export {Card};
-export {CheckBox};
-export {Column};
-export {Columns};
-export {Content};
-export {Control};
-export {DropDown};
-export {Field};
-export {File} ;
-export {Hero} ;
-export {HeroThreeParts};
-export {Icon} ;
-export {Image} ;
-export {Input} ;
-export {List} ;
-export {Menu};
-export {MenuItem} ;
-export {Message} ;
-export {NavigationBar} ;
-export {Notification} ;
-export {Pagination};
-export {Panel} ;
-export {PanelItem} ;
-export {ProgressBar} ;
-export {Radio} ;
-export {Section} ;
-export {Select};
-export {Subtitle} ;
-export {Table};
-export {TableQuery};
-export {Tabs} ;
-export {Tag};
-export {TagList};
-export {TextArea} ;
-export {Title};
+var itens_blocks = [
+  { value: "Bulma", href: "www.facebook.com", onClick: () => { alert("clicou Bulma")}, icon_definition:"warning", icon_name:"fab fa-css3-alt"},
+  { value: "Github", href: "www.facebook.com", onClick: () => { alert("clicou github") }, icon_definition:"danger",icon_name:"fab fa-github" },
+  { value: "Twitter", href: "www.facebook.com", onClick: () => { alert("clicou twitter") } ,icon_name: "fab fa-twitter"}, 
+  { value: "Facebook", href: "www.facebook.com", onClick: () => { alert("clicou dinheiro") } ,icon_definition:"success" ,icon_name:"fas fa-hand-holding-usd"},
+  { value: <CheckBox onClick={()=>{alert("Clicou checkbox")}}>remember me</CheckBox>}
+  ,
+  { value: <Button definition="primary light fullwidth" onClick={()=>{alert("Clicou no botao")}}> Reset All</Button>}
+]
+
+ReactDOM.render(
+  <Columns>
+
+    <Column definition="half">
+     
+      <Panel search_placeholder="Pesquisar Serviços" 
+             header="Primary" definition ="primary" 
+             itens_tabs={itens_tabs} 
+             itens_blocks={itens_blocks}
+             search_icon_definition="success"
+             onChangeSearch={onClick}
+             >
+      </Panel>
+      <Panel header="Link" definition ="link" itens_tabs={itens_tabs} itens_blocks={itens_blocks}></Panel>
+      <Panel header="Info" definition ="info" itens_tabs={itens_tabs} itens_blocks={itens_blocks}></Panel>
+      <Panel header="Success" definition ="success" itens_tabs={itens_tabs} itens_blocks={itens_blocks}></Panel>
+      <Panel header="Warning" definition ="warning" itens_tabs={itens_tabs} itens_blocks={itens_blocks}></Panel>
+      <Panel header="Danger" definition ="danger" itens_tabs={itens_tabs} itens_blocks={itens_blocks}></Panel>
+    </Column>
+ </Columns>
+    , document.getElementById('root'));
