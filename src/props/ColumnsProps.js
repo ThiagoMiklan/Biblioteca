@@ -1,3 +1,4 @@
+import global_props from './GlobalProps';
 
 const columns_props ={
         "centered" : "is-centered",
@@ -17,4 +18,4 @@ const columns_props ={
         "12": "is-12"
 }
 
-export default columns_props;
+export default columns_props

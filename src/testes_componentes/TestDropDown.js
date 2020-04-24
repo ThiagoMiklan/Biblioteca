@@ -20,6 +20,24 @@ var itens_div =[
 ];
 
 
+const HookDropDown = (props) => {
+  var initial = {
+    definition: ""
+  }
+  const [state, setState] = useState(initial);
+
+  var onClick = () => {
+    if (state.definition == "active") {
+      setState({ definition: "" })
+    } else {
+      setState({ definition: "active" })
+    }
+  }
+
+  return <DropDown definition={state.definition} onClick={onClick} itens={itens_link} />
+}
+
+
 
  ReactDOM.render(
         <>

@@ -1,0 +1,45 @@
+
+
+var global_props = {
+    background_white: "has-background-white",
+    background_black: "has-background-black",
+    background_light:"has-background-light",
+    background_dark: "has-background-dark,",
+    background_primary: "has-background-primary",
+    background_info	: "has-background-info",
+    background_link : "has-background-link"	,
+    background_success : "has-background-success",
+    background_warning : "has-background-warning",
+    background_danger : "has-background-danger",
+    background_black_bis : "has-background-black-bis",
+    background_black_ter : "has-background-black-ter",
+    background_grey_darker : "has-background-grey-darker",
+    background_grey_dark : "has-background-grey-dark",
+    background_grey	: "has-background-grey",
+    background_grey_light : "has-background-grey-light",
+    background_grey_lighter : "has-background-grey-lighter",
+    background_white_ter : "has-background-white-ter",
+    background_white_bis :"has-background-white-bis",
+
+    text_white: "has-text-white",
+    text_black: "has-text-black",
+    text_light: "has-text-light",
+    text_dark: "has-text-dark",
+    text_primary: "has-text-primary",
+    text_info: "has-text-info",
+    text_link: "has-text-link",
+    text_success: "has-text-success",
+    text_warning: "has-text-warning",
+    text_danger: "has-text-danger",
+    text_black_bis: "has-text-black-bis",
+    text_black_ter: "has-text-black-ter",
+    text_grey_darker: "has-text-grey-darker",
+    text_grey_dark: "has-text-grey-dark",
+    text_grey: "has-text-grey",
+    text_grey_light: "has-text-grey-light",
+    text_grey_lighter: "has-text-grey-lighter",
+    text_white_ter: "has-text-white-ter",
+    text_white_bis: "has-text-white-bis"
+}
+
+export default global_props;

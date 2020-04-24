@@ -106,3 +106,81 @@ ReactDOM.render(
     , document.getElementById('root')
 );
 
+
+
+/*
+--------- Wiki tests ------------- 
+
+import React from 'react';
+import ReactDOM from 'react-dom';
+import BreadCrumb from './biblioteca/BreadCrumb.jsx';
+import Icon from './biblioteca/Icon';
+import 'bulma/css/bulma.css'
+
+
+// Array comum sem eventos
+var itens = [
+    { value: "Bulma" },
+    { value: "Documentation" },
+    { value: "Componentes" },
+    { value: "BreadCrumb",definition:"active" }
+];
+
+var itens_with_icons = [
+  { value: <Icon icon_name="fas fa-home">Bulma</Icon> },
+  { value: <Icon icon_name="fas fa-book">Documentation</Icon> },
+  { value: <Icon icon_name="fas fa-puzzle-piece">Componentes</Icon> },
+  { value: <Icon icon_name="fas fa-thumbs-up">BreadCrumb</Icon> }];
+
+
+  var itens_with_onClick = [
+    { value: "Bulma", onClick: onClickItem },
+    { value: "Documentation", onClick: onClickItem },
+    { value: "Componentes", onClick: onClickItem },
+    { value: "BreadCrumb", onClick: onClickItem }
+  ];
+
+var itens_with_href = [{ value: "Bulma", href: "https://ufsc.br" },
+{ value: "Documentation", href: "https://ufsc.br" },
+{ value: "Componentes", href: "https://ufsc.br" }
+  , { value: "BreadCrumb", href: "https://ufsc.br" }];
+
+
+var onClickItem = () => {
+  alert("Clicked");
+}
+
+
+
+
+ReactDOM.render(
+    <div className="container is-fluid">
+        <BreadCrumb itens={itens} />
+
+        <BreadCrumb itens={itens} definition="centered" />
+
+        <BreadCrumb itens={itens} definition="right"/>
+
+        <BreadCrumb itens={itens_with_icons} />
+
+        <BreadCrumb definition="arrow" itens={itens} />
+        <BreadCrumb definition="bullet" itens={itens} />
+        <BreadCrumb definition="dot" itens={itens} />
+        <BreadCrumb definition="succeeds" itens={itens} />
+
+        <BreadCrumb definition="small" itens={itens} />
+        <BreadCrumb definition="medium" itens={itens} />
+        <BreadCrumb definition="large" itens={itens} />
+
+        <BreadCrumb itens={itens_with_onClick} />
+
+        <BreadCrumb itens={itens_with_href} />
+        
+    </div>
+    , document.getElementById('root')
+);
+
+
+
+
+*/

@@ -1,49 +1,58 @@
 import React, { useState } from 'react';
 import ReactDOM from 'react-dom';
- 
-import Button from './biblioteca/elements/Button';
-import ButtonList from './biblioteca/elements/ButtonList';
+import 'bulma/css/bulma.min.css'
+import Button from './biblioteca/Button';
+import ButtonList from './biblioteca/ButtonList';
+import Columns from './biblioteca/Columns';
+import Column from './biblioteca/Column';
 
 var onClick = ()=>{
- alert("clicou");
+ alert("Clicked");
+}
+
+var custom = {
+  onClick : onClick
 }
 
 ReactDOM.render(
 <>
+
+<Button onClick={onClick} definition="success">Click</Button>
+
+<Button {...custom} definition="success">Click</Button>
+
 <ButtonList>
 <Button>Testando</Button>
-<Button  definition="primary">Testando</Button>
-<Button  definition="link"> Testando</Button>
-<Button  definition="info"> Testando</Button>
-<Button  definition="success"> Testando</Button>
-<Button  definition="warning"> Testando</Button>
-<Button  definition="danger"> Testando</Button>
+<Button  definition="primary">Primary</Button>
+<Button  definition="link"> Link</Button>
+<Button  definition="info"> Info</Button>
+<Button  definition="success"> Success</Button>
+<Button  definition="warning"> Warning</Button>
+<Button  definition="danger"> Danger</Button>
 </ButtonList>
 
 <ButtonList>
-<Button  definition="white"> Testando</Button>
-<Button  definition="light"> Testando</Button>
-<Button  definition="dark"> Testando</Button>
-<Button  definition="black"> Testando</Button>
-<Button  definition="text"> Testando</Button>
+<Button  definition="white"> White</Button>
+<Button  definition="light"> Light</Button>
+<Button  definition="dark"> Dark</Button>
+<Button  definition="black"> Black</Button>
+<Button  definition="text"> Text</Button>
 </ButtonList>
 
 <ButtonList>
-<Button  definition="primary light"> Testando</Button>
-<Button  definition="link light"> Testando</Button>
-<Button  definition="info light"> Testando</Button>
-<Button  definition="success light"> Testando</Button>
-<Button  definition="warning light"> Testando</Button>
-<Button  definition="danger light"> Testando</Button>
-
+<Button  definition="primary light"> primary light</Button>
+<Button  definition="link light"> link light</Button>
+<Button  definition="info light"> info light</Button>
+<Button  definition="success light"> success light</Button>
+<Button  definition="warning light"> warning light</Button>
+<Button  definition="danger light"> danger light</Button>
 </ButtonList>
 
 <ButtonList>
-<Button  definition="button small"> Testando</Button>
-<Button  > Testando</Button>
-<Button  definition="button normal"> Testando</Button>
-<Button  definition="button medium"> Testando</Button>
-<Button  definition="button large"> Testando</Button>
+<Button  definition="button small"> Small</Button>
+<Button  > Normal</Button>
+<Button  definition="button medium"> Medium</Button>
+<Button  definition="button large"> Large</Button>
 </ButtonList>
 
 <ButtonList definition="small">
@@ -64,37 +73,41 @@ ReactDOM.render(
 <Button > Testando</Button>
 </ButtonList>
 
-<ButtonList>
-<Button  definition="small fullwidth"> Testando</Button>
-<Button  definition="fullwidth"> Testando</Button>
-<Button  definition="medium fullwidth"> Testando</Button>
-<Button definition="large fullwidth"> Testando</Button>
-</ButtonList>
+<Columns>
+<Column definition="half">
+<Button  definition="small fullwidth"> small fullwidth</Button>
+<Button  definition="fullwidth"> normal fullwidth</Button>
+<Button  definition="medium fullwidth"> medium fullwidth</Button>
+<Button definition="large fullwidth"> large fullwidth</Button>
+</Column>
+</Columns>
+
+
 
 <ButtonList>
-<Button  definition="primary outlined"> Testando</Button>
-<Button  definition="link outlined"> Testando</Button>
-<Button  definition="info outlined"> Testando</Button>
-<Button  definition="success outlined"> Testando</Button>
-<Button  definition="warning outlined"> Testando</Button>
-<Button  definition="danger outlined"> Testando</Button>
+<Button  definition="primary outlined"> primary outlined</Button>
+<Button  definition="link outlined"> link outlined</Button>
+<Button  definition="info outlined"> info outlined</Button>
+<Button  definition="success outlined"> success outlined</Button>
+<Button  definition="warning outlined"> warning outlined</Button>
+<Button  definition="danger outlined"> danger outlined</Button>
 </ButtonList>
 
 <ButtonList definition="primary">
-<Button  definition="primary inverted"> Testando</Button>
-<Button  definition="link inverted"> Testando</Button>
-<Button  definition="info inverted"> Testando</Button>
-<Button  definition="success inverted"> Testando</Button>
-<Button  definition="danger inverted"> Testando</Button>
+<Button  definition="primary inverted"> primary inverted</Button>
+<Button  definition="link inverted"> link inverted</Button>
+<Button  definition="info inverted"> info inverted</Button>
+<Button  definition="success inverted"> success inverted</Button>
+<Button  definition="danger inverted"> danger inverted</Button>
 </ButtonList>
 
 <ButtonList>
-<Button  definition="primary rounded"> Testando</Button>
-<Button  definition="link rounded"> Testando</Button>
-<Button  definition="info rounded"> Testando</Button>
-<Button  definition="success rounded"> Testando</Button>
-<Button  definition="warning rounded"> Testando</Button>
-<Button  definition="danger rounded"> Testando</Button>
+<Button  definition="primary rounded"> primary rounded</Button>
+<Button  definition="link rounded"> link rounded</Button>
+<Button  definition="info rounded"> info rounded</Button>
+<Button  definition="success rounded"> success rounded</Button>
+<Button  definition="warning rounded"> warning rounded</Button>
+<Button  definition="danger rounded"> danger rounded</Button>
 </ButtonList>
 
 <ButtonList>
@@ -108,23 +121,21 @@ ReactDOM.render(
 </ButtonList>
 
 <ButtonList>
-<Button  />
-<Button  definition="primary focused"> Testando</Button>
-<Button  definition="link focused"> Testando</Button>
-<Button  definition="info focused"> Testando</Button>
-<Button  definition="success focused"> Testando</Button>
-<Button  definition="warning focused"> Testando</Button>
-<Button  definition="danger focused"> Testando</Button>
+<Button  definition="primary focused"> primary focused</Button>
+<Button  definition="link focused"> link focused</Button>
+<Button  definition="info focused"> info focused</Button>
+<Button  definition="success focused"> success focused</Button>
+<Button  definition="warning focused"> warning focused</Button>
+<Button  definition="danger focused"> danger focused</Button>
 </ButtonList>
 
 <ButtonList>
-<Button  />
-<Button  definition="primary active"> Testando</Button>
-<Button  definition="link active"> Testando</Button>
-<Button  definition="info active"> Testando</Button>
-<Button  definition="success active"> Testando</Button>
-<Button  definition="warning active"> Testando</Button>
-<Button  definition="danger active"> Testando</Button>
+<Button  definition="primary active"> primary active</Button>
+<Button  definition="link active"> link active</Button>
+<Button  definition="info active"> info active</Button>
+<Button  definition="success active"> success active</Button>
+<Button  definition="warning active"> warning active</Button>
+<Button  definition="danger active"> danger active</Button>
 </ButtonList>
 
 <ButtonList>
@@ -138,13 +149,12 @@ ReactDOM.render(
 </ButtonList>
 
 <ButtonList>
-<Button  disabled={true} > Testando</Button>
-<Button  definition="primary" disabled={true} > Testando</Button>
-<Button  definition="link"  disabled={true} > Testando</Button>
-<Button  definition="info" disabled={true} > Testando</Button>
-<Button  definition="success" disabled={true} > Testando</Button>
-<Button  definition="warning" disabled={true} > Testando</Button>
-<Button  definition="danger" disabled={true} > Testando</Button>
+<Button  definition="primary" disabled={true} > primary disabled</Button>
+<Button  definition="link"  disabled={true} > link disabled</Button>
+<Button  definition="info" disabled={true} > info disabled</Button>
+<Button  definition="success" disabled={true} > success disabled</Button>
+<Button  definition="warning" disabled={true} > warning disabled</Button>
+<Button  definition="danger" disabled={true} > danger disabled</Button>
 </ButtonList>
 </>
     ,

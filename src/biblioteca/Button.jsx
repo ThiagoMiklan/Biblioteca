@@ -65,7 +65,9 @@ Button.propTypes = {
     // Evento para quando clicar no botão
     onClick: PropTypes.func,
     // Caso o botão seja do tipo delete
-    delete: PropTypes.bool
+    delete: PropTypes.bool,
+   // permite desativar um botão
+    disabled: PropTypes.bool
 };
 
 

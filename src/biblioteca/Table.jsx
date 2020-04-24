@@ -3,6 +3,7 @@ import classnames from 'classnames';
 import getClassName from '../tools/getClassName';
 import PropTypes from 'prop-types';
 
+
 // style cursor default pointer
 // cursor ao passar com o mouse em cima de uma linha da table
 var style_cursor = {
@@ -71,7 +72,10 @@ function assembleBody(itens,onClickRow) {
         row = values.map(value => <td>{value}</td>)
         return row;
     }
-    code = itens.map(item => <tr key={item["key"]} style={style_cursor}  onClick={onClickRow}>{getRow(item)}</tr>);
+    code = <tbody>
+        {itens.map(item => <tr key={item["key"]} style={style_cursor}  onClick={onClickRow}>{getRow(item)}</tr>)}
+    </tbody>
+    
     return code;
 }
 

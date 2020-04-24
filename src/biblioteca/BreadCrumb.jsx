@@ -34,10 +34,11 @@ function assembleItens(itens) {
 }
 
 function assembleSingleItem(item) {
-    var funcao = item["onClick"];
+    var def =  item["definition"]
+  var definition =  classname(getClassName(item["definition"], "BreadCrumb"));
     return (
-        <li key={item["key"]}>
-            <a onClick={item["onClick"]} href={item["href"]}>{item["value"]}</a>
+        <li key={item["key"]} className={definition}>
+            <a  onClick={item["onClick"]} href={item["href"]}>{item["value"]}</a>
         </li>);
 }
 

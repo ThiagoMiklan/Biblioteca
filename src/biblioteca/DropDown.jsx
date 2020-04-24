@@ -29,7 +29,7 @@ const DropDown = (props) => {
 
     return (<div className={definition}>
                 <div class="dropdown-trigger">
-                     {extractButtonName(props.itens)}
+                     {extractButton(props.itens,props.onClick)}
                 </div>
                 <div class="dropdown-menu" id="dropdown-menu" role="menu">
                      <div class="dropdown-content">
@@ -41,7 +41,7 @@ const DropDown = (props) => {
 }
 
 // Monta um botão a partir do primeiro item da lista
-function extractButtonName(itens) {
+function extractButton(itens,onClick) {
     var name = "";
     var icon_name = ""
     var icon_definition = "";
@@ -59,7 +59,7 @@ function extractButtonName(itens) {
      * Se o nome do icone não é indefinido ou vazio, é usado o icone default para o dropdown
      * Senão, signigica que foi informado um nome para o icone, então é usado o que foi passado
      */
-    return <Button >
+    return <Button onClick={onClick} >
         {(icon_name != undefined && icon_name != '')
             ? <Icon icon_name={classnames(getClassName(icon_name, "DropDown"))} icon_right={true}>{name}
             </Icon>
@@ -102,7 +102,8 @@ DropDown.propTypes = {
     definition: PropTypes.string,
     dropdown_name: PropTypes.string,
     itens: PropTypes.array,
-    button_dropdown: PropTypes.element
+    button_dropdown: PropTypes.element,
+    onClick: PropTypes.func
 }
 
 export default DropDown;

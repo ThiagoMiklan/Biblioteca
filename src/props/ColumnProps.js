@@ -1,8 +1,7 @@
-
+import global_props from './GlobalProps';
 
 const column_props ={
     "column" : "column",
-    
     "full": "is-full",
     "four-fifths": "is-four-fifths",
     "three-quarters":"is-three-quarters",
@@ -15,4 +14,4 @@ const column_props ={
     "one-fifth": "is-one-fifth"
 }
 
-export default column_props;
+export default {...column_props,...global_props};
