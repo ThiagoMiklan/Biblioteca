@@ -1,8 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Control from './biblioteca/elements/Control';
-import Icon from './biblioteca/elements/Icon';
-import Select from './biblioteca/form/Select';
+import Control from './biblioteca/Control';
+import Icon from './biblioteca/Icon';
+import Select from './biblioteca/Select';
+import 'bulma/css/bulma.css';
  
 
 var click = ()=>{
@@ -25,7 +26,7 @@ var itens_2 = [
 ReactDOM.render(
   <>
     <div className="field">
-      <Select  onChange={onClick} definition="rounded" itens={itens_1}></Select>
+      <Select  onChange={click} definition="rounded" itens={itens_1}></Select>
     </div>
 
     <div className="field">

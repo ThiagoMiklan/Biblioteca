@@ -62,7 +62,10 @@ function assembleBody(itens) {
         row = values.map(value => <td>{value}</td>)
         return row;
     }
-    code = itens.map(item => <tr>{getRow(item)}</tr>);
+    code = <tbody>
+            {itens.map(item => <tr>{getRow(item)}</tr>)}
+    </tbody>
+    
     return code;
 }
 
@@ -87,6 +90,7 @@ function assembleRow(item) {
 }
 
 TableQuery.propTypes ={
+    itens: PropTypes.array,
     footer: PropTypes.bool,
     header: PropTypes.bool
 }

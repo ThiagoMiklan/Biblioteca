@@ -19,6 +19,7 @@ Existem algumas maneira de fornecer os itens de "start" e "end" ao usar o presen
         />
 */
 const NavigationBar = (props)=>{
+    
     var definition="navbar " + classnames(getClassName(props.definition,"NavigationBar"));
         return (
             <nav className={definition}>
@@ -77,6 +78,7 @@ function decideTypeOfItem(item){
     return itens_code;
 }
 
+// default : hoverable
 function assembleItensDropDown(itens){
     var firstitemDropDown = assembleFirstItemDropDown(itens[0]);
    

@@ -1,12 +1,13 @@
-import React from 'react';
+import 'bulma/css/bulma.css'
+import React, { useState } from 'react';
 import ReactDOM from 'react-dom';
 import Content from './biblioteca/Content';
 import List from './biblioteca/List';
  
 
-var itens = [{value:"Thiago",onClick:()=>{alert("Clicou")}}
-            ,{value:"João",onClick:()=>{alert("Clicou")}},
-             {value:"Mathias",onClick:()=>{alert("Clicou")}}]
+var itens = [{value:"Item 1",onClick:()=>{alert("Clicked")}}
+            ,{value:"Item 2",onClick:()=>{alert("Clicked")}},
+             {value:"Item 3",onClick:()=>{alert("Clicked")}}]
 
 ReactDOM.render(
     <>

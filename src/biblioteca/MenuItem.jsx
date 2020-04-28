@@ -1,5 +1,7 @@
 import React from 'react';
-
+import PropTypes from 'prop-types';
+import classnames from 'classnames';
+import getClassName from '../tools/getClassName';
 /*
     Menu Item foi desenvolvido para representar uma parte de um menu, 
     representando não somente o menu em si, mas também o label de cada item/itens
@@ -67,10 +69,12 @@ function assembleItem(itens) {
 // caso simples onde apenas um item é desejado, informando apenas um objeto
 function assembleSingleItem(item) {
     var item_code = "";
+  
     if(item["sub_itens"]!= undefined){
         item_code = decideTypeOfItem(item);
     }else{
-        item_code = <li><a onClick={item["onClick"]}>{item["value"]}</a></li>; 
+        var definition =  classnames(getClassName(item["definition"],"Menu"));
+        item_code = <li><a className={definition} onClick={item["onClick"]} >{item["value"]}</a></li>; 
     }
     return item_code;
 }
@@ -90,14 +94,13 @@ function decideTypeOfItem(item) {
     
     // se possuir sub_itens
     if (item["sub_itens"] != undefined) {
+        var definition =  classnames(getClassName(item["definition"],"Menu"));
         item_code = <li>
-            <a onClick={item["onClick"]}> {item["value"]}</a>
+            <a className={definition} onClick={item["onClick"]}> {item["value"]}</a>
             <ul>
                 {item["sub_itens"].map(item => assembleSubItens(item))}
             </ul>
         </li>
-      
-        var x = 0;
     } else {
         item_code = assembleSingleItem(item);
     }
@@ -105,5 +108,9 @@ function decideTypeOfItem(item) {
     return item_code;
 }
 
+MenuItem.propTypes ={
+    label: PropTypes.string,
+    itens: PropTypes.array
+}
 
 export default MenuItem;

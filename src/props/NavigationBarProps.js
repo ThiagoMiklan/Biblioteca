@@ -11,7 +11,10 @@ const navigation_bar_props = {
     "dark"  : "is-dark",
     "light": "is-light",
     "white": "is-white", 
-    "active": "is-active"
+    "active": "is-active",
+    "navbar-dropdown": "navbar-dropdown", 
+    "fixed-top": "is-fixed-top",
+    "fixed-bottom":"is-fixed-bottom"
 }
 
 export default navigation_bar_props;

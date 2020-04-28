@@ -4,6 +4,7 @@ import Icon from './Icon';
 import Control from './Control';
 import Input from './Input';
 
+
 // O presente componente foi criado como maneira de facilitar
 // o uso do componente Input,Control,Label e Icon,
 // Buscando fornecer um componente visual que mostra um campo de texto
@@ -14,16 +15,34 @@ import Input from './Input';
 
 // Para fim  de organização. Considera-se esse um componente misto.
 
-const Field = (props) => {
 
-    return <>
+const Field = (props) => {
+    
+    return <div className="field">
         <label className="label">{props.label}</label>
         <Control definition={props.control_definition}>
             <Input definition={props.input_definition} onChangeEvent={props.onChange} placeholder={props.placeholder} type={props.type} value={props.value}></Input>
-            <Icon definition={props.icon_definition} icon_name={props.icon_name}></Icon>
+            {assembleIcon(props)}
         </Control>
-        </>
+        </div>
 
+}
+
+function assembleIcon(props){
+    var code = <></>;
+    if(props.control_definition != undefined){
+        var right = props.control_definition.includes("icons-right");
+        if(right == true){
+            var icon_def = props.icon_definition + " right";
+            code = <Icon definition={icon_def} icon_name={props.icon_name}></Icon>;
+        }else{
+            code = <Icon definition={props.icon_definition} icon_name={props.icon_name}></Icon>;
+        }
+    }else{
+        code = <Icon definition={props.icon_definition} icon_name={props.icon_name}></Icon>;
+    }
+   
+    return code;
 }
 
 

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import ReactDOM from 'react-dom';
-import List from './biblioteca/elements/List';
-import Content from './biblioteca/elements/Content';
+import 'bulma/css/bulma.css'
+import Content from './biblioteca/Content';
 
 
 ReactDOM.render(

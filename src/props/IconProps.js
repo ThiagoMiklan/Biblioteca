@@ -7,6 +7,7 @@ const icon_props = {
     "right": "is-right",
 
     "info": "has-text-info",
+    "primary" : "has-text-primary",
     "success": "has-text-success",
     "warning": "has-text-warning",
     "danger":  "has-text-danger"

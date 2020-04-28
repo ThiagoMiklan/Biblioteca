@@ -75,6 +75,55 @@ function _createClass(Constructor, protoProps, staticProps) {
   return Constructor;
 }
 
+function _defineProperty(obj, key, value) {
+  if (key in obj) {
+    Object.defineProperty(obj, key, {
+      value: value,
+      enumerable: true,
+      configurable: true,
+      writable: true
+    });
+  } else {
+    obj[key] = value;
+  }
+
+  return obj;
+}
+
+function ownKeys(object, enumerableOnly) {
+  var keys = Object.keys(object);
+
+  if (Object.getOwnPropertySymbols) {
+    var symbols = Object.getOwnPropertySymbols(object);
+    if (enumerableOnly) symbols = symbols.filter(function (sym) {
+      return Object.getOwnPropertyDescriptor(object, sym).enumerable;
+    });
+    keys.push.apply(keys, symbols);
+  }
+
+  return keys;
+}
+
+function _objectSpread2(target) {
+  for (var i = 1; i < arguments.length; i++) {
+    var source = arguments[i] != null ? arguments[i] : {};
+
+    if (i % 2) {
+      ownKeys(Object(source), true).forEach(function (key) {
+        _defineProperty(target, key, source[key]);
+      });
+    } else if (Object.getOwnPropertyDescriptors) {
+      Object.defineProperties(target, Object.getOwnPropertyDescriptors(source));
+    } else {
+      ownKeys(Object(source)).forEach(function (key) {
+        Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key));
+      });
+    }
+  }
+
+  return target;
+}
+
 function _inherits(subClass, superClass) {
   if (typeof superClass !== "function" && superClass !== null) {
     throw new TypeError("Super expression must either be null or a function");
@@ -1500,7 +1549,10 @@ var navigation_bar_props = {
   "dark": "is-dark",
   "light": "is-light",
   "white": "is-white",
-  "active": "is-active"
+  "active": "is-active",
+  "navbar-dropdown": "navbar-dropdown",
+  "fixed-top": "is-fixed-top",
+  "fixed-bottom": "is-fixed-bottom"
 };
 
 var drop_down_props = {
@@ -1673,6 +1725,7 @@ var icon_props = {
   "left": "is-left",
   "right": "is-right",
   "info": "has-text-info",
+  "primary": "has-text-primary",
   "success": "has-text-success",
   "warning": "has-text-warning",
   "danger": "has-text-danger"
@@ -1709,6 +1762,47 @@ var control_props = {
   "loading": "is-loading"
 };
 
+var global_props = {
+  background_white: "has-background-white",
+  background_black: "has-background-black",
+  background_light: "has-background-light",
+  background_dark: "has-background-dark,",
+  background_primary: "has-background-primary",
+  background_info: "has-background-info",
+  background_link: "has-background-link",
+  background_success: "has-background-success",
+  background_warning: "has-background-warning",
+  background_danger: "has-background-danger",
+  background_black_bis: "has-background-black-bis",
+  background_black_ter: "has-background-black-ter",
+  background_grey_darker: "has-background-grey-darker",
+  background_grey_dark: "has-background-grey-dark",
+  background_grey: "has-background-grey",
+  background_grey_light: "has-background-grey-light",
+  background_grey_lighter: "has-background-grey-lighter",
+  background_white_ter: "has-background-white-ter",
+  background_white_bis: "has-background-white-bis",
+  text_white: "has-text-white",
+  text_black: "has-text-black",
+  text_light: "has-text-light",
+  text_dark: "has-text-dark",
+  text_primary: "has-text-primary",
+  text_info: "has-text-info",
+  text_link: "has-text-link",
+  text_success: "has-text-success",
+  text_warning: "has-text-warning",
+  text_danger: "has-text-danger",
+  text_black_bis: "has-text-black-bis",
+  text_black_ter: "has-text-black-ter",
+  text_grey_darker: "has-text-grey-darker",
+  text_grey_dark: "has-text-grey-dark",
+  text_grey: "has-text-grey",
+  text_grey_light: "has-text-grey-light",
+  text_grey_lighter: "has-text-grey-lighter",
+  text_white_ter: "has-text-white-ter",
+  text_white_bis: "has-text-white-bis"
+};
+
 var columns_props = {
   "centered": "is-centered",
   "columns": "columns",
@@ -1728,6 +1822,7 @@ var columns_props = {
 };
 
 var column_props = {
+  "narrow": "is-narrow",
   "column": "column",
   "full": "is-full",
   "four-fifths": "is-four-fifths",
@@ -1738,8 +1833,43 @@ var column_props = {
   "two-fifths": "is-two-fifths",
   "one-third": "is-one-third",
   "one-quarter": "is-one-quarter",
-  "one-fifth": "is-one-fifth"
+  "one-fifth": "is-one-fifth",
+  "1": "is-1",
+  "2": "is-2",
+  "3": "is-3",
+  "4": "is-4",
+  "5": "is-5",
+  "6": "is-6",
+  "7": "is-7",
+  "8": "is-8",
+  "9": "is-9",
+  "10": "is-10",
+  "11": "is-11",
+  "12": "is-12",
+  "offset-full": "is-offset-full",
+  "offset-four-fifths": "is-offset-four-fifths",
+  "offset-three-quarters": "is-offset-three-quarters",
+  "offset-two-thirds": "is-offset-two-thirds",
+  "offset-three-fifths": "is-offset-three-fifths",
+  "offset-half": "is-offset-half",
+  "offset-two-fifths": "is-offset-two-fifths",
+  "offset-one-third": "is-offset-one-third",
+  "offset-one-quarter": "is-offset-one-quarter",
+  "offset-one-fifth": "is-offset-one-fifth",
+  "offset-1": "is-offset-1",
+  "offset-2": "is-offset-2",
+  "offset-3": "is-offset-3",
+  "offset-4": "is-offset-4",
+  "offset-5": "is-offset-5",
+  "offset-6": "is-offset-6",
+  "offset-7": "is-offset-7",
+  "offset-8": "is-offset-8",
+  "offset-9": "is-offset-9",
+  "offset-10": "is-offset-10",
+  "offset-11": "is-offset-11",
+  "offset-12": "is-offset-12"
 };
+var column_props$1 = _objectSpread2({}, column_props, {}, global_props);
 
 var section_props = {};
 
@@ -1831,7 +1961,7 @@ var component_path = {
   "Hero": hero_props,
   "Control": control_props,
   "Columns": columns_props,
-  "Column": column_props,
+  "Column": column_props$1,
   "Section": section_props,
   "Text": text_area_props,
   "Select": select_props,
@@ -1840,7 +1970,6 @@ var component_path = {
 };
 
 var getClassName = function getClassNames(definition, component_name) {
-  // consult component_path defined in ComponentPath and pass the component name, in order to return its properties defined in component
   if (definition !== undefined && typeof definition == 'string') {
     var classObj = {};
     var component_props = component_path[component_name];
@@ -1886,9 +2015,11 @@ function assembleItens(itens) {
 }
 
 function assembleSingleItem(item) {
-  var funcao = item["onClick"];
+  var def = item["definition"];
+  var definition = classnames(getClassName(item["definition"], "BreadCrumb"));
   return /*#__PURE__*/React__default.createElement("li", {
-    key: item["key"]
+    key: item["key"],
+    className: definition
   }, /*#__PURE__*/React__default.createElement("a", {
     onClick: item["onClick"],
     href: item["href"]
@@ -1971,7 +2102,9 @@ Button.propTypes = {
   // Evento para quando clicar no botão
   onClick: propTypes.func,
   // Caso o botão seja do tipo delete
-  delete: propTypes.bool
+  delete: propTypes.bool,
+  // permite desativar um botão
+  disabled: propTypes.bool
 };
 
 // Oferece possibiidade de escolher se o container é "field" ou "buttons", para escolher field informar field={true}
@@ -2243,7 +2376,7 @@ var DropDown = function DropDown(props) {
     className: definition
   }, /*#__PURE__*/React__default.createElement("div", {
     class: "dropdown-trigger"
-  }, extractButtonName(props.itens)), /*#__PURE__*/React__default.createElement("div", {
+  }, extractButton(props.itens, props.onClick)), /*#__PURE__*/React__default.createElement("div", {
     class: "dropdown-menu",
     id: "dropdown-menu",
     role: "menu"
@@ -2253,7 +2386,7 @@ var DropDown = function DropDown(props) {
 }; // Monta um botão a partir do primeiro item da lista
 
 
-function extractButtonName(itens) {
+function extractButton(itens, onClick) {
   var name = "";
   var icon_name = "";
   var icon_definition = ""; // extrai o primeiro item da lista que foi informada como props
@@ -2272,7 +2405,9 @@ function extractButtonName(itens) {
    */
 
 
-  return /*#__PURE__*/React__default.createElement(Button, null, icon_name != undefined && icon_name != '' ? /*#__PURE__*/React__default.createElement(Icon, {
+  return /*#__PURE__*/React__default.createElement(Button, {
+    onClick: onClick
+  }, icon_name != undefined && icon_name != '' ? /*#__PURE__*/React__default.createElement(Icon, {
     icon_name: classnames(getClassName(icon_name, "DropDown")),
     icon_right: true
   }, name) : /*#__PURE__*/React__default.createElement(Icon, {
@@ -2328,7 +2463,8 @@ DropDown.propTypes = {
   definition: propTypes.string,
   dropdown_name: propTypes.string,
   itens: propTypes.array,
-  button_dropdown: propTypes.element
+  button_dropdown: propTypes.element,
+  onClick: propTypes.func
 };
 
 var Input = function Input(props) {
@@ -2417,7 +2553,9 @@ Input.propTypes = {
 // Para fim  de organização. Considera-se esse um componente misto.
 
 var Field = function Field(props) {
-  return /*#__PURE__*/React__default.createElement(React__default.Fragment, null, /*#__PURE__*/React__default.createElement("label", {
+  return /*#__PURE__*/React__default.createElement("div", {
+    className: "field"
+  }, /*#__PURE__*/React__default.createElement("label", {
     className: "label"
   }, props.label), /*#__PURE__*/React__default.createElement(Control, {
     definition: props.control_definition
@@ -2427,11 +2565,36 @@ var Field = function Field(props) {
     placeholder: props.placeholder,
     type: props.type,
     value: props.value
-  }), /*#__PURE__*/React__default.createElement(Icon, {
-    definition: props.icon_definition,
-    icon_name: props.icon_name
-  })));
+  }), assembleIcon(props)));
 };
+
+function assembleIcon(props) {
+  var code = /*#__PURE__*/React__default.createElement(React__default.Fragment, null);
+
+  if (props.control_definition != undefined) {
+    var right = props.control_definition.includes("icons-right");
+
+    if (right == true) {
+      var icon_def = props.icon_definition + " right";
+      code = /*#__PURE__*/React__default.createElement(Icon, {
+        definition: icon_def,
+        icon_name: props.icon_name
+      });
+    } else {
+      code = /*#__PURE__*/React__default.createElement(Icon, {
+        definition: props.icon_definition,
+        icon_name: props.icon_name
+      });
+    }
+  } else {
+    code = /*#__PURE__*/React__default.createElement(Icon, {
+      definition: props.icon_definition,
+      icon_name: props.icon_name
+    });
+  }
+
+  return code;
+}
 
 Field.propTypes = {
   /*
@@ -2758,7 +2921,9 @@ function assembleSingleItem$1(item) {
   if (item["sub_itens"] != undefined) {
     item_code = decideTypeOfItem(item);
   } else {
+    var definition = classnames(getClassName(item["definition"], "Menu"));
     item_code = /*#__PURE__*/React__default.createElement("li", null, /*#__PURE__*/React__default.createElement("a", {
+      className: definition,
       onClick: item["onClick"]
     }, item["value"]));
   }
@@ -2785,7 +2950,9 @@ function decideTypeOfItem(item) {
   var item_code = ""; // se possuir sub_itens
 
   if (item["sub_itens"] != undefined) {
+    var definition = classnames(getClassName(item["definition"], "Menu"));
     item_code = /*#__PURE__*/React__default.createElement("li", null, /*#__PURE__*/React__default.createElement("a", {
+      className: definition,
       onClick: item["onClick"]
     }, " ", item["value"]), /*#__PURE__*/React__default.createElement("ul", null, item["sub_itens"].map(function (item) {
       return assembleSubItens(item);
@@ -2796,6 +2963,11 @@ function decideTypeOfItem(item) {
 
   return item_code;
 }
+
+MenuItem.propTypes = {
+  label: propTypes.string,
+  itens: propTypes.array
+};
 
 var Message = function Message(props) {
   var definition = "message " + classnames(getClassName(props.definition, "Message"));
@@ -2911,7 +3083,8 @@ function decideTypeOfItem$1(item) {
   }
 
   return itens_code;
-}
+} // default : hoverable
+
 
 function assembleItensDropDown(itens) {
   var firstitemDropDown = assembleFirstItemDropDown(itens[0]);
@@ -3454,13 +3627,13 @@ function assembleBody$1(itens, onClickRow) {
     return row;
   };
 
-  code = itens.map(function (item) {
+  code = /*#__PURE__*/React__default.createElement("tbody", null, itens.map(function (item) {
     return /*#__PURE__*/React__default.createElement("tr", {
       key: item["key"],
       style: style_cursor,
       onClick: onClickRow
     }, getRow(item));
-  });
+  }));
   return code;
 }
 
@@ -3528,9 +3701,9 @@ function assembleBody$2(itens) {
     return row;
   };
 
-  code = itens.map(function (item) {
+  code = /*#__PURE__*/React__default.createElement("tbody", null, itens.map(function (item) {
     return /*#__PURE__*/React__default.createElement("tr", null, getRow(item));
-  });
+  }));
   return code;
 }
 
@@ -3557,6 +3730,7 @@ function assembleRow$1(item) {
 }
 
 TableQuery.propTypes = {
+  itens: propTypes.array,
   footer: propTypes.bool,
   header: propTypes.bool
 };

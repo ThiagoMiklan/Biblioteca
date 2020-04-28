@@ -1,25 +1,12 @@
-import 'bulma/css/bulma.css'
-import React, { useState } from 'react';
+import React from 'react';
 import ReactDOM from 'react-dom';
-import Columns from './biblioteca/Columns';
-import Column from './biblioteca/Column';
+import File from './biblioteca/File';
+import 'bulma/css/bulma.css';
 
 
 ReactDOM.render(
-  <Columns>
-  <Column definition="column background_primary">
-  First column
-</Column>
+  <div className="container is-fluid">
+  
+  </div>
+  , document.getElementById("root"))
 
-<Column definition="column background_primary">
-  Second column
-</Column>
-<Column definition="column background_primary">
-  Third column
-</Column>
-<Column definition="column background_primary">
-  Fourth column
-</Column>
-</Columns>
-,document.getElementById('root')
-);
