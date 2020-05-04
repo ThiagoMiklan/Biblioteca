@@ -1,14 +1,23 @@
-import React from 'react'
+// @flow
+import * as React from 'react'
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import getClassName from '../tools/getClassName';
+import checkerDefinition from '../tools/checker.js';
 
 /*
     - Componente que funciona como container
     - Sem eventos
 */
 
-const Control = (props)=>{
+type Props ={
+    definition?:string,
+    children?: React.Node
+}
+
+const Control = (props:Props)=>{
+    checkerDefinition(props.definition,"Control");
+    
     var definition = getDefinition(props.definition);
     return(
         <div className={definition}>

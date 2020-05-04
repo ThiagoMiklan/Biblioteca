@@ -1,12 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Tag from './biblioteca/elements/Tag';
-import Control from './biblioteca/elements/Control';
- 
+import Tag from './biblioteca/Tag';
+import Control from './biblioteca/Control';
+import 'bulma/css/bulma.css';
 
 var tags = [];
-tags[0] = {"definition": "tag primary rounded large light", value:"tag1"} ;
-tags[1] = {"definition": "tag primary", value:"tag2"} ;
+tags[0] = {definition: "tag primary rounded large light", value:"tag1"} ;
+tags[1] = {definition: "tag primary", value:"tag2"} ;
 
 ReactDOM.render(
           <>
@@ -34,7 +34,7 @@ ReactDOM.render(
           <Tag definition="link large">Normal</Tag>
           <Control></Control>
           <Tag definition="primary rounded">Tag rounded</Tag>
-          <Tag onClickDelete={()=>{alert("clicou")}}definition="primary rounded delete">Tag rounded</Tag>
+          <Tag onClickDelete={()=>{alert("clicou")}}definition="primary rounded" delete={true}>Tag rounded</Tag>
           
          </>
 

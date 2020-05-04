@@ -1,9 +1,15 @@
+// @flow
 import React from 'react'
 import PropTypes from 'prop-types';
 import Control from './Control';
 
 
-const Radio = (props)=>{
+type Props = {
+    itens?: Array<Object>,
+    name?: string
+}
+
+const Radio = (props:Props)=>{
     return <Control>
             {assembleItens(props)}
             </Control>

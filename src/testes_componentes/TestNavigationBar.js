@@ -1,8 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Button from './biblioteca/elements/Button.jsx';
-import NavigationBar from './biblioteca/components/NavigationBar.jsx';
- 
+import Button from './biblioteca/Button.jsx';
+import NavigationBar from './biblioteca/NavigationBar.jsx';
+import 'bulma/css/bulma.css';
 
 var object_item = {
     "value": "More",

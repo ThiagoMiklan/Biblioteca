@@ -1,15 +1,29 @@
+// @flow
 import React from 'react'
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import getClassName from '../tools/getClassName';
 import Control from './Control';
+import checkerDefinition from '../tools/checker.js';
 
-const TextArea = (props)=>{
+type Props = {
+    definition?:string,
+    loading?: bool,
+    onChange?: ()=>void,
+    placeholder?: ()=> void,
+    rows?: ()=> number,
+    readonly? : bool,
+    disabled?:bool
+}
+
+const TextArea = (props:Props)=>{
      return assembleTextArea(props);
 }
 
 function assembleTextArea(props){
-    var definition =  classnames(getClassName("textarea "+ props.definition,"Text"));
+    checkerDefinition(props.definition,"Text");
+    var definition_text = (props.definition ==  undefined)? "": props.definition;
+    var definition =  classnames(getClassName("textarea "+ definition_text,"Text"));
     var definitionControl = props.loading == true ? "loading": "";
     
     return <Control definition={definitionControl}>

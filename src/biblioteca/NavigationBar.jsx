@@ -1,8 +1,9 @@
+// @flow
 import React from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import getClassName from '../tools/getClassName';
-
+import checkerDefinition from '../tools/checker.js';
 /*
 Existem algumas maneira de fornecer os itens de "start" e "end" ao usar o presente componente 
 1 - Fornecer através da props itens_start ou itens_end um objeto contendo um atributo "value"
@@ -18,8 +19,19 @@ Existem algumas maneira de fornecer os itens de "start" e "end" ao usar o presen
             itens_end={itens_start_3}
         />
 */
-const NavigationBar = (props)=>{
-    
+type Props = {
+    definition?:string,
+    link_brand?:string,
+    src_brand?:string,
+    width_brand?:string,
+    alt?:string,
+    height_brand?:string,
+    itens_start?:Array<Object>,
+    itens_end?:Array<Object>
+}
+
+const NavigationBar = (props:Props)=>{
+    checkerDefinition(props.definition,"NavigationBar");
     var definition="navbar " + classnames(getClassName(props.definition,"NavigationBar"));
         return (
             <nav className={definition}>

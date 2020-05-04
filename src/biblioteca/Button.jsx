@@ -1,8 +1,19 @@
-import React from 'react';
+// @flow
+import * as React from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import getClassNames from '../tools/getClassName';
+import checkerDefinition from '../tools/checker.js';
 
+
+type Props = {
+  disabled?: bool,
+  delete?: bool,
+  definition?: string,
+  children?: React.Node,
+  custom?: any,
+  onClick?: () => void
+}
 
 /*
 
@@ -24,11 +35,13 @@ Observações:
             situações onde usa-se o componente isolado.
 */
 
-const Button= (props)=>{
+const Button= (props: Props)=>{
+
+checkerDefinition(props.definition, "Button");
 
 var definition = getDefinition(props.delete, props.definition);
 
-        return <button disabled = {props.disabled == true? true: false } className={definition} onClick={getClickEvent(props.onClick)}>
+        return <button {...props.custom} disabled = {props.disabled == true? true: false } className={definition} onClick={getClickEvent(props.onClick)}>
                 {props.children}
          </button>
          ;
@@ -39,7 +52,7 @@ var definition = getDefinition(props.delete, props.definition);
     retorna somente o className "definition", não
     envolvendo outras classes do Bulma.
 */
-function getDefinition(isDelete,definition){
+function getDefinition(isDelete,definition:any){
     if(isDelete){
        return "delete";
     }else{

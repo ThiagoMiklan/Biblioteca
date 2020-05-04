@@ -1,12 +1,21 @@
+// @flow
 import React from 'react'
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import getClassName from '../tools/getClassName';
+import checkerDefinition from '../tools/checker.js';
 
+type Props = {
+    definition?: string,
+    onChange?: ()=>void,
+    multiple_size?: number,
+    itens?: Array<Object>
+}
 
-
-const Select = (props) => {
-    var definition = classnames(getClassName("select " + props.definition, "Select"));
+const Select = (props:Props) => {
+    checkerDefinition(props.definition,"Select");
+    var select_def = (props.definition == undefined)? "": props.definition;
+    var definition = classnames(getClassName("select " + select_def, "Select"));
     var definitionSelect= classnames(getClassName(getDefinitionCssEvents(props.definition), "Select"));
    
     var code = <div className={definition}>

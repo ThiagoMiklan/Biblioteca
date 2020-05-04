@@ -1,7 +1,9 @@
+// @flow
 import React from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import getClassName from '../tools/getClassName';
+
 /*
     Menu Item foi desenvolvido para representar uma parte de um menu, 
     representando não somente o menu em si, mas também o label de cada item/itens
@@ -28,7 +30,13 @@ import getClassName from '../tools/getClassName';
 
 
 */
-const MenuItem = (props)=>{
+type Props = {
+    itens?: Array<Object>,
+    label?: string
+}
+
+const MenuItem = (props:Props)=>{
+    
     return (
         
             <div>

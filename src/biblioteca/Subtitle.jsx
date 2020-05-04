@@ -10,7 +10,6 @@ const SubTitle = (props)=>{
      
 function assembleSubTitle(props) {
     var code_title = "";
-    
     if (props.definition != undefined && typeof props.definition == 'number') {
         var title =  getTitle(props);
         code_title = title;
@@ -25,7 +24,7 @@ function getTitle(props){
     var definition = props.definition;
     
     if(definition >= 1 && definition <= 6){
-            var assemble = assemble_functions.get(definition);
+            var assemble: ()=> void = assemble_functions.get(definition);
             title = assemble(props);
     }
     

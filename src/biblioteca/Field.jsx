@@ -1,3 +1,4 @@
+// @flow
 import React from 'react';
 import PropTypes from 'prop-types'
 import Icon from './Icon';
@@ -16,7 +17,26 @@ import Input from './Input';
 // Para fim  de organização. Considera-se esse um componente misto.
 
 
-const Field = (props) => {
+type Props = {
+    label?: string,
+    control_definition?: string,
+    input_definition?: string,
+    
+    icon_definition?: any,
+    
+    icon_name?: string,
+    
+    onChange?: ()=> void,
+    
+    placeholder?: string,
+    
+    type?: string,
+    
+    value?: string
+    }
+
+
+const Field = (props: Props) => {
     
     return <div className="field">
         <label className="label">{props.label}</label>
@@ -33,7 +53,8 @@ function assembleIcon(props){
     if(props.control_definition != undefined){
         var right = props.control_definition.includes("icons-right");
         if(right == true){
-            var icon_def = props.icon_definition + " right";
+            var definition = (props.icon_definition ==  undefined)? "": props.icon_definition;
+            var icon_def = definition + " right";
             code = <Icon definition={icon_def} icon_name={props.icon_name}></Icon>;
         }else{
             code = <Icon definition={props.icon_definition} icon_name={props.icon_name}></Icon>;

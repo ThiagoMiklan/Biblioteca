@@ -1,14 +1,23 @@
+// @flow
 import React from 'react';
 import PropTypes from 'prop-types';
 import classname from 'classnames';
 import getClassName from '../tools/getClassName';
+import checkerDefinition from '../tools/checker.js';
 
 // Sem "Children"
 // Eventos: "onClick on <a>"
 
+type Props = {
+  definition?: string,
+  itens?: string,
+}
 
-const BreadCrumb = (props) => {
+
+
+const BreadCrumb = (props: Props) => {
     var definition = "breadcrumb " + classname(getClassName(props.definition, "BreadCrumb"));
+    checkerDefinition(props.definition,"BreadCrumb")
     return (
         <nav className={definition}>
             <ul>

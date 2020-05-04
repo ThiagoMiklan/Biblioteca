@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import ReactDOM from 'react-dom';
- 
+import 'bulma/css/bulma.css';
 import Notification from './biblioteca/Notification';
 
 
@@ -101,3 +101,4 @@ ReactDOM.render(
 </>
 ,
 document.getElementById("root"))
+s

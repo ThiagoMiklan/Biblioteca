@@ -1,16 +1,16 @@
-import React from 'react';
+// @flow
+import * as React from 'react';
 
 
+type Props = {
+  children?: React.Node,
+};
 
-const Box = (props) => {
-    return (
-        <div className="box">
+function Box(props: Props) {
+  return  <div className="box">
             {props.children}
         </div>
-    );
 }
-
-
 
 
 export default Box

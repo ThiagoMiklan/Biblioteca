@@ -1,13 +1,23 @@
+// @flow
 import React from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import getClassName from '../tools/getClassName'
+import checkerDefinition from '../tools/checker.js';
 
-// Avaliar necessida de fornecer o onClick
+type Props = {
+    definition?:string,
+    href_previous?: string,
+    href_next?:string,
+    next_disabled?:bool,
+    next_name?: string,
+    previous_disabled?:bool,
+    itens?: Array<Object>,
+    previous_name?:string
+}
 
-
-
-const Pagination = (props) => {
+const Pagination = (props:Props) => {
+    checkerDefinition(props.definition,"Pagination");
     var definition = "pagination " + classnames(getClassName(props.definition, "Pagination"));
     return (
         <nav className={definition}>

@@ -1,9 +1,13 @@
-import React from 'react';
+// @flow
+import * as React from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import getClassName from '../tools/getClassName';
 import Button from '../biblioteca/Button';
 import Icon from '../biblioteca/Icon';
+import checkerDefinition from '../tools/checker.js';
+
+
 
 /**
  * 
@@ -16,7 +20,13 @@ import Icon from '../biblioteca/Icon';
  * 
  */
 
-const DropDown = (props) => {
+ type Props = {
+  definition?: string,
+  itens?: React.Node,
+  onClick?: ()=> void
+ }
+
+const DropDown = (props: Props) => {
     /*
       Sério problema ao exibir um dropdown, caso o nome do primeiro não seja um nome muito extenso
       corre o risco dos itens do dropdown não serem exibidos, necessário checagem completa do problema
@@ -25,6 +35,7 @@ const DropDown = (props) => {
       
       Não existe
       */
+    checkerDefinition(props.definition,"DropDown");
     var definition = "dropdown " + classnames(getClassName(props.definition, "DropDown"));
 
     return (<div className={definition}>
@@ -61,8 +72,8 @@ function extractButton(itens,onClick) {
      */
     return <Button onClick={onClick} >
         {(icon_name != undefined && icon_name != '')
-            ? <Icon icon_name={classnames(getClassName(icon_name, "DropDown"))} icon_right={true}>{name}
-            </Icon>
+            ? <Icon icon_name={classnames(getClassName(icon_name, "DropDown"))} icon_right={true}>{name}</Icon>
+            
             : <Icon icon_name={classnames(getClassName("default-icon", "DropDown"))} definition={icon_definition} icon_right={true} >{name}</Icon>
         }
     </Button>
@@ -100,9 +111,7 @@ function assembleComponentsItens(item) {
 
 DropDown.propTypes = {
     definition: PropTypes.string,
-    dropdown_name: PropTypes.string,
     itens: PropTypes.array,
-    button_dropdown: PropTypes.element,
     onClick: PropTypes.func
 }
 

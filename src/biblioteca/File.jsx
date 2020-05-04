@@ -1,22 +1,33 @@
+// @flow
 import React from 'react'
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import getClassName from '../tools/getClassName';
 import Icon from './Icon';
+import checkerDefinition from '../tools/checker.js';
 
 
-// Evento : onChange no Input do tipo File
+type Props = {
+    icon_name?: string,
+    icon_definition?: string,
+    definition?: string,
+    label?: string,
+    filename?:string,
+    onChange?: ()=> void
+}
 
-const File = (props)=>{
-  var definition= classnames(getClassName("file "+props.definition,"File"));
+const File = (props:Props)=>{
+  checkerDefinition(props.definition,"File");
+  var file_definition = (props.definition == undefined)? "": props.definition;
+  var definition= classnames(getClassName("file "+file_definition,"File"));
 
     return <div className={definition}>
-    <label class="file-label">
+    <label className="file-label">
 
-      <input onChange={props.onChange} class="file-input" type="file" name={props.input_name}/>
+      <input onChange={props.onChange} className="file-input" type="file"/>
       <span className="file-cta">
         <Icon definition={props.icon_definition} icon_name={props.icon_name}/>
-        <span class="file-label">
+        <span className="file-label">
             {props.label}
         </span>
         </span>
@@ -30,7 +41,6 @@ const File = (props)=>{
 }
 
 File.propTypes ={
-    input_name: PropTypes.string,
     icon_name: PropTypes.string,
     icon_definition: PropTypes.string,
     definition: PropTypes.string,

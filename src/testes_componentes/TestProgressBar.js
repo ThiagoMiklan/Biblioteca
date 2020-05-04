@@ -1,7 +1,7 @@
 import React,{useState,useEffect,useReducer}from 'react';
 import ReactDOM from 'react-dom';
 import ProgressBar from './biblioteca/ProgressBar';
- 
+import 'bulma/css/bulma.css' 
 
 function reducer(state, action) {
   switch (action.type) {

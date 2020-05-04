@@ -1,7 +1,10 @@
+// @flow
 import React from 'react';
 import getClassName from '../tools/getClassName';
 import className from 'classnames';
 import PropTypes from 'prop-types';
+import checkerDefinition from '../tools/checker.js';
+
 
 /*
 Componente que funciona fornece a opção de criar uma lista
@@ -11,7 +14,14 @@ Eventos: onClick na tag <li>
 Obs: Recomendável o uso do componente Content como pai do componente List, 
 para evitar problemas de exibição.
 */
-const List = (props)=> {
+
+type Props = {
+    itens?: Array<Object>,
+    definition?: string
+}
+
+const List = (props:Props)=> {
+        checkerDefinition(props.definition,"List");
         return (assembleList(props));    
 }
 

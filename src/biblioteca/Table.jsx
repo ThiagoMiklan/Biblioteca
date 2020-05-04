@@ -1,7 +1,11 @@
+// @flow
 import React from 'react';
 import classnames from 'classnames';
 import getClassName from '../tools/getClassName';
 import PropTypes from 'prop-types';
+import checkerDefinition from '../tools/checker.js';
+
+
 
 
 // style cursor default pointer
@@ -10,12 +14,22 @@ var style_cursor = {
     cursor:"pointer"
 }
 
-const Table = (props) => {
+type Props = {
+    itens_body?: Array<Object>,
+    itens_header?: Array<Object>,
+    itens_footer?: Array<Object>,
+    definition?: string,
+    onClickRow?: ()=> void
+}
+
+const Table = (props: Props) => {
+    checkerDefinition(props.definition,"Table");
     return assembleTable(props);
 }
 
 function assembleTable(props) {
-    var definition = classnames(getClassName("table " + props.definition, "Table"));
+    var table_definition = (props.definition ==  undefined)? "": props.definition;
+    var definition = classnames(getClassName("table " + table_definition, "Table"));
     var code = <></>;
 
     

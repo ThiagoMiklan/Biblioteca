@@ -1,17 +1,17 @@
-import React from 'react';
+// @flow
+import * as React from 'react';
 import PropTypes from 'prop-types';
 
-class Menu extends React.Component{
-    
-    render(){
-        
+type Props = {
+    children?: React.Node
+}
+
+const Menu = (props:Props) =>{
         return(
             <aside class="menu">
-              {this.props.children}
+              {props.children}
             </aside>
         );
-    }
-
 }
 
 

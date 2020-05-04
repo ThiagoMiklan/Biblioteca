@@ -1,8 +1,12 @@
-import React from 'react';
+// @flow
+import * as React from 'react';
 import classnames from 'classnames';
 import getClassName from '../tools/getClassName';
 import PropTypes from 'prop-types';
 import {InvalidNumberChilds,assembleDefaultMessage} from '../exception/InvalidNumberChilds';
+import checkerDefinition from '../tools/checker.js';
+
+
 
 // Com filhos
 // Sem eventos
@@ -13,9 +17,12 @@ import {InvalidNumberChilds,assembleDefaultMessage} from '../exception/InvalidNu
 // Caso sejam informados 2 filhos : Será montado header e body
 // Caso sejam informados 3 filhos: Será montado header,body e footer
 
+type Props = {
+  definition?: string,
+  children?: React.Node
+}
 
-
-const HeroThreeParts = (props)=>{
+const HeroThreeParts = (props:Props)=>{
     var childrens =  React.Children.map(props.children, (child, i) => {return child});
     return assemble(childrens,props);
 }
@@ -33,7 +40,8 @@ function assemble(childrens,props){
 }
 // recebe a props e junto com os filhos monta head,body e footer
 function assembleThreePartsHero(props,childrens){
-    var definition =  classnames(getClassName("hero "+ props.definition,"Hero"));
+    var hero_definition = (props.definition ==  undefined) ? "": props.definition;
+    var definition =  classnames(getClassName("hero "+ hero_definition,"Hero"));
     return (
         <section className={definition}>
             <div class="hero-head">

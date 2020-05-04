@@ -1,11 +1,21 @@
-import React from 'react';
+// @flow
+import * as React from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import getClassName from '../tools/getClassName';
 import Button from './Button.jsx';
+import checkerDefinition from '../tools/checker.js';
 
 
-const Notification = (props) =>{
+type Props = {
+    delete?: bool,
+    onClickDelete?:()=> void,
+    definition: string,
+    children: React.Node
+}
+
+const Notification = (props:Props) =>{
+    checkerDefinition(props.definition,"Notification");
     var definition = "notification " + classnames(getClassName(props.definition,"Notification"));
     return(
             <div className={definition}>

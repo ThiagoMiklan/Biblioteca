@@ -1,3 +1,4 @@
+// @flow
 import React from 'react'
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
@@ -5,12 +6,23 @@ import getClassName from '../tools/getClassName';
 import Icon from './Icon';
 import PanelItem from './PanelItem';
 import Field from './Field';
+import checkerDefinition from '../tools/checker.js';
 
 
-
+type Props = {
+    header?: string,
+    itens_tabs?: Array<Object>,
+    itens_blocks?:Array<Object>,
+    definition?: string,
+    search_definition?:string,
+    search_placeholder?:string,
+    search_icon_definition?:string,
+    onChangeSearch:()=> void
+}
 
 // v.01
-const Panel = (props) => {
+const Panel = (props:Props) => {
+    checkerDefinition(props.definition,"Panel");
     var definition =  "panel "+ classnames(getClassName(props.definition,"Panel"));
     return (
         <nav class={definition}>
@@ -60,11 +72,11 @@ function assembleBlock(item) {
 } 
 
 function assembleSearch(props){
-    return <Field input_definition={props.search_definition}
+    return <Field input_definition={props.search_definition == undefined? "" : props.search_definition}
                   icon_name={"fas fa-search"}
                   control_definition="icons-left"
-                  placeholder={props.search_placeholder}
-                  icon_definition={props.search_icon_definition}
+                  placeholder={props.search_placeholder == undefined? "" : props.search_placeholder}
+                  icon_definition={props.search_icon_definition == undefined? "" : props.search_icon_definition}
                   onChange={props.onChangeSearch}
                   type="text"
             />

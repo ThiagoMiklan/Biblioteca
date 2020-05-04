@@ -1,7 +1,8 @@
+// @flow
 
 const button_props = {
     "button": "button",
-
+  
     "white":"is-white",
     "light":"is-light",
     "dark" :"is-dark",

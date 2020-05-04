@@ -1,15 +1,26 @@
+// @flow
 import React from 'react';
 import classnames from 'classnames';
 import getClassName from '../tools/getClassName';
 import PropTypes from 'prop-types';
+import checkerDefinition from '../tools/checker.js';
 
 
-const TableQuery = (props)=>{
+type Props = {
+    itens?: Array<Object>,
+    header?: bool,
+    footer?: bool,
+    definition?: string,
+}
+
+const TableQuery = (props:Props)=>{
+    checkerDefinition(props.definition,"Table");
     return assembleTable(props);
 }
 
 function assembleTable(props){
-    var definition = classnames(getClassName("table "+props.definition,"Table"));
+    var table_definition = (props.definition ==  undefined)? "": props.definition;
+    var definition = classnames(getClassName("table "+table_definition,"Table"));
     var code = <></>;
     var x =  props.header;
     // elimina vazio e não array

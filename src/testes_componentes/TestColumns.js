@@ -6,7 +6,7 @@ import Column from './biblioteca/Column';
 
 
 ReactDOM.render(<>
-  <Columns>
+  <Columns >
 
     <Column definition="column background_primary">
       First column

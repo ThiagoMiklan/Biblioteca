@@ -2,10 +2,7 @@ import React, { useState } from 'react';
 import ReactDOM from 'react-dom';
 import 'bulma/css/bulma.css'
 import Icon from './biblioteca/Icon';
-import  {renderToString} from 'react-dom/server';
 
-var x =  renderToString(<Icon icon_name="fas fa-home" definition="warning large"></Icon>);
-var y = 0;
 
 ReactDOM.render(
   <div className="container is-fluid">

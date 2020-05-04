@@ -1,29 +1,34 @@
-import React from 'react';
+// @flow
+import * as React from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import getClassName from '../tools/getClassName';
 import Button from './Button';
+import checkerDefinition from '../tools/checker.js';
 
 
-const Tag = (props)=>{
-    var definition = classnames(getClassName("tag "+ props.definition, "Tag"));
-    var isDelete = haveDelete(props.definition);
+
+type Props = {
+    definition?:string,
+    children?: React.Node,
+    onClickDelete?: ()=>  void,
+    delete?: bool
+}
+
+const Tag = (props:Props)=>{
+    checkerDefinition(props.definition,"Tag");
+    var definition_tag = (props.definition == undefined) ? "": props.definition;
+    var definition = classnames(getClassName("tag "+ definition_tag, "Tag"));
+  
     return  <span className={definition}>
                 {props.children}
-                {isDelete == true && <Button onClick={props.onClickDelete} delete={true}></Button>
+                {props.delete == true && <Button onClick={props.onClickDelete} delete={props.delete}></Button>
                 }
             </span>
             
 }
 
-function haveDelete(definition){
-    var isDelete = false;
-    if(definition != undefined && typeof definition == 'string'){
-        isDelete = definition.includes("delete");
-    }
-    
-    return isDelete
-}   
+ 
 
 function assembleTag(props) {
     var tag = "";
@@ -55,7 +60,8 @@ function assembleListOfTags(props) {
 
 Tag.propTypes = {
     definition: PropTypes.string,
-    onClickDelete: PropTypes.func
+    onClickDelete: PropTypes.func,
+    delete: PropTypes.bool
 }
 
 export default Tag;
