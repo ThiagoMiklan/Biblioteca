@@ -59,22 +59,6 @@ function _classCallCheck(instance, Constructor) {
   }
 }
 
-function _defineProperties(target, props) {
-  for (var i = 0; i < props.length; i++) {
-    var descriptor = props[i];
-    descriptor.enumerable = descriptor.enumerable || false;
-    descriptor.configurable = true;
-    if ("value" in descriptor) descriptor.writable = true;
-    Object.defineProperty(target, descriptor.key, descriptor);
-  }
-}
-
-function _createClass(Constructor, protoProps, staticProps) {
-  if (protoProps) _defineProperties(Constructor.prototype, protoProps);
-  if (staticProps) _defineProperties(Constructor, staticProps);
-  return Constructor;
-}
-
 function _defineProperty(obj, key, value) {
   if (key in obj) {
     Object.defineProperty(obj, key, {
@@ -88,6 +72,24 @@ function _defineProperty(obj, key, value) {
   }
 
   return obj;
+}
+
+function _extends() {
+  _extends = Object.assign || function (target) {
+    for (var i = 1; i < arguments.length; i++) {
+      var source = arguments[i];
+
+      for (var key in source) {
+        if (Object.prototype.hasOwnProperty.call(source, key)) {
+          target[key] = source[key];
+        }
+      }
+    }
+
+    return target;
+  };
+
+  return _extends.apply(this, arguments);
 }
 
 function ownKeys(object, enumerableOnly) {
@@ -1552,7 +1554,8 @@ var navigation_bar_props = {
   "active": "is-active",
   "navbar-dropdown": "navbar-dropdown",
   "fixed-top": "is-fixed-top",
-  "fixed-bottom": "is-fixed-bottom"
+  "fixed-bottom": "is-fixed-bottom",
+  "inverted": "is-inverted"
 };
 
 var drop_down_props = {
@@ -1630,9 +1633,51 @@ var pagination_props = {
   "current": "is-current"
 };
 
-var card_props = {
-  "center": "is-centered"
+var global_props = {
+  "background-white": "has-background-white",
+  "background-black": "has-background-black",
+  "background-light": "has-background-light",
+  "background-dark": "has-background-dark,",
+  "background-primary": "has-background-primary",
+  "background-info": "has-background-info",
+  "background-link": "has-background-link",
+  "background-success": "has-background-success",
+  "background-warning": "has-background-warning",
+  "background-danger": "has-background-danger",
+  "background-black-bis": "has-background-black-bis",
+  "background-black-ter": "has-background-black-ter",
+  "background-grey-darker": "has-background-grey-darker",
+  "background-grey-dark": "has-background-grey-dark",
+  "background-grey": "has-background-grey",
+  "background-grey-light": "has-background-grey-light",
+  "background-grey-lighter": "has-background-grey-lighter",
+  "background-white-ter": "has-background-white-ter",
+  "background-white-bis": "has-background-white-bis",
+  "text-white": "has-text-white",
+  "text-black": "has-text-black",
+  "text-light": "has-text-light",
+  "text-dark": "has-text-dark",
+  "text-primary": "has-text-primary",
+  "text-info": "has-text-info",
+  "text-link": "has-text-link",
+  "text-success": "has-text-success",
+  "text-warning": "has-text-warning",
+  "text-danger": "has-text-danger",
+  "text-black-bis": "has-text-black-bis",
+  "text-black-ter": "has-text-black-ter",
+  "text-grey-darker": "has-text-grey-darker",
+  "text-grey-dark": "has-text-grey-dark",
+  "text-grey": "has-text-grey",
+  "text-grey-light": "has-text-grey-light",
+  "text-grey-lighter": "has-text-grey-lighter",
+  "text-white-ter": "has-text-white-ter",
+  "text-white-bis": "has-text-white-bis"
 };
+
+var card_props = {
+  "centered": "is-centered"
+};
+var card_props$1 = _objectSpread2({}, card_props, {}, global_props);
 
 var panel_props = {
   "active": "is-active",
@@ -1760,47 +1805,6 @@ var control_props = {
   "icons-right": "has-icons-right",
   // loading utilizado por exemplo no textarea
   "loading": "is-loading"
-};
-
-var global_props = {
-  background_white: "has-background-white",
-  background_black: "has-background-black",
-  background_light: "has-background-light",
-  background_dark: "has-background-dark,",
-  background_primary: "has-background-primary",
-  background_info: "has-background-info",
-  background_link: "has-background-link",
-  background_success: "has-background-success",
-  background_warning: "has-background-warning",
-  background_danger: "has-background-danger",
-  background_black_bis: "has-background-black-bis",
-  background_black_ter: "has-background-black-ter",
-  background_grey_darker: "has-background-grey-darker",
-  background_grey_dark: "has-background-grey-dark",
-  background_grey: "has-background-grey",
-  background_grey_light: "has-background-grey-light",
-  background_grey_lighter: "has-background-grey-lighter",
-  background_white_ter: "has-background-white-ter",
-  background_white_bis: "has-background-white-bis",
-  text_white: "has-text-white",
-  text_black: "has-text-black",
-  text_light: "has-text-light",
-  text_dark: "has-text-dark",
-  text_primary: "has-text-primary",
-  text_info: "has-text-info",
-  text_link: "has-text-link",
-  text_success: "has-text-success",
-  text_warning: "has-text-warning",
-  text_danger: "has-text-danger",
-  text_black_bis: "has-text-black-bis",
-  text_black_ter: "has-text-black-ter",
-  text_grey_darker: "has-text-grey-darker",
-  text_grey_dark: "has-text-grey-dark",
-  text_grey: "has-text-grey",
-  text_grey_light: "has-text-grey-light",
-  text_grey_lighter: "has-text-grey-lighter",
-  text_white_ter: "has-text-white-ter",
-  text_white_bis: "has-text-white-bis"
 };
 
 var columns_props = {
@@ -1952,7 +1956,7 @@ var component_path = {
   "BreadCrumb": bread_crumb_props,
   "Title": title_props,
   "Pagination": pagination_props,
-  "Card": card_props,
+  "Card": card_props$1,
   "Panel": panel_props,
   "Input": input_props,
   "Tabs": tabs_props,
@@ -1969,10 +1973,15 @@ var component_path = {
   "TagList": tag_list_props
 };
 
+function getComponentProps(component_name) {
+  var component_props = component_path[component_name];
+  return component_props;
+}
+
 var getClassName = function getClassNames(definition, component_name) {
   if (definition !== undefined && typeof definition == 'string') {
     var classObj = {};
-    var component_props = component_path[component_name];
+    var component_props = getComponentProps(component_name);
     var array_definition = definition.split(" ");
     var size = array_definition.length;
 
@@ -1986,10 +1995,91 @@ var getClassName = function getClassNames(definition, component_name) {
   return classObj;
 };
 
+var definition_err = "Definition Exception - The following characteristics are not defined:";
+
+function checkerDefinition(definition, component_name) {
+  if (definition != undefined && definition != "") {
+    var words = definition.split(/\s+/);
+    var output = false;
+    var props = getComponentProps(component_name);
+    var length = words.length;
+    var words_err = [];
+
+    for (var i = 0; i < length; i++) {
+      var sentence = props[words[i]];
+      var word = words[i];
+
+      if (word != "") {
+        if (sentence == undefined) {
+          words_err.push(words[i]);
+        }
+      }
+    }
+
+    if (words_err.length > 0) {
+      var message_err = createMessage(words_err, definition_err, component_name);
+      throw message_err;
+    } else {
+      output = true;
+    }
+  }
+
+  return output;
+}
+
+function createMessage(words_err, message, component_name) {
+  var size = words_err.length;
+
+  for (var i = 0; i < size; i++) {
+    message += " " + words_err[i];
+  }
+
+  return message += " on component " + component_name;
+}
+/*
+
+function checker(definition: any){
+   var words = definition.split(" ");
+   var output =  false;
+   var keys = Object.keys(button_props);
+   var length = words.length;
+   var words_err = [];
+   
+   for(let i = 0; i < length ; i++){
+      var sentence =  button_props[words[i]]
+      if(sentence == undefined){
+          words_err.push(words[i]);
+      };
+   }
+
+    var createMessage = (words_err)=>{
+        var message = "The following characteristics are not defined:";
+        var size = words_err.length;
+        for(let  i = 0; i < size ; i++){
+            message += " "+words_err[i];
+        }
+        return message;
+    }
+
+    if(words_err.length > 0){
+    var message = createMessage(words_err);
+    throw message;
+    }else{
+        output =  true;
+    }
+    
+
+    return output
+
+}
+
+*/
+
 // Eventos: "onClick on <a>"
 
 var BreadCrumb = function BreadCrumb(props) {
   var definition = "breadcrumb " + classnames(getClassName(props.definition, "BreadCrumb"));
+  checkerDefinition(props.definition, "BreadCrumb");
   return /*#__PURE__*/React__default.createElement("nav", {
     className: definition
   }, /*#__PURE__*/React__default.createElement("ul", null, assemble(props.itens)));
@@ -2016,6 +2106,7 @@ function assembleItens(itens) {
 
 function assembleSingleItem(item) {
   var def = item["definition"];
+  checkerDefinition(def, "BreadCrumb");
   var definition = classnames(getClassName(item["definition"], "BreadCrumb"));
   return /*#__PURE__*/React__default.createElement("li", {
     key: item["key"],
@@ -2064,14 +2155,14 @@ Observações:
             e o nome do botão deve ser informado no Icon e não no Button como em outras
             situações onde usa-se o componente isolado.
 */
-
 var Button = function Button(props) {
+  checkerDefinition(props.definition, "Button");
   var definition = getDefinition(props.delete, props.definition);
-  return /*#__PURE__*/React__default.createElement("button", {
+  return /*#__PURE__*/React.createElement("button", _extends({}, props.custom, {
     disabled: props.disabled == true ? true : false,
     className: definition,
     onClick: getClickEvent(props.onClick)
-  }, props.children);
+  }), props.children);
 };
 /* Se propriedade isDelete é verdadeira, então
     retorna somente o className "definition", não
@@ -2083,7 +2174,10 @@ function getDefinition(isDelete, definition) {
   if (isDelete) {
     return "delete";
   } else {
-    return classnames(getClassName("button " + definition, "Button"));
+    var button_definition = "button " + definition;
+    var objClassName = getClassName(button_definition, "Button");
+    var classname = classnames(objClassName);
+    return classname;
   }
 } // caso seja informado onClick ele retorna a função retornada, senão retorna uma função vazia. Método criado para evitar problemas com undefined
 
@@ -2153,122 +2247,18 @@ ButtonList.propTypes = {
   field: propTypes.bool
 };
 
-var Card = function Card(props) {
-  return /*#__PURE__*/React__default.createElement("div", {
-    className: "card"
-  }, assembleImage(props));
-};
-
-function assembleImage(props) {
-  return /*#__PURE__*/React__default.createElement("div", {
-    className: "card-image"
-  }, props.card_image);
-}
-
-Card.propTypes = {
-  card_image: propTypes.element,
-  card_content: propTypes.element.isRequired,
-  card_head_name: propTypes.string
-};
-
-/***
- * Componente para 
- */
-
-var CheckBox = function CheckBox(props) {
-  return /*#__PURE__*/React__default.createElement("label", {
-    className: "checkbox",
-    disabled: props.disabled
-  }, /*#__PURE__*/React__default.createElement("input", {
-    type: "checkbox",
-    onClick: props.onClick,
-    disabled: props.disabled
-  }), props.children);
-};
-
-CheckBox.propTypes = {
-  // Caso seja informado true, o check será desabilitado
-  // Caso não seja informado (undefined) ou seja false, não será desabilitado
-  // Default : undefined
-  disabled: propTypes.bool,
-  // Evento disparado ao selecionar o check
-  onClick: propTypes.func
-};
-
-/**
- * Componente inspirado na classe column do bulma
- * Utilizado como filho do componente Columns
- * Possui filhos, pois funciona como um container para outros
- * elementos
- * Sem eventos
- */
-
-var Column = function Column(props) {
-  var definition = classnames(getClassName("column " + props.definition, "Column"));
-  return /*#__PURE__*/React__default.createElement("div", {
-    className: definition
-  }, props.children);
-};
-
-Column.propTypes = {
-  // características do bulma para a coluna
-  definition: propTypes.string
-};
-
-/**
- *  Funciona como um container para Column
- *  Baseado na classe Columns do Bulma
- *  Sem eventos
- */
-
-var Columns = function Columns(props) {
-  var definition = classnames(getClassName("columns " + props.definition, "Columns"));
-  return /*#__PURE__*/React__default.createElement("div", {
-    className: definition
-  }, React__default.Children.map(props.children, function (child, i) {
-    return child;
+var Image = function Image(props) {
+  return /*#__PURE__*/React__default.createElement("figure", {
+    className: classnames(getClassName(props.definition, "Image"))
+  }, /*#__PURE__*/React__default.createElement("img", {
+    src: props.src
   }));
 };
 
-Columns.propTypes = {
-  // Características do Bulma
-  definition: propTypes.string
-};
-
-// Fornece um componente para servir de base para outros
-
-var Content = function Content(props) {
-  var definition = classnames(getClassName("content " + props.definition, "Content"));
-  return /*#__PURE__*/React__default.createElement("div", {
-    class: definition
-  }, props.children);
-};
-
-/*
-    - Componente que funciona como container
-    - Sem eventos
-*/
-
-var Control = function Control(props) {
-  var definition = getDefinition$2(props.definition);
-  return /*#__PURE__*/React__default.createElement("div", {
-    className: definition
-  }, React__default.Children.map(props.children, function (child, i) {
-    return child;
-  }));
-};
-
-function getDefinition$2(definition) {
-  if (definition == undefined || definition == '') {
-    return classnames(getClassName("control icons-left", "Control"));
-  } else {
-    return classnames(getClassName("control " + definition, "Control"));
-  }
-}
-
-Control.propTypes = {
-  // Características do Bulma 
-  definition: propTypes.string
+Image.propTypes = {
+  definition: propTypes.string.isRequired,
+  value: propTypes.string.isRequired,
+  src: propTypes.string.isRequired
 };
 
 /*!
@@ -2330,14 +2320,16 @@ if(iconName&&(!alreadyProcessedPseudoElement||alreadyProcessedPseudoElement.getA
 node.removeChild(alreadyProcessedPseudoElement);}var meta=blankMeta();var extra=meta.extra;extra.attributes[DATA_FA_PSEUDO_ELEMENT]=position;findIcon(iconName,prefix).then(function(main){var abstract=makeInlineSvgAbstract(_objectSpread({},meta,{icons:{main:main,mask:emptyCanonicalIcon()},prefix:prefix,iconName:iconIdentifier,extra:extra,watchable:true}));var element=DOCUMENT.createElement('svg');if(position===':before'){node.insertBefore(element,node.firstChild);}else {node.appendChild(element);}element.outerHTML=abstract.map(function(a){return toHtml(a);}).join('\n');node.removeAttribute(pendingAttribute);resolve();}).catch(reject);}else {resolve();}}else {resolve();}});}function replace(node){return picked.all([replaceForPosition(node,':before'),replaceForPosition(node,':after')]);}function processable(node){return node.parentNode!==document.head&&!~TAGNAMES_TO_SKIP_FOR_PSEUDOELEMENTS.indexOf(node.tagName.toUpperCase())&&!node.getAttribute(DATA_FA_PSEUDO_ELEMENT)&&(!node.parentNode||node.parentNode.tagName!=='svg');}function searchPseudoElements(root){if(!IS_DOM)return;return new picked(function(resolve,reject){var operations=toArray(root.querySelectorAll('*')).filter(processable).map(replace);var end=perf.begin('searchPseudoElements');disableObservation();picked.all(operations).then(function(){end();enableObservation();resolve();}).catch(function(){end();enableObservation();reject();});});}var baseStyles="svg:not(:root).svg-inline--fa{overflow:visible}.svg-inline--fa{display:inline-block;font-size:inherit;height:1em;overflow:visible;vertical-align:-.125em}.svg-inline--fa.fa-lg{vertical-align:-.225em}.svg-inline--fa.fa-w-1{width:.0625em}.svg-inline--fa.fa-w-2{width:.125em}.svg-inline--fa.fa-w-3{width:.1875em}.svg-inline--fa.fa-w-4{width:.25em}.svg-inline--fa.fa-w-5{width:.3125em}.svg-inline--fa.fa-w-6{width:.375em}.svg-inline--fa.fa-w-7{width:.4375em}.svg-inline--fa.fa-w-8{width:.5em}.svg-inline--fa.fa-w-9{width:.5625em}.svg-inline--fa.fa-w-10{width:.625em}.svg-inline--fa.fa-w-11{width:.6875em}.svg-inline--fa.fa-w-12{width:.75em}.svg-inline--fa.fa-w-13{width:.8125em}.svg-inline--fa.fa-w-14{width:.875em}.svg-inline--fa.fa-w-15{width:.9375em}.svg-inline--fa.fa-w-16{width:1em}.svg-inline--fa.fa-w-17{width:1.0625em}.svg-inline--fa.fa-w-18{width:1.125em}.svg-inline--fa.fa-w-19{width:1.1875em}.svg-inline--fa.fa-w-20{width:1.25em}.svg-inline--fa.fa-pull-left{margin-right:.3em;width:auto}.svg-inline--fa.fa-pull-right{margin-left:.3em;width:auto}.svg-inline--fa.fa-border{height:1.5em}.svg-inline--fa.fa-li{width:2em}.svg-inline--fa.fa-fw{width:1.25em}.fa-layers svg.svg-inline--fa{bottom:0;left:0;margin:auto;position:absolute;right:0;top:0}.fa-layers{display:inline-block;height:1em;position:relative;text-align:center;vertical-align:-.125em;width:1em}.fa-layers svg.svg-inline--fa{-webkit-transform-origin:center center;transform-origin:center center}.fa-layers-counter,.fa-layers-text{display:inline-block;position:absolute;text-align:center}.fa-layers-text{left:50%;top:50%;-webkit-transform:translate(-50%,-50%);transform:translate(-50%,-50%);-webkit-transform-origin:center center;transform-origin:center center}.fa-layers-counter{background-color:#ff253a;border-radius:1em;-webkit-box-sizing:border-box;box-sizing:border-box;color:#fff;height:1.5em;line-height:1;max-width:5em;min-width:1.5em;overflow:hidden;padding:.25em;right:0;text-overflow:ellipsis;top:0;-webkit-transform:scale(.25);transform:scale(.25);-webkit-transform-origin:top right;transform-origin:top right}.fa-layers-bottom-right{bottom:0;right:0;top:auto;-webkit-transform:scale(.25);transform:scale(.25);-webkit-transform-origin:bottom right;transform-origin:bottom right}.fa-layers-bottom-left{bottom:0;left:0;right:auto;top:auto;-webkit-transform:scale(.25);transform:scale(.25);-webkit-transform-origin:bottom left;transform-origin:bottom left}.fa-layers-top-right{right:0;top:0;-webkit-transform:scale(.25);transform:scale(.25);-webkit-transform-origin:top right;transform-origin:top right}.fa-layers-top-left{left:0;right:auto;top:0;-webkit-transform:scale(.25);transform:scale(.25);-webkit-transform-origin:top left;transform-origin:top left}.fa-lg{font-size:1.3333333333em;line-height:.75em;vertical-align:-.0667em}.fa-xs{font-size:.75em}.fa-sm{font-size:.875em}.fa-1x{font-size:1em}.fa-2x{font-size:2em}.fa-3x{font-size:3em}.fa-4x{font-size:4em}.fa-5x{font-size:5em}.fa-6x{font-size:6em}.fa-7x{font-size:7em}.fa-8x{font-size:8em}.fa-9x{font-size:9em}.fa-10x{font-size:10em}.fa-fw{text-align:center;width:1.25em}.fa-ul{list-style-type:none;margin-left:2.5em;padding-left:0}.fa-ul>li{position:relative}.fa-li{left:-2em;position:absolute;text-align:center;width:2em;line-height:inherit}.fa-border{border:solid .08em #eee;border-radius:.1em;padding:.2em .25em .15em}.fa-pull-left{float:left}.fa-pull-right{float:right}.fa.fa-pull-left,.fab.fa-pull-left,.fal.fa-pull-left,.far.fa-pull-left,.fas.fa-pull-left{margin-right:.3em}.fa.fa-pull-right,.fab.fa-pull-right,.fal.fa-pull-right,.far.fa-pull-right,.fas.fa-pull-right{margin-left:.3em}.fa-spin{-webkit-animation:fa-spin 2s infinite linear;animation:fa-spin 2s infinite linear}.fa-pulse{-webkit-animation:fa-spin 1s infinite steps(8);animation:fa-spin 1s infinite steps(8)}@-webkit-keyframes fa-spin{0%{-webkit-transform:rotate(0);transform:rotate(0)}100%{-webkit-transform:rotate(360deg);transform:rotate(360deg)}}@keyframes fa-spin{0%{-webkit-transform:rotate(0);transform:rotate(0)}100%{-webkit-transform:rotate(360deg);transform:rotate(360deg)}}.fa-rotate-90{-webkit-transform:rotate(90deg);transform:rotate(90deg)}.fa-rotate-180{-webkit-transform:rotate(180deg);transform:rotate(180deg)}.fa-rotate-270{-webkit-transform:rotate(270deg);transform:rotate(270deg)}.fa-flip-horizontal{-webkit-transform:scale(-1,1);transform:scale(-1,1)}.fa-flip-vertical{-webkit-transform:scale(1,-1);transform:scale(1,-1)}.fa-flip-both,.fa-flip-horizontal.fa-flip-vertical{-webkit-transform:scale(-1,-1);transform:scale(-1,-1)}:root .fa-flip-both,:root .fa-flip-horizontal,:root .fa-flip-vertical,:root .fa-rotate-180,:root .fa-rotate-270,:root .fa-rotate-90{-webkit-filter:none;filter:none}.fa-stack{display:inline-block;height:2em;position:relative;width:2.5em}.fa-stack-1x,.fa-stack-2x{bottom:0;left:0;margin:auto;position:absolute;right:0;top:0}.svg-inline--fa.fa-stack-1x{height:1em;width:1.25em}.svg-inline--fa.fa-stack-2x{height:2em;width:2.5em}.fa-inverse{color:#fff}.sr-only{border:0;clip:rect(0,0,0,0);height:1px;margin:-1px;overflow:hidden;padding:0;position:absolute;width:1px}.sr-only-focusable:active,.sr-only-focusable:focus{clip:auto;height:auto;margin:0;overflow:visible;position:static;width:auto}.svg-inline--fa .fa-primary{fill:var(--fa-primary-color,currentColor);opacity:1;opacity:var(--fa-primary-opacity,1)}.svg-inline--fa .fa-secondary{fill:var(--fa-secondary-color,currentColor);opacity:.4;opacity:var(--fa-secondary-opacity,.4)}.svg-inline--fa.fa-swap-opacity .fa-primary{opacity:.4;opacity:var(--fa-secondary-opacity,.4)}.svg-inline--fa.fa-swap-opacity .fa-secondary{opacity:1;opacity:var(--fa-primary-opacity,1)}.svg-inline--fa mask .fa-primary,.svg-inline--fa mask .fa-secondary{fill:#000}.fad.fa-inverse{color:#fff}";function css(){var dfp=DEFAULT_FAMILY_PREFIX;var drc=DEFAULT_REPLACEMENT_CLASS;var fp=config.familyPrefix;var rc=config.replacementClass;var s=baseStyles;if(fp!==dfp||rc!==drc){var dPatt=new RegExp("\\.".concat(dfp,"\\-"),'g');var customPropPatt=new RegExp("\\--".concat(dfp,"\\-"),'g');var rPatt=new RegExp("\\.".concat(drc),'g');s=s.replace(dPatt,".".concat(fp,"-")).replace(customPropPatt,"--".concat(fp,"-")).replace(rPatt,".".concat(rc));}return s;}var Library=/*#__PURE__*/function(){function Library(){_classCallCheck(this,Library);this.definitions={};}_createClass(Library,[{key:"add",value:function add(){var _this=this;for(var _len=arguments.length,definitions=new Array(_len),_key=0;_key<_len;_key++){definitions[_key]=arguments[_key];}var additions=definitions.reduce(this._pullDefinitions,{});Object.keys(additions).forEach(function(key){_this.definitions[key]=_objectSpread({},_this.definitions[key]||{},additions[key]);defineIcons(key,additions[key]);build();});}},{key:"reset",value:function reset(){this.definitions={};}},{key:"_pullDefinitions",value:function _pullDefinitions(additions,definition){var normalized=definition.prefix&&definition.iconName&&definition.icon?{0:definition}:definition;Object.keys(normalized).map(function(key){var _normalized$key=normalized[key],prefix=_normalized$key.prefix,iconName=_normalized$key.iconName,icon=_normalized$key.icon;if(!additions[prefix])additions[prefix]={};additions[prefix][iconName]=icon;});return additions;}}]);return Library;}();function ensureCss(){if(config.autoAddCss&&!_cssInserted){insertCss(css());_cssInserted=true;}}function apiObject(val,abstractCreator){Object.defineProperty(val,'abstract',{get:abstractCreator});Object.defineProperty(val,'html',{get:function get(){return val.abstract.map(function(a){return toHtml(a);});}});Object.defineProperty(val,'node',{get:function get(){if(!IS_DOM)return;var container=DOCUMENT.createElement('div');container.innerHTML=val.html;return container.children;}});return val;}function findIconDefinition(iconLookup){var _iconLookup$prefix=iconLookup.prefix,prefix=_iconLookup$prefix===void 0?'fa':_iconLookup$prefix,iconName=iconLookup.iconName;if(!iconName)return;return iconFromMapping(library.definitions,prefix,iconName)||iconFromMapping(namespace.styles,prefix,iconName);}function resolveIcons(next){return function(maybeIconDefinition){var params=arguments.length>1&&arguments[1]!==undefined?arguments[1]:{};var iconDefinition=(maybeIconDefinition||{}).icon?maybeIconDefinition:findIconDefinition(maybeIconDefinition||{});var mask=params.mask;if(mask){mask=(mask||{}).icon?mask:findIconDefinition(mask||{});}return next(iconDefinition,_objectSpread({},params,{mask:mask}));};}var library=new Library();var noAuto=function noAuto(){config.autoReplaceSvg=false;config.observeMutations=false;disconnect();};var _cssInserted=false;var dom={i2svg:function i2svg(){var params=arguments.length>0&&arguments[0]!==undefined?arguments[0]:{};if(IS_DOM){ensureCss();var _params$node=params.node,node=_params$node===void 0?DOCUMENT:_params$node,_params$callback=params.callback,callback=_params$callback===void 0?function(){}:_params$callback;if(config.searchPseudoElements){searchPseudoElements(node);}return onTree(node,callback);}else {return picked.reject('Operation requires a DOM of some kind.');}},css:css,insertCss:function insertCss$$1(){if(!_cssInserted){insertCss(css());_cssInserted=true;}},watch:function watch(){var params=arguments.length>0&&arguments[0]!==undefined?arguments[0]:{};var autoReplaceSvgRoot=params.autoReplaceSvgRoot,observeMutationsRoot=params.observeMutationsRoot;if(config.autoReplaceSvg===false){config.autoReplaceSvg=true;}config.observeMutations=true;domready(function(){autoReplace({autoReplaceSvgRoot:autoReplaceSvgRoot});observe({treeCallback:onTree,nodeCallback:onNode,pseudoElementsCallback:searchPseudoElements,observeMutationsRoot:observeMutationsRoot});});}};var parse={transform:function transform(transformString){return parseTransformString(transformString);}};var icon=resolveIcons(function(iconDefinition){var params=arguments.length>1&&arguments[1]!==undefined?arguments[1]:{};var _params$transform=params.transform,transform=_params$transform===void 0?meaninglessTransform:_params$transform,_params$symbol=params.symbol,symbol=_params$symbol===void 0?false:_params$symbol,_params$mask=params.mask,mask=_params$mask===void 0?null:_params$mask,_params$title=params.title,title=_params$title===void 0?null:_params$title,_params$classes=params.classes,classes=_params$classes===void 0?[]:_params$classes,_params$attributes=params.attributes,attributes=_params$attributes===void 0?{}:_params$attributes,_params$styles=params.styles,styles=_params$styles===void 0?{}:_params$styles;if(!iconDefinition)return;var prefix=iconDefinition.prefix,iconName=iconDefinition.iconName,icon=iconDefinition.icon;return apiObject(_objectSpread({type:'icon'},iconDefinition),function(){ensureCss();if(config.autoA11y){if(title){attributes['aria-labelledby']="".concat(config.replacementClass,"-title-").concat(nextUniqueId());}else {attributes['aria-hidden']='true';attributes['focusable']='false';}}return makeInlineSvgAbstract({icons:{main:asFoundIcon(icon),mask:mask?asFoundIcon(mask.icon):{found:false,width:null,height:null,icon:{}}},prefix:prefix,iconName:iconName,transform:_objectSpread({},meaninglessTransform,transform),symbol:symbol,title:title,extra:{attributes:attributes,styles:styles,classes:classes}});});});var text=function text(content){var params=arguments.length>1&&arguments[1]!==undefined?arguments[1]:{};var _params$transform2=params.transform,transform=_params$transform2===void 0?meaninglessTransform:_params$transform2,_params$title2=params.title,title=_params$title2===void 0?null:_params$title2,_params$classes2=params.classes,classes=_params$classes2===void 0?[]:_params$classes2,_params$attributes2=params.attributes,attributes=_params$attributes2===void 0?{}:_params$attributes2,_params$styles2=params.styles,styles=_params$styles2===void 0?{}:_params$styles2;return apiObject({type:'text',content:content},function(){ensureCss();return makeLayersTextAbstract({content:content,transform:_objectSpread({},meaninglessTransform,transform),title:title,extra:{attributes:attributes,styles:styles,classes:["".concat(config.familyPrefix,"-layers-text")].concat(_toConsumableArray(classes))}});});};var counter=function counter(content){var params=arguments.length>1&&arguments[1]!==undefined?arguments[1]:{};var _params$title3=params.title,title=_params$title3===void 0?null:_params$title3,_params$classes3=params.classes,classes=_params$classes3===void 0?[]:_params$classes3,_params$attributes3=params.attributes,attributes=_params$attributes3===void 0?{}:_params$attributes3,_params$styles3=params.styles,styles=_params$styles3===void 0?{}:_params$styles3;return apiObject({type:'counter',content:content},function(){ensureCss();return makeLayersCounterAbstract({content:content.toString(),title:title,extra:{attributes:attributes,styles:styles,classes:["".concat(config.familyPrefix,"-layers-counter")].concat(_toConsumableArray(classes))}});});};var layer=function layer(assembler){var params=arguments.length>1&&arguments[1]!==undefined?arguments[1]:{};var _params$classes4=params.classes,classes=_params$classes4===void 0?[]:_params$classes4;return apiObject({type:'layer'},function(){ensureCss();var children=[];assembler(function(args){Array.isArray(args)?args.map(function(a){children=children.concat(a.abstract);}):children=children.concat(args.abstract);});return [{tag:'span',attributes:{class:["".concat(config.familyPrefix,"-layers")].concat(_toConsumableArray(classes)).join(' ')},children:children}];});};var api={noAuto:noAuto,config:config,dom:dom,library:library,parse:parse,findIconDefinition:findIconDefinition,icon:icon,text:text,counter:counter,layer:layer,toHtml:toHtml};var autoReplace=function autoReplace(){var params=arguments.length>0&&arguments[0]!==undefined?arguments[0]:{};var _params$autoReplaceSv=params.autoReplaceSvgRoot,autoReplaceSvgRoot=_params$autoReplaceSv===void 0?DOCUMENT:_params$autoReplaceSv;if((Object.keys(namespace.styles).length>0||config.autoFetchSvg)&&IS_DOM&&config.autoReplaceSvg)api.dom.i2svg({node:autoReplaceSvgRoot});};function bootstrap(){if(IS_BROWSER){if(!WINDOW.FontAwesome){WINDOW.FontAwesome=api;}domready(function(){autoReplace();observe({treeCallback:onTree,nodeCallback:onNode,pseudoElementsCallback:searchPseudoElements});});}namespace.hooks=_objectSpread({},namespace.hooks,{addPack:function addPack(prefix,icons){namespace.styles[prefix]=_objectSpread({},namespace.styles[prefix]||{},icons);build();autoReplace();},addShims:function addShims(shims){var _namespace$shims;(_namespace$shims=namespace.shims).push.apply(_namespace$shims,_toConsumableArray(shims));build();autoReplace();}});}bunker(bootstrap);})();
 
 var Icon = function Icon(props) {
-  var definition = classnames(getClassName("icon " + props.definition, "Icon"));
-  return /*#__PURE__*/React__default.createElement(React__default.Fragment, null, (props.icon_right == false || props.icon_right == undefined) && /*#__PURE__*/React__default.createElement("span", null, props.children), /*#__PURE__*/React__default.createElement("span", {
+  checkerDefinition(props.definition, "Icon");
+  var icon_definition = props.definition == undefined ? "" : props.definition;
+  var definition = classnames(getClassName("icon " + icon_definition, "Icon"));
+  return /*#__PURE__*/React.createElement(React.Fragment, null, (props.icon_right == false || props.icon_right == undefined) && /*#__PURE__*/React.createElement("span", null, props.children), /*#__PURE__*/React.createElement("span", {
     onClick: props.onClick,
     className: definition
-  }, /*#__PURE__*/React__default.createElement("i", {
+  }, /*#__PURE__*/React.createElement("i", {
     className: props.icon_name,
     "aria-hidden": "true"
-  })), props.icon_right == true && /*#__PURE__*/React__default.createElement("span", null, props.children));
+  })), props.icon_right == true && /*#__PURE__*/React.createElement("span", null, props.children));
 };
 
 Icon.propTypes = {
@@ -2349,6 +2341,224 @@ Icon.propTypes = {
   icon_rigth: propTypes.string,
   // Nome do ícone
   icon_name: propTypes.string
+};
+
+var Card = function Card(props) {
+  // se title for undefined não tem motivo para criar header
+  // se src for undefined não tem motivo para criar card image
+  // se itens_footer for undefined não tem pq criar footer
+  var definition = "card " + classnames(getClassName(props.definition, "Card"));
+  return /*#__PURE__*/React__default.createElement("div", {
+    className: definition
+  }, assembleHeader(props), props.src != undefined && assembleCardImage(props), assembleContent(props), props.itens_footer != undefined && assembleFooter(props));
+}; //  Essa função server para adicionar uma propriedade de customização do header de Card
+// Com ela é possível tanto usar o Header Padrão, como informar seu próprio componente para header
+// através da props custom.header;
+
+
+function assembleHeader(props) {
+  var header = /*#__PURE__*/React__default.createElement(React__default.Fragment, null);
+
+  if (props.custom_header != undefined) {
+    header = assembleHeaderCustom(props);
+  } else {
+    if (props.title != undefined) {
+      header = assembleHeaderDefault(props);
+    }
+  }
+
+  return header;
+} // title: Testando,  icon_name: "fas fa-angle-down", icon_definition: "info", href
+// expandido para diversos tipos de valores
+
+
+function assembleHeaderDefault(props) {
+  var header_definition = "card-header " + classnames(getClassName(props.header_definition, "Card"));
+  var card_header_definition = "card-header-icon" + classnames(getClassName(props.card_header_definition, "Card"));
+  var title_definition = "card-header-title " + classnames(getClassName(props.title_definition, "Card"));
+  return /*#__PURE__*/React__default.createElement("header", {
+    className: header_definition
+  }, /*#__PURE__*/React__default.createElement("div", {
+    className: title_definition
+  }, props.title), props.icon_name != undefined && /*#__PURE__*/React__default.createElement("a", {
+    href: "#",
+    className: card_header_definition
+  }, /*#__PURE__*/React__default.createElement(Icon, {
+    definition: props.icon_definition,
+    icon_name: props.icon_name
+  })));
+}
+
+function assembleHeaderCustom(props) {
+  var header_definition = "card-header " + classnames(getClassName(props.header_definition, "Card"));
+  return /*#__PURE__*/React__default.createElement("header", {
+    className: header_definition
+  }, props.custom_header);
+} // src(props):  image_definition(props): 
+// Limite de uma imagem
+
+
+function assembleCardImage(props) {
+  // <Image src="" definition=""></Image>
+  var card_image_definition = "card-image " + classnames(getClassName(props.card_image_definition, "Card"));
+  return /*#__PURE__*/React__default.createElement("div", {
+    className: card_image_definition
+  }, /*#__PURE__*/React__default.createElement(Image, {
+    definition: props.image_definition,
+    src: props.src
+  }));
+} // content
+
+
+function assembleContent(props) {
+  return /*#__PURE__*/React__default.createElement("div", {
+    className: "card-content "
+  }, props.children);
+} // itens_footer(props) footer_definition
+// Limitado apenas nessa formado de lista
+
+
+function assembleFooter(props) {
+  var footer_definition = "card-footer " + classnames(getClassName(props.footer_definition, "Card"));
+  return /*#__PURE__*/React__default.createElement("footer", {
+    className: footer_definition
+  }, props.itens_footer.map(function (item) {
+    return assembleItemFooter(item);
+  }));
+}
+
+function assembleItemFooter(item) {
+  return /*#__PURE__*/React__default.createElement("p", {
+    className: "card-footer-item"
+  }, /*#__PURE__*/React__default.createElement("span", {
+    onClick: item["onClick"],
+    style: {
+      cursor: "pointer"
+    }
+  }, item["value"]));
+}
+
+Card.propTypes = {
+  title: propTypes.string,
+  header_definition: propTypes.string,
+  card_header_definition: propTypes.string,
+  content_definition: propTypes.string,
+  itens_footer: propTypes.array,
+  footer_definition: propTypes.string,
+  image_definition: propTypes.string,
+  src: propTypes.string,
+  icon_definition: propTypes.string,
+  icon_name: propTypes.string,
+  card_image_definition: propTypes.string,
+  custom_header: propTypes.any,
+  definition: propTypes.string
+};
+
+/***
+ * Componente para 
+ */
+
+var CheckBox = function CheckBox(props) {
+  return /*#__PURE__*/React__default.createElement("label", {
+    className: "checkbox",
+    disabled: props.disabled
+  }, /*#__PURE__*/React__default.createElement("input", {
+    type: "checkbox",
+    onClick: props.onClick,
+    disabled: props.disabled
+  }), props.children);
+};
+
+CheckBox.propTypes = {
+  // Caso seja informado true, o check será desabilitado
+  // Caso não seja informado (undefined) ou seja false, não será desabilitado
+  // Default : undefined
+  disabled: propTypes.bool,
+  // Evento disparado ao selecionar o check
+  onClick: propTypes.func
+};
+
+/**
+ * Componente inspirado na classe column do bulma
+ * Utilizado como filho do componente Columns
+ * Possui filhos, pois funciona como um container para outros
+ * elementos
+ * Sem eventos
+ */
+
+var Column = function Column(props) {
+  var definition = props.definition == undefined ? "" : props.definition;
+  checkerDefinition(definition, "Column");
+  var definition = classnames(getClassName("column " + definition, "Column"));
+  return /*#__PURE__*/React.createElement("div", {
+    className: definition
+  }, props.children);
+};
+
+Column.propTypes = {
+  // características do bulma para a coluna
+  definition: propTypes.string
+};
+
+/**
+ *  Funciona como um container para Column
+ *  Baseado na classe Columns do Bulma
+ *  Sem eventos
+ */
+
+var Columns = function Columns(props) {
+  var definition = props.definition == undefined ? "" : props.definition;
+  checkerDefinition(definition, "Columns");
+  var definition = classnames(getClassName("columns " + definition, "Columns"));
+  return /*#__PURE__*/React.createElement("div", {
+    className: definition
+  }, React.Children.map(props.children, function (child, i) {
+    return child;
+  }));
+};
+
+Columns.propTypes = {
+  // Características do Bulma
+  definition: propTypes.string
+};
+
+// Fornece um componente para servir de base para 
+
+var Content = function Content(props) {
+  var definition = props.definition == undefined ? "" : props.definition;
+  checkerDefinition(definition, "Content");
+  var definition = classnames(getClassName("content " + definition, "Content"));
+  return /*#__PURE__*/React.createElement("div", {
+    class: definition
+  }, props.children);
+};
+
+/*
+    - Componente que funciona como container
+    - Sem eventos
+*/
+
+var Control = function Control(props) {
+  checkerDefinition(props.definition, "Control");
+  var definition = getDefinition$2(props.definition);
+  return /*#__PURE__*/React.createElement("div", {
+    className: definition
+  }, React.Children.map(props.children, function (child, i) {
+    return child;
+  }));
+};
+
+function getDefinition$2(definition) {
+  if (definition == undefined || definition == '') {
+    return classnames(getClassName("control icons-left", "Control"));
+  } else {
+    return classnames(getClassName("control " + definition, "Control"));
+  }
+}
+
+Control.propTypes = {
+  // Características do Bulma 
+  definition: propTypes.string
 };
 
 /**
@@ -2371,16 +2581,17 @@ var DropDown = function DropDown(props) {
     
     Não existe
     */
+  checkerDefinition(props.definition, "DropDown");
   var definition = "dropdown " + classnames(getClassName(props.definition, "DropDown"));
-  return /*#__PURE__*/React__default.createElement("div", {
+  return /*#__PURE__*/React.createElement("div", {
     className: definition
-  }, /*#__PURE__*/React__default.createElement("div", {
+  }, /*#__PURE__*/React.createElement("div", {
     class: "dropdown-trigger"
-  }, extractButton(props.itens, props.onClick)), /*#__PURE__*/React__default.createElement("div", {
+  }, extractButton(props.itens, props.onClick)), /*#__PURE__*/React.createElement("div", {
     class: "dropdown-menu",
     id: "dropdown-menu",
     role: "menu"
-  }, /*#__PURE__*/React__default.createElement("div", {
+  }, /*#__PURE__*/React.createElement("div", {
     class: "dropdown-content"
   }, assemble$1(props.itens))));
 }; // Monta um botão a partir do primeiro item da lista
@@ -2405,12 +2616,12 @@ function extractButton(itens, onClick) {
    */
 
 
-  return /*#__PURE__*/React__default.createElement(Button, {
+  return /*#__PURE__*/React.createElement(Button, {
     onClick: onClick
-  }, icon_name != undefined && icon_name != '' ? /*#__PURE__*/React__default.createElement(Icon, {
+  }, icon_name != undefined && icon_name != '' ? /*#__PURE__*/React.createElement(Icon, {
     icon_name: classnames(getClassName(icon_name, "DropDown")),
     icon_right: true
-  }, name) : /*#__PURE__*/React__default.createElement(Icon, {
+  }, name) : /*#__PURE__*/React.createElement(Icon, {
     icon_name: classnames(getClassName("default-icon", "DropDown")),
     definition: icon_definition,
     icon_right: true
@@ -2418,7 +2629,7 @@ function extractButton(itens, onClick) {
 }
 
 function assemble$1(itens) {
-  var code = /*#__PURE__*/React__default.createElement(React__default.Fragment, null);
+  var code = /*#__PURE__*/React.createElement(React.Fragment, null);
 
   if (itens != undefined && Array.isArray(itens)) {
     code = itens.map(function (item) {
@@ -2442,8 +2653,9 @@ function decideTypeOfItens(item) {
 }
 
 function assembleItensLinks(item) {
+  checkerDefinition(item["definition"], "DropDown");
   var definition = classnames(getClassName("dropdown-item " + item["definition"], "DropDown"));
-  return /*#__PURE__*/React__default.createElement("a", {
+  return /*#__PURE__*/React.createElement("a", {
     className: definition,
     onClick: item["onClick"],
     href: item["href"]
@@ -2451,8 +2663,9 @@ function assembleItensLinks(item) {
 }
 
 function assembleComponentsItens(item) {
+  checkerDefinition(item["definition"], "DropDown");
   var definition = classnames(getClassName("dropdown-item " + item["definition"], "DropDown"));
-  return /*#__PURE__*/React__default.createElement("div", {
+  return /*#__PURE__*/React.createElement("div", {
     className: definition,
     onClick: item["onClick"],
     href: item["href"]
@@ -2461,21 +2674,24 @@ function assembleComponentsItens(item) {
 
 DropDown.propTypes = {
   definition: propTypes.string,
-  dropdown_name: propTypes.string,
   itens: propTypes.array,
-  button_dropdown: propTypes.element,
   onClick: propTypes.func
 };
 
 var Input = function Input(props) {
+  checkerDefinition(props.definition, "Input");
   return assemble$2(props);
 };
 
 function assemble$2(props) {
   var code = "";
 
-  if (props.loading) {
-    code = assembleInputLoading(props);
+  if (props.definition != undefined) {
+    if (props.definition.includes("loading")) {
+      code = assembleInputLoading(props);
+    } else {
+      code = assembleInput(props);
+    }
   } else {
     code = assembleInput(props);
   }
@@ -2484,10 +2700,11 @@ function assemble$2(props) {
 }
 
 function assembleInputLoading(props) {
-  var definition = 'control is-loading ' + classnames(getClassName(props.definition, "Input"));
+  var definition_input = props.definition == undefined ? "" : props.definition;
+  var definition = 'control ' + classnames(getClassName(definition_input + " loading", "Input"));
   return /*#__PURE__*/React__default.createElement("div", {
     className: definition
-  }, assembleInput(props), props.icon);
+  }, assembleInput(props));
 }
 
 function assembleInput(props) {
@@ -2506,7 +2723,7 @@ function assembleInput(props) {
         value: props.value,
         disabled: true,
         readonly: true
-      }), props.icon);
+      }));
     } else {
       input_code = /*#__PURE__*/React__default.createElement("div", {
         className: "control"
@@ -2517,7 +2734,7 @@ function assembleInput(props) {
         placeholder: props.placeholder,
         value: props.value,
         disabled: true
-      }), props.icon);
+      }));
     }
   } else {
     input_code = /*#__PURE__*/React__default.createElement("div", {
@@ -2528,7 +2745,7 @@ function assembleInput(props) {
       type: props.type,
       placeholder: props.placeholder,
       value: props.value
-    }), props.icon);
+    }));
   }
 
   return input_code;
@@ -2575,7 +2792,8 @@ function assembleIcon(props) {
     var right = props.control_definition.includes("icons-right");
 
     if (right == true) {
-      var icon_def = props.icon_definition + " right";
+      var definition = props.icon_definition == undefined ? "" : props.icon_definition;
+      var icon_def = definition + " right";
       code = /*#__PURE__*/React__default.createElement(Icon, {
         definition: icon_def,
         icon_name: props.icon_name
@@ -2650,30 +2868,31 @@ Field.propTypes = {
 };
 
 var File = function File(props) {
-  var definition = classnames(getClassName("file " + props.definition, "File"));
+  checkerDefinition(props.definition, "File");
+  var file_definition = props.definition == undefined ? "" : props.definition;
+  var definition = classnames(getClassName("file " + file_definition, "File"));
   return /*#__PURE__*/React__default.createElement("div", {
     className: definition
   }, /*#__PURE__*/React__default.createElement("label", {
-    class: "file-label"
+    className: "file-label"
   }, /*#__PURE__*/React__default.createElement("input", {
     onChange: props.onChange,
-    class: "file-input",
+    className: "file-input",
     type: "file",
-    name: props.input_name
+    ref: props.ref
   }), /*#__PURE__*/React__default.createElement("span", {
     className: "file-cta"
-  }, /*#__PURE__*/React__default.createElement(Icon, {
+  }, props.icon_name != undefined && /*#__PURE__*/React__default.createElement(Icon, {
     definition: props.icon_definition,
     icon_name: props.icon_name
   }), /*#__PURE__*/React__default.createElement("span", {
-    class: "file-label"
+    className: "file-label"
   }, props.label)), definition.includes("has-name") == true && props.filename != undefined && /*#__PURE__*/React__default.createElement("span", {
     className: "file-name"
   }, props.filename)));
 };
 
 File.propTypes = {
-  input_name: propTypes.string,
   icon_name: propTypes.string,
   icon_definition: propTypes.string,
   definition: propTypes.string,
@@ -2682,7 +2901,9 @@ File.propTypes = {
 };
 
 var Hero = function Hero(props) {
-  var definition = classnames(getClassName("hero " + props.definition, "Hero"));
+  checkerDefinition(props.definition, "Hero");
+  var hero_definition = props.definition == undefined ? "" : props.definition;
+  var definition = classnames(getClassName("hero " + hero_definition, "Hero"));
   return /*#__PURE__*/React__default.createElement("section", {
     className: definition
   }, /*#__PURE__*/React__default.createElement("div", {
@@ -2738,7 +2959,7 @@ var assembleDefaultMessage = function assembleDefaultMessage(number_child_expect
 // Caso sejam informados 3 filhos: Será montado header,body e footer
 
 var HeroThreeParts = function HeroThreeParts(props) {
-  var childrens = React__default.Children.map(props.children, function (child, i) {
+  var childrens = React.Children.map(props.children, function (child, i) {
     return child;
   });
   return assemble$3(childrens, props);
@@ -2746,7 +2967,7 @@ var HeroThreeParts = function HeroThreeParts(props) {
 
 function assemble$3(childrens, props) {
   var validChildrensNumber = childrens.length <= 3 ? true : false;
-  var code = /*#__PURE__*/React__default.createElement(React__default.Fragment, null);
+  var code = /*#__PURE__*/React.createElement(React.Fragment, null);
 
   if (validChildrensNumber) {
     code = assembleThreePartsHero(props, childrens);
@@ -2759,34 +2980,21 @@ function assemble$3(childrens, props) {
 
 
 function assembleThreePartsHero(props, childrens) {
-  var definition = classnames(getClassName("hero " + props.definition, "Hero"));
-  return /*#__PURE__*/React__default.createElement("section", {
+  var hero_definition = props.definition == undefined ? "" : props.definition;
+  var definition = classnames(getClassName("hero " + hero_definition, "Hero"));
+  return /*#__PURE__*/React.createElement("section", {
     className: definition
-  }, /*#__PURE__*/React__default.createElement("div", {
+  }, /*#__PURE__*/React.createElement("div", {
     class: "hero-head"
-  }, childrens[0] != undefined && childrens[0]), /*#__PURE__*/React__default.createElement("div", {
+  }, childrens[0] != undefined && childrens[0]), /*#__PURE__*/React.createElement("div", {
     className: "hero-body"
-  }, childrens[1] != undefined && childrens[1]), /*#__PURE__*/React__default.createElement("div", {
+  }, childrens[1] != undefined && childrens[1]), /*#__PURE__*/React.createElement("div", {
     class: "hero-foot"
   }, childrens[2] != undefined && childrens[2]));
 }
 
 HeroThreeParts.propTypes = {
   definition: propTypes.string
-};
-
-var Image = function Image(props) {
-  return /*#__PURE__*/React__default.createElement("figure", {
-    className: classnames(getClassName(props.definition, "Image"))
-  }, /*#__PURE__*/React__default.createElement("img", {
-    src: props.src
-  }));
-};
-
-Image.propTypes = {
-  definition: propTypes.string.isRequired,
-  value: propTypes.string.isRequired,
-  src: propTypes.string.isRequired
 };
 
 /*
@@ -2799,6 +3007,7 @@ para evitar problemas de exibição.
 */
 
 var List = function List(props) {
+  checkerDefinition(props.definition, "List");
   return assembleList(props);
 }; // monta o esqueleto da(s) lista(s) através do map e depois monta cada linha de cada lista
 
@@ -2829,28 +3038,11 @@ List.propTypes = {
   itens: propTypes.array.isRequired
 };
 
-var Menu = /*#__PURE__*/function (_React$Component) {
-  _inherits(Menu, _React$Component);
-
-  var _super = _createSuper(Menu);
-
-  function Menu() {
-    _classCallCheck(this, Menu);
-
-    return _super.apply(this, arguments);
-  }
-
-  _createClass(Menu, [{
-    key: "render",
-    value: function render() {
-      return /*#__PURE__*/React__default.createElement("aside", {
-        class: "menu"
-      }, this.props.children);
-    }
-  }]);
-
-  return Menu;
-}(React__default.Component);
+var Menu = function Menu(props) {
+  return /*#__PURE__*/React.createElement("aside", {
+    class: "menu"
+  }, props.children);
+};
 
 Menu.propTypes = {
   menu_itens: propTypes.array,
@@ -2921,6 +3113,7 @@ function assembleSingleItem$1(item) {
   if (item["sub_itens"] != undefined) {
     item_code = decideTypeOfItem(item);
   } else {
+    checkerDefinition(item["definition"], "Menu");
     var definition = classnames(getClassName(item["definition"], "Menu"));
     item_code = /*#__PURE__*/React__default.createElement("li", null, /*#__PURE__*/React__default.createElement("a", {
       className: definition,
@@ -2932,7 +3125,10 @@ function assembleSingleItem$1(item) {
 }
 
 function assembleSubItens(item) {
+  checkerDefinition(item["definition"], "Menu");
+  var definition = classnames(getClassName(item["definition"], "Menu"));
   return /*#__PURE__*/React__default.createElement("li", null, /*#__PURE__*/React__default.createElement("a", {
+    className: definition,
     onClick: item["onClick"]
   }, item["value"]));
 } // caso mais complexo onde um item possui uma sublista
@@ -2950,6 +3146,7 @@ function decideTypeOfItem(item) {
   var item_code = ""; // se possuir sub_itens
 
   if (item["sub_itens"] != undefined) {
+    checkerDefinition(item["definition"], "Menu");
     var definition = classnames(getClassName(item["definition"], "Menu"));
     item_code = /*#__PURE__*/React__default.createElement("li", null, /*#__PURE__*/React__default.createElement("a", {
       className: definition,
@@ -2970,33 +3167,34 @@ MenuItem.propTypes = {
 };
 
 var Message = function Message(props) {
+  checkerDefinition(props.definition, "Message");
   var definition = "message " + classnames(getClassName(props.definition, "Message"));
-  return /*#__PURE__*/React__default.createElement("article", {
+  return /*#__PURE__*/React.createElement("article", {
     className: definition
-  }, assembleHeader(props.header, props.delete, props.onClickDelete), assembleBody(props.children));
+  }, assembleHeader$1(props.header, props.delete, props.onClickDelete), assembleBody(props.children));
 };
 
 function assembleDelete(onClickDelete) {
-  return /*#__PURE__*/React__default.createElement(Button, {
+  return /*#__PURE__*/React.createElement(Button, {
     onClick: onClickDelete,
     delete: true
   });
 }
 
-function assembleHeader(name_header, isDelete, onClickDelete) {
+function assembleHeader$1(name_header, isDelete, onClickDelete) {
   var header = "";
 
   if (name_header != undefined) {
-    header = /*#__PURE__*/React__default.createElement("div", {
+    header = /*#__PURE__*/React.createElement("div", {
       className: "message-header"
-    }, /*#__PURE__*/React__default.createElement("p", null, name_header), isDelete == true && assembleDelete(onClickDelete));
+    }, /*#__PURE__*/React.createElement("p", null, name_header), isDelete == true && assembleDelete(onClickDelete));
   }
 
   return header;
 }
 
 function assembleBody(message) {
-  return /*#__PURE__*/React__default.createElement("div", {
+  return /*#__PURE__*/React.createElement("div", {
     className: "message-body"
   }, message);
 }
@@ -3025,6 +3223,7 @@ Existem algumas maneira de fornecer os itens de "start" e "end" ao usar o presen
 */
 
 var NavigationBar = function NavigationBar(props) {
+  checkerDefinition(props.definition, "NavigationBar");
   var definition = "navbar " + classnames(getClassName(props.definition, "NavigationBar"));
   return /*#__PURE__*/React__default.createElement("nav", {
     className: definition
@@ -3137,14 +3336,17 @@ NavigationBar.propTypes = {
 };
 
 var Notification = function Notification(props) {
+  checkerDefinition(props.definition, "Notification");
   var definition = "notification " + classnames(getClassName(props.definition, "Notification"));
-  return /*#__PURE__*/React__default.createElement("div", {
+  return /*#__PURE__*/React.createElement("div", {
     className: definition
-  }, props.delete == true && assembleDelete$1(props.onClickDelete), props.children);
+  }, props.title != undefined && /*#__PURE__*/React.createElement("div", {
+    className: "title"
+  }, props.title), props.delete == true && assembleDelete$1(props.onClickDelete), props.children);
 };
 
 function assembleDelete$1(onClickDelete) {
-  return /*#__PURE__*/React__default.createElement(Button, {
+  return /*#__PURE__*/React.createElement(Button, {
     onClick: onClickDelete,
     delete: true
   });
@@ -3153,10 +3355,12 @@ function assembleDelete$1(onClickDelete) {
 Notification.propTypes = {
   definition: propTypes.string,
   delete: propTypes.bool,
-  onClickDelete: propTypes.func
+  onClickDelete: propTypes.func,
+  title: propTypes.string
 };
 
 var Pagination = function Pagination(props) {
+  checkerDefinition(props.definition, "Pagination");
   var definition = "pagination " + classnames(getClassName(props.definition, "Pagination"));
   return /*#__PURE__*/React__default.createElement("nav", {
     className: definition
@@ -3192,6 +3396,7 @@ function assembleItens$2(itens) {
 }
 
 function assembleItem$2(item) {
+  checkerDefinition(item["definition"], "Pagination");
   var definition = "pagination-link " + classnames(getClassName(item["definition"], "Pagination"));
   var item_code = item_code = /*#__PURE__*/React__default.createElement("li", null, /*#__PURE__*/React__default.createElement("a", {
     onClick: item["onClick"],
@@ -3219,7 +3424,9 @@ var PanelItem = function PanelItem(props) {
   }, props.children);
 };
 
+// v.01
 var Panel = function Panel(props) {
+  checkerDefinition(props.definition, "Panel");
   var definition = "panel " + classnames(getClassName(props.definition, "Panel"));
   return /*#__PURE__*/React__default.createElement("nav", {
     class: definition
@@ -3273,11 +3480,11 @@ function assembleBlock(item) {
 
 function assembleSearch(props) {
   return /*#__PURE__*/React__default.createElement(Field, {
-    input_definition: props.search_definition,
+    input_definition: props.search_definition == undefined ? "" : props.search_definition,
     icon_name: "fas fa-search",
     control_definition: "icons-left",
-    placeholder: props.search_placeholder,
-    icon_definition: props.search_icon_definition,
+    placeholder: props.search_placeholder == undefined ? "" : props.search_placeholder,
+    icon_definition: props.search_icon_definition == undefined ? "" : props.search_icon_definition,
     onChange: props.onChangeSearch,
     type: "text"
   });
@@ -3299,9 +3506,11 @@ Panel.propTypes = {
 };
 
 var ProgressBar = function ProgressBar(props) {
+  checkerDefinition(props.definition, "ProgressBar");
+  var definition = props.definition == undefined ? "" : props.definition;
   return /*#__PURE__*/React__default.createElement("progress", {
     onChange: props.onChange,
-    className: classnames(getClassName("progress " + props.definition, "ProgressBar")),
+    className: classnames(getClassName("progress " + definition, "ProgressBar")),
     max: props.max,
     value: props.value
   });
@@ -3361,7 +3570,9 @@ Section.propTypes = {
 };
 
 var Select = function Select(props) {
-  var definition = classnames(getClassName("select " + props.definition, "Select"));
+  checkerDefinition(props.definition, "Select");
+  var select_def = props.definition == undefined ? "" : props.definition;
+  var definition = classnames(getClassName("select " + select_def, "Select"));
   var definitionSelect = classnames(getClassName(getDefinitionCssEvents(props.definition), "Select"));
   var code = /*#__PURE__*/React__default.createElement("div", {
     className: definition
@@ -3574,15 +3785,17 @@ var style_cursor = {
 };
 
 var Table = function Table(props) {
+  checkerDefinition(props.definition, "Table");
   return assembleTable(props);
 };
 
 function assembleTable(props) {
-  var definition = classnames(getClassName("table " + props.definition, "Table"));
+  var table_definition = props.definition == undefined ? "" : props.definition;
+  var definition = classnames(getClassName("table " + table_definition, "Table"));
   var code = /*#__PURE__*/React__default.createElement(React__default.Fragment, null);
   code = /*#__PURE__*/React__default.createElement("table", {
     className: definition
-  }, isArrayOk(props.itens_header) && assembleHeader$1(props.itens_header), isArrayOk(props.itens_body) && assembleBody$1(props.itens_body, props.onClickRow), isArrayOk(props.itens_footer) && assembleFooter(props.itens_footer));
+  }, isArrayOk(props.itens_header) && assembleHeader$2(props.itens_header), isArrayOk(props.itens_body) && assembleBody$1(props.itens_body, props.onClickRow), isArrayOk(props.itens_footer) && assembleFooter$1(props.itens_footer));
   return code;
 } // verifica se é viável utilizar o array
 
@@ -3599,7 +3812,7 @@ function isArrayOk(array) {
   return output;
 }
 
-function assembleHeader$1(itens_header) {
+function assembleHeader$2(itens_header) {
   var code_header = /*#__PURE__*/React__default.createElement(React__default.Fragment, null);
   code_header = /*#__PURE__*/React__default.createElement("thead", null, /*#__PURE__*/React__default.createElement("tr", null, itens_header.map(function (item_header) {
     return assembleRowHeaderFooter(item_header);
@@ -3607,7 +3820,7 @@ function assembleHeader$1(itens_header) {
   return code_header;
 }
 
-function assembleFooter(itens_footer) {
+function assembleFooter$1(itens_footer) {
   var code_footer = /*#__PURE__*/React__default.createElement(React__default.Fragment, null);
   code_footer = /*#__PURE__*/React__default.createElement("tfoot", null, /*#__PURE__*/React__default.createElement("tr", null, itens_footer.map(function (item_footer) {
     return assembleRowHeaderFooter(item_footer);
@@ -3652,11 +3865,13 @@ Table.propTypes = {
 };
 
 var TableQuery = function TableQuery(props) {
+  checkerDefinition(props.definition, "Table");
   return assembleTable$1(props);
 };
 
 function assembleTable$1(props) {
-  var definition = classnames(getClassName("table " + props.definition, "Table"));
+  var table_definition = props.definition == undefined ? "" : props.definition;
+  var definition = classnames(getClassName("table " + table_definition, "Table"));
   var code = /*#__PURE__*/React__default.createElement(React__default.Fragment, null);
   var x = props.header; // elimina vazio e não array
 
@@ -3664,14 +3879,14 @@ function assembleTable$1(props) {
     if (props.itens.length > 0) {
       code = /*#__PURE__*/React__default.createElement("table", {
         className: definition
-      }, props.header == true && assembleHeader$2(props.itens), assembleBody$2(props.itens), props.footer == true && assembleFooter$1(props.itens));
+      }, props.header == true && assembleHeader$3(props.itens), assembleBody$2(props.itens), props.footer == true && assembleFooter$2(props.itens));
     }
   }
 
   return code;
 }
 
-function assembleHeader$2(itens) {
+function assembleHeader$3(itens) {
   var code_header = /*#__PURE__*/React__default.createElement(React__default.Fragment, null);
   var itens_header = makeArray(itens);
   code_header = /*#__PURE__*/React__default.createElement("thead", null, /*#__PURE__*/React__default.createElement("tr", null, itens_header.map(function (item_header) {
@@ -3680,7 +3895,7 @@ function assembleHeader$2(itens) {
   return code_header;
 }
 
-function assembleFooter$1(itens) {
+function assembleFooter$2(itens) {
   var code_footer = /*#__PURE__*/React__default.createElement(React__default.Fragment, null);
   var itens_footer = makeArray(itens);
   code_footer = /*#__PURE__*/React__default.createElement("tfoot", null, /*#__PURE__*/React__default.createElement("tr", null, itens_footer.map(function (item_footer) {
@@ -3756,6 +3971,7 @@ function assembleListTabs(itens) {
 }
 
 var Tabs = function Tabs(props) {
+  checkerDefinition(props.definition, "Tabs");
   var definition = "tabs " + classnames(getClassName(props.definition, "Tabs"));
   return /*#__PURE__*/React__default.createElement("div", {
     className: definition
@@ -3768,29 +3984,21 @@ Tabs.propTypes = {
 };
 
 var Tag = function Tag(props) {
-  var definition = classnames(getClassName("tag " + props.definition, "Tag"));
-  var isDelete = haveDelete(props.definition);
-  return /*#__PURE__*/React__default.createElement("span", {
+  checkerDefinition(props.definition, "Tag");
+  var definition_tag = props.definition == undefined ? "" : props.definition;
+  var definition = classnames(getClassName("tag " + definition_tag, "Tag"));
+  return /*#__PURE__*/React.createElement("span", {
     className: definition
-  }, props.children, isDelete == true && /*#__PURE__*/React__default.createElement(Button, {
+  }, props.children, props.delete == true && /*#__PURE__*/React.createElement(Button, {
     onClick: props.onClickDelete,
-    delete: true
+    delete: props.delete
   }));
 };
 
-function haveDelete(definition) {
-  var isDelete = false;
-
-  if (definition != undefined && typeof definition == 'string') {
-    isDelete = definition.includes("delete");
-  }
-
-  return isDelete;
-}
-
 Tag.propTypes = {
   definition: propTypes.string,
-  onClickDelete: propTypes.func
+  onClickDelete: propTypes.func,
+  delete: propTypes.bool
 };
 
 var TagList = function TagList(props) {
@@ -3838,7 +4046,9 @@ var TextArea = function TextArea(props) {
 };
 
 function assembleTextArea(props) {
-  var definition = classnames(getClassName("textarea " + props.definition, "Text"));
+  checkerDefinition(props.definition, "Text");
+  var definition_text = props.definition == undefined ? "" : props.definition;
+  var definition = classnames(getClassName("textarea " + definition_text, "Text"));
   var definitionControl = props.loading == true ? "loading" : "";
   return /*#__PURE__*/React__default.createElement(Control, {
     definition: definitionControl
@@ -3848,7 +4058,8 @@ function assembleTextArea(props) {
     placeholder: props.placeholder,
     rows: props.rows,
     readOnly: props.readonly,
-    disabled: props.disabled
+    disabled: props.disabled,
+    value: props.value
   }));
 }
 
@@ -3859,7 +4070,8 @@ TextArea.propTypes = {
   loading: propTypes.bool,
   disabled: propTypes.bool,
   readonly: propTypes.bools,
-  onChange: propTypes.func
+  onChange: propTypes.func,
+  value: propTypes.string
 };
 
 var Title = function Title(props) {
@@ -4024,6 +4236,38 @@ Title.propTypes = {
   p: propTypes.bool
 };
 
+var FileButton = function FileButton(props) {
+  return /*#__PURE__*/React__default.createElement("div", {
+    className: "field"
+  }, /*#__PURE__*/React__default.createElement("label", {
+    className: "label"
+  }, props.label), /*#__PURE__*/React__default.createElement("div", {
+    className: "control"
+  }, /*#__PURE__*/React__default.createElement("input", {
+    type: "file",
+    onChange: props.onChange,
+    style: {
+      display: 'none'
+    },
+    ref: props.ref_data
+  }), /*#__PURE__*/React__default.createElement(Button, {
+    definition: props.definition,
+    onClick: props.onClick
+  }, props.children)));
+};
+
+// Um exemplo seria um componente que exibe uma imagem
+
+var FieldContent = function FieldContent(props) {
+  return /*#__PURE__*/React__default.createElement("div", {
+    className: "field"
+  }, /*#__PURE__*/React__default.createElement("label", {
+    className: "label"
+  }, props.label), /*#__PURE__*/React__default.createElement("div", {
+    className: "control"
+  }, props.children));
+};
+
 exports.BreadCrumb = BreadCrumb;
 exports.Button = Button;
 exports.ButtonList = ButtonList;
@@ -4035,7 +4279,9 @@ exports.Content = Content;
 exports.Control = Control;
 exports.DropDown = DropDown;
 exports.Field = Field;
+exports.FieldContent = FieldContent;
 exports.File = File;
+exports.FileButton = FileButton;
 exports.Hero = Hero;
 exports.HeroThreeParts = HeroThreeParts;
 exports.Icon = Icon;

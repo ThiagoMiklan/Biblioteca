@@ -44,6 +44,7 @@ function assembleItens(itens){
 }
 
 function assembleItem(item) {
+    checkerDefinition(item["definition"],"Pagination");
     var definition =  "pagination-link "+ classnames(getClassName(item["definition"],"Pagination"));
     var item_code = item_code = <li><a onClick={item["onClick"]} disabled={item["disabled"]} href={item["href"]}className={definition}>{item["value"]}</a></li>;
     return item_code;

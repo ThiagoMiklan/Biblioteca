@@ -44,6 +44,7 @@ function assembleItens(itens) {
 
 function assembleSingleItem(item) {
     var def =  item["definition"]
+    checkerDefinition(def,"BreadCrumb");
   var definition =  classname(getClassName(item["definition"], "BreadCrumb"));
     return (
         <li key={item["key"]} className={definition}>

@@ -1,86 +1,31 @@
-import React,{useState} from 'react';
+import React from 'react';
 import ReactDOM from 'react-dom';
-import TextArea from './biblioteca/TextArea';
-import 'bulma/css/bulma.css';
-import Control from './biblioteca/Control';
+import Table from './biblioteca/Table.jsx';
+import 'bulma/css/bulma.min.css'
+var elements_header = [
+  {value:"Pos"},{value:"Team"},{value:"Pld"},{value:"W"},
+  {value:"D"},{value:"L"},{value:"GF"},{value:"GA"},
+  {value:"GD"},{value:"Pts"},{value:"Qualification or relegation"}
+]
+
+var elements_footer =  elements_header;
 
 
-const TextAreaHook = ()=>{
-  var initial = {
-    definition : '',
-    count: 0
-  }
-  
-  const [state,setState] = useState(initial);
-    
-    function onChange() {
-      if(state.count == 0){
-        setState({ ...state, definition: "primary", count:state.count+1});
-      }else if(state.count == 1){
-        setState({ ...state, definition: "info", count:state.count+1});
-      }else if(state.count == 2){
-        setState({ ...state, definition: "warning", count:state.count+1});
-      }else if(state.count == 3){
-        setState({ ...state, definition: "danger", count:state.count+1});
-      }
-      
-    }
-  return  <TextArea definition={state.definition} onChange={onChange} placeholder="Testando onChange"></TextArea>
-}
+//2	Arsenal	38	20	11	7	65	36	+29	71	Qualification for the Champions League group stage
+var elements_body  = [
+  {Pos:"2",team:"Arsenal",pld:"38",w:"20",
+  D:"11",L:"7",GF:"65",GA:"36",
+  GD:"+29",Pts:"71",Quali:"Qualification for the Champions League group stage"}
+]
+
+var x = Object.values(elements_body);
+var  y  = x.map(elemento => ({Posicao: elemento.Pos, Time: elemento.team, W: elemento.w}))
+var  z = 9;
 
 ReactDOM.render(
-  <>
-    <div className="container is-fluid">
-      <div className="columns">
-          <div className="column is-half">
-          <TextArea placeholder="e.g. Hello world"></TextArea>
-
-          <TextArea rows="10" placeholder="10 lines of text"></TextArea>
-
-          <Control>
-            <TextArea definition="primary" placeholder="e.g. Hello world"></TextArea>
-            <br></br>
-            <TextArea definition="info" placeholder="e.g. Hello world"></TextArea>
-            <br></br>
-            <TextArea definition="success" placeholder="e.g. Hello world"></TextArea>
-            <br></br>
-            <TextArea definition="warning" placeholder="e.g. Hello world"></TextArea>
-            <br></br>
-            <TextArea definition="danger" placeholder="e.g. Hello world"></TextArea>
-            <br></br>
-          </Control>
-
-          <TextArea definition="small" placeholder="e.g. Hello world"></TextArea>
-          <TextArea placeholder="e.g. Hello world"></TextArea>
-          <TextArea definition="medium" placeholder="e.g. Hello world"></TextArea>
-          <TextArea definition="large" placeholder="e.g. Hello world"></TextArea>
-
-          <br></br>
-          <TextArea placeholder="e.g. Hello world" loading={true} readonly={true}></TextArea>
-          <TextArea placeholder="e.g. Hello world" loading={true} disabled={true}></TextArea>
-          </div>
-      </div>
-     </div>
-  </>
-  ,document.getElementById("root"))
-
-
-  /*
-  <>
-    <div className="container is-fluid">
-    <TextArea placeholder="e.g. Hello world"></TextArea>
-    <TextArea rows="10" placeholder="10 lines of text"></TextArea>
-    <TextArea definition="primary" placeholder="e.g. Hello world"></TextArea>
-    <TextArea definition="info" placeholder="e.g. Hello world"></TextArea>
-    <TextArea definition="success" placeholder="e.g. Hello world"></TextArea>
-    <TextArea definition="warning" placeholder="e.g. Hello world"></TextArea>
-    <TextArea definition="danger" placeholder="e.g. Hello world"></TextArea>
-    <TextArea definition="small" placeholder="e.g. Hello world"></TextArea>
-    <TextArea placeholder="e.g. Hello world"></TextArea>
-    <TextArea definition="medium" placeholder="e.g. Hello world"></TextArea>
-    <TextArea definition="large" placeholder="e.g. Hello world"></TextArea>
-    <TextArea definition="hovered" placeholder="e.g. Hello world"></TextArea>
-    </div>
-  </>
-  
-  */
+    <Table definition="bordered striped narrow fullwidth"
+    itens_header={elements_header}
+    itens_body={y} />,
+           
+   document.getElementById('root')
+  );

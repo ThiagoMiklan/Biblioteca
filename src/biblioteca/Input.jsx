@@ -1,49 +1,50 @@
 // @flow
-import React,{useState} from 'react'
+import React, { useState } from 'react'
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import getClassName from '../tools/getClassName';
 import checkerDefinition from '../tools/checker.js';
 
 type Props = {
-    definition?:string,
-    type?:string,
+    definition?: string,
+    type?: string,
     placeholder?: string,
     value?: string,
-    loading?:bool,
-    readonly?:bool,
+    loading?: bool,
+    readonly?: bool,
     disabled?: bool,
-    onChangeEvent? : ()=> void
+    onChangeEvent?: () => void
 }
 
 const Input = (props: Props) => {
-    checkerDefinition(props.definition,"Input");
+    checkerDefinition(props.definition, "Input");
     return (
-        assemble(props) 
+        assemble(props)
     );
 }
 
 function assemble(props) {
     var code = "";
 
-    if(props.definition != undefined){
-         if (props.definition.includes("loading")) {
-        code = assembleInputLoading(props);
+    if (props.definition != undefined) {
+        if (props.definition.includes("loading")) {
+            code = assembleInputLoading(props);
+        }else{
+            code = assembleInput(props);
+        }
     } else {
         code = assembleInput(props);
     }
-    
-    }
-    
-   return code;
+
+    return code;
 
 }
 function assembleInputLoading(props) {
-    var definition_input = (props.definition ==  undefined)? "": props.definition;
-    var definition = 'control ' + classnames(getClassName(definition_input+ " loading", "Input"));
+    var definition_input = (props.definition == undefined) ? "" : props.definition;
+    var definition = 'control ' + classnames(getClassName(definition_input + " loading", "Input"));
     return <div className={definition}>
         {assembleInput(props)}
-       
+
     </div>
 }
 
@@ -55,22 +56,22 @@ function assembleInput(props) {
         if (props.readonly) {
             input_code =
                 <div className="control">
-                    <input onChange={props.onChangeEvent}  className={definition} type={props.type} placeholder={props.placeholder} value={props.value} disabled readonly></input>
-                   
-        </div>
+                    <input onChange={props.onChangeEvent} className={definition} type={props.type} placeholder={props.placeholder} value={props.value} disabled readonly></input>
+
+                </div>
         } else {
             input_code =
                 <div className="control">
-                    <input  onChange={props.onChangeEvent}  className={definition} type={props.type} placeholder={props.placeholder} value={props.value} disabled></input>
-                    
-        </div>
+                    <input onChange={props.onChangeEvent} className={definition} type={props.type} placeholder={props.placeholder} value={props.value} disabled></input>
+
+                </div>
         }
     } else {
         input_code =
             <div className="control">
-                <input onChange={props.onChangeEvent}  className={definition} type={props.type} placeholder={props.placeholder} value={props.value}></input>
-               
-        </div>
+                <input onChange={props.onChangeEvent} className={definition} type={props.type} placeholder={props.placeholder} value={props.value}></input>
+
+            </div>
     }
     return input_code;
 }
@@ -82,7 +83,7 @@ Input.propTypes = {
     value: PropTypes.string,
     loading: PropTypes.bool,
     readonly: PropTypes.bool,
-    onChangeEvent : PropTypes.func
+    onChangeEvent: PropTypes.func
 
 };
 

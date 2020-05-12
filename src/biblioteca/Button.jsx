@@ -5,7 +5,6 @@ import classnames from 'classnames';
 import getClassNames from '../tools/getClassName';
 import checkerDefinition from '../tools/checker.js';
 
-
 type Props = {
   disabled?: bool,
   delete?: bool,
@@ -56,7 +55,10 @@ function getDefinition(isDelete,definition:any){
     if(isDelete){
        return "delete";
     }else{
-        return classnames(getClassNames("button "+ definition,"Button"));
+        var button_definition = "button "+ definition;
+        var objClassName = getClassNames(button_definition,"Button");
+        var classname =  classnames(objClassName);
+        return classname;
     }
 }
 // caso seja informado onClick ele retorna a função retornada, senão retorna uma função vazia. Método criado para evitar problemas com undefined

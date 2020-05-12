@@ -1,5 +1,7 @@
+import global_props from './GlobalProps';
+
 const card_props = {
-    "center": "is-centered"    
+    "centered": "is-centered"    
 }
 
-export default card_props;
+export default {...card_props,...global_props};

@@ -1,10 +1,10 @@
 
-import component_path from '../props/ComponentPath'
+import getComponentProps from '../props/ComponentPath'
 
 const getClassName = function getClassNames(definition,component_name){
     if(definition !== undefined && typeof definition == 'string'){
         var classObj = {};
-        var component_props = component_path[component_name];
+        var component_props = getComponentProps(component_name);
         var array_definition = definition.split(" ");
         var size = array_definition.length;
         for(let i = 0 ; i < size ;i++){
@@ -15,4 +15,6 @@ const getClassName = function getClassNames(definition,component_name){
     }
     return classObj;
 }
+
+
 export default getClassName

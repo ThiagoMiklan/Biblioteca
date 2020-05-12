@@ -9,6 +9,7 @@ import checkerDefinition from '../tools/checker.js';
 
 type Props = {
     delete?: bool,
+    title?: string,
     onClickDelete?:()=> void,
     definition: string,
     children: React.Node
@@ -19,12 +20,19 @@ const Notification = (props:Props) =>{
     var definition = "notification " + classnames(getClassName(props.definition,"Notification"));
     return(
             <div className={definition}>
+                {props.title != undefined && 
+                    <div className='title'>
+                    {props.title}
+                    </div>
+                }
                 {props.delete == true && assembleDelete(props.onClickDelete)}
                 {props.children}
             </div>
-    );
+    )
     
 }
+
+
 
 function assembleDelete(onClickDelete){
     return <Button onClick={onClickDelete} delete={true}></Button>
@@ -33,7 +41,8 @@ function assembleDelete(onClickDelete){
 Notification.propTypes = {
     definition: PropTypes.string,
     delete : PropTypes.bool,
-    onClickDelete : PropTypes.func
+    onClickDelete : PropTypes.func,
+    title: PropTypes.string
 }
 
 export default Notification;

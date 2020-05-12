@@ -1,5 +1,5 @@
 // @flow
-import component_path from '../props/ComponentPath.js';
+import getComponentProps from '../props/ComponentPath.js';
 import {definition_err} from '../exception/messages.js'
 
 export default function checkerDefinition(definition: any,component_name: string) {
@@ -7,7 +7,7 @@ export default function checkerDefinition(definition: any,component_name: string
     if(definition != undefined && definition != ""){
      var words = definition.split(/\s+/);
     var output = false;
-    var props = component_path[component_name];
+    var props = getComponentProps(component_name);
     var keys = Object.keys(props);
     var length = words.length;
     var words_err = [];
@@ -30,14 +30,11 @@ export default function checkerDefinition(definition: any,component_name: string
     }
     }
    
-
-
-    return output
+   return output
 
 }
 
 function createMessage(words_err, message,component_name) {
-
     var size = words_err.length;
     for (let i = 0; i < size; i++) {
         message += " " + words_err[i];

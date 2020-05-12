@@ -34,6 +34,7 @@ function assembleTextArea(props){
                  rows={props.rows} 
                  readOnly={props.readonly}
                  disabled={props.disabled}
+				 value={props.value}
                  ></textarea>
             </Control>
 }
@@ -45,7 +46,8 @@ TextArea.propTypes ={
     loading: PropTypes.bool,
     disabled: PropTypes.bool,
     readonly: PropTypes.bools,
-    onChange: PropTypes.func
+    onChange: PropTypes.func,
+	value: PropTypes.string
 }
 
 export default TextArea;

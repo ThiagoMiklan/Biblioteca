@@ -37,6 +37,8 @@ import Tag from '../biblioteca/Tag';
 import TagList from '../biblioteca/TagList';
 import TextArea from '../biblioteca/TextArea';
 import Title from '../biblioteca/Title';
+import FileButton from '../biblioteca/FileButton';
+import FieldContent from '../biblioteca/FieldContent';
 
 
 export {BreadCrumb};
@@ -50,7 +52,9 @@ export {Content};
 export {Control};
 export {DropDown};
 export {Field};
+export {FieldContent}
 export {File} ;
+export {FileButton};
 export {Hero} ;
 export {HeroThreeParts};
 export {Icon} ;

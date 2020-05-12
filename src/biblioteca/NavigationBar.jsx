@@ -125,7 +125,7 @@ function assembleFirstItemDropDown(item) {
 function assembleItem(item, definition) {
     var className = "navbar-item "+ classnames(getClassName(item["definition"], "NavigationBar"));
     var x = item["value"];
-    var item_code = <a onClick={item["onClick"]}className={className}>{item["value"]}</a>;
+    var item_code = <a onClick={item["onClick"]} className={className}>{item["value"]}</a>;
   
     return item_code;
 }

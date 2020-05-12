@@ -23,10 +23,9 @@ const File = (props:Props)=>{
 
     return <div className={definition}>
     <label className="file-label">
-
-      <input onChange={props.onChange} className="file-input" type="file"/>
+      <input onChange={props.onChange} className="file-input" type="file" ref={props.ref}/>
       <span className="file-cta">
-        <Icon definition={props.icon_definition} icon_name={props.icon_name}/>
+        {(props.icon_name != undefined) && <Icon definition={props.icon_definition} icon_name={props.icon_name}/>}
         <span className="file-label">
             {props.label}
         </span>
@@ -37,6 +36,7 @@ const File = (props:Props)=>{
           </span>
         }
     </label>
+   
   </div>
 }
 

@@ -14,7 +14,9 @@ const navigation_bar_props = {
     "active": "is-active",
     "navbar-dropdown": "navbar-dropdown", 
     "fixed-top": "is-fixed-top",
-    "fixed-bottom":"is-fixed-bottom"
+    "fixed-bottom":"is-fixed-bottom",
+
+    "inverted": "is-inverted"
 }
 
 export default navigation_bar_props;

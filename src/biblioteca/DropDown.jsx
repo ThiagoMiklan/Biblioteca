@@ -100,11 +100,13 @@ function decideTypeOfItens(item) {
 }
 
 function assembleItensLinks(item) {
+    checkerDefinition(item["definition"],"DropDown");
     var definition = classnames(getClassName("dropdown-item " + item["definition"], "DropDown"));
     return <a className={definition} onClick={item["onClick"]} href={item["href"]}>{item["value"]}</a>;
 }
 
 function assembleComponentsItens(item) {
+    checkerDefinition(item["definition"],"DropDown");
     var definition = classnames(getClassName("dropdown-item " + item["definition"], "DropDown"));
     return <div className={definition} onClick={item["onClick"]} href={item["href"]} >{item["value"]}</div>;
 }
