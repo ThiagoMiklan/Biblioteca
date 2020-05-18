@@ -10,6 +10,7 @@ import Content from '../biblioteca/Content';
 import Control from '../biblioteca/Control';
 import DropDown from '../biblioteca/DropDown';
 import Field from '../biblioteca/Field';
+import FieldButton from '../biblioteca/FieldButton';
 import File from '../biblioteca/File';
 import Hero from '../biblioteca/Hero';
 import HeroThreeParts from '../biblioteca/HeroThreeParts';
@@ -53,6 +54,7 @@ export {Control};
 export {DropDown};
 export {Field};
 export {FieldContent}
+export {FieldButton};
 export {File} ;
 export {FileButton};
 export {Hero} ;

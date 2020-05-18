@@ -3,9 +3,7 @@ import Button from './Button';
 
 // Definition Equivalente a de Button, ou seja, o definition vai para Button
 const FileButton = (props) => {
-   var x = 0;
 
-   var  x = 0;
     return (
         <div className='field'>
         <label className='label'>{props.label}</label>

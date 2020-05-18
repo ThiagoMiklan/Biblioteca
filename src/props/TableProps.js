@@ -1,3 +1,4 @@
+import global_props from './GlobalProps';
 
 const table_props = {
     "bordered": "is-bordered",
@@ -10,4 +11,4 @@ const table_props = {
 }
 
 
-export default table_props;
+export default {...table_props,...global_props};

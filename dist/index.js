@@ -2867,6 +2867,44 @@ Field.propTypes = {
   value: propTypes.string
 };
 
+// Um exemplo seria um componente que exibe uma imagem
+
+var FieldContent = function FieldContent(props) {
+  return /*#__PURE__*/React__default.createElement("div", {
+    className: "field"
+  }, /*#__PURE__*/React__default.createElement("label", {
+    className: "label"
+  }, props.label), /*#__PURE__*/React__default.createElement("div", {
+    className: "control"
+  }, props.children));
+};
+
+var _FieldButton$propType;
+// className ="field" e className="control"
+// Vantagem em relação a Button, um pequeno espaçamento entre o elemento
+// FieldButton e seus elementos superior, além de ser alocado abaixo do elemento
+// e não ao lado, como é o caso de button
+// Para ver a diferença entre FieldButton e Button, basta alocar dois buttons em sequencia
+// e um button e um fieldbutton, que será possível ver uma diferença de espaçamento
+
+var FieldButton = function FieldButton(props) {
+  var field_definition = classnames(getClassName(props.field_definition, "Field"));
+  return /*#__PURE__*/React__default.createElement(FieldContent, {
+    definition: field_definition,
+    label: props.label
+  }, /*#__PURE__*/React__default.createElement(Button, {
+    definition: props.button_definition,
+    onClick: props.onClick,
+    disabled: props.disabled
+  }, props.value));
+};
+
+FieldButton.propTypes = (_FieldButton$propType = {
+  field_definition: propTypes.string,
+  button_definition: propTypes.string,
+  label: propTypes.string
+}, _defineProperty(_FieldButton$propType, "field_definition", propTypes.string), _defineProperty(_FieldButton$propType, "onClick", propTypes.func), _defineProperty(_FieldButton$propType, "disabled", propTypes.bool), _defineProperty(_FieldButton$propType, "value", propTypes.string), _FieldButton$propType);
+
 var File = function File(props) {
   checkerDefinition(props.definition, "File");
   var file_definition = props.definition == undefined ? "" : props.definition;
@@ -4052,7 +4090,9 @@ function assembleTextArea(props) {
   var definitionControl = props.loading == true ? "loading" : "";
   return /*#__PURE__*/React__default.createElement(Control, {
     definition: definitionControl
-  }, /*#__PURE__*/React__default.createElement("textarea", {
+  }, /*#__PURE__*/React__default.createElement("label", {
+    className: "label"
+  }, " ", props.label), /*#__PURE__*/React__default.createElement("textarea", {
     onChange: props.onChange,
     className: definition,
     placeholder: props.placeholder,
@@ -4071,6 +4111,7 @@ TextArea.propTypes = {
   disabled: propTypes.bool,
   readonly: propTypes.bools,
   onChange: propTypes.func,
+  label: propTypes.string,
   value: propTypes.string
 };
 
@@ -4256,18 +4297,6 @@ var FileButton = function FileButton(props) {
   }, props.children)));
 };
 
-// Um exemplo seria um componente que exibe uma imagem
-
-var FieldContent = function FieldContent(props) {
-  return /*#__PURE__*/React__default.createElement("div", {
-    className: "field"
-  }, /*#__PURE__*/React__default.createElement("label", {
-    className: "label"
-  }, props.label), /*#__PURE__*/React__default.createElement("div", {
-    className: "control"
-  }, props.children));
-};
-
 exports.BreadCrumb = BreadCrumb;
 exports.Button = Button;
 exports.ButtonList = ButtonList;
@@ -4279,6 +4308,7 @@ exports.Content = Content;
 exports.Control = Control;
 exports.DropDown = DropDown;
 exports.Field = Field;
+exports.FieldButton = FieldButton;
 exports.FieldContent = FieldContent;
 exports.File = File;
 exports.FileButton = FileButton;

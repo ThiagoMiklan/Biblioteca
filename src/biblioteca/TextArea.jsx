@@ -27,8 +27,9 @@ function assembleTextArea(props){
     var definitionControl = props.loading == true ? "loading": "";
     
     return <Control definition={definitionControl}>
+			<label className="label"> {props.label}</label>
                 <textarea 
-                onChange={props.onChange}
+				onChange={props.onChange}
                 className={definition} 
                 placeholder={props.placeholder}
                  rows={props.rows} 
@@ -47,6 +48,7 @@ TextArea.propTypes ={
     disabled: PropTypes.bool,
     readonly: PropTypes.bools,
     onChange: PropTypes.func,
+	label: PropTypes.string,
 	value: PropTypes.string
 }
 

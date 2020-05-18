@@ -1,31 +1,62 @@
-import React from 'react';
+import React, { useState } from 'react';
 import ReactDOM from 'react-dom';
 import Table from './biblioteca/Table.jsx';
 import 'bulma/css/bulma.min.css'
-var elements_header = [
-  {value:"Pos"},{value:"Team"},{value:"Pld"},{value:"W"},
-  {value:"D"},{value:"L"},{value:"GF"},{value:"GA"},
-  {value:"GD"},{value:"Pts"},{value:"Qualification or relegation"}
+import SearchTable from './biblioteca/SearchTable';
+
+var itens_header = [
+  { value: "Pos" }, { value: "Team" }, { value: "Pld" }, { value: "W" },
+  { value: "D" }, { value: "L" }, { value: "GF" }, { value: "GA" },
+  { value: "GD" }, { value: "Pts" }, { value: "Qualification or relegation" }
 ]
 
-var elements_footer =  elements_header;
 
 
-//2	Arsenal	38	20	11	7	65	36	+29	71	Qualification for the Champions League group stage
-var elements_body  = [
-  {Pos:"2",team:"Arsenal",pld:"38",w:"20",
-  D:"11",L:"7",GF:"65",GA:"36",
-  GD:"+29",Pts:"71",Quali:"Qualification for the Champions League group stage"}
+var itens_footer = [
+  { value: "Pos" }, { value: "Team" }, { value: "Pld" }, { value: "W" },
+  { value: "D" }, { value: "L" }, { value: "GF" }, { value: "GA" },
+  { value: "GD" }, { value: "Pts" }, { value: "Qualification or relegation" }
 ]
 
-var x = Object.values(elements_body);
-var  y  = x.map(elemento => ({Posicao: elemento.Pos, Time: elemento.team, W: elemento.w}))
-var  z = 9;
+
+function SearchTableParent(props) {
+  var initial = {
+    itens_body: [
+      {
+        Pos: "2", team: "Arsenal", pld: "38", w: "20",
+        D: "11", L: "7", GF: "65", GA: "36",
+        GD: "+29", Pts: "71", Quali: "Qualification for the Champions League group stage"
+      },
+      {
+        Pos: "3", team: "Chelsea", pld: "35", w: "20",
+        D: "11", L: "7", GF: "65", GA: "36",
+        GD: "+29", Pts: "65", Quali: "Qualification for the Champions League group stage"
+      }
+    ]
+  }
+
+  function onChange(e) {
+    
+    
+    
+  } 
+  
+
+  const [state, setState] = useState(initial)
+  return <SearchTable label="Busca Times"
+                      value="Voltar" onClick={() => { alert("clicou") }}
+                      icon_name="fas fa-search" control_definition="icons-right"
+                      icon_definition="info" itens_header={itens_header}
+                      button_definition="success" input_definition="warning" 
+                      header_definition="background-grey-light"
+                      itens_body={state.itens_body} itens_footer={itens_footer} 
+                      table_definition="background-grey-lighter"
+                      onChange={onChange}
+  />
+}
+
 
 ReactDOM.render(
-    <Table definition="bordered striped narrow fullwidth"
-    itens_header={elements_header}
-    itens_body={y} />,
-           
-   document.getElementById('root')
-  );
+  <SearchTableParent />
+  , document.getElementById('root')
+);

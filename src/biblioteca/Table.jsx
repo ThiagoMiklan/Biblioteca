@@ -34,7 +34,7 @@ function assembleTable(props) {
 
     
     code =  <table className={definition}>
-                {isArrayOk(props.itens_header) && assembleHeader(props.itens_header)}
+                {isArrayOk(props.itens_header) && assembleHeader(props)}
                 {isArrayOk(props.itens_body) && assembleBody(props.itens_body,props.onClickRow)}
                 {isArrayOk(props.itens_footer) && assembleFooter(props.itens_footer)}
             </table>
@@ -54,12 +54,13 @@ function isArrayOk(array) {
     return output;
 }
 
-function assembleHeader(itens_header) {
+function assembleHeader(props) {
     var code_header = <></>
-
-    code_header = <thead>
+    var header_definition = classnames(getClassName(props.header_definition,"Table"));
+    
+    code_header = <thead className={header_definition}>
         <tr>
-            {itens_header.map(item_header => assembleRowHeaderFooter(item_header))}
+            {props.itens_header.map(item_header => assembleRowHeaderFooter(item_header))}
         </tr>
     </thead>
 
@@ -105,7 +106,8 @@ Table.propTypes = {
     // função para quando clicar na tabela
     // executar alguma ação
     // evento global para todas as linhas
-    onClickRow: PropTypes.func
+    onClickRow: PropTypes.func,
+    header_definition: PropTypes.string
 }
 
 
