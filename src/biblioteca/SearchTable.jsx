@@ -1,3 +1,4 @@
+// @flow
 import React from 'react';
 import Table from './Table';
 import ButtonList from './ButtonList';
@@ -5,7 +6,26 @@ import Button from './Button';
 import Field from './Field'
 import PropTypes from 'prop-types';
 
-const SearchTable = (props)=>{
+type Props ={
+    onChange?: ()=>void,
+    label?:string,
+    control_definition?:string,
+    placeholder?:string,
+    icon_name?:string,
+    icon_definition?:string,
+    input_definition?:string,
+    table_definition?:string,
+    itens_header:Array<Object>,
+    itens_body?:Array<Object>,
+    header_definition?:string,
+    itens_footer?: Array<Object>,
+    button_definition?:string,
+    onClick?: ()=> void ,
+    value?: string,
+    onClickRow?: ()=>void
+}
+
+const SearchTable = (props:Props)=>{
 
        return  <div className="container">
             <Field onChange={props.onChange} 

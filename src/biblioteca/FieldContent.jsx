@@ -1,9 +1,15 @@
-import React from 'react';
+// @flow
+import * as React from 'react';
 
 // Simples componente para utilizar Field como content
 // Um exemplo seria um componente que exibe uma imagem
 
-const FieldContent = (props)=>{
+type Props={
+  label?:string,
+  children?: React.Node
+}
+
+const FieldContent = (props:Props)=>{
 
     return (
         <div className='field'>
@@ -15,5 +21,7 @@ const FieldContent = (props)=>{
     );
 
 }
+
+
 
 export default FieldContent;

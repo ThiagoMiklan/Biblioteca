@@ -15,8 +15,8 @@ type Props = {
 
 const Hero = (props: Props)=>{
   checkerDefinition(props.definition,"Hero");
-  var hero_definition =  (props.definition ==  undefined) ? "": props.definition;
-  var definition =  classnames(getClassName("hero "+ hero_definition,"Hero"));
+  var hero_definition =  (props.definition ==  undefined) ? "hero": "hero "+props.definition;
+  var definition =  classnames(getClassName(hero_definition,"Hero"));
     return (
     <section className={definition}>
     <div className="hero-body">

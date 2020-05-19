@@ -1,10 +1,15 @@
+// @flow
 import React from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import getClassName from '../tools/getClassName';
 
+type Props ={
+    itens?: Array<Object>,
+    definition?:string
+}
 
-const TagList = (props)=>{
+const TagList = (props:Props)=>{
     return assembleTagList(props);
 }
 
@@ -21,12 +26,15 @@ function assembleTagList(props){
 // monta lista quando props.itens == array && props.itens != undefined
 function assembleListWithItens(props){
     var itens = props.itens;
-    var definition = classnames(getClassName("tags "+props.definition,"TagList"));
-    var code = 
-         <div className={definition}>
-        {itens.map(item => assembleTag(item["definition"],item["value"],item["onClick"]))}
+    var tags_definition = (props.definition == undefined ? "tags": "tags "+ props.definition)
+    var definition = classnames(getClassName(tags_definition,"TagList"));
+    var code =<></>;
+    
+    if(itens != undefined){
+    code= <div className={definition}>
+            {itens.map(item => assembleTag(item["definition"],item["value"],item["onClick"]))}
          </div>
-  
+    }
     return code;
 }
 

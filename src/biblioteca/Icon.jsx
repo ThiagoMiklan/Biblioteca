@@ -32,16 +32,10 @@ const Icon = (props:Props) => {
     );
 }
 
-Icon.propTypes = {
-    //Características do Bulma
-    definition: PropTypes.string,
-    // diz se o icon está a direita ou a esquerda
-    // Utilizável em alguns componentes que o Icon funciona como children
-    // Exemplo: Button permite interligação com Icon
-    icon_rigth: PropTypes.string,
-    // Nome do ícone
-    icon_name: PropTypes.string
+function Teste(){
+    var x = <Icon ic></Icon>
 }
+
 
 
 

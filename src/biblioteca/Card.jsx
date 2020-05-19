@@ -1,12 +1,30 @@
-import React from 'react';
+// @flow
+import * as React from 'react';
 import PropTypes from 'prop-types';
 import Image from './Image';
 import classnames from 'classnames';
 import getClassName from '../tools/getClassName';
 import Icon from './Icon';
 
+type Props ={
+    title?:string,
+    title_definition?: string,
+    definition?:string,
+    src?:string,
+    custom_header?:React.Node,
+    itens_footer?: Array<Object>,
+    footer_definition: ?string,
+    icon_name?:string,
+    icon_definition?:string,
+    header_definition?: string,
+    card_header_definition?:string,
+    image_definition?:string,
+    children?:React.Node,
+    card_image_definition?: string
 
-const Card = (props) => {
+}
+
+const Card = (props:Props) => {
     // se title for undefined não tem motivo para criar header
     // se src for undefined não tem motivo para criar card image
     // se itens_footer for undefined não tem pq criar footer
@@ -84,9 +102,13 @@ function assembleContent(props) {
 // Limitado apenas nessa formado de lista
 function assembleFooter(props) {
     var footer_definition = "card-footer " + classnames(getClassName(props.footer_definition, "Card"));
-    return <footer className={footer_definition}>
+    var code = <></>;
+    if(props.itens_footer != undefined){
+        code =  <footer className={footer_definition}>
         {props.itens_footer.map(item => assembleItemFooter(item))}
     </footer>
+    }
+    return code;
 }
 
 function assembleItemFooter(item) {

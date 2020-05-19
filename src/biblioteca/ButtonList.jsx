@@ -1,15 +1,22 @@
-import React from 'react';
+// @flow
+import * as React from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import getClassNames from '../tools/getClassName';
- ;
+
 
 // Componente criado com o objetivo de servir de containe para diversos botões
 // Oferece possibiidade de escolher se o container é "field" ou "buttons", para escolher field informar field={true}
 // Class Field : Funcona com diversos elementos e não somente botões
 // Class Buttons: Funciona apenas com botões
 
-const ButtonList = (props) => {
+type Props ={
+    definition?: string,
+    field?: bool,
+    children?:React.Node
+}
+
+const ButtonList = (props:Props) => {
     return (assembleButtonList(props));
 }
 
@@ -42,7 +49,7 @@ function assembleButtonList(props) {
     return code_icon;
 }
 
-function getDefinition(definition, field) {
+function getDefinition(definition:any, field) {
 
     if (field == true) {
         definition = classnames(getClassNames("field " + definition, "ButtonList"));;

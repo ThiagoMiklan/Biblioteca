@@ -13,13 +13,14 @@ type Props = {
     definition?: string,
     label?: string,
     filename?:string,
+    ref?: string,
     onChange?: ()=> void
 }
 
 const File = (props:Props)=>{
   checkerDefinition(props.definition,"File");
-  var file_definition = (props.definition == undefined)? "": props.definition;
-  var definition= classnames(getClassName("file "+file_definition,"File"));
+  var file_definition = (props.definition == undefined)? "file": "file "+props.definition;
+  var definition= classnames(getClassName(file_definition,"File"));
 
     return <div className={definition}>
     <label className="file-label">

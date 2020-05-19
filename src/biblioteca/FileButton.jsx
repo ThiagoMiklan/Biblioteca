@@ -1,8 +1,18 @@
-import React from 'react';
+// @flow
+import * as  React from 'react';
 import Button from './Button';
 
+type Props ={
+    label?: string,
+    onChange?: ()=>void,
+    definition?: string,
+    ref_data?: string,
+    onClick?: ()=>void,
+    children?: React.Node
+}
+
 // Definition Equivalente a de Button, ou seja, o definition vai para Button
-const FileButton = (props) => {
+const FileButton = (props:Props) => {
 
     return (
         <div className='field'>

@@ -1,6 +1,12 @@
-import React from 'react'
+// @flow
+import * as React from 'react'
 
-const PanelItem = (props) => {
+type Props = {
+    onClick?: ()=> void,
+    children?: React.Node
+}
+
+const PanelItem = (props:Props) => {
     return <div className="panel-block" onClick={props.onClick}>
        {props.children}
     </div>

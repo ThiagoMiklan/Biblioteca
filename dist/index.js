@@ -1458,6 +1458,47 @@ var progress_bar_props = {
   "large": "is-large"
 };
 
+var global_props = {
+  "background-white": "has-background-white",
+  "background-black": "has-background-black",
+  "background-light": "has-background-light",
+  "background-dark": "has-background-dark,",
+  "background-primary": "has-background-primary",
+  "background-info": "has-background-info",
+  "background-link": "has-background-link",
+  "background-success": "has-background-success",
+  "background-warning": "has-background-warning",
+  "background-danger": "has-background-danger",
+  "background-black-bis": "has-background-black-bis",
+  "background-black-ter": "has-background-black-ter",
+  "background-grey-darker": "has-background-grey-darker",
+  "background-grey-dark": "has-background-grey-dark",
+  "background-grey": "has-background-grey",
+  "background-grey-light": "has-background-grey-light",
+  "background-grey-lighter": "has-background-grey-lighter",
+  "background-white-ter": "has-background-white-ter",
+  "background-white-bis": "has-background-white-bis",
+  "text-white": "has-text-white",
+  "text-black": "has-text-black",
+  "text-light": "has-text-light",
+  "text-dark": "has-text-dark",
+  "text-primary": "has-text-primary",
+  "text-info": "has-text-info",
+  "text-link": "has-text-link",
+  "text-success": "has-text-success",
+  "text-warning": "has-text-warning",
+  "text-danger": "has-text-danger",
+  "text-black-bis": "has-text-black-bis",
+  "text-black-ter": "has-text-black-ter",
+  "text-grey-darker": "has-text-grey-darker",
+  "text-grey-dark": "has-text-grey-dark",
+  "text-grey": "has-text-grey",
+  "text-grey-light": "has-text-grey-light",
+  "text-grey-lighter": "has-text-grey-lighter",
+  "text-white-ter": "has-text-white-ter",
+  "text-white-bis": "has-text-white-bis"
+};
+
 var table_props = {
   "bordered": "is-bordered",
   "striped": "is-striped",
@@ -1467,6 +1508,7 @@ var table_props = {
   "table": "table",
   "table-container": "table-container"
 };
+var table_props$1 = _objectSpread2({}, table_props, {}, global_props);
 
 var tag_props = {
   "tag": "tag",
@@ -1631,47 +1673,6 @@ var pagination_props = {
   "left": "is-left",
   "center": "is-centered",
   "current": "is-current"
-};
-
-var global_props = {
-  "background-white": "has-background-white",
-  "background-black": "has-background-black",
-  "background-light": "has-background-light",
-  "background-dark": "has-background-dark,",
-  "background-primary": "has-background-primary",
-  "background-info": "has-background-info",
-  "background-link": "has-background-link",
-  "background-success": "has-background-success",
-  "background-warning": "has-background-warning",
-  "background-danger": "has-background-danger",
-  "background-black-bis": "has-background-black-bis",
-  "background-black-ter": "has-background-black-ter",
-  "background-grey-darker": "has-background-grey-darker",
-  "background-grey-dark": "has-background-grey-dark",
-  "background-grey": "has-background-grey",
-  "background-grey-light": "has-background-grey-light",
-  "background-grey-lighter": "has-background-grey-lighter",
-  "background-white-ter": "has-background-white-ter",
-  "background-white-bis": "has-background-white-bis",
-  "text-white": "has-text-white",
-  "text-black": "has-text-black",
-  "text-light": "has-text-light",
-  "text-dark": "has-text-dark",
-  "text-primary": "has-text-primary",
-  "text-info": "has-text-info",
-  "text-link": "has-text-link",
-  "text-success": "has-text-success",
-  "text-warning": "has-text-warning",
-  "text-danger": "has-text-danger",
-  "text-black-bis": "has-text-black-bis",
-  "text-black-ter": "has-text-black-ter",
-  "text-grey-darker": "has-text-grey-darker",
-  "text-grey-dark": "has-text-grey-dark",
-  "text-grey": "has-text-grey",
-  "text-grey-light": "has-text-grey-light",
-  "text-grey-lighter": "has-text-grey-lighter",
-  "text-white-ter": "has-text-white-ter",
-  "text-white-bis": "has-text-white-bis"
 };
 
 var card_props = {
@@ -1943,7 +1944,7 @@ var component_path = {
   "Button": button_props,
   "ButtonList": button_list,
   "ProgressBar": progress_bar_props,
-  "Table": table_props,
+  "Table": table_props$1,
   "Tag": tag_props,
   "Content": content_props,
   "Box": box_props,
@@ -3595,6 +3596,139 @@ Radio.propTypes = {
   name: propTypes.string
 };
 
+// cursor ao passar com o mouse em cima de uma linha da table
+
+var style_cursor = {
+  cursor: "pointer"
+};
+
+var Table = function Table(props) {
+  checkerDefinition(props.definition, "Table");
+  return assembleTable(props);
+};
+
+function assembleTable(props) {
+  var table_definition = props.definition == undefined ? "" : props.definition;
+  var definition = classnames(getClassName("table " + table_definition, "Table"));
+  var code = /*#__PURE__*/React__default.createElement(React__default.Fragment, null);
+  code = /*#__PURE__*/React__default.createElement("table", {
+    className: definition
+  }, isArrayOk(props.itens_header) && assembleHeader$2(props), isArrayOk(props.itens_body) && assembleBody$1(props.itens_body, props.onClickRow), isArrayOk(props.itens_footer) && assembleFooter$1(props.itens_footer));
+  return code;
+} // verifica se é viável utilizar o array
+
+
+function isArrayOk(array) {
+  var output = false;
+
+  if (Array.isArray(array) && array != undefined) {
+    if (array.length > 0) {
+      output = true;
+    }
+  }
+
+  return output;
+}
+
+function assembleHeader$2(props) {
+  var code_header = /*#__PURE__*/React__default.createElement(React__default.Fragment, null);
+  var header_definition = classnames(getClassName(props.header_definition, "Table"));
+  code_header = /*#__PURE__*/React__default.createElement("thead", {
+    className: header_definition
+  }, /*#__PURE__*/React__default.createElement("tr", null, props.itens_header.map(function (item_header) {
+    return assembleRowHeaderFooter(item_header);
+  })));
+  return code_header;
+}
+
+function assembleFooter$1(itens_footer) {
+  var code_footer = /*#__PURE__*/React__default.createElement(React__default.Fragment, null);
+  code_footer = /*#__PURE__*/React__default.createElement("tfoot", null, /*#__PURE__*/React__default.createElement("tr", null, itens_footer.map(function (item_footer) {
+    return assembleRowHeaderFooter(item_footer);
+  })));
+  return code_footer;
+}
+
+function assembleBody$1(itens, onClickRow) {
+  var code = /*#__PURE__*/React__default.createElement(React__default.Fragment, null);
+
+  var getRow = function getRow(item) {
+    var row = "";
+    var values = Object.values(item);
+    row = values.map(function (value) {
+      return /*#__PURE__*/React__default.createElement("td", null, value);
+    });
+    return row;
+  };
+
+  code = /*#__PURE__*/React__default.createElement("tbody", null, itens.map(function (item) {
+    return /*#__PURE__*/React__default.createElement("tr", {
+      key: item["key"],
+      style: style_cursor,
+      onClick: onClickRow
+    }, getRow(item));
+  }));
+  return code;
+}
+
+function assembleRowHeaderFooter(item) {
+  return /*#__PURE__*/React__default.createElement("th", null, item["value"]);
+}
+
+Table.propTypes = {
+  itens_body: propTypes.array,
+  itens_header: propTypes.array,
+  itens_footer: propTypes.Array,
+  // função para quando clicar na tabela
+  // executar alguma ação
+  // evento global para todas as linhas
+  onClickRow: propTypes.func,
+  header_definition: propTypes.string
+};
+
+var SearchTable = function SearchTable(props) {
+  return /*#__PURE__*/React__default.createElement("div", {
+    className: "container"
+  }, /*#__PURE__*/React__default.createElement(Field, {
+    onChange: props.onChange,
+    label: props.label,
+    control_definition: props.control_definition,
+    placeholder: props.placeholder,
+    icon_name: props.icon_name,
+    icon_definition: props.icon_definition,
+    input_definition: props.input_definition
+  }), /*#__PURE__*/React__default.createElement("br", null), /*#__PURE__*/React__default.createElement(Table, {
+    definition: props.table_definition,
+    itens_header: props.itens_header,
+    itens_body: props.itens_body,
+    header_definition: props.header_definition,
+    itens_footer: props.itens_footer,
+    onClickRow: props.onClickRow
+  }), /*#__PURE__*/React__default.createElement(ButtonList, null, /*#__PURE__*/React__default.createElement(Button, {
+    definition: props.button_definition,
+    onClick: props.onClick
+  }, props.value)));
+};
+
+SearchTable.propTypes = {
+  label: propTypes.string,
+  onChange: propTypes.func,
+  placeholder: propTypes.func,
+  itens_header: propTypes.array,
+  itens_body: propTypes.array,
+  control_definition: propTypes.string,
+  table_definition: propTypes.string,
+  icon_name: propTypes.string,
+  icon_definition: propTypes.string,
+  header_definition: propTypes.string,
+  itens_footer: propTypes.array,
+  button_definition: propTypes.string,
+  // onclick de button
+  onClick: propTypes.func,
+  // value de button
+  value: propTypes.string
+};
+
 var Section = function Section(props) {
   return /*#__PURE__*/React__default.createElement("section", {
     className: "section"
@@ -3814,92 +3948,6 @@ SubTitle.propTypes = {
   // p é usado para determinar se um título é construído com tag <p> ou com as tags
   // h1,h2,h3,h4,h5 ou h6
   p: propTypes.bool
-};
-
-// cursor ao passar com o mouse em cima de uma linha da table
-
-var style_cursor = {
-  cursor: "pointer"
-};
-
-var Table = function Table(props) {
-  checkerDefinition(props.definition, "Table");
-  return assembleTable(props);
-};
-
-function assembleTable(props) {
-  var table_definition = props.definition == undefined ? "" : props.definition;
-  var definition = classnames(getClassName("table " + table_definition, "Table"));
-  var code = /*#__PURE__*/React__default.createElement(React__default.Fragment, null);
-  code = /*#__PURE__*/React__default.createElement("table", {
-    className: definition
-  }, isArrayOk(props.itens_header) && assembleHeader$2(props.itens_header), isArrayOk(props.itens_body) && assembleBody$1(props.itens_body, props.onClickRow), isArrayOk(props.itens_footer) && assembleFooter$1(props.itens_footer));
-  return code;
-} // verifica se é viável utilizar o array
-
-
-function isArrayOk(array) {
-  var output = false;
-
-  if (Array.isArray(array) && array != undefined) {
-    if (array.length > 0) {
-      output = true;
-    }
-  }
-
-  return output;
-}
-
-function assembleHeader$2(itens_header) {
-  var code_header = /*#__PURE__*/React__default.createElement(React__default.Fragment, null);
-  code_header = /*#__PURE__*/React__default.createElement("thead", null, /*#__PURE__*/React__default.createElement("tr", null, itens_header.map(function (item_header) {
-    return assembleRowHeaderFooter(item_header);
-  })));
-  return code_header;
-}
-
-function assembleFooter$1(itens_footer) {
-  var code_footer = /*#__PURE__*/React__default.createElement(React__default.Fragment, null);
-  code_footer = /*#__PURE__*/React__default.createElement("tfoot", null, /*#__PURE__*/React__default.createElement("tr", null, itens_footer.map(function (item_footer) {
-    return assembleRowHeaderFooter(item_footer);
-  })));
-  return code_footer;
-}
-
-function assembleBody$1(itens, onClickRow) {
-  var code = /*#__PURE__*/React__default.createElement(React__default.Fragment, null);
-
-  var getRow = function getRow(item) {
-    var row = "";
-    var values = Object.values(item);
-    row = values.map(function (value) {
-      return /*#__PURE__*/React__default.createElement("td", null, value);
-    });
-    return row;
-  };
-
-  code = /*#__PURE__*/React__default.createElement("tbody", null, itens.map(function (item) {
-    return /*#__PURE__*/React__default.createElement("tr", {
-      key: item["key"],
-      style: style_cursor,
-      onClick: onClickRow
-    }, getRow(item));
-  }));
-  return code;
-}
-
-function assembleRowHeaderFooter(item) {
-  return /*#__PURE__*/React__default.createElement("th", null, item["value"]);
-}
-
-Table.propTypes = {
-  itens_body: propTypes.array,
-  itens_header: propTypes.array,
-  itens_footer: propTypes.Array,
-  // função para quando clicar na tabela
-  // executar alguma ação
-  // evento global para todas as linhas
-  onClickRow: propTypes.func
 };
 
 var TableQuery = function TableQuery(props) {
@@ -4328,6 +4376,7 @@ exports.Panel = Panel;
 exports.PanelItem = PanelItem;
 exports.ProgressBar = ProgressBar;
 exports.Radio = Radio;
+exports.SearchTable = SearchTable;
 exports.Section = Section;
 exports.Select = Select;
 exports.Subtitle = SubTitle;

@@ -7,7 +7,7 @@ import checkerDefinition from '../tools/checker.js';
 
 
 type Props = {
-    itens?: Array<Object>,
+    itens: Array<Object>,
     header?: bool,
     footer?: bool,
     definition?: string,
@@ -69,7 +69,7 @@ function assembleBody(itens) {
     var code = <></>;
     var getRow = (item) => {
         var row = "";
-        var values = Object.values(item);
+        var values: Array<Object> = Object.values(item);
         row = values.map(value => <td>{value}</td>)
         return row;
     }

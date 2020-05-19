@@ -1,4 +1,5 @@
-import React from 'react';
+// @flow
+import * as React from 'react';
 import FieldContent from '../biblioteca/FieldContent';
 import Button from '../biblioteca/Button';
 import classnames from 'classnames';
@@ -15,7 +16,16 @@ import PropTypes from 'prop-types';
 // Para ver a diferença entre FieldButton e Button, basta alocar dois buttons em sequencia
 // e um button e um fieldbutton, que será possível ver uma diferença de espaçamento
 
-const FieldButton = (props) => {
+type Props ={
+    field_definition?: string,
+    label?:string,
+    button_definition?: string,
+    onClick?: ()=> void,
+    disabled?: bool,
+    value?: React.Node
+}
+
+const FieldButton = (props:Props) => {
   var field_definition =  classnames(getClassName(props.field_definition,"Field"));
     return <FieldContent definition={field_definition} label={props.label}>
         <Button definition={props.button_definition}
@@ -27,7 +37,6 @@ const FieldButton = (props) => {
 }
 
 FieldButton.propTypes ={
-    field_definition: PropTypes.string,
     button_definition: PropTypes.string,
     label: PropTypes.string,
     field_definition: PropTypes.string,

@@ -19,7 +19,8 @@ type Props = {
     itens_header?: Array<Object>,
     itens_footer?: Array<Object>,
     definition?: string,
-    onClickRow?: ()=> void
+    onClickRow?: ()=> void,
+    header_definition?: string
 }
 
 const Table = (props: Props) => {
@@ -57,24 +58,25 @@ function isArrayOk(array) {
 function assembleHeader(props) {
     var code_header = <></>
     var header_definition = classnames(getClassName(props.header_definition,"Table"));
-    
-    code_header = <thead className={header_definition}>
+    if(props.itens_header != undefined){
+        code_header = <thead className={header_definition}>
         <tr>
             {props.itens_header.map(item_header => assembleRowHeaderFooter(item_header))}
         </tr>
     </thead>
-
+    }
     return code_header;
 }
 
 function assembleFooter(itens_footer) {
     var code_footer = <></>
-
-    code_footer = <tfoot>
+    if(itens_footer != undefined){
+        code_footer = <tfoot>
         <tr>
             {itens_footer.map(item_footer => assembleRowHeaderFooter(item_footer))}
         </tr>
     </tfoot>
+    }
     return code_footer;
 }
 
@@ -83,15 +85,16 @@ function assembleBody(itens,onClickRow) {
     
     var getRow = (item) => {
         var row = "";
-        var values = Object.values(item);
+        var values:Array<Object> = Object.values(item);
         row = values.map(value => <td>{value}</td>)
         return row;
     }
-    code = <tbody>
-        {itens.map(item => <tr key={item["key"]} style={style_cursor}  onClick={onClickRow}>{getRow(item)}</tr>)}
-    </tbody>
-    
-    return code;
+    if(itens != undefined){
+         code = <tbody>
+                {itens.map(item => <tr key={item["key"]} style={style_cursor}  onClick={onClickRow}>{getRow(item)}</tr>)}
+            </tbody>
+    }
+   return code;
 }
 
 function assembleRowHeaderFooter(item) {

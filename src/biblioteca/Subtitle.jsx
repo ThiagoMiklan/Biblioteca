@@ -1,10 +1,12 @@
-import React from 'react';
+
+import * as React from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import getClassName from '../tools/getClassName'
 
 
-const SubTitle = (props)=>{
+
+const SubTitle = (props:Props)=>{
     return assembleSubTitle(props)
 };
      
@@ -22,7 +24,6 @@ function getTitle(props){
     var assemble_functions = mapFunctionsTitle();
     var title = "";
     var definition = props.definition;
-    
     if(definition >= 1 && definition <= 6){
             var assemble: ()=> void = assemble_functions.get(definition);
             title = assemble(props);

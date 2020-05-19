@@ -13,7 +13,9 @@ type Props = {
     placeholder?: ()=> void,
     rows?: ()=> number,
     readonly? : bool,
-    disabled?:bool
+    disabled?:bool,
+    label?: string,
+    value?:string
 }
 
 const TextArea = (props:Props)=>{
