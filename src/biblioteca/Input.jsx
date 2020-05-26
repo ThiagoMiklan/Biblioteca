@@ -45,7 +45,7 @@ function assembleInputLoading(props) {
 
 function assembleInput(props) {
     var input_code = "";
-    var definition = 'input ' + props.definition;
+    var definition = (props.definition == undefined )?'input': "input " + props.definition;
 
     if (props.disabled) {
         if (props.readonly) {

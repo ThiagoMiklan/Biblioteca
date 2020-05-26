@@ -45,12 +45,12 @@ function SearchTableParent(props) {
   const [state, setState] = useState(initial)
   return <SearchTable label="Busca Times"
                       value="Voltar" onClick={() => { alert("clicou") }}
-                      icon_name="fas fa-search" control_definition="icons-right"
-                      icon_definition="info" itens_header={itens_header}
-                      button_definition="success" input_definition="warning" 
-                      header_definition="background-grey-light"
+                      icon_name="fas fa-search" control_definition="has-icons-right"
+                      icon_definition="is-info" itens_header={itens_header}
+                      button_definition="is-success" input_definition="is-warning" 
+                      header_definition="has-background-grey-light"
                       itens_body={state.itens_body} itens_footer={itens_footer} 
-                      table_definition="background-grey-lighter"
+                      table_definition="has-background-grey-lighter"
                       onChange={onChange}
   />
 }

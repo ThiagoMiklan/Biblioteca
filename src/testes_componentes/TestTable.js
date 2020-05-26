@@ -20,7 +20,7 @@ var elements_body  = [
 
 
 ReactDOM.render(
-    <Table definition="bordered striped narrow fullwidth"
+    <Table definition="is-bordered is-striped is-narrow is-fullwidth"
     itens_header={elements_header}
     itens_body={elements_body} />,
            

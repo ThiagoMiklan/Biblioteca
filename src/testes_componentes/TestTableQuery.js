@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import ReactDOM from 'react-dom';
 import TableQuery from './biblioteca/TableQuery';
+import 'bulma/css/bulma.css';
 
 /*
 async function fetchJson(url){
@@ -30,15 +31,15 @@ var itens = [
 ]
 
 ReactDOM.render(<div className="container is-fluid">
-    <TableQuery definition="fullwidth bordered" itens={itens} header={true} />
-    <TableQuery definition="fullwidth striped" itens={itens} header={true} />
-    <TableQuery definition="fullwidth narrow" itens={itens} header={true} />
-    <TableQuery definition="fullwidth hoverable" itens={itens} header={true} />
+    <TableQuery definition="is-fullwidth is-bordered" itens={itens} header={true} />
+    <TableQuery definition="is-fullwidth is-striped" itens={itens} header={true} />
+    <TableQuery definition="is-fullwidth is-narrow" itens={itens} header={true} />
+    <TableQuery definition="is-fullwidth is-hoverable" itens={itens} header={true} />
 
 
-    <TableQuery definition="fullwidth" itens={itens} header={true} footer={true} />
-    <TableQuery definition="fullwidth" itens={itens} footer={true} />
-    <TableQuery definition="bordered striped narrow hoverable fullwidth" itens={itens} />
+    <TableQuery definition="is-fullwidth" itens={itens} header={true} footer={true} />
+    <TableQuery definition="is-fullwidth" itens={itens} footer={true} />
+    <TableQuery definition="is-bordered is-striped is-narrow is-hoverable is-fullwidth" itens={itens} />
     <br></br>
 </div>
     , document.getElementById('root')

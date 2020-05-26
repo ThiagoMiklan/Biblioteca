@@ -2,10 +2,7 @@
 import * as React from 'react';
 import PropTypes from 'prop-types';
 import Image from './Image';
-import classnames from 'classnames';
-import getClassName from '../tools/getClassName';
 import Icon from './Icon';
-import checkerDefinition from '../tools/checker.js';
 
 type Props ={
     title?:string,
@@ -26,12 +23,10 @@ type Props ={
 }
 
 const Card = (props:Props) => {
-    checkerDefinition(props.definition,"Card");
-
     // se title for undefined não tem motivo para criar header
     // se src for undefined não tem motivo para criar card image
     // se itens_footer for undefined não tem pq criar footer
-	var definition = "card " + classnames(getClassName(props.definition, "Card"));
+	var definition = (props.definition == undefined) ? "card" : "card "+ props.definition;
     return (
         <div className={definition}>
             {assembleHeader(props)}
@@ -60,9 +55,9 @@ function assembleHeader(props) {
 // title: Testando,  icon_name: "fas fa-angle-down", icon_definition: "info", href
 // expandido para diversos tipos de valores
 function assembleHeaderDefault(props) {
-    var header_definition = "card-header " + classnames(getClassName(props.header_definition, "Card"));
-    var card_header_definition = "card-header-icon" + classnames(getClassName(props.card_header_definition, "Card"));
-    var title_definition = "card-header-title " + classnames(getClassName(props.title_definition, "Card"));
+    var header_definition = (props.header_definition == undefined)?"card-header" :"card-header "+ props.header_definition;
+    var card_header_definition =(props.card_header_definition == undefined) ? "card-header-icon" : "card-header-icon " + props.card_header_definition;
+    var title_definition = (props.title_definition == undefined) ? "card-header-title" : "card-header-title " + props.title_definition;
 
     return <header className={header_definition}>
         <div className={title_definition}>
@@ -77,7 +72,7 @@ function assembleHeaderDefault(props) {
 }
 
 function assembleHeaderCustom(props) {
-    var header_definition = "card-header " + classnames(getClassName(props.header_definition, "Card"));
+    var header_definition =(props.header_definition ==  undefined)? "card-header" : "card-header " + props.header_definition;
 
     return <header className={header_definition}>
         {props.custom_header}
@@ -87,8 +82,8 @@ function assembleHeaderCustom(props) {
 // src(props):  image_definition(props): 
 // Limite de uma imagem
 function assembleCardImage(props) {
-    // <Image src="" definition=""></Image>
-    var card_image_definition = "card-image " + classnames(getClassName(props.card_image_definition, "Card"));
+    
+    var card_image_definition =(props.card_image_definition == undefined)? "card-image":"card-image " + props.card_image_definition
     return <div className={card_image_definition}>
         <Image definition={props.image_definition} src={props.src}></Image>
     </div>
@@ -104,7 +99,7 @@ function assembleContent(props) {
 // itens_footer(props) footer_definition
 // Limitado apenas nessa formado de lista
 function assembleFooter(props) {
-    var footer_definition = "card-footer " + classnames(getClassName(props.footer_definition, "Card"));
+    var footer_definition = (props.footer_definition == undefined)? "card-footer": "card-footer " + props.footer_definition
     var code = <></>;
     if(props.itens_footer != undefined){
         code =  <footer className={footer_definition}>

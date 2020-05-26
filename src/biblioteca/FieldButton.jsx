@@ -2,8 +2,6 @@
 import * as React from 'react';
 import FieldContent from '../biblioteca/FieldContent';
 import Button from '../biblioteca/Button';
-import classnames from 'classnames';
-import getClassName from '../tools/getClassName';
 import PropTypes from 'prop-types';
 
 // FieldButton oferece um botão entre duas divs que são
@@ -26,8 +24,7 @@ type Props ={
 }
 
 const FieldButton = (props:Props) => {
-  var field_definition =  classnames(getClassName(props.field_definition,"Field"));
-    return <FieldContent definition={field_definition} label={props.label}>
+   return <FieldContent definition={props.field_definition} label={props.label}>
         <Button definition={props.button_definition}
             onClick={props.onClick}
             disabled={props.disabled}>

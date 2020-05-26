@@ -1,45 +1,47 @@
-import React,{useState,useEffect,useReducer}from 'react';
+import React, { useState } from 'react';
 import ReactDOM from 'react-dom';
-import ProgressBar from './biblioteca/ProgressBar';
-import 'bulma/css/bulma.css' 
-
-function reducer(state, action) {
-  switch (action.type) {
-    case 'increment':
-      return {value: state.value + 1};
-    default:
-      throw new Error();
-  }
-}
+import 'bulma/css/bulma.css';
+import Tiles from './biblioteca/Tiles';
+import { renderToString } from 'react-dom/server';
+import Notification from './biblioteca/Notification';
 
 
-const ProgressHook = (props)=>{
-  var initial = {value: 0};
-  const [state, dispatch] = useReducer(reducer, initial);
-
-  useEffect(() => {
-    setInterval(() => {
-      dispatch({ type: 'increment' })
-    }, 1000)
-  }, []);
-  
-
-  return <ProgressBar definition ="progress" value ={state.value} max ="100"/> 
-}
+var y = 0;
 
 ReactDOM.render(
-    <div class="container is-fluid">
-      <ProgressHook/>
-      <ProgressBar value ="15" max ="100"/>
-      <ProgressBar definition ="is-primary" value ="15" max ="100"/>
-      <ProgressBar definition ="is-link" value ="30" max ="100"/>
-      <ProgressBar definition ="is-info" value ="45" max ="100"/>
-      <ProgressBar definition ="is-sucess" value ="60" max ="100"/>
-      <ProgressBar definition ="is-warning" value ="75" max ="100"/>
-      <ProgressBar definition ="is-danger" value ="90" max ="100"/>
-      <ProgressBar definition ="is-small" value ="15" max="100"/>
-      <ProgressBar definition ="is-medium" value ="15" max="100"/>
-      <ProgressBar definition ="is-large" value ="15" max="100"/>
-    </div>,document.getElementById('root')
- );
+  <Tiles definition="tile is-ancestor">
+  <Tiles definition="tile is-vertical is-8">
+    <Tiles definition="tile">
+      <Tiles definition="tile is-parent is-vertical">
+        <Notification definition="tile is-child is-primary" title="Vertical..." subtitle="Top tile"/>
+        <Notification definition="tile is-child is-warning" title="...tiles" subtitle="Bottom tile"/>
+      </Tiles>
+      <Tiles definition="tile is-parent">
+        <Notification definition="tile is-child is-info" title="Middle tile" subtitle="With an image">
+          <figure class="image is-4by3">
+            <img src="https://bulma.io/images/placeholders/640x480.png"/>
+          </figure>
+        </Notification>
+      </Tiles>
+    </Tiles>
+    <Tiles definition="tile is-parent">
+      <Notification definition="tile is-child is-danger" title="Wide tile" subtitle="ALigned with the right tile">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare magna eros, eu pellentesque tortor vestibulum ut. Maecenas non massa sem. Etiam finibus odio quis feugiat facilisis.
+      </Notification>
+    </Tiles>
+  </Tiles>
+  <Tiles definition="is-parent">
+    <Notification definition="tile is-child is-success" title="Tall tile" subtitle="With even more content">
+     
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam semper diam at erat pulvinar, at pulvinar felis blandit. Vestibulum volutpat tellus diam, consequat gravida libero rhoncus ut. Morbi maximus, leo sit amet vehicula eleifend, nunc dui porta orci, quis semper odio felis ut quam.
+
+Suspendisse varius ligula in molestie lacinia. Maecenas varius eget ligula a sagittis. Pellentesque interdum, nisl nec interdum maximus, augue diam porttitor lorem, et sollicitudin felis neque sit amet erat. Maecenas imperdiet felis nisi, fringilla luctus felis hendrerit sit amet. Aenean vitae gravida diam, finibus dignissim turpis. Sed eget varius ligula, at volutpat tortor.
+
+Integer sollicitudin, tortor a mattis commodo, velit urna rhoncus erat, vitae congue lectus dolor consequat libero. Donec leo ligula, maximus et pellentesque sed, gravida a metus. Cras ullamcorper a nunc ac porta. Aliquam ut aliquet lacus, quis faucibus libero. Quisque non semper leo.
+     
+    </Notification>
+  </Tiles>
+</Tiles>
+  , document.getElementById("root"))
+
 

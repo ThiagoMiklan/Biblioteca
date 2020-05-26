@@ -11,30 +11,30 @@ tags[1] = {definition: "tag primary", value:"tag2"} ;
 ReactDOM.render(
           <>
           <Tag>Tag label</Tag>
-          <Tag definition="black">Tag label</Tag>
-          <Tag definition="dark">Tag label</Tag>
-          <Tag definition="light">Tag label</Tag>
-          <Tag definition="white">Tag label</Tag>
-          <Tag definition="primary">Tag label</Tag>
-          <Tag definition="link">Tag label</Tag>
-          <Tag definition="info">Tag label</Tag>
-          <Tag definition="success">Tag label</Tag>
-          <Tag definition="warning">Tag label</Tag>
-          <Tag definition="danger">Tag label</Tag>
+          <Tag definition="is-black">Tag label</Tag>
+          <Tag definition="is-dark">Tag label</Tag>
+          <Tag definition="is-light">Tag label</Tag>
+          <Tag definition="is-white">Tag label</Tag>
+          <Tag definition="is-primary">Tag label</Tag>
+          <Tag definition="is-link">Tag label</Tag>
+          <Tag definition="is-info">Tag label</Tag>
+          <Tag definition="is-success">Tag label</Tag>
+          <Tag definition="is-warning">Tag label</Tag>
+          <Tag definition="is-danger">Tag label</Tag>
           <Control></Control>
-          <Tag definition="primary light">Tag label</Tag>
-          <Tag definition="link light">Tag label</Tag>
-          <Tag definition="info light">Tag label</Tag>
-          <Tag definition="success light">Tag label</Tag>
-          <Tag definition="warning light">Tag label</Tag>
-          <Tag definition="danger light">Tag label</Tag>
+          <Tag definition="is-primary is-light">Tag label</Tag>
+          <Tag definition="is-link is-light">Tag label</Tag>
+          <Tag definition="is-info is-light">Tag label</Tag>
+          <Tag definition="is-success is-light">Tag label</Tag>
+          <Tag definition="is-warning is-light">Tag label</Tag>
+          <Tag definition="is-danger is-light">Tag label</Tag>
           <Control></Control>
-          <Tag definition="link">Normal</Tag>
-          <Tag definition="primary medium">Normal</Tag>
-          <Tag definition="link large">Normal</Tag>
+          <Tag definition="is-link">Normal</Tag>
+          <Tag definition="is-primary is-medium">Normal</Tag>
+          <Tag definition="is-link is-large">Normal</Tag>
           <Control></Control>
-          <Tag definition="primary rounded">Tag rounded</Tag>
-          <Tag onClickDelete={()=>{alert("clicou")}}definition="primary rounded" delete={true}>Tag rounded</Tag>
+          <Tag definition="is-primary is-rounded">Tag rounded</Tag>
+          <Tag onClickDelete={()=>{alert("clicou")}}definition="is-primary is-rounded" delete={true}>Tag rounded</Tag>
           
          </>
 

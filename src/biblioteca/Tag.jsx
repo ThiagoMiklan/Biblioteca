@@ -1,10 +1,7 @@
 // @flow
 import * as React from 'react';
 import PropTypes from 'prop-types';
-import classnames from 'classnames';
-import getClassName from '../tools/getClassName';
 import Button from './Button';
-import checkerDefinition from '../tools/checker.js';
 
 
 
@@ -16,10 +13,8 @@ type Props = {
 }
 
 const Tag = (props:Props)=>{
-    checkerDefinition(props.definition,"Tag");
-    var definition_tag = (props.definition == undefined) ? "": props.definition;
-    var definition = classnames(getClassName("tag "+ definition_tag, "Tag"));
-  
+    var definition = (props.definition == undefined) ? "tag": "tag "+props.definition;
+
     return  <span className={definition}>
                 {props.children}
                 {props.delete == true && <Button onClick={props.onClickDelete} delete={props.delete}></Button>
@@ -43,7 +38,7 @@ function assembleTag(props) {
 }
 
 function assembleSingleTag(definition,value) {
-  return <span className ={classnames(getClassName(definition,"Tag"))}>{value}</span>;
+  return <span className ={definition}>{value}</span>;
 }
 
 

@@ -1,9 +1,7 @@
 // @flow
 import React from 'react';
-import classnames from 'classnames';
-import getClassName from '../tools/getClassName';
 import PropTypes from 'prop-types';
-import checkerDefinition from '../tools/checker.js';
+
 
 
 type Props = {
@@ -14,15 +12,12 @@ type Props = {
 }
 
 const TableQuery = (props:Props)=>{
-    checkerDefinition(props.definition,"Table");
     return assembleTable(props);
 }
 
 function assembleTable(props){
-    var table_definition = (props.definition ==  undefined)? "": props.definition;
-    var definition = classnames(getClassName("table "+table_definition,"Table"));
+    var definition = (props.definition ==  undefined)? "table": "table " + props.definition;
     var code = <></>;
-    var x =  props.header;
     // elimina vazio e não array
     if(props.itens !=undefined && Array.isArray(props.itens)){
         if(props.itens.length > 0 ){

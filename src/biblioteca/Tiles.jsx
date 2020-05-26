@@ -1,7 +1,5 @@
 // @flow
 import  * as React from 'react';
-import getClassName from '../tools/getClassName';
-import classnames from 'classnames';
 
 type Props = {
     definition?: string,
@@ -9,7 +7,7 @@ type Props = {
 }
 
 const Tile = (props: Props)=>{
-    var tiles_definition =  classnames(getClassName("tile "+props.definition,"Tiles"));
+    var tiles_definition = (props.definition == undefined)? "tile": "tile "+props.definition;
     return <div className={tiles_definition}>
                 {props.children}
             </div>

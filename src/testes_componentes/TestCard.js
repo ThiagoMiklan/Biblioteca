@@ -20,9 +20,9 @@ var itens_footer_2 = [
 ]
 
 ReactDOM.render(
-  <Columns definition="multiline">
-    <Column definition="one-quarter">
-      <Card definition="background-light"
+  <Columns definition="is-multiline">
+    <Column definition="is-one-quarter">
+      <Card definition="has-background-light"
             image_definition="4by3"
             src="https://bulma.io/images/placeholders/1280x960.png">
 
@@ -48,7 +48,7 @@ ReactDOM.render(
       </Card>
     </Column>
 
-    <Column definition="one-quarter">
+    <Column definition="is-one-quarter">
       <Card icon_name="fas fa-angle-down" title="Component" itens_footer={itens_footer}>
         <Content>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec iaculis mauris.
@@ -59,7 +59,7 @@ ReactDOM.render(
       </Card>
     </Column>
 
-    <Column definition="one-quarter">
+    <Column definition="is-one-quarter">
       <Card itens_footer={itens_footer_2}>
         <p class="title">
           “There are two hard things in computer science: cache invalidation, naming things, and off-by-one errors.”

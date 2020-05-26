@@ -1,12 +1,6 @@
 // @flow
 import React from 'react';
-import classnames from 'classnames';
-import getClassName from '../tools/getClassName';
 import PropTypes from 'prop-types';
-import checkerDefinition from '../tools/checker.js';
-
-
-
 
 // style cursor default pointer
 // cursor ao passar com o mouse em cima de uma linha da table
@@ -24,17 +18,13 @@ type Props = {
 }
 
 const Table = (props: Props) => {
-    checkerDefinition(props.definition,"Table");
     return assembleTable(props);
 }
 
 function assembleTable(props) {
-    var table_definition = (props.definition ==  undefined)? "": props.definition;
-    var definition = classnames(getClassName("table " + table_definition, "Table"));
-    var code = <></>;
-
+    var definition = (props.definition ==  undefined)? "table": "table " + props.definition;
     
-    code =  <table className={definition}>
+    var code =  <table className={definition}>
                 {isArrayOk(props.itens_header) && assembleHeader(props)}
                 {isArrayOk(props.itens_body) && assembleBody(props.itens_body,props.onClickRow)}
                 {isArrayOk(props.itens_footer) && assembleFooter(props.itens_footer)}
@@ -57,7 +47,7 @@ function isArrayOk(array) {
 
 function assembleHeader(props) {
     var code_header = <></>
-    var header_definition = classnames(getClassName(props.header_definition,"Table"));
+    var header_definition = props.header_definition;
     if(props.itens_header != undefined){
         code_header = <thead className={header_definition}>
         <tr>

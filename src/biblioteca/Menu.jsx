@@ -3,7 +3,8 @@ import * as React from 'react';
 import PropTypes from 'prop-types';
 
 type Props = {
-    children?: React.Node
+    children?: React.Node,
+    definition?: string
 }
 
 const Menu = (props:Props) =>{

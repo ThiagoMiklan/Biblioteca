@@ -1,9 +1,6 @@
 // @flow
 import * as React from 'react';
 import PropTypes from 'prop-types';
-import classname from 'classnames';
-import getClassName from '../tools/getClassName';
-
 
 type Props ={
     children?: React.Node
