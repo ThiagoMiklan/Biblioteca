@@ -23,7 +23,7 @@ Array [
     value="45"
   />,
   <progress
-    className="progress"
+    className="progress is-sucess"
     max="100"
     value="60"
   />,
@@ -51,7 +51,7 @@ Array [
     max="100"
   />,
   <progress
-    className="progress is-medium"
+    className="progress is-medium is-dark"
     max="100"
   />,
   <progress
@@ -69,19 +69,14 @@ Array [
     value="15"
   />,
   <progress
-    className="progress"
-    max="100"
-    value="30"
-  />,
-  <progress
     className="progress is-medium"
     max="100"
-    value="45"
+    value="15"
   />,
   <progress
     className="progress is-large"
     max="100"
-    value="60"
+    value="15"
   />,
 ]
 `;

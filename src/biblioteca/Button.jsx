@@ -1,9 +1,7 @@
 // @flow
 import * as React from 'react';
 import PropTypes from 'prop-types';
-import classnames from 'classnames';
-import getClassNames from '../tools/getClassName';
-import checkerDefinition from '../tools/checker.js';
+import {renderToString} from 'react-dom/server';
 
 type Props = {
   disabled?: bool,
@@ -35,53 +33,35 @@ Observações:
 */
 
 const Button= (props: Props)=>{
-
-checkerDefinition(props.definition, "Button");
-
-var definition = getDefinition(props.delete, props.definition);
-
-        return <button {...props.custom} disabled = {props.disabled == true? true: false } className={definition} onClick={getClickEvent(props.onClick)}>
+    var definition = getDefinition(props);
+    
+     return <button 
+                {...props.custom} 
+                disabled = {props.disabled == true? true: false } 
+                className={definition} 
+                onClick={props.onClick}
+                >
                 {props.children}
          </button>
          ;
-    }
-
-
-/* Se propriedade isDelete é verdadeira, então
-    retorna somente o className "definition", não
-    envolvendo outras classes do Bulma.
-*/
-function getDefinition(isDelete,definition:any){
-    if(isDelete){
-       return "delete";
-    }else{
-        var button_definition = "button "+ definition;
-        var objClassName = getClassNames(button_definition,"Button");
-        var classname =  classnames(objClassName);
-        return classname;
-    }
-}
-// caso seja informado onClick ele retorna a função retornada, senão retorna uma função vazia. Método criado para evitar problemas com undefined
-function getClickEvent(onClick){
-
-    if(typeof onClick == "function"){
-        return onClick;
-    }else{
-        return ()=> {};
-    }
-    
 }
 
+function getDefinition(props){
+    var definition = "";
 
+    if(props.delete ==  true){
+        definition = "delete";
+    }else{
+        definition = (props.definition == undefined) ? "button" : "button "+ props.definition;
+    }
+
+    return definition;
+}
 
 Button.propTypes = {
-    // definição de características do Bulma
     definition: PropTypes.string,
-    // Evento para quando clicar no botão
     onClick: PropTypes.func,
-    // Caso o botão seja do tipo delete
     delete: PropTypes.bool,
-   // permite desativar um botão
     disabled: PropTypes.bool
 };
 

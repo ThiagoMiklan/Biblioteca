@@ -1,10 +1,8 @@
 // @flow
 import React from 'react'
 import PropTypes from 'prop-types';
-import classnames from 'classnames';
-import getClassName from '../tools/getClassName';
 import Icon from './Icon';
-import checkerDefinition from '../tools/checker.js';
+
 
 
 type Props = {
@@ -18,10 +16,8 @@ type Props = {
 }
 
 const File = (props:Props)=>{
-  checkerDefinition(props.definition,"File");
-  var file_definition = (props.definition == undefined)? "file": "file "+props.definition;
-  var definition= classnames(getClassName(file_definition,"File"));
-
+  var definition = (props.definition == undefined)? "file": "file "+props.definition;
+  
     return <div className={definition}>
     <label className="file-label">
       <input onChange={props.onChange} className="file-input" type="file" ref={props.ref}/>

@@ -1,28 +1,45 @@
-import React from 'react';
+import React,{useState,useEffect,useReducer}from 'react';
 import ReactDOM from 'react-dom';
-import Table from './biblioteca/Table.jsx';
-import 'bulma/css/bulma.min.css'
-var elements_header = [
-  {value:"Pos"},{value:"Team"},{value:"Pld"},{value:"W"},
-  {value:"D"},{value:"L"},{value:"GF"},{value:"GA"},
-  {value:"GD"},{value:"Pts"},{value:"Qualification or relegation"}
-]
+import ProgressBar from './biblioteca/ProgressBar';
+import 'bulma/css/bulma.css' 
 
-var elements_footer =  elements_header;
+function reducer(state, action) {
+  switch (action.type) {
+    case 'increment':
+      return {value: state.value + 1};
+    default:
+      throw new Error();
+  }
+}
 
 
-//2	Arsenal	38	20	11	7	65	36	+29	71	Qualification for the Champions League group stage
-var elements_body  = [
-  {Pos:"2",team:"Arsenal",pld:"38",w:"20",
-  D:"11",L:"7",GF:"65",GA:"36",
-  GD:"+29",Pts:"71",Quali:"Qualification for the Champions League group stage"}
-]
+const ProgressHook = (props)=>{
+  var initial = {value: 0};
+  const [state, dispatch] = useReducer(reducer, initial);
 
+  useEffect(() => {
+    setInterval(() => {
+      dispatch({ type: 'increment' })
+    }, 1000)
+  }, []);
+  
+
+  return <ProgressBar definition ="progress" value ={state.value} max ="100"/> 
+}
 
 ReactDOM.render(
-    <Table definition="bordered striped narrow fullwidth" header_definition="background-grey"
-    itens_header={elements_header}
-    itens_body={elements_body} />,
-           
-   document.getElementById('root')
-  );
+    <div class="container is-fluid">
+      <ProgressHook/>
+      <ProgressBar value ="15" max ="100"/>
+      <ProgressBar definition ="is-primary" value ="15" max ="100"/>
+      <ProgressBar definition ="is-link" value ="30" max ="100"/>
+      <ProgressBar definition ="is-info" value ="45" max ="100"/>
+      <ProgressBar definition ="is-sucess" value ="60" max ="100"/>
+      <ProgressBar definition ="is-warning" value ="75" max ="100"/>
+      <ProgressBar definition ="is-danger" value ="90" max ="100"/>
+      <ProgressBar definition ="is-small" value ="15" max="100"/>
+      <ProgressBar definition ="is-medium" value ="15" max="100"/>
+      <ProgressBar definition ="is-large" value ="15" max="100"/>
+    </div>,document.getElementById('root')
+ );
+

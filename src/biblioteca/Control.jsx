@@ -1,14 +1,6 @@
 // @flow
 import * as React from 'react'
 import PropTypes from 'prop-types';
-import classnames from 'classnames';
-import getClassName from '../tools/getClassName';
-import checkerDefinition from '../tools/checker.js';
-
-/*
-    - Componente que funciona como container
-    - Sem eventos
-*/
 
 type Props ={
     definition?:string,
@@ -16,9 +8,8 @@ type Props ={
 }
 
 const Control = (props:Props)=>{
-    checkerDefinition(props.definition,"Control");
+    var definition = (props.definition ==  undefined || props.definition == '') ? "control icons-left": "control "+props.definition
     
-    var definition = getDefinition(props.definition);
     return(
         <div className={definition}>
               {
@@ -30,17 +21,7 @@ const Control = (props:Props)=>{
     );
 }
 
-function getDefinition(definition){
-    if(definition == undefined || definition == ''){
-        return classnames(getClassName("control icons-left","Control"));
-    }else{
-        return classnames(getClassName("control "+ definition,"Control"));
-    }
-}
-
-
 Control.propTypes = {
-    // Características do Bulma 
     definition: PropTypes.string
 }
 

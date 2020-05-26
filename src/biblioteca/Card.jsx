@@ -5,6 +5,7 @@ import Image from './Image';
 import classnames from 'classnames';
 import getClassName from '../tools/getClassName';
 import Icon from './Icon';
+import checkerDefinition from '../tools/checker.js';
 
 type Props ={
     title?:string,
@@ -25,6 +26,8 @@ type Props ={
 }
 
 const Card = (props:Props) => {
+    checkerDefinition(props.definition,"Card");
+
     // se title for undefined não tem motivo para criar header
     // se src for undefined não tem motivo para criar card image
     // se itens_footer for undefined não tem pq criar footer

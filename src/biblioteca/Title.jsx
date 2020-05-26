@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import classnames from 'classnames';
-import getClassName from '../tools/getClassName'
+
 
 
 
@@ -116,9 +115,9 @@ function mapFunctionsTitle(){
 function getDefinition(props){
     var definition = "";
     if(props.spaced ==  true){
-     definition = classnames(getClassName("title " +props.definition+ " spaced", "Title"));
+     definition = "title is-" +String(props.definition)+ " spaced";
     }else{
-     definition = classnames(getClassName("title "+String(props.definition), "Title"));
+     definition = "title is-"+String(props.definition);
     }
 
     return definition;

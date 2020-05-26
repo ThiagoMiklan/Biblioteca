@@ -7,8 +7,9 @@ type Props = {
 }
 
 const Menu = (props:Props) =>{
+    var definition = (props.definition == undefined) ? "menu" : "menu "+ props.definition;
         return(
-            <aside class="menu">
+            <aside className={definition}>
               {props.children}
             </aside>
         );

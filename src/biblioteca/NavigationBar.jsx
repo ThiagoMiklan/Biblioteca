@@ -1,9 +1,7 @@
 // @flow
 import React from 'react';
 import PropTypes from 'prop-types';
-import classnames from 'classnames';
-import getClassName from '../tools/getClassName';
-import checkerDefinition from '../tools/checker.js';
+
 /*
 Existem algumas maneira de fornecer os itens de "start" e "end" ao usar o presente componente 
 1 - Fornecer através da props itens_start ou itens_end um objeto contendo um atributo "value"
@@ -31,8 +29,7 @@ type Props = {
 }
 
 const NavigationBar = (props:Props)=>{
-    checkerDefinition(props.definition,"NavigationBar");
-    var definition="navbar " + classnames(getClassName(props.definition,"NavigationBar"));
+  var definition=(props.definition == undefined) ? "navbar": "navbar "+props.definition;
         return (
             <nav className={definition}>
                 
@@ -123,10 +120,8 @@ function assembleFirstItemDropDown(item) {
 }
 
 function assembleItem(item, definition) {
-    var className = "navbar-item "+ classnames(getClassName(item["definition"], "NavigationBar"));
-    var x = item["value"];
-    var item_code = <a onClick={item["onClick"]} className={className}>{item["value"]}</a>;
-  
+    var def = "navbar-item "+ item["definition"];
+    var item_code = <a onClick={item["onClick"]} className={def}>{item["value"]}</a>;
     return item_code;
 }
 

@@ -1,0 +1,178 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`input colors 1`] = `
+Array [
+  <div
+    className="control"
+  >
+    <input
+      className="input is-primary"
+      placeholder="Primary input"
+      type="password"
+    />
+  </div>,
+  <div
+    className="control"
+  >
+    <input
+      className="input is-info"
+      placeholder="Info input"
+      type="text"
+    />
+  </div>,
+  <div
+    className="control"
+  >
+    <input
+      className="input is-success"
+      placeholder="Success input"
+      type="text"
+    />
+  </div>,
+  <div
+    className="control"
+  >
+    <input
+      className="input is-warning"
+      placeholder="Warning input"
+      type="text"
+    />
+  </div>,
+  <div
+    className="control"
+  >
+    <input
+      className="input is-danger"
+      placeholder="Danger input"
+      type="text"
+    />
+  </div>,
+]
+`;
+
+exports[`input disabled 1`] = `
+<div
+  className="control is-loading is-large"
+>
+  <div
+    className="control"
+  >
+    <input
+      className="input is-loading is-large"
+      disabled={true}
+      placeholder="Loading input large"
+      type="text"
+    />
+  </div>
+</div>
+`;
+
+exports[`input loading sizes 1`] = `
+Array [
+  <div
+    className="control is-loading is-small"
+  >
+    <div
+      className="control"
+    >
+      <input
+        className="input is-loading is-small"
+        placeholder="Loading input small"
+        type="text"
+      />
+    </div>
+  </div>,
+  <div
+    className="control is-loading"
+  >
+    <div
+      className="control"
+    >
+      <input
+        className="input is-loading"
+        placeholder="Loading input normal"
+        type="text"
+      />
+    </div>
+  </div>,
+  <div
+    className="control is-loading is-medium"
+  >
+    <div
+      className="control"
+    >
+      <input
+        className="input is-loading is-medium"
+        placeholder="Loading input medium"
+        type="text"
+      />
+    </div>
+  </div>,
+  <div
+    className="control is-loading is-large"
+  >
+    <div
+      className="control"
+    >
+      <input
+        className="input is-loading is-large"
+        placeholder="Loading input large"
+        type="text"
+      />
+    </div>
+  </div>,
+]
+`;
+
+exports[`input rounded 1`] = `
+<div
+  className="control"
+>
+  <input
+    className="input is-rounded"
+    placeholder="Rounded input"
+    type="text"
+  />
+</div>
+`;
+
+exports[`input sizes 1`] = `
+Array [
+  <div
+    className="control"
+  >
+    <input
+      className="input is-small"
+      placeholder="Small input"
+      type="text"
+    />
+  </div>,
+  <div
+    className="control"
+  >
+    <input
+      className="input "
+      placeholder="Normal input"
+      type="text"
+    />
+  </div>,
+  <div
+    className="control"
+  >
+    <input
+      className="input is-medium"
+      placeholder="Medium input"
+      type="text"
+    />
+  </div>,
+  <div
+    className="control"
+  >
+    <input
+      className="input is-large"
+      placeholder="Large input"
+      type="text"
+    />
+  </div>,
+]
+`;

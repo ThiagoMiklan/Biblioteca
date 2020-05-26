@@ -1,10 +1,6 @@
 // @flow
 import React from 'react';
 import PropTypes from 'prop-types';
-import classnames from 'classnames';
-import getClassName from '../tools/getClassName'
-import checkerDefinition from '../tools/checker.js';
-
 
 type Props = {
     onChange?: ()=> void,
@@ -14,10 +10,10 @@ type Props = {
 }
 
 const ProgressBar = (props: Props)=>{
-    checkerDefinition(props.definition,"ProgressBar");
-    var definition =  (props.definition == undefined)? "": props.definition;
+  
+    var definition =  (props.definition == undefined)? "progress": "progress "+ props.definition;
         return (
-            <progress onChange={props.onChange} className={classnames(getClassName("progress "+ definition,"ProgressBar"))}
+            <progress onChange={props.onChange} className={definition}
              max={props.max} 
              value ={props.value}>  
             </progress>

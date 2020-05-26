@@ -1,9 +1,6 @@
 // @flow
 import React from 'react';
 import PropTypes from 'prop-types';
-import classnames from 'classnames';
-import getClassName from '../tools/getClassName'
-import checkerDefinition from '../tools/checker.js';
 
 type Props = {
     definition?:string,
@@ -17,8 +14,8 @@ type Props = {
 }
 
 const Pagination = (props:Props) => {
-    checkerDefinition(props.definition,"Pagination");
-    var definition = "pagination " + classnames(getClassName(props.definition, "Pagination"));
+    
+    var definition = (props.definition == undefined) ? "pagination" : "pagination "+ props.definition;
     return (
         <nav className={definition}>
             <a className="pagination-previous" href={props.href_previous} disabled={props.previous_disabled}>{props.previous_name}</a>
@@ -44,8 +41,7 @@ function assembleItens(itens){
 }
 
 function assembleItem(item) {
-    checkerDefinition(item["definition"],"Pagination");
-    var definition =  "pagination-link "+ classnames(getClassName(item["definition"],"Pagination"));
+    var definition =  "pagination-link "+item["definition"];
     var item_code = item_code = <li><a onClick={item["onClick"]} disabled={item["disabled"]} href={item["href"]}className={definition}>{item["value"]}</a></li>;
     return item_code;
 }

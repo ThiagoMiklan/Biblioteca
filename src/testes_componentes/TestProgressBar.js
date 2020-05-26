@@ -30,16 +30,16 @@ const ProgressHook = (props)=>{
 ReactDOM.render(
     <div class="container is-fluid">
       <ProgressHook/>
-      <ProgressBar definition ="progress" value ="15" max ="100"/>
-      <ProgressBar definition ="progress primary" value ="15" max ="100"/>
-      <ProgressBar definition ="progress link" value ="30" max ="100"/>
-      <ProgressBar definition ="progress info" value ="45" max ="100"/>
-      <ProgressBar definition ="progress sucess" value ="60" max ="100"/>
-      <ProgressBar definition ="progress warning" value ="75" max ="100"/>
-      <ProgressBar definition ="progress danger" value ="90" max ="100"/>
-      <ProgressBar definition ="progress small" value ="15" max="100"/>
-      <ProgressBar definition ="progress medium" value ="15" max="100"/>
-      <ProgressBar definition ="progress large" value ="15" max="100"/>
+      <ProgressBar value ="15" max ="100"/>
+      <ProgressBar definition ="is-primary" value ="15" max ="100"/>
+      <ProgressBar definition ="is-link" value ="30" max ="100"/>
+      <ProgressBar definition ="is-info" value ="45" max ="100"/>
+      <ProgressBar definition ="is-sucess" value ="60" max ="100"/>
+      <ProgressBar definition ="is-warning" value ="75" max ="100"/>
+      <ProgressBar definition ="is-danger" value ="90" max ="100"/>
+      <ProgressBar definition ="is-small" value ="15" max="100"/>
+      <ProgressBar definition ="is-medium" value ="15" max="100"/>
+      <ProgressBar definition ="is-large" value ="15" max="100"/>
     </div>,document.getElementById('root')
  );
 

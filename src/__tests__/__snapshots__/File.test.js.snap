@@ -8,11 +8,10 @@ exports[`test files 1`] = `
     className="file"
   >
     <label
-      class="file-label"
+      className="file-label"
     >
       <input
-        class="file-input"
-        onChange={[Function]}
+        className="file-input"
         type="file"
       />
       <span
@@ -28,7 +27,7 @@ exports[`test files 1`] = `
           />
         </span>
         <span
-          class="file-label"
+          className="file-label"
         >
           Choose a File
         </span>
@@ -40,10 +39,10 @@ exports[`test files 1`] = `
     className="file has-name"
   >
     <label
-      class="file-label"
+      className="file-label"
     >
       <input
-        class="file-input"
+        className="file-input"
         type="file"
       />
       <span
@@ -59,7 +58,7 @@ exports[`test files 1`] = `
           />
         </span>
         <span
-          class="file-label"
+          className="file-label"
         >
           Choose File
         </span>
@@ -76,10 +75,10 @@ exports[`test files 1`] = `
     className="file has-name is-right"
   >
     <label
-      class="file-label"
+      className="file-label"
     >
       <input
-        class="file-input"
+        className="file-input"
         type="file"
       />
       <span
@@ -95,7 +94,7 @@ exports[`test files 1`] = `
           />
         </span>
         <span
-          class="file-label"
+          className="file-label"
         >
           Choose File
         </span>
@@ -112,10 +111,10 @@ exports[`test files 1`] = `
     className="file has-name is-fullwidth"
   >
     <label
-      class="file-label"
+      className="file-label"
     >
       <input
-        class="file-input"
+        className="file-input"
         type="file"
       />
       <span
@@ -131,7 +130,7 @@ exports[`test files 1`] = `
           />
         </span>
         <span
-          class="file-label"
+          className="file-label"
         >
           Choose File
         </span>
@@ -148,10 +147,10 @@ exports[`test files 1`] = `
     className="file is-boxed"
   >
     <label
-      class="file-label"
+      className="file-label"
     >
       <input
-        class="file-input"
+        className="file-input"
         type="file"
       />
       <span
@@ -167,7 +166,7 @@ exports[`test files 1`] = `
           />
         </span>
         <span
-          class="file-label"
+          className="file-label"
         >
           Choose a File
         </span>
@@ -179,10 +178,10 @@ exports[`test files 1`] = `
     className="file is-boxed has-name"
   >
     <label
-      class="file-label"
+      className="file-label"
     >
       <input
-        class="file-input"
+        className="file-input"
         type="file"
       />
       <span
@@ -198,7 +197,7 @@ exports[`test files 1`] = `
           />
         </span>
         <span
-          class="file-label"
+          className="file-label"
         >
           Choose a File
         </span>
@@ -215,10 +214,10 @@ exports[`test files 1`] = `
     className="file is-primary"
   >
     <label
-      class="file-label"
+      className="file-label"
     >
       <input
-        class="file-input"
+        className="file-input"
         type="file"
       />
       <span
@@ -234,22 +233,22 @@ exports[`test files 1`] = `
           />
         </span>
         <span
-          class="file-label"
+          className="file-label"
         >
-          Choose a File
+          Primary File
         </span>
       </span>
     </label>
   </div>
   <br />
   <div
-    className="file has-name is-info"
+    className="file is-info has-name"
   >
     <label
-      class="file-label"
+      className="file-label"
     >
       <input
-        class="file-input"
+        className="file-input"
         type="file"
       />
       <span
@@ -265,9 +264,9 @@ exports[`test files 1`] = `
           />
         </span>
         <span
-          class="file-label"
+          className="file-label"
         >
-          Choose File
+          Info File
         </span>
       </span>
       <span
@@ -279,13 +278,13 @@ exports[`test files 1`] = `
   </div>
   <br />
   <div
-    className="file is-boxed is-warning"
+    className="file is-warning is-boxed"
   >
     <label
-      class="file-label"
+      className="file-label"
     >
       <input
-        class="file-input"
+        className="file-input"
         type="file"
       />
       <span
@@ -301,7 +300,7 @@ exports[`test files 1`] = `
           />
         </span>
         <span
-          class="file-label"
+          className="file-label"
         >
           Choose a File
         </span>
@@ -310,13 +309,13 @@ exports[`test files 1`] = `
   </div>
   <br />
   <div
-    className="file is-boxed has-name is-danger"
+    className="file is-danger has-name is-medium is-boxed"
   >
     <label
-      class="file-label"
+      className="file-label"
     >
       <input
-        class="file-input"
+        className="file-input"
         type="file"
       />
       <span
@@ -324,7 +323,7 @@ exports[`test files 1`] = `
       >
         <span />
         <span
-          className="icon has-text-info"
+          className="icon"
         >
           <i
             aria-hidden="true"
@@ -332,9 +331,616 @@ exports[`test files 1`] = `
           />
         </span>
         <span
-          class="file-label"
+          className="file-label"
         >
           Choose a File
+        </span>
+      </span>
+      <span
+        className="file-name"
+      >
+        Screenshot 2020/01/01
+      </span>
+    </label>
+  </div>
+  <br />
+  <div
+    className="file is-small"
+  >
+    <label
+      className="file-label"
+    >
+      <input
+        className="file-input"
+        type="file"
+      />
+      <span
+        className="file-cta"
+      >
+        <span />
+        <span
+          className="icon"
+        >
+          <i
+            aria-hidden="true"
+            className="fas fa-upload"
+          />
+        </span>
+        <span
+          className="file-label"
+        >
+          Smalll File
+        </span>
+      </span>
+    </label>
+  </div>
+  <br />
+  <div
+    className="file"
+  >
+    <label
+      className="file-label"
+    >
+      <input
+        className="file-input"
+        type="file"
+      />
+      <span
+        className="file-cta"
+      >
+        <span />
+        <span
+          className="icon"
+        >
+          <i
+            aria-hidden="true"
+            className="fas fa-upload"
+          />
+        </span>
+        <span
+          className="file-label"
+        >
+          Normal File
+        </span>
+      </span>
+    </label>
+  </div>
+  <br />
+  <div
+    className="file is-medium"
+  >
+    <label
+      className="file-label"
+    >
+      <input
+        className="file-input"
+        type="file"
+      />
+      <span
+        className="file-cta"
+      >
+        <span />
+        <span
+          className="icon"
+        >
+          <i
+            aria-hidden="true"
+            className="fas fa-upload"
+          />
+        </span>
+        <span
+          className="file-label"
+        >
+          Medium File
+        </span>
+      </span>
+    </label>
+  </div>
+  <br />
+  <div
+    className="file is-large"
+  >
+    <label
+      className="file-label"
+    >
+      <input
+        className="file-input"
+        type="file"
+      />
+      <span
+        className="file-cta"
+      >
+        <span />
+        <span
+          className="icon"
+        >
+          <i
+            aria-hidden="true"
+            className="fas fa-upload"
+          />
+        </span>
+        <span
+          className="file-label"
+        >
+          Large File
+        </span>
+      </span>
+    </label>
+  </div>
+  <br />
+  <div
+    className="file is-small has-name"
+  >
+    <label
+      className="file-label"
+    >
+      <input
+        className="file-input"
+        type="file"
+      />
+      <span
+        className="file-cta"
+      >
+        <span />
+        <span
+          className="icon"
+        >
+          <i
+            aria-hidden="true"
+            className="fas fa-upload"
+          />
+        </span>
+        <span
+          className="file-label"
+        >
+          Smalll File
+        </span>
+      </span>
+      <span
+        className="file-name"
+      >
+        Screenshot 2020/01/01
+      </span>
+    </label>
+  </div>
+  <br />
+  <div
+    className="file has-name"
+  >
+    <label
+      className="file-label"
+    >
+      <input
+        className="file-input"
+        type="file"
+      />
+      <span
+        className="file-cta"
+      >
+        <span />
+        <span
+          className="icon"
+        >
+          <i
+            aria-hidden="true"
+            className="fas fa-upload"
+          />
+        </span>
+        <span
+          className="file-label"
+        >
+          Normal File
+        </span>
+      </span>
+      <span
+        className="file-name"
+      >
+        Screenshot 2020/01/01
+      </span>
+    </label>
+  </div>
+  <br />
+  <div
+    className="file is-medium has-name"
+  >
+    <label
+      className="file-label"
+    >
+      <input
+        className="file-input"
+        type="file"
+      />
+      <span
+        className="file-cta"
+      >
+        <span />
+        <span
+          className="icon"
+        >
+          <i
+            aria-hidden="true"
+            className="fas fa-upload"
+          />
+        </span>
+        <span
+          className="file-label"
+        >
+          Medium File
+        </span>
+      </span>
+      <span
+        className="file-name"
+      >
+        Screenshot 2020/01/01
+      </span>
+    </label>
+  </div>
+  <br />
+  <div
+    className="file is-large has-name"
+  >
+    <label
+      className="file-label"
+    >
+      <input
+        className="file-input"
+        type="file"
+      />
+      <span
+        className="file-cta"
+      >
+        <span />
+        <span
+          className="icon"
+        >
+          <i
+            aria-hidden="true"
+            className="fas fa-upload"
+          />
+        </span>
+        <span
+          className="file-label"
+        >
+          Large File
+        </span>
+      </span>
+      <span
+        className="file-name"
+      >
+        Screenshot 2020/01/01
+      </span>
+    </label>
+  </div>
+  <br />
+  <div
+    className="file is-small is-boxed"
+  >
+    <label
+      className="file-label"
+    >
+      <input
+        className="file-input"
+        type="file"
+      />
+      <span
+        className="file-cta"
+      >
+        <span />
+        <span
+          className="icon"
+        >
+          <i
+            aria-hidden="true"
+            className="fas fa-upload"
+          />
+        </span>
+        <span
+          className="file-label"
+        >
+          Smalll File
+        </span>
+      </span>
+    </label>
+  </div>
+  <br />
+  <div
+    className="file is-boxed"
+  >
+    <label
+      className="file-label"
+    >
+      <input
+        className="file-input"
+        type="file"
+      />
+      <span
+        className="file-cta"
+      >
+        <span />
+        <span
+          className="icon"
+        >
+          <i
+            aria-hidden="true"
+            className="fas fa-upload"
+          />
+        </span>
+        <span
+          className="file-label"
+        >
+          Normal File
+        </span>
+      </span>
+    </label>
+  </div>
+  <br />
+  <div
+    className="file is-medium is-boxed"
+  >
+    <label
+      className="file-label"
+    >
+      <input
+        className="file-input"
+        type="file"
+      />
+      <span
+        className="file-cta"
+      >
+        <span />
+        <span
+          className="icon"
+        >
+          <i
+            aria-hidden="true"
+            className="fas fa-upload"
+          />
+        </span>
+        <span
+          className="file-label"
+        >
+          Medium File
+        </span>
+      </span>
+    </label>
+  </div>
+  <br />
+  <div
+    className="file is-large is-boxed"
+  >
+    <label
+      className="file-label"
+    >
+      <input
+        className="file-input"
+        type="file"
+      />
+      <span
+        className="file-cta"
+      >
+        <span />
+        <span
+          className="icon"
+        >
+          <i
+            aria-hidden="true"
+            className="fas fa-upload"
+          />
+        </span>
+        <span
+          className="file-label"
+        >
+          Large File
+        </span>
+      </span>
+    </label>
+  </div>
+  <br />
+  <div
+    className="file is-small has-name is-boxed"
+  >
+    <label
+      className="file-label"
+    >
+      <input
+        className="file-input"
+        type="file"
+      />
+      <span
+        className="file-cta"
+      >
+        <span />
+        <span
+          className="icon"
+        >
+          <i
+            aria-hidden="true"
+            className="fas fa-upload"
+          />
+        </span>
+        <span
+          className="file-label"
+        >
+          Smalll File
+        </span>
+      </span>
+      <span
+        className="file-name"
+      >
+        Screenshot 2020/01/01
+      </span>
+    </label>
+  </div>
+  <br />
+  <div
+    className="file has-name is-boxed"
+  >
+    <label
+      className="file-label"
+    >
+      <input
+        className="file-input"
+        type="file"
+      />
+      <span
+        className="file-cta"
+      >
+        <span />
+        <span
+          className="icon"
+        >
+          <i
+            aria-hidden="true"
+            className="fas fa-upload"
+          />
+        </span>
+        <span
+          className="file-label"
+        >
+          Normal File
+        </span>
+      </span>
+      <span
+        className="file-name"
+      >
+        Screenshot 2020/01/01
+      </span>
+    </label>
+  </div>
+  <br />
+  <div
+    className="file is-medium has-name is-boxed"
+  >
+    <label
+      className="file-label"
+    >
+      <input
+        className="file-input"
+        type="file"
+      />
+      <span
+        className="file-cta"
+      >
+        <span />
+        <span
+          className="icon"
+        >
+          <i
+            aria-hidden="true"
+            className="fas fa-upload"
+          />
+        </span>
+        <span
+          className="file-label"
+        >
+          Medium File
+        </span>
+      </span>
+      <span
+        className="file-name"
+      >
+        Screenshot 2020/01/01
+      </span>
+    </label>
+  </div>
+  <br />
+  <div
+    className="file is-large has-name is-boxed"
+  >
+    <label
+      className="file-label"
+    >
+      <input
+        className="file-input"
+        type="file"
+      />
+      <span
+        className="file-cta"
+      >
+        <span />
+        <span
+          className="icon"
+        >
+          <i
+            aria-hidden="true"
+            className="fas fa-upload"
+          />
+        </span>
+        <span
+          className="file-label"
+        >
+          Large File
+        </span>
+      </span>
+      <span
+        className="file-name"
+      >
+        Screenshot 2020/01/01
+      </span>
+    </label>
+  </div>
+  <br />
+  <div
+    className="file is-success has-name is-boxed is-centered"
+  >
+    <label
+      className="file-label"
+    >
+      <input
+        className="file-input"
+        type="file"
+      />
+      <span
+        className="file-cta"
+      >
+        <span />
+        <span
+          className="icon"
+        >
+          <i
+            aria-hidden="true"
+            className="fas fa-upload"
+          />
+        </span>
+        <span
+          className="file-label"
+        >
+          Large File
+        </span>
+      </span>
+      <span
+        className="file-name"
+      >
+        Screenshot 2020/01/01
+      </span>
+    </label>
+  </div>
+  <div
+    className="file is-info has-name is-right"
+  >
+    <label
+      className="file-label"
+    >
+      <input
+        className="file-input"
+        type="file"
+      />
+      <span
+        className="file-cta"
+      >
+        <span />
+        <span
+          className="icon"
+        >
+          <i
+            aria-hidden="true"
+            className="fas fa-upload"
+          />
+        </span>
+        <span
+          className="file-label"
+        >
+          Large File
         </span>
       </span>
       <span

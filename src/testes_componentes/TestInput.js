@@ -1,31 +1,31 @@
 import React, { useState } from 'react';
 import ReactDOM from 'react-dom';
- 
-import Input from './biblioteca/form/Input'
-import Icon from './biblioteca/elements/Icon';
+import 'bulma/css/bulma.css';
+import Input from './biblioteca/Input'
+import Icon from './biblioteca/Icon';
 
 ReactDOM.render( 
-    <div className="containe is-fluid">
-    <Input definition="primary" type="password" placeholder="Primary input"/>
-    <Input definition="info" type="text" placeholder="Info input"/>
-    <Input definition="success" type="text" placeholder="Success input"/>
-    <Input definition="warning" type="text" placeholder="Warning input"/>
-    <Input definition="danger" type="text" placeholder="Danger input"/>
+    <div className="container is-fluid">
+    <Input definition="is-primary" type="password" placeholder="Primary input"/>
+    <Input definition="is-info" type="text" placeholder="Info input"/>
+    <Input definition="is-success" type="text" placeholder="Success input"/>
+    <Input definition="is-warning" type="text" placeholder="Warning input"/>
+    <Input definition="is-danger" type="text" placeholder="Danger input"/>
     <br></br>
-    <Input definition="small" type="text" placeholder="Small input"/>
-    <Input definition="normal" type="text" placeholder="Normal input"/>
-    <Input definition="medium" type="text" placeholder="Medium input"/>
-    <Input definition="large" type="text" placeholder="Large input"/>
+    <Input definition="is-small" type="text" placeholder="Small input"/>
+    <Input definition="is-normal" type="text" placeholder="Normal input"/>
+    <Input definition="is-medium" type="text" placeholder="Medium input"/>
+    <Input definition="is-large" type="text" placeholder="Large input"/>
     <br></br>
-    <Input definition="rounded" type="text" placeholder="Rounded input"/>
-    <Input definition="focused" type="text" placeholder="Loading input"/>
-    <Input definition="loading small" type="text" placeholder="Loading input small" loading={true}/>
-    <Input definition="loading" type="text" placeholder="Loading input normal" loading={true}/>
-    <Input definition="loading medium" type="text" placeholder="Loading input medium" loading={true}/>
-    <Input definition="loading large" type="text" placeholder="Loading input large" loading={true}/>
+    <Input definition="is-rounded" type="text" placeholder="Rounded input"/>
+    <Input definition="is-focused" type="text" placeholder="Loading input"/>
+    <Input definition="is-loading is-small" type="text" placeholder="Loading input small" />
+    <Input definition="is-loading" type="text" placeholder="Loading input normal"/>
+    <Input definition="is-loading is-medium" type="text" placeholder="Loading input medium" />
+    <Input definition="is-loading is-large" type="text" placeholder="Loading input large"/>
 
-    <Input definition="loading large" type="text" placeholder="Loading input large" loading={true} disabled={true}/>
-    <Input definition="loading large" type="text" value="Loading input large" loading={true}  icon={<Icon definition="icon is-small is-left" icon="fas fa-envelope"/>}/>
+    <Input definition="is-loading is-large" type="text" placeholder="Loading input large" disabled={true}/>
+    <Input definition="is-loading is-large" type="text" value="Loading input large" icon={<Icon definition="icon is-small is-left" icon="fas fa-envelope"/>}/>
 
 
     

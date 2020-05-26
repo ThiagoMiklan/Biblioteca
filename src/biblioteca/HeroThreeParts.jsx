@@ -1,13 +1,7 @@
 // @flow
 import * as React from 'react';
-import classnames from 'classnames';
-import getClassName from '../tools/getClassName';
 import PropTypes from 'prop-types';
 import {InvalidNumberChilds,assembleDefaultMessage} from '../exception/InvalidNumberChilds';
-import checkerDefinition from '../tools/checker.js';
-
-
-
 // Com filhos
 // Sem eventos
 // Especialização do componente Hero
@@ -40,8 +34,7 @@ function assemble(childrens,props){
 }
 // recebe a props e junto com os filhos monta head,body e footer
 function assembleThreePartsHero(props,childrens){
-    var hero_definition = (props.definition ==  undefined) ? "": props.definition;
-    var definition =  classnames(getClassName("hero "+ hero_definition,"Hero"));
+    var definition = (props.definition ==  undefined) ? "hero": "hero "+props.definition;
     return (
         <section className={definition}>
             <div class="hero-head">

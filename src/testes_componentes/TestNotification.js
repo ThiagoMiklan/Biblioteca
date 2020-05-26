@@ -17,37 +17,37 @@ ReactDOM.render(
       consectetur adipiscing elit
   </Notification>
 
-  <Notification definition="primary" delete={true} onClickDelete={onClick}>
+  <Notification definition="is-primary" delete={true} onClickDelete={onClick}>
       Lorem ipsum dolor sit amet, consectetur
       adipiscing elit lorem ipsum dolor. <strong>Pellentesque risus mi</strong>, tempus quis placerat ut, porta nec nulla. Vestibulum rhoncus ac ex sit amet fringilla. Nullam gravida purus diam, et dictum <a>felis venenatis</a> efficitur. Sit amet,
       consectetur adipiscing elit
   </Notification>
 
-  <Notification definition="link" delete={true} onClickDelete={onClick}>
+  <Notification definition="is-link" delete={true} onClickDelete={onClick}>
     Lorem ipsum dolor sit amet, consectetur
     adipiscing elit lorem ipsum dolor. <strong>Pellentesque risus mi</strong>, tempus quis placerat ut, porta nec nulla. Vestibulum rhoncus ac ex sit amet fringilla. Nullam gravida purus diam, et dictum <a>felis venenatis</a> efficitur. Sit amet,
     consectetur adipiscing elit
   </Notification>
 
-  <Notification definition="info" delete={true} onClickDelete={onClick}>
+  <Notification definition="is-info" delete={true} onClickDelete={onClick}>
     Lorem ipsum dolor sit amet, consectetur
     adipiscing elit lorem ipsum dolor. <strong>Pellentesque risus mi</strong>, tempus quis placerat ut, porta nec nulla. Vestibulum rhoncus ac ex sit amet fringilla. Nullam gravida purus diam, et dictum <a>felis venenatis</a> efficitur. Sit amet,
     consectetur adipiscing elit
   </Notification>
 
-  <Notification definition="success" delete={true} onClickDelete={onClick}>
+  <Notification definition="is-success" delete={true} onClickDelete={onClick}>
       Lorem ipsum dolor sit amet, consectetur
       adipiscing elit lorem ipsum dolor. <strong>Pellentesque risus mi</strong>, tempus quis placerat ut, porta nec nulla. Vestibulum rhoncus ac ex sit amet fringilla. Nullam gravida purus diam, et dictum <a>felis venenatis</a> efficitur. Sit amet,
       consectetur adipiscing elit
   </Notification>
 
-  <Notification definition="warning" delete={true} onClickDelete={onClick}>
+  <Notification definition="is-warning" delete={true} onClickDelete={onClick}>
       Lorem ipsum dolor sit amet, consectetur
       adipiscing elit lorem ipsum dolor. <strong>Pellentesque risus mi</strong>, tempus quis placerat ut, porta nec nulla. Vestibulum rhoncus ac ex sit amet fringilla. Nullam gravida purus diam, et dictum <a>felis venenatis</a> efficitur. Sit amet,
       consectetur adipiscing elit
   </Notification>
 
-  <Notification definition="danger" delete={true} onClickDelete={onClick}>
+  <Notification definition="is-danger" delete={true} onClickDelete={onClick}>
         Lorem ipsum dolor sit amet, consectetur
         adipiscing elit lorem ipsum dolor. <strong>Pellentesque risus mi</strong>, tempus quis placerat ut, porta nec nulla. Vestibulum rhoncus ac ex sit amet fringilla. Nullam gravida purus diam, et dictum <a>felis venenatis</a> efficitur. Sit amet,
         consectetur adipiscing elit
@@ -55,37 +55,37 @@ ReactDOM.render(
 
   
 
- <Notification definition="primary light" delete={true} onClickDelete={onClick}>
+ <Notification definition="is-primary is-light" delete={true} onClickDelete={onClick}>
       Lorem ipsum dolor sit amet, consectetur
       adipiscing elit lorem ipsum dolor. <strong>Pellentesque risus mi</strong>, tempus quis placerat ut, porta nec nulla. Vestibulum rhoncus ac ex sit amet fringilla. Nullam gravida purus diam, et dictum <a>felis venenatis</a> efficitur. Sit amet,
       consectetur adipiscing elit
   </Notification>
 
-  <Notification definition="link light" delete={true} onClickDelete={onClick}>
+  <Notification definition="is-link is-light" delete={true} onClickDelete={onClick}>
     Lorem ipsum dolor sit amet, consectetur
     adipiscing elit lorem ipsum dolor. <strong>Pellentesque risus mi</strong>, tempus quis placerat ut, porta nec nulla. Vestibulum rhoncus ac ex sit amet fringilla. Nullam gravida purus diam, et dictum <a>felis venenatis</a> efficitur. Sit amet,
     consectetur adipiscing elit
   </Notification>
 
-  <Notification definition="info light" delete={true} onClickDelete={onClick}>
+  <Notification definition="is-info is-light" delete={true} onClickDelete={onClick}>
     Lorem ipsum dolor sit amet, consectetur
     adipiscing elit lorem ipsum dolor. <strong>Pellentesque risus mi</strong>, tempus quis placerat ut, porta nec nulla. Vestibulum rhoncus ac ex sit amet fringilla. Nullam gravida purus diam, et dictum <a>felis venenatis</a> efficitur. Sit amet,
     consectetur adipiscing elit
   </Notification>
 
-  <Notification definition="success light" delete={true} onClickDelete={onClick}>
+  <Notification definition="is-success is-light" delete={true} onClickDelete={onClick}>
       Lorem ipsum dolor sit amet, consectetur
       adipiscing elit lorem ipsum dolor. <strong>Pellentesque risus mi</strong>, tempus quis placerat ut, porta nec nulla. Vestibulum rhoncus ac ex sit amet fringilla. Nullam gravida purus diam, et dictum <a>felis venenatis</a> efficitur. Sit amet,
       consectetur adipiscing elit
   </Notification>
 
-  <Notification definition="warning light" delete={true} onClickDelete={onClick}>
+  <Notification definition="is-warning is-light" delete={true} onClickDelete={onClick}>
       Lorem ipsum dolor sit amet, consectetur
       adipiscing elit lorem ipsum dolor. <strong>Pellentesque risus mi</strong>, tempus quis placerat ut, porta nec nulla. Vestibulum rhoncus ac ex sit amet fringilla. Nullam gravida purus diam, et dictum <a>felis venenatis</a> efficitur. Sit amet,
       consectetur adipiscing elit
   </Notification>
 
-  <Notification definition="danger light" delete={true} onClickDelete={onClick}>
+  <Notification definition="is-danger is-light" delete={true} onClickDelete={onClick}>
         Lorem ipsum dolor sit amet, consectetur
         adipiscing elit lorem ipsum dolor. <strong>Pellentesque risus mi</strong>, tempus quis placerat ut, porta nec nulla. Vestibulum rhoncus ac ex sit amet fringilla. Nullam gravida purus diam, et dictum <a>felis venenatis</a> efficitur. Sit amet,
         consectetur adipiscing elit
@@ -101,4 +101,3 @@ ReactDOM.render(
 </>
 ,
 document.getElementById("root"))
-s

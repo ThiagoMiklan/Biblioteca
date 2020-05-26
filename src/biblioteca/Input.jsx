@@ -1,23 +1,18 @@
 // @flow
 import React, { useState } from 'react'
 import PropTypes from 'prop-types';
-import classnames from 'classnames';
-import getClassName from '../tools/getClassName';
-import checkerDefinition from '../tools/checker.js';
 
 type Props = {
     definition?: string,
     type?: string,
     placeholder?: string,
     value?: string,
-    loading?: bool,
     readonly?: bool,
     disabled?: bool,
     onChangeEvent?: () => void
 }
 
 const Input = (props: Props) => {
-    checkerDefinition(props.definition, "Input");
     return (
         assemble(props)
     );
@@ -27,7 +22,7 @@ function assemble(props) {
     var code = "";
 
     if (props.definition != undefined) {
-        if (props.definition.includes("loading")) {
+        if (props.definition.includes("is-loading")) {
             code = assembleInputLoading(props);
         }else{
             code = assembleInput(props);
@@ -41,7 +36,7 @@ function assemble(props) {
 }
 function assembleInputLoading(props) {
     var definition_input = (props.definition == undefined) ? "" : props.definition;
-    var definition = 'control ' + classnames(getClassName(definition_input + " loading", "Input"));
+    var definition = 'control '+ definition_input;
     return <div className={definition}>
         {assembleInput(props)}
 
@@ -50,7 +45,7 @@ function assembleInputLoading(props) {
 
 function assembleInput(props) {
     var input_code = "";
-    var definition = 'input ' + classnames(getClassName(props.definition, "Input"));
+    var definition = 'input ' + props.definition;
 
     if (props.disabled) {
         if (props.readonly) {
@@ -81,10 +76,8 @@ Input.propTypes = {
     type: PropTypes.string.isRequired,
     placeholder: PropTypes.string,
     value: PropTypes.string,
-    loading: PropTypes.bool,
     readonly: PropTypes.bool,
     onChangeEvent: PropTypes.func
-
 };
 
 

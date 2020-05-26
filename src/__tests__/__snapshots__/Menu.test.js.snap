@@ -1,0 +1,135 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`menu 1`] = `
+<aside
+  class="menu"
+>
+  <div>
+    <p
+      class="menu-label"
+    >
+      General
+    </p>
+    <ul
+      className="menu-list"
+    >
+      <li>
+        <a
+          className=""
+        >
+          General
+        </a>
+      </li>
+      <li>
+        <a
+          className=""
+        >
+          Dashboard
+        </a>
+      </li>
+    </ul>
+  </div>
+  <div>
+    <p
+      class="menu-label"
+    >
+      Administration
+    </p>
+    <ul
+      className="menu-list"
+    >
+      <li>
+        <a
+          className=""
+        >
+          Team Settings
+        </a>
+      </li>
+      <li>
+        <a
+          className="is-active"
+        >
+           
+          Manage your team
+        </a>
+        <ul>
+          <li>
+            <a
+              className=""
+            >
+              Members
+            </a>
+          </li>
+          <li>
+            <a
+              className=""
+            >
+              Plugins
+            </a>
+          </li>
+          <li>
+            <a
+              className=""
+            >
+              Add a member
+            </a>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <a
+          className=""
+        >
+          Invitations
+        </a>
+      </li>
+      <li>
+        <a
+          className=""
+        >
+          Cloud Storage Environment Settings
+        </a>
+      </li>
+      <li>
+        <a
+          className=""
+        >
+          Authentication
+        </a>
+      </li>
+    </ul>
+  </div>
+  <div>
+    <p
+      class="menu-label"
+    >
+      Transactions
+    </p>
+    <ul
+      className="menu-list"
+    >
+      <li>
+        <a
+          className=""
+        >
+          Payments
+        </a>
+      </li>
+      <li>
+        <a
+          className=""
+        >
+          Transfer
+        </a>
+      </li>
+      <li>
+        <a
+          className=""
+        >
+          Balance
+        </a>
+      </li>
+    </ul>
+  </div>
+</aside>
+`;

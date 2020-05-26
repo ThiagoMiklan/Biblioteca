@@ -1,9 +1,6 @@
 // @flow
 import * as  React from 'react';
-import classnames from 'classnames';
-import getClassName from '../tools/getClassName';
 import PropTypes from 'prop-types';
-import checkerDefinition from '../tools/checker.js';
 
 /**
  * Componente inspirado na classe column do bulma
@@ -18,9 +15,7 @@ import checkerDefinition from '../tools/checker.js';
  }
 
 const Column = (props: Props) => {
-    var definition = (props.definition == undefined)? "": props.definition;
-    checkerDefinition(definition,"Column")
-    var definition = classnames(getClassName("column "+ definition, "Column"));
+    var definition = (props.definition == undefined) ? "column" : "column "+ props.definition;
     return (
         <div className={definition}>{props.children}</div>
     );

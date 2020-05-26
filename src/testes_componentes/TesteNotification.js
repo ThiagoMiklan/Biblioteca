@@ -10,37 +10,37 @@ var onClick = ()=>{
 ReactDOM.render(
   <div className="container is-fluid">
     <br></br>
-    <Notification delete={true}>
+    <Notification delete={true} onClickDelete ={onClick}>
     "Primar lorem ipsum dolor sit amet, consectetur
     adipiscing elit lorem ipsum dolor. <strong>Pellentesque risus mi</strong>, tempus quis placerat ut, porta nec nulla. Vestibulum rhoncus ac ex sit amet fringilla. Nullam gravida purus diam, et dictum <a>felis venenatis</a> efficitur. Sit amet,
     consectetur adipiscing elit"
     </Notification>
-    <Notification definition="primary" delete={true}>
+    <Notification definition="is-primary" delete={true}>
     "Primar lorem ipsum dolor sit amet, consectetur
     adipiscing elit lorem ipsum dolor. <strong>Pellentesque risus mi</strong>, tempus quis placerat ut, porta nec nulla. Vestibulum rhoncus ac ex sit amet fringilla. Nullam gravida purus diam, et dictum <a>felis venenatis</a> efficitur. Sit amet,
     consectetur adipiscing elit"
     </Notification>
-    <Notification definition="link" delete={true}>
+    <Notification definition="is-link" delete={true}>
     "Primar lorem ipsum dolor sit amet, consectetur
     adipiscing elit lorem ipsum dolor. <strong>Pellentesque risus mi</strong>, tempus quis placerat ut, porta nec nulla. Vestibulum rhoncus ac ex sit amet fringilla. Nullam gravida purus diam, et dictum <a>felis venenatis</a> efficitur. Sit amet,
     consectetur adipiscing elit"
     </Notification>
-    <Notification definition="info" delete={true}>
+    <Notification definition="is-info" delete={true}>
     "Primar lorem ipsum dolor sit amet, consectetur
     adipiscing elit lorem ipsum dolor. <strong>Pellentesque risus mi</strong>, tempus quis placerat ut, porta nec nulla. Vestibulum rhoncus ac ex sit amet fringilla. Nullam gravida purus diam, et dictum <a>felis venenatis</a> efficitur. Sit amet,
     consectetur adipiscing elit"
     </Notification>
-    <Notification definition="success"  delete={true}>
+    <Notification definition="is-success"  delete={true}>
     "Primar lorem ipsum dolor sit amet, consectetur
     adipiscing elit lorem ipsum dolor. <strong>Pellentesque risus mi</strong>, tempus quis placerat ut, porta nec nulla. Vestibulum rhoncus ac ex sit amet fringilla. Nullam gravida purus diam, et dictum <a>felis venenatis</a> efficitur. Sit amet,
     consectetur adipiscing elit"
     </Notification>
-    <Notification definition="warning"  delete={true}>
+    <Notification definition="is-warning"  delete={true}>
     "Primar lorem ipsum dolor sit amet, consectetur
     adipiscing elit lorem ipsum dolor. <strong>Pellentesque risus mi</strong>, tempus quis placerat ut, porta nec nulla. Vestibulum rhoncus ac ex sit amet fringilla. Nullam gravida purus diam, et dictum <a>felis venenatis</a> efficitur. Sit amet,
     consectetur adipiscing elit"
     </Notification>
-    <Notification definition="danger"  delete={true}>
+    <Notification definition="is-danger"  delete={true}>
     "Primar lorem ipsum dolor sit amet, consectetur
     adipiscing elit lorem ipsum dolor. <strong>Pellentesque risus mi</strong>, tempus quis placerat ut, porta nec nulla. Vestibulum rhoncus ac ex sit amet fringilla. Nullam gravida purus diam, et dictum <a>felis venenatis</a> efficitur. Sit amet,
     consectetur adipiscing elit"

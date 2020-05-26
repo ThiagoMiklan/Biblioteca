@@ -6,7 +6,7 @@ import Content from './biblioteca/Content';
 
 ReactDOM.render(
   <div className="container is-fluid">
-  <Content definition="small">
+  <Content definition="is-small">
             <h1>Hello World</h1>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla accumsan, metus ultrices eleifend gravida, nulla nunc varius lectus, nec rutrum justo nibh eu lectus. Ut vulputate semper dui. Fusce erat odio, sollicitudin vel erat vel, interdum mattis neque.</p>
             <h2>Second Level</h2>
@@ -28,7 +28,7 @@ ReactDOM.render(
                 </li>
             </ul>
         </Content>
-        <Content definition="medium">
+        <Content definition="is-medium">
             <h1>Hello World</h1>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla accumsan, metus ultrices eleifend gravida, nulla nunc varius lectus, nec rutrum justo nibh eu lectus. Ut vulputate semper dui. Fusce erat odio, sollicitudin vel erat vel, interdum mattis neque.</p>
             <h2>Second Level</h2>
@@ -51,7 +51,7 @@ ReactDOM.render(
             </ul>
         </Content>
 
-        <Content definition="large">
+        <Content definition="is-large">
             <h1>Hello World</h1>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla accumsan, metus ultrices eleifend gravida, nulla nunc varius lectus, nec rutrum justo nibh eu lectus. Ut vulputate semper dui. Fusce erat odio, sollicitudin vel erat vel, interdum mattis neque.</p>
             <h2>Second Level</h2>

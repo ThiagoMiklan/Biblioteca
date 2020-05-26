@@ -2,224 +2,126 @@
 
 exports[`test table 1`] = `
 <table
-  className="table"
+  className="table is-bordered is-striped is-narrow is-fullwidth"
 >
-  <thead>
+  <thead
+    className=""
+  >
     <tr>
       <th>
-        <abbr
-          title="Position"
-        >
-          Pos
-        </abbr>
+        Pos
       </th>
       <th>
-        <abbr
-          title="PLayed"
-        >
-          Pld
-        </abbr>
+        Team
       </th>
       <th>
-        <abbr
-          title="Won"
-        >
-          W
-        </abbr>
+        Pld
       </th>
       <th>
-        <abbr
-          title="Drawn"
-        >
-          D
-        </abbr>
+        W
       </th>
       <th>
-        <abbr
-          title="Lost"
-        >
-          L
-        </abbr>
+        D
       </th>
       <th>
-        <abbr
-          title="Goals for"
-        >
-          Gl
-        </abbr>
+        L
       </th>
       <th>
-        <abbr
-          title="Gaols Against"
-        >
-          GA
-        </abbr>
+        GF
       </th>
       <th>
-        <abbr
-          title="Goal diferrence"
-        >
-          GD
-        </abbr>
+        GA
       </th>
       <th>
-        <abbr
-          title="Points"
-        >
-          PTS
-        </abbr>
+        GD
       </th>
       <th>
-        Qualification or Relegation
+        Pts
+      </th>
+      <th>
+        Qualification or relegation
       </th>
     </tr>
   </thead>
-  <tfoot>
-    <tr>
-      <th>
-        <abbr
-          title="Position"
-        >
-          Pos
-        </abbr>
-      </th>
-      <th>
-        <abbr
-          title="PLayed"
-        >
-          Pld
-        </abbr>
-      </th>
-      <th>
-        <abbr
-          title="Won"
-        >
-          W
-        </abbr>
-      </th>
-      <th>
-        <abbr
-          title="Drawn"
-        >
-          D
-        </abbr>
-      </th>
-      <th>
-        <abbr
-          title="Lost"
-        >
-          L
-        </abbr>
-      </th>
-      <th>
-        <abbr
-          title="Goals for"
-        >
-          Gl
-        </abbr>
-      </th>
-      <th>
-        <abbr
-          title="Gaols Against"
-        >
-          GA
-        </abbr>
-      </th>
-      <th>
-        <abbr
-          title="Goal diferrence"
-        >
-          GD
-        </abbr>
-      </th>
-      <th>
-        <abbr
-          title="Points"
-        >
-          PTS
-        </abbr>
-      </th>
-      <th>
-        Qualification or Relegation
-      </th>
-    </tr>
-  </tfoot>
   <tbody>
-    <tr>
+    <tr
+      style={
+        Object {
+          "cursor": "pointer",
+        }
+      }
+    >
       <td>
-        1
+        2
       </td>
-      <th>
-        <a
-          href="https://en.wikipedia.org/wiki/Manchester_United_F.C."
-          title="Leicester"
-        >
-           
-          Leicester
-        </a>
-      </th>
+      <td>
+        Arsenal
+      </td>
       <td>
         38
       </td>
       <td>
-        23
+        20
       </td>
       <td>
-        12
+        11
       </td>
       <td>
-        3
+        7
       </td>
       <td>
-        6
+        65
       </td>
       <td>
         36
       </td>
       <td>
-        32
+        +29
       </td>
       <td>
-        Qualification for the Champions League Group Stage
-      </td>
-    </tr>
-    <tr>
-      <td>
-        1
-      </td>
-      <th>
-        <a
-          title="Leicester"
-        >
-           
-          Leicester
-        </a>
-      </th>
-      <td>
-        38
+        71
       </td>
       <td>
-        23
-      </td>
-      <td>
-        12
-      </td>
-      <td>
-        3
-      </td>
-      <td>
-        6
-      </td>
-      <td>
-        36
-      </td>
-      <td>
-        32
-      </td>
-      <td>
-        Qualification for the Champions League Group Stage
+        Qualification for the Champions League group stage
       </td>
     </tr>
   </tbody>
+  <tfoot>
+    <tr>
+      <th>
+        Pos
+      </th>
+      <th>
+        Team
+      </th>
+      <th>
+        Pld
+      </th>
+      <th>
+        W
+      </th>
+      <th>
+        D
+      </th>
+      <th>
+        L
+      </th>
+      <th>
+        GF
+      </th>
+      <th>
+        GA
+      </th>
+      <th>
+        GD
+      </th>
+      <th>
+        Pts
+      </th>
+      <th>
+        Qualification or relegation
+      </th>
+    </tr>
+  </tfoot>
 </table>
 `;

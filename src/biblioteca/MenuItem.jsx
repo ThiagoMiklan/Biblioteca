@@ -1,9 +1,7 @@
 // @flow
 import React from 'react';
 import PropTypes from 'prop-types';
-import classnames from 'classnames';
-import getClassName from '../tools/getClassName';
-import checkerDefinition from '../tools/checker.js';
+
 
 /*
     Menu Item foi desenvolvido para representar uma parte de um menu, 
@@ -82,15 +80,15 @@ function assembleSingleItem(item) {
     if(item["sub_itens"]!= undefined){
         item_code = decideTypeOfItem(item);
     }else{
-        checkerDefinition(item["definition"],"Menu");
-        var definition =  classnames(getClassName(item["definition"],"Menu"));
+     
+        var definition =  item["definition"];
         item_code = <li><a className={definition} onClick={item["onClick"]} >{item["value"]}</a></li>; 
     }
     return item_code;
 }
 function assembleSubItens(item){
-    checkerDefinition(item["definition"],"Menu");
-    var definition = classnames(getClassName(item["definition"],"Menu"));
+ 
+    var definition= item["definition"];
     return <li><a className={definition} onClick={item["onClick"]}>{item["value"]}</a></li>;
 }
 
@@ -106,8 +104,8 @@ function decideTypeOfItem(item) {
     
     // se possuir sub_itens
     if (item["sub_itens"] != undefined) {
-        checkerDefinition(item["definition"],"Menu");
-        var definition =  classnames(getClassName(item["definition"],"Menu"));
+      
+        var definition = item["definition"];
         item_code = <li>
             <a className={definition} onClick={item["onClick"]}> {item["value"]}</a>
             <ul>

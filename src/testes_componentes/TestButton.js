@@ -1,3 +1,4 @@
+//  @flow 
 import React, { useState } from 'react';
 import ReactDOM from 'react-dom';
 import 'bulma/css/bulma.min.css'
@@ -17,144 +18,144 @@ var custom = {
 ReactDOM.render(
 <>
 
-<Button onClick={onClick} definition="success">Click</Button>
+<Button onClick={onClick} definition="is-success">Click</Button>
 
-<Button {...custom} definition="success">Click</Button>
+<Button {...custom} definition="is-success">Click</Button>
 
 <ButtonList>
 <Button>Testando</Button>
-<Button  definition="primary">Primary</Button>
-<Button  definition="link"> Link</Button>
-<Button  definition="info"> Info</Button>
-<Button  definition="success"> Success</Button>
-<Button  definition="warning"> Warning</Button>
-<Button  definition="danger"> Danger</Button>
+<Button  definition="is-primary">Primary</Button>
+<Button  definition="is-link"> Link</Button>
+<Button  definition="is-info"> Info</Button>
+<Button  definition="is-success"> Success</Button>
+<Button  definition="is-warning"> Warning</Button>
+<Button  definition="is-danger"> Danger</Button>
 </ButtonList>
 
 <ButtonList>
-<Button  definition="white"> White</Button>
-<Button  definition="light"> Light</Button>
-<Button  definition="dark"> Dark</Button>
-<Button  definition="black"> Black</Button>
-<Button  definition="text"> Text</Button>
+<Button  definition="is-white"> White</Button>
+<Button  definition="is-light"> Light</Button>
+<Button  definition="is-dark"> Dark</Button>
+<Button  definition="is-black"> Black</Button>
+<Button  definition="is-text"> Text</Button>
 </ButtonList>
 
 <ButtonList>
-<Button  definition="primary light"> primary light</Button>
-<Button  definition="link light"> link light</Button>
-<Button  definition="info light"> info light</Button>
-<Button  definition="success light"> success light</Button>
-<Button  definition="warning light"> warning light</Button>
-<Button  definition="danger light"> danger light</Button>
+<Button  definition="is-primary is-light"> primary light</Button>
+<Button  definition="is-link is-light"> link light</Button>
+<Button  definition="is-info is-light"> info light</Button>
+<Button  definition="is-success is-light"> success light</Button>
+<Button  definition="is-warning is-light"> warning light</Button>
+<Button  definition="is-danger is-light"> danger light</Button>
 </ButtonList>
 
 <ButtonList>
-<Button  definition="button small"> Small</Button>
+<Button  definition="button is-small"> Small</Button>
 <Button  > Normal</Button>
-<Button  definition="button medium"> Medium</Button>
-<Button  definition="button large"> Large</Button>
+<Button  definition="button is-medium"> Medium</Button>
+<Button  definition="button is-large"> Large</Button>
 </ButtonList>
 
-<ButtonList definition="small">
+<ButtonList definition="are-small">
 <Button  > Testando</Button>
 <Button  > Testando</Button>
 <Button  > Testando</Button>
 </ButtonList>
 
-<ButtonList definition="medium">
+<ButtonList definition="are-medium">
 <Button > Testando</Button>
 <Button > Testando</Button>
 <Button > Testando</Button>
 </ButtonList>
 
-<ButtonList definition="large">
+<ButtonList definition="are-large">
 <Button > Testando</Button>
 <Button > Testando</Button>
 <Button > Testando</Button>
 </ButtonList>
 
 <Columns>
-<Column definition="half">
-<Button  definition="small fullwidth"> small fullwidth</Button>
-<Button  definition="fullwidth"> normal fullwidth</Button>
-<Button  definition="medium fullwidth"> medium fullwidth</Button>
-<Button definition="large fullwidth"> large fullwidth</Button>
+<Column definition="is-half">
+<Button  definition="is-small is-fullwidth"> small fullwidth</Button>
+<Button  definition="is-fullwidth"> normal fullwidth</Button>
+<Button  definition="is-medium is-fullwidth"> medium fullwidth</Button>
+<Button definition="is-large is-fullwidth"> large fullwidth</Button>
 </Column>
 </Columns>
 
 
 
 <ButtonList>
-<Button  definition="primary outlined"> primary outlined</Button>
-<Button  definition="link outlined"> link outlined</Button>
-<Button  definition="info outlined"> info outlined</Button>
-<Button  definition="success outlined"> success outlined</Button>
-<Button  definition="warning outlined"> warning outlined</Button>
-<Button  definition="danger outlined"> danger outlined</Button>
+<Button  definition="is-primary is-outlined"> primary outlined</Button>
+<Button  definition="is-link is-outlined"> link outlined</Button>
+<Button  definition="is-info is-outlined"> info outlined</Button>
+<Button  definition="is-success is-outlined"> success outlined</Button>
+<Button  definition="is-warning is-outlined"> warning outlined</Button>
+<Button  definition="is-danger is-outlined"> danger outlined</Button>
 </ButtonList>
 
-<ButtonList definition="primary">
-<Button  definition="primary inverted"> primary inverted</Button>
-<Button  definition="link inverted"> link inverted</Button>
-<Button  definition="info inverted"> info inverted</Button>
-<Button  definition="success inverted"> success inverted</Button>
-<Button  definition="danger inverted"> danger inverted</Button>
+<ButtonList definition="is-primary">
+<Button  definition="is-primary is-inverted"> primary inverted</Button>
+<Button  definition="is-link is-inverted"> link inverted</Button>
+<Button  definition="is-info is-inverted"> info inverted</Button>
+<Button  definition="is-success is-inverted"> success inverted</Button>
+<Button  definition="is-danger is-inverted"> danger inverted</Button>
 </ButtonList>
 
 <ButtonList>
-<Button  definition="primary rounded"> primary rounded</Button>
-<Button  definition="link rounded"> link rounded</Button>
-<Button  definition="info rounded"> info rounded</Button>
-<Button  definition="success rounded"> success rounded</Button>
-<Button  definition="warning rounded"> warning rounded</Button>
-<Button  definition="danger rounded"> danger rounded</Button>
+<Button  definition="is-primary is-rounded"> primary rounded</Button>
+<Button  definition="is-link is-rounded"> link rounded</Button>
+<Button  definition="is-info is-rounded"> info rounded</Button>
+<Button  definition="is-success is-rounded"> success rounded</Button>
+<Button  definition="is-warning is-rounded"> warning rounded</Button>
+<Button  definition="is-danger is-rounded"> danger rounded</Button>
 </ButtonList>
 
 <ButtonList>
 <Button  > Testando</Button>
-<Button  definition="primary hovered"> Testando</Button>
-<Button  definition="link hovered"> Testando</Button>
-<Button  definition="info hovered"> Testando</Button>
-<Button  definition="success hovered"> Testando</Button>
-<Button  definition="warning hovered"> Testando</Button>
-<Button  definition="danger hovered"> Testando</Button>
+<Button  definition="is-primary is-hovered"> Testando</Button>
+<Button  definition="is-link is-hovered"> Testando</Button>
+<Button  definition="is-info is-hovered"> Testando</Button>
+<Button  definition="is-success is-hovered"> Testando</Button>
+<Button  definition="is-warning is-hovered"> Testando</Button>
+<Button  definition="is-danger is-hovered"> Testando</Button>
 </ButtonList>
 
 <ButtonList>
-<Button  definition="primary focused"> primary focused</Button>
-<Button  definition="link focused"> link focused</Button>
-<Button  definition="info focused"> info focused</Button>
-<Button  definition="success focused"> success focused</Button>
-<Button  definition="warning focused"> warning focused</Button>
-<Button  definition="danger focused"> danger focused</Button>
+<Button  definition="is-primary is-focused"> primary focused</Button>
+<Button  definition="is-link is-focused"> link focused</Button>
+<Button  definition="is-info is-focused"> info focused</Button>
+<Button  definition="is-success is-focused"> success focused</Button>
+<Button  definition="is-warning is-focused"> warning focused</Button>
+<Button  definition="is-danger is-focused"> danger focused</Button>
 </ButtonList>
 
 <ButtonList>
-<Button  definition="primary active"> primary active</Button>
-<Button  definition="link active"> link active</Button>
-<Button  definition="info active"> info active</Button>
-<Button  definition="success active"> success active</Button>
-<Button  definition="warning active"> warning active</Button>
-<Button  definition="danger active"> danger active</Button>
+<Button  definition="is-primary is-active"> primary active</Button>
+<Button  definition="is-link is-active"> link active</Button>
+<Button  definition="is-info is-active"> info active</Button>
+<Button  definition="is-success is-active"> success active</Button>
+<Button  definition="is-warning is-active"> warning active</Button>
+<Button  definition="is-danger is-active"> danger active</Button>
 </ButtonList>
 
 <ButtonList>
-<Button  definition="loading"> Testando</Button>
-<Button  definition="primary loading"> Testando</Button>
-<Button  definition="link loading"> Testando</Button>
-<Button  definition="info loading"> Testando</Button>
-<Button  definition="success loading"> Testando</Button>
-<Button  definition="warning loading"> Testando</Button>
-<Button  definition="danger loading"> Testando</Button>
+<Button  definition="is-loading"> Testando</Button>
+<Button  definition="is-primary is-loading"> Testando</Button>
+<Button  definition="is-link is-loading"> Testando</Button>
+<Button  definition="is-info is-loading"> Testando</Button>
+<Button  definition="is-success is-loading"> Testando</Button>
+<Button  definition="is-warning is-loading"> Testando</Button>
+<Button  definition="is-danger is-loading"> Testando</Button>
 </ButtonList>
 
 <ButtonList>
-<Button  definition="primary" disabled={true} > primary disabled</Button>
-<Button  definition="link"  disabled={true} > link disabled</Button>
-<Button  definition="info" disabled={true} > info disabled</Button>
-<Button  definition="success" disabled={true} > success disabled</Button>
-<Button  definition="warning" disabled={true} > warning disabled</Button>
-<Button  definition="danger" disabled={true} > danger disabled</Button>
+<Button  definition="is-primary" disabled={true} > primary disabled</Button>
+<Button  definition="is-link"  disabled={true} > link disabled</Button>
+<Button  definition="is-info" disabled={true} > info disabled</Button>
+<Button  definition="is-uccess" disabled={true} > success disabled</Button>
+<Button  definition="is-warning" disabled={true} > warning disabled</Button>
+<Button  definition="is-danger" disabled={true} > danger disabled</Button>
 </ButtonList>
 </>
     ,

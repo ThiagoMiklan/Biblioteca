@@ -7,7 +7,7 @@ import 'bulma/css/bulma.css'
 var itens_link =[{value: "Dropdown Button" ,link:true, href:"https://ufsc.br", onClick:()=>{alert("Clicou")}},
             {value: "Dropdown Item",link:true, href:"https://ufsc.br"},
             {value: "Other Dropdown Item",link:true, href:"https://ufsc.br"},
-            {value: "Active Dropdown Item", link:true , definition:"active", href:"https://ufsc.br"},
+            {value: "Active Dropdown Item", link:true , definition:"is-active", href:"https://ufsc.br"},
             {value: "Other Dropdown Item",link:true, href:"https://ufsc.br"},
             {value: "With a divider",link:true, href:"https://ufsc.br"}
             ];
@@ -27,10 +27,10 @@ const HookDropDown = (props) => {
   const [state, setState] = useState(initial);
 
   var onClick = () => {
-    if (state.definition == "active") {
+    if (state.definition == "is-active") {
       setState({ definition: "" })
     } else {
-      setState({ definition: "active" })
+      setState({ definition: "is-active" })
     }
   }
 
@@ -41,8 +41,8 @@ const HookDropDown = (props) => {
 
  ReactDOM.render(
         <>
-          <DropDown definition="active" itens={itens_link}/>    
-          <DropDown definition="active right" itens={itens_div}/>
+          <DropDown definition="is-active" itens={itens_link}/>    
+          <DropDown definition="is-active is-right" itens={itens_div}/>
         </>
      ,
      document.getElementById('root')

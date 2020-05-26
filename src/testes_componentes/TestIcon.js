@@ -6,14 +6,14 @@ import Icon from './biblioteca/Icon';
 
 ReactDOM.render(
   <div className="container is-fluid">
-      <Icon icon_name="fas fa-info-circle" definition="info"></Icon>
-      <Icon icon_name="fas fa-check-square" definition="success"></Icon>
-      <Icon icon_name="fas fa-exclamation-triangle" definition="warning"></Icon>
-      <Icon icon_name="fas fa-ban" definition="danger"></Icon>
+      <Icon icon_name="fas fa-info-circle" definition="has-text-info"></Icon>
+      <Icon icon_name="fas fa-check-square" definition="has-text-success"></Icon>
+      <Icon icon_name="fas fa-exclamation-triangle" definition="has-text-warning"></Icon>
+      <Icon icon_name="fas fa-ban" definition="has-text-danger"></Icon>
 
-      <Icon icon_name="fas fa-home" definition="warning small"></Icon>
-      <Icon icon_name="fas fa-home" definition="warning medium"></Icon>
-      <Icon icon_name="fas fa-home" definition="warning large"></Icon>
+      <Icon icon_name="fas fa-home" definition="has-text-warning is-small"></Icon>
+      <Icon icon_name="fas fa-home" definition="has-text-warning is-medium"></Icon>
+      <Icon icon_name="fas fa-home" definition="has-text-warning is-large"></Icon>
 
     </div>
 

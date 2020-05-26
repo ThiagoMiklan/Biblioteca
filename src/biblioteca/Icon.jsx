@@ -1,12 +1,7 @@
 // @flow
 import * as React from 'react'
-import classnames from 'classnames';
-import getClassNames from '../tools/getClassName';
 import PropTypes from 'prop-types';
 import '../css/all';
-import checkerDefinition from '../tools/checker.js';
-
-
 
 type Props = {
     definition?: string,
@@ -17,9 +12,8 @@ type Props = {
 }
 
 const Icon = (props:Props) => {
-    checkerDefinition(props.definition,"Icon");
-    var icon_definition  = (props.definition == undefined) ? "": props.definition;
-    var definition =  classnames(getClassNames("icon "+icon_definition, "Icon"));
+    var definition = (props.definition == undefined) ? "icon": "icon " +props.definition;
+   
     return (
         <>  
             {(props.icon_right == false || props.icon_right == undefined) && <span>{props.children}</span>}
@@ -31,12 +25,5 @@ const Icon = (props:Props) => {
         </>
     );
 }
-
-function Teste(){
-    var x = <Icon ic></Icon>
-}
-
-
-
 
 export default Icon;

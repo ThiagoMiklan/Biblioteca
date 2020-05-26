@@ -1,13 +1,8 @@
 // @flow
 import * as React from 'react';
 import PropTypes from 'prop-types';
-import classnames from 'classnames';
-import getClassName from '../tools/getClassName';
 import Button from '../biblioteca/Button';
 import Icon from '../biblioteca/Icon';
-import checkerDefinition from '../tools/checker.js';
-
-
 
 /**
  * 
@@ -35,9 +30,8 @@ const DropDown = (props: Props) => {
       
       Não existe
       */
-    checkerDefinition(props.definition,"DropDown");
-    var definition = "dropdown " + classnames(getClassName(props.definition, "DropDown"));
-
+    
+    var definition = (props.definition == undefined)? "dropdown" : "dropdown "+ props.definition;
     return (<div className={definition}>
                 <div class="dropdown-trigger">
                      {extractButton(props.itens,props.onClick)}
@@ -72,9 +66,9 @@ function extractButton(itens,onClick) {
      */
     return <Button onClick={onClick} >
         {(icon_name != undefined && icon_name != '')
-            ? <Icon icon_name={classnames(getClassName(icon_name, "DropDown"))} icon_right={true}>{name}</Icon>
+            ? <Icon icon_name={icon_name} icon_right={true}>{name}</Icon>
             
-            : <Icon icon_name={classnames(getClassName("default-icon", "DropDown"))} definition={icon_definition} icon_right={true} >{name}</Icon>
+            : <Icon icon_name={"fas fa-angle-down"} definition={icon_definition} icon_right={true} >{name}</Icon>
         }
     </Button>
 }
@@ -100,14 +94,12 @@ function decideTypeOfItens(item) {
 }
 
 function assembleItensLinks(item) {
-    checkerDefinition(item["definition"],"DropDown");
-    var definition = classnames(getClassName("dropdown-item " + item["definition"], "DropDown"));
+    var definition = (item["definition"] == undefined )? "dropdown-item" : "dropdown-item "+item["definition"];
     return <a className={definition} onClick={item["onClick"]} href={item["href"]}>{item["value"]}</a>;
 }
 
 function assembleComponentsItens(item) {
-    checkerDefinition(item["definition"],"DropDown");
-    var definition = classnames(getClassName("dropdown-item " + item["definition"], "DropDown"));
+    var definition = (item["definition"] == undefined )? "dropdown-item" : "dropdown-item "+item["definition"];
     return <div className={definition} onClick={item["onClick"]} href={item["href"]} >{item["value"]}</div>;
 }
 

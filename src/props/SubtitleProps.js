@@ -1,3 +1,0 @@
-const subtitle_props = {
-    
-}

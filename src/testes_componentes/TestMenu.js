@@ -8,12 +8,12 @@ import 'bulma/css/bulma.css';
 var onClickItem = ()=>{alert("Clicou")};
 
 var itens_general = [
-    {value: "General"}, {value:"Dashboard"}
+    {value: "General", onClick: onClickItem}, {value:"Dashboard"}
 ]
 
 var itens_adm = [
-    {value:"Team Settings"},{value:"Manage your team",definition:"active",
-    sub_itens:[{value:"Members"},{value:"Plugins"},{value:"Add a member"}]},
+    {value:"Team Settings", onClick: onClickItem},{value:"Manage your team",definition:"active",
+    sub_itens:[{value:"Members"},{value:"Plugins"},{value:"Add a member", onClick: onClickItem}]},
     {value:"Invitations"},{value:"Cloud Storage Environment Settings"},
     {value:"Authentication"}
 ]

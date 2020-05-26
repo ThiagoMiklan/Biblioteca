@@ -1,12 +1,9 @@
 // @flow
 import React from 'react'
 import PropTypes from 'prop-types';
-import classnames from 'classnames';
-import getClassName from '../tools/getClassName';
 import Icon from './Icon';
 import PanelItem from './PanelItem';
 import Field from './Field';
-import checkerDefinition from '../tools/checker.js';
 
 
 type Props = {
@@ -22,8 +19,8 @@ type Props = {
 
 // v.01
 const Panel = (props:Props) => {
-    checkerDefinition(props.definition,"Panel");
-    var definition =  "panel "+ classnames(getClassName(props.definition,"Panel"));
+    var definition = (props.definition == undefined)?"panel" : "panel "+props.definition;
+    
     return (
         <nav class={definition}>
             {assembleHeading(props.header)}

@@ -5,13 +5,13 @@ import renderer from 'react-test-renderer';
 test('progressbar fixed', () => {
     const pb_fixed = renderer.create(
         <>
-            <ProgressBar max="100" value="15" max="100"></ProgressBar>
-            <ProgressBar definition="primary" value="15" max="100"></ProgressBar>
-            <ProgressBar definition="link" value="30" max="100"></ProgressBar>
-            <ProgressBar definition="info" value="45" max="100"></ProgressBar>
-            <ProgressBar definition="success" value="60" max="100"></ProgressBar>
-            <ProgressBar definition="warning" value="75" max="100"></ProgressBar>
-            <ProgressBar definition="danger" value="90" max="100"></ProgressBar>
+            <ProgressBar value="15" max="100" />
+            <ProgressBar definition="primary" value="15" max="100" />
+            <ProgressBar definition="link" value="30" max="100" />
+            <ProgressBar definition="info" value="45" max="100" />
+            <ProgressBar definition="success" value="60" max="100" />
+            <ProgressBar definition="warning" value="75" max="100" />
+            <ProgressBar definition="danger" value="90" max="100" />
         </>
     ).toJSON();
 
@@ -22,10 +22,9 @@ test('progressbar fixed', () => {
 test('progressbar sizes', () => {
     const pb_sizes = renderer.create(
         <>
-            <ProgressBar definition="small" value="15" max="100"></ProgressBar>
-            <ProgressBar definition="" value="30" max="100"></ProgressBar>
-            <ProgressBar definition="medium" value="45" max="100"></ProgressBar>
-            <ProgressBar definition="large" value="60" max="100"></ProgressBar>
+            <ProgressBar definition="small" value="15" max="100" />
+            <ProgressBar definition="medium" value="15" max="100" />
+            <ProgressBar definition="large" value="15" max="100" />
         </>
     ).toJSON();
 

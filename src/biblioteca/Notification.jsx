@@ -1,41 +1,43 @@
 // @flow
 import * as React from 'react';
 import PropTypes from 'prop-types';
-import classnames from 'classnames';
-import getClassName from '../tools/getClassName';
 import Button from './Button.jsx';
-import checkerDefinition from '../tools/checker.js';
-
+import Content from  './Content';
 
 type Props = {
     delete?: bool,
     title?: string,
     onClickDelete?:()=> void,
     definition: string,
-    children: React.Node
+    children: React.Node,
+    title?: string,
+    subtitle?:string
 }
 
 const Notification = (props:Props) =>{
-    checkerDefinition(props.definition,"Notification");
-    var definition = "notification " + classnames(getClassName(props.definition,"Notification"));
+    var definition = (props.definition ==  undefined)? "notification": "notification "+props.definition;
+    
     return(
             <div className={definition}>
-                {props.title != undefined && 
-                    <div className='title'>
-                    {props.title}
-                    </div>
-                }
                 {props.delete == true && assembleDelete(props.onClickDelete)}
-                {props.children}
+                {props.title == undefined && props.subtitle == undefined ? props.children: 
+                    assembleTitleAndSubtitle(props)
+                }
             </div>
     )
     
 }
 
-
+function assembleTitleAndSubtitle(props){
+    return <>
+                {<p className="title">{props.title}</p>}
+                {<p className="subtitle">{props.subtitle}</p>}
+                {<Content>{props.children}</Content>}
+            </>
+}
 
 function assembleDelete(onClickDelete){
-    return <Button onClick={onClickDelete} delete={true}></Button>
+    return <Button delete={true} onClick={onClickDelete}></Button>
 }
 
 Notification.propTypes = {

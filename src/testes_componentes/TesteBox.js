@@ -9,7 +9,7 @@ import 'bulma/css/bulma.css';
 
 ReactDOM.render(
   <Columns>
-    <Column definition="two-fifths">
+    <Column definition="is-two-fifths">
         <Box>
         <article class="media">
     <div class="media-left">

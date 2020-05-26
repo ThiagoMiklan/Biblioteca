@@ -10,26 +10,26 @@ var onClickItem = () => {
 }
 
 var itens = [
-  { value: 1, href: "https://pt-br.reactjs.org/docs/hooks-overview.html", definition: "current", onClick: onClickItem },
-  { value: 2, href: "https://pt-br.reactjs.org/docs/hooks-effect.html", definition: "" },
-  { value: 3, href: "https://pt-br.reactjs.org/docs/hooks-effect.html", definition: "" }
+  { value: 1, href: "https://pt-br.reactjs.org/docs/hooks-overview.html", definition: "is-current", onClick: onClickItem },
+  { value: 2, href: "https://pt-br.reactjs.org/docs/hooks-effect.html"},
+  { value: 3, href: "https://pt-br.reactjs.org/docs/hooks-effect.html"}
 ]
 
 ReactDOM.render(
   <Columns>
-    <Column definition="half">
+    <Column definition="is-half">
       <div className="container is-fluid"> 
       <br></br>
       <Pagination itens={itens} next_name="Next" previous_name="Previous"></Pagination>
       <Pagination itens={itens} next_name="Next" previous_name="Previous" previous_disabled={true}></Pagination>
       <Pagination itens={itens} next_name="Next" previous_name="Previous" previous_disabled={true} next_disabled={true}></Pagination>
-      <Pagination definition="center" itens={itens} next_name="Next" previous_name="Previous"></Pagination>
-      <Pagination definition="right" itens={itens} next_name="Next" previous_name="Previous"></Pagination>
-      <Pagination definition="right rounded" itens={itens} next_name="Next" previous_name="Previous"></Pagination>
+      <Pagination definition="is-center" itens={itens} next_name="Next" previous_name="Previous"></Pagination>
+      <Pagination definition="is-right" itens={itens} next_name="Next" previous_name="Previous"></Pagination>
+      <Pagination definition="is-right is-rounded" itens={itens} next_name="Next" previous_name="Previous"></Pagination>
       
-      <Pagination definition="right small" itens={itens} next_name="Next" previous_name="Previous"></Pagination>
-      <Pagination definition="right medium" itens={itens} next_name="Next" previous_name="Previous"></Pagination>
-      <Pagination definition="right large" itens={itens} next_name="Next" previous_name="Previous"></Pagination>
+      <Pagination definition="is-right is-small" itens={itens} next_name="Next" previous_name="Previous"></Pagination>
+      <Pagination definition="is-right is-medium" itens={itens} next_name="Next" previous_name="Previous"></Pagination>
+      <Pagination definition="is-right is-large" itens={itens} next_name="Next" previous_name="Previous"></Pagination>
       </div>
     </Column>
 

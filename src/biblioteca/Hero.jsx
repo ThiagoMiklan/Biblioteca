@@ -1,9 +1,7 @@
 // @flow
 import React from 'react';
-import classnames from 'classnames';
-import getClassName from '../tools/getClassName';
 import PropTypes from 'prop-types';
-import checkerDefinition from '../tools/checker.js';
+
 
 // v.1.0
 
@@ -14,10 +12,8 @@ type Props = {
 }
 
 const Hero = (props: Props)=>{
-  checkerDefinition(props.definition,"Hero");
-  var hero_definition =  (props.definition ==  undefined) ? "hero": "hero "+props.definition;
-  var definition =  classnames(getClassName(hero_definition,"Hero"));
-    return (
+  var definition =  (props.definition ==  undefined) ? "hero": "hero "+props.definition;
+  return (
     <section className={definition}>
     <div className="hero-body">
       <div className="container">

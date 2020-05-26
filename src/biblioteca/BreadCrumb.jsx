@@ -1,12 +1,6 @@
 // @flow
 import React from 'react';
 import PropTypes from 'prop-types';
-import classname from 'classnames';
-import getClassName from '../tools/getClassName';
-import checkerDefinition from '../tools/checker.js';
-
-// Sem "Children"
-// Eventos: "onClick on <a>"
 
 type Props = {
   definition?: string,
@@ -16,8 +10,8 @@ type Props = {
 
 
 const BreadCrumb = (props: Props) => {
-    var definition = "breadcrumb " + classname(getClassName(props.definition, "BreadCrumb"));
-    checkerDefinition(props.definition,"BreadCrumb")
+    var definition = (props.definition ==  undefined) ? "breadcrumb": "breadcrumb "+ props.definition;
+    
     return (
         <nav className={definition}>
             <ul>
@@ -43,9 +37,7 @@ function assembleItens(itens) {
 }
 
 function assembleSingleItem(item) {
-    var def =  item["definition"]
-    checkerDefinition(def,"BreadCrumb");
-  var definition =  classname(getClassName(item["definition"], "BreadCrumb"));
+  var definition =  item["definition"];
     return (
         <li key={item["key"]} className={definition}>
             <a  onClick={item["onClick"]} href={item["href"]}>{item["value"]}</a>

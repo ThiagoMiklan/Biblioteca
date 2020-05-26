@@ -1,11 +1,7 @@
 // @flow
+
 import React from 'react';
-import getClassName from '../tools/getClassName';
-import className from 'classnames';
 import PropTypes from 'prop-types';
-import checkerDefinition from '../tools/checker.js';
-
-
 /*
 Componente que funciona fornece a opção de criar uma lista
 Não consta na documentação do Bulma um componente para Lista, sendo criado 
@@ -21,8 +17,8 @@ type Props = {
 }
 
 const List = (props:Props)=> {
-        checkerDefinition(props.definition,"List");
-        return (assembleList(props));    
+    
+    return (assembleList(props));    
 }
 
  // monta o esqueleto da(s) lista(s) através do map e depois monta cada linha de cada lista
@@ -32,7 +28,7 @@ function assembleList(props) {
     
     if(list != undefined && Array.isArray(list)){
         list_tags = 
-            <ol className={className(getClassName(props.definition, "List"))}>
+            <ol className={props.definition}>
                 {assembleRow(list)}
             </ol>
         

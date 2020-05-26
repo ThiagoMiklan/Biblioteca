@@ -32,15 +32,14 @@ type Props = {
     
     type?: string,
     
-    value?: string
+    value?: stringz
     }
 
 
 const Field = (props: Props) => {
-    
     return <div className="field">
         <label className="label">{props.label}</label>
-        <Control definition={props.control_definition}>
+        <Control definition={props.control_definition == undefined? "has-icons-left" : props.control_definition}>
             <Input definition={props.input_definition} onChangeEvent={props.onChange} placeholder={props.placeholder} type={props.type} value={props.value}></Input>
             {assembleIcon(props)}
         </Control>
@@ -51,10 +50,10 @@ const Field = (props: Props) => {
 function assembleIcon(props){
     var code = <></>;
     if(props.control_definition != undefined){
-        var right = props.control_definition.includes("icons-right");
+        var right = props.control_definition.includes("has-icons-right");
         if(right == true){
             var definition = (props.icon_definition ==  undefined)? "": props.icon_definition;
-            var icon_def = definition + " right";
+            var icon_def = definition + " is-right";
             code = <Icon definition={icon_def} icon_name={props.icon_name}></Icon>;
         }else{
             code = <Icon definition={props.icon_definition} icon_name={props.icon_name}></Icon>;

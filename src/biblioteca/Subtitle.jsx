@@ -1,9 +1,6 @@
 
 import * as React from 'react';
 import PropTypes from 'prop-types';
-import classnames from 'classnames';
-import getClassName from '../tools/getClassName'
-
 
 
 const SubTitle = (props:Props)=>{
@@ -113,11 +110,7 @@ function mapFunctionsTitle(){
     return map;
 }
 function getDefinition(props){
-    var definition = "";
-    
-    definition = classnames(getClassName("subtitle "+String(props.definition), "Title"));
-    
-
+    var definition = "subtitle is-"+String(props.definition)
     return definition;
 }
 

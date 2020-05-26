@@ -1,0 +1,555 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`message colors 1`] = `
+Array [
+  <article
+    className="message is-dark"
+  >
+    <div
+      className="message-header"
+    >
+      <p>
+        Hello World
+      </p>
+      <button
+        className="delete"
+        disabled={false}
+        onClick={[Function]}
+      />
+    </div>
+    <div
+      className="message-body"
+    >
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+      <strong>
+        Pellentesque risus mi
+      </strong>
+      , tempus quis placerat ut, porta nec nulla. Vestibulum rhoncus ac ex sit amet fringilla. Nullam gravida purus diam, et dictum 
+      <a>
+        felis venenatis
+      </a>
+       efficitur. Aenean ac 
+      <em>
+        eleifend lacus
+      </em>
+      , in mollis lectus. Donec sodales, arcu et sollicitudin porttitor, tortor urna tempor ligula, id porttitor mi magna a neque. Donec dui urna, vehicula et sem eget, facilisis sodales sem.
+    </div>
+  </article>,
+  <article
+    className="message is-primary"
+  >
+    <div
+      className="message-header"
+    >
+      <p>
+        Hello World
+      </p>
+      <button
+        className="delete"
+        disabled={false}
+        onClick={[Function]}
+      />
+    </div>
+    <div
+      className="message-body"
+    >
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+      <strong>
+        Pellentesque risus mi
+      </strong>
+      , tempus quis placerat ut, porta nec nulla. Vestibulum rhoncus ac ex sit amet fringilla. Nullam gravida purus diam, et dictum 
+      <a>
+        felis venenatis
+      </a>
+       efficitur. Aenean ac 
+      <em>
+        eleifend lacus
+      </em>
+      , in mollis lectus. Donec sodales, arcu et sollicitudin porttitor, tortor urna tempor ligula, id porttitor mi magna a neque. Donec dui urna, vehicula et sem eget, facilisis sodales sem.
+    </div>
+  </article>,
+  <article
+    className="message is-link"
+  >
+    <div
+      className="message-header"
+    >
+      <p>
+        Hello World
+      </p>
+      <button
+        className="delete"
+        disabled={false}
+        onClick={[Function]}
+      />
+    </div>
+    <div
+      className="message-body"
+    >
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+      <strong>
+        Pellentesque risus mi
+      </strong>
+      , tempus quis placerat ut, porta nec nulla. Vestibulum rhoncus ac ex sit amet fringilla. Nullam gravida purus diam, et dictum 
+      <a>
+        felis venenatis
+      </a>
+       efficitur. Aenean ac 
+      <em>
+        eleifend lacus
+      </em>
+      , in mollis lectus. Donec sodales, arcu et sollicitudin porttitor, tortor urna tempor ligula, id porttitor mi magna a neque. Donec dui urna, vehicula et sem eget, facilisis sodales sem.
+    </div>
+  </article>,
+  <article
+    className="message is-info"
+  >
+    <div
+      className="message-header"
+    >
+      <p>
+        Hello World
+      </p>
+      <button
+        className="delete"
+        disabled={false}
+        onClick={[Function]}
+      />
+    </div>
+    <div
+      className="message-body"
+    >
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+      <strong>
+        Pellentesque risus mi
+      </strong>
+      , tempus quis placerat ut, porta nec nulla. Vestibulum rhoncus ac ex sit amet fringilla. Nullam gravida purus diam, et dictum 
+      <a>
+        felis venenatis
+      </a>
+       efficitur. Aenean ac 
+      <em>
+        eleifend lacus
+      </em>
+      , in mollis lectus. Donec sodales, arcu et sollicitudin porttitor, tortor urna tempor ligula, id porttitor mi magna a neque. Donec dui urna, vehicula et sem eget, facilisis sodales sem.
+    </div>
+  </article>,
+  <article
+    className="message is-success"
+  >
+    <div
+      className="message-header"
+    >
+      <p>
+        Hello World
+      </p>
+      <button
+        className="delete"
+        disabled={false}
+        onClick={[Function]}
+      />
+    </div>
+    <div
+      className="message-body"
+    >
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+      <strong>
+        Pellentesque risus mi
+      </strong>
+      , tempus quis placerat ut, porta nec nulla. Vestibulum rhoncus ac ex sit amet fringilla. Nullam gravida purus diam, et dictum 
+      <a>
+        felis venenatis
+      </a>
+       efficitur. Aenean ac 
+      <em>
+        eleifend lacus
+      </em>
+      , in mollis lectus. Donec sodales, arcu et sollicitudin porttitor, tortor urna tempor ligula, id porttitor mi magna a neque. Donec dui urna, vehicula et sem eget, facilisis sodales sem.
+    </div>
+  </article>,
+  <article
+    className="message is-warning"
+  >
+    <div
+      className="message-header"
+    >
+      <p>
+        Hello World
+      </p>
+      <button
+        className="delete"
+        disabled={false}
+        onClick={[Function]}
+      />
+    </div>
+    <div
+      className="message-body"
+    >
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+      <strong>
+        Pellentesque risus mi
+      </strong>
+      , tempus quis placerat ut, porta nec nulla. Vestibulum rhoncus ac ex sit amet fringilla. Nullam gravida purus diam, et dictum 
+      <a>
+        felis venenatis
+      </a>
+       efficitur. Aenean ac 
+      <em>
+        eleifend lacus
+      </em>
+      , in mollis lectus. Donec sodales, arcu et sollicitudin porttitor, tortor urna tempor ligula, id porttitor mi magna a neque. Donec dui urna, vehicula et sem eget, facilisis sodales sem.
+    </div>
+  </article>,
+  <article
+    className="message is-danger"
+  >
+    <div
+      className="message-header"
+    >
+      <p>
+        Hello World
+      </p>
+      <button
+        className="delete"
+        disabled={false}
+        onClick={[Function]}
+      />
+    </div>
+    <div
+      className="message-body"
+    >
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+      <strong>
+        Pellentesque risus mi
+      </strong>
+      , tempus quis placerat ut, porta nec nulla. Vestibulum rhoncus ac ex sit amet fringilla. Nullam gravida purus diam, et dictum 
+      <a>
+        felis venenatis
+      </a>
+       efficitur. Aenean ac 
+      <em>
+        eleifend lacus
+      </em>
+      , in mollis lectus. Donec sodales, arcu et sollicitudin porttitor, tortor urna tempor ligula, id porttitor mi magna a neque. Donec dui urna, vehicula et sem eget, facilisis sodales sem.
+    </div>
+  </article>,
+]
+`;
+
+exports[`message colors without header 1`] = `
+Array [
+  <article
+    className="message "
+  >
+    
+    <div
+      className="message-body"
+    >
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+      <strong>
+        Pellentesque risus mi
+      </strong>
+      , tempus quis placerat ut, porta nec nulla. Vestibulum rhoncus ac ex sit amet fringilla. Nullam gravida purus diam, et dictum 
+      <a>
+        felis venenatis
+      </a>
+       efficitur. Aenean ac 
+      <em>
+        eleifend lacus
+      </em>
+      , in mollis lectus. Donec sodales, arcu et sollicitudin porttitor, tortor urna tempor ligula, id porttitor mi magna a neque. Donec dui urna, vehicula et sem eget, facilisis sodales sem.
+    </div>
+  </article>,
+  <article
+    className="message is-dark"
+  >
+    
+    <div
+      className="message-body"
+    >
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+      <strong>
+        Pellentesque risus mi
+      </strong>
+      , tempus quis placerat ut, porta nec nulla. Vestibulum rhoncus ac ex sit amet fringilla. Nullam gravida purus diam, et dictum 
+      <a>
+        felis venenatis
+      </a>
+       efficitur. Aenean ac 
+      <em>
+        eleifend lacus
+      </em>
+      , in mollis lectus. Donec sodales, arcu et sollicitudin porttitor, tortor urna tempor ligula, id porttitor mi magna a neque. Donec dui urna, vehicula et sem eget, facilisis sodales sem.
+    </div>
+  </article>,
+  <article
+    className="message is-primary"
+  >
+    
+    <div
+      className="message-body"
+    >
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+      <strong>
+        Pellentesque risus mi
+      </strong>
+      , tempus quis placerat ut, porta nec nulla. Vestibulum rhoncus ac ex sit amet fringilla. Nullam gravida purus diam, et dictum 
+      <a>
+        felis venenatis
+      </a>
+       efficitur. Aenean ac 
+      <em>
+        eleifend lacus
+      </em>
+      , in mollis lectus. Donec sodales, arcu et sollicitudin porttitor, tortor urna tempor ligula, id porttitor mi magna a neque. Donec dui urna, vehicula et sem eget, facilisis sodales sem.
+    </div>
+  </article>,
+  <article
+    className="message is-link"
+  >
+    
+    <div
+      className="message-body"
+    >
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+      <strong>
+        Pellentesque risus mi
+      </strong>
+      , tempus quis placerat ut, porta nec nulla. Vestibulum rhoncus ac ex sit amet fringilla. Nullam gravida purus diam, et dictum 
+      <a>
+        felis venenatis
+      </a>
+       efficitur. Aenean ac 
+      <em>
+        eleifend lacus
+      </em>
+      , in mollis lectus. Donec sodales, arcu et sollicitudin porttitor, tortor urna tempor ligula, id porttitor mi magna a neque. Donec dui urna, vehicula et sem eget, facilisis sodales sem.
+    </div>
+  </article>,
+  <article
+    className="message is-info"
+  >
+    
+    <div
+      className="message-body"
+    >
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+      <strong>
+        Pellentesque risus mi
+      </strong>
+      , tempus quis placerat ut, porta nec nulla. Vestibulum rhoncus ac ex sit amet fringilla. Nullam gravida purus diam, et dictum 
+      <a>
+        felis venenatis
+      </a>
+       efficitur. Aenean ac 
+      <em>
+        eleifend lacus
+      </em>
+      , in mollis lectus. Donec sodales, arcu et sollicitudin porttitor, tortor urna tempor ligula, id porttitor mi magna a neque. Donec dui urna, vehicula et sem eget, facilisis sodales sem.
+    </div>
+  </article>,
+  <article
+    className="message is-success"
+  >
+    
+    <div
+      className="message-body"
+    >
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+      <strong>
+        Pellentesque risus mi
+      </strong>
+      , tempus quis placerat ut, porta nec nulla. Vestibulum rhoncus ac ex sit amet fringilla. Nullam gravida purus diam, et dictum 
+      <a>
+        felis venenatis
+      </a>
+       efficitur. Aenean ac 
+      <em>
+        eleifend lacus
+      </em>
+      , in mollis lectus. Donec sodales, arcu et sollicitudin porttitor, tortor urna tempor ligula, id porttitor mi magna a neque. Donec dui urna, vehicula et sem eget, facilisis sodales sem.
+    </div>
+  </article>,
+  <article
+    className="message is-warning"
+  >
+    
+    <div
+      className="message-body"
+    >
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+      <strong>
+        Pellentesque risus mi
+      </strong>
+      , tempus quis placerat ut, porta nec nulla. Vestibulum rhoncus ac ex sit amet fringilla. Nullam gravida purus diam, et dictum 
+      <a>
+        felis venenatis
+      </a>
+       efficitur. Aenean ac 
+      <em>
+        eleifend lacus
+      </em>
+      , in mollis lectus. Donec sodales, arcu et sollicitudin porttitor, tortor urna tempor ligula, id porttitor mi magna a neque. Donec dui urna, vehicula et sem eget, facilisis sodales sem.
+    </div>
+  </article>,
+  <article
+    className="message is-danger"
+  >
+    
+    <div
+      className="message-body"
+    >
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+      <strong>
+        Pellentesque risus mi
+      </strong>
+      , tempus quis placerat ut, porta nec nulla. Vestibulum rhoncus ac ex sit amet fringilla. Nullam gravida purus diam, et dictum 
+      <a>
+        felis venenatis
+      </a>
+       efficitur. Aenean ac 
+      <em>
+        eleifend lacus
+      </em>
+      , in mollis lectus. Donec sodales, arcu et sollicitudin porttitor, tortor urna tempor ligula, id porttitor mi magna a neque. Donec dui urna, vehicula et sem eget, facilisis sodales sem.
+    </div>
+  </article>,
+]
+`;
+
+exports[`message sizes 1`] = `
+Array [
+  <article
+    className="message is-small"
+  >
+    <div
+      className="message-header"
+    >
+      <p>
+        Hello World
+      </p>
+      <button
+        className="delete"
+        disabled={false}
+        onClick={[Function]}
+      />
+    </div>
+    <div
+      className="message-body"
+    >
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+      <strong>
+        Pellentesque risus mi
+      </strong>
+      , tempus quis placerat ut, porta nec nulla. Vestibulum rhoncus ac ex sit amet fringilla. Nullam gravida purus diam, et dictum 
+      <a>
+        felis venenatis
+      </a>
+       efficitur. Aenean ac 
+      <em>
+        eleifend lacus
+      </em>
+      , in mollis lectus. Donec sodales, arcu et sollicitudin porttitor, tortor urna tempor ligula, id porttitor mi magna a neque. Donec dui urna, vehicula et sem eget, facilisis sodales sem.
+    </div>
+  </article>,
+  <article
+    className="message "
+  >
+    <div
+      className="message-header"
+    >
+      <p>
+        Hello World
+      </p>
+      <button
+        className="delete"
+        disabled={false}
+        onClick={[Function]}
+      />
+    </div>
+    <div
+      className="message-body"
+    >
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+      <strong>
+        Pellentesque risus mi
+      </strong>
+      , tempus quis placerat ut, porta nec nulla. Vestibulum rhoncus ac ex sit amet fringilla. Nullam gravida purus diam, et dictum 
+      <a>
+        felis venenatis
+      </a>
+       efficitur. Aenean ac 
+      <em>
+        eleifend lacus
+      </em>
+      , in mollis lectus. Donec sodales, arcu et sollicitudin porttitor, tortor urna tempor ligula, id porttitor mi magna a neque. Donec dui urna, vehicula et sem eget, facilisis sodales sem.
+    </div>
+  </article>,
+  <article
+    className="message is-medium"
+  >
+    <div
+      className="message-header"
+    >
+      <p>
+        Hello World
+      </p>
+      <button
+        className="delete"
+        disabled={false}
+        onClick={[Function]}
+      />
+    </div>
+    <div
+      className="message-body"
+    >
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+      <strong>
+        Pellentesque risus mi
+      </strong>
+      , tempus quis placerat ut, porta nec nulla. Vestibulum rhoncus ac ex sit amet fringilla. Nullam gravida purus diam, et dictum 
+      <a>
+        felis venenatis
+      </a>
+       efficitur. Aenean ac 
+      <em>
+        eleifend lacus
+      </em>
+      , in mollis lectus. Donec sodales, arcu et sollicitudin porttitor, tortor urna tempor ligula, id porttitor mi magna a neque. Donec dui urna, vehicula et sem eget, facilisis sodales sem.
+    </div>
+  </article>,
+  <article
+    className="message is-large"
+  >
+    <div
+      className="message-header"
+    >
+      <p>
+        Hello World
+      </p>
+      <button
+        className="delete"
+        disabled={false}
+        onClick={[Function]}
+      />
+    </div>
+    <div
+      className="message-body"
+    >
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+      <strong>
+        Pellentesque risus mi
+      </strong>
+      , tempus quis placerat ut, porta nec nulla. Vestibulum rhoncus ac ex sit amet fringilla. Nullam gravida purus diam, et dictum 
+      <a>
+        felis venenatis
+      </a>
+       efficitur. Aenean ac 
+      <em>
+        eleifend lacus
+      </em>
+      , in mollis lectus. Donec sodales, arcu et sollicitudin porttitor, tortor urna tempor ligula, id porttitor mi magna a neque. Donec dui urna, vehicula et sem eget, facilisis sodales sem.
+    </div>
+  </article>,
+]
+`;

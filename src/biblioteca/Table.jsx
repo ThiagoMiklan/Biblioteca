@@ -105,7 +105,7 @@ function assembleRowHeaderFooter(item) {
 Table.propTypes = {
     itens_body: PropTypes.array,
     itens_header: PropTypes.array,
-    itens_footer: PropTypes.Array,
+    itens_footer: PropTypes.array,
     // função para quando clicar na tabela
     // executar alguma ação
     // evento global para todas as linhas

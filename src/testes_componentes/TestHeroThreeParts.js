@@ -25,7 +25,7 @@ var itens_tabs = [
     {value:"Requires"}
 ]
 
-ReactDOM.render(<HeroThreeParts definition="fullheight">
+ReactDOM.render(<HeroThreeParts definition="is-fullheight">
     <NavigationBar itens_start={itens_navbar_start} itens_end={itens_navbar_end} />
     <div className="container has-text-centered">
         <Title definition={1}>Title</Title>

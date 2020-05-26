@@ -1,10 +1,7 @@
 // @flow
 import * as React from 'react';
 import PropTypes from 'prop-types';
-import classname from 'classnames';
-import getClassName from '../tools/getClassName';
 import Button from '../biblioteca/Button';
-import checkerDefinition from '../tools/checker.js';
 
 type Props = {
     definition?:string,
@@ -15,8 +12,8 @@ type Props = {
 }
 
 const Message = (props:Props)=> {
-    checkerDefinition(props.definition,"Message");
-    var definition = "message " + classname(getClassName(props.definition, "Message"));
+  
+    var definition = (props.definition == undefined)? "message": "message "+props.definition
         return (<article className={definition}>
             {assembleHeader(props.header,props.delete,props.onClickDelete)}
             {assembleBody(props.children)}
