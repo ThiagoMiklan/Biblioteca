@@ -2,33 +2,25 @@
 
 exports[`breadcrumb normal 1`] = `
 <nav
-  className="breadcrumb "
+  className="breadcrumb"
 >
   <ul>
-    <li
-      className=""
-    >
+    <li>
       <a>
         Bulma
       </a>
     </li>
-    <li
-      className=""
-    >
+    <li>
       <a>
         Documentation
       </a>
     </li>
-    <li
-      className=""
-    >
+    <li>
       <a>
         Componentes
       </a>
     </li>
-    <li
-      className=""
-    >
+    <li>
       <a>
         BreadCrumb
       </a>
@@ -43,30 +35,22 @@ Array [
     className="breadcrumb is-centered"
   >
     <ul>
-      <li
-        className=""
-      >
+      <li>
         <a>
           Bulma
         </a>
       </li>
-      <li
-        className=""
-      >
+      <li>
         <a>
           Documentation
         </a>
       </li>
-      <li
-        className=""
-      >
+      <li>
         <a>
           Componentes
         </a>
       </li>
-      <li
-        className=""
-      >
+      <li>
         <a>
           BreadCrumb
         </a>
@@ -78,30 +62,22 @@ Array [
     className="breadcrumb is-right"
   >
     <ul>
-      <li
-        className=""
-      >
+      <li>
         <a>
           Bulma
         </a>
       </li>
-      <li
-        className=""
-      >
+      <li>
         <a>
           Documentation
         </a>
       </li>
-      <li
-        className=""
-      >
+      <li>
         <a>
           Componentes
         </a>
       </li>
-      <li
-        className=""
-      >
+      <li>
         <a>
           BreadCrumb
         </a>
@@ -114,33 +90,25 @@ Array [
 exports[`breadcrumb separators 1`] = `
 Array [
   <nav
-    className="breadcrumb has-arrow-separator"
+    className="breadcrumb is-arrow"
   >
     <ul>
-      <li
-        className=""
-      >
+      <li>
         <a>
           Bulma
         </a>
       </li>
-      <li
-        className=""
-      >
+      <li>
         <a>
           Documentation
         </a>
       </li>
-      <li
-        className=""
-      >
+      <li>
         <a>
           Componentes
         </a>
       </li>
-      <li
-        className=""
-      >
+      <li>
         <a>
           BreadCrumb
         </a>
@@ -148,33 +116,25 @@ Array [
     </ul>
   </nav>,
   <nav
-    className="breadcrumb has-bullet-separator"
+    className="breadcrumb is-bullet"
   >
     <ul>
-      <li
-        className=""
-      >
+      <li>
         <a>
           Bulma
         </a>
       </li>
-      <li
-        className=""
-      >
+      <li>
         <a>
           Documentation
         </a>
       </li>
-      <li
-        className=""
-      >
+      <li>
         <a>
           Componentes
         </a>
       </li>
-      <li
-        className=""
-      >
+      <li>
         <a>
           BreadCrumb
         </a>
@@ -182,33 +142,25 @@ Array [
     </ul>
   </nav>,
   <nav
-    className="breadcrumb has-dot-separator"
+    className="breadcrumb is-dot"
   >
     <ul>
-      <li
-        className=""
-      >
+      <li>
         <a>
           Bulma
         </a>
       </li>
-      <li
-        className=""
-      >
+      <li>
         <a>
           Documentation
         </a>
       </li>
-      <li
-        className=""
-      >
+      <li>
         <a>
           Componentes
         </a>
       </li>
-      <li
-        className=""
-      >
+      <li>
         <a>
           BreadCrumb
         </a>
@@ -216,33 +168,25 @@ Array [
     </ul>
   </nav>,
   <nav
-    className="breadcrumb has-succeeds-separator"
+    className="breadcrumb is-succeeds"
   >
     <ul>
-      <li
-        className=""
-      >
+      <li>
         <a>
           Bulma
         </a>
       </li>
-      <li
-        className=""
-      >
+      <li>
         <a>
           Documentation
         </a>
       </li>
-      <li
-        className=""
-      >
+      <li>
         <a>
           Componentes
         </a>
       </li>
-      <li
-        className=""
-      >
+      <li>
         <a>
           BreadCrumb
         </a>
@@ -258,30 +202,22 @@ Array [
     className="breadcrumb is-small"
   >
     <ul>
-      <li
-        className=""
-      >
+      <li>
         <a>
           Bulma
         </a>
       </li>
-      <li
-        className=""
-      >
+      <li>
         <a>
           Documentation
         </a>
       </li>
-      <li
-        className=""
-      >
+      <li>
         <a>
           Componentes
         </a>
       </li>
-      <li
-        className=""
-      >
+      <li>
         <a>
           BreadCrumb
         </a>
@@ -292,30 +228,22 @@ Array [
     className="breadcrumb is-medium"
   >
     <ul>
-      <li
-        className=""
-      >
+      <li>
         <a>
           Bulma
         </a>
       </li>
-      <li
-        className=""
-      >
+      <li>
         <a>
           Documentation
         </a>
       </li>
-      <li
-        className=""
-      >
+      <li>
         <a>
           Componentes
         </a>
       </li>
-      <li
-        className=""
-      >
+      <li>
         <a>
           BreadCrumb
         </a>
@@ -326,30 +254,22 @@ Array [
     className="breadcrumb is-large"
   >
     <ul>
-      <li
-        className=""
-      >
+      <li>
         <a>
           Bulma
         </a>
       </li>
-      <li
-        className=""
-      >
+      <li>
         <a>
           Documentation
         </a>
       </li>
-      <li
-        className=""
-      >
+      <li>
         <a>
           Componentes
         </a>
       </li>
-      <li
-        className=""
-      >
+      <li>
         <a>
           BreadCrumb
         </a>
@@ -361,39 +281,31 @@ Array [
 
 exports[`breadcrumb with href 1`] = `
 <nav
-  className="breadcrumb "
+  className="breadcrumb"
 >
   <ul>
-    <li
-      className=""
-    >
+    <li>
       <a
         href="https://ufsc.br"
       >
         Bulma
       </a>
     </li>
-    <li
-      className=""
-    >
+    <li>
       <a
         href="https://ufsc.br"
       >
         Documentation
       </a>
     </li>
-    <li
-      className=""
-    >
+    <li>
       <a
         href="https://ufsc.br"
       >
         Componentes
       </a>
     </li>
-    <li
-      className=""
-    >
+    <li>
       <a
         href="https://ufsc.br"
       >
@@ -406,12 +318,10 @@ exports[`breadcrumb with href 1`] = `
 
 exports[`breadcrumb with icons 1`] = `
 <nav
-  className="breadcrumb "
+  className="breadcrumb"
 >
   <ul>
-    <li
-      className=""
-    >
+    <li>
       <a>
         <span>
           Bulma
@@ -426,9 +336,7 @@ exports[`breadcrumb with icons 1`] = `
         </span>
       </a>
     </li>
-    <li
-      className=""
-    >
+    <li>
       <a>
         <span>
           Documentation
@@ -443,9 +351,7 @@ exports[`breadcrumb with icons 1`] = `
         </span>
       </a>
     </li>
-    <li
-      className=""
-    >
+    <li>
       <a>
         <span>
           Componentes
@@ -460,9 +366,7 @@ exports[`breadcrumb with icons 1`] = `
         </span>
       </a>
     </li>
-    <li
-      className=""
-    >
+    <li>
       <a>
         <span>
           BreadCrumb
@@ -483,39 +387,31 @@ exports[`breadcrumb with icons 1`] = `
 
 exports[`breadcrumb with internal onClick 1`] = `
 <nav
-  className="breadcrumb "
+  className="breadcrumb"
 >
   <ul>
-    <li
-      className=""
-    >
+    <li>
       <a
         onClick={[Function]}
       >
         Bulma
       </a>
     </li>
-    <li
-      className=""
-    >
+    <li>
       <a
         onClick={[Function]}
       >
         Documentation
       </a>
     </li>
-    <li
-      className=""
-    >
+    <li>
       <a
         onClick={[Function]}
       >
         Componentes
       </a>
     </li>
-    <li
-      className=""
-    >
+    <li>
       <a
         onClick={[Function]}
       >
@@ -528,39 +424,31 @@ exports[`breadcrumb with internal onClick 1`] = `
 
 exports[`breadcrumb with onCLick on component Icon 1`] = `
 <nav
-  className="breadcrumb "
+  className="breadcrumb"
 >
   <ul>
-    <li
-      className=""
-    >
+    <li>
       <a
         onClick={[Function]}
       >
         Bulma
       </a>
     </li>
-    <li
-      className=""
-    >
+    <li>
       <a
         onClick={[Function]}
       >
         Documentation
       </a>
     </li>
-    <li
-      className=""
-    >
+    <li>
       <a
         onClick={[Function]}
       >
         Componentes
       </a>
     </li>
-    <li
-      className=""
-    >
+    <li>
       <a
         onClick={[Function]}
       >
@@ -573,33 +461,25 @@ exports[`breadcrumb with onCLick on component Icon 1`] = `
 
 exports[`breadcrumb with onCLick on component Icon 2`] = `
 <nav
-  className="breadcrumb "
+  className="breadcrumb"
 >
   <ul>
-    <li
-      className=""
-    >
+    <li>
       <a>
         Bulma
       </a>
     </li>
-    <li
-      className=""
-    >
+    <li>
       <a>
         Documentation
       </a>
     </li>
-    <li
-      className=""
-    >
+    <li>
       <a>
         Componentes
       </a>
     </li>
-    <li
-      className=""
-    >
+    <li>
       <a>
         BreadCrumb
       </a>
@@ -610,12 +490,10 @@ exports[`breadcrumb with onCLick on component Icon 2`] = `
 
 exports[`breadcrumb with onCLick on component Icon 3`] = `
 <nav
-  className="breadcrumb "
+  className="breadcrumb"
 >
   <ul>
-    <li
-      className=""
-    >
+    <li>
       <a
         href="https://ufsc.br"
         onClick={[Function]}
@@ -634,9 +512,7 @@ exports[`breadcrumb with onCLick on component Icon 3`] = `
         </span>
       </a>
     </li>
-    <li
-      className=""
-    >
+    <li>
       <a
         href="https://ufsc.br"
         onClick={[Function]}
@@ -655,9 +531,7 @@ exports[`breadcrumb with onCLick on component Icon 3`] = `
         </span>
       </a>
     </li>
-    <li
-      className=""
-    >
+    <li>
       <a
         href="https://ufsc.br"
         onClick={[Function]}
@@ -676,9 +550,7 @@ exports[`breadcrumb with onCLick on component Icon 3`] = `
         </span>
       </a>
     </li>
-    <li
-      className=""
-    >
+    <li>
       <a
         href="https://ufsc.br"
         onClick={[Function]}

@@ -7,21 +7,18 @@ exports[`button list size correctly 1`] = `
   <button
     className="button"
     disabled={false}
-    onClick={[Function]}
   >
      Testando
   </button>
   <button
     className="button"
     disabled={false}
-    onClick={[Function]}
   >
      Testando
   </button>
   <button
     className="button"
     disabled={false}
-    onClick={[Function]}
   >
      Testando
   </button>
@@ -35,21 +32,18 @@ exports[`button list size correctly 2`] = `
   <button
     className="button"
     disabled={false}
-    onClick={[Function]}
   >
      Testando
   </button>
   <button
     className="button"
     disabled={false}
-    onClick={[Function]}
   >
      Testando
   </button>
   <button
     className="button"
     disabled={false}
-    onClick={[Function]}
   >
      Testando
   </button>
@@ -63,21 +57,18 @@ exports[`button list size correctly 3`] = `
   <button
     className="button"
     disabled={false}
-    onClick={[Function]}
   >
      Testando
   </button>
   <button
     className="button"
     disabled={false}
-    onClick={[Function]}
   >
      Testando
   </button>
   <button
     className="button"
     disabled={false}
-    onClick={[Function]}
   >
      Testando
   </button>
@@ -89,39 +80,28 @@ exports[`buttons size correctly 1`] = `
   className="buttons"
 >
   <button
-    className="button is-small"
+    className="button button is-small"
     disabled={false}
-    onClick={[Function]}
   >
-     Testando
+     Small
   </button>
   <button
     className="button"
     disabled={false}
-    onClick={[Function]}
   >
-     Testando
+     Normal
   </button>
   <button
-    className="button is-normal"
+    className="button button is-medium"
     disabled={false}
-    onClick={[Function]}
   >
-     Testando
+     Medium
   </button>
   <button
-    className="button is-medium"
+    className="button button is-large"
     disabled={false}
-    onClick={[Function]}
   >
-     Testando
-  </button>
-  <button
-    className="button is-large"
-    disabled={false}
-    onClick={[Function]}
-  >
-     Testando
+     Large
   </button>
 </div>
 `;
@@ -133,7 +113,6 @@ exports[`buttons with icons 1`] = `
   <button
     className="button"
     disabled={false}
-    onClick={[Function]}
   >
     <span />
     <span
@@ -148,7 +127,6 @@ exports[`buttons with icons 1`] = `
   <button
     className="button"
     disabled={false}
-    onClick={[Function]}
   >
     <span />
     <span
@@ -163,7 +141,6 @@ exports[`buttons with icons 1`] = `
   <button
     className="button"
     disabled={false}
-    onClick={[Function]}
   >
     <span />
     <span
@@ -178,7 +155,6 @@ exports[`buttons with icons 1`] = `
   <button
     className="button"
     disabled={false}
-    onClick={[Function]}
   >
     <span>
       Github
@@ -195,7 +171,6 @@ exports[`buttons with icons 1`] = `
   <button
     className="button is-primary"
     disabled={false}
-    onClick={[Function]}
   >
     <span>
       Twitter
@@ -212,7 +187,6 @@ exports[`buttons with icons 1`] = `
   <button
     className="button is-success"
     disabled={false}
-    onClick={[Function]}
   >
     <span>
       Save
@@ -229,7 +203,6 @@ exports[`buttons with icons 1`] = `
   <button
     className="button is-danger is-outlined"
     disabled={false}
-    onClick={[Function]}
   >
     <span
       className="icon"
@@ -246,7 +219,6 @@ exports[`buttons with icons 1`] = `
   <button
     className="button is-small"
     disabled={false}
-    onClick={[Function]}
   >
     <span>
       Github
@@ -263,7 +235,6 @@ exports[`buttons with icons 1`] = `
   <button
     className="button"
     disabled={false}
-    onClick={[Function]}
   >
     <span>
       Github
@@ -280,7 +251,6 @@ exports[`buttons with icons 1`] = `
   <button
     className="button is-medium"
     disabled={false}
-    onClick={[Function]}
   >
     <span>
       Github
@@ -297,7 +267,6 @@ exports[`buttons with icons 1`] = `
   <button
     className="button is-large"
     disabled={false}
-    onClick={[Function]}
   >
     <span>
       Github
@@ -321,51 +290,44 @@ exports[`color correctly 1`] = `
   <button
     className="button"
     disabled={false}
-    onClick={[Function]}
   >
     Testando
   </button>
   <button
     className="button is-primary"
     disabled={false}
-    onClick={[Function]}
   >
-    Testando
+    Primary
   </button>
   <button
     className="button is-link"
     disabled={false}
-    onClick={[Function]}
   >
-     Testando
+     Link
   </button>
   <button
     className="button is-info"
     disabled={false}
-    onClick={[Function]}
   >
-     Testando
+     Info
   </button>
   <button
     className="button is-success"
     disabled={false}
-    onClick={[Function]}
   >
-     Testando
+     Success
   </button>
   <button
     className="button is-warning"
     disabled={false}
-    onClick={[Function]}
   >
-     Testando
+     Warning
   </button>
   <button
     className="button is-danger"
     disabled={false}
-    onClick={[Function]}
   >
-     Testando
+     Danger
   </button>
 </div>
 `;
@@ -377,37 +339,32 @@ exports[`color secundary correctly 1`] = `
   <button
     className="button is-white"
     disabled={false}
-    onClick={[Function]}
   >
-     Testando
+     White
   </button>
   <button
     className="button is-light"
     disabled={false}
-    onClick={[Function]}
   >
-     Testando
+     Light
   </button>
   <button
     className="button is-dark"
     disabled={false}
-    onClick={[Function]}
   >
-     Testando
+     Dark
   </button>
   <button
     className="button is-black"
     disabled={false}
-    onClick={[Function]}
   >
-     Testando
+     Black
   </button>
   <button
     className="button is-text"
     disabled={false}
-    onClick={[Function]}
   >
-     Testando
+     Text
   </button>
 </div>
 `;
@@ -419,44 +376,38 @@ exports[`colors light correctly 1`] = `
   <button
     className="button is-primary is-light"
     disabled={false}
-    onClick={[Function]}
   >
-     Testando
+     primary light
   </button>
   <button
     className="button is-link is-light"
     disabled={false}
-    onClick={[Function]}
   >
-     Testando
+     link light
   </button>
   <button
     className="button is-info is-light"
     disabled={false}
-    onClick={[Function]}
   >
-     Testando
+     info light
   </button>
   <button
     className="button is-success is-light"
     disabled={false}
-    onClick={[Function]}
   >
-     Testando
+     success light
   </button>
   <button
     className="button is-warning is-light"
     disabled={false}
-    onClick={[Function]}
   >
-     Testando
+     warning light
   </button>
   <button
     className="button is-danger is-light"
     disabled={false}
-    onClick={[Function]}
   >
-     Testando
+     danger light
   </button>
 </div>
 `;
@@ -466,130 +417,112 @@ exports[`disabled corretly 1`] = `
   className="buttons"
 >
   <button
-    className="button"
-    disabled={true}
-    onClick={[Function]}
-  >
-     Testando
-  </button>
-  <button
     className="button is-primary"
     disabled={true}
-    onClick={[Function]}
   >
-     Testando
+     primary disabled
   </button>
   <button
     className="button is-link"
     disabled={true}
-    onClick={[Function]}
   >
-     Testando
+     link disabled
   </button>
   <button
     className="button is-info"
     disabled={true}
-    onClick={[Function]}
   >
-     Testando
+     info disabled
   </button>
   <button
-    className="button is-success"
+    className="button is-uccess"
     disabled={true}
-    onClick={[Function]}
   >
-     Testando
+     success disabled
   </button>
   <button
     className="button is-warning"
     disabled={true}
-    onClick={[Function]}
   >
-     Testando
+     warning disabled
   </button>
   <button
     className="button is-danger"
     disabled={true}
-    onClick={[Function]}
   >
-     Testando
+     danger disabled
   </button>
 </div>
 `;
 
 exports[`fullwidth  correctly 1`] = `
 <div
-  className="buttons"
+  className="columns"
 >
-  <button
-    className="button is-small is-fullwidth"
-    disabled={false}
-    onClick={[Function]}
+  <div
+    className="column is-half"
   >
-     Testando
-  </button>
-  <button
-    className="button is-fullwidth"
-    disabled={false}
-    onClick={[Function]}
-  >
-     Testando
-  </button>
-  <button
-    className="button is-medium is-fullwidth"
-    disabled={false}
-    onClick={[Function]}
-  >
-     Testando
-  </button>
-  <button
-    className="button is-large is-fullwidth"
-    disabled={false}
-    onClick={[Function]}
-  >
-     Testando
-  </button>
+    <button
+      className="button is-small is-fullwidth"
+      disabled={false}
+    >
+       small fullwidth
+    </button>
+    <button
+      className="button is-fullwidth"
+      disabled={false}
+    >
+       normal fullwidth
+    </button>
+    <button
+      className="button is-medium is-fullwidth"
+      disabled={false}
+    >
+       medium fullwidth
+    </button>
+    <button
+      className="button is-large is-fullwidth"
+      disabled={false}
+    >
+       large fullwidth
+    </button>
+  </div>
 </div>
 `;
 
 exports[`inverted  correctly 1`] = `
 <div
-  className="buttons"
+  className="buttons is-primary"
 >
   <button
     className="button is-primary is-inverted"
     disabled={false}
-    onClick={[Function]}
   >
-     Testando
+     primary inverted
   </button>
   <button
     className="button is-link is-inverted"
     disabled={false}
-    onClick={[Function]}
   >
-     Testando
+     link inverted
   </button>
   <button
     className="button is-info is-inverted"
     disabled={false}
-    onClick={[Function]}
   >
-     Testando
+     info inverted
   </button>
   <button
     className="button is-success is-inverted"
     disabled={false}
-    onClick={[Function]}
   >
-     Testando
+     success inverted
   </button>
   <button
     className="button is-danger is-inverted"
     disabled={false}
-    onClick={[Function]}
   >
-     Testando
+     danger inverted
   </button>
 </div>
 `;
@@ -601,49 +534,42 @@ exports[`loading corretly 1`] = `
   <button
     className="button is-loading"
     disabled={false}
-    onClick={[Function]}
   >
      Testando
   </button>
   <button
     className="button is-primary is-loading"
     disabled={false}
-    onClick={[Function]}
   >
      Testando
   </button>
   <button
     className="button is-link is-loading"
     disabled={false}
-    onClick={[Function]}
   >
      Testando
   </button>
   <button
     className="button is-info is-loading"
     disabled={false}
-    onClick={[Function]}
   >
      Testando
   </button>
   <button
     className="button is-success is-loading"
     disabled={false}
-    onClick={[Function]}
   >
      Testando
   </button>
   <button
     className="button is-warning is-loading"
     disabled={false}
-    onClick={[Function]}
   >
      Testando
   </button>
   <button
     className="button is-danger is-loading"
     disabled={false}
-    onClick={[Function]}
   >
      Testando
   </button>
@@ -657,44 +583,38 @@ exports[`outlined  correctly 1`] = `
   <button
     className="button is-primary is-outlined"
     disabled={false}
-    onClick={[Function]}
   >
-     Testando
+     primary outlined
   </button>
   <button
     className="button is-link is-outlined"
     disabled={false}
-    onClick={[Function]}
   >
-     Testando
+     link outlined
   </button>
   <button
     className="button is-info is-outlined"
     disabled={false}
-    onClick={[Function]}
   >
-     Testando
+     info outlined
   </button>
   <button
     className="button is-success is-outlined"
     disabled={false}
-    onClick={[Function]}
   >
-     Testando
+     success outlined
   </button>
   <button
     className="button is-warning is-outlined"
     disabled={false}
-    onClick={[Function]}
   >
-     Testando
+     warning outlined
   </button>
   <button
     className="button is-danger is-outlined"
     disabled={false}
-    onClick={[Function]}
   >
-     Testando
+     danger outlined
   </button>
 </div>
 `;
@@ -706,44 +626,38 @@ exports[`rounded  correctly 1`] = `
   <button
     className="button is-primary is-rounded"
     disabled={false}
-    onClick={[Function]}
   >
-     Testando
+     primary rounded
   </button>
   <button
     className="button is-link is-rounded"
     disabled={false}
-    onClick={[Function]}
   >
-     Testando
+     link rounded
   </button>
   <button
     className="button is-info is-rounded"
     disabled={false}
-    onClick={[Function]}
   >
-     Testando
+     info rounded
   </button>
   <button
     className="button is-success is-rounded"
     disabled={false}
-    onClick={[Function]}
   >
-     Testando
+     success rounded
   </button>
   <button
     className="button is-warning is-rounded"
     disabled={false}
-    onClick={[Function]}
   >
-     Testando
+     warning rounded
   </button>
   <button
     className="button is-danger is-rounded"
     disabled={false}
-    onClick={[Function]}
   >
-     Testando
+     danger rounded
   </button>
 </div>
 `;
@@ -755,49 +669,42 @@ exports[`state  correctly 1`] = `
   <button
     className="button"
     disabled={false}
-    onClick={[Function]}
   >
      Testando
   </button>
   <button
     className="button is-primary is-hovered"
     disabled={false}
-    onClick={[Function]}
   >
      Testando
   </button>
   <button
     className="button is-link is-hovered"
     disabled={false}
-    onClick={[Function]}
   >
      Testando
   </button>
   <button
     className="button is-info is-hovered"
     disabled={false}
-    onClick={[Function]}
   >
      Testando
   </button>
   <button
     className="button is-success is-hovered"
     disabled={false}
-    onClick={[Function]}
   >
      Testando
   </button>
   <button
     className="button is-warning is-hovered"
     disabled={false}
-    onClick={[Function]}
   >
      Testando
   </button>
   <button
     className="button is-danger is-hovered"
     disabled={false}
-    onClick={[Function]}
   >
      Testando
   </button>
@@ -809,51 +716,40 @@ exports[`state  correctly 2`] = `
   className="buttons"
 >
   <button
-    className="button"
-    disabled={false}
-    onClick={[Function]}
-  />
-  <button
     className="button is-primary is-focused"
     disabled={false}
-    onClick={[Function]}
   >
-     Testando
+     primary focused
   </button>
   <button
     className="button is-link is-focused"
     disabled={false}
-    onClick={[Function]}
   >
-     Testando
+     link focused
   </button>
   <button
     className="button is-info is-focused"
     disabled={false}
-    onClick={[Function]}
   >
-     Testando
+     info focused
   </button>
   <button
     className="button is-success is-focused"
     disabled={false}
-    onClick={[Function]}
   >
-     Testando
+     success focused
   </button>
   <button
     className="button is-warning is-focused"
     disabled={false}
-    onClick={[Function]}
   >
-     Testando
+     warning focused
   </button>
   <button
     className="button is-danger is-focused"
     disabled={false}
-    onClick={[Function]}
   >
-     Testando
+     danger focused
   </button>
 </div>
 `;
@@ -863,51 +759,40 @@ exports[`state  correctly 3`] = `
   className="buttons"
 >
   <button
-    className="button"
-    disabled={false}
-    onClick={[Function]}
-  />
-  <button
     className="button is-primary is-active"
     disabled={false}
-    onClick={[Function]}
   >
-     Testando
+     primary active
   </button>
   <button
     className="button is-link is-active"
     disabled={false}
-    onClick={[Function]}
   >
-     Testando
+     link active
   </button>
   <button
     className="button is-info is-active"
     disabled={false}
-    onClick={[Function]}
   >
-     Testando
+     info active
   </button>
   <button
     className="button is-success is-active"
     disabled={false}
-    onClick={[Function]}
   >
-     Testando
+     success active
   </button>
   <button
     className="button is-warning is-active"
     disabled={false}
-    onClick={[Function]}
   >
-     Testando
+     warning active
   </button>
   <button
     className="button is-danger is-active"
     disabled={false}
-    onClick={[Function]}
   >
-     Testando
+     danger active
   </button>
 </div>
 `;
@@ -916,7 +801,6 @@ exports[`value correctly 1`] = `
 <button
   className="button"
   disabled={false}
-  onClick={[Function]}
 />
 `;
 
@@ -924,6 +808,5 @@ exports[`value correctly 2`] = `
 <button
   className="button"
   disabled={false}
-  onClick={[Function]}
 />
 `;

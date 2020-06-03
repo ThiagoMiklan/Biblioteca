@@ -1,7 +1,7 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import Control from '../biblioteca/Control';
-import CheckBox from '../biblioteca/CheckBox';
+import Control from '../components/Control';
+import CheckBox from '../components/CheckBox';
 
 
 

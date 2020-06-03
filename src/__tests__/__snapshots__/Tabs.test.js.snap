@@ -1,0 +1,744 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`value correctly 1`] = `
+<div
+  className="columns"
+>
+  <div
+    className="column"
+  >
+    <div
+      className="container is-fluid"
+    >
+      <div
+        className="tabs"
+      >
+        <ul>
+          <li
+            className="active"
+          >
+            <a>
+              Pictures
+            </a>
+          </li>
+          <li>
+            <a>
+              Musica
+            </a>
+          </li>
+          <li>
+            <a>
+              Videos
+            </a>
+          </li>
+          <li>
+            <a>
+              Documents
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div
+        className="tabs is-centered"
+      >
+        <ul>
+          <li
+            className="active"
+          >
+            <a>
+              Pictures
+            </a>
+          </li>
+          <li>
+            <a>
+              Musica
+            </a>
+          </li>
+          <li>
+            <a>
+              Videos
+            </a>
+          </li>
+          <li>
+            <a>
+              Documents
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div
+        className="tabs is-right"
+      >
+        <ul>
+          <li
+            className="active"
+          >
+            <a>
+              Pictures
+            </a>
+          </li>
+          <li>
+            <a>
+              Musica
+            </a>
+          </li>
+          <li>
+            <a>
+              Videos
+            </a>
+          </li>
+          <li>
+            <a>
+              Documents
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div
+        className="tabs"
+      >
+        <ul>
+          <li
+            className="is-active"
+          >
+            <a>
+              <span />
+              <span
+                className="icon"
+              >
+                <i
+                  aria-hidden="true"
+                  className="fas fa-image"
+                />
+              </span>
+              Pictures
+            </a>
+          </li>
+          <li>
+            <a>
+              <span />
+              <span
+                className="icon"
+              >
+                <i
+                  aria-hidden="true"
+                  className="fas fa-music"
+                />
+              </span>
+              Musica
+            </a>
+          </li>
+          <li>
+            <a>
+              <span />
+              <span
+                className="icon has-text-success"
+              >
+                <i
+                  aria-hidden="true"
+                  className="fas fa-film"
+                />
+              </span>
+              Videos
+            </a>
+          </li>
+          <li>
+            <a>
+              <span />
+              <span
+                className="icon"
+              >
+                <i
+                  aria-hidden="true"
+                  className="far fa-file-alt"
+                />
+              </span>
+              Documents
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div
+        className="tabs is-small"
+      >
+        <ul>
+          <li
+            className="active"
+          >
+            <a>
+              Pictures
+            </a>
+          </li>
+          <li>
+            <a>
+              Musica
+            </a>
+          </li>
+          <li>
+            <a>
+              Videos
+            </a>
+          </li>
+          <li>
+            <a>
+              Documents
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div
+        className="tabs is-medium"
+      >
+        <ul>
+          <li
+            className="active"
+          >
+            <a>
+              Pictures
+            </a>
+          </li>
+          <li>
+            <a>
+              Musica
+            </a>
+          </li>
+          <li>
+            <a>
+              Videos
+            </a>
+          </li>
+          <li>
+            <a>
+              Documents
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div
+        className="tabs is-large"
+      >
+        <ul>
+          <li
+            className="active"
+          >
+            <a>
+              Pictures
+            </a>
+          </li>
+          <li>
+            <a>
+              Musica
+            </a>
+          </li>
+          <li>
+            <a>
+              Videos
+            </a>
+          </li>
+          <li>
+            <a>
+              Documents
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div
+        className="tabs is-boxed"
+      >
+        <ul>
+          <li
+            className="is-active"
+          >
+            <a>
+              <span />
+              <span
+                className="icon"
+              >
+                <i
+                  aria-hidden="true"
+                  className="fas fa-image"
+                />
+              </span>
+              Pictures
+            </a>
+          </li>
+          <li>
+            <a>
+              <span />
+              <span
+                className="icon"
+              >
+                <i
+                  aria-hidden="true"
+                  className="fas fa-music"
+                />
+              </span>
+              Musica
+            </a>
+          </li>
+          <li>
+            <a>
+              <span />
+              <span
+                className="icon has-text-success"
+              >
+                <i
+                  aria-hidden="true"
+                  className="fas fa-film"
+                />
+              </span>
+              Videos
+            </a>
+          </li>
+          <li>
+            <a>
+              <span />
+              <span
+                className="icon"
+              >
+                <i
+                  aria-hidden="true"
+                  className="far fa-file-alt"
+                />
+              </span>
+              Documents
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div
+        className="tabs is-toggle"
+      >
+        <ul>
+          <li
+            className="is-active"
+          >
+            <a>
+              <span />
+              <span
+                className="icon"
+              >
+                <i
+                  aria-hidden="true"
+                  className="fas fa-image"
+                />
+              </span>
+              Pictures
+            </a>
+          </li>
+          <li>
+            <a>
+              <span />
+              <span
+                className="icon"
+              >
+                <i
+                  aria-hidden="true"
+                  className="fas fa-music"
+                />
+              </span>
+              Musica
+            </a>
+          </li>
+          <li>
+            <a>
+              <span />
+              <span
+                className="icon has-text-success"
+              >
+                <i
+                  aria-hidden="true"
+                  className="fas fa-film"
+                />
+              </span>
+              Videos
+            </a>
+          </li>
+          <li>
+            <a>
+              <span />
+              <span
+                className="icon"
+              >
+                <i
+                  aria-hidden="true"
+                  className="far fa-file-alt"
+                />
+              </span>
+              Documents
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div
+        className="tabs is-toggle is-toggle-rounded"
+      >
+        <ul>
+          <li
+            className="is-active"
+          >
+            <a>
+              <span />
+              <span
+                className="icon"
+              >
+                <i
+                  aria-hidden="true"
+                  className="fas fa-image"
+                />
+              </span>
+              Pictures
+            </a>
+          </li>
+          <li>
+            <a>
+              <span />
+              <span
+                className="icon"
+              >
+                <i
+                  aria-hidden="true"
+                  className="fas fa-music"
+                />
+              </span>
+              Musica
+            </a>
+          </li>
+          <li>
+            <a>
+              <span />
+              <span
+                className="icon has-text-success"
+              >
+                <i
+                  aria-hidden="true"
+                  className="fas fa-film"
+                />
+              </span>
+              Videos
+            </a>
+          </li>
+          <li>
+            <a>
+              <span />
+              <span
+                className="icon"
+              >
+                <i
+                  aria-hidden="true"
+                  className="far fa-file-alt"
+                />
+              </span>
+              Documents
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div
+        className="tabs is-fullwidth"
+      >
+        <ul>
+          <li>
+            <a>
+              <span />
+              <span
+                className="icon"
+              >
+                <i
+                  aria-hidden="true"
+                  className="fas fa-angle-left"
+                />
+              </span>
+              Left
+            </a>
+          </li>
+          <li>
+            <a>
+              <span />
+              <span
+                className="icon"
+              >
+                <i
+                  aria-hidden="true"
+                  className="fas fa-angle-up"
+                />
+              </span>
+              Up
+            </a>
+          </li>
+          <li>
+            <a>
+              <span />
+              <span
+                className="icon"
+              >
+                <i
+                  aria-hidden="true"
+                  className="fas fa-angle-right"
+                />
+              </span>
+              Right
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div
+        className="tabs is-centered is-boxed"
+      >
+        <ul>
+          <li
+            className="is-active"
+          >
+            <a>
+              <span />
+              <span
+                className="icon"
+              >
+                <i
+                  aria-hidden="true"
+                  className="fas fa-image"
+                />
+              </span>
+              Pictures
+            </a>
+          </li>
+          <li>
+            <a>
+              <span />
+              <span
+                className="icon"
+              >
+                <i
+                  aria-hidden="true"
+                  className="fas fa-music"
+                />
+              </span>
+              Musica
+            </a>
+          </li>
+          <li>
+            <a>
+              <span />
+              <span
+                className="icon has-text-success"
+              >
+                <i
+                  aria-hidden="true"
+                  className="fas fa-film"
+                />
+              </span>
+              Videos
+            </a>
+          </li>
+          <li>
+            <a>
+              <span />
+              <span
+                className="icon"
+              >
+                <i
+                  aria-hidden="true"
+                  className="far fa-file-alt"
+                />
+              </span>
+              Documents
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div
+        className="tabs is-toggle is-fullwidth"
+      >
+        <ul>
+          <li
+            className="is-active"
+          >
+            <a>
+              <span />
+              <span
+                className="icon"
+              >
+                <i
+                  aria-hidden="true"
+                  className="fas fa-image"
+                />
+              </span>
+              Pictures
+            </a>
+          </li>
+          <li>
+            <a>
+              <span />
+              <span
+                className="icon"
+              >
+                <i
+                  aria-hidden="true"
+                  className="fas fa-music"
+                />
+              </span>
+              Musica
+            </a>
+          </li>
+          <li>
+            <a>
+              <span />
+              <span
+                className="icon has-text-success"
+              >
+                <i
+                  aria-hidden="true"
+                  className="fas fa-film"
+                />
+              </span>
+              Videos
+            </a>
+          </li>
+          <li>
+            <a>
+              <span />
+              <span
+                className="icon"
+              >
+                <i
+                  aria-hidden="true"
+                  className="far fa-file-alt"
+                />
+              </span>
+              Documents
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div
+        className="tabs is-centered is-boxed is-medium"
+      >
+        <ul>
+          <li
+            className="is-active"
+          >
+            <a>
+              <span />
+              <span
+                className="icon"
+              >
+                <i
+                  aria-hidden="true"
+                  className="fas fa-image"
+                />
+              </span>
+              Pictures
+            </a>
+          </li>
+          <li>
+            <a>
+              <span />
+              <span
+                className="icon"
+              >
+                <i
+                  aria-hidden="true"
+                  className="fas fa-music"
+                />
+              </span>
+              Musica
+            </a>
+          </li>
+          <li>
+            <a>
+              <span />
+              <span
+                className="icon has-text-success"
+              >
+                <i
+                  aria-hidden="true"
+                  className="fas fa-film"
+                />
+              </span>
+              Videos
+            </a>
+          </li>
+          <li>
+            <a>
+              <span />
+              <span
+                className="icon"
+              >
+                <i
+                  aria-hidden="true"
+                  className="far fa-file-alt"
+                />
+              </span>
+              Documents
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div
+        className="tabs is-toggle is-fullwidth is-large"
+      >
+        <ul>
+          <li
+            className="is-active"
+          >
+            <a>
+              <span />
+              <span
+                className="icon"
+              >
+                <i
+                  aria-hidden="true"
+                  className="fas fa-image"
+                />
+              </span>
+              Pictures
+            </a>
+          </li>
+          <li>
+            <a>
+              <span />
+              <span
+                className="icon"
+              >
+                <i
+                  aria-hidden="true"
+                  className="fas fa-music"
+                />
+              </span>
+              Musica
+            </a>
+          </li>
+          <li>
+            <a>
+              <span />
+              <span
+                className="icon has-text-success"
+              >
+                <i
+                  aria-hidden="true"
+                  className="fas fa-film"
+                />
+              </span>
+              Videos
+            </a>
+          </li>
+          <li>
+            <a>
+              <span />
+              <span
+                className="icon"
+              >
+                <i
+                  aria-hidden="true"
+                  className="far fa-file-alt"
+                />
+              </span>
+              Documents
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+`;

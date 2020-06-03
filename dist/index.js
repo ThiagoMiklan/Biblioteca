@@ -59,21 +59,6 @@ function _classCallCheck(instance, Constructor) {
   }
 }
 
-function _defineProperty(obj, key, value) {
-  if (key in obj) {
-    Object.defineProperty(obj, key, {
-      value: value,
-      enumerable: true,
-      configurable: true,
-      writable: true
-    });
-  } else {
-    obj[key] = value;
-  }
-
-  return obj;
-}
-
 function _extends() {
   _extends = Object.assign || function (target) {
     for (var i = 1; i < arguments.length; i++) {
@@ -90,40 +75,6 @@ function _extends() {
   };
 
   return _extends.apply(this, arguments);
-}
-
-function ownKeys(object, enumerableOnly) {
-  var keys = Object.keys(object);
-
-  if (Object.getOwnPropertySymbols) {
-    var symbols = Object.getOwnPropertySymbols(object);
-    if (enumerableOnly) symbols = symbols.filter(function (sym) {
-      return Object.getOwnPropertyDescriptor(object, sym).enumerable;
-    });
-    keys.push.apply(keys, symbols);
-  }
-
-  return keys;
-}
-
-function _objectSpread2(target) {
-  for (var i = 1; i < arguments.length; i++) {
-    var source = arguments[i] != null ? arguments[i] : {};
-
-    if (i % 2) {
-      ownKeys(Object(source), true).forEach(function (key) {
-        _defineProperty(target, key, source[key]);
-      });
-    } else if (Object.getOwnPropertyDescriptors) {
-      Object.defineProperties(target, Object.getOwnPropertyDescriptors(source));
-    } else {
-      ownKeys(Object(source)).forEach(function (key) {
-        Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key));
-      });
-    }
-  }
-
-  return target;
 }
 
 function _inherits(subClass, superClass) {
@@ -1396,691 +1347,8 @@ if (process.env.NODE_ENV !== 'production') {
 }
 });
 
-var classnames = createCommonjsModule(function (module) {
-/*!
-  Copyright (c) 2017 Jed Watson.
-  Licensed under the MIT License (MIT), see
-  http://jedwatson.github.io/classnames
-*/
-/* global define */
-
-(function () {
-
-	var hasOwn = {}.hasOwnProperty;
-
-	function classNames () {
-		var classes = [];
-
-		for (var i = 0; i < arguments.length; i++) {
-			var arg = arguments[i];
-			if (!arg) continue;
-
-			var argType = typeof arg;
-
-			if (argType === 'string' || argType === 'number') {
-				classes.push(arg);
-			} else if (Array.isArray(arg) && arg.length) {
-				var inner = classNames.apply(null, arg);
-				if (inner) {
-					classes.push(inner);
-				}
-			} else if (argType === 'object') {
-				for (var key in arg) {
-					if (hasOwn.call(arg, key) && arg[key]) {
-						classes.push(key);
-					}
-				}
-			}
-		}
-
-		return classes.join(' ');
-	}
-
-	if ( module.exports) {
-		classNames.default = classNames;
-		module.exports = classNames;
-	} else {
-		window.classNames = classNames;
-	}
-}());
-});
-
-var progress_bar_props = {
-  "progress": "progress",
-  "primary": "is-primary",
-  "link": "is-link",
-  "warning": "is-warning",
-  "info": "is-info",
-  "danger": "is-danger",
-  "sucess": "is-sucess",
-  "medium": "is-medium",
-  "small": "is-small",
-  "large": "is-large"
-};
-
-var global_props = {
-  "background-white": "has-background-white",
-  "background-black": "has-background-black",
-  "background-light": "has-background-light",
-  "background-dark": "has-background-dark,",
-  "background-primary": "has-background-primary",
-  "background-info": "has-background-info",
-  "background-link": "has-background-link",
-  "background-success": "has-background-success",
-  "background-warning": "has-background-warning",
-  "background-danger": "has-background-danger",
-  "background-black-bis": "has-background-black-bis",
-  "background-black-ter": "has-background-black-ter",
-  "background-grey-darker": "has-background-grey-darker",
-  "background-grey-dark": "has-background-grey-dark",
-  "background-grey": "has-background-grey",
-  "background-grey-light": "has-background-grey-light",
-  "background-grey-lighter": "has-background-grey-lighter",
-  "background-white-ter": "has-background-white-ter",
-  "background-white-bis": "has-background-white-bis",
-  "text-white": "has-text-white",
-  "text-black": "has-text-black",
-  "text-light": "has-text-light",
-  "text-dark": "has-text-dark",
-  "text-primary": "has-text-primary",
-  "text-info": "has-text-info",
-  "text-link": "has-text-link",
-  "text-success": "has-text-success",
-  "text-warning": "has-text-warning",
-  "text-danger": "has-text-danger",
-  "text-black-bis": "has-text-black-bis",
-  "text-black-ter": "has-text-black-ter",
-  "text-grey-darker": "has-text-grey-darker",
-  "text-grey-dark": "has-text-grey-dark",
-  "text-grey": "has-text-grey",
-  "text-grey-light": "has-text-grey-light",
-  "text-grey-lighter": "has-text-grey-lighter",
-  "text-white-ter": "has-text-white-ter",
-  "text-white-bis": "has-text-white-bis"
-};
-
-var table_props = {
-  "bordered": "is-bordered",
-  "striped": "is-striped",
-  "narrow": "is-narrow",
-  "hoverable": "is-hoverable",
-  "fullwidth": "is-fullwidth",
-  "table": "table",
-  "table-container": "table-container"
-};
-var table_props$1 = _objectSpread2({}, table_props, {}, global_props);
-
-var tag_props = {
-  "tag": "tag",
-  "black": "is-black",
-  "dark": "is-dark",
-  "light": "is-light",
-  "white": "is-white",
-  "primary": "is-primary",
-  "link": "is-link",
-  "info": "is-info",
-  "success": "is-success",
-  "warning": "is-warning",
-  "danger": "is-danger",
-  "medium": "is-medium",
-  "large": "is-large",
-  "rounded": "is-rounded",
-  "tags": "tags"
-};
-
-var list_props = {
-  "lower-alpha": "is-lower-alpha",
-  "lower-roman": "is-lower-roman",
-  "upper-alpha": "is-upper-alpha",
-  "upper-roman": "is-upper-roman"
-};
-
-var box_props = {};
-
-var image_props = {
-  // tamanhos dobrados
-  "16x": "image is-16x16",
-  "24x": "image is-24x24",
-  "32x": "image is-32x32",
-  "48x": "image is-48x48",
-  "64x": "image is-64x64",
-  "96x": "image is-96x96",
-  "128x": "image is-128x128",
-  // características da imagem
-  "rounded": "is-rounded",
-  // tamanhos responsivos
-  "1by1": "image is-1by1",
-  "1by2": "image is-1by2",
-  "1by3": "image is-1by2",
-  "2by1": "image is-2by1",
-  "5by4": "image is-5by4",
-  "4by3": "image is-4by3",
-  "3by2": "image is-3by2",
-  "5by3": "image is-5by3",
-  "16by9": "image is-16by9",
-  "3by1": "image is-3by1",
-  "4by5": "image is-4by5",
-  "3by4": "image is-3by4",
-  "2by3": "image is-2by3",
-  "3by5": "image is-3by5",
-  "9by16": "image is-9by16"
-};
-
-var notification_props = {
-  //cores
-  "primary": "is-primary",
-  "link": "is-link",
-  "warning": "is-warning",
-  "info": "is-info",
-  "danger": "is-danger",
-  "success": "is-success",
-  // opção do botão delete
-  "delete": "delete",
-  //light
-  'light': "is-light"
-};
-
-var navigation_bar_props = {
-  "dropdown": "has-dropdown",
-  "hover": "is-hoverable",
-  "primary": "is-primary",
-  "link": "is-link",
-  "danger": "is-danger",
-  "success": "is-success",
-  "info": "is-info",
-  "warning": "is-warning",
-  "black": "is-black",
-  "dark": "is-dark",
-  "light": "is-light",
-  "white": "is-white",
-  "active": "is-active",
-  "navbar-dropdown": "navbar-dropdown",
-  "fixed-top": "is-fixed-top",
-  "fixed-bottom": "is-fixed-bottom",
-  "inverted": "is-inverted"
-};
-
-var drop_down_props = {
-  "active": "is-active",
-  "hoverable": "is-hoverable",
-  "right": "is-right",
-  "divider": "is-divider",
-  "dropdown-item": "dropdown-item",
-  "up": "is-up",
-
-  /**
-   * default-icon é uma propriedade especial
-   * Motivação: o componente DropDown suporta ícones dentro de seu
-   * nome. Caso não seja informado um ícone através das propriedas de cada item
-   * é utilizado o default-icon como icone.
-   * Outro motivo é da manutenção, caso seja necessário trocar o default,basta setar
-   * a propriedade
-   */
-  "default-icon": "fas fa-angle-down"
-};
-
-var menu_props = {
-  "active": "is-active",
-  "label": "menu-label",
-  "list": "menu-list",
-  "menu": "menu"
-};
-
-var message_props = {
-  "primary": "is-primary",
-  "warning": "is-warning",
-  "info": "is-info",
-  "danger": "is-danger",
-  "success": "is-success",
-  "link": "is-link",
-  "dark": "is-dark",
-  "small": "is-small",
-  "medium": "is-medium",
-  "large": "is-large"
-};
-
-var bread_crumb_props = {
-  "small": "is-small",
-  "medium": "is-medium",
-  "large": "is-large",
-  "active": "is-active",
-  "succeeds": "has-succeeds-separator",
-  "dot": "has-dot-separator",
-  "bullet": "has-bullet-separator",
-  "arrow": "has-arrow-separator",
-  "centered": "is-centered",
-  "right": "is-right"
-};
-
-var title_props = {
-  "subtitle": "subtitle",
-  "title": "title",
-  "1": "is-1",
-  "2": "is-2",
-  "3": "is-3",
-  "4": "is-4",
-  "5": "is-5",
-  "6": "is-6",
-  "spaced": "is-spaced"
-};
-
-var pagination_props = {
-  "small": "is-small",
-  "medium": "is-medium",
-  "large": "is-large",
-  "rounded": "is-rounded",
-  "right": "is-right",
-  "left": "is-left",
-  "center": "is-centered",
-  "current": "is-current"
-};
-
-var card_props = {
-  "centered": "is-centered"
-};
-var card_props$1 = _objectSpread2({}, card_props, {}, global_props);
-
-var panel_props = {
-  "active": "is-active",
-  "primary": "is-primary",
-  "link": "is-link",
-  "info": "is-info",
-  "success": "is-success",
-  "warning": "is-warning",
-  "danger": "is-danger"
-};
-
-var input_props = {
-  //colors
-  "primary": "is-primary",
-  "info": "is-info",
-  "success": "is-success",
-  "warning": "is-warning",
-  "danger": "is-danger",
-  //sizes
-  "small": "is-small",
-  "medium": "is-medium",
-  "large": "is-large",
-  //state
-  "hovered": "is-hovered",
-  "focused": "is-focused",
-  "loading": "is-loading",
-  //style
-  "rounded": "is-rounded"
-};
-
-var tabs_props = {
-  "centered": "is-centered",
-  "right": "is-right",
-  "small": "is-small",
-  "medium": "is-medium",
-  "large": "is-large",
-  "toggle": "is-toggle",
-  "boxed": "is-boxed",
-  "rounded": 'is-rounded',
-  "fullwidth": "is-fullwidth",
-  "active": "is-active",
-  "toggle-rounded": "is-toggle-rounded"
-};
-
-var button_props = {
-  "button": "button",
-  "white": "is-white",
-  "light": "is-light",
-  "dark": "is-dark",
-  "black": "is-black",
-  "text": "is-text",
-  "link": "is-link",
-  "primary": "is-primary",
-  "success": "is-success",
-  "warning": "is-warning",
-  "info": "is-info",
-  "danger": "is-danger",
-  "small": "is-small",
-  "medium": "is-medium",
-  "normal": "is-normal",
-  "large": "is-large",
-  "loading": "is-loading",
-  "outlined": "is-outlined",
-  "rounded": "is-rounded",
-  "hovered": "is-hovered",
-  "active": "is-active",
-  "focused": "is-focused",
-  "inverted": "is-inverted",
-  "delete": "delete",
-  "fullwidth": "is-fullwidth"
-};
-
-var button_list = {
-  "small": "are-small",
-  "medium": "are-medium",
-  "large": "are-large",
-  "buttons": "buttons",
-  "addons": "has-addons",
-  "grouped": "is-grouped",
-  "centered": "is-centered",
-  "right": "is-right",
-  "field": "field"
-};
-
-var icon_props = {
-  "icon": "icon",
-  "small": "is-small",
-  "medium": "is-medium",
-  "large": "is-large",
-  "left": "is-left",
-  "right": "is-right",
-  "info": "has-text-info",
-  "primary": "has-text-primary",
-  "success": "has-text-success",
-  "warning": "has-text-warning",
-  "danger": "has-text-danger"
-};
-
-var content_props = {
-  "small": "is-small",
-  "medium": "is-medium",
-  "large": "is-large",
-  "content": "content"
-};
-
-var hero_props = {
-  "hero": "hero",
-  "primary": "is-primary",
-  "info": "is-info",
-  "success": "is-success",
-  "warning": "is-warning",
-  "danger": "is-danger",
-  "light": "is-light",
-  "dark": "is-dark",
-  "bold": 'is-bold',
-  "medium": "is-medium",
-  "large": "is-large",
-  "fullheight": "is-fullheight",
-  "with-navbar": "is-fullheight-with-navbar"
-};
-
-var control_props = {
-  "control": "control",
-  "icons-left": "has-icons-left",
-  "icons-right": "has-icons-right",
-  // loading utilizado por exemplo no textarea
-  "loading": "is-loading"
-};
-
-var columns_props = {
-  "centered": "is-centered",
-  "columns": "columns",
-  "multiline": "is-multiline",
-  "1": "is-1",
-  "2": "is-2",
-  "3": "is-3",
-  "4": "is-4",
-  "5": "is-5",
-  "6": "is-6",
-  "7": "is-7",
-  "8": "is-8",
-  "9": "is-9",
-  "10": "is-10",
-  "11": "is-11",
-  "12": "is-12"
-};
-
-var column_props = {
-  "narrow": "is-narrow",
-  "column": "column",
-  "full": "is-full",
-  "four-fifths": "is-four-fifths",
-  "three-quarters": "is-three-quarters",
-  "two-thirds": "is-two-thirds",
-  "three-fifths": "is-three-fifths",
-  "half": "is-half",
-  "two-fifths": "is-two-fifths",
-  "one-third": "is-one-third",
-  "one-quarter": "is-one-quarter",
-  "one-fifth": "is-one-fifth",
-  "1": "is-1",
-  "2": "is-2",
-  "3": "is-3",
-  "4": "is-4",
-  "5": "is-5",
-  "6": "is-6",
-  "7": "is-7",
-  "8": "is-8",
-  "9": "is-9",
-  "10": "is-10",
-  "11": "is-11",
-  "12": "is-12",
-  "offset-full": "is-offset-full",
-  "offset-four-fifths": "is-offset-four-fifths",
-  "offset-three-quarters": "is-offset-three-quarters",
-  "offset-two-thirds": "is-offset-two-thirds",
-  "offset-three-fifths": "is-offset-three-fifths",
-  "offset-half": "is-offset-half",
-  "offset-two-fifths": "is-offset-two-fifths",
-  "offset-one-third": "is-offset-one-third",
-  "offset-one-quarter": "is-offset-one-quarter",
-  "offset-one-fifth": "is-offset-one-fifth",
-  "offset-1": "is-offset-1",
-  "offset-2": "is-offset-2",
-  "offset-3": "is-offset-3",
-  "offset-4": "is-offset-4",
-  "offset-5": "is-offset-5",
-  "offset-6": "is-offset-6",
-  "offset-7": "is-offset-7",
-  "offset-8": "is-offset-8",
-  "offset-9": "is-offset-9",
-  "offset-10": "is-offset-10",
-  "offset-11": "is-offset-11",
-  "offset-12": "is-offset-12"
-};
-var column_props$1 = _objectSpread2({}, column_props, {}, global_props);
-
-var section_props = {};
-
-var text_area_props = {
-  "primary": "is-primary",
-  "info": "is-info",
-  "success": "is-success",
-  "warning": "is-warning",
-  "danger": "is-danger",
-  "small": "is-small",
-  "medium": "is-medium",
-  "large": "is-large",
-  "hover": "is-hovered",
-  "active": "is-active",
-  "focused": "is-focused",
-  "fixed-size": "has-fixed-size",
-  "textarea": "textarea"
-};
-
-var select_props = {
-  "primary": "is-primary",
-  "info": "is-info",
-  "success": "is-success",
-  "warning": "is-warning",
-  "danger": "is-danger",
-  "rounded": "is-rounded",
-  "small": "is-small",
-  "medium": "is-medium",
-  "large": "is-large",
-  "hovered": "is-hovered",
-  "focused": "is-focused",
-  "loading": "is-loading",
-  "select": "select",
-  "multiple": "is-multiple"
-};
-
-var file_props = {
-  "file": "file",
-  "has-name": "has-name",
-  "fullwidth": "is-fullwidth",
-  "boxed": "is-boxed",
-  "white": "is-white",
-  "black": "is-black",
-  "light": "is-light",
-  "dark": "is-dark",
-  "primary": "is-primary",
-  "info": "is-info",
-  "link": "is-link",
-  "success": "is-success",
-  "warning": "is-warning",
-  "danger": "is-danger",
-  "small": "is-small",
-  "medium": "is-medium",
-  "large": "is-large",
-  "centered": "is-centered",
-  "right": "is-right"
-};
-
-var tag_list_props = {
-  "medium": "is-medium",
-  "large": "is-large",
-  "tabs": "tabs",
-  "addons": "has-addons"
-};
-
-var component_path = {
-  "Button": button_props,
-  "ButtonList": button_list,
-  "ProgressBar": progress_bar_props,
-  "Table": table_props$1,
-  "Tag": tag_props,
-  "Content": content_props,
-  "Box": box_props,
-  "Image": image_props,
-  "Notification": notification_props,
-  "NavigationBar": navigation_bar_props,
-  "DropDown": drop_down_props,
-  "Menu": menu_props,
-  "Message": message_props,
-  "BreadCrumb": bread_crumb_props,
-  "Title": title_props,
-  "Pagination": pagination_props,
-  "Card": card_props$1,
-  "Panel": panel_props,
-  "Input": input_props,
-  "Tabs": tabs_props,
-  "Icon": icon_props,
-  "List": list_props,
-  "Hero": hero_props,
-  "Control": control_props,
-  "Columns": columns_props,
-  "Column": column_props$1,
-  "Section": section_props,
-  "Text": text_area_props,
-  "Select": select_props,
-  "File": file_props,
-  "TagList": tag_list_props
-};
-
-function getComponentProps(component_name) {
-  var component_props = component_path[component_name];
-  return component_props;
-}
-
-var getClassName = function getClassNames(definition, component_name) {
-  if (definition !== undefined && typeof definition == 'string') {
-    var classObj = {};
-    var component_props = getComponentProps(component_name);
-    var array_definition = definition.split(" ");
-    var size = array_definition.length;
-
-    for (var i = 0; i < size; i++) {
-      var key = component_props[array_definition[i]];
-      var value = component_props[array_definition[i]];
-      classObj[key] = value;
-    }
-  }
-
-  return classObj;
-};
-
-var definition_err = "Definition Exception - The following characteristics are not defined:";
-
-function checkerDefinition(definition, component_name) {
-  if (definition != undefined && definition != "") {
-    var words = definition.split(/\s+/);
-    var output = false;
-    var props = getComponentProps(component_name);
-    var length = words.length;
-    var words_err = [];
-
-    for (var i = 0; i < length; i++) {
-      var sentence = props[words[i]];
-      var word = words[i];
-
-      if (word != "") {
-        if (sentence == undefined) {
-          words_err.push(words[i]);
-        }
-      }
-    }
-
-    if (words_err.length > 0) {
-      var message_err = createMessage(words_err, definition_err, component_name);
-      throw message_err;
-    } else {
-      output = true;
-    }
-  }
-
-  return output;
-}
-
-function createMessage(words_err, message, component_name) {
-  var size = words_err.length;
-
-  for (var i = 0; i < size; i++) {
-    message += " " + words_err[i];
-  }
-
-  return message += " on component " + component_name;
-}
-/*
-
-function checker(definition: any){
-   var words = definition.split(" ");
-   var output =  false;
-   var keys = Object.keys(button_props);
-   var length = words.length;
-   var words_err = [];
-   
-   for(let i = 0; i < length ; i++){
-      var sentence =  button_props[words[i]]
-      if(sentence == undefined){
-          words_err.push(words[i]);
-      };
-   }
-
-    var createMessage = (words_err)=>{
-        var message = "The following characteristics are not defined:";
-        var size = words_err.length;
-        for(let  i = 0; i < size ; i++){
-            message += " "+words_err[i];
-        }
-        return message;
-    }
-
-    if(words_err.length > 0){
-    var message = createMessage(words_err);
-    throw message;
-    }else{
-        output =  true;
-    }
-    
-
-    return output
-
-}
-
-*/
-
-// Eventos: "onClick on <a>"
-
 var BreadCrumb = function BreadCrumb(props) {
-  var definition = "breadcrumb " + classnames(getClassName(props.definition, "BreadCrumb"));
-  checkerDefinition(props.definition, "BreadCrumb");
+  var definition = props.definition == undefined ? "breadcrumb" : "breadcrumb " + props.definition;
   return /*#__PURE__*/React__default.createElement("nav", {
     className: definition
   }, /*#__PURE__*/React__default.createElement("ul", null, assemble(props.itens)));
@@ -2106,9 +1374,7 @@ function assembleItens(itens) {
 }
 
 function assembleSingleItem(item) {
-  var def = item["definition"];
-  checkerDefinition(def, "BreadCrumb");
-  var definition = classnames(getClassName(item["definition"], "BreadCrumb"));
+  var definition = item["definition"];
   return /*#__PURE__*/React__default.createElement("li", {
     key: item["key"],
     className: definition
@@ -2157,48 +1423,30 @@ Observações:
             situações onde usa-se o componente isolado.
 */
 var Button = function Button(props) {
-  checkerDefinition(props.definition, "Button");
-  var definition = getDefinition(props.delete, props.definition);
+  var definition = getDefinition(props);
   return /*#__PURE__*/React.createElement("button", _extends({}, props.custom, {
     disabled: props.disabled == true ? true : false,
     className: definition,
-    onClick: getClickEvent(props.onClick)
+    onClick: props.onClick
   }), props.children);
 };
-/* Se propriedade isDelete é verdadeira, então
-    retorna somente o className "definition", não
-    envolvendo outras classes do Bulma.
-*/
 
+function getDefinition(props) {
+  var definition = "";
 
-function getDefinition(isDelete, definition) {
-  if (isDelete) {
-    return "delete";
+  if (props.delete == true) {
+    definition = "delete";
   } else {
-    var button_definition = "button " + definition;
-    var objClassName = getClassName(button_definition, "Button");
-    var classname = classnames(objClassName);
-    return classname;
+    definition = props.definition == undefined ? "button" : "button " + props.definition;
   }
-} // caso seja informado onClick ele retorna a função retornada, senão retorna uma função vazia. Método criado para evitar problemas com undefined
 
-
-function getClickEvent(onClick) {
-  if (typeof onClick == "function") {
-    return onClick;
-  } else {
-    return function () {};
-  }
+  return definition;
 }
 
 Button.propTypes = {
-  // definição de características do Bulma
   definition: propTypes.string,
-  // Evento para quando clicar no botão
   onClick: propTypes.func,
-  // Caso o botão seja do tipo delete
   delete: propTypes.bool,
-  // permite desativar um botão
   disabled: propTypes.bool
 };
 
@@ -2212,35 +1460,25 @@ var ButtonList = function ButtonList(props) {
 
 function assembleButtonList(props) {
   var code_icon = "";
-  var definition = getDefinition$1(props.definition, props.field); // permite o funcionamento dos addons, pois fornece uma interação que gera os filhos dentro de uma tag <p className=control>
+  var definition = props.definition == undefined ? "buttons" : "buttons " + props.definition;
 
   if (definition.includes("addons")) {
-    code_icon = /*#__PURE__*/React__default.createElement("div", {
-      className: definition
-    }, React__default.Children.map(props.children, function (child, i) {
-      return /*#__PURE__*/React__default.createElement("p", {
+    code_icon = /*#__PURE__*/React.createElement("div", {
+      className: props.definition
+    }, React.Children.map(props.children, function (child, i) {
+      return /*#__PURE__*/React.createElement("p", {
         className: "control"
-      }, /*#__PURE__*/React__default.createElement("div", {
+      }, /*#__PURE__*/React.createElement("div", {
         className: definition
       }, child));
     }));
   } else {
-    code_icon = /*#__PURE__*/React__default.createElement("div", {
+    code_icon = /*#__PURE__*/React.createElement("div", {
       className: definition
     }, props.children);
   }
 
   return code_icon;
-}
-
-function getDefinition$1(definition, field) {
-  if (field == true) {
-    definition = classnames(getClassName("field " + definition, "ButtonList"));
-  } else {
-    definition = classnames(getClassName("buttons " + definition, "ButtonList"));
-  }
-
-  return definition;
 }
 
 ButtonList.propTypes = {
@@ -2250,7 +1488,7 @@ ButtonList.propTypes = {
 
 var Image = function Image(props) {
   return /*#__PURE__*/React__default.createElement("figure", {
-    className: classnames(getClassName(props.definition, "Image"))
+    className: props.definition
   }, /*#__PURE__*/React__default.createElement("img", {
     src: props.src
   }));
@@ -2258,7 +1496,6 @@ var Image = function Image(props) {
 
 Image.propTypes = {
   definition: propTypes.string.isRequired,
-  value: propTypes.string.isRequired,
   src: propTypes.string.isRequired
 };
 
@@ -2321,9 +1558,7 @@ if(iconName&&(!alreadyProcessedPseudoElement||alreadyProcessedPseudoElement.getA
 node.removeChild(alreadyProcessedPseudoElement);}var meta=blankMeta();var extra=meta.extra;extra.attributes[DATA_FA_PSEUDO_ELEMENT]=position;findIcon(iconName,prefix).then(function(main){var abstract=makeInlineSvgAbstract(_objectSpread({},meta,{icons:{main:main,mask:emptyCanonicalIcon()},prefix:prefix,iconName:iconIdentifier,extra:extra,watchable:true}));var element=DOCUMENT.createElement('svg');if(position===':before'){node.insertBefore(element,node.firstChild);}else {node.appendChild(element);}element.outerHTML=abstract.map(function(a){return toHtml(a);}).join('\n');node.removeAttribute(pendingAttribute);resolve();}).catch(reject);}else {resolve();}}else {resolve();}});}function replace(node){return picked.all([replaceForPosition(node,':before'),replaceForPosition(node,':after')]);}function processable(node){return node.parentNode!==document.head&&!~TAGNAMES_TO_SKIP_FOR_PSEUDOELEMENTS.indexOf(node.tagName.toUpperCase())&&!node.getAttribute(DATA_FA_PSEUDO_ELEMENT)&&(!node.parentNode||node.parentNode.tagName!=='svg');}function searchPseudoElements(root){if(!IS_DOM)return;return new picked(function(resolve,reject){var operations=toArray(root.querySelectorAll('*')).filter(processable).map(replace);var end=perf.begin('searchPseudoElements');disableObservation();picked.all(operations).then(function(){end();enableObservation();resolve();}).catch(function(){end();enableObservation();reject();});});}var baseStyles="svg:not(:root).svg-inline--fa{overflow:visible}.svg-inline--fa{display:inline-block;font-size:inherit;height:1em;overflow:visible;vertical-align:-.125em}.svg-inline--fa.fa-lg{vertical-align:-.225em}.svg-inline--fa.fa-w-1{width:.0625em}.svg-inline--fa.fa-w-2{width:.125em}.svg-inline--fa.fa-w-3{width:.1875em}.svg-inline--fa.fa-w-4{width:.25em}.svg-inline--fa.fa-w-5{width:.3125em}.svg-inline--fa.fa-w-6{width:.375em}.svg-inline--fa.fa-w-7{width:.4375em}.svg-inline--fa.fa-w-8{width:.5em}.svg-inline--fa.fa-w-9{width:.5625em}.svg-inline--fa.fa-w-10{width:.625em}.svg-inline--fa.fa-w-11{width:.6875em}.svg-inline--fa.fa-w-12{width:.75em}.svg-inline--fa.fa-w-13{width:.8125em}.svg-inline--fa.fa-w-14{width:.875em}.svg-inline--fa.fa-w-15{width:.9375em}.svg-inline--fa.fa-w-16{width:1em}.svg-inline--fa.fa-w-17{width:1.0625em}.svg-inline--fa.fa-w-18{width:1.125em}.svg-inline--fa.fa-w-19{width:1.1875em}.svg-inline--fa.fa-w-20{width:1.25em}.svg-inline--fa.fa-pull-left{margin-right:.3em;width:auto}.svg-inline--fa.fa-pull-right{margin-left:.3em;width:auto}.svg-inline--fa.fa-border{height:1.5em}.svg-inline--fa.fa-li{width:2em}.svg-inline--fa.fa-fw{width:1.25em}.fa-layers svg.svg-inline--fa{bottom:0;left:0;margin:auto;position:absolute;right:0;top:0}.fa-layers{display:inline-block;height:1em;position:relative;text-align:center;vertical-align:-.125em;width:1em}.fa-layers svg.svg-inline--fa{-webkit-transform-origin:center center;transform-origin:center center}.fa-layers-counter,.fa-layers-text{display:inline-block;position:absolute;text-align:center}.fa-layers-text{left:50%;top:50%;-webkit-transform:translate(-50%,-50%);transform:translate(-50%,-50%);-webkit-transform-origin:center center;transform-origin:center center}.fa-layers-counter{background-color:#ff253a;border-radius:1em;-webkit-box-sizing:border-box;box-sizing:border-box;color:#fff;height:1.5em;line-height:1;max-width:5em;min-width:1.5em;overflow:hidden;padding:.25em;right:0;text-overflow:ellipsis;top:0;-webkit-transform:scale(.25);transform:scale(.25);-webkit-transform-origin:top right;transform-origin:top right}.fa-layers-bottom-right{bottom:0;right:0;top:auto;-webkit-transform:scale(.25);transform:scale(.25);-webkit-transform-origin:bottom right;transform-origin:bottom right}.fa-layers-bottom-left{bottom:0;left:0;right:auto;top:auto;-webkit-transform:scale(.25);transform:scale(.25);-webkit-transform-origin:bottom left;transform-origin:bottom left}.fa-layers-top-right{right:0;top:0;-webkit-transform:scale(.25);transform:scale(.25);-webkit-transform-origin:top right;transform-origin:top right}.fa-layers-top-left{left:0;right:auto;top:0;-webkit-transform:scale(.25);transform:scale(.25);-webkit-transform-origin:top left;transform-origin:top left}.fa-lg{font-size:1.3333333333em;line-height:.75em;vertical-align:-.0667em}.fa-xs{font-size:.75em}.fa-sm{font-size:.875em}.fa-1x{font-size:1em}.fa-2x{font-size:2em}.fa-3x{font-size:3em}.fa-4x{font-size:4em}.fa-5x{font-size:5em}.fa-6x{font-size:6em}.fa-7x{font-size:7em}.fa-8x{font-size:8em}.fa-9x{font-size:9em}.fa-10x{font-size:10em}.fa-fw{text-align:center;width:1.25em}.fa-ul{list-style-type:none;margin-left:2.5em;padding-left:0}.fa-ul>li{position:relative}.fa-li{left:-2em;position:absolute;text-align:center;width:2em;line-height:inherit}.fa-border{border:solid .08em #eee;border-radius:.1em;padding:.2em .25em .15em}.fa-pull-left{float:left}.fa-pull-right{float:right}.fa.fa-pull-left,.fab.fa-pull-left,.fal.fa-pull-left,.far.fa-pull-left,.fas.fa-pull-left{margin-right:.3em}.fa.fa-pull-right,.fab.fa-pull-right,.fal.fa-pull-right,.far.fa-pull-right,.fas.fa-pull-right{margin-left:.3em}.fa-spin{-webkit-animation:fa-spin 2s infinite linear;animation:fa-spin 2s infinite linear}.fa-pulse{-webkit-animation:fa-spin 1s infinite steps(8);animation:fa-spin 1s infinite steps(8)}@-webkit-keyframes fa-spin{0%{-webkit-transform:rotate(0);transform:rotate(0)}100%{-webkit-transform:rotate(360deg);transform:rotate(360deg)}}@keyframes fa-spin{0%{-webkit-transform:rotate(0);transform:rotate(0)}100%{-webkit-transform:rotate(360deg);transform:rotate(360deg)}}.fa-rotate-90{-webkit-transform:rotate(90deg);transform:rotate(90deg)}.fa-rotate-180{-webkit-transform:rotate(180deg);transform:rotate(180deg)}.fa-rotate-270{-webkit-transform:rotate(270deg);transform:rotate(270deg)}.fa-flip-horizontal{-webkit-transform:scale(-1,1);transform:scale(-1,1)}.fa-flip-vertical{-webkit-transform:scale(1,-1);transform:scale(1,-1)}.fa-flip-both,.fa-flip-horizontal.fa-flip-vertical{-webkit-transform:scale(-1,-1);transform:scale(-1,-1)}:root .fa-flip-both,:root .fa-flip-horizontal,:root .fa-flip-vertical,:root .fa-rotate-180,:root .fa-rotate-270,:root .fa-rotate-90{-webkit-filter:none;filter:none}.fa-stack{display:inline-block;height:2em;position:relative;width:2.5em}.fa-stack-1x,.fa-stack-2x{bottom:0;left:0;margin:auto;position:absolute;right:0;top:0}.svg-inline--fa.fa-stack-1x{height:1em;width:1.25em}.svg-inline--fa.fa-stack-2x{height:2em;width:2.5em}.fa-inverse{color:#fff}.sr-only{border:0;clip:rect(0,0,0,0);height:1px;margin:-1px;overflow:hidden;padding:0;position:absolute;width:1px}.sr-only-focusable:active,.sr-only-focusable:focus{clip:auto;height:auto;margin:0;overflow:visible;position:static;width:auto}.svg-inline--fa .fa-primary{fill:var(--fa-primary-color,currentColor);opacity:1;opacity:var(--fa-primary-opacity,1)}.svg-inline--fa .fa-secondary{fill:var(--fa-secondary-color,currentColor);opacity:.4;opacity:var(--fa-secondary-opacity,.4)}.svg-inline--fa.fa-swap-opacity .fa-primary{opacity:.4;opacity:var(--fa-secondary-opacity,.4)}.svg-inline--fa.fa-swap-opacity .fa-secondary{opacity:1;opacity:var(--fa-primary-opacity,1)}.svg-inline--fa mask .fa-primary,.svg-inline--fa mask .fa-secondary{fill:#000}.fad.fa-inverse{color:#fff}";function css(){var dfp=DEFAULT_FAMILY_PREFIX;var drc=DEFAULT_REPLACEMENT_CLASS;var fp=config.familyPrefix;var rc=config.replacementClass;var s=baseStyles;if(fp!==dfp||rc!==drc){var dPatt=new RegExp("\\.".concat(dfp,"\\-"),'g');var customPropPatt=new RegExp("\\--".concat(dfp,"\\-"),'g');var rPatt=new RegExp("\\.".concat(drc),'g');s=s.replace(dPatt,".".concat(fp,"-")).replace(customPropPatt,"--".concat(fp,"-")).replace(rPatt,".".concat(rc));}return s;}var Library=/*#__PURE__*/function(){function Library(){_classCallCheck(this,Library);this.definitions={};}_createClass(Library,[{key:"add",value:function add(){var _this=this;for(var _len=arguments.length,definitions=new Array(_len),_key=0;_key<_len;_key++){definitions[_key]=arguments[_key];}var additions=definitions.reduce(this._pullDefinitions,{});Object.keys(additions).forEach(function(key){_this.definitions[key]=_objectSpread({},_this.definitions[key]||{},additions[key]);defineIcons(key,additions[key]);build();});}},{key:"reset",value:function reset(){this.definitions={};}},{key:"_pullDefinitions",value:function _pullDefinitions(additions,definition){var normalized=definition.prefix&&definition.iconName&&definition.icon?{0:definition}:definition;Object.keys(normalized).map(function(key){var _normalized$key=normalized[key],prefix=_normalized$key.prefix,iconName=_normalized$key.iconName,icon=_normalized$key.icon;if(!additions[prefix])additions[prefix]={};additions[prefix][iconName]=icon;});return additions;}}]);return Library;}();function ensureCss(){if(config.autoAddCss&&!_cssInserted){insertCss(css());_cssInserted=true;}}function apiObject(val,abstractCreator){Object.defineProperty(val,'abstract',{get:abstractCreator});Object.defineProperty(val,'html',{get:function get(){return val.abstract.map(function(a){return toHtml(a);});}});Object.defineProperty(val,'node',{get:function get(){if(!IS_DOM)return;var container=DOCUMENT.createElement('div');container.innerHTML=val.html;return container.children;}});return val;}function findIconDefinition(iconLookup){var _iconLookup$prefix=iconLookup.prefix,prefix=_iconLookup$prefix===void 0?'fa':_iconLookup$prefix,iconName=iconLookup.iconName;if(!iconName)return;return iconFromMapping(library.definitions,prefix,iconName)||iconFromMapping(namespace.styles,prefix,iconName);}function resolveIcons(next){return function(maybeIconDefinition){var params=arguments.length>1&&arguments[1]!==undefined?arguments[1]:{};var iconDefinition=(maybeIconDefinition||{}).icon?maybeIconDefinition:findIconDefinition(maybeIconDefinition||{});var mask=params.mask;if(mask){mask=(mask||{}).icon?mask:findIconDefinition(mask||{});}return next(iconDefinition,_objectSpread({},params,{mask:mask}));};}var library=new Library();var noAuto=function noAuto(){config.autoReplaceSvg=false;config.observeMutations=false;disconnect();};var _cssInserted=false;var dom={i2svg:function i2svg(){var params=arguments.length>0&&arguments[0]!==undefined?arguments[0]:{};if(IS_DOM){ensureCss();var _params$node=params.node,node=_params$node===void 0?DOCUMENT:_params$node,_params$callback=params.callback,callback=_params$callback===void 0?function(){}:_params$callback;if(config.searchPseudoElements){searchPseudoElements(node);}return onTree(node,callback);}else {return picked.reject('Operation requires a DOM of some kind.');}},css:css,insertCss:function insertCss$$1(){if(!_cssInserted){insertCss(css());_cssInserted=true;}},watch:function watch(){var params=arguments.length>0&&arguments[0]!==undefined?arguments[0]:{};var autoReplaceSvgRoot=params.autoReplaceSvgRoot,observeMutationsRoot=params.observeMutationsRoot;if(config.autoReplaceSvg===false){config.autoReplaceSvg=true;}config.observeMutations=true;domready(function(){autoReplace({autoReplaceSvgRoot:autoReplaceSvgRoot});observe({treeCallback:onTree,nodeCallback:onNode,pseudoElementsCallback:searchPseudoElements,observeMutationsRoot:observeMutationsRoot});});}};var parse={transform:function transform(transformString){return parseTransformString(transformString);}};var icon=resolveIcons(function(iconDefinition){var params=arguments.length>1&&arguments[1]!==undefined?arguments[1]:{};var _params$transform=params.transform,transform=_params$transform===void 0?meaninglessTransform:_params$transform,_params$symbol=params.symbol,symbol=_params$symbol===void 0?false:_params$symbol,_params$mask=params.mask,mask=_params$mask===void 0?null:_params$mask,_params$title=params.title,title=_params$title===void 0?null:_params$title,_params$classes=params.classes,classes=_params$classes===void 0?[]:_params$classes,_params$attributes=params.attributes,attributes=_params$attributes===void 0?{}:_params$attributes,_params$styles=params.styles,styles=_params$styles===void 0?{}:_params$styles;if(!iconDefinition)return;var prefix=iconDefinition.prefix,iconName=iconDefinition.iconName,icon=iconDefinition.icon;return apiObject(_objectSpread({type:'icon'},iconDefinition),function(){ensureCss();if(config.autoA11y){if(title){attributes['aria-labelledby']="".concat(config.replacementClass,"-title-").concat(nextUniqueId());}else {attributes['aria-hidden']='true';attributes['focusable']='false';}}return makeInlineSvgAbstract({icons:{main:asFoundIcon(icon),mask:mask?asFoundIcon(mask.icon):{found:false,width:null,height:null,icon:{}}},prefix:prefix,iconName:iconName,transform:_objectSpread({},meaninglessTransform,transform),symbol:symbol,title:title,extra:{attributes:attributes,styles:styles,classes:classes}});});});var text=function text(content){var params=arguments.length>1&&arguments[1]!==undefined?arguments[1]:{};var _params$transform2=params.transform,transform=_params$transform2===void 0?meaninglessTransform:_params$transform2,_params$title2=params.title,title=_params$title2===void 0?null:_params$title2,_params$classes2=params.classes,classes=_params$classes2===void 0?[]:_params$classes2,_params$attributes2=params.attributes,attributes=_params$attributes2===void 0?{}:_params$attributes2,_params$styles2=params.styles,styles=_params$styles2===void 0?{}:_params$styles2;return apiObject({type:'text',content:content},function(){ensureCss();return makeLayersTextAbstract({content:content,transform:_objectSpread({},meaninglessTransform,transform),title:title,extra:{attributes:attributes,styles:styles,classes:["".concat(config.familyPrefix,"-layers-text")].concat(_toConsumableArray(classes))}});});};var counter=function counter(content){var params=arguments.length>1&&arguments[1]!==undefined?arguments[1]:{};var _params$title3=params.title,title=_params$title3===void 0?null:_params$title3,_params$classes3=params.classes,classes=_params$classes3===void 0?[]:_params$classes3,_params$attributes3=params.attributes,attributes=_params$attributes3===void 0?{}:_params$attributes3,_params$styles3=params.styles,styles=_params$styles3===void 0?{}:_params$styles3;return apiObject({type:'counter',content:content},function(){ensureCss();return makeLayersCounterAbstract({content:content.toString(),title:title,extra:{attributes:attributes,styles:styles,classes:["".concat(config.familyPrefix,"-layers-counter")].concat(_toConsumableArray(classes))}});});};var layer=function layer(assembler){var params=arguments.length>1&&arguments[1]!==undefined?arguments[1]:{};var _params$classes4=params.classes,classes=_params$classes4===void 0?[]:_params$classes4;return apiObject({type:'layer'},function(){ensureCss();var children=[];assembler(function(args){Array.isArray(args)?args.map(function(a){children=children.concat(a.abstract);}):children=children.concat(args.abstract);});return [{tag:'span',attributes:{class:["".concat(config.familyPrefix,"-layers")].concat(_toConsumableArray(classes)).join(' ')},children:children}];});};var api={noAuto:noAuto,config:config,dom:dom,library:library,parse:parse,findIconDefinition:findIconDefinition,icon:icon,text:text,counter:counter,layer:layer,toHtml:toHtml};var autoReplace=function autoReplace(){var params=arguments.length>0&&arguments[0]!==undefined?arguments[0]:{};var _params$autoReplaceSv=params.autoReplaceSvgRoot,autoReplaceSvgRoot=_params$autoReplaceSv===void 0?DOCUMENT:_params$autoReplaceSv;if((Object.keys(namespace.styles).length>0||config.autoFetchSvg)&&IS_DOM&&config.autoReplaceSvg)api.dom.i2svg({node:autoReplaceSvgRoot});};function bootstrap(){if(IS_BROWSER){if(!WINDOW.FontAwesome){WINDOW.FontAwesome=api;}domready(function(){autoReplace();observe({treeCallback:onTree,nodeCallback:onNode,pseudoElementsCallback:searchPseudoElements});});}namespace.hooks=_objectSpread({},namespace.hooks,{addPack:function addPack(prefix,icons){namespace.styles[prefix]=_objectSpread({},namespace.styles[prefix]||{},icons);build();autoReplace();},addShims:function addShims(shims){var _namespace$shims;(_namespace$shims=namespace.shims).push.apply(_namespace$shims,_toConsumableArray(shims));build();autoReplace();}});}bunker(bootstrap);})();
 
 var Icon = function Icon(props) {
-  checkerDefinition(props.definition, "Icon");
-  var icon_definition = props.definition == undefined ? "" : props.definition;
-  var definition = classnames(getClassName("icon " + icon_definition, "Icon"));
+  var definition = props.definition == undefined ? "icon" : "icon " + props.definition;
   return /*#__PURE__*/React.createElement(React.Fragment, null, (props.icon_right == false || props.icon_right == undefined) && /*#__PURE__*/React.createElement("span", null, props.children), /*#__PURE__*/React.createElement("span", {
     onClick: props.onClick,
     className: definition
@@ -2333,23 +1568,12 @@ var Icon = function Icon(props) {
   })), props.icon_right == true && /*#__PURE__*/React.createElement("span", null, props.children));
 };
 
-Icon.propTypes = {
-  //Características do Bulma
-  definition: propTypes.string,
-  // diz se o icon está a direita ou a esquerda
-  // Utilizável em alguns componentes que o Icon funciona como children
-  // Exemplo: Button permite interligação com Icon
-  icon_rigth: propTypes.string,
-  // Nome do ícone
-  icon_name: propTypes.string
-};
-
 var Card = function Card(props) {
   // se title for undefined não tem motivo para criar header
   // se src for undefined não tem motivo para criar card image
   // se itens_footer for undefined não tem pq criar footer
-  var definition = "card " + classnames(getClassName(props.definition, "Card"));
-  return /*#__PURE__*/React__default.createElement("div", {
+  var definition = props.definition == undefined ? "card" : "card " + props.definition;
+  return /*#__PURE__*/React.createElement("div", {
     className: definition
   }, assembleHeader(props), props.src != undefined && assembleCardImage(props), assembleContent(props), props.itens_footer != undefined && assembleFooter(props));
 }; //  Essa função server para adicionar uma propriedade de customização do header de Card
@@ -2358,7 +1582,7 @@ var Card = function Card(props) {
 
 
 function assembleHeader(props) {
-  var header = /*#__PURE__*/React__default.createElement(React__default.Fragment, null);
+  var header = /*#__PURE__*/React.createElement(React.Fragment, null);
 
   if (props.custom_header != undefined) {
     header = assembleHeaderCustom(props);
@@ -2374,25 +1598,25 @@ function assembleHeader(props) {
 
 
 function assembleHeaderDefault(props) {
-  var header_definition = "card-header " + classnames(getClassName(props.header_definition, "Card"));
-  var card_header_definition = "card-header-icon" + classnames(getClassName(props.card_header_definition, "Card"));
-  var title_definition = "card-header-title " + classnames(getClassName(props.title_definition, "Card"));
-  return /*#__PURE__*/React__default.createElement("header", {
+  var header_definition = props.header_definition == undefined ? "card-header" : "card-header " + props.header_definition;
+  var card_header_definition = props.card_header_definition == undefined ? "card-header-icon" : "card-header-icon " + props.card_header_definition;
+  var title_definition = props.title_definition == undefined ? "card-header-title" : "card-header-title " + props.title_definition;
+  return /*#__PURE__*/React.createElement("header", {
     className: header_definition
-  }, /*#__PURE__*/React__default.createElement("div", {
+  }, /*#__PURE__*/React.createElement("div", {
     className: title_definition
-  }, props.title), props.icon_name != undefined && /*#__PURE__*/React__default.createElement("a", {
+  }, props.title), props.icon_name != undefined && /*#__PURE__*/React.createElement("a", {
     href: "#",
     className: card_header_definition
-  }, /*#__PURE__*/React__default.createElement(Icon, {
+  }, /*#__PURE__*/React.createElement(Icon, {
     definition: props.icon_definition,
     icon_name: props.icon_name
   })));
 }
 
 function assembleHeaderCustom(props) {
-  var header_definition = "card-header " + classnames(getClassName(props.header_definition, "Card"));
-  return /*#__PURE__*/React__default.createElement("header", {
+  var header_definition = props.header_definition == undefined ? "card-header" : "card-header " + props.header_definition;
+  return /*#__PURE__*/React.createElement("header", {
     className: header_definition
   }, props.custom_header);
 } // src(props):  image_definition(props): 
@@ -2400,11 +1624,10 @@ function assembleHeaderCustom(props) {
 
 
 function assembleCardImage(props) {
-  // <Image src="" definition=""></Image>
-  var card_image_definition = "card-image " + classnames(getClassName(props.card_image_definition, "Card"));
-  return /*#__PURE__*/React__default.createElement("div", {
+  var card_image_definition = props.card_image_definition == undefined ? "card-image" : "card-image " + props.card_image_definition;
+  return /*#__PURE__*/React.createElement("div", {
     className: card_image_definition
-  }, /*#__PURE__*/React__default.createElement(Image, {
+  }, /*#__PURE__*/React.createElement(Image, {
     definition: props.image_definition,
     src: props.src
   }));
@@ -2412,7 +1635,7 @@ function assembleCardImage(props) {
 
 
 function assembleContent(props) {
-  return /*#__PURE__*/React__default.createElement("div", {
+  return /*#__PURE__*/React.createElement("div", {
     className: "card-content "
   }, props.children);
 } // itens_footer(props) footer_definition
@@ -2420,18 +1643,24 @@ function assembleContent(props) {
 
 
 function assembleFooter(props) {
-  var footer_definition = "card-footer " + classnames(getClassName(props.footer_definition, "Card"));
-  return /*#__PURE__*/React__default.createElement("footer", {
-    className: footer_definition
-  }, props.itens_footer.map(function (item) {
-    return assembleItemFooter(item);
-  }));
+  var footer_definition = props.footer_definition == undefined ? "card-footer" : "card-footer " + props.footer_definition;
+  var code = /*#__PURE__*/React.createElement(React.Fragment, null);
+
+  if (props.itens_footer != undefined) {
+    code = /*#__PURE__*/React.createElement("footer", {
+      className: footer_definition
+    }, props.itens_footer.map(function (item) {
+      return assembleItemFooter(item);
+    }));
+  }
+
+  return code;
 }
 
 function assembleItemFooter(item) {
-  return /*#__PURE__*/React__default.createElement("p", {
+  return /*#__PURE__*/React.createElement("p", {
     className: "card-footer-item"
-  }, /*#__PURE__*/React__default.createElement("span", {
+  }, /*#__PURE__*/React.createElement("span", {
     onClick: item["onClick"],
     style: {
       cursor: "pointer"
@@ -2488,9 +1717,7 @@ CheckBox.propTypes = {
  */
 
 var Column = function Column(props) {
-  var definition = props.definition == undefined ? "" : props.definition;
-  checkerDefinition(definition, "Column");
-  var definition = classnames(getClassName("column " + definition, "Column"));
+  var definition = props.definition == undefined ? "column" : "column " + props.definition;
   return /*#__PURE__*/React.createElement("div", {
     className: definition
   }, props.children);
@@ -2508,9 +1735,7 @@ Column.propTypes = {
  */
 
 var Columns = function Columns(props) {
-  var definition = props.definition == undefined ? "" : props.definition;
-  checkerDefinition(definition, "Columns");
-  var definition = classnames(getClassName("columns " + definition, "Columns"));
+  var definition = props.definition == undefined ? "columns" : "columns " + props.definition;
   return /*#__PURE__*/React.createElement("div", {
     className: definition
   }, React.Children.map(props.children, function (child, i) {
@@ -2519,29 +1744,18 @@ var Columns = function Columns(props) {
 };
 
 Columns.propTypes = {
-  // Características do Bulma
   definition: propTypes.string
 };
 
-// Fornece um componente para servir de base para 
-
 var Content = function Content(props) {
-  var definition = props.definition == undefined ? "" : props.definition;
-  checkerDefinition(definition, "Content");
-  var definition = classnames(getClassName("content " + definition, "Content"));
+  var definition = props.definition == undefined ? "content" : "content " + props.definition;
   return /*#__PURE__*/React.createElement("div", {
     class: definition
   }, props.children);
 };
 
-/*
-    - Componente que funciona como container
-    - Sem eventos
-*/
-
 var Control = function Control(props) {
-  checkerDefinition(props.definition, "Control");
-  var definition = getDefinition$2(props.definition);
+  var definition = props.definition == undefined || props.definition == '' ? "control icons-left" : "control " + props.definition;
   return /*#__PURE__*/React.createElement("div", {
     className: definition
   }, React.Children.map(props.children, function (child, i) {
@@ -2549,16 +1763,7 @@ var Control = function Control(props) {
   }));
 };
 
-function getDefinition$2(definition) {
-  if (definition == undefined || definition == '') {
-    return classnames(getClassName("control icons-left", "Control"));
-  } else {
-    return classnames(getClassName("control " + definition, "Control"));
-  }
-}
-
 Control.propTypes = {
-  // Características do Bulma 
   definition: propTypes.string
 };
 
@@ -2582,8 +1787,7 @@ var DropDown = function DropDown(props) {
     
     Não existe
     */
-  checkerDefinition(props.definition, "DropDown");
-  var definition = "dropdown " + classnames(getClassName(props.definition, "DropDown"));
+  var definition = props.definition == undefined ? "dropdown" : "dropdown " + props.definition;
   return /*#__PURE__*/React.createElement("div", {
     className: definition
   }, /*#__PURE__*/React.createElement("div", {
@@ -2620,10 +1824,10 @@ function extractButton(itens, onClick) {
   return /*#__PURE__*/React.createElement(Button, {
     onClick: onClick
   }, icon_name != undefined && icon_name != '' ? /*#__PURE__*/React.createElement(Icon, {
-    icon_name: classnames(getClassName(icon_name, "DropDown")),
+    icon_name: icon_name,
     icon_right: true
   }, name) : /*#__PURE__*/React.createElement(Icon, {
-    icon_name: classnames(getClassName("default-icon", "DropDown")),
+    icon_name: "fas fa-angle-down",
     definition: icon_definition,
     icon_right: true
   }, name));
@@ -2654,8 +1858,7 @@ function decideTypeOfItens(item) {
 }
 
 function assembleItensLinks(item) {
-  checkerDefinition(item["definition"], "DropDown");
-  var definition = classnames(getClassName("dropdown-item " + item["definition"], "DropDown"));
+  var definition = item["definition"] == undefined ? "dropdown-item" : "dropdown-item " + item["definition"];
   return /*#__PURE__*/React.createElement("a", {
     className: definition,
     onClick: item["onClick"],
@@ -2664,8 +1867,7 @@ function assembleItensLinks(item) {
 }
 
 function assembleComponentsItens(item) {
-  checkerDefinition(item["definition"], "DropDown");
-  var definition = classnames(getClassName("dropdown-item " + item["definition"], "DropDown"));
+  var definition = item["definition"] == undefined ? "dropdown-item" : "dropdown-item " + item["definition"];
   return /*#__PURE__*/React.createElement("div", {
     className: definition,
     onClick: item["onClick"],
@@ -2680,7 +1882,6 @@ DropDown.propTypes = {
 };
 
 var Input = function Input(props) {
-  checkerDefinition(props.definition, "Input");
   return assemble$2(props);
 };
 
@@ -2688,7 +1889,7 @@ function assemble$2(props) {
   var code = "";
 
   if (props.definition != undefined) {
-    if (props.definition.includes("loading")) {
+    if (props.definition.includes("is-loading")) {
       code = assembleInputLoading(props);
     } else {
       code = assembleInput(props);
@@ -2702,7 +1903,7 @@ function assemble$2(props) {
 
 function assembleInputLoading(props) {
   var definition_input = props.definition == undefined ? "" : props.definition;
-  var definition = 'control ' + classnames(getClassName(definition_input + " loading", "Input"));
+  var definition = 'control ' + definition_input;
   return /*#__PURE__*/React__default.createElement("div", {
     className: definition
   }, assembleInput(props));
@@ -2710,7 +1911,7 @@ function assembleInputLoading(props) {
 
 function assembleInput(props) {
   var input_code = "";
-  var definition = 'input ' + classnames(getClassName(props.definition, "Input"));
+  var definition = props.definition == undefined ? 'input' : "input " + props.definition;
 
   if (props.disabled) {
     if (props.readonly) {
@@ -2757,7 +1958,6 @@ Input.propTypes = {
   type: propTypes.string.isRequired,
   placeholder: propTypes.string,
   value: propTypes.string,
-  loading: propTypes.bool,
   readonly: propTypes.bool,
   onChangeEvent: propTypes.func
 };
@@ -2776,7 +1976,7 @@ var Field = function Field(props) {
   }, /*#__PURE__*/React__default.createElement("label", {
     className: "label"
   }, props.label), /*#__PURE__*/React__default.createElement(Control, {
-    definition: props.control_definition
+    definition: props.control_definition == undefined ? "has-icons-left" : props.control_definition
   }, /*#__PURE__*/React__default.createElement(Input, {
     definition: props.input_definition,
     onChangeEvent: props.onChange,
@@ -2790,11 +1990,11 @@ function assembleIcon(props) {
   var code = /*#__PURE__*/React__default.createElement(React__default.Fragment, null);
 
   if (props.control_definition != undefined) {
-    var right = props.control_definition.includes("icons-right");
+    var right = props.control_definition.includes("has-icons-right");
 
     if (right == true) {
       var definition = props.icon_definition == undefined ? "" : props.icon_definition;
-      var icon_def = definition + " right";
+      var icon_def = definition + " is-right";
       code = /*#__PURE__*/React__default.createElement(Icon, {
         definition: icon_def,
         icon_name: props.icon_name
@@ -2871,16 +2071,15 @@ Field.propTypes = {
 // Um exemplo seria um componente que exibe uma imagem
 
 var FieldContent = function FieldContent(props) {
-  return /*#__PURE__*/React__default.createElement("div", {
+  return /*#__PURE__*/React.createElement("div", {
     className: "field"
-  }, /*#__PURE__*/React__default.createElement("label", {
+  }, /*#__PURE__*/React.createElement("label", {
     className: "label"
-  }, props.label), /*#__PURE__*/React__default.createElement("div", {
+  }, props.label), /*#__PURE__*/React.createElement("div", {
     className: "control"
   }, props.children));
 };
 
-var _FieldButton$propType;
 // className ="field" e className="control"
 // Vantagem em relação a Button, um pequeno espaçamento entre o elemento
 // FieldButton e seus elementos superior, além de ser alocado abaixo do elemento
@@ -2889,27 +2088,27 @@ var _FieldButton$propType;
 // e um button e um fieldbutton, que será possível ver uma diferença de espaçamento
 
 var FieldButton = function FieldButton(props) {
-  var field_definition = classnames(getClassName(props.field_definition, "Field"));
-  return /*#__PURE__*/React__default.createElement(FieldContent, {
-    definition: field_definition,
+  return /*#__PURE__*/React.createElement(FieldContent, {
+    definition: props.field_definition,
     label: props.label
-  }, /*#__PURE__*/React__default.createElement(Button, {
+  }, /*#__PURE__*/React.createElement(Button, {
     definition: props.button_definition,
     onClick: props.onClick,
     disabled: props.disabled
   }, props.value));
 };
 
-FieldButton.propTypes = (_FieldButton$propType = {
-  field_definition: propTypes.string,
+FieldButton.propTypes = {
   button_definition: propTypes.string,
-  label: propTypes.string
-}, _defineProperty(_FieldButton$propType, "field_definition", propTypes.string), _defineProperty(_FieldButton$propType, "onClick", propTypes.func), _defineProperty(_FieldButton$propType, "disabled", propTypes.bool), _defineProperty(_FieldButton$propType, "value", propTypes.string), _FieldButton$propType);
+  label: propTypes.string,
+  field_definition: propTypes.string,
+  onClick: propTypes.func,
+  disabled: propTypes.bool,
+  value: propTypes.string
+};
 
 var File = function File(props) {
-  checkerDefinition(props.definition, "File");
-  var file_definition = props.definition == undefined ? "" : props.definition;
-  var definition = classnames(getClassName("file " + file_definition, "File"));
+  var definition = props.definition == undefined ? "file" : "file " + props.definition;
   return /*#__PURE__*/React__default.createElement("div", {
     className: definition
   }, /*#__PURE__*/React__default.createElement("label", {
@@ -2940,9 +2139,7 @@ File.propTypes = {
 };
 
 var Hero = function Hero(props) {
-  checkerDefinition(props.definition, "Hero");
-  var hero_definition = props.definition == undefined ? "" : props.definition;
-  var definition = classnames(getClassName("hero " + hero_definition, "Hero"));
+  var definition = props.definition == undefined ? "hero" : "hero " + props.definition;
   return /*#__PURE__*/React__default.createElement("section", {
     className: definition
   }, /*#__PURE__*/React__default.createElement("div", {
@@ -3019,8 +2216,7 @@ function assemble$3(childrens, props) {
 
 
 function assembleThreePartsHero(props, childrens) {
-  var hero_definition = props.definition == undefined ? "" : props.definition;
-  var definition = classnames(getClassName("hero " + hero_definition, "Hero"));
+  var definition = props.definition == undefined ? "hero" : "hero " + props.definition;
   return /*#__PURE__*/React.createElement("section", {
     className: definition
   }, /*#__PURE__*/React.createElement("div", {
@@ -3046,7 +2242,6 @@ para evitar problemas de exibição.
 */
 
 var List = function List(props) {
-  checkerDefinition(props.definition, "List");
   return assembleList(props);
 }; // monta o esqueleto da(s) lista(s) através do map e depois monta cada linha de cada lista
 
@@ -3057,7 +2252,7 @@ function assembleList(props) {
 
   if (list != undefined && Array.isArray(list)) {
     list_tags = /*#__PURE__*/React__default.createElement("ol", {
-      className: classnames(getClassName(props.definition, "List"))
+      className: props.definition
     }, assembleRow(list));
   }
 
@@ -3078,8 +2273,9 @@ List.propTypes = {
 };
 
 var Menu = function Menu(props) {
+  var definition = props.definition == undefined ? "menu" : "menu " + props.definition;
   return /*#__PURE__*/React.createElement("aside", {
-    class: "menu"
+    className: definition
   }, props.children);
 };
 
@@ -3152,8 +2348,7 @@ function assembleSingleItem$1(item) {
   if (item["sub_itens"] != undefined) {
     item_code = decideTypeOfItem(item);
   } else {
-    checkerDefinition(item["definition"], "Menu");
-    var definition = classnames(getClassName(item["definition"], "Menu"));
+    var definition = item["definition"];
     item_code = /*#__PURE__*/React__default.createElement("li", null, /*#__PURE__*/React__default.createElement("a", {
       className: definition,
       onClick: item["onClick"]
@@ -3164,8 +2359,7 @@ function assembleSingleItem$1(item) {
 }
 
 function assembleSubItens(item) {
-  checkerDefinition(item["definition"], "Menu");
-  var definition = classnames(getClassName(item["definition"], "Menu"));
+  var definition = item["definition"];
   return /*#__PURE__*/React__default.createElement("li", null, /*#__PURE__*/React__default.createElement("a", {
     className: definition,
     onClick: item["onClick"]
@@ -3185,8 +2379,7 @@ function decideTypeOfItem(item) {
   var item_code = ""; // se possuir sub_itens
 
   if (item["sub_itens"] != undefined) {
-    checkerDefinition(item["definition"], "Menu");
-    var definition = classnames(getClassName(item["definition"], "Menu"));
+    var definition = item["definition"];
     item_code = /*#__PURE__*/React__default.createElement("li", null, /*#__PURE__*/React__default.createElement("a", {
       className: definition,
       onClick: item["onClick"]
@@ -3206,8 +2399,7 @@ MenuItem.propTypes = {
 };
 
 var Message = function Message(props) {
-  checkerDefinition(props.definition, "Message");
-  var definition = "message " + classnames(getClassName(props.definition, "Message"));
+  var definition = props.definition == undefined ? "message" : "message " + props.definition;
   return /*#__PURE__*/React.createElement("article", {
     className: definition
   }, assembleHeader$1(props.header, props.delete, props.onClickDelete), assembleBody(props.children));
@@ -3262,8 +2454,7 @@ Existem algumas maneira de fornecer os itens de "start" e "end" ao usar o presen
 */
 
 var NavigationBar = function NavigationBar(props) {
-  checkerDefinition(props.definition, "NavigationBar");
-  var definition = "navbar " + classnames(getClassName(props.definition, "NavigationBar"));
+  var definition = props.definition == undefined ? "navbar" : "navbar " + props.definition;
   return /*#__PURE__*/React__default.createElement("nav", {
     className: definition
   }, /*#__PURE__*/React__default.createElement("div", {
@@ -3354,11 +2545,10 @@ function assembleFirstItemDropDown(item) {
 }
 
 function assembleItem$1(item, definition) {
-  var className = "navbar-item " + classnames(getClassName(item["definition"], "NavigationBar"));
-  var x = item["value"];
+  var def = "navbar-item " + item["definition"];
   var item_code = /*#__PURE__*/React__default.createElement("a", {
     onClick: item["onClick"],
-    className: className
+    className: def
   }, item["value"]);
   return item_code;
 }
@@ -3375,19 +2565,24 @@ NavigationBar.propTypes = {
 };
 
 var Notification = function Notification(props) {
-  checkerDefinition(props.definition, "Notification");
-  var definition = "notification " + classnames(getClassName(props.definition, "Notification"));
+  var definition = props.definition == undefined ? "notification" : "notification " + props.definition;
   return /*#__PURE__*/React.createElement("div", {
     className: definition
-  }, props.title != undefined && /*#__PURE__*/React.createElement("div", {
-    className: "title"
-  }, props.title), props.delete == true && assembleDelete$1(props.onClickDelete), props.children);
+  }, props.delete == true && assembleDelete$1(props.onClickDelete), props.title == undefined && props.subtitle == undefined ? props.children : assembleTitleAndSubtitle(props));
 };
+
+function assembleTitleAndSubtitle(props) {
+  return /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement("p", {
+    className: "title"
+  }, props.title), /*#__PURE__*/React.createElement("p", {
+    className: "subtitle"
+  }, props.subtitle), /*#__PURE__*/React.createElement(Content, null, props.children));
+}
 
 function assembleDelete$1(onClickDelete) {
   return /*#__PURE__*/React.createElement(Button, {
-    onClick: onClickDelete,
-    delete: true
+    delete: true,
+    onClick: onClickDelete
   });
 }
 
@@ -3399,8 +2594,7 @@ Notification.propTypes = {
 };
 
 var Pagination = function Pagination(props) {
-  checkerDefinition(props.definition, "Pagination");
-  var definition = "pagination " + classnames(getClassName(props.definition, "Pagination"));
+  var definition = props.definition == undefined ? "pagination" : "pagination " + props.definition;
   return /*#__PURE__*/React__default.createElement("nav", {
     className: definition
   }, /*#__PURE__*/React__default.createElement("a", {
@@ -3435,8 +2629,7 @@ function assembleItens$2(itens) {
 }
 
 function assembleItem$2(item) {
-  checkerDefinition(item["definition"], "Pagination");
-  var definition = "pagination-link " + classnames(getClassName(item["definition"], "Pagination"));
+  var definition = "pagination-link " + item["definition"];
   var item_code = item_code = /*#__PURE__*/React__default.createElement("li", null, /*#__PURE__*/React__default.createElement("a", {
     onClick: item["onClick"],
     disabled: item["disabled"],
@@ -3457,7 +2650,7 @@ Pagination.propTypes = {
 };
 
 var PanelItem = function PanelItem(props) {
-  return /*#__PURE__*/React__default.createElement("div", {
+  return /*#__PURE__*/React.createElement("div", {
     className: "panel-block",
     onClick: props.onClick
   }, props.children);
@@ -3465,8 +2658,7 @@ var PanelItem = function PanelItem(props) {
 
 // v.01
 var Panel = function Panel(props) {
-  checkerDefinition(props.definition, "Panel");
-  var definition = "panel " + classnames(getClassName(props.definition, "Panel"));
+  var definition = props.definition == undefined ? "panel" : "panel " + props.definition;
   return /*#__PURE__*/React__default.createElement("nav", {
     class: definition
   }, assembleHeading(props.header), haveSearch(props) == true && assembleSearch(props), assemblePanelTabs(props.itens_tabs), assemblePanelBlocks(props.itens_blocks));
@@ -3545,11 +2737,10 @@ Panel.propTypes = {
 };
 
 var ProgressBar = function ProgressBar(props) {
-  checkerDefinition(props.definition, "ProgressBar");
-  var definition = props.definition == undefined ? "" : props.definition;
+  var definition = props.definition == undefined ? "progress" : "progress " + props.definition;
   return /*#__PURE__*/React__default.createElement("progress", {
     onChange: props.onChange,
-    className: classnames(getClassName("progress " + definition, "ProgressBar")),
+    className: definition,
     max: props.max,
     value: props.value
   });
@@ -3603,15 +2794,12 @@ var style_cursor = {
 };
 
 var Table = function Table(props) {
-  checkerDefinition(props.definition, "Table");
   return assembleTable(props);
 };
 
 function assembleTable(props) {
-  var table_definition = props.definition == undefined ? "" : props.definition;
-  var definition = classnames(getClassName("table " + table_definition, "Table"));
-  var code = /*#__PURE__*/React__default.createElement(React__default.Fragment, null);
-  code = /*#__PURE__*/React__default.createElement("table", {
+  var definition = props.definition == undefined ? "table" : "table " + props.definition;
+  var code = /*#__PURE__*/React__default.createElement("table", {
     className: definition
   }, isArrayOk(props.itens_header) && assembleHeader$2(props), isArrayOk(props.itens_body) && assembleBody$1(props.itens_body, props.onClickRow), isArrayOk(props.itens_footer) && assembleFooter$1(props.itens_footer));
   return code;
@@ -3632,20 +2820,28 @@ function isArrayOk(array) {
 
 function assembleHeader$2(props) {
   var code_header = /*#__PURE__*/React__default.createElement(React__default.Fragment, null);
-  var header_definition = classnames(getClassName(props.header_definition, "Table"));
-  code_header = /*#__PURE__*/React__default.createElement("thead", {
-    className: header_definition
-  }, /*#__PURE__*/React__default.createElement("tr", null, props.itens_header.map(function (item_header) {
-    return assembleRowHeaderFooter(item_header);
-  })));
+  var header_definition = props.header_definition;
+
+  if (props.itens_header != undefined) {
+    code_header = /*#__PURE__*/React__default.createElement("thead", {
+      className: header_definition
+    }, /*#__PURE__*/React__default.createElement("tr", null, props.itens_header.map(function (item_header) {
+      return assembleRowHeaderFooter(item_header);
+    })));
+  }
+
   return code_header;
 }
 
 function assembleFooter$1(itens_footer) {
   var code_footer = /*#__PURE__*/React__default.createElement(React__default.Fragment, null);
-  code_footer = /*#__PURE__*/React__default.createElement("tfoot", null, /*#__PURE__*/React__default.createElement("tr", null, itens_footer.map(function (item_footer) {
-    return assembleRowHeaderFooter(item_footer);
-  })));
+
+  if (itens_footer != undefined) {
+    code_footer = /*#__PURE__*/React__default.createElement("tfoot", null, /*#__PURE__*/React__default.createElement("tr", null, itens_footer.map(function (item_footer) {
+      return assembleRowHeaderFooter(item_footer);
+    })));
+  }
+
   return code_footer;
 }
 
@@ -3661,13 +2857,16 @@ function assembleBody$1(itens, onClickRow) {
     return row;
   };
 
-  code = /*#__PURE__*/React__default.createElement("tbody", null, itens.map(function (item) {
-    return /*#__PURE__*/React__default.createElement("tr", {
-      key: item["key"],
-      style: style_cursor,
-      onClick: onClickRow
-    }, getRow(item));
-  }));
+  if (itens != undefined) {
+    code = /*#__PURE__*/React__default.createElement("tbody", null, itens.map(function (item) {
+      return /*#__PURE__*/React__default.createElement("tr", {
+        key: item["key"],
+        style: style_cursor,
+        onClick: onClickRow
+      }, getRow(item));
+    }));
+  }
+
   return code;
 }
 
@@ -3678,7 +2877,7 @@ function assembleRowHeaderFooter(item) {
 Table.propTypes = {
   itens_body: propTypes.array,
   itens_header: propTypes.array,
-  itens_footer: propTypes.Array,
+  itens_footer: propTypes.array,
   // função para quando clicar na tabela
   // executar alguma ação
   // evento global para todas as linhas
@@ -3730,49 +2929,28 @@ SearchTable.propTypes = {
 };
 
 var Section = function Section(props) {
-  return /*#__PURE__*/React__default.createElement("section", {
+  return /*#__PURE__*/React.createElement("section", {
     className: "section"
-  }, React__default.Children.map(props.children, function (child, i) {
+  }, React.Children.map(props.children, function (child, i) {
     return child;
   }));
 };
 
-Section.propTypes = {
-  definition: propTypes.string
-};
-
 var Select = function Select(props) {
-  checkerDefinition(props.definition, "Select");
-  var select_def = props.definition == undefined ? "" : props.definition;
-  var definition = classnames(getClassName("select " + select_def, "Select"));
-  var definitionSelect = classnames(getClassName(getDefinitionCssEvents(props.definition), "Select"));
+  var definition = props.definition == undefined ? "select" : "select " + props.definition;
   var code = /*#__PURE__*/React__default.createElement("div", {
     className: definition
   }, props.multiple_size == undefined ? /*#__PURE__*/React__default.createElement("select", {
     onChange: props.onChange,
-    className: definitionSelect
+    className: definition
   }, " ", assembleItens$4(props.itens)) : /*#__PURE__*/React__default.createElement("select", {
     onChange: props.onChange,
-    className: definitionSelect,
+    className: definition,
     multiple: true,
     size: props.multiple_size
   }, " ", assembleItens$4(props.itens)));
   return code;
 };
-
-function getDefinitionCssEvents(definition) {
-  var focused = "";
-  var hovered = "";
-  var active = "";
-
-  if (definition != undefined) {
-    focused = definition.includes("focused") == true ? "focused " : "";
-    hovered = definition.includes("hovered") == true ? "hovered " : "";
-    active = definition.includes("active") == true ? "active " : "";
-  }
-
-  return focused + hovered + active;
-}
 
 function assembleItens$4(itens) {
   var code = "";
@@ -3825,14 +3003,14 @@ function getTitle(props) {
 
 var assemble1 = function assemble1(props) {
   var code = "";
-  var definition = getDefinition$3(props);
+  var definition = getDefinition$1(props);
 
   if (props.p == true) {
-    code = /*#__PURE__*/React__default.createElement("p", {
+    code = /*#__PURE__*/React.createElement("p", {
       className: definition
     }, props.children);
   } else {
-    code = /*#__PURE__*/React__default.createElement("h1", {
+    code = /*#__PURE__*/React.createElement("h1", {
       className: definition
     }, props.children);
   }
@@ -3842,14 +3020,14 @@ var assemble1 = function assemble1(props) {
 
 var assemble2 = function assemble2(props) {
   var code = "";
-  var definition = getDefinition$3(props);
+  var definition = getDefinition$1(props);
 
   if (props.p == true) {
-    code = /*#__PURE__*/React__default.createElement("p", {
+    code = /*#__PURE__*/React.createElement("p", {
       className: definition
     }, props.children);
   } else {
-    code = /*#__PURE__*/React__default.createElement("h2", {
+    code = /*#__PURE__*/React.createElement("h2", {
       className: definition
     }, props.children);
   }
@@ -3859,14 +3037,14 @@ var assemble2 = function assemble2(props) {
 
 var assemble3 = function assemble3(props) {
   var code = "";
-  var definition = getDefinition$3(props);
+  var definition = getDefinition$1(props);
 
   if (props.p == true) {
-    code = /*#__PURE__*/React__default.createElement("p", {
+    code = /*#__PURE__*/React.createElement("p", {
       className: definition
     }, props.children);
   } else {
-    code = /*#__PURE__*/React__default.createElement("h3", {
+    code = /*#__PURE__*/React.createElement("h3", {
       className: definition
     }, props.children);
   }
@@ -3876,14 +3054,14 @@ var assemble3 = function assemble3(props) {
 
 var assemble4 = function assemble4(props) {
   var code = "";
-  var definition = getDefinition$3(props);
+  var definition = getDefinition$1(props);
 
   if (props.p == true) {
-    code = /*#__PURE__*/React__default.createElement("p", {
+    code = /*#__PURE__*/React.createElement("p", {
       className: definition
     }, props.children);
   } else {
-    code = /*#__PURE__*/React__default.createElement("h4", {
+    code = /*#__PURE__*/React.createElement("h4", {
       className: definition
     }, props.children);
   }
@@ -3893,14 +3071,14 @@ var assemble4 = function assemble4(props) {
 
 var assemble5 = function assemble5(props) {
   var code = "";
-  var definition = getDefinition$3(props);
+  var definition = getDefinition$1(props);
 
   if (props.p == true) {
-    code = /*#__PURE__*/React__default.createElement("p", {
+    code = /*#__PURE__*/React.createElement("p", {
       className: definition
     }, props.children);
   } else {
-    code = /*#__PURE__*/React__default.createElement("h5", {
+    code = /*#__PURE__*/React.createElement("h5", {
       className: definition
     }, props.children);
   }
@@ -3910,14 +3088,14 @@ var assemble5 = function assemble5(props) {
 
 var assemble6 = function assemble6(props) {
   var code = "";
-  var definition = getDefinition$3(props);
+  var definition = getDefinition$1(props);
 
   if (props.p == true) {
-    code = /*#__PURE__*/React__default.createElement("p", {
+    code = /*#__PURE__*/React.createElement("p", {
       className: definition
     }, props.children);
   } else {
-    code = /*#__PURE__*/React__default.createElement("h6", {
+    code = /*#__PURE__*/React.createElement("h6", {
       className: definition
     }, props.children);
   }
@@ -3936,9 +3114,8 @@ function mapFunctionsTitle() {
   return map;
 }
 
-function getDefinition$3(props) {
-  var definition = "";
-  definition = classnames(getClassName("subtitle " + String(props.definition), "Title"));
+function getDefinition$1(props) {
+  var definition = "subtitle is-" + String(props.definition);
   return definition;
 }
 
@@ -3951,15 +3128,12 @@ SubTitle.propTypes = {
 };
 
 var TableQuery = function TableQuery(props) {
-  checkerDefinition(props.definition, "Table");
   return assembleTable$1(props);
 };
 
 function assembleTable$1(props) {
-  var table_definition = props.definition == undefined ? "" : props.definition;
-  var definition = classnames(getClassName("table " + table_definition, "Table"));
-  var code = /*#__PURE__*/React__default.createElement(React__default.Fragment, null);
-  var x = props.header; // elimina vazio e não array
+  var definition = props.definition == undefined ? "table" : "table " + props.definition;
+  var code = /*#__PURE__*/React__default.createElement(React__default.Fragment, null); // elimina vazio e não array
 
   if (props.itens != undefined && Array.isArray(props.itens)) {
     if (props.itens.length > 0) {
@@ -4036,7 +3210,12 @@ TableQuery.propTypes = {
   header: propTypes.bool
 };
 
-// Pode-se usá-lo por exemplo, dentro do componente Panel para montar um Panel Tabs;
+var Tabs = function Tabs(props) {
+  var definition = props.definition == undefined ? "tabs" : "tabs " + props.definition;
+  return /*#__PURE__*/React__default.createElement("div", {
+    className: definition
+  }, assembleListTabs(props.itens));
+};
 
 function assembleListTabs(itens) {
   var tabs_code = "";
@@ -4045,7 +3224,7 @@ function assembleListTabs(itens) {
     tabs_code = /*#__PURE__*/React__default.createElement("ul", null, itens.map(function (item) {
       return /*#__PURE__*/React__default.createElement("li", {
         onClick: item["onClick"],
-        className: classnames(getClassName(item["definition"], "Tabs"))
+        className: item["definition"]
       }, /*#__PURE__*/React__default.createElement("a", null, item["icon_name"] != undefined && /*#__PURE__*/React__default.createElement(Icon, {
         definition: item["icon_definition"],
         icon_name: item["icon_name"]
@@ -4056,23 +3235,13 @@ function assembleListTabs(itens) {
   return tabs_code;
 }
 
-var Tabs = function Tabs(props) {
-  checkerDefinition(props.definition, "Tabs");
-  var definition = "tabs " + classnames(getClassName(props.definition, "Tabs"));
-  return /*#__PURE__*/React__default.createElement("div", {
-    className: definition
-  }, assembleListTabs(props.itens));
-};
-
 Tabs.propTypes = {
   definition: propTypes.string,
   itens: propTypes.array
 };
 
 var Tag = function Tag(props) {
-  checkerDefinition(props.definition, "Tag");
-  var definition_tag = props.definition == undefined ? "" : props.definition;
-  var definition = classnames(getClassName("tag " + definition_tag, "Tag"));
+  var definition = props.definition == undefined ? "tag" : "tag " + props.definition;
   return /*#__PURE__*/React.createElement("span", {
     className: definition
   }, props.children, props.delete == true && /*#__PURE__*/React.createElement(Button, {
@@ -4105,18 +3274,23 @@ function assembleTagList(props) {
 
 function assembleListWithItens(props) {
   var itens = props.itens;
-  var definition = classnames(getClassName("tags " + props.definition, "TagList"));
-  var code = /*#__PURE__*/React__default.createElement("div", {
-    className: definition
-  }, itens.map(function (item) {
-    return assembleTag(item["definition"], item["value"], item["onClick"]);
-  }));
+  var definition = props.definition == undefined ? "tags" : "tags " + props.definition;
+  var code = /*#__PURE__*/React__default.createElement(React__default.Fragment, null);
+
+  if (itens != undefined) {
+    code = /*#__PURE__*/React__default.createElement("div", {
+      className: definition
+    }, itens.map(function (item) {
+      return assembleTag(item["definition"], item["value"], item["onClick"]);
+    }));
+  }
+
   return code;
 } // monta a tag 
 
 
 function assembleTag(definition, value, onClick) {
-  var definitionTag = classnames(getClassName("tag " + definition, "Tag"));
+  var definitionTag = "tag " + definition;
   return /*#__PURE__*/React__default.createElement("span", {
     onClick: onClick,
     className: definitionTag
@@ -4132,10 +3306,8 @@ var TextArea = function TextArea(props) {
 };
 
 function assembleTextArea(props) {
-  checkerDefinition(props.definition, "Text");
-  var definition_text = props.definition == undefined ? "" : props.definition;
-  var definition = classnames(getClassName("textarea " + definition_text, "Text"));
-  var definitionControl = props.loading == true ? "loading" : "";
+  var definition = props.definition == undefined ? "textarea" : "textarea " + props.definition;
+  var definitionControl = props.loading == true ? "is-loading" : "";
   return /*#__PURE__*/React__default.createElement(Control, {
     definition: definitionControl
   }, /*#__PURE__*/React__default.createElement("label", {
@@ -4194,7 +3366,7 @@ function getTitle$1(props) {
 
 var assemble1$1 = function assemble1(props) {
   var code = "";
-  var definition = getDefinition$4(props);
+  var definition = getDefinition$2(props);
 
   if (props.p == true) {
     code = /*#__PURE__*/React__default.createElement("p", {
@@ -4211,7 +3383,7 @@ var assemble1$1 = function assemble1(props) {
 
 var assemble2$1 = function assemble2(props) {
   var code = "";
-  var definition = getDefinition$4(props);
+  var definition = getDefinition$2(props);
 
   if (props.p == true) {
     code = /*#__PURE__*/React__default.createElement("p", {
@@ -4228,7 +3400,7 @@ var assemble2$1 = function assemble2(props) {
 
 var assemble3$1 = function assemble3(props) {
   var code = "";
-  var definition = getDefinition$4(props);
+  var definition = getDefinition$2(props);
 
   if (props.p == true) {
     code = /*#__PURE__*/React__default.createElement("p", {
@@ -4245,7 +3417,7 @@ var assemble3$1 = function assemble3(props) {
 
 var assemble4$1 = function assemble4(props) {
   var code = "";
-  var definition = getDefinition$4(props);
+  var definition = getDefinition$2(props);
 
   if (props.p == true) {
     code = /*#__PURE__*/React__default.createElement("p", {
@@ -4262,7 +3434,7 @@ var assemble4$1 = function assemble4(props) {
 
 var assemble5$1 = function assemble5(props) {
   var code = "";
-  var definition = getDefinition$4(props);
+  var definition = getDefinition$2(props);
 
   if (props.p == true) {
     code = /*#__PURE__*/React__default.createElement("p", {
@@ -4279,7 +3451,7 @@ var assemble5$1 = function assemble5(props) {
 
 var assemble6$1 = function assemble6(props) {
   var code = "";
-  var definition = getDefinition$4(props);
+  var definition = getDefinition$2(props);
 
   if (props.p == true) {
     code = /*#__PURE__*/React__default.createElement("p", {
@@ -4305,13 +3477,13 @@ function mapFunctionsTitle$1() {
   return map;
 }
 
-function getDefinition$4(props) {
+function getDefinition$2(props) {
   var definition = "";
 
   if (props.spaced == true) {
-    definition = classnames(getClassName("title " + props.definition + " spaced", "Title"));
+    definition = "title is-" + String(props.definition) + " spaced";
   } else {
-    definition = classnames(getClassName("title " + String(props.definition), "Title"));
+    definition = "title is-" + String(props.definition);
   }
 
   return definition;
@@ -4325,21 +3497,22 @@ Title.propTypes = {
   p: propTypes.bool
 };
 
+// Definition Equivalente a de Button, ou seja, o definition vai para Button
 var FileButton = function FileButton(props) {
-  return /*#__PURE__*/React__default.createElement("div", {
+  return /*#__PURE__*/React.createElement("div", {
     className: "field"
-  }, /*#__PURE__*/React__default.createElement("label", {
+  }, /*#__PURE__*/React.createElement("label", {
     className: "label"
-  }, props.label), /*#__PURE__*/React__default.createElement("div", {
+  }, props.label), /*#__PURE__*/React.createElement("div", {
     className: "control"
-  }, /*#__PURE__*/React__default.createElement("input", {
+  }, /*#__PURE__*/React.createElement("input", {
     type: "file",
     onChange: props.onChange,
     style: {
       display: 'none'
     },
     ref: props.ref_data
-  }), /*#__PURE__*/React__default.createElement(Button, {
+  }), /*#__PURE__*/React.createElement(Button, {
     definition: props.definition,
     onClick: props.onClick
   }, props.children)));

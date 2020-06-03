@@ -76,7 +76,7 @@ exports[`teste content medium 1`] = `
 
 exports[`teste content small 1`] = `
 <div
-  class="content is-small"
+  class="content small"
 >
   <h1>
     Hello World

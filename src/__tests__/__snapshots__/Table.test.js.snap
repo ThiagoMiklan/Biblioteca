@@ -4,9 +4,7 @@ exports[`test table 1`] = `
 <table
   className="table is-bordered is-striped is-narrow is-fullwidth"
 >
-  <thead
-    className=""
-  >
+  <thead>
     <tr>
       <th>
         Pos

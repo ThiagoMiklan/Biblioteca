@@ -116,14 +116,11 @@ Array [
 exports[`test colors notification 1`] = `
 Array [
   <div
-    className="notification "
+    className="notification"
   >
-    <button
-      className="delete"
-      disabled={false}
-      onClick={[Function]}
-    />
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit lorem ipsum dolor. 
+    Notification delete=
+     onClickDelete =
+    &gt; "Primar lorem ipsum dolor sit amet, consectetur adipiscing elit lorem ipsum dolor. 
     <strong>
       Pellentesque risus mi
     </strong>
@@ -131,7 +128,7 @@ Array [
     <a>
       felis venenatis
     </a>
-     efficitur. Sit amet, consectetur adipiscing elit
+     efficitur. Sit amet, consectetur adipiscing elit"
   </div>,
   <div
     className="notification is-primary"
@@ -139,9 +136,8 @@ Array [
     <button
       className="delete"
       disabled={false}
-      onClick={[Function]}
     />
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit lorem ipsum dolor. 
+    "Primar lorem ipsum dolor sit amet, consectetur adipiscing elit lorem ipsum dolor. 
     <strong>
       Pellentesque risus mi
     </strong>
@@ -149,7 +145,7 @@ Array [
     <a>
       felis venenatis
     </a>
-     efficitur. Sit amet, consectetur adipiscing elit
+     efficitur. Sit amet, consectetur adipiscing elit"
   </div>,
   <div
     className="notification is-link"
@@ -157,9 +153,8 @@ Array [
     <button
       className="delete"
       disabled={false}
-      onClick={[Function]}
     />
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit lorem ipsum dolor. 
+    "Primar lorem ipsum dolor sit amet, consectetur adipiscing elit lorem ipsum dolor. 
     <strong>
       Pellentesque risus mi
     </strong>
@@ -167,7 +162,7 @@ Array [
     <a>
       felis venenatis
     </a>
-     efficitur. Sit amet, consectetur adipiscing elit
+     efficitur. Sit amet, consectetur adipiscing elit"
   </div>,
   <div
     className="notification is-info"
@@ -175,9 +170,8 @@ Array [
     <button
       className="delete"
       disabled={false}
-      onClick={[Function]}
     />
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit lorem ipsum dolor. 
+    "Primar lorem ipsum dolor sit amet, consectetur adipiscing elit lorem ipsum dolor. 
     <strong>
       Pellentesque risus mi
     </strong>
@@ -185,7 +179,7 @@ Array [
     <a>
       felis venenatis
     </a>
-     efficitur. Sit amet, consectetur adipiscing elit
+     efficitur. Sit amet, consectetur adipiscing elit"
   </div>,
   <div
     className="notification is-success"
@@ -193,9 +187,8 @@ Array [
     <button
       className="delete"
       disabled={false}
-      onClick={[Function]}
     />
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit lorem ipsum dolor. 
+    "Primar lorem ipsum dolor sit amet, consectetur adipiscing elit lorem ipsum dolor. 
     <strong>
       Pellentesque risus mi
     </strong>
@@ -203,7 +196,7 @@ Array [
     <a>
       felis venenatis
     </a>
-     efficitur. Sit amet, consectetur adipiscing elit
+     efficitur. Sit amet, consectetur adipiscing elit"
   </div>,
   <div
     className="notification is-warning"
@@ -211,9 +204,8 @@ Array [
     <button
       className="delete"
       disabled={false}
-      onClick={[Function]}
     />
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit lorem ipsum dolor. 
+    "Primar lorem ipsum dolor sit amet, consectetur adipiscing elit lorem ipsum dolor. 
     <strong>
       Pellentesque risus mi
     </strong>
@@ -221,7 +213,7 @@ Array [
     <a>
       felis venenatis
     </a>
-     efficitur. Sit amet, consectetur adipiscing elit
+     efficitur. Sit amet, consectetur adipiscing elit"
   </div>,
   <div
     className="notification is-danger"
@@ -229,9 +221,8 @@ Array [
     <button
       className="delete"
       disabled={false}
-      onClick={[Function]}
     />
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit lorem ipsum dolor. 
+    "Primar lorem ipsum dolor sit amet, consectetur adipiscing elit lorem ipsum dolor. 
     <strong>
       Pellentesque risus mi
     </strong>
@@ -239,7 +230,40 @@ Array [
     <a>
       felis venenatis
     </a>
-     efficitur. Sit amet, consectetur adipiscing elit
+     efficitur. Sit amet, consectetur adipiscing elit"
   </div>,
+  <div
+    className="notification"
+  >
+    "Primar lorem ipsum dolor sit amet, consectetur adipiscing elit lorem ipsum dolor. 
+    <strong>
+      Pellentesque risus mi
+    </strong>
+    , tempus quis placerat ut, porta nec nulla. Vestibulum rhoncus ac ex sit amet fringilla. Nullam gravida purus diam, et dictum 
+    <a>
+      felis venenatis
+    </a>
+     efficitur. Sit amet, consectetur adipiscing elit"
+  </div>,
+  <br />,
+  <div
+    className="notification"
+  >
+    <button
+      className="delete"
+      disabled={false}
+      onClick={[Function]}
+    />
+    "Primar lorem ipsum dolor sit amet, consectetur adipiscing elit lorem ipsum dolor. 
+    <strong>
+      Pellentesque risus mi
+    </strong>
+    , tempus quis placerat ut, porta nec nulla. Vestibulum rhoncus ac ex sit amet fringilla. Nullam gravida purus diam, et dictum 
+    <a>
+      felis venenatis
+    </a>
+     efficitur. Sit amet, consectetur adipiscing elit"
+  </div>,
+  <br />,
 ]
 `;

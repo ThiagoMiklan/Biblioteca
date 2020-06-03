@@ -23,7 +23,7 @@ Array [
     value="45"
   />,
   <progress
-    className="progress is-sucess"
+    className="progress is-success"
     max="100"
     value="60"
   />,

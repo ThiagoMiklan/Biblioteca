@@ -1,104 +1,112 @@
 import React from 'react';
-import Notification from '../biblioteca/Notification';
+import Notification from '../components/Notification';
 import renderer from 'react-test-renderer';
 
 //  ALERTA: NOTIFICATION IS-LIGHT NÃO FUNCIONANDO, NEM COM O CÓDIGO DA DOCUMENTAÇÃO BULMA
 
-function onClick(){
-    alert("testando delete");
+function onClick() {
+  alert("testando delete");
 }
-test('test colors light notification',()=>{
-    const notifications_light =  renderer.create(
-        <>
-        <Notification definition="primary light" delete={true} onClickDelete={onClick}>
-      Lorem ipsum dolor sit amet, consectetur
+test('test colors light notification', () => {
+  const notifications_light = renderer.create(
+    <>
+      <Notification definition="is-primary is-light" delete={true} onClickDelete={onClick}>
+        Lorem ipsum dolor sit amet, consectetur
       adipiscing elit lorem ipsum dolor. <strong>Pellentesque risus mi</strong>, tempus quis placerat ut, porta nec nulla. Vestibulum rhoncus ac ex sit amet fringilla. Nullam gravida purus diam, et dictum <a>felis venenatis</a> efficitur. Sit amet,
       consectetur adipiscing elit
   </Notification>
 
-  <Notification definition="link light" delete={true} onClickDelete={onClick}>
-    Lorem ipsum dolor sit amet, consectetur
+      <Notification definition="is-link is-light" delete={true} onClickDelete={onClick}>
+        Lorem ipsum dolor sit amet, consectetur
     adipiscing elit lorem ipsum dolor. <strong>Pellentesque risus mi</strong>, tempus quis placerat ut, porta nec nulla. Vestibulum rhoncus ac ex sit amet fringilla. Nullam gravida purus diam, et dictum <a>felis venenatis</a> efficitur. Sit amet,
     consectetur adipiscing elit
   </Notification>
 
-  <Notification definition="info light" delete={true} onClickDelete={onClick}>
-    Lorem ipsum dolor sit amet, consectetur
+      <Notification definition="is-info is-light" delete={true} onClickDelete={onClick}>
+        Lorem ipsum dolor sit amet, consectetur
     adipiscing elit lorem ipsum dolor. <strong>Pellentesque risus mi</strong>, tempus quis placerat ut, porta nec nulla. Vestibulum rhoncus ac ex sit amet fringilla. Nullam gravida purus diam, et dictum <a>felis venenatis</a> efficitur. Sit amet,
     consectetur adipiscing elit
   </Notification>
 
-  <Notification definition="success light" delete={true} onClickDelete={onClick}>
-      Lorem ipsum dolor sit amet, consectetur
+      <Notification definition="is-success is-light" delete={true} onClickDelete={onClick}>
+        Lorem ipsum dolor sit amet, consectetur
       adipiscing elit lorem ipsum dolor. <strong>Pellentesque risus mi</strong>, tempus quis placerat ut, porta nec nulla. Vestibulum rhoncus ac ex sit amet fringilla. Nullam gravida purus diam, et dictum <a>felis venenatis</a> efficitur. Sit amet,
       consectetur adipiscing elit
   </Notification>
 
-  <Notification definition="warning light" delete={true} onClickDelete={onClick}>
-      Lorem ipsum dolor sit amet, consectetur
+      <Notification definition="is-warning is-light" delete={true} onClickDelete={onClick}>
+        Lorem ipsum dolor sit amet, consectetur
       adipiscing elit lorem ipsum dolor. <strong>Pellentesque risus mi</strong>, tempus quis placerat ut, porta nec nulla. Vestibulum rhoncus ac ex sit amet fringilla. Nullam gravida purus diam, et dictum <a>felis venenatis</a> efficitur. Sit amet,
       consectetur adipiscing elit
   </Notification>
 
-  <Notification definition="danger light" delete={true} onClickDelete={onClick}>
+      <Notification definition="is-danger is-light" delete={true} onClickDelete={onClick}>
         Lorem ipsum dolor sit amet, consectetur
         adipiscing elit lorem ipsum dolor. <strong>Pellentesque risus mi</strong>, tempus quis placerat ut, porta nec nulla. Vestibulum rhoncus ac ex sit amet fringilla. Nullam gravida purus diam, et dictum <a>felis venenatis</a> efficitur. Sit amet,
         consectetur adipiscing elit
   </Notification>
-     </>
-    ).toJSON();
+    </>
+  ).toJSON();
 
-    expect(notifications_light).toMatchSnapshot();
+  expect(notifications_light).toMatchSnapshot();
 });
 
 
-test('test colors notification',()=>{
-    const notifications =  renderer.create(
-     <>
-       <Notification delete={true} onClickDelete={onClick}>
-      Lorem ipsum dolor sit amet, consectetur
-      adipiscing elit lorem ipsum dolor. <strong>Pellentesque risus mi</strong>, tempus quis placerat ut, porta nec nulla. Vestibulum rhoncus ac ex sit amet fringilla. Nullam gravida purus diam, et dictum <a>felis venenatis</a> efficitur. Sit amet,
-      consectetur adipiscing elit
-  </Notification>
-
-  <Notification definition="primary" delete={true} onClickDelete={onClick}>
-      Lorem ipsum dolor sit amet, consectetur
-      adipiscing elit lorem ipsum dolor. <strong>Pellentesque risus mi</strong>, tempus quis placerat ut, porta nec nulla. Vestibulum rhoncus ac ex sit amet fringilla. Nullam gravida purus diam, et dictum <a>felis venenatis</a> efficitur. Sit amet,
-      consectetur adipiscing elit
-  </Notification>
-
-  <Notification definition="link" delete={true} onClickDelete={onClick}>
-    Lorem ipsum dolor sit amet, consectetur
+test('test colors notification', () => {
+  const notifications = renderer.create(
+    <>
+      <Notification>
+        Notification delete={true} onClickDelete ={onClick}>
+    "Primar lorem ipsum dolor sit amet, consectetur
     adipiscing elit lorem ipsum dolor. <strong>Pellentesque risus mi</strong>, tempus quis placerat ut, porta nec nulla. Vestibulum rhoncus ac ex sit amet fringilla. Nullam gravida purus diam, et dictum <a>felis venenatis</a> efficitur. Sit amet,
-    consectetur adipiscing elit
-  </Notification>
-
-  <Notification definition="info" delete={true} onClickDelete={onClick}>
-    Lorem ipsum dolor sit amet, consectetur
+    consectetur adipiscing elit"
+    </Notification>
+      <Notification definition="is-primary" delete={true}>
+        "Primar lorem ipsum dolor sit amet, consectetur
     adipiscing elit lorem ipsum dolor. <strong>Pellentesque risus mi</strong>, tempus quis placerat ut, porta nec nulla. Vestibulum rhoncus ac ex sit amet fringilla. Nullam gravida purus diam, et dictum <a>felis venenatis</a> efficitur. Sit amet,
-    consectetur adipiscing elit
-  </Notification>
+    consectetur adipiscing elit"
+    </Notification>
+      <Notification definition="is-link" delete={true}>
+        "Primar lorem ipsum dolor sit amet, consectetur
+    adipiscing elit lorem ipsum dolor. <strong>Pellentesque risus mi</strong>, tempus quis placerat ut, porta nec nulla. Vestibulum rhoncus ac ex sit amet fringilla. Nullam gravida purus diam, et dictum <a>felis venenatis</a> efficitur. Sit amet,
+    consectetur adipiscing elit"
+    </Notification>
+      <Notification definition="is-info" delete={true}>
+        "Primar lorem ipsum dolor sit amet, consectetur
+    adipiscing elit lorem ipsum dolor. <strong>Pellentesque risus mi</strong>, tempus quis placerat ut, porta nec nulla. Vestibulum rhoncus ac ex sit amet fringilla. Nullam gravida purus diam, et dictum <a>felis venenatis</a> efficitur. Sit amet,
+    consectetur adipiscing elit"
+    </Notification>
+      <Notification definition="is-success" delete={true}>
+        "Primar lorem ipsum dolor sit amet, consectetur
+    adipiscing elit lorem ipsum dolor. <strong>Pellentesque risus mi</strong>, tempus quis placerat ut, porta nec nulla. Vestibulum rhoncus ac ex sit amet fringilla. Nullam gravida purus diam, et dictum <a>felis venenatis</a> efficitur. Sit amet,
+    consectetur adipiscing elit"
+    </Notification>
+      <Notification definition="is-warning" delete={true}>
+        "Primar lorem ipsum dolor sit amet, consectetur
+    adipiscing elit lorem ipsum dolor. <strong>Pellentesque risus mi</strong>, tempus quis placerat ut, porta nec nulla. Vestibulum rhoncus ac ex sit amet fringilla. Nullam gravida purus diam, et dictum <a>felis venenatis</a> efficitur. Sit amet,
+    consectetur adipiscing elit"
+    </Notification>
+      <Notification definition="is-danger" delete={true}>
+        "Primar lorem ipsum dolor sit amet, consectetur
+    adipiscing elit lorem ipsum dolor. <strong>Pellentesque risus mi</strong>, tempus quis placerat ut, porta nec nulla. Vestibulum rhoncus ac ex sit amet fringilla. Nullam gravida purus diam, et dictum <a>felis venenatis</a> efficitur. Sit amet,
+    consectetur adipiscing elit"
+    </Notification>
 
-  <Notification definition="success" delete={true} onClickDelete={onClick}>
-      Lorem ipsum dolor sit amet, consectetur
-      adipiscing elit lorem ipsum dolor. <strong>Pellentesque risus mi</strong>, tempus quis placerat ut, porta nec nulla. Vestibulum rhoncus ac ex sit amet fringilla. Nullam gravida purus diam, et dictum <a>felis venenatis</a> efficitur. Sit amet,
-      consectetur adipiscing elit
-  </Notification>
+      <Notification>
+        "Primar lorem ipsum dolor sit amet, consectetur
+    adipiscing elit lorem ipsum dolor. <strong>Pellentesque risus mi</strong>, tempus quis placerat ut, porta nec nulla. Vestibulum rhoncus ac ex sit amet fringilla. Nullam gravida purus diam, et dictum <a>felis venenatis</a> efficitur. Sit amet,
+    consectetur adipiscing elit"
+    </Notification>
+      <br></br>
 
-  <Notification definition="warning" delete={true} onClickDelete={onClick}>
-      Lorem ipsum dolor sit amet, consectetur
-      adipiscing elit lorem ipsum dolor. <strong>Pellentesque risus mi</strong>, tempus quis placerat ut, porta nec nulla. Vestibulum rhoncus ac ex sit amet fringilla. Nullam gravida purus diam, et dictum <a>felis venenatis</a> efficitur. Sit amet,
-      consectetur adipiscing elit
-  </Notification>
+      <Notification delete={true} onClickDelete={onClick}>
+        "Primar lorem ipsum dolor sit amet, consectetur
+    adipiscing elit lorem ipsum dolor. <strong>Pellentesque risus mi</strong>, tempus quis placerat ut, porta nec nulla. Vestibulum rhoncus ac ex sit amet fringilla. Nullam gravida purus diam, et dictum <a>felis venenatis</a> efficitur. Sit amet,
+    consectetur adipiscing elit"
+    </Notification>
+      <br></br>
+    </>
+  ).toJSON();
 
-  <Notification definition="danger" delete={true} onClickDelete={onClick}>
-        Lorem ipsum dolor sit amet, consectetur
-        adipiscing elit lorem ipsum dolor. <strong>Pellentesque risus mi</strong>, tempus quis placerat ut, porta nec nulla. Vestibulum rhoncus ac ex sit amet fringilla. Nullam gravida purus diam, et dictum <a>felis venenatis</a> efficitur. Sit amet,
-        consectetur adipiscing elit
-  </Notification>
- 
-     </>
-    ).toJSON();
-
-    expect(notifications).toMatchSnapshot();
+  expect(notifications).toMatchSnapshot();
 });

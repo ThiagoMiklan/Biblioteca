@@ -1,7 +1,7 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import Title from '../biblioteca/Title';
-import SubTitle  from '../biblioteca/Subtitle';
+import Title from '../components/Title';
+import SubTitle from '../components/Subtitle';
 
 
 test('test title between 1 and 6',()=>{

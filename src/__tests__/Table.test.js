@@ -1,5 +1,5 @@
 import React from 'react';
-import Table from '../biblioteca/Table';
+import Table from '../components/Table';
 import renderer from 'react-test-renderer';
 
 var elements_header = [
@@ -22,7 +22,7 @@ var elements_header = [
 test('test table',()=>{
     const table = renderer.create(
         <Table 
-           definition="bordered striped narrow fullwidth"
+           definition="is-bordered is-striped is-narrow is-fullwidth"
            itens_header={elements_header}
            itens_body={elements_body}
            itens_footer={elements_footer} />

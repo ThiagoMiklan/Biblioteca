@@ -3,7 +3,7 @@
 exports[`test and subtitle using spaced 1`] = `
 Array [
   <p
-    className="title is-1 is-spaced"
+    className="title is-1 spaced"
   >
     Title 1
   </p>,

@@ -1,0 +1,46 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`value correctly 1`] = `
+<div
+  className="container is-fluid"
+>
+  <div
+    className="control icons-left"
+  >
+    <label
+      className="radio"
+      disabled={false}
+    >
+      <input
+        name="resposta"
+        onClick={[Function]}
+        type="radio"
+      />
+      Yes
+    </label>
+    <label
+      className="radio"
+    >
+      <input
+        checked={true}
+        name="resposta"
+        onClick={[Function]}
+        type="radio"
+      />
+      No
+    </label>
+    <label
+      className="radio"
+      disabled={true}
+    >
+      <input
+        checked={true}
+        name="resposta"
+        onClick={[Function]}
+        type="radio"
+      />
+      Maybe
+    </label>
+  </div>
+</div>
+`;

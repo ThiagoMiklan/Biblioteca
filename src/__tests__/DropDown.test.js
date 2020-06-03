@@ -1,5 +1,5 @@
 import React from 'react';
-import DropDown from '../biblioteca/DropDown';
+import DropDown from '../components/DropDown';
 import renderer from 'react-test-renderer';
 
 var itens_link = [
@@ -19,7 +19,7 @@ var itens_div = [
 
 test('dropdown normal',()=>{
     const normal = renderer.create(
-        <DropDown definition="active" itens={itens_link} />
+        <DropDown definition="is-active" itens={itens_link} />
     ).toJSON();
 
     expect(normal).toMatchSnapshot();
@@ -27,7 +27,7 @@ test('dropdown normal',()=>{
 
 test('dropdown with any type of content',()=>{
     const anyContent = renderer.create(
-        <DropDown definition="active right" itens={itens_div} />
+        <DropDown definition="is-active is-right" itens={itens_div} />
     ).toJSON();
 
     expect(anyContent).toMatchSnapshot();

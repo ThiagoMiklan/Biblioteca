@@ -1,7 +1,6 @@
 import React from 'react';
-import BreadCrumb from '../biblioteca/BreadCrumb';
-import Icon from '../biblioteca/Icon';
-
+import BreadCrumb from '../components/BreadCrumb';
+import Icon from  '../components/Icon';
 import renderer from 'react-test-renderer';
 
 
@@ -91,8 +90,8 @@ test('breadcrumb normal',()=>{
 
 test('breadcrumb positions',()=>{
     const component = renderer
-    .create(<><BreadCrumb definition="centered" itens={itens}/>,
-                <BreadCrumb definition="right" itens={itens}/>
+    .create(<><BreadCrumb definition="is-centered" itens={itens}/>,
+                <BreadCrumb definition="is-right" itens={itens}/>
                 </>)
                 .toJSON();
     
@@ -111,10 +110,10 @@ test('breadcrumb with icons',()=>{
 test('breadcrumb separators',()=>{
     const component = renderer
     .create(<>
-        <BreadCrumb definition="arrow" itens={itens} />
-        <BreadCrumb definition="bullet" itens={itens} />
-        <BreadCrumb definition="dot" itens={itens} />
-        <BreadCrumb definition="succeeds" itens={itens}/>
+        <BreadCrumb definition="is-arrow" itens={itens} />
+        <BreadCrumb definition="is-bullet" itens={itens} />
+        <BreadCrumb definition="is-dot" itens={itens} />
+        <BreadCrumb definition="is-succeeds" itens={itens}/>
         </>)
     .toJSON();
     
@@ -124,9 +123,9 @@ test('breadcrumb separators',()=>{
 test('breadcrumb sizes', () => {
     const component = renderer
         .create(<>
-            <BreadCrumb definition="small" itens={itens} />
-            <BreadCrumb definition="medium" itens={itens} />
-            <BreadCrumb definition="large" itens={itens} />
+            <BreadCrumb definition="is-small" itens={itens} />
+            <BreadCrumb definition="is-medium" itens={itens} />
+            <BreadCrumb definition="is-large" itens={itens} />
             </>)
             .toJSON();
     

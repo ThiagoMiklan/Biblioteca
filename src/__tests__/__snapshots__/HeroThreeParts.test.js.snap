@@ -8,7 +8,7 @@ exports[`hero three parts fullheight success 1`] = `
     class="hero-head"
   >
     <nav
-      className="navbar "
+      className="navbar"
     >
       <div
         className="navbar-brand"
@@ -33,27 +33,26 @@ exports[`hero three parts fullheight success 1`] = `
           className="navbar-end"
         >
           <a
-            className="navbar-item is-active"
+            className="navbar-item active"
           >
             Home
           </a>
           <a
-            className="navbar-item "
+            className="navbar-item undefined"
           >
             Examples
           </a>
           <a
-            className="navbar-item "
+            className="navbar-item undefined"
           >
             Documentation
           </a>
           <a
-            className="navbar-item "
+            className="navbar-item undefined"
           >
             <button
               className="button is-primary is-inverted"
               disabled={false}
-              onClick={[Function]}
             >
               <span>
                 Github
@@ -98,43 +97,33 @@ exports[`hero three parts fullheight success 1`] = `
     >
       <ul>
         <li
-          className="is-active"
+          className="active"
         >
           <a>
             Overview
           </a>
         </li>
-        <li
-          className=""
-        >
+        <li>
           <a>
             Modifiers
           </a>
         </li>
-        <li
-          className=""
-        >
+        <li>
           <a>
             Grid
           </a>
         </li>
-        <li
-          className=""
-        >
+        <li>
           <a>
             Elements
           </a>
         </li>
-        <li
-          className=""
-        >
+        <li>
           <a>
             Components
           </a>
         </li>
-        <li
-          className=""
-        >
+        <li>
           <a>
             Layout
           </a>
@@ -153,7 +142,7 @@ exports[`hero three parts fullheight success 2`] = `
     class="hero-head"
   >
     <nav
-      className="navbar "
+      className="navbar"
     >
       <div
         className="navbar-brand"
@@ -178,27 +167,26 @@ exports[`hero three parts fullheight success 2`] = `
           className="navbar-end"
         >
           <a
-            className="navbar-item is-active"
+            className="navbar-item active"
           >
             Home
           </a>
           <a
-            className="navbar-item "
+            className="navbar-item undefined"
           >
             Examples
           </a>
           <a
-            className="navbar-item "
+            className="navbar-item undefined"
           >
             Documentation
           </a>
           <a
-            className="navbar-item "
+            className="navbar-item undefined"
           >
             <button
               className="button is-primary is-inverted"
               disabled={false}
-              onClick={[Function]}
             >
               <span>
                 Github
@@ -243,43 +231,33 @@ exports[`hero three parts fullheight success 2`] = `
     >
       <ul>
         <li
-          className="is-active"
+          className="active"
         >
           <a>
             Overview
           </a>
         </li>
-        <li
-          className=""
-        >
+        <li>
           <a>
             Modifiers
           </a>
         </li>
-        <li
-          className=""
-        >
+        <li>
           <a>
             Grid
           </a>
         </li>
-        <li
-          className=""
-        >
+        <li>
           <a>
             Elements
           </a>
         </li>
-        <li
-          className=""
-        >
+        <li>
           <a>
             Components
           </a>
         </li>
-        <li
-          className=""
-        >
+        <li>
           <a>
             Layout
           </a>
@@ -298,7 +276,7 @@ exports[`hero three parts medium primary 1`] = `
     class="hero-head"
   >
     <nav
-      className="navbar "
+      className="navbar"
     >
       <div
         className="navbar-brand"
@@ -323,27 +301,26 @@ exports[`hero three parts medium primary 1`] = `
           className="navbar-end"
         >
           <a
-            className="navbar-item is-active"
+            className="navbar-item active"
           >
             Home
           </a>
           <a
-            className="navbar-item "
+            className="navbar-item undefined"
           >
             Examples
           </a>
           <a
-            className="navbar-item "
+            className="navbar-item undefined"
           >
             Documentation
           </a>
           <a
-            className="navbar-item "
+            className="navbar-item undefined"
           >
             <button
               className="button is-primary is-inverted"
               disabled={false}
-              onClick={[Function]}
             >
               <span>
                 Github
@@ -388,43 +365,33 @@ exports[`hero three parts medium primary 1`] = `
     >
       <ul>
         <li
-          className="is-active"
+          className="active"
         >
           <a>
             Overview
           </a>
         </li>
-        <li
-          className=""
-        >
+        <li>
           <a>
             Modifiers
           </a>
         </li>
-        <li
-          className=""
-        >
+        <li>
           <a>
             Grid
           </a>
         </li>
-        <li
-          className=""
-        >
+        <li>
           <a>
             Elements
           </a>
         </li>
-        <li
-          className=""
-        >
+        <li>
           <a>
             Components
           </a>
         </li>
-        <li
-          className=""
-        >
+        <li>
           <a>
             Layout
           </a>

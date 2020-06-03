@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`value correctly 1`] = `
+<section
+  className="section"
+>
+  <h1
+    className="title is-1"
+  >
+    Texto Principal
+  </h1>
+  <h3
+    className="title is-3"
+  >
+    Texto Secundários
+  </h3>
+  <p>
+    Em linguística, a noção de texto é ampla e ainda aberta a uma definição mais precisa. Grosso modo, pode ser entendido como manifestação linguística das ideias de um autor, que serão interpretadas pelo leitor de acordo com seus conhecimentos linguísticos e culturais. Seu tamanho é variável
+  </p>
+</section>
+`;

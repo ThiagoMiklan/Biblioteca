@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import File from '../biblioteca/File';
+import File from '../components/File';
 import renderer from 'react-test-renderer';
 
 var onChange = (e)=>{
@@ -10,7 +10,8 @@ var onChange = (e)=>{
 test('test files',()=>{
     const component = renderer
     .create(<div className="container is-fluid">
-    <File filename="Screenshot 2020/01/01"
+   <File 
+      filename="Screenshot 2020/01/01"
       label="Choose a File"
       icon_name="fas fa-upload"/>
       <br></br>
@@ -21,25 +22,25 @@ test('test files',()=>{
       icon_name="fas fa-upload" />
     <br></br>
     <File
-      definition="has-name right"
+      definition="has-name is-right"
       filename="Screenshot 2020/01/01"
       label="Choose File"
       icon_name="fas fa-upload" />
     <br></br>
     <File
-      definition="has-name fullwidth"
+      definition="has-name is-fullwidth"
       filename="Screenshot 2020/01/01"
       label="Choose File"
       icon_name="fas fa-upload" />
     <br></br>
     <File 
-      definition="boxed"
+      definition="is-boxed"
       filename="Screenshot 2020/01/01"
       label="Choose a File"
       icon_name="fas fa-upload" />
     <br></br>
       <File 
-      definition="boxed has-name"
+      definition="is-boxed has-name"
       filename="Screenshot 2020/01/01"
       label="Choose a File"
       icon_name="fas fa-upload" />
@@ -47,35 +48,35 @@ test('test files',()=>{
 
 
       <File 
-      definition="primary"
+      definition="is-primary"
       filename="Screenshot 2020/01/01"
       label="Primary File"
       icon_name="fas fa-upload" />
       <br></br>
 
       <File 
-      definition="info has-name"
+      definition="is-info has-name"
       filename="Screenshot 2020/01/01"
       label="Info File"
       icon_name="fas fa-upload" />
       <br></br>
 
       <File 
-      definition="warning boxed"
+      definition="is-warning is-boxed"
       filename="Screenshot 2020/01/01"
       label="Choose a File"
       icon_name="fas fa-upload" />
       <br></br>
 
       <File 
-      definition="danger has-name medium boxed"
+      definition="is-danger has-name is-medium is-boxed"
       filename="Screenshot 2020/01/01"
       label="Choose a File"
       icon_name="fas fa-upload" />
       <br></br>
 
       <File 
-      definition="small"
+      definition="is-small"
       filename="Screenshot 2020/01/01"
       label="Smalll File"
       icon_name="fas fa-upload" />
@@ -88,21 +89,21 @@ test('test files',()=>{
       <br></br>
 
       <File 
-      definition="medium"
+      definition="is-medium"
       filename="Screenshot 2020/01/01"
       label="Medium File"
       icon_name="fas fa-upload" />
       <br></br>
 
       <File 
-      definition="large"
+      definition="is-large"
       filename="Screenshot 2020/01/01"
       label="Large File"
       icon_name="fas fa-upload" />
       <br></br>
 
       <File 
-      definition="small  has-name"
+      definition="is-small  has-name"
       filename="Screenshot 2020/01/01"
       label="Smalll File"
       icon_name="fas fa-upload" />
@@ -116,14 +117,14 @@ test('test files',()=>{
       <br></br>
 
       <File 
-      definition="medium has-name"
+      definition="is-medium has-name"
       filename="Screenshot 2020/01/01"
       label="Medium File"
       icon_name="fas fa-upload" />
       <br></br>
 
       <File 
-      definition="large has-name"
+      definition="is-large has-name"
       filename="Screenshot 2020/01/01"
       label="Large File"
       icon_name="fas fa-upload" />
@@ -133,28 +134,28 @@ test('test files',()=>{
 
 
       <File 
-      definition="small  boxed"
+      definition="is-small  is-boxed"
       filename="Screenshot 2020/01/01"
       label="Smalll File"
       icon_name="fas fa-upload" />
       <br></br>
 
       <File 
-      definition="boxed"
+      definition="is-boxed"
       filename="Screenshot 2020/01/01"
       label="Normal File"
       icon_name="fas fa-upload" />
       <br></br>
 
       <File 
-      definition="medium boxed"
+      definition="is-medium is-boxed"
       filename="Screenshot 2020/01/01"
       label="Medium File"
       icon_name="fas fa-upload" />
       <br></br>
 
       <File 
-      definition="large boxed"
+      definition="is-large is-boxed"
       filename="Screenshot 2020/01/01"
       label="Large File"
       icon_name="fas fa-upload" />
@@ -162,41 +163,41 @@ test('test files',()=>{
     
 
       <File 
-      definition="small  has-name boxed"
+      definition="is-small  has-name is-boxed"
       filename="Screenshot 2020/01/01"
       label="Smalll File"
       icon_name="fas fa-upload" />
       <br></br>
 
       <File 
-      definition="has-name boxed"
+      definition="has-name is-boxed"
       filename="Screenshot 2020/01/01"
       label="Normal File"
       icon_name="fas fa-upload" />
       <br></br>
 
       <File 
-      definition="medium has-name boxed"
+      definition="is-medium has-name is-boxed"
       filename="Screenshot 2020/01/01"
       label="Medium File"
       icon_name="fas fa-upload" />
       <br></br>
 
       <File 
-      definition="large has-name boxed"
+      definition="is-large has-name is-boxed"
       filename="Screenshot 2020/01/01"
       label="Large File"
       icon_name="fas fa-upload" />
       <br></br>
 
       <File 
-      definition="success has-name boxed centered"
+      definition="is-success has-name is-boxed is-centered"
       filename="Screenshot 2020/01/01"
       label="Large File"
       icon_name="fas fa-upload" />
 
      <File 
-      definition="info has-name right"
+      definition="is-info has-name is-right"
       filename="Screenshot 2020/01/01"
       label="Large File"
       icon_name="fas fa-upload" />

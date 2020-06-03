@@ -1,0 +1,130 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`value correctly 1`] = `
+Array [
+  <span
+    className="tag"
+  >
+    Tag label
+  </span>,
+  <span
+    className="tag is-black"
+  >
+    Tag label
+  </span>,
+  <span
+    className="tag is-dark"
+  >
+    Tag label
+  </span>,
+  <span
+    className="tag is-light"
+  >
+    Tag label
+  </span>,
+  <span
+    className="tag is-white"
+  >
+    Tag label
+  </span>,
+  <span
+    className="tag is-primary"
+  >
+    Tag label
+  </span>,
+  <span
+    className="tag is-link"
+  >
+    Tag label
+  </span>,
+  <span
+    className="tag is-info"
+  >
+    Tag label
+  </span>,
+  <span
+    className="tag is-success"
+  >
+    Tag label
+  </span>,
+  <span
+    className="tag is-warning"
+  >
+    Tag label
+  </span>,
+  <span
+    className="tag is-danger"
+  >
+    Tag label
+  </span>,
+  <div
+    className="control icons-left"
+  />,
+  <span
+    className="tag is-primary is-light"
+  >
+    Tag label
+  </span>,
+  <span
+    className="tag is-link is-light"
+  >
+    Tag label
+  </span>,
+  <span
+    className="tag is-info is-light"
+  >
+    Tag label
+  </span>,
+  <span
+    className="tag is-success is-light"
+  >
+    Tag label
+  </span>,
+  <span
+    className="tag is-warning is-light"
+  >
+    Tag label
+  </span>,
+  <span
+    className="tag is-danger is-light"
+  >
+    Tag label
+  </span>,
+  <div
+    className="control icons-left"
+  />,
+  <span
+    className="tag is-link"
+  >
+    Normal
+  </span>,
+  <span
+    className="tag is-primary is-medium"
+  >
+    Normal
+  </span>,
+  <span
+    className="tag is-link is-large"
+  >
+    Normal
+  </span>,
+  <div
+    className="control icons-left"
+  />,
+  <span
+    className="tag is-primary is-rounded"
+  >
+    Tag rounded
+  </span>,
+  <span
+    className="tag is-primary is-rounded"
+  >
+    Tag rounded
+    <button
+      className="delete"
+      disabled={false}
+      onClick={[Function]}
+    />
+  </span>,
+]
+`;

@@ -2,7 +2,7 @@
 
 exports[`checkbox disabled 1`] = `
 <div
-  className="control has-icons-left"
+  className="control icons-left"
 >
   <label
     className="checkbox"
@@ -20,7 +20,7 @@ exports[`checkbox disabled 1`] = `
 
 exports[`checkbox normal 1`] = `
 <div
-  className="control has-icons-left"
+  className="control icons-left"
 >
   <label
     className="checkbox"
@@ -35,7 +35,7 @@ exports[`checkbox normal 1`] = `
 
 exports[`checkbox with differents tags inside 1`] = `
 <div
-  className="control has-icons-left"
+  className="control icons-left"
 >
   <label
     className="checkbox"
@@ -55,7 +55,7 @@ exports[`checkbox with differents tags inside 1`] = `
 
 exports[`checkbox with onClick 1`] = `
 <div
-  className="control has-icons-left"
+  className="control icons-left"
 >
   <label
     className="checkbox"

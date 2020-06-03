@@ -469,7 +469,7 @@ exports[`test files 1`] = `
   </div>
   <br />
   <div
-    className="file is-small has-name"
+    className="file is-small  has-name"
   >
     <label
       className="file-label"
@@ -613,7 +613,7 @@ exports[`test files 1`] = `
   </div>
   <br />
   <div
-    className="file is-small is-boxed"
+    className="file is-small  is-boxed"
   >
     <label
       className="file-label"
@@ -737,7 +737,7 @@ exports[`test files 1`] = `
   </div>
   <br />
   <div
-    className="file is-small has-name is-boxed"
+    className="file is-small  has-name is-boxed"
   >
     <label
       className="file-label"

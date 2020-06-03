@@ -10,10 +10,9 @@ exports[`dropdown normal 1`] = `
     <button
       className="button"
       disabled={false}
-      onClick={[Function]}
     >
       <span
-        className="icon"
+        className="icon "
       >
         <i
           aria-hidden="true"
@@ -53,7 +52,7 @@ exports[`dropdown normal 1`] = `
         Other Dropdown Item
       </a>
       <a
-        className="dropdown-item is-active"
+        className="dropdown-item active"
         href="https://ufsc.br"
       >
         Active Dropdown Item
@@ -85,10 +84,9 @@ exports[`dropdown with any type of content 1`] = `
     <button
       className="button"
       disabled={false}
-      onClick={[Function]}
     >
       <span
-        className="icon"
+        className="icon "
       >
         <i
           aria-hidden="true"
