@@ -59,6 +59,21 @@ function _classCallCheck(instance, Constructor) {
   }
 }
 
+function _defineProperty(obj, key, value) {
+  if (key in obj) {
+    Object.defineProperty(obj, key, {
+      value: value,
+      enumerable: true,
+      configurable: true,
+      writable: true
+    });
+  } else {
+    obj[key] = value;
+  }
+
+  return obj;
+}
+
 function _extends() {
   _extends = Object.assign || function (target) {
     for (var i = 1; i < arguments.length; i++) {
@@ -1347,8 +1362,81 @@ if (process.env.NODE_ENV !== 'production') {
 }
 });
 
+var functions = new Map();
+functions.set("string", isString);
+functions.set("boolean", isBool);
+functions.set("object", isObject);
+functions.set("number", isNumber);
+functions.set("array", isArray);
+functions.set("function", isFunc);
+function isString(props) {
+  if (props != undefined) {
+    if (typeof props != 'string') {
+      throw "Expect string but received " + _typeof(props);
+    }
+  }
+}
+function isBool(props) {
+  if (props != undefined) {
+    if (typeof props != 'boolean') {
+      throw "Expect boolean but received " + _typeof(props);
+    }
+  }
+}
+function isObject(props) {
+  if (props != undefined) {
+    if (_typeof(props) != 'object') {
+      throw "Expect object but received " + _typeof(props);
+    }
+  }
+}
+function isNumber(props) {
+  if (props != undefined) {
+    if (typeof props != 'number') {
+      throw "Expect number but received " + _typeof(props);
+    }
+  }
+}
+function isArray(props) {
+  if (props != undefined) {
+    if (!Array.isArray(props)) {
+      throw "Expect array but received " + _typeof(props);
+    }
+  }
+}
+function isFunc(props) {
+  if (props != undefined) {
+    if (typeof props != 'function') {
+      throw "Expect function but received " + _typeof(props);
+    }
+  }
+}
+function validate(props, props_obj) {
+  if (props != undefined && props_obj != undefined) {
+    var keys = Object.keys(props_obj);
+    var values = Object.values(props_obj);
+    var size = values.length;
+
+    for (var i = 0; i < size; i++) {
+      var value = values[i];
+      var key = keys[i];
+      var funcao = functions.get(value);
+
+      if (props[key] != undefined) {
+        funcao(props[key]);
+      }
+    }
+  }
+}
+
+var props_obj = {
+  definition: "string",
+  itens: "array"
+};
+
 var BreadCrumb = function BreadCrumb(props) {
   var definition = props.definition == undefined ? "breadcrumb" : "breadcrumb " + props.definition;
+  validate(props, props_obj);
   return /*#__PURE__*/React__default.createElement("nav", {
     className: definition
   }, /*#__PURE__*/React__default.createElement("ul", null, assemble(props.itens)));
@@ -1403,27 +1491,17 @@ BreadCrumb.propTypes = {
   itens: propTypes.array
 };
 
-/*
+var props_obj$1 = {
+  disabled: 'boolean',
+  delete: 'boolean',
+  definition: 'string',
+  custom: 'object',
+  onClick: 'function'
+};
 
-Possui children
-Eventos: onClick no <button> </button>
-Observações: 
-
-    1 - Caso exista a necessidade de adicionar um ícone ao componente Button, é necessário seguir
-             a seguinte estrutura:
-
-            <Button definition="info" >
-                <Icon icon_name="fas fa-check" [right={true} OR empty prop right]>
-                    Nome do botão
-                </Icon>
-            </Button >
-
-            Sendo necessário informar o componente Icon como filho do componente Button
-            e o nome do botão deve ser informado no Icon e não no Button como em outras
-            situações onde usa-se o componente isolado.
-*/
 var Button = function Button(props) {
   var definition = getDefinition(props);
+  validate(props, props_obj$1);
   return /*#__PURE__*/React.createElement("button", _extends({}, props.custom, {
     disabled: props.disabled == true ? true : false,
     className: definition,
@@ -1443,18 +1521,15 @@ function getDefinition(props) {
   return definition;
 }
 
-Button.propTypes = {
-  definition: propTypes.string,
-  onClick: propTypes.func,
-  delete: propTypes.bool,
-  disabled: propTypes.bool
+Button.propTypes = {};
+
+var props_obj$2 = {
+  definition: "string",
+  field: "boolean"
 };
 
-// Oferece possibiidade de escolher se o container é "field" ou "buttons", para escolher field informar field={true}
-// Class Field : Funcona com diversos elementos e não somente botões
-// Class Buttons: Funciona apenas com botões
-
 var ButtonList = function ButtonList(props) {
+  validate(props, props_obj$2);
   return assembleButtonList(props);
 };
 
@@ -1557,7 +1632,15 @@ node.removeChild(alreadyProcessedPseudoElement);return resolve();}else if(fontFa
 if(iconName&&(!alreadyProcessedPseudoElement||alreadyProcessedPseudoElement.getAttribute(DATA_PREFIX)!==prefix||alreadyProcessedPseudoElement.getAttribute(DATA_ICON)!==iconIdentifier)){node.setAttribute(pendingAttribute,iconIdentifier);if(alreadyProcessedPseudoElement){// Delete the old one, since we're replacing it with a new one
 node.removeChild(alreadyProcessedPseudoElement);}var meta=blankMeta();var extra=meta.extra;extra.attributes[DATA_FA_PSEUDO_ELEMENT]=position;findIcon(iconName,prefix).then(function(main){var abstract=makeInlineSvgAbstract(_objectSpread({},meta,{icons:{main:main,mask:emptyCanonicalIcon()},prefix:prefix,iconName:iconIdentifier,extra:extra,watchable:true}));var element=DOCUMENT.createElement('svg');if(position===':before'){node.insertBefore(element,node.firstChild);}else {node.appendChild(element);}element.outerHTML=abstract.map(function(a){return toHtml(a);}).join('\n');node.removeAttribute(pendingAttribute);resolve();}).catch(reject);}else {resolve();}}else {resolve();}});}function replace(node){return picked.all([replaceForPosition(node,':before'),replaceForPosition(node,':after')]);}function processable(node){return node.parentNode!==document.head&&!~TAGNAMES_TO_SKIP_FOR_PSEUDOELEMENTS.indexOf(node.tagName.toUpperCase())&&!node.getAttribute(DATA_FA_PSEUDO_ELEMENT)&&(!node.parentNode||node.parentNode.tagName!=='svg');}function searchPseudoElements(root){if(!IS_DOM)return;return new picked(function(resolve,reject){var operations=toArray(root.querySelectorAll('*')).filter(processable).map(replace);var end=perf.begin('searchPseudoElements');disableObservation();picked.all(operations).then(function(){end();enableObservation();resolve();}).catch(function(){end();enableObservation();reject();});});}var baseStyles="svg:not(:root).svg-inline--fa{overflow:visible}.svg-inline--fa{display:inline-block;font-size:inherit;height:1em;overflow:visible;vertical-align:-.125em}.svg-inline--fa.fa-lg{vertical-align:-.225em}.svg-inline--fa.fa-w-1{width:.0625em}.svg-inline--fa.fa-w-2{width:.125em}.svg-inline--fa.fa-w-3{width:.1875em}.svg-inline--fa.fa-w-4{width:.25em}.svg-inline--fa.fa-w-5{width:.3125em}.svg-inline--fa.fa-w-6{width:.375em}.svg-inline--fa.fa-w-7{width:.4375em}.svg-inline--fa.fa-w-8{width:.5em}.svg-inline--fa.fa-w-9{width:.5625em}.svg-inline--fa.fa-w-10{width:.625em}.svg-inline--fa.fa-w-11{width:.6875em}.svg-inline--fa.fa-w-12{width:.75em}.svg-inline--fa.fa-w-13{width:.8125em}.svg-inline--fa.fa-w-14{width:.875em}.svg-inline--fa.fa-w-15{width:.9375em}.svg-inline--fa.fa-w-16{width:1em}.svg-inline--fa.fa-w-17{width:1.0625em}.svg-inline--fa.fa-w-18{width:1.125em}.svg-inline--fa.fa-w-19{width:1.1875em}.svg-inline--fa.fa-w-20{width:1.25em}.svg-inline--fa.fa-pull-left{margin-right:.3em;width:auto}.svg-inline--fa.fa-pull-right{margin-left:.3em;width:auto}.svg-inline--fa.fa-border{height:1.5em}.svg-inline--fa.fa-li{width:2em}.svg-inline--fa.fa-fw{width:1.25em}.fa-layers svg.svg-inline--fa{bottom:0;left:0;margin:auto;position:absolute;right:0;top:0}.fa-layers{display:inline-block;height:1em;position:relative;text-align:center;vertical-align:-.125em;width:1em}.fa-layers svg.svg-inline--fa{-webkit-transform-origin:center center;transform-origin:center center}.fa-layers-counter,.fa-layers-text{display:inline-block;position:absolute;text-align:center}.fa-layers-text{left:50%;top:50%;-webkit-transform:translate(-50%,-50%);transform:translate(-50%,-50%);-webkit-transform-origin:center center;transform-origin:center center}.fa-layers-counter{background-color:#ff253a;border-radius:1em;-webkit-box-sizing:border-box;box-sizing:border-box;color:#fff;height:1.5em;line-height:1;max-width:5em;min-width:1.5em;overflow:hidden;padding:.25em;right:0;text-overflow:ellipsis;top:0;-webkit-transform:scale(.25);transform:scale(.25);-webkit-transform-origin:top right;transform-origin:top right}.fa-layers-bottom-right{bottom:0;right:0;top:auto;-webkit-transform:scale(.25);transform:scale(.25);-webkit-transform-origin:bottom right;transform-origin:bottom right}.fa-layers-bottom-left{bottom:0;left:0;right:auto;top:auto;-webkit-transform:scale(.25);transform:scale(.25);-webkit-transform-origin:bottom left;transform-origin:bottom left}.fa-layers-top-right{right:0;top:0;-webkit-transform:scale(.25);transform:scale(.25);-webkit-transform-origin:top right;transform-origin:top right}.fa-layers-top-left{left:0;right:auto;top:0;-webkit-transform:scale(.25);transform:scale(.25);-webkit-transform-origin:top left;transform-origin:top left}.fa-lg{font-size:1.3333333333em;line-height:.75em;vertical-align:-.0667em}.fa-xs{font-size:.75em}.fa-sm{font-size:.875em}.fa-1x{font-size:1em}.fa-2x{font-size:2em}.fa-3x{font-size:3em}.fa-4x{font-size:4em}.fa-5x{font-size:5em}.fa-6x{font-size:6em}.fa-7x{font-size:7em}.fa-8x{font-size:8em}.fa-9x{font-size:9em}.fa-10x{font-size:10em}.fa-fw{text-align:center;width:1.25em}.fa-ul{list-style-type:none;margin-left:2.5em;padding-left:0}.fa-ul>li{position:relative}.fa-li{left:-2em;position:absolute;text-align:center;width:2em;line-height:inherit}.fa-border{border:solid .08em #eee;border-radius:.1em;padding:.2em .25em .15em}.fa-pull-left{float:left}.fa-pull-right{float:right}.fa.fa-pull-left,.fab.fa-pull-left,.fal.fa-pull-left,.far.fa-pull-left,.fas.fa-pull-left{margin-right:.3em}.fa.fa-pull-right,.fab.fa-pull-right,.fal.fa-pull-right,.far.fa-pull-right,.fas.fa-pull-right{margin-left:.3em}.fa-spin{-webkit-animation:fa-spin 2s infinite linear;animation:fa-spin 2s infinite linear}.fa-pulse{-webkit-animation:fa-spin 1s infinite steps(8);animation:fa-spin 1s infinite steps(8)}@-webkit-keyframes fa-spin{0%{-webkit-transform:rotate(0);transform:rotate(0)}100%{-webkit-transform:rotate(360deg);transform:rotate(360deg)}}@keyframes fa-spin{0%{-webkit-transform:rotate(0);transform:rotate(0)}100%{-webkit-transform:rotate(360deg);transform:rotate(360deg)}}.fa-rotate-90{-webkit-transform:rotate(90deg);transform:rotate(90deg)}.fa-rotate-180{-webkit-transform:rotate(180deg);transform:rotate(180deg)}.fa-rotate-270{-webkit-transform:rotate(270deg);transform:rotate(270deg)}.fa-flip-horizontal{-webkit-transform:scale(-1,1);transform:scale(-1,1)}.fa-flip-vertical{-webkit-transform:scale(1,-1);transform:scale(1,-1)}.fa-flip-both,.fa-flip-horizontal.fa-flip-vertical{-webkit-transform:scale(-1,-1);transform:scale(-1,-1)}:root .fa-flip-both,:root .fa-flip-horizontal,:root .fa-flip-vertical,:root .fa-rotate-180,:root .fa-rotate-270,:root .fa-rotate-90{-webkit-filter:none;filter:none}.fa-stack{display:inline-block;height:2em;position:relative;width:2.5em}.fa-stack-1x,.fa-stack-2x{bottom:0;left:0;margin:auto;position:absolute;right:0;top:0}.svg-inline--fa.fa-stack-1x{height:1em;width:1.25em}.svg-inline--fa.fa-stack-2x{height:2em;width:2.5em}.fa-inverse{color:#fff}.sr-only{border:0;clip:rect(0,0,0,0);height:1px;margin:-1px;overflow:hidden;padding:0;position:absolute;width:1px}.sr-only-focusable:active,.sr-only-focusable:focus{clip:auto;height:auto;margin:0;overflow:visible;position:static;width:auto}.svg-inline--fa .fa-primary{fill:var(--fa-primary-color,currentColor);opacity:1;opacity:var(--fa-primary-opacity,1)}.svg-inline--fa .fa-secondary{fill:var(--fa-secondary-color,currentColor);opacity:.4;opacity:var(--fa-secondary-opacity,.4)}.svg-inline--fa.fa-swap-opacity .fa-primary{opacity:.4;opacity:var(--fa-secondary-opacity,.4)}.svg-inline--fa.fa-swap-opacity .fa-secondary{opacity:1;opacity:var(--fa-primary-opacity,1)}.svg-inline--fa mask .fa-primary,.svg-inline--fa mask .fa-secondary{fill:#000}.fad.fa-inverse{color:#fff}";function css(){var dfp=DEFAULT_FAMILY_PREFIX;var drc=DEFAULT_REPLACEMENT_CLASS;var fp=config.familyPrefix;var rc=config.replacementClass;var s=baseStyles;if(fp!==dfp||rc!==drc){var dPatt=new RegExp("\\.".concat(dfp,"\\-"),'g');var customPropPatt=new RegExp("\\--".concat(dfp,"\\-"),'g');var rPatt=new RegExp("\\.".concat(drc),'g');s=s.replace(dPatt,".".concat(fp,"-")).replace(customPropPatt,"--".concat(fp,"-")).replace(rPatt,".".concat(rc));}return s;}var Library=/*#__PURE__*/function(){function Library(){_classCallCheck(this,Library);this.definitions={};}_createClass(Library,[{key:"add",value:function add(){var _this=this;for(var _len=arguments.length,definitions=new Array(_len),_key=0;_key<_len;_key++){definitions[_key]=arguments[_key];}var additions=definitions.reduce(this._pullDefinitions,{});Object.keys(additions).forEach(function(key){_this.definitions[key]=_objectSpread({},_this.definitions[key]||{},additions[key]);defineIcons(key,additions[key]);build();});}},{key:"reset",value:function reset(){this.definitions={};}},{key:"_pullDefinitions",value:function _pullDefinitions(additions,definition){var normalized=definition.prefix&&definition.iconName&&definition.icon?{0:definition}:definition;Object.keys(normalized).map(function(key){var _normalized$key=normalized[key],prefix=_normalized$key.prefix,iconName=_normalized$key.iconName,icon=_normalized$key.icon;if(!additions[prefix])additions[prefix]={};additions[prefix][iconName]=icon;});return additions;}}]);return Library;}();function ensureCss(){if(config.autoAddCss&&!_cssInserted){insertCss(css());_cssInserted=true;}}function apiObject(val,abstractCreator){Object.defineProperty(val,'abstract',{get:abstractCreator});Object.defineProperty(val,'html',{get:function get(){return val.abstract.map(function(a){return toHtml(a);});}});Object.defineProperty(val,'node',{get:function get(){if(!IS_DOM)return;var container=DOCUMENT.createElement('div');container.innerHTML=val.html;return container.children;}});return val;}function findIconDefinition(iconLookup){var _iconLookup$prefix=iconLookup.prefix,prefix=_iconLookup$prefix===void 0?'fa':_iconLookup$prefix,iconName=iconLookup.iconName;if(!iconName)return;return iconFromMapping(library.definitions,prefix,iconName)||iconFromMapping(namespace.styles,prefix,iconName);}function resolveIcons(next){return function(maybeIconDefinition){var params=arguments.length>1&&arguments[1]!==undefined?arguments[1]:{};var iconDefinition=(maybeIconDefinition||{}).icon?maybeIconDefinition:findIconDefinition(maybeIconDefinition||{});var mask=params.mask;if(mask){mask=(mask||{}).icon?mask:findIconDefinition(mask||{});}return next(iconDefinition,_objectSpread({},params,{mask:mask}));};}var library=new Library();var noAuto=function noAuto(){config.autoReplaceSvg=false;config.observeMutations=false;disconnect();};var _cssInserted=false;var dom={i2svg:function i2svg(){var params=arguments.length>0&&arguments[0]!==undefined?arguments[0]:{};if(IS_DOM){ensureCss();var _params$node=params.node,node=_params$node===void 0?DOCUMENT:_params$node,_params$callback=params.callback,callback=_params$callback===void 0?function(){}:_params$callback;if(config.searchPseudoElements){searchPseudoElements(node);}return onTree(node,callback);}else {return picked.reject('Operation requires a DOM of some kind.');}},css:css,insertCss:function insertCss$$1(){if(!_cssInserted){insertCss(css());_cssInserted=true;}},watch:function watch(){var params=arguments.length>0&&arguments[0]!==undefined?arguments[0]:{};var autoReplaceSvgRoot=params.autoReplaceSvgRoot,observeMutationsRoot=params.observeMutationsRoot;if(config.autoReplaceSvg===false){config.autoReplaceSvg=true;}config.observeMutations=true;domready(function(){autoReplace({autoReplaceSvgRoot:autoReplaceSvgRoot});observe({treeCallback:onTree,nodeCallback:onNode,pseudoElementsCallback:searchPseudoElements,observeMutationsRoot:observeMutationsRoot});});}};var parse={transform:function transform(transformString){return parseTransformString(transformString);}};var icon=resolveIcons(function(iconDefinition){var params=arguments.length>1&&arguments[1]!==undefined?arguments[1]:{};var _params$transform=params.transform,transform=_params$transform===void 0?meaninglessTransform:_params$transform,_params$symbol=params.symbol,symbol=_params$symbol===void 0?false:_params$symbol,_params$mask=params.mask,mask=_params$mask===void 0?null:_params$mask,_params$title=params.title,title=_params$title===void 0?null:_params$title,_params$classes=params.classes,classes=_params$classes===void 0?[]:_params$classes,_params$attributes=params.attributes,attributes=_params$attributes===void 0?{}:_params$attributes,_params$styles=params.styles,styles=_params$styles===void 0?{}:_params$styles;if(!iconDefinition)return;var prefix=iconDefinition.prefix,iconName=iconDefinition.iconName,icon=iconDefinition.icon;return apiObject(_objectSpread({type:'icon'},iconDefinition),function(){ensureCss();if(config.autoA11y){if(title){attributes['aria-labelledby']="".concat(config.replacementClass,"-title-").concat(nextUniqueId());}else {attributes['aria-hidden']='true';attributes['focusable']='false';}}return makeInlineSvgAbstract({icons:{main:asFoundIcon(icon),mask:mask?asFoundIcon(mask.icon):{found:false,width:null,height:null,icon:{}}},prefix:prefix,iconName:iconName,transform:_objectSpread({},meaninglessTransform,transform),symbol:symbol,title:title,extra:{attributes:attributes,styles:styles,classes:classes}});});});var text=function text(content){var params=arguments.length>1&&arguments[1]!==undefined?arguments[1]:{};var _params$transform2=params.transform,transform=_params$transform2===void 0?meaninglessTransform:_params$transform2,_params$title2=params.title,title=_params$title2===void 0?null:_params$title2,_params$classes2=params.classes,classes=_params$classes2===void 0?[]:_params$classes2,_params$attributes2=params.attributes,attributes=_params$attributes2===void 0?{}:_params$attributes2,_params$styles2=params.styles,styles=_params$styles2===void 0?{}:_params$styles2;return apiObject({type:'text',content:content},function(){ensureCss();return makeLayersTextAbstract({content:content,transform:_objectSpread({},meaninglessTransform,transform),title:title,extra:{attributes:attributes,styles:styles,classes:["".concat(config.familyPrefix,"-layers-text")].concat(_toConsumableArray(classes))}});});};var counter=function counter(content){var params=arguments.length>1&&arguments[1]!==undefined?arguments[1]:{};var _params$title3=params.title,title=_params$title3===void 0?null:_params$title3,_params$classes3=params.classes,classes=_params$classes3===void 0?[]:_params$classes3,_params$attributes3=params.attributes,attributes=_params$attributes3===void 0?{}:_params$attributes3,_params$styles3=params.styles,styles=_params$styles3===void 0?{}:_params$styles3;return apiObject({type:'counter',content:content},function(){ensureCss();return makeLayersCounterAbstract({content:content.toString(),title:title,extra:{attributes:attributes,styles:styles,classes:["".concat(config.familyPrefix,"-layers-counter")].concat(_toConsumableArray(classes))}});});};var layer=function layer(assembler){var params=arguments.length>1&&arguments[1]!==undefined?arguments[1]:{};var _params$classes4=params.classes,classes=_params$classes4===void 0?[]:_params$classes4;return apiObject({type:'layer'},function(){ensureCss();var children=[];assembler(function(args){Array.isArray(args)?args.map(function(a){children=children.concat(a.abstract);}):children=children.concat(args.abstract);});return [{tag:'span',attributes:{class:["".concat(config.familyPrefix,"-layers")].concat(_toConsumableArray(classes)).join(' ')},children:children}];});};var api={noAuto:noAuto,config:config,dom:dom,library:library,parse:parse,findIconDefinition:findIconDefinition,icon:icon,text:text,counter:counter,layer:layer,toHtml:toHtml};var autoReplace=function autoReplace(){var params=arguments.length>0&&arguments[0]!==undefined?arguments[0]:{};var _params$autoReplaceSv=params.autoReplaceSvgRoot,autoReplaceSvgRoot=_params$autoReplaceSv===void 0?DOCUMENT:_params$autoReplaceSv;if((Object.keys(namespace.styles).length>0||config.autoFetchSvg)&&IS_DOM&&config.autoReplaceSvg)api.dom.i2svg({node:autoReplaceSvgRoot});};function bootstrap(){if(IS_BROWSER){if(!WINDOW.FontAwesome){WINDOW.FontAwesome=api;}domready(function(){autoReplace();observe({treeCallback:onTree,nodeCallback:onNode,pseudoElementsCallback:searchPseudoElements});});}namespace.hooks=_objectSpread({},namespace.hooks,{addPack:function addPack(prefix,icons){namespace.styles[prefix]=_objectSpread({},namespace.styles[prefix]||{},icons);build();autoReplace();},addShims:function addShims(shims){var _namespace$shims;(_namespace$shims=namespace.shims).push.apply(_namespace$shims,_toConsumableArray(shims));build();autoReplace();}});}bunker(bootstrap);})();
 
+var props_obj$3 = {
+  definition: "string",
+  icon_right: "boolean",
+  onClick: "function",
+  icon_name: "string"
+};
+
 var Icon = function Icon(props) {
+  validate(props, props_obj$3);
   var definition = props.definition == undefined ? "icon" : "icon " + props.definition;
   return /*#__PURE__*/React.createElement(React.Fragment, null, (props.icon_right == false || props.icon_right == undefined) && /*#__PURE__*/React.createElement("span", null, props.children), /*#__PURE__*/React.createElement("span", {
     onClick: props.onClick,
@@ -1568,10 +1651,26 @@ var Icon = function Icon(props) {
   })), props.icon_right == true && /*#__PURE__*/React.createElement("span", null, props.children));
 };
 
+var props_obj$4 = {
+  title: "string",
+  title_definition: "string",
+  definition: "string",
+  src: "string",
+  itens_footer: "array",
+  footer_definition: "string",
+  icon_name: "string",
+  icon_definition: "string",
+  header_definition: "string",
+  card_header_definition: "string",
+  image_definition: "string",
+  card_image_definition: "string"
+};
+
 var Card = function Card(props) {
   // se title for undefined não tem motivo para criar header
   // se src for undefined não tem motivo para criar card image
   // se itens_footer for undefined não tem pq criar footer
+  validate(props, props_obj$4);
   var definition = props.definition == undefined ? "card" : "card " + props.definition;
   return /*#__PURE__*/React.createElement("div", {
     className: definition
@@ -1684,11 +1783,13 @@ Card.propTypes = {
   definition: propTypes.string
 };
 
-/***
- * Componente para 
- */
+var props_obj$5 = {
+  disabled: 'boolean',
+  onClick: 'function'
+};
 
 var CheckBox = function CheckBox(props) {
+  validate(props, props_obj$5);
   return /*#__PURE__*/React__default.createElement("label", {
     className: "checkbox",
     disabled: props.disabled
@@ -1716,7 +1817,12 @@ CheckBox.propTypes = {
  * Sem eventos
  */
 
+var props_obj$6 = {
+  definition: "string"
+};
+
 var Column = function Column(props) {
+  validate(props, props_obj$6);
   var definition = props.definition == undefined ? "column" : "column " + props.definition;
   return /*#__PURE__*/React.createElement("div", {
     className: definition
@@ -1734,7 +1840,12 @@ Column.propTypes = {
  *  Sem eventos
  */
 
+var props_obj$7 = {
+  definition: 'string'
+};
+
 var Columns = function Columns(props) {
+  validate(props, props_obj$7);
   var definition = props.definition == undefined ? "columns" : "columns " + props.definition;
   return /*#__PURE__*/React.createElement("div", {
     className: definition
@@ -1747,7 +1858,12 @@ Columns.propTypes = {
   definition: propTypes.string
 };
 
+var props_obj$8 = {
+  definition: 'string'
+};
+
 var Content = function Content(props) {
+  validate(props, props_obj$8);
   var definition = props.definition == undefined ? "content" : "content " + props.definition;
   return /*#__PURE__*/React.createElement("div", {
     class: definition
@@ -1767,26 +1883,14 @@ Control.propTypes = {
   definition: propTypes.string
 };
 
-/**
- * 
- * Observações: 
- * - O primeiro item do DropDown é gerado através do primeiro item de itens(props.itens)
- * - Para que os itens sejam exibidos ao clicar no DropDown é necessário tratar a características
- *  active (que define is-active do Bulma) através do JavaScript, ao contrário do Hoverable que funciona
- * somente com o CSS
- * 
- * 
- */
+var props_obj$9 = {
+  definition: 'string',
+  itens: 'array',
+  onClick: 'function'
+};
 
 var DropDown = function DropDown(props) {
-  /*
-    Sério problema ao exibir um dropdown, caso o nome do primeiro não seja um nome muito extenso
-    corre o risco dos itens do dropdown não serem exibidos, necessário checagem completa do problema
-    para evitar bugs no componente
-    !! Problema identificado ao utilizar right(is-right), no caso de erro usado is-active e is-right
-    
-    Não existe
-    */
+  validate(props, props_obj$9);
   var definition = props.definition == undefined ? "dropdown" : "dropdown " + props.definition;
   return /*#__PURE__*/React.createElement("div", {
     className: definition
@@ -1881,7 +1985,18 @@ DropDown.propTypes = {
   onClick: propTypes.func
 };
 
+var props_obj$a = {
+  definition: "string",
+  type: "string",
+  placeholder: "string",
+  value: "string",
+  readonly: "boolean",
+  disabled: "boolean",
+  onChangeEvent: "function"
+};
+
 var Input = function Input(props) {
+  validate(props, props_obj$a);
   return assemble$2(props);
 };
 
@@ -1962,15 +2077,20 @@ Input.propTypes = {
   onChangeEvent: propTypes.func
 };
 
-// o uso do componente Input,Control,Label e Icon,
-// Buscando fornecer um componente visual que mostra um campo de texto
-// comum, com um rótulo e um espaço para digitação, mesclando os quatro componentes
-// antes citado
-// Obs: Principal motivação, o excesso de código, assim como sua repetição
-// Eventos : onChange do componente Input
-// Para fim  de organização. Considera-se esse um componente misto.
+var props_obj$b = {
+  label: "string",
+  control_definition: "string",
+  input_definition: "string",
+  icon_definition: "string",
+  icon_name: "string",
+  onChange: "function",
+  placeholder: "string",
+  type: "string",
+  value: "string"
+};
 
 var Field = function Field(props) {
+  validate(props, props_obj$b);
   return /*#__PURE__*/React__default.createElement("div", {
     className: "field"
   }, /*#__PURE__*/React__default.createElement("label", {
@@ -2138,7 +2258,14 @@ File.propTypes = {
   onChange: propTypes.func
 };
 
+var props_obj$c = {
+  title: "string",
+  subtitle: "string",
+  definition: "string"
+};
+
 var Hero = function Hero(props) {
+  validate(props, props_obj$c);
   var definition = props.definition == undefined ? "hero" : "hero " + props.definition;
   return /*#__PURE__*/React__default.createElement("section", {
     className: definition
@@ -2194,7 +2321,12 @@ var assembleDefaultMessage = function assembleDefaultMessage(number_child_expect
 // Caso sejam informados 2 filhos : Será montado header e body
 // Caso sejam informados 3 filhos: Será montado header,body e footer
 
+var props_obj$d = {
+  definition: 'string'
+};
+
 var HeroThreeParts = function HeroThreeParts(props) {
+  validate(props, props_obj$d);
   var childrens = React.Children.map(props.children, function (child, i) {
     return child;
   });
@@ -2232,16 +2364,13 @@ HeroThreeParts.propTypes = {
   definition: propTypes.string
 };
 
-/*
-Componente que funciona fornece a opção de criar uma lista
-Não consta na documentação do Bulma um componente para Lista, sendo criado 
-a partir da documentação do componente Content.
-Eventos: onClick na tag <li>
-Obs: Recomendável o uso do componente Content como pai do componente List, 
-para evitar problemas de exibição.
-*/
+var props_obj$e = {
+  itens: "array",
+  definition: "string"
+};
 
 var List = function List(props) {
+  validate(props, props_obj$e);
   return assembleList(props);
 }; // monta o esqueleto da(s) lista(s) através do map e depois monta cada linha de cada lista
 
@@ -2272,7 +2401,12 @@ List.propTypes = {
   itens: propTypes.array.isRequired
 };
 
+var props_obj$f = {
+  definition: "string"
+};
+
 var Menu = function Menu(props) {
+  validate(props, props_obj$f);
   var definition = props.definition == undefined ? "menu" : "menu " + props.definition;
   return /*#__PURE__*/React.createElement("aside", {
     className: definition
@@ -2311,7 +2445,13 @@ Menu.propTypes = {
 
 */
 
+var props_obj$g = {
+  itens: "array",
+  label: "string"
+};
+
 var MenuItem = function MenuItem(props) {
+  validate(props, props_obj$g);
   return /*#__PURE__*/React__default.createElement("div", null, props.itens != undefined && /*#__PURE__*/React__default.createElement(React__default.Fragment, null, assembleLabel(props.label), /*#__PURE__*/React__default.createElement("ul", {
     className: "menu-list"
   }, props.itens != undefined && assembleItem(props.itens))));
@@ -2398,7 +2538,15 @@ MenuItem.propTypes = {
   itens: propTypes.array
 };
 
+var prop_obj = {
+  definition: "string",
+  header: "string",
+  delete: "boolean",
+  onClickDelete: "function"
+};
+
 var Message = function Message(props) {
+  validate(props, prop_obj);
   var definition = props.definition == undefined ? "message" : "message " + props.definition;
   return /*#__PURE__*/React.createElement("article", {
     className: definition
@@ -2453,7 +2601,19 @@ Existem algumas maneira de fornecer os itens de "start" e "end" ao usar o presen
         />
 */
 
+var props_obj$h = {
+  definition: "string",
+  link_brand: "string",
+  src_brand: "string",
+  width_brand: "string",
+  alt: "string",
+  height_brand: "string",
+  itens_start: "array",
+  itens_end: "array"
+};
+
 var NavigationBar = function NavigationBar(props) {
+  validate(props, props_obj$h);
   var definition = props.definition == undefined ? "navbar" : "navbar " + props.definition;
   return /*#__PURE__*/React__default.createElement("nav", {
     className: definition
@@ -2564,7 +2724,16 @@ NavigationBar.propTypes = {
   definition: propTypes.string
 };
 
+var _props_obj;
+var props_obj$i = (_props_obj = {
+  delete: 'boolean',
+  title: "string",
+  onClickDelete: "function",
+  definition: "string"
+}, _defineProperty(_props_obj, "title", "string"), _defineProperty(_props_obj, "subtitle", "string"), _props_obj);
+
 var Notification = function Notification(props) {
+  validate(props, props_obj$i);
   var definition = props.definition == undefined ? "notification" : "notification " + props.definition;
   return /*#__PURE__*/React.createElement("div", {
     className: definition
@@ -2593,7 +2762,19 @@ Notification.propTypes = {
   title: propTypes.string
 };
 
+var props_obj$j = {
+  definition: "string",
+  href_previous: "string",
+  href_next: "string",
+  next_disabled: "boolean",
+  next_name: "string",
+  previous_disabled: "boolean",
+  itens: "array",
+  previous_name: "string"
+};
+
 var Pagination = function Pagination(props) {
+  validate(props, props_obj$j);
   var definition = props.definition == undefined ? "pagination" : "pagination " + props.definition;
   return /*#__PURE__*/React__default.createElement("nav", {
     className: definition
@@ -2649,15 +2830,31 @@ Pagination.propTypes = {
   next_disabled: propTypes.string
 };
 
+var props_obj$k = {
+  onClick: "function"
+};
+
 var PanelItem = function PanelItem(props) {
+  validate(props, props_obj$k);
   return /*#__PURE__*/React.createElement("div", {
     className: "panel-block",
     onClick: props.onClick
   }, props.children);
 };
 
-// v.01
+var props_obj$l = {
+  header: "string",
+  itens_tabs: "array",
+  itens_blocks: "array",
+  definition: "string",
+  search_definition: "string",
+  search_placeholder: "string",
+  search_icon_definition: "string",
+  onChangeSearch: "function"
+}; // v.01
+
 var Panel = function Panel(props) {
+  validate(props, props_obj$l);
   var definition = props.definition == undefined ? "panel" : "panel " + props.definition;
   return /*#__PURE__*/React__default.createElement("nav", {
     class: definition
@@ -2736,7 +2933,15 @@ Panel.propTypes = {
   search_icon_definition: propTypes.string
 };
 
+var props_obj$m = {
+  onChange: "function",
+  max: "number",
+  value: "number",
+  definition: "string"
+};
+
 var ProgressBar = function ProgressBar(props) {
+  validate(props, props_obj$m);
   var definition = props.definition == undefined ? "progress" : "progress " + props.definition;
   return /*#__PURE__*/React__default.createElement("progress", {
     onChange: props.onChange,
@@ -2753,7 +2958,13 @@ ProgressBar.propTypes = {
   onChange: propTypes.func
 };
 
+var props_obj$n = {
+  itens: "array",
+  name: "string"
+};
+
 var Radio = function Radio(props) {
+  validate(props, props_obj$n);
   return /*#__PURE__*/React__default.createElement(Control, null, assembleItens$3(props));
 };
 
@@ -2792,12 +3003,21 @@ Radio.propTypes = {
 var style_cursor = {
   cursor: "pointer"
 };
+var props_obj$o = {
+  itens_body: "array",
+  itens_header: "array",
+  itens_footer: "array",
+  definition: "string",
+  onClickRow: "function",
+  header_definition: "string"
+};
 
 var Table = function Table(props) {
   return assembleTable(props);
 };
 
 function assembleTable(props) {
+  validate(props, props_obj$o);
   var definition = props.definition == undefined ? "table" : "table " + props.definition;
   var code = /*#__PURE__*/React__default.createElement("table", {
     className: definition
@@ -2936,7 +3156,15 @@ var Section = function Section(props) {
   }));
 };
 
+var props_obj$p = {
+  definition: "string",
+  onChange: "function",
+  multiple_size: "number",
+  itens: "array"
+};
+
 var Select = function Select(props) {
+  validate(props, props_obj$p);
   var definition = props.definition == undefined ? "select" : "select " + props.definition;
   var code = /*#__PURE__*/React__default.createElement("div", {
     className: definition
@@ -2972,7 +3200,13 @@ Select.propTypes = {
   onChange: propTypes.func
 };
 
+var props_obj$q = {
+  definition: "number",
+  p: "boolean"
+};
+
 var SubTitle = function SubTitle(props) {
+  validate(props, props_obj$q);
   return assembleSubTitle(props);
 };
 
@@ -3127,11 +3361,19 @@ SubTitle.propTypes = {
   p: propTypes.bool
 };
 
+var props_obj$r = {
+  itens: "array",
+  header: "boolean",
+  footer: "boolean",
+  definition: "string"
+};
+
 var TableQuery = function TableQuery(props) {
   return assembleTable$1(props);
 };
 
 function assembleTable$1(props) {
+  validate(props, props_obj$r);
   var definition = props.definition == undefined ? "table" : "table " + props.definition;
   var code = /*#__PURE__*/React__default.createElement(React__default.Fragment, null); // elimina vazio e não array
 
@@ -3210,7 +3452,13 @@ TableQuery.propTypes = {
   header: propTypes.bool
 };
 
+var props_obj$s = {
+  definition: "string",
+  itens: "array"
+};
+
 var Tabs = function Tabs(props) {
+  validate(props, props_obj$s);
   var definition = props.definition == undefined ? "tabs" : "tabs " + props.definition;
   return /*#__PURE__*/React__default.createElement("div", {
     className: definition
@@ -3240,7 +3488,14 @@ Tabs.propTypes = {
   itens: propTypes.array
 };
 
+var props_obj$t = {
+  definition: "string",
+  onClickDelete: "function",
+  delete: "boolean"
+};
+
 var Tag = function Tag(props) {
+  validate(props, props_obj$t);
   var definition = props.definition == undefined ? "tag" : "tag " + props.definition;
   return /*#__PURE__*/React.createElement("span", {
     className: definition
@@ -3256,7 +3511,13 @@ Tag.propTypes = {
   delete: propTypes.bool
 };
 
+var props_obj$u = {
+  itens: "array",
+  definition: "string"
+};
+
 var TagList = function TagList(props) {
+  validate(props, props_obj$u);
   return assembleTagList(props);
 };
 
@@ -3301,11 +3562,25 @@ TagList.propTypes = {
   itens: propTypes.array
 };
 
+var props_obj$v = {
+  definition: "string",
+  loading: "boolean",
+  onChange: "function",
+  placeholder: "function",
+  rows: "function",
+  readonly: "boolean",
+  disabled: "boolean",
+  label: "string",
+  value: "string"
+};
+
 var TextArea = function TextArea(props) {
+  validate(props, props_obj$v);
   return assembleTextArea(props);
 };
 
 function assembleTextArea(props) {
+  validate(props, props_obj$v);
   var definition = props.definition == undefined ? "textarea" : "textarea " + props.definition;
   var definitionControl = props.loading == true ? "is-loading" : "";
   return /*#__PURE__*/React__default.createElement(Control, {
@@ -3335,7 +3610,13 @@ TextArea.propTypes = {
   value: propTypes.string
 };
 
+var props_obj$w = {
+  definition: "number",
+  p: "boolean"
+};
+
 var Title = function Title(props) {
+  validate(props, props_obj$w);
   return assembleTitle(props);
 };
 
