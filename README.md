@@ -1,8 +1,9 @@
-# Assemble React Bulma (0.0.14) - Development Phase
+# Assemble React Bulma (0.0.15) - Development Phase
 
  - Set of React components created to assist in development using the Bulma framework
  - Final work to complete the Information System course at the Federal University of Santa Catarina (Brazil)
  - Do not use in production because the work on the components is not 100% done.
+# Full documentation will soon be available
 
 # Contribute to my monograph
  - Questions, suggestions, errors and improvements please send an email to miklanthiago@hotmail.com and I will answe
