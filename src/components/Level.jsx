@@ -7,22 +7,25 @@ type Props = {
 }
 
 const Level = (props:Props)=>{
-    
-    return <nav class="level">
-            {props.itens != undefined && assembleItens(props.itens)} 
-           </nav>
+    return assembleItens(props);
 }
 
-function assembleItens(itens: Array<Object>){
-    var left =   itens.filter(item => isLeft(item));
-    var right =  itens.filter(item => isRight(item));
+function assembleItens(props: Object){
+    var left =   props.itens.filter(item => isLeft(item));
+    var right =  props.itens.filter(item => isRight(item));
     
-    var code = <>
-                {left.length > 0 && <div clasName="level-left"> {assembleLeftItens(left)}</div>} 
-                {right.length > 0 && <div clasName="level-right">{assembleRightItens(right)}</div>}
-                </>
-
-                return code;
+    var code = <nav class="level">
+                    {
+                    props.center == true 
+                    ? <>{assembleCenter(props.itens)}</>
+                    :
+                    <>
+                        <div class="level-left">{assembleLeftItens(left)}</div>
+                        <div class="level-right">{assembleRightItens(right)}</div>
+                    </>
+                    }
+                </nav>
+    return code;
 }
 
 function noSide(item){
@@ -43,19 +46,23 @@ function isLeft(item){
     }
 }
 
-
-
 function assembleLeftItens(left: Array<Object>){
-    var code =  left.map(item => <p clasName="level-item">{item["value"]}</p>)
-                
-    return code;
+    var code =  left.map(item => assembleLevelItem(item));
+     return code;
 }   
 
 function assembleRightItens(right: Array<Object>){
-    var code =  <div>
-                 {right.map(item =><p clasName="level-item">{item["value"]}</p>)}
-                </div>
+    var code =  right.map(item =>assembleLevelItem(item));
     return code;
+}
+
+function assembleCenter(itens: Array<Object>){
+    var code = itens.map(item =>assembleLevelItem(item)); 
+    return code;
+}
+
+function assembleLevelItem(item: Object){
+    return <p class={item["definition"] == undefined ? "level-item" : "level-item "+item["definition"]}>{item["value"]}</p>
 }
 
 

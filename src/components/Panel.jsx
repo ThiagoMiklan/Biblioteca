@@ -82,7 +82,7 @@ function assembleBlock(item) {
 function assembleSearch(props){
     return <Field input_definition={props.search_definition == undefined? "" : props.search_definition}
                   icon_name={"fas fa-search"}
-                  control_definition="icons-left"
+                  control_definition="has-icons-left"
                   placeholder={props.search_placeholder == undefined? "" : props.search_placeholder}
                   icon_definition={props.search_icon_definition == undefined? "" : props.search_icon_definition}
                   onChange={props.onChangeSearch}

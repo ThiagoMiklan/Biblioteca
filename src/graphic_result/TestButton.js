@@ -17,12 +17,10 @@ var custom = {
 ReactDOM.render(
 <>
 
-<Button onClick={onClick} definition="is-success">Click</Button>
 
-<Button {...custom} definition="is-success">Click</Button>
-
+<br/>
 <ButtonList>
-<Button>Testando</Button>
+<Button>Normal</Button>
 <Button  definition="is-primary">Primary</Button>
 <Button  definition="is-link"> Link</Button>
 <Button  definition="is-info"> Info</Button>
@@ -56,21 +54,21 @@ ReactDOM.render(
 </ButtonList>
 
 <ButtonList definition="are-small">
-<Button  > Testando</Button>
-<Button  > Testando</Button>
-<Button  > Testando</Button>
+<Button  > Small</Button>
+<Button  > Small</Button>
+<Button  > Small</Button>
 </ButtonList>
 
 <ButtonList definition="are-medium">
-<Button > Testando</Button>
-<Button > Testando</Button>
-<Button > Testando</Button>
+<Button > Medium</Button>
+<Button > Medium</Button>
+<Button > Medium</Button>
 </ButtonList>
 
 <ButtonList definition="are-large">
-<Button > Testando</Button>
-<Button > Testando</Button>
-<Button > Testando</Button>
+<Button > Large</Button>
+<Button > Large</Button>
+<Button > Large</Button>
 </ButtonList>
 
 <Columns>
@@ -139,13 +137,13 @@ ReactDOM.render(
 </ButtonList>
 
 <ButtonList>
-<Button  definition="is-loading"> Testando</Button>
-<Button  definition="is-primary is-loading"> Testando</Button>
-<Button  definition="is-link is-loading"> Testando</Button>
-<Button  definition="is-info is-loading"> Testando</Button>
-<Button  definition="is-success is-loading"> Testando</Button>
-<Button  definition="is-warning is-loading"> Testando</Button>
-<Button  definition="is-danger is-loading"> Testando</Button>
+<Button  definition="is-loading"> loading</Button>
+<Button  definition="is-primary is-loading"> loading</Button>
+<Button  definition="is-link is-loading"> loading</Button>
+<Button  definition="is-info is-loading"> loading</Button>
+<Button  definition="is-success is-loading"> loading</Button>
+<Button  definition="is-warning is-loading"> loading</Button>
+<Button  definition="is-danger is-loading"> loading</Button>
 </ButtonList>
 
 <ButtonList>

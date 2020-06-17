@@ -6,16 +6,16 @@ import Select from './components/Select';
 import 'bulma/css/bulma.css';
  
 
-var click = ()=>{
+const click = ()=>{
   alert("Clicou");
 }
 
-var itens_1 = [
+const itens_1 = [
   { value: "Select DropDown", onClick:click },
   { value: "With Options", onClick: click},
 ];
 
-var itens_2 = [
+const itens_2 = [
   { value: "Argentina" },
   { value: "Brasil" },
   { value: "Bolivia" },

@@ -8,11 +8,11 @@ import Button from './components/Button';
 import CheckBox from './components/CheckBox';
 
 
-var onChange = () => {
+const onChange = () => {
   alert("Changed");
 }
 
-var itens_tabs = [
+const itens_tabs = [
   { value: "All", href: "www.facebook.com", onClick: () => { alert("clicked All") }, icon_definition: "is-warning", icon_name: "fas fa-home" },
   { value: "Public", href: "www.facebook.com", onClick: () => { alert("clicked Public") }, icon_definition: "is-danger", icon_name: "far fa-user" },
   { value: "Private", href: "www.facebook.com", onClick: () => { alert("clicked Private") }, icon_name: "fas fa-users" },
@@ -21,7 +21,7 @@ var itens_tabs = [
 ]
 
 
-var itens_blocks = [
+const itens_blocks = [
   { value: "Bulma", href: "www.facebook.com", onClick: () => { alert("clicked Bulma") }, icon_definition: "has-text-warning", icon_name: "fab fa-css3-alt" },
   { value: "Github", href: "www.facebook.com", onClick: () => { alert("clicked Github") }, icon_name: "fab fa-github" },
   { value: "Twitter", href: "www.facebook.com", onClick: () => { alert("clicked Twitter") }, icon_definition: "has-text-info", icon_name: "fab fa-twitter" },
@@ -38,8 +38,9 @@ ReactDOM.render(
         <Panel header="Repositories"
           itens_tabs={itens_tabs}
           itens_blocks={itens_blocks}
+          control_definition="has-itens-right"
           search_placeholder="Search"
-          search_icon_definition="info">
+          search_icon_definition="has-text-info">
         </Panel>
         <Panel header="Primary" definition="is-primary" itens_tabs={itens_tabs} itens_blocks={itens_blocks}></Panel>
         <Panel header="Link" definition="is-link" itens_tabs={itens_tabs} itens_blocks={itens_blocks}></Panel>

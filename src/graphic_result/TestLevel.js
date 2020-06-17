@@ -70,8 +70,5 @@ ReactDOM.render(
         <Level itens={itens_center} center={true}/>
         <Level itens={itens_center_2} center={true}/>
      </div>
-  
-
-   
 ,
   document.getElementById("root"))
