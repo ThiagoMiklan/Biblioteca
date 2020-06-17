@@ -1,77 +1,32 @@
 import React, { useState } from 'react';
 import ReactDOM from 'react-dom';
 import 'bulma/css/bulma.css'
+import MediaObject from './components/MediaObject';
+import Icon from './components/Icon';
 import Level from './components/Level';
-import Button from './components/Button';
-import Input from './components/Input';
-import Control from './components/Control';
-import Field from './components/Field';
+import Columns from './components/Columns';
+import Column from './components/Column'
 
 const itens = [
-  {value: <p class="subtitle is-5"><strong>123</strong> posts</p>,left: true},
-  {value:  <Field definition= "has-addons">
-              <Control><Input type="text" placeholder="Find a post"/></Control>
-              <Control><Button> Search</Button></Control>
-           </Field>, left:true},
-           
-  {value: <div class="field has-addons">
-        <p class="control">
-          <input class="input" type="text" placeholder="Find a post"/>
-        </p>
-        <p class="control">
-          <button class="button">
-            Search
-          </button>
-        </p>
-      </div>},
-  {value:<strong>All</strong>,right:true},
-  {value:<a>Published</a>,right:true},
-  {value:<a>Drafts</a>,right:true},
-  {value:<a>Deleted</a>,right:true},
-  {value:<a class="button is-success">New</a>,right:true}
+  {value:<Icon definition="is-small has-text-info" icon_name="fas fa-reply"></Icon>, left: true },
+  {value:<Icon definition="is-small has-text-info" icon_name="fas fa-retweet"></Icon>, left: true},
+  {value:<Icon definition="is-small has-text-info"  icon_name="fas fa-heart"></Icon>,left: true}
 ]
 
-const itens_center = [
-  {value: 
-      <div>
-      <p class="heading">Tweets</p>
-      <p class="title">3,456</p>
-    </div>},
-  {value:<div>
-      <p class="heading">Following</p>
-      <p class="title">123</p>
-    </div>},
-    {value:<div>
-      <p class="heading">Followers</p>
-      <p class="title">456K</p>
-    </div>},
-    {value:<div>
-      <p class="heading">Likes</p>
-      <p class="title">789</p>
-    </div>}
-]
-
-const itens_center_2 = [
-  {value: 
-      <p class="level-item has-text-centered">
-    <a class="link is-info">Home</a>
-  </p>},
-  {value:<a class="link is-info">Menu</a>, definition:"has-text-centered"},
-  {value:<img src="https://bulma.io/images/bulma-type.png" alt="" style={{height:"30px"}}/>, definition: "has-text-centered"},
-  {value:<a class="link is-info">Reservations</a>, definition:"has-text-centered"},
-  {value:<p class="level-item has-text-centered">
-    <a class="link is-info">Contact</a>
-  </p>}
-]
 
 ReactDOM.render(
-    <div className="container is-fluid">
-        <Level itens={itens}> </Level>
-        <Level itens={itens_center} center={true}/>
-        <Level itens={itens_center_2} center={true}/>
-     </div>
-  
-
-   
+  <Columns definition="is-multiline">
+    <Column definition="is-half is-spaced">
+        <MediaObject src="https://bulma.io/images/placeholders/128x128.png" image_definition="is-64x64"> 
+          <p>
+            <strong>John Smith</strong> <small>@johnsmith</small> <small>31m</small>
+            <br/>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare magna eros, eu pellentesque tortor vestibulum ut. Maecenas non massa sem. Etiam finibus odio quis feugiat facilisis.
+          </p>
+          <Level definition="is-mobile" itens={itens}/>
+      </MediaObject> 
+    </Column>
+    
+  </Columns>
 ,
   document.getElementById("root"))

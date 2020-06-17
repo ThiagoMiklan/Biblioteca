@@ -7,16 +7,23 @@ type Props = {
 }
 
 const Level = (props:Props)=>{
-    return assembleItens(props);
+    var code = <></>
+
+    if(props.itens != undefined){
+        code = assembleItens(props);
+    }
+
+    return code;
 }
 
 function assembleItens(props: Object){
     var left =   props.itens.filter(item => isLeft(item));
     var right =  props.itens.filter(item => isRight(item));
-    
-    var code = <nav class="level">
+    var definition = (props.definition == undefined) ? "level" : "level "+ props.definition;
+   
+    var code = <nav class={definition}>
                     {
-                    props.center == true 
+                    (props.center == true || (left.length <= 0  && right.length <= 0 ))
                     ? <>{assembleCenter(props.itens)}</>
                     :
                     <>
@@ -62,7 +69,7 @@ function assembleCenter(itens: Array<Object>){
 }
 
 function assembleLevelItem(item: Object){
-    return <p class={item["definition"] == undefined ? "level-item" : "level-item "+item["definition"]}>{item["value"]}</p>
+    return <p onClick={item["onClick"]} class={item["definition"] == undefined ? "level-item" : "level-item "+item["definition"]}>{item["value"]}</p>
 }
 
 
