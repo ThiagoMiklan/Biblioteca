@@ -1,6 +1,5 @@
 
 import * as React from 'react';
-import PropTypes from 'prop-types';
 import { validate } from '../tools/type_validations';
 
 const props_obj={
@@ -9,7 +8,7 @@ const props_obj={
 }
 
 const SubTitle = (props:Props)=>{
-    validate(props,props_obj);
+    validate(props,props_obj,"Subtitle");
     return assembleSubTitle(props)
 };
      
@@ -36,7 +35,7 @@ function getTitle(props){
 }
 
 
-// p ==  paragráfo, se a tag a ser utilizada é parágrafo ou tag de título
+
 var assemble1 = (props) =>{
     var code = "";
     var definition = getDefinition(props);
@@ -120,14 +119,5 @@ function getDefinition(props){
     return definition;
 }
 
-
-SubTitle.propTypes ={
-    // exceção: Definition como number se encaixa melhor ao presente componente
-    definition: PropTypes.number.isRequired,
-    // p é usado para determinar se um título é construído com tag <p> ou com as tags
-    // h1,h2,h3,h4,h5 ou h6
-    p: PropTypes.bool
-
-}
 
 export default SubTitle;

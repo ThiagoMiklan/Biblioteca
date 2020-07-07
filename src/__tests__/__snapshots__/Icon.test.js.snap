@@ -4,12 +4,10 @@ exports[`value correctly 1`] = `
 <div
   className="container is-fluid"
 >
-  <span />
   <span
     className="icon has-text-info"
   >
     <i
-      aria-hidden="true"
       className="fas fa-info-circle"
     />
   </span>
@@ -18,7 +16,6 @@ exports[`value correctly 1`] = `
     className="icon has-text-success"
   >
     <i
-      aria-hidden="true"
       className="fas fa-check-square"
     />
   </span>
@@ -27,7 +24,6 @@ exports[`value correctly 1`] = `
     className="icon has-text-warning"
   >
     <i
-      aria-hidden="true"
       className="fas fa-exclamation-triangle"
     />
   </span>
@@ -36,7 +32,6 @@ exports[`value correctly 1`] = `
     className="icon has-text-danger"
   >
     <i
-      aria-hidden="true"
       className="fas fa-ban"
     />
   </span>
@@ -45,7 +40,6 @@ exports[`value correctly 1`] = `
     className="icon has-text-warning is-small"
   >
     <i
-      aria-hidden="true"
       className="fas fa-home"
     />
   </span>
@@ -54,7 +48,6 @@ exports[`value correctly 1`] = `
     className="icon has-text-warning is-medium"
   >
     <i
-      aria-hidden="true"
       className="fas fa-home"
     />
   </span>
@@ -63,9 +56,9 @@ exports[`value correctly 1`] = `
     className="icon has-text-warning is-large"
   >
     <i
-      aria-hidden="true"
       className="fas fa-home"
     />
   </span>
+  <span />
 </div>
 `;

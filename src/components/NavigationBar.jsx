@@ -1,55 +1,39 @@
 // @flow
 import React from 'react';
-import PropTypes from 'prop-types';
 import { validate } from '../tools/type_validations';
 
-/*
-Existem algumas maneira de fornecer os itens de "start" e "end" ao usar o presente componente 
-1 - Fornecer através da props itens_start ou itens_end um objeto contendo um atributo "value"
-2 - Fornecer um array de objetos contendo em cada objeto o atributo value
-3 - Fornecer um array de objetos com um dropdown, nesse caso o um array de objetos dentro do array em que está contido
-4 - É possível fornecer componentes diversos, como Botões no start ou end da barra, para tal faz-se necessário
-    informar o código do elemento.
-    Exemplo:
-
-    var itens_end = [{value: <Button>Login</Button>}, {value: <Button>Log Out</Button>}] 
-
-    <NavigationBar
-            itens_end={itens_start_3}
-        />
-*/
 type Props = {
     definition?: string,
-    link_brand?: string,
-    src_brand?: string,
-    width_brand?: string,
+    link?: string,
+    src?: string,
+    width_brand?: number,
     alt?: string,
-    height_brand?: string,
+    height_brand?: number,
     itens_start?: Array<Object>,
     itens_end?: Array<Object>
 }
 
 const props_obj = {
     definition: "string",
-    link_brand: "string",
-    src_brand: "string",
-    width_brand: "string",
+    link: "string",
+    src: "string",
+    width_brand: "number",
     alt: "string",
-    height_brand: "string",
+    height_brand: "number",
     itens_start: "array",
     itens_end: "array"
 }
 
 
 const NavigationBar = (props: Props) => {
-    validate(props, props_obj);
+    validate(props, props_obj,"NavigationBar");
     var definition = (props.definition == undefined) ? "navbar" : "navbar " + props.definition;
     return (
         <nav className={definition}>
 
             <div className="navbar-brand">
-                <a className="navbar-item" href={props.link_brand}>
-                    <img src={props.src_brand} alt={props.alt} width={props.width_brand} height={props.height_brand}></img>
+                <a className="navbar-item" href={props.link}>
+                    <img src={props.src} alt={props.alt} width={props.width_brand} height={props.height_brand}></img>
                 </a>
             </div>
             <div className="navbar-menu">
@@ -137,17 +121,6 @@ function assembleItem(item, definition) {
     var def = "navbar-item " + item["definition"];
     var item_code = <a onClick={item["onClick"]} className={def}>{item["value"]}</a>;
     return item_code;
-}
-
-NavigationBar.propTypes = {
-    src_brand: PropTypes.string,
-    link_brand: PropTypes.string,
-    width_brand: PropTypes.number,
-    height_brand: PropTypes.number,
-    alt_brand: PropTypes.string,
-    itens_start: PropTypes.array,
-    itens_end: PropTypes.array,
-    definition: PropTypes.string
 }
 
 export default NavigationBar;

@@ -12,7 +12,7 @@ const props_obj = {
 }
 
 const Tile = (props: Props)=>{
-    validate(props,props_obj);
+    validate(props,props_obj,"Tiles");
     var tiles_definition = (props.definition == undefined)? "tile": "tile "+props.definition;
     return <div className={tiles_definition}>
                 {props.children}

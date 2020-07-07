@@ -1,7 +1,6 @@
 // @flow
 import * as React from 'react';
-import PropTypes from 'prop-types';
-import {InvalidNumberChilds,assembleDefaultMessage} from '../exception/InvalidNumberChilds';
+import { InvalidNumberChilds, assembleDefaultMessage } from '../exception/InvalidNumberChilds';
 import { validate } from '../tools/type_validations.js';
 // Com filhos
 // Sem eventos
@@ -14,51 +13,51 @@ import { validate } from '../tools/type_validations.js';
 
 type Props = {
   definition?: string,
-  children?: React.Node
+  children?: React.Node,
+  head_definition?: string,
+  body_definition?:string,
+  foot_definition?:string
 }
 
-const props_obj ={
+const props_obj = {
   definition: 'string'
 }
 
-const HeroThreeParts = (props:Props)=>{
-  validate(props, props_obj);
-    var childrens =  React.Children.map(props.children, (child, i) => {return child});
-    return assemble(childrens,props);
+const HeroThreeParts = (props: Props) => {
+  validate(props, props_obj,"HeroThreeParts");
+  var childrens = React.Children.map(props.children, (child, i) => { return child });
+  return assemble(childrens, props);
 }
 
-function assemble(childrens,props){
+function assemble(childrens, props) {
   var validChildrensNumber = (childrens.length <= 3) ? true : false;;
   var code = <></>;
-  if(validChildrensNumber){
-    code = assembleThreePartsHero(props,childrens);
-  }else{
+  if (validChildrensNumber) {
+    code = assembleThreePartsHero(props, childrens);
+  } else {
     throw new InvalidNumberChilds(assembleDefaultMessage(childrens.length));
   }
 
   return code;
 }
-// recebe a props e junto com os filhos monta head,body e footer
-function assembleThreePartsHero(props,childrens){
-    var definition = (props.definition ==  undefined) ? "hero": "hero "+props.definition;
-    return (
-        <section className={definition}>
-            <div class="hero-head">
-                {childrens[0] != undefined && childrens[0]}
-            </div>
-            
-            <div className="hero-body">
-                {childrens[1] != undefined && childrens[1]}
-            </div>
 
-            <div class="hero-foot">
-            {childrens[2] != undefined && childrens[2]}
-            </div>
+function assembleThreePartsHero(props, childrens) {
+  var definition = (props.definition == undefined) ? "hero" : "hero " + props.definition;
+  return (
+    <section className={definition}>
+      <div class="hero-head">
+        {childrens[0] != undefined && childrens[0]}
+      </div>
 
-        </section>);
-}
-HeroThreeParts.propTypes ={
-    definition: PropTypes.string
+      <div className="hero-body">
+        {childrens[1] != undefined && childrens[1]}
+      </div>
+
+      <div class="hero-foot">
+        {childrens[2] != undefined && childrens[2]}
+      </div>
+
+    </section>);
 }
 
 export default HeroThreeParts;

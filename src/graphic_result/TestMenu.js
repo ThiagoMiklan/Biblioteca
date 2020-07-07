@@ -12,7 +12,7 @@ var itens_general = [
 ]
 
 var itens_adm = [
-    {value:"Team Settings", onClick: onClickItem},{value:"Manage your team",definition:"active",
+    {value:"Team Settings", onClick: onClickItem},{value:"Manage your team",definition:"is-active",
     sub_itens:[{value:"Members"},{value:"Plugins"},{value:"Add a member", onClick: onClickItem}]},
     {value:"Invitations"},{value:"Cloud Storage Environment Settings"},
     {value:"Authentication"}
@@ -58,37 +58,3 @@ ReactDOM.render(
      </div>,
     document.getElementById('root')
 );
-
-
-
-/*
-<Menu >
-          <MenuItem  itens={itens_general_with_event} label="General"/>
-          <MenuItem  itens={itens_administration_with_event} label ="Administration"/>
-      </Menu>
-      <br></br>
-      <Menu >
-          <MenuItem  itens={itens_general_without_event} label="General"/>
-          <MenuItem  itens={itens_administration_without_event} label ="Administration"/>
-      </Menu>
-      <br></br>
-      <Menu>
-          <MenuItem label="Merge" itens={itens_merge}></MenuItem>
-      </Menu>
-
-
-// Observações do estado da arte
-/*
-Biblioteca react-bulma-components
-Componente menu não possibilita a inclusão de interação sobre estrutura de dados,
-observando o fato de que na maioria dos casos é interessante não escrever estaticamente
-o valor de cada item, mas sim ter uma certa dinâmica ao popular os componentes, o que não se 
-alcança com a biblioteca referida, sendo necessário sempre que deseja-se um valor no item
-digitá-lo, tornando-o estático. Ao contrário do que foi desenvolvido no componente Menu.jsx da nossa
-biblioteca, que permite o envio de um array para popular, caso queira-se montar uma tabela
-a partir de dados de um banco, é plenamente possível criar um metódo que monta o dado na estrutura
-exigida pelo componente.
-
-
-*/
-

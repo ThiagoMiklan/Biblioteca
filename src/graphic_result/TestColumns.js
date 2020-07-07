@@ -1,8 +1,8 @@
 import 'bulma/css/bulma.css'
 import React, { useState } from 'react';
 import ReactDOM from 'react-dom';
-import Columns from './biblioteca/Columns';
-import Column from './biblioteca/Column';
+import Columns from './components/Columns';
+import Column from './components/Column';
 
 
 ReactDOM.render(<>

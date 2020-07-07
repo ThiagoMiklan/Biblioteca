@@ -8,7 +8,7 @@ exports[`card 1 with media object 1`] = `
     className="card-image"
   >
     <figure
-      className="4by3"
+      className="imagem 4by3"
     >
       <img
         src="https://bulma.io/images/placeholders/1280x960.png"
@@ -94,22 +94,21 @@ exports[`card with content 1`] = `
       className="card-header-icon"
       href="#"
     >
-      <span />
       <span
         className="icon"
       >
         <i
-          aria-hidden="true"
           className="fas fa-angle-down"
         />
       </span>
+      <span />
     </a>
   </header>
   <div
     className="card-content "
   >
     <div
-      class="content"
+      className="content"
     >
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec iaculis mauris.
       <a

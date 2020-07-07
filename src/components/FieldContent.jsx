@@ -1,16 +1,18 @@
 // @flow
 import * as React from 'react';
-
-// Simples componente para utilizar Field como content
-// Um exemplo seria um componente que exibe uma imagem
+import {validate} from '../tools/type_validations';
 
 type Props={
   label?:string,
   children?: React.Node
 }
 
-const FieldContent = (props:Props)=>{
+const props_obj ={
+  label: 'string',
+}
 
+const FieldContent = (props:Props)=>{
+    validate(props,props_obj, "FieldContent");
     return (
         <div className='field'>
           <label className='label'>{props.label}</label>
@@ -21,7 +23,5 @@ const FieldContent = (props:Props)=>{
     );
 
 }
-
-
 
 export default FieldContent;

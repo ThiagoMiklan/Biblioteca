@@ -257,1111 +257,6 @@ function _nonIterableSpread() {
   throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");
 }
 
-function createCommonjsModule(fn, module) {
-	return module = { exports: {} }, fn(module, module.exports), module.exports;
-}
-
-/** @license React v16.13.1
- * react-is.production.min.js
- *
- * Copyright (c) Facebook, Inc. and its affiliates.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
- */
-var b="function"===typeof Symbol&&Symbol.for,c=b?Symbol.for("react.element"):60103,d=b?Symbol.for("react.portal"):60106,e=b?Symbol.for("react.fragment"):60107,f=b?Symbol.for("react.strict_mode"):60108,g=b?Symbol.for("react.profiler"):60114,h=b?Symbol.for("react.provider"):60109,k=b?Symbol.for("react.context"):60110,l=b?Symbol.for("react.async_mode"):60111,m=b?Symbol.for("react.concurrent_mode"):60111,n=b?Symbol.for("react.forward_ref"):60112,p=b?Symbol.for("react.suspense"):60113,q=b?
-Symbol.for("react.suspense_list"):60120,r=b?Symbol.for("react.memo"):60115,t=b?Symbol.for("react.lazy"):60116,v=b?Symbol.for("react.block"):60121,w=b?Symbol.for("react.fundamental"):60117,x=b?Symbol.for("react.responder"):60118,y=b?Symbol.for("react.scope"):60119;
-function z(a){if("object"===typeof a&&null!==a){var u=a.$$typeof;switch(u){case c:switch(a=a.type,a){case l:case m:case e:case g:case f:case p:return a;default:switch(a=a&&a.$$typeof,a){case k:case n:case t:case r:case h:return a;default:return u}}case d:return u}}}function A(a){return z(a)===m}var AsyncMode=l;var ConcurrentMode=m;var ContextConsumer=k;var ContextProvider=h;var Element=c;var ForwardRef=n;var Fragment=e;var Lazy=t;var Memo=r;var Portal=d;
-var Profiler=g;var StrictMode=f;var Suspense=p;var isAsyncMode=function(a){return A(a)||z(a)===l};var isConcurrentMode=A;var isContextConsumer=function(a){return z(a)===k};var isContextProvider=function(a){return z(a)===h};var isElement=function(a){return "object"===typeof a&&null!==a&&a.$$typeof===c};var isForwardRef=function(a){return z(a)===n};var isFragment=function(a){return z(a)===e};var isLazy=function(a){return z(a)===t};
-var isMemo=function(a){return z(a)===r};var isPortal=function(a){return z(a)===d};var isProfiler=function(a){return z(a)===g};var isStrictMode=function(a){return z(a)===f};var isSuspense=function(a){return z(a)===p};
-var isValidElementType=function(a){return "string"===typeof a||"function"===typeof a||a===e||a===m||a===g||a===f||a===p||a===q||"object"===typeof a&&null!==a&&(a.$$typeof===t||a.$$typeof===r||a.$$typeof===h||a.$$typeof===k||a.$$typeof===n||a.$$typeof===w||a.$$typeof===x||a.$$typeof===y||a.$$typeof===v)};var typeOf=z;
-
-var reactIs_production_min = {
-	AsyncMode: AsyncMode,
-	ConcurrentMode: ConcurrentMode,
-	ContextConsumer: ContextConsumer,
-	ContextProvider: ContextProvider,
-	Element: Element,
-	ForwardRef: ForwardRef,
-	Fragment: Fragment,
-	Lazy: Lazy,
-	Memo: Memo,
-	Portal: Portal,
-	Profiler: Profiler,
-	StrictMode: StrictMode,
-	Suspense: Suspense,
-	isAsyncMode: isAsyncMode,
-	isConcurrentMode: isConcurrentMode,
-	isContextConsumer: isContextConsumer,
-	isContextProvider: isContextProvider,
-	isElement: isElement,
-	isForwardRef: isForwardRef,
-	isFragment: isFragment,
-	isLazy: isLazy,
-	isMemo: isMemo,
-	isPortal: isPortal,
-	isProfiler: isProfiler,
-	isStrictMode: isStrictMode,
-	isSuspense: isSuspense,
-	isValidElementType: isValidElementType,
-	typeOf: typeOf
-};
-
-var reactIs_development = createCommonjsModule(function (module, exports) {
-
-
-
-if (process.env.NODE_ENV !== "production") {
-  (function() {
-
-// The Symbol used to tag the ReactElement-like types. If there is no native Symbol
-// nor polyfill, then a plain number is used for performance.
-var hasSymbol = typeof Symbol === 'function' && Symbol.for;
-var REACT_ELEMENT_TYPE = hasSymbol ? Symbol.for('react.element') : 0xeac7;
-var REACT_PORTAL_TYPE = hasSymbol ? Symbol.for('react.portal') : 0xeaca;
-var REACT_FRAGMENT_TYPE = hasSymbol ? Symbol.for('react.fragment') : 0xeacb;
-var REACT_STRICT_MODE_TYPE = hasSymbol ? Symbol.for('react.strict_mode') : 0xeacc;
-var REACT_PROFILER_TYPE = hasSymbol ? Symbol.for('react.profiler') : 0xead2;
-var REACT_PROVIDER_TYPE = hasSymbol ? Symbol.for('react.provider') : 0xeacd;
-var REACT_CONTEXT_TYPE = hasSymbol ? Symbol.for('react.context') : 0xeace; // TODO: We don't use AsyncMode or ConcurrentMode anymore. They were temporary
-// (unstable) APIs that have been removed. Can we remove the symbols?
-
-var REACT_ASYNC_MODE_TYPE = hasSymbol ? Symbol.for('react.async_mode') : 0xeacf;
-var REACT_CONCURRENT_MODE_TYPE = hasSymbol ? Symbol.for('react.concurrent_mode') : 0xeacf;
-var REACT_FORWARD_REF_TYPE = hasSymbol ? Symbol.for('react.forward_ref') : 0xead0;
-var REACT_SUSPENSE_TYPE = hasSymbol ? Symbol.for('react.suspense') : 0xead1;
-var REACT_SUSPENSE_LIST_TYPE = hasSymbol ? Symbol.for('react.suspense_list') : 0xead8;
-var REACT_MEMO_TYPE = hasSymbol ? Symbol.for('react.memo') : 0xead3;
-var REACT_LAZY_TYPE = hasSymbol ? Symbol.for('react.lazy') : 0xead4;
-var REACT_BLOCK_TYPE = hasSymbol ? Symbol.for('react.block') : 0xead9;
-var REACT_FUNDAMENTAL_TYPE = hasSymbol ? Symbol.for('react.fundamental') : 0xead5;
-var REACT_RESPONDER_TYPE = hasSymbol ? Symbol.for('react.responder') : 0xead6;
-var REACT_SCOPE_TYPE = hasSymbol ? Symbol.for('react.scope') : 0xead7;
-
-function isValidElementType(type) {
-  return typeof type === 'string' || typeof type === 'function' || // Note: its typeof might be other than 'symbol' or 'number' if it's a polyfill.
-  type === REACT_FRAGMENT_TYPE || type === REACT_CONCURRENT_MODE_TYPE || type === REACT_PROFILER_TYPE || type === REACT_STRICT_MODE_TYPE || type === REACT_SUSPENSE_TYPE || type === REACT_SUSPENSE_LIST_TYPE || typeof type === 'object' && type !== null && (type.$$typeof === REACT_LAZY_TYPE || type.$$typeof === REACT_MEMO_TYPE || type.$$typeof === REACT_PROVIDER_TYPE || type.$$typeof === REACT_CONTEXT_TYPE || type.$$typeof === REACT_FORWARD_REF_TYPE || type.$$typeof === REACT_FUNDAMENTAL_TYPE || type.$$typeof === REACT_RESPONDER_TYPE || type.$$typeof === REACT_SCOPE_TYPE || type.$$typeof === REACT_BLOCK_TYPE);
-}
-
-function typeOf(object) {
-  if (typeof object === 'object' && object !== null) {
-    var $$typeof = object.$$typeof;
-
-    switch ($$typeof) {
-      case REACT_ELEMENT_TYPE:
-        var type = object.type;
-
-        switch (type) {
-          case REACT_ASYNC_MODE_TYPE:
-          case REACT_CONCURRENT_MODE_TYPE:
-          case REACT_FRAGMENT_TYPE:
-          case REACT_PROFILER_TYPE:
-          case REACT_STRICT_MODE_TYPE:
-          case REACT_SUSPENSE_TYPE:
-            return type;
-
-          default:
-            var $$typeofType = type && type.$$typeof;
-
-            switch ($$typeofType) {
-              case REACT_CONTEXT_TYPE:
-              case REACT_FORWARD_REF_TYPE:
-              case REACT_LAZY_TYPE:
-              case REACT_MEMO_TYPE:
-              case REACT_PROVIDER_TYPE:
-                return $$typeofType;
-
-              default:
-                return $$typeof;
-            }
-
-        }
-
-      case REACT_PORTAL_TYPE:
-        return $$typeof;
-    }
-  }
-
-  return undefined;
-} // AsyncMode is deprecated along with isAsyncMode
-
-var AsyncMode = REACT_ASYNC_MODE_TYPE;
-var ConcurrentMode = REACT_CONCURRENT_MODE_TYPE;
-var ContextConsumer = REACT_CONTEXT_TYPE;
-var ContextProvider = REACT_PROVIDER_TYPE;
-var Element = REACT_ELEMENT_TYPE;
-var ForwardRef = REACT_FORWARD_REF_TYPE;
-var Fragment = REACT_FRAGMENT_TYPE;
-var Lazy = REACT_LAZY_TYPE;
-var Memo = REACT_MEMO_TYPE;
-var Portal = REACT_PORTAL_TYPE;
-var Profiler = REACT_PROFILER_TYPE;
-var StrictMode = REACT_STRICT_MODE_TYPE;
-var Suspense = REACT_SUSPENSE_TYPE;
-var hasWarnedAboutDeprecatedIsAsyncMode = false; // AsyncMode should be deprecated
-
-function isAsyncMode(object) {
-  {
-    if (!hasWarnedAboutDeprecatedIsAsyncMode) {
-      hasWarnedAboutDeprecatedIsAsyncMode = true; // Using console['warn'] to evade Babel and ESLint
-
-      console['warn']('The ReactIs.isAsyncMode() alias has been deprecated, ' + 'and will be removed in React 17+. Update your code to use ' + 'ReactIs.isConcurrentMode() instead. It has the exact same API.');
-    }
-  }
-
-  return isConcurrentMode(object) || typeOf(object) === REACT_ASYNC_MODE_TYPE;
-}
-function isConcurrentMode(object) {
-  return typeOf(object) === REACT_CONCURRENT_MODE_TYPE;
-}
-function isContextConsumer(object) {
-  return typeOf(object) === REACT_CONTEXT_TYPE;
-}
-function isContextProvider(object) {
-  return typeOf(object) === REACT_PROVIDER_TYPE;
-}
-function isElement(object) {
-  return typeof object === 'object' && object !== null && object.$$typeof === REACT_ELEMENT_TYPE;
-}
-function isForwardRef(object) {
-  return typeOf(object) === REACT_FORWARD_REF_TYPE;
-}
-function isFragment(object) {
-  return typeOf(object) === REACT_FRAGMENT_TYPE;
-}
-function isLazy(object) {
-  return typeOf(object) === REACT_LAZY_TYPE;
-}
-function isMemo(object) {
-  return typeOf(object) === REACT_MEMO_TYPE;
-}
-function isPortal(object) {
-  return typeOf(object) === REACT_PORTAL_TYPE;
-}
-function isProfiler(object) {
-  return typeOf(object) === REACT_PROFILER_TYPE;
-}
-function isStrictMode(object) {
-  return typeOf(object) === REACT_STRICT_MODE_TYPE;
-}
-function isSuspense(object) {
-  return typeOf(object) === REACT_SUSPENSE_TYPE;
-}
-
-exports.AsyncMode = AsyncMode;
-exports.ConcurrentMode = ConcurrentMode;
-exports.ContextConsumer = ContextConsumer;
-exports.ContextProvider = ContextProvider;
-exports.Element = Element;
-exports.ForwardRef = ForwardRef;
-exports.Fragment = Fragment;
-exports.Lazy = Lazy;
-exports.Memo = Memo;
-exports.Portal = Portal;
-exports.Profiler = Profiler;
-exports.StrictMode = StrictMode;
-exports.Suspense = Suspense;
-exports.isAsyncMode = isAsyncMode;
-exports.isConcurrentMode = isConcurrentMode;
-exports.isContextConsumer = isContextConsumer;
-exports.isContextProvider = isContextProvider;
-exports.isElement = isElement;
-exports.isForwardRef = isForwardRef;
-exports.isFragment = isFragment;
-exports.isLazy = isLazy;
-exports.isMemo = isMemo;
-exports.isPortal = isPortal;
-exports.isProfiler = isProfiler;
-exports.isStrictMode = isStrictMode;
-exports.isSuspense = isSuspense;
-exports.isValidElementType = isValidElementType;
-exports.typeOf = typeOf;
-  })();
-}
-});
-var reactIs_development_1 = reactIs_development.AsyncMode;
-var reactIs_development_2 = reactIs_development.ConcurrentMode;
-var reactIs_development_3 = reactIs_development.ContextConsumer;
-var reactIs_development_4 = reactIs_development.ContextProvider;
-var reactIs_development_5 = reactIs_development.Element;
-var reactIs_development_6 = reactIs_development.ForwardRef;
-var reactIs_development_7 = reactIs_development.Fragment;
-var reactIs_development_8 = reactIs_development.Lazy;
-var reactIs_development_9 = reactIs_development.Memo;
-var reactIs_development_10 = reactIs_development.Portal;
-var reactIs_development_11 = reactIs_development.Profiler;
-var reactIs_development_12 = reactIs_development.StrictMode;
-var reactIs_development_13 = reactIs_development.Suspense;
-var reactIs_development_14 = reactIs_development.isAsyncMode;
-var reactIs_development_15 = reactIs_development.isConcurrentMode;
-var reactIs_development_16 = reactIs_development.isContextConsumer;
-var reactIs_development_17 = reactIs_development.isContextProvider;
-var reactIs_development_18 = reactIs_development.isElement;
-var reactIs_development_19 = reactIs_development.isForwardRef;
-var reactIs_development_20 = reactIs_development.isFragment;
-var reactIs_development_21 = reactIs_development.isLazy;
-var reactIs_development_22 = reactIs_development.isMemo;
-var reactIs_development_23 = reactIs_development.isPortal;
-var reactIs_development_24 = reactIs_development.isProfiler;
-var reactIs_development_25 = reactIs_development.isStrictMode;
-var reactIs_development_26 = reactIs_development.isSuspense;
-var reactIs_development_27 = reactIs_development.isValidElementType;
-var reactIs_development_28 = reactIs_development.typeOf;
-
-var reactIs = createCommonjsModule(function (module) {
-
-if (process.env.NODE_ENV === 'production') {
-  module.exports = reactIs_production_min;
-} else {
-  module.exports = reactIs_development;
-}
-});
-
-/*
-object-assign
-(c) Sindre Sorhus
-@license MIT
-*/
-/* eslint-disable no-unused-vars */
-var getOwnPropertySymbols = Object.getOwnPropertySymbols;
-var hasOwnProperty = Object.prototype.hasOwnProperty;
-var propIsEnumerable = Object.prototype.propertyIsEnumerable;
-
-function toObject(val) {
-	if (val === null || val === undefined) {
-		throw new TypeError('Object.assign cannot be called with null or undefined');
-	}
-
-	return Object(val);
-}
-
-function shouldUseNative() {
-	try {
-		if (!Object.assign) {
-			return false;
-		}
-
-		// Detect buggy property enumeration order in older V8 versions.
-
-		// https://bugs.chromium.org/p/v8/issues/detail?id=4118
-		var test1 = new String('abc');  // eslint-disable-line no-new-wrappers
-		test1[5] = 'de';
-		if (Object.getOwnPropertyNames(test1)[0] === '5') {
-			return false;
-		}
-
-		// https://bugs.chromium.org/p/v8/issues/detail?id=3056
-		var test2 = {};
-		for (var i = 0; i < 10; i++) {
-			test2['_' + String.fromCharCode(i)] = i;
-		}
-		var order2 = Object.getOwnPropertyNames(test2).map(function (n) {
-			return test2[n];
-		});
-		if (order2.join('') !== '0123456789') {
-			return false;
-		}
-
-		// https://bugs.chromium.org/p/v8/issues/detail?id=3056
-		var test3 = {};
-		'abcdefghijklmnopqrst'.split('').forEach(function (letter) {
-			test3[letter] = letter;
-		});
-		if (Object.keys(Object.assign({}, test3)).join('') !==
-				'abcdefghijklmnopqrst') {
-			return false;
-		}
-
-		return true;
-	} catch (err) {
-		// We don't expect any of the above to throw, but better to be safe.
-		return false;
-	}
-}
-
-var objectAssign = shouldUseNative() ? Object.assign : function (target, source) {
-	var from;
-	var to = toObject(target);
-	var symbols;
-
-	for (var s = 1; s < arguments.length; s++) {
-		from = Object(arguments[s]);
-
-		for (var key in from) {
-			if (hasOwnProperty.call(from, key)) {
-				to[key] = from[key];
-			}
-		}
-
-		if (getOwnPropertySymbols) {
-			symbols = getOwnPropertySymbols(from);
-			for (var i = 0; i < symbols.length; i++) {
-				if (propIsEnumerable.call(from, symbols[i])) {
-					to[symbols[i]] = from[symbols[i]];
-				}
-			}
-		}
-	}
-
-	return to;
-};
-
-/**
- * Copyright (c) 2013-present, Facebook, Inc.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
- */
-
-var ReactPropTypesSecret = 'SECRET_DO_NOT_PASS_THIS_OR_YOU_WILL_BE_FIRED';
-
-var ReactPropTypesSecret_1 = ReactPropTypesSecret;
-
-var printWarning = function() {};
-
-if (process.env.NODE_ENV !== 'production') {
-  var ReactPropTypesSecret$1 = ReactPropTypesSecret_1;
-  var loggedTypeFailures = {};
-  var has = Function.call.bind(Object.prototype.hasOwnProperty);
-
-  printWarning = function(text) {
-    var message = 'Warning: ' + text;
-    if (typeof console !== 'undefined') {
-      console.error(message);
-    }
-    try {
-      // --- Welcome to debugging React ---
-      // This error was thrown as a convenience so that you can use this stack
-      // to find the callsite that caused this warning to fire.
-      throw new Error(message);
-    } catch (x) {}
-  };
-}
-
-/**
- * Assert that the values match with the type specs.
- * Error messages are memorized and will only be shown once.
- *
- * @param {object} typeSpecs Map of name to a ReactPropType
- * @param {object} values Runtime values that need to be type-checked
- * @param {string} location e.g. "prop", "context", "child context"
- * @param {string} componentName Name of the component for error messages.
- * @param {?Function} getStack Returns the component stack.
- * @private
- */
-function checkPropTypes(typeSpecs, values, location, componentName, getStack) {
-  if (process.env.NODE_ENV !== 'production') {
-    for (var typeSpecName in typeSpecs) {
-      if (has(typeSpecs, typeSpecName)) {
-        var error;
-        // Prop type validation may throw. In case they do, we don't want to
-        // fail the render phase where it didn't fail before. So we log it.
-        // After these have been cleaned up, we'll let them throw.
-        try {
-          // This is intentionally an invariant that gets caught. It's the same
-          // behavior as without this statement except with a better message.
-          if (typeof typeSpecs[typeSpecName] !== 'function') {
-            var err = Error(
-              (componentName || 'React class') + ': ' + location + ' type `' + typeSpecName + '` is invalid; ' +
-              'it must be a function, usually from the `prop-types` package, but received `' + typeof typeSpecs[typeSpecName] + '`.'
-            );
-            err.name = 'Invariant Violation';
-            throw err;
-          }
-          error = typeSpecs[typeSpecName](values, typeSpecName, componentName, location, null, ReactPropTypesSecret$1);
-        } catch (ex) {
-          error = ex;
-        }
-        if (error && !(error instanceof Error)) {
-          printWarning(
-            (componentName || 'React class') + ': type specification of ' +
-            location + ' `' + typeSpecName + '` is invalid; the type checker ' +
-            'function must return `null` or an `Error` but returned a ' + typeof error + '. ' +
-            'You may have forgotten to pass an argument to the type checker ' +
-            'creator (arrayOf, instanceOf, objectOf, oneOf, oneOfType, and ' +
-            'shape all require an argument).'
-          );
-        }
-        if (error instanceof Error && !(error.message in loggedTypeFailures)) {
-          // Only monitor this failure once because there tends to be a lot of the
-          // same error.
-          loggedTypeFailures[error.message] = true;
-
-          var stack = getStack ? getStack() : '';
-
-          printWarning(
-            'Failed ' + location + ' type: ' + error.message + (stack != null ? stack : '')
-          );
-        }
-      }
-    }
-  }
-}
-
-/**
- * Resets warning cache when testing.
- *
- * @private
- */
-checkPropTypes.resetWarningCache = function() {
-  if (process.env.NODE_ENV !== 'production') {
-    loggedTypeFailures = {};
-  }
-};
-
-var checkPropTypes_1 = checkPropTypes;
-
-var has$1 = Function.call.bind(Object.prototype.hasOwnProperty);
-var printWarning$1 = function() {};
-
-if (process.env.NODE_ENV !== 'production') {
-  printWarning$1 = function(text) {
-    var message = 'Warning: ' + text;
-    if (typeof console !== 'undefined') {
-      console.error(message);
-    }
-    try {
-      // --- Welcome to debugging React ---
-      // This error was thrown as a convenience so that you can use this stack
-      // to find the callsite that caused this warning to fire.
-      throw new Error(message);
-    } catch (x) {}
-  };
-}
-
-function emptyFunctionThatReturnsNull() {
-  return null;
-}
-
-var factoryWithTypeCheckers = function(isValidElement, throwOnDirectAccess) {
-  /* global Symbol */
-  var ITERATOR_SYMBOL = typeof Symbol === 'function' && Symbol.iterator;
-  var FAUX_ITERATOR_SYMBOL = '@@iterator'; // Before Symbol spec.
-
-  /**
-   * Returns the iterator method function contained on the iterable object.
-   *
-   * Be sure to invoke the function with the iterable as context:
-   *
-   *     var iteratorFn = getIteratorFn(myIterable);
-   *     if (iteratorFn) {
-   *       var iterator = iteratorFn.call(myIterable);
-   *       ...
-   *     }
-   *
-   * @param {?object} maybeIterable
-   * @return {?function}
-   */
-  function getIteratorFn(maybeIterable) {
-    var iteratorFn = maybeIterable && (ITERATOR_SYMBOL && maybeIterable[ITERATOR_SYMBOL] || maybeIterable[FAUX_ITERATOR_SYMBOL]);
-    if (typeof iteratorFn === 'function') {
-      return iteratorFn;
-    }
-  }
-
-  /**
-   * Collection of methods that allow declaration and validation of props that are
-   * supplied to React components. Example usage:
-   *
-   *   var Props = require('ReactPropTypes');
-   *   var MyArticle = React.createClass({
-   *     propTypes: {
-   *       // An optional string prop named "description".
-   *       description: Props.string,
-   *
-   *       // A required enum prop named "category".
-   *       category: Props.oneOf(['News','Photos']).isRequired,
-   *
-   *       // A prop named "dialog" that requires an instance of Dialog.
-   *       dialog: Props.instanceOf(Dialog).isRequired
-   *     },
-   *     render: function() { ... }
-   *   });
-   *
-   * A more formal specification of how these methods are used:
-   *
-   *   type := array|bool|func|object|number|string|oneOf([...])|instanceOf(...)
-   *   decl := ReactPropTypes.{type}(.isRequired)?
-   *
-   * Each and every declaration produces a function with the same signature. This
-   * allows the creation of custom validation functions. For example:
-   *
-   *  var MyLink = React.createClass({
-   *    propTypes: {
-   *      // An optional string or URI prop named "href".
-   *      href: function(props, propName, componentName) {
-   *        var propValue = props[propName];
-   *        if (propValue != null && typeof propValue !== 'string' &&
-   *            !(propValue instanceof URI)) {
-   *          return new Error(
-   *            'Expected a string or an URI for ' + propName + ' in ' +
-   *            componentName
-   *          );
-   *        }
-   *      }
-   *    },
-   *    render: function() {...}
-   *  });
-   *
-   * @internal
-   */
-
-  var ANONYMOUS = '<<anonymous>>';
-
-  // Important!
-  // Keep this list in sync with production version in `./factoryWithThrowingShims.js`.
-  var ReactPropTypes = {
-    array: createPrimitiveTypeChecker('array'),
-    bool: createPrimitiveTypeChecker('boolean'),
-    func: createPrimitiveTypeChecker('function'),
-    number: createPrimitiveTypeChecker('number'),
-    object: createPrimitiveTypeChecker('object'),
-    string: createPrimitiveTypeChecker('string'),
-    symbol: createPrimitiveTypeChecker('symbol'),
-
-    any: createAnyTypeChecker(),
-    arrayOf: createArrayOfTypeChecker,
-    element: createElementTypeChecker(),
-    elementType: createElementTypeTypeChecker(),
-    instanceOf: createInstanceTypeChecker,
-    node: createNodeChecker(),
-    objectOf: createObjectOfTypeChecker,
-    oneOf: createEnumTypeChecker,
-    oneOfType: createUnionTypeChecker,
-    shape: createShapeTypeChecker,
-    exact: createStrictShapeTypeChecker,
-  };
-
-  /**
-   * inlined Object.is polyfill to avoid requiring consumers ship their own
-   * https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/is
-   */
-  /*eslint-disable no-self-compare*/
-  function is(x, y) {
-    // SameValue algorithm
-    if (x === y) {
-      // Steps 1-5, 7-10
-      // Steps 6.b-6.e: +0 != -0
-      return x !== 0 || 1 / x === 1 / y;
-    } else {
-      // Step 6.a: NaN == NaN
-      return x !== x && y !== y;
-    }
-  }
-  /*eslint-enable no-self-compare*/
-
-  /**
-   * We use an Error-like object for backward compatibility as people may call
-   * PropTypes directly and inspect their output. However, we don't use real
-   * Errors anymore. We don't inspect their stack anyway, and creating them
-   * is prohibitively expensive if they are created too often, such as what
-   * happens in oneOfType() for any type before the one that matched.
-   */
-  function PropTypeError(message) {
-    this.message = message;
-    this.stack = '';
-  }
-  // Make `instanceof Error` still work for returned errors.
-  PropTypeError.prototype = Error.prototype;
-
-  function createChainableTypeChecker(validate) {
-    if (process.env.NODE_ENV !== 'production') {
-      var manualPropTypeCallCache = {};
-      var manualPropTypeWarningCount = 0;
-    }
-    function checkType(isRequired, props, propName, componentName, location, propFullName, secret) {
-      componentName = componentName || ANONYMOUS;
-      propFullName = propFullName || propName;
-
-      if (secret !== ReactPropTypesSecret_1) {
-        if (throwOnDirectAccess) {
-          // New behavior only for users of `prop-types` package
-          var err = new Error(
-            'Calling PropTypes validators directly is not supported by the `prop-types` package. ' +
-            'Use `PropTypes.checkPropTypes()` to call them. ' +
-            'Read more at http://fb.me/use-check-prop-types'
-          );
-          err.name = 'Invariant Violation';
-          throw err;
-        } else if (process.env.NODE_ENV !== 'production' && typeof console !== 'undefined') {
-          // Old behavior for people using React.PropTypes
-          var cacheKey = componentName + ':' + propName;
-          if (
-            !manualPropTypeCallCache[cacheKey] &&
-            // Avoid spamming the console because they are often not actionable except for lib authors
-            manualPropTypeWarningCount < 3
-          ) {
-            printWarning$1(
-              'You are manually calling a React.PropTypes validation ' +
-              'function for the `' + propFullName + '` prop on `' + componentName  + '`. This is deprecated ' +
-              'and will throw in the standalone `prop-types` package. ' +
-              'You may be seeing this warning due to a third-party PropTypes ' +
-              'library. See https://fb.me/react-warning-dont-call-proptypes ' + 'for details.'
-            );
-            manualPropTypeCallCache[cacheKey] = true;
-            manualPropTypeWarningCount++;
-          }
-        }
-      }
-      if (props[propName] == null) {
-        if (isRequired) {
-          if (props[propName] === null) {
-            return new PropTypeError('The ' + location + ' `' + propFullName + '` is marked as required ' + ('in `' + componentName + '`, but its value is `null`.'));
-          }
-          return new PropTypeError('The ' + location + ' `' + propFullName + '` is marked as required in ' + ('`' + componentName + '`, but its value is `undefined`.'));
-        }
-        return null;
-      } else {
-        return validate(props, propName, componentName, location, propFullName);
-      }
-    }
-
-    var chainedCheckType = checkType.bind(null, false);
-    chainedCheckType.isRequired = checkType.bind(null, true);
-
-    return chainedCheckType;
-  }
-
-  function createPrimitiveTypeChecker(expectedType) {
-    function validate(props, propName, componentName, location, propFullName, secret) {
-      var propValue = props[propName];
-      var propType = getPropType(propValue);
-      if (propType !== expectedType) {
-        // `propValue` being instance of, say, date/regexp, pass the 'object'
-        // check, but we can offer a more precise error message here rather than
-        // 'of type `object`'.
-        var preciseType = getPreciseType(propValue);
-
-        return new PropTypeError('Invalid ' + location + ' `' + propFullName + '` of type ' + ('`' + preciseType + '` supplied to `' + componentName + '`, expected ') + ('`' + expectedType + '`.'));
-      }
-      return null;
-    }
-    return createChainableTypeChecker(validate);
-  }
-
-  function createAnyTypeChecker() {
-    return createChainableTypeChecker(emptyFunctionThatReturnsNull);
-  }
-
-  function createArrayOfTypeChecker(typeChecker) {
-    function validate(props, propName, componentName, location, propFullName) {
-      if (typeof typeChecker !== 'function') {
-        return new PropTypeError('Property `' + propFullName + '` of component `' + componentName + '` has invalid PropType notation inside arrayOf.');
-      }
-      var propValue = props[propName];
-      if (!Array.isArray(propValue)) {
-        var propType = getPropType(propValue);
-        return new PropTypeError('Invalid ' + location + ' `' + propFullName + '` of type ' + ('`' + propType + '` supplied to `' + componentName + '`, expected an array.'));
-      }
-      for (var i = 0; i < propValue.length; i++) {
-        var error = typeChecker(propValue, i, componentName, location, propFullName + '[' + i + ']', ReactPropTypesSecret_1);
-        if (error instanceof Error) {
-          return error;
-        }
-      }
-      return null;
-    }
-    return createChainableTypeChecker(validate);
-  }
-
-  function createElementTypeChecker() {
-    function validate(props, propName, componentName, location, propFullName) {
-      var propValue = props[propName];
-      if (!isValidElement(propValue)) {
-        var propType = getPropType(propValue);
-        return new PropTypeError('Invalid ' + location + ' `' + propFullName + '` of type ' + ('`' + propType + '` supplied to `' + componentName + '`, expected a single ReactElement.'));
-      }
-      return null;
-    }
-    return createChainableTypeChecker(validate);
-  }
-
-  function createElementTypeTypeChecker() {
-    function validate(props, propName, componentName, location, propFullName) {
-      var propValue = props[propName];
-      if (!reactIs.isValidElementType(propValue)) {
-        var propType = getPropType(propValue);
-        return new PropTypeError('Invalid ' + location + ' `' + propFullName + '` of type ' + ('`' + propType + '` supplied to `' + componentName + '`, expected a single ReactElement type.'));
-      }
-      return null;
-    }
-    return createChainableTypeChecker(validate);
-  }
-
-  function createInstanceTypeChecker(expectedClass) {
-    function validate(props, propName, componentName, location, propFullName) {
-      if (!(props[propName] instanceof expectedClass)) {
-        var expectedClassName = expectedClass.name || ANONYMOUS;
-        var actualClassName = getClassName(props[propName]);
-        return new PropTypeError('Invalid ' + location + ' `' + propFullName + '` of type ' + ('`' + actualClassName + '` supplied to `' + componentName + '`, expected ') + ('instance of `' + expectedClassName + '`.'));
-      }
-      return null;
-    }
-    return createChainableTypeChecker(validate);
-  }
-
-  function createEnumTypeChecker(expectedValues) {
-    if (!Array.isArray(expectedValues)) {
-      if (process.env.NODE_ENV !== 'production') {
-        if (arguments.length > 1) {
-          printWarning$1(
-            'Invalid arguments supplied to oneOf, expected an array, got ' + arguments.length + ' arguments. ' +
-            'A common mistake is to write oneOf(x, y, z) instead of oneOf([x, y, z]).'
-          );
-        } else {
-          printWarning$1('Invalid argument supplied to oneOf, expected an array.');
-        }
-      }
-      return emptyFunctionThatReturnsNull;
-    }
-
-    function validate(props, propName, componentName, location, propFullName) {
-      var propValue = props[propName];
-      for (var i = 0; i < expectedValues.length; i++) {
-        if (is(propValue, expectedValues[i])) {
-          return null;
-        }
-      }
-
-      var valuesString = JSON.stringify(expectedValues, function replacer(key, value) {
-        var type = getPreciseType(value);
-        if (type === 'symbol') {
-          return String(value);
-        }
-        return value;
-      });
-      return new PropTypeError('Invalid ' + location + ' `' + propFullName + '` of value `' + String(propValue) + '` ' + ('supplied to `' + componentName + '`, expected one of ' + valuesString + '.'));
-    }
-    return createChainableTypeChecker(validate);
-  }
-
-  function createObjectOfTypeChecker(typeChecker) {
-    function validate(props, propName, componentName, location, propFullName) {
-      if (typeof typeChecker !== 'function') {
-        return new PropTypeError('Property `' + propFullName + '` of component `' + componentName + '` has invalid PropType notation inside objectOf.');
-      }
-      var propValue = props[propName];
-      var propType = getPropType(propValue);
-      if (propType !== 'object') {
-        return new PropTypeError('Invalid ' + location + ' `' + propFullName + '` of type ' + ('`' + propType + '` supplied to `' + componentName + '`, expected an object.'));
-      }
-      for (var key in propValue) {
-        if (has$1(propValue, key)) {
-          var error = typeChecker(propValue, key, componentName, location, propFullName + '.' + key, ReactPropTypesSecret_1);
-          if (error instanceof Error) {
-            return error;
-          }
-        }
-      }
-      return null;
-    }
-    return createChainableTypeChecker(validate);
-  }
-
-  function createUnionTypeChecker(arrayOfTypeCheckers) {
-    if (!Array.isArray(arrayOfTypeCheckers)) {
-      process.env.NODE_ENV !== 'production' ? printWarning$1('Invalid argument supplied to oneOfType, expected an instance of array.') : void 0;
-      return emptyFunctionThatReturnsNull;
-    }
-
-    for (var i = 0; i < arrayOfTypeCheckers.length; i++) {
-      var checker = arrayOfTypeCheckers[i];
-      if (typeof checker !== 'function') {
-        printWarning$1(
-          'Invalid argument supplied to oneOfType. Expected an array of check functions, but ' +
-          'received ' + getPostfixForTypeWarning(checker) + ' at index ' + i + '.'
-        );
-        return emptyFunctionThatReturnsNull;
-      }
-    }
-
-    function validate(props, propName, componentName, location, propFullName) {
-      for (var i = 0; i < arrayOfTypeCheckers.length; i++) {
-        var checker = arrayOfTypeCheckers[i];
-        if (checker(props, propName, componentName, location, propFullName, ReactPropTypesSecret_1) == null) {
-          return null;
-        }
-      }
-
-      return new PropTypeError('Invalid ' + location + ' `' + propFullName + '` supplied to ' + ('`' + componentName + '`.'));
-    }
-    return createChainableTypeChecker(validate);
-  }
-
-  function createNodeChecker() {
-    function validate(props, propName, componentName, location, propFullName) {
-      if (!isNode(props[propName])) {
-        return new PropTypeError('Invalid ' + location + ' `' + propFullName + '` supplied to ' + ('`' + componentName + '`, expected a ReactNode.'));
-      }
-      return null;
-    }
-    return createChainableTypeChecker(validate);
-  }
-
-  function createShapeTypeChecker(shapeTypes) {
-    function validate(props, propName, componentName, location, propFullName) {
-      var propValue = props[propName];
-      var propType = getPropType(propValue);
-      if (propType !== 'object') {
-        return new PropTypeError('Invalid ' + location + ' `' + propFullName + '` of type `' + propType + '` ' + ('supplied to `' + componentName + '`, expected `object`.'));
-      }
-      for (var key in shapeTypes) {
-        var checker = shapeTypes[key];
-        if (!checker) {
-          continue;
-        }
-        var error = checker(propValue, key, componentName, location, propFullName + '.' + key, ReactPropTypesSecret_1);
-        if (error) {
-          return error;
-        }
-      }
-      return null;
-    }
-    return createChainableTypeChecker(validate);
-  }
-
-  function createStrictShapeTypeChecker(shapeTypes) {
-    function validate(props, propName, componentName, location, propFullName) {
-      var propValue = props[propName];
-      var propType = getPropType(propValue);
-      if (propType !== 'object') {
-        return new PropTypeError('Invalid ' + location + ' `' + propFullName + '` of type `' + propType + '` ' + ('supplied to `' + componentName + '`, expected `object`.'));
-      }
-      // We need to check all keys in case some are required but missing from
-      // props.
-      var allKeys = objectAssign({}, props[propName], shapeTypes);
-      for (var key in allKeys) {
-        var checker = shapeTypes[key];
-        if (!checker) {
-          return new PropTypeError(
-            'Invalid ' + location + ' `' + propFullName + '` key `' + key + '` supplied to `' + componentName + '`.' +
-            '\nBad object: ' + JSON.stringify(props[propName], null, '  ') +
-            '\nValid keys: ' +  JSON.stringify(Object.keys(shapeTypes), null, '  ')
-          );
-        }
-        var error = checker(propValue, key, componentName, location, propFullName + '.' + key, ReactPropTypesSecret_1);
-        if (error) {
-          return error;
-        }
-      }
-      return null;
-    }
-
-    return createChainableTypeChecker(validate);
-  }
-
-  function isNode(propValue) {
-    switch (typeof propValue) {
-      case 'number':
-      case 'string':
-      case 'undefined':
-        return true;
-      case 'boolean':
-        return !propValue;
-      case 'object':
-        if (Array.isArray(propValue)) {
-          return propValue.every(isNode);
-        }
-        if (propValue === null || isValidElement(propValue)) {
-          return true;
-        }
-
-        var iteratorFn = getIteratorFn(propValue);
-        if (iteratorFn) {
-          var iterator = iteratorFn.call(propValue);
-          var step;
-          if (iteratorFn !== propValue.entries) {
-            while (!(step = iterator.next()).done) {
-              if (!isNode(step.value)) {
-                return false;
-              }
-            }
-          } else {
-            // Iterator will provide entry [k,v] tuples rather than values.
-            while (!(step = iterator.next()).done) {
-              var entry = step.value;
-              if (entry) {
-                if (!isNode(entry[1])) {
-                  return false;
-                }
-              }
-            }
-          }
-        } else {
-          return false;
-        }
-
-        return true;
-      default:
-        return false;
-    }
-  }
-
-  function isSymbol(propType, propValue) {
-    // Native Symbol.
-    if (propType === 'symbol') {
-      return true;
-    }
-
-    // falsy value can't be a Symbol
-    if (!propValue) {
-      return false;
-    }
-
-    // 19.4.3.5 Symbol.prototype[@@toStringTag] === 'Symbol'
-    if (propValue['@@toStringTag'] === 'Symbol') {
-      return true;
-    }
-
-    // Fallback for non-spec compliant Symbols which are polyfilled.
-    if (typeof Symbol === 'function' && propValue instanceof Symbol) {
-      return true;
-    }
-
-    return false;
-  }
-
-  // Equivalent of `typeof` but with special handling for array and regexp.
-  function getPropType(propValue) {
-    var propType = typeof propValue;
-    if (Array.isArray(propValue)) {
-      return 'array';
-    }
-    if (propValue instanceof RegExp) {
-      // Old webkits (at least until Android 4.0) return 'function' rather than
-      // 'object' for typeof a RegExp. We'll normalize this here so that /bla/
-      // passes PropTypes.object.
-      return 'object';
-    }
-    if (isSymbol(propType, propValue)) {
-      return 'symbol';
-    }
-    return propType;
-  }
-
-  // This handles more types than `getPropType`. Only used for error messages.
-  // See `createPrimitiveTypeChecker`.
-  function getPreciseType(propValue) {
-    if (typeof propValue === 'undefined' || propValue === null) {
-      return '' + propValue;
-    }
-    var propType = getPropType(propValue);
-    if (propType === 'object') {
-      if (propValue instanceof Date) {
-        return 'date';
-      } else if (propValue instanceof RegExp) {
-        return 'regexp';
-      }
-    }
-    return propType;
-  }
-
-  // Returns a string that is postfixed to a warning about an invalid type.
-  // For example, "undefined" or "of type array"
-  function getPostfixForTypeWarning(value) {
-    var type = getPreciseType(value);
-    switch (type) {
-      case 'array':
-      case 'object':
-        return 'an ' + type;
-      case 'boolean':
-      case 'date':
-      case 'regexp':
-        return 'a ' + type;
-      default:
-        return type;
-    }
-  }
-
-  // Returns class name of the object, if any.
-  function getClassName(propValue) {
-    if (!propValue.constructor || !propValue.constructor.name) {
-      return ANONYMOUS;
-    }
-    return propValue.constructor.name;
-  }
-
-  ReactPropTypes.checkPropTypes = checkPropTypes_1;
-  ReactPropTypes.resetWarningCache = checkPropTypes_1.resetWarningCache;
-  ReactPropTypes.PropTypes = ReactPropTypes;
-
-  return ReactPropTypes;
-};
-
-function emptyFunction() {}
-function emptyFunctionWithReset() {}
-emptyFunctionWithReset.resetWarningCache = emptyFunction;
-
-var factoryWithThrowingShims = function() {
-  function shim(props, propName, componentName, location, propFullName, secret) {
-    if (secret === ReactPropTypesSecret_1) {
-      // It is still safe when called from React.
-      return;
-    }
-    var err = new Error(
-      'Calling PropTypes validators directly is not supported by the `prop-types` package. ' +
-      'Use PropTypes.checkPropTypes() to call them. ' +
-      'Read more at http://fb.me/use-check-prop-types'
-    );
-    err.name = 'Invariant Violation';
-    throw err;
-  }  shim.isRequired = shim;
-  function getShim() {
-    return shim;
-  }  // Important!
-  // Keep this list in sync with production version in `./factoryWithTypeCheckers.js`.
-  var ReactPropTypes = {
-    array: shim,
-    bool: shim,
-    func: shim,
-    number: shim,
-    object: shim,
-    string: shim,
-    symbol: shim,
-
-    any: shim,
-    arrayOf: getShim,
-    element: shim,
-    elementType: shim,
-    instanceOf: getShim,
-    node: shim,
-    objectOf: getShim,
-    oneOf: getShim,
-    oneOfType: getShim,
-    shape: getShim,
-    exact: getShim,
-
-    checkPropTypes: emptyFunctionWithReset,
-    resetWarningCache: emptyFunction
-  };
-
-  ReactPropTypes.PropTypes = ReactPropTypes;
-
-  return ReactPropTypes;
-};
-
-var propTypes = createCommonjsModule(function (module) {
-/**
- * Copyright (c) 2013-present, Facebook, Inc.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
- */
-
-if (process.env.NODE_ENV !== 'production') {
-  var ReactIs = reactIs;
-
-  // By explicitly using `prop-types` you are opting into new development behavior.
-  // http://fb.me/prop-types-in-prod
-  var throwOnDirectAccess = true;
-  module.exports = factoryWithTypeCheckers(ReactIs.isElement, throwOnDirectAccess);
-} else {
-  // By explicitly using `prop-types` you are opting into new production behavior.
-  // http://fb.me/prop-types-in-prod
-  module.exports = factoryWithThrowingShims();
-}
-});
-
 var functions = new Map();
 functions.set("string", isString);
 functions.set("boolean", isBool);
@@ -1369,49 +264,74 @@ functions.set("object", isObject);
 functions.set("number", isNumber);
 functions.set("array", isArray);
 functions.set("function", isFunc);
-function isString(props) {
+
+var TypePropsError = /*#__PURE__*/function (_TypeError) {
+  _inherits(TypePropsError, _TypeError);
+
+  var _super = _createSuper(TypePropsError);
+
+  function TypePropsError(message) {
+    var _this;
+
+    _classCallCheck(this, TypePropsError);
+
+    _this = _super.call(this, message); // (1)
+
+    _this.name = "Definition Error"; // (2)
+
+    return _this;
+  }
+
+  return TypePropsError;
+}( /*#__PURE__*/_wrapNativeSuper(TypeError));
+
+function isString(props, key, name) {
+  var output = true;
+
   if (props != undefined) {
-    if (typeof props != 'string') {
-      throw "Expect string but received " + _typeof(props);
+    if (typeof props !== 'string') {
+      throw new TypePropsError("Expect string but received " + _typeof(props) + " on prop " + key + " of component " + name);
+    }
+  }
+
+  return output;
+}
+function isBool(props, key, name) {
+  if (props != undefined) {
+    if (typeof props !== 'boolean') {
+      throw new TypePropsError("Expect boolean but received " + _typeof(props) + " on prop " + key + " of component " + name);
     }
   }
 }
-function isBool(props) {
-  if (props != undefined) {
-    if (typeof props != 'boolean') {
-      throw "Expect boolean but received " + _typeof(props);
-    }
-  }
-}
-function isObject(props) {
+function isObject(props, key, name) {
   if (props != undefined) {
     if (_typeof(props) != 'object') {
-      throw "Expect object but received " + _typeof(props);
+      throw new TypePropsError("Expect object but received " + _typeof(props) + " on prop " + key + " of component " + name);
     }
   }
 }
-function isNumber(props) {
+function isNumber(props, key, name) {
   if (props != undefined) {
     if (typeof props != 'number') {
-      throw "Expect number but received " + _typeof(props);
+      throw new TypePropsError("Expect number but received " + _typeof(props) + " on prop " + key + " of component " + name);
     }
   }
 }
-function isArray(props) {
+function isArray(props, key, name) {
   if (props != undefined) {
     if (!Array.isArray(props)) {
-      throw "Expect array but received " + _typeof(props);
+      throw new TypePropsError("Expect array but received " + _typeof(props) + " on prop " + key + " of component " + name);
     }
   }
 }
-function isFunc(props) {
+function isFunc(props, key, name) {
   if (props != undefined) {
     if (typeof props != 'function') {
-      throw "Expect function but received " + _typeof(props);
+      throw new TypePropsError("Expect function but received " + _typeof(props) + " on prop " + key + " of component " + name);
     }
   }
 }
-function validate(props, props_obj) {
+function validate(props, props_obj, name) {
   if (props != undefined && props_obj != undefined) {
     var keys = Object.keys(props_obj);
     var values = Object.values(props_obj);
@@ -1423,10 +343,12 @@ function validate(props, props_obj) {
       var funcao = functions.get(value);
 
       if (props[key] != undefined) {
-        funcao(props[key]);
+        funcao(props[key], key, name);
       }
     }
   }
+
+  return false;
 }
 
 var props_obj = {
@@ -1435,6 +357,7 @@ var props_obj = {
 };
 
 var BreadCrumb = function BreadCrumb(props) {
+  validate(props, props_obj, "BreadCrumb");
   var definition = props.definition == undefined ? "breadcrumb" : "breadcrumb " + props.definition;
   validate(props, props_obj);
   return /*#__PURE__*/React__default.createElement("nav", {
@@ -1472,25 +395,6 @@ function assembleSingleItem(item) {
   }, item["value"]));
 }
 
-BreadCrumb.propTypes = {
-  /*
-      Informa características do BreadCrumb inspiradas no 
-      Bulma
-  */
-  definition: propTypes.string,
-
-  /*  
-      Descrição:  Itens adicionados ao BreadCrumb
-      Estrutura: Tal array dever ser um array de objetos
-      Atributos suportados:
-      value = Valor que designado ao item
-      href:   Link para redirecionamento ao clicar no item
-      onClick: Evento customizado ao clicar no item
-      key: Chave única do item
-  */
-  itens: propTypes.array
-};
-
 var props_obj$1 = {
   disabled: 'boolean',
   delete: 'boolean',
@@ -1500,28 +404,26 @@ var props_obj$1 = {
 };
 
 var Button = function Button(props) {
+  validate(props, props_obj$1, "Button");
   var definition = getDefinition(props);
-  validate(props, props_obj$1);
   return /*#__PURE__*/React.createElement("button", _extends({}, props.custom, {
-    disabled: props.disabled == true ? true : false,
+    disabled: props.disabled === true ? true : false,
     className: definition,
     onClick: props.onClick
-  }), props.children);
+  }), props.label);
 };
 
 function getDefinition(props) {
   var definition = "";
 
-  if (props.delete == true) {
+  if (props.delete === true) {
     definition = "delete";
   } else {
-    definition = props.definition == undefined ? "button" : "button " + props.definition;
+    definition = props.definition === undefined ? "button" : "button " + props.definition;
   }
 
   return definition;
 }
-
-Button.propTypes = {};
 
 var props_obj$2 = {
   definition: "string",
@@ -1534,6 +436,7 @@ var ButtonList = function ButtonList(props) {
 };
 
 function assembleButtonList(props) {
+  validate(props, props_obj$2, "ButtonList");
   var code_icon = "";
   var definition = props.definition == undefined ? "buttons" : "buttons " + props.definition;
 
@@ -1556,22 +459,21 @@ function assembleButtonList(props) {
   return code_icon;
 }
 
-ButtonList.propTypes = {
-  definition: propTypes.string,
-  field: propTypes.bool
+var props_obj$3 = {
+  definition: 'string',
+  image_definition: 'string',
+  src: 'string'
 };
 
 var Image = function Image(props) {
+  validate(props, props_obj$3, "Image");
+  var definition = props.definition == undefined ? "image" : "image " + props.definition;
   return /*#__PURE__*/React__default.createElement("figure", {
-    className: props.definition
+    className: definition
   }, /*#__PURE__*/React__default.createElement("img", {
+    className: props.image_definition,
     src: props.src
   }));
-};
-
-Image.propTypes = {
-  definition: propTypes.string.isRequired,
-  src: propTypes.string.isRequired
 };
 
 /*!
@@ -1632,26 +534,30 @@ node.removeChild(alreadyProcessedPseudoElement);return resolve();}else if(fontFa
 if(iconName&&(!alreadyProcessedPseudoElement||alreadyProcessedPseudoElement.getAttribute(DATA_PREFIX)!==prefix||alreadyProcessedPseudoElement.getAttribute(DATA_ICON)!==iconIdentifier)){node.setAttribute(pendingAttribute,iconIdentifier);if(alreadyProcessedPseudoElement){// Delete the old one, since we're replacing it with a new one
 node.removeChild(alreadyProcessedPseudoElement);}var meta=blankMeta();var extra=meta.extra;extra.attributes[DATA_FA_PSEUDO_ELEMENT]=position;findIcon(iconName,prefix).then(function(main){var abstract=makeInlineSvgAbstract(_objectSpread({},meta,{icons:{main:main,mask:emptyCanonicalIcon()},prefix:prefix,iconName:iconIdentifier,extra:extra,watchable:true}));var element=DOCUMENT.createElement('svg');if(position===':before'){node.insertBefore(element,node.firstChild);}else {node.appendChild(element);}element.outerHTML=abstract.map(function(a){return toHtml(a);}).join('\n');node.removeAttribute(pendingAttribute);resolve();}).catch(reject);}else {resolve();}}else {resolve();}});}function replace(node){return picked.all([replaceForPosition(node,':before'),replaceForPosition(node,':after')]);}function processable(node){return node.parentNode!==document.head&&!~TAGNAMES_TO_SKIP_FOR_PSEUDOELEMENTS.indexOf(node.tagName.toUpperCase())&&!node.getAttribute(DATA_FA_PSEUDO_ELEMENT)&&(!node.parentNode||node.parentNode.tagName!=='svg');}function searchPseudoElements(root){if(!IS_DOM)return;return new picked(function(resolve,reject){var operations=toArray(root.querySelectorAll('*')).filter(processable).map(replace);var end=perf.begin('searchPseudoElements');disableObservation();picked.all(operations).then(function(){end();enableObservation();resolve();}).catch(function(){end();enableObservation();reject();});});}var baseStyles="svg:not(:root).svg-inline--fa{overflow:visible}.svg-inline--fa{display:inline-block;font-size:inherit;height:1em;overflow:visible;vertical-align:-.125em}.svg-inline--fa.fa-lg{vertical-align:-.225em}.svg-inline--fa.fa-w-1{width:.0625em}.svg-inline--fa.fa-w-2{width:.125em}.svg-inline--fa.fa-w-3{width:.1875em}.svg-inline--fa.fa-w-4{width:.25em}.svg-inline--fa.fa-w-5{width:.3125em}.svg-inline--fa.fa-w-6{width:.375em}.svg-inline--fa.fa-w-7{width:.4375em}.svg-inline--fa.fa-w-8{width:.5em}.svg-inline--fa.fa-w-9{width:.5625em}.svg-inline--fa.fa-w-10{width:.625em}.svg-inline--fa.fa-w-11{width:.6875em}.svg-inline--fa.fa-w-12{width:.75em}.svg-inline--fa.fa-w-13{width:.8125em}.svg-inline--fa.fa-w-14{width:.875em}.svg-inline--fa.fa-w-15{width:.9375em}.svg-inline--fa.fa-w-16{width:1em}.svg-inline--fa.fa-w-17{width:1.0625em}.svg-inline--fa.fa-w-18{width:1.125em}.svg-inline--fa.fa-w-19{width:1.1875em}.svg-inline--fa.fa-w-20{width:1.25em}.svg-inline--fa.fa-pull-left{margin-right:.3em;width:auto}.svg-inline--fa.fa-pull-right{margin-left:.3em;width:auto}.svg-inline--fa.fa-border{height:1.5em}.svg-inline--fa.fa-li{width:2em}.svg-inline--fa.fa-fw{width:1.25em}.fa-layers svg.svg-inline--fa{bottom:0;left:0;margin:auto;position:absolute;right:0;top:0}.fa-layers{display:inline-block;height:1em;position:relative;text-align:center;vertical-align:-.125em;width:1em}.fa-layers svg.svg-inline--fa{-webkit-transform-origin:center center;transform-origin:center center}.fa-layers-counter,.fa-layers-text{display:inline-block;position:absolute;text-align:center}.fa-layers-text{left:50%;top:50%;-webkit-transform:translate(-50%,-50%);transform:translate(-50%,-50%);-webkit-transform-origin:center center;transform-origin:center center}.fa-layers-counter{background-color:#ff253a;border-radius:1em;-webkit-box-sizing:border-box;box-sizing:border-box;color:#fff;height:1.5em;line-height:1;max-width:5em;min-width:1.5em;overflow:hidden;padding:.25em;right:0;text-overflow:ellipsis;top:0;-webkit-transform:scale(.25);transform:scale(.25);-webkit-transform-origin:top right;transform-origin:top right}.fa-layers-bottom-right{bottom:0;right:0;top:auto;-webkit-transform:scale(.25);transform:scale(.25);-webkit-transform-origin:bottom right;transform-origin:bottom right}.fa-layers-bottom-left{bottom:0;left:0;right:auto;top:auto;-webkit-transform:scale(.25);transform:scale(.25);-webkit-transform-origin:bottom left;transform-origin:bottom left}.fa-layers-top-right{right:0;top:0;-webkit-transform:scale(.25);transform:scale(.25);-webkit-transform-origin:top right;transform-origin:top right}.fa-layers-top-left{left:0;right:auto;top:0;-webkit-transform:scale(.25);transform:scale(.25);-webkit-transform-origin:top left;transform-origin:top left}.fa-lg{font-size:1.3333333333em;line-height:.75em;vertical-align:-.0667em}.fa-xs{font-size:.75em}.fa-sm{font-size:.875em}.fa-1x{font-size:1em}.fa-2x{font-size:2em}.fa-3x{font-size:3em}.fa-4x{font-size:4em}.fa-5x{font-size:5em}.fa-6x{font-size:6em}.fa-7x{font-size:7em}.fa-8x{font-size:8em}.fa-9x{font-size:9em}.fa-10x{font-size:10em}.fa-fw{text-align:center;width:1.25em}.fa-ul{list-style-type:none;margin-left:2.5em;padding-left:0}.fa-ul>li{position:relative}.fa-li{left:-2em;position:absolute;text-align:center;width:2em;line-height:inherit}.fa-border{border:solid .08em #eee;border-radius:.1em;padding:.2em .25em .15em}.fa-pull-left{float:left}.fa-pull-right{float:right}.fa.fa-pull-left,.fab.fa-pull-left,.fal.fa-pull-left,.far.fa-pull-left,.fas.fa-pull-left{margin-right:.3em}.fa.fa-pull-right,.fab.fa-pull-right,.fal.fa-pull-right,.far.fa-pull-right,.fas.fa-pull-right{margin-left:.3em}.fa-spin{-webkit-animation:fa-spin 2s infinite linear;animation:fa-spin 2s infinite linear}.fa-pulse{-webkit-animation:fa-spin 1s infinite steps(8);animation:fa-spin 1s infinite steps(8)}@-webkit-keyframes fa-spin{0%{-webkit-transform:rotate(0);transform:rotate(0)}100%{-webkit-transform:rotate(360deg);transform:rotate(360deg)}}@keyframes fa-spin{0%{-webkit-transform:rotate(0);transform:rotate(0)}100%{-webkit-transform:rotate(360deg);transform:rotate(360deg)}}.fa-rotate-90{-webkit-transform:rotate(90deg);transform:rotate(90deg)}.fa-rotate-180{-webkit-transform:rotate(180deg);transform:rotate(180deg)}.fa-rotate-270{-webkit-transform:rotate(270deg);transform:rotate(270deg)}.fa-flip-horizontal{-webkit-transform:scale(-1,1);transform:scale(-1,1)}.fa-flip-vertical{-webkit-transform:scale(1,-1);transform:scale(1,-1)}.fa-flip-both,.fa-flip-horizontal.fa-flip-vertical{-webkit-transform:scale(-1,-1);transform:scale(-1,-1)}:root .fa-flip-both,:root .fa-flip-horizontal,:root .fa-flip-vertical,:root .fa-rotate-180,:root .fa-rotate-270,:root .fa-rotate-90{-webkit-filter:none;filter:none}.fa-stack{display:inline-block;height:2em;position:relative;width:2.5em}.fa-stack-1x,.fa-stack-2x{bottom:0;left:0;margin:auto;position:absolute;right:0;top:0}.svg-inline--fa.fa-stack-1x{height:1em;width:1.25em}.svg-inline--fa.fa-stack-2x{height:2em;width:2.5em}.fa-inverse{color:#fff}.sr-only{border:0;clip:rect(0,0,0,0);height:1px;margin:-1px;overflow:hidden;padding:0;position:absolute;width:1px}.sr-only-focusable:active,.sr-only-focusable:focus{clip:auto;height:auto;margin:0;overflow:visible;position:static;width:auto}.svg-inline--fa .fa-primary{fill:var(--fa-primary-color,currentColor);opacity:1;opacity:var(--fa-primary-opacity,1)}.svg-inline--fa .fa-secondary{fill:var(--fa-secondary-color,currentColor);opacity:.4;opacity:var(--fa-secondary-opacity,.4)}.svg-inline--fa.fa-swap-opacity .fa-primary{opacity:.4;opacity:var(--fa-secondary-opacity,.4)}.svg-inline--fa.fa-swap-opacity .fa-secondary{opacity:1;opacity:var(--fa-primary-opacity,1)}.svg-inline--fa mask .fa-primary,.svg-inline--fa mask .fa-secondary{fill:#000}.fad.fa-inverse{color:#fff}";function css(){var dfp=DEFAULT_FAMILY_PREFIX;var drc=DEFAULT_REPLACEMENT_CLASS;var fp=config.familyPrefix;var rc=config.replacementClass;var s=baseStyles;if(fp!==dfp||rc!==drc){var dPatt=new RegExp("\\.".concat(dfp,"\\-"),'g');var customPropPatt=new RegExp("\\--".concat(dfp,"\\-"),'g');var rPatt=new RegExp("\\.".concat(drc),'g');s=s.replace(dPatt,".".concat(fp,"-")).replace(customPropPatt,"--".concat(fp,"-")).replace(rPatt,".".concat(rc));}return s;}var Library=/*#__PURE__*/function(){function Library(){_classCallCheck(this,Library);this.definitions={};}_createClass(Library,[{key:"add",value:function add(){var _this=this;for(var _len=arguments.length,definitions=new Array(_len),_key=0;_key<_len;_key++){definitions[_key]=arguments[_key];}var additions=definitions.reduce(this._pullDefinitions,{});Object.keys(additions).forEach(function(key){_this.definitions[key]=_objectSpread({},_this.definitions[key]||{},additions[key]);defineIcons(key,additions[key]);build();});}},{key:"reset",value:function reset(){this.definitions={};}},{key:"_pullDefinitions",value:function _pullDefinitions(additions,definition){var normalized=definition.prefix&&definition.iconName&&definition.icon?{0:definition}:definition;Object.keys(normalized).map(function(key){var _normalized$key=normalized[key],prefix=_normalized$key.prefix,iconName=_normalized$key.iconName,icon=_normalized$key.icon;if(!additions[prefix])additions[prefix]={};additions[prefix][iconName]=icon;});return additions;}}]);return Library;}();function ensureCss(){if(config.autoAddCss&&!_cssInserted){insertCss(css());_cssInserted=true;}}function apiObject(val,abstractCreator){Object.defineProperty(val,'abstract',{get:abstractCreator});Object.defineProperty(val,'html',{get:function get(){return val.abstract.map(function(a){return toHtml(a);});}});Object.defineProperty(val,'node',{get:function get(){if(!IS_DOM)return;var container=DOCUMENT.createElement('div');container.innerHTML=val.html;return container.children;}});return val;}function findIconDefinition(iconLookup){var _iconLookup$prefix=iconLookup.prefix,prefix=_iconLookup$prefix===void 0?'fa':_iconLookup$prefix,iconName=iconLookup.iconName;if(!iconName)return;return iconFromMapping(library.definitions,prefix,iconName)||iconFromMapping(namespace.styles,prefix,iconName);}function resolveIcons(next){return function(maybeIconDefinition){var params=arguments.length>1&&arguments[1]!==undefined?arguments[1]:{};var iconDefinition=(maybeIconDefinition||{}).icon?maybeIconDefinition:findIconDefinition(maybeIconDefinition||{});var mask=params.mask;if(mask){mask=(mask||{}).icon?mask:findIconDefinition(mask||{});}return next(iconDefinition,_objectSpread({},params,{mask:mask}));};}var library=new Library();var noAuto=function noAuto(){config.autoReplaceSvg=false;config.observeMutations=false;disconnect();};var _cssInserted=false;var dom={i2svg:function i2svg(){var params=arguments.length>0&&arguments[0]!==undefined?arguments[0]:{};if(IS_DOM){ensureCss();var _params$node=params.node,node=_params$node===void 0?DOCUMENT:_params$node,_params$callback=params.callback,callback=_params$callback===void 0?function(){}:_params$callback;if(config.searchPseudoElements){searchPseudoElements(node);}return onTree(node,callback);}else {return picked.reject('Operation requires a DOM of some kind.');}},css:css,insertCss:function insertCss$$1(){if(!_cssInserted){insertCss(css());_cssInserted=true;}},watch:function watch(){var params=arguments.length>0&&arguments[0]!==undefined?arguments[0]:{};var autoReplaceSvgRoot=params.autoReplaceSvgRoot,observeMutationsRoot=params.observeMutationsRoot;if(config.autoReplaceSvg===false){config.autoReplaceSvg=true;}config.observeMutations=true;domready(function(){autoReplace({autoReplaceSvgRoot:autoReplaceSvgRoot});observe({treeCallback:onTree,nodeCallback:onNode,pseudoElementsCallback:searchPseudoElements,observeMutationsRoot:observeMutationsRoot});});}};var parse={transform:function transform(transformString){return parseTransformString(transformString);}};var icon=resolveIcons(function(iconDefinition){var params=arguments.length>1&&arguments[1]!==undefined?arguments[1]:{};var _params$transform=params.transform,transform=_params$transform===void 0?meaninglessTransform:_params$transform,_params$symbol=params.symbol,symbol=_params$symbol===void 0?false:_params$symbol,_params$mask=params.mask,mask=_params$mask===void 0?null:_params$mask,_params$title=params.title,title=_params$title===void 0?null:_params$title,_params$classes=params.classes,classes=_params$classes===void 0?[]:_params$classes,_params$attributes=params.attributes,attributes=_params$attributes===void 0?{}:_params$attributes,_params$styles=params.styles,styles=_params$styles===void 0?{}:_params$styles;if(!iconDefinition)return;var prefix=iconDefinition.prefix,iconName=iconDefinition.iconName,icon=iconDefinition.icon;return apiObject(_objectSpread({type:'icon'},iconDefinition),function(){ensureCss();if(config.autoA11y){if(title){attributes['aria-labelledby']="".concat(config.replacementClass,"-title-").concat(nextUniqueId());}else {attributes['aria-hidden']='true';attributes['focusable']='false';}}return makeInlineSvgAbstract({icons:{main:asFoundIcon(icon),mask:mask?asFoundIcon(mask.icon):{found:false,width:null,height:null,icon:{}}},prefix:prefix,iconName:iconName,transform:_objectSpread({},meaninglessTransform,transform),symbol:symbol,title:title,extra:{attributes:attributes,styles:styles,classes:classes}});});});var text=function text(content){var params=arguments.length>1&&arguments[1]!==undefined?arguments[1]:{};var _params$transform2=params.transform,transform=_params$transform2===void 0?meaninglessTransform:_params$transform2,_params$title2=params.title,title=_params$title2===void 0?null:_params$title2,_params$classes2=params.classes,classes=_params$classes2===void 0?[]:_params$classes2,_params$attributes2=params.attributes,attributes=_params$attributes2===void 0?{}:_params$attributes2,_params$styles2=params.styles,styles=_params$styles2===void 0?{}:_params$styles2;return apiObject({type:'text',content:content},function(){ensureCss();return makeLayersTextAbstract({content:content,transform:_objectSpread({},meaninglessTransform,transform),title:title,extra:{attributes:attributes,styles:styles,classes:["".concat(config.familyPrefix,"-layers-text")].concat(_toConsumableArray(classes))}});});};var counter=function counter(content){var params=arguments.length>1&&arguments[1]!==undefined?arguments[1]:{};var _params$title3=params.title,title=_params$title3===void 0?null:_params$title3,_params$classes3=params.classes,classes=_params$classes3===void 0?[]:_params$classes3,_params$attributes3=params.attributes,attributes=_params$attributes3===void 0?{}:_params$attributes3,_params$styles3=params.styles,styles=_params$styles3===void 0?{}:_params$styles3;return apiObject({type:'counter',content:content},function(){ensureCss();return makeLayersCounterAbstract({content:content.toString(),title:title,extra:{attributes:attributes,styles:styles,classes:["".concat(config.familyPrefix,"-layers-counter")].concat(_toConsumableArray(classes))}});});};var layer=function layer(assembler){var params=arguments.length>1&&arguments[1]!==undefined?arguments[1]:{};var _params$classes4=params.classes,classes=_params$classes4===void 0?[]:_params$classes4;return apiObject({type:'layer'},function(){ensureCss();var children=[];assembler(function(args){Array.isArray(args)?args.map(function(a){children=children.concat(a.abstract);}):children=children.concat(args.abstract);});return [{tag:'span',attributes:{class:["".concat(config.familyPrefix,"-layers")].concat(_toConsumableArray(classes)).join(' ')},children:children}];});};var api={noAuto:noAuto,config:config,dom:dom,library:library,parse:parse,findIconDefinition:findIconDefinition,icon:icon,text:text,counter:counter,layer:layer,toHtml:toHtml};var autoReplace=function autoReplace(){var params=arguments.length>0&&arguments[0]!==undefined?arguments[0]:{};var _params$autoReplaceSv=params.autoReplaceSvgRoot,autoReplaceSvgRoot=_params$autoReplaceSv===void 0?DOCUMENT:_params$autoReplaceSv;if((Object.keys(namespace.styles).length>0||config.autoFetchSvg)&&IS_DOM&&config.autoReplaceSvg)api.dom.i2svg({node:autoReplaceSvgRoot});};function bootstrap(){if(IS_BROWSER){if(!WINDOW.FontAwesome){WINDOW.FontAwesome=api;}domready(function(){autoReplace();observe({treeCallback:onTree,nodeCallback:onNode,pseudoElementsCallback:searchPseudoElements});});}namespace.hooks=_objectSpread({},namespace.hooks,{addPack:function addPack(prefix,icons){namespace.styles[prefix]=_objectSpread({},namespace.styles[prefix]||{},icons);build();autoReplace();},addShims:function addShims(shims){var _namespace$shims;(_namespace$shims=namespace.shims).push.apply(_namespace$shims,_toConsumableArray(shims));build();autoReplace();}});}bunker(bootstrap);})();
 
-var props_obj$3 = {
+var props_obj$4 = {
   definition: "string",
-  icon_right: "boolean",
+  right: "boolean",
   onClick: "function",
   icon_name: "string"
 };
 
 var Icon = function Icon(props) {
-  validate(props, props_obj$3);
+  validate(props, props_obj$4, "Icon");
   var definition = props.definition == undefined ? "icon" : "icon " + props.definition;
-  return /*#__PURE__*/React.createElement(React.Fragment, null, (props.icon_right == false || props.icon_right == undefined) && /*#__PURE__*/React.createElement("span", null, props.children), /*#__PURE__*/React.createElement("span", {
+  return /*#__PURE__*/React.createElement(React.Fragment, null, props.right == false || props.right == undefined ? /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement("span", {
     onClick: props.onClick,
     className: definition
   }, /*#__PURE__*/React.createElement("i", {
-    className: props.icon_name,
-    "aria-hidden": "true"
-  })), props.icon_right == true && /*#__PURE__*/React.createElement("span", null, props.children));
+    className: props.icon_name
+  })), /*#__PURE__*/React.createElement("span", null, props.children)) : /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement("span", null, props.children), /*#__PURE__*/React.createElement("span", {
+    onClick: props.onClick,
+    className: definition
+  }, /*#__PURE__*/React.createElement("i", {
+    className: props.icon_name
+  }))));
 };
 
-var props_obj$4 = {
+var props_obj$5 = {
   title: "string",
   title_definition: "string",
   definition: "string",
@@ -1667,18 +573,12 @@ var props_obj$4 = {
 };
 
 var Card = function Card(props) {
-  // se title for undefined não tem motivo para criar header
-  // se src for undefined não tem motivo para criar card image
-  // se itens_footer for undefined não tem pq criar footer
-  validate(props, props_obj$4);
+  validate(props, props_obj$5, "Card");
   var definition = props.definition == undefined ? "card" : "card " + props.definition;
   return /*#__PURE__*/React.createElement("div", {
     className: definition
   }, assembleHeader(props), props.src != undefined && assembleCardImage(props), assembleContent(props), props.itens_footer != undefined && assembleFooter(props));
-}; //  Essa função server para adicionar uma propriedade de customização do header de Card
-// Com ela é possível tanto usar o Header Padrão, como informar seu próprio componente para header
-// através da props custom.header;
-
+};
 
 function assembleHeader(props) {
   var header = /*#__PURE__*/React.createElement(React.Fragment, null);
@@ -1692,9 +592,7 @@ function assembleHeader(props) {
   }
 
   return header;
-} // title: Testando,  icon_name: "fas fa-angle-down", icon_definition: "info", href
-// expandido para diversos tipos de valores
-
+}
 
 function assembleHeaderDefault(props) {
   var header_definition = props.header_definition == undefined ? "card-header" : "card-header " + props.header_definition;
@@ -1718,9 +616,7 @@ function assembleHeaderCustom(props) {
   return /*#__PURE__*/React.createElement("header", {
     className: header_definition
   }, props.custom_header);
-} // src(props):  image_definition(props): 
-// Limite de uma imagem
-
+}
 
 function assembleCardImage(props) {
   var card_image_definition = props.card_image_definition == undefined ? "card-image" : "card-image " + props.card_image_definition;
@@ -1730,16 +626,13 @@ function assembleCardImage(props) {
     definition: props.image_definition,
     src: props.src
   }));
-} // content
-
+}
 
 function assembleContent(props) {
   return /*#__PURE__*/React.createElement("div", {
     className: "card-content "
   }, props.children);
-} // itens_footer(props) footer_definition
-// Limitado apenas nessa formado de lista
-
+}
 
 function assembleFooter(props) {
   var footer_definition = props.footer_definition == undefined ? "card-footer" : "card-footer " + props.footer_definition;
@@ -1767,31 +660,16 @@ function assembleItemFooter(item) {
   }, item["value"]));
 }
 
-Card.propTypes = {
-  title: propTypes.string,
-  header_definition: propTypes.string,
-  card_header_definition: propTypes.string,
-  content_definition: propTypes.string,
-  itens_footer: propTypes.array,
-  footer_definition: propTypes.string,
-  image_definition: propTypes.string,
-  src: propTypes.string,
-  icon_definition: propTypes.string,
-  icon_name: propTypes.string,
-  card_image_definition: propTypes.string,
-  custom_header: propTypes.any,
-  definition: propTypes.string
-};
-
-var props_obj$5 = {
+var props_obj$6 = {
   disabled: 'boolean',
   onClick: 'function'
 };
 
 var CheckBox = function CheckBox(props) {
-  validate(props, props_obj$5);
+  validate(props, props_obj$6, "CheckBox");
+  var definition = props.definition == undefined ? "checkbox" : "checkbox " + props.definition;
   return /*#__PURE__*/React__default.createElement("label", {
-    className: "checkbox",
+    className: definition,
     disabled: props.disabled
   }, /*#__PURE__*/React__default.createElement("input", {
     type: "checkbox",
@@ -1800,52 +678,24 @@ var CheckBox = function CheckBox(props) {
   }), props.children);
 };
 
-CheckBox.propTypes = {
-  // Caso seja informado true, o check será desabilitado
-  // Caso não seja informado (undefined) ou seja false, não será desabilitado
-  // Default : undefined
-  disabled: propTypes.bool,
-  // Evento disparado ao selecionar o check
-  onClick: propTypes.func
-};
-
-/**
- * Componente inspirado na classe column do bulma
- * Utilizado como filho do componente Columns
- * Possui filhos, pois funciona como um container para outros
- * elementos
- * Sem eventos
- */
-
-var props_obj$6 = {
+var props_obj$7 = {
   definition: "string"
 };
 
 var Column = function Column(props) {
-  validate(props, props_obj$6);
+  validate(props, props_obj$7, "Column");
   var definition = props.definition == undefined ? "column" : "column " + props.definition;
   return /*#__PURE__*/React.createElement("div", {
     className: definition
   }, props.children);
 };
 
-Column.propTypes = {
-  // características do bulma para a coluna
-  definition: propTypes.string
-};
-
-/**
- *  Funciona como um container para Column
- *  Baseado na classe Columns do Bulma
- *  Sem eventos
- */
-
-var props_obj$7 = {
+var props_obj$8 = {
   definition: 'string'
 };
 
 var Columns = function Columns(props) {
-  validate(props, props_obj$7);
+  validate(props, props_obj$8, "Columns");
   var definition = props.definition == undefined ? "columns" : "columns " + props.definition;
   return /*#__PURE__*/React.createElement("div", {
     className: definition
@@ -1854,24 +704,25 @@ var Columns = function Columns(props) {
   }));
 };
 
-Columns.propTypes = {
-  definition: propTypes.string
-};
-
-var props_obj$8 = {
+var props_obj$9 = {
   definition: 'string'
 };
 
 var Content = function Content(props) {
-  validate(props, props_obj$8);
+  validate(props, props_obj$9, "Content");
   var definition = props.definition == undefined ? "content" : "content " + props.definition;
   return /*#__PURE__*/React.createElement("div", {
-    class: definition
+    className: definition
   }, props.children);
 };
 
+var props_obj$a = {
+  definition: 'string'
+};
+
 var Control = function Control(props) {
-  var definition = props.definition == undefined || props.definition == '' ? "control icons-left" : "control " + props.definition;
+  validate(props, props_obj$a, "Control");
+  var definition = props.definition == undefined || props.definition == '' ? "control" : "control " + props.definition;
   return /*#__PURE__*/React.createElement("div", {
     className: definition
   }, React.Children.map(props.children, function (child, i) {
@@ -1879,37 +730,30 @@ var Control = function Control(props) {
   }));
 };
 
-Control.propTypes = {
-  definition: propTypes.string
-};
-
-var props_obj$9 = {
+var props_obj$b = {
   definition: 'string',
   itens: 'array',
   onClick: 'function'
 };
 
 var DropDown = function DropDown(props) {
-  validate(props, props_obj$9);
+  validate(props, props_obj$b, "DropDown");
   var definition = props.definition == undefined ? "dropdown" : "dropdown " + props.definition;
   return /*#__PURE__*/React.createElement("div", {
     className: definition
   }, /*#__PURE__*/React.createElement("div", {
     class: "dropdown-trigger"
   }, extractButton(props.itens, props.onClick)), /*#__PURE__*/React.createElement("div", {
-    class: "dropdown-menu",
-    id: "dropdown-menu",
-    role: "menu"
+    class: "dropdown-menu"
   }, /*#__PURE__*/React.createElement("div", {
     class: "dropdown-content"
   }, assemble$1(props.itens))));
-}; // Monta um botão a partir do primeiro item da lista
-
+};
 
 function extractButton(itens, onClick) {
   var name = "";
   var icon_name = "";
-  var icon_definition = ""; // extrai o primeiro item da lista que foi informada como props
+  var icon_definition = "";
 
   if (itens != undefined && Array.isArray(itens)) {
     if (itens[0] != undefined) {
@@ -1918,23 +762,26 @@ function extractButton(itens, onClick) {
       icon_name = item["icon_name"];
     }
   }
-  /**
-   * Funcionamento da renderização condicional
-   * Se o nome do icone não é indefinido ou vazio, é usado o icone default para o dropdown
-   * Senão, signigica que foi informado um nome para o icone, então é usado o que foi passado
-   */
 
+  var label = "";
+
+  if (icon_name != undefined && icon_name != '') {
+    label = /*#__PURE__*/React.createElement(Icon, {
+      icon_name: icon_name,
+      right: true
+    }, name);
+  } else {
+    label = /*#__PURE__*/React.createElement(Icon, {
+      icon_name: "fas fa-angle-down",
+      definition: icon_definition,
+      right: true
+    }, name);
+  }
 
   return /*#__PURE__*/React.createElement(Button, {
-    onClick: onClick
-  }, icon_name != undefined && icon_name != '' ? /*#__PURE__*/React.createElement(Icon, {
-    icon_name: icon_name,
-    icon_right: true
-  }, name) : /*#__PURE__*/React.createElement(Icon, {
-    icon_name: "fas fa-angle-down",
-    definition: icon_definition,
-    icon_right: true
-  }, name));
+    onClick: onClick,
+    label: label
+  });
 }
 
 function assemble$1(itens) {
@@ -1979,13 +826,7 @@ function assembleComponentsItens(item) {
   }, item["value"]);
 }
 
-DropDown.propTypes = {
-  definition: propTypes.string,
-  itens: propTypes.array,
-  onClick: propTypes.func
-};
-
-var props_obj$a = {
+var props_obj$c = {
   definition: "string",
   type: "string",
   placeholder: "string",
@@ -1996,7 +837,7 @@ var props_obj$a = {
 };
 
 var Input = function Input(props) {
-  validate(props, props_obj$a);
+  validate(props, props_obj$c, "Input");
   return assemble$2(props);
 };
 
@@ -2030,9 +871,7 @@ function assembleInput(props) {
 
   if (props.disabled) {
     if (props.readonly) {
-      input_code = /*#__PURE__*/React__default.createElement("div", {
-        className: "control"
-      }, /*#__PURE__*/React__default.createElement("input", {
+      input_code = /*#__PURE__*/React__default.createElement(Control, null, /*#__PURE__*/React__default.createElement("input", {
         onChange: props.onChangeEvent,
         className: definition,
         type: props.type,
@@ -2042,9 +881,7 @@ function assembleInput(props) {
         readonly: true
       }));
     } else {
-      input_code = /*#__PURE__*/React__default.createElement("div", {
-        className: "control"
-      }, /*#__PURE__*/React__default.createElement("input", {
+      input_code = /*#__PURE__*/React__default.createElement(Control, null, /*#__PURE__*/React__default.createElement("input", {
         onChange: props.onChangeEvent,
         className: definition,
         type: props.type,
@@ -2054,9 +891,7 @@ function assembleInput(props) {
       }));
     }
   } else {
-    input_code = /*#__PURE__*/React__default.createElement("div", {
-      className: "control"
-    }, /*#__PURE__*/React__default.createElement("input", {
+    input_code = /*#__PURE__*/React__default.createElement(Control, null, /*#__PURE__*/React__default.createElement("input", {
       onChange: props.onChangeEvent,
       className: definition,
       type: props.type,
@@ -2068,16 +903,7 @@ function assembleInput(props) {
   return input_code;
 }
 
-Input.propTypes = {
-  definition: propTypes.string.isRequired,
-  type: propTypes.string.isRequired,
-  placeholder: propTypes.string,
-  value: propTypes.string,
-  readonly: propTypes.bool,
-  onChangeEvent: propTypes.func
-};
-
-var props_obj$b = {
+var props_obj$d = {
   label: "string",
   control_definition: "string",
   input_definition: "string",
@@ -2090,7 +916,7 @@ var props_obj$b = {
 };
 
 var Field = function Field(props) {
-  validate(props, props_obj$b);
+  validate(props, props_obj$d, "Field");
   return /*#__PURE__*/React__default.createElement("div", {
     className: "field"
   }, /*#__PURE__*/React__default.createElement("label", {
@@ -2135,62 +961,12 @@ function assembleIcon(props) {
   return code;
 }
 
-Field.propTypes = {
-  /*
-  Nome do rótulo que irá aparecer sobre o 
-  input
-  */
-  label: propTypes.string,
-
-  /*
-  definition do componente control,
-  qual característica pré-defininada do 
-  componente, é desejada que apareça no 
-  componente Field.
-  */
-  control_definition: propTypes.string,
-
-  /*
-  definition do componente input,
-  qual característica pré-defininada do 
-  componente, é desejada que apareça no 
-  componente Field.
-  */
-  input_definition: propTypes.string,
-
-  /*
-  definition do componente control,
-  qual característica pré-defininada do 
-  componente, é desejada que apareça no 
-  componente Field.
-  Essa propriedade é importante pois
-  caso deseje-se colocar o icon no lado 
-  direito e/ou esquerdo, deve se utilizar essa propriedade
-  e informar "right" ou "left"
-  */
-  icon_definition: propTypes.string,
-
-  /*
-  Referente ao nome do ícone segundo
-  o Font Awesome
-  */
-  icon_name: propTypes.string,
-
-  /*
-  Função onChange do componente Input
-  */
-  onChange: propTypes.func,
-  // Placeholder Input
-  placeholder: propTypes.string,
-  // Type Input
-  type: propTypes.string,
-  // Valor opcional de valor do input do field
-  value: propTypes.string
+var props_obj$e = {
+  label: 'string'
 };
 
-// Um exemplo seria um componente que exibe uma imagem
-
 var FieldContent = function FieldContent(props) {
+  validate(props, props_obj$e, "FieldContent");
   return /*#__PURE__*/React.createElement("div", {
     className: "field"
   }, /*#__PURE__*/React.createElement("label", {
@@ -2200,34 +976,41 @@ var FieldContent = function FieldContent(props) {
   }, props.children));
 };
 
-// className ="field" e className="control"
-// Vantagem em relação a Button, um pequeno espaçamento entre o elemento
-// FieldButton e seus elementos superior, além de ser alocado abaixo do elemento
-// e não ao lado, como é o caso de button
-// Para ver a diferença entre FieldButton e Button, basta alocar dois buttons em sequencia
 // e um button e um fieldbutton, que será possível ver uma diferença de espaçamento
 
+var props_obj$f = {
+  field_definition: 'string',
+  label: 'string',
+  button_definition: 'string',
+  onClick: 'function',
+  disabled: 'boolean'
+};
+
 var FieldButton = function FieldButton(props) {
+  validate(props, props_obj$f, "FieldButton");
   return /*#__PURE__*/React.createElement(FieldContent, {
     definition: props.field_definition,
     label: props.label
   }, /*#__PURE__*/React.createElement(Button, {
     definition: props.button_definition,
     onClick: props.onClick,
-    disabled: props.disabled
-  }, props.value));
+    disabled: props.disabled,
+    label: props.children
+  }));
 };
 
-FieldButton.propTypes = {
-  button_definition: propTypes.string,
-  label: propTypes.string,
-  field_definition: propTypes.string,
-  onClick: propTypes.func,
-  disabled: propTypes.bool,
-  value: propTypes.string
+var props_obj$g = {
+  icon_name: 'string',
+  icon_definition: 'string',
+  definition: 'string',
+  label: 'string',
+  filename: 'string',
+  ref: 'string',
+  onChange: 'function'
 };
 
 var File = function File(props) {
+  validate(props, props_obj$g, "File");
   var definition = props.definition == undefined ? "file" : "file " + props.definition;
   return /*#__PURE__*/React__default.createElement("div", {
     className: definition
@@ -2250,43 +1033,33 @@ var File = function File(props) {
   }, props.filename)));
 };
 
-File.propTypes = {
-  icon_name: propTypes.string,
-  icon_definition: propTypes.string,
-  definition: propTypes.string,
-  label: propTypes.string,
-  onChange: propTypes.func
+var Container = function Container(props) {
+  var definition = props.definition == undefined ? "container" : "container " + props.definition;
+  return /*#__PURE__*/React__default.createElement("div", {
+    className: definition
+  }, props.children);
 };
 
-var props_obj$c = {
+var props_obj$h = {
   title: "string",
   subtitle: "string",
   definition: "string"
 };
 
 var Hero = function Hero(props) {
-  validate(props, props_obj$c);
+  validate(props, props_obj$h, "Hero");
   var definition = props.definition == undefined ? "hero" : "hero " + props.definition;
   return /*#__PURE__*/React__default.createElement("section", {
     className: definition
   }, /*#__PURE__*/React__default.createElement("div", {
     className: "hero-body"
-  }, /*#__PURE__*/React__default.createElement("div", {
-    className: "container"
+  }, /*#__PURE__*/React__default.createElement(Container, {
+    definition: props.container_definition
   }, /*#__PURE__*/React__default.createElement("h1", {
     className: "title"
   }, props.title), /*#__PURE__*/React__default.createElement("h2", {
     className: "subtitle"
   }, props.subtitle))));
-};
-
-Hero.propTypes = {
-  // Título do Banner
-  title: propTypes.string,
-  // Subtítulo do Banner
-  subtitle: propTypes.string,
-  // Características do Bulma
-  definition: propTypes.string
 };
 
 var InvalidNumberChilds = /*#__PURE__*/function (_Error) {
@@ -2321,12 +1094,12 @@ var assembleDefaultMessage = function assembleDefaultMessage(number_child_expect
 // Caso sejam informados 2 filhos : Será montado header e body
 // Caso sejam informados 3 filhos: Será montado header,body e footer
 
-var props_obj$d = {
+var props_obj$i = {
   definition: 'string'
 };
 
 var HeroThreeParts = function HeroThreeParts(props) {
-  validate(props, props_obj$d);
+  validate(props, props_obj$i, "HeroThreeParts");
   var childrens = React.Children.map(props.children, function (child, i) {
     return child;
   });
@@ -2344,8 +1117,7 @@ function assemble$3(childrens, props) {
   }
 
   return code;
-} // recebe a props e junto com os filhos monta head,body e footer
-
+}
 
 function assembleThreePartsHero(props, childrens) {
   var definition = props.definition == undefined ? "hero" : "hero " + props.definition;
@@ -2360,20 +1132,15 @@ function assembleThreePartsHero(props, childrens) {
   }, childrens[2] != undefined && childrens[2]));
 }
 
-HeroThreeParts.propTypes = {
-  definition: propTypes.string
-};
-
-var props_obj$e = {
+var props_obj$j = {
   itens: "array",
   definition: "string"
 };
 
 var List = function List(props) {
-  validate(props, props_obj$e);
+  validate(props, props_obj$j, "List");
   return assembleList(props);
-}; // monta o esqueleto da(s) lista(s) através do map e depois monta cada linha de cada lista
-
+};
 
 function assembleList(props) {
   var list = props.itens;
@@ -2391,67 +1158,123 @@ function assembleList(props) {
 function assembleRow(list) {
   return list.map(function (item) {
     return /*#__PURE__*/React__default.createElement("li", {
+      key: item["key"],
       onClick: item["onClick"]
     }, item["value"]);
   });
 }
 
-List.propTypes = {
-  definition: propTypes.string,
-  itens: propTypes.array.isRequired
+var pointer = {
+  cursor: "pointer"
+};
+var props_obj$k = {
+  definition: 'string',
+  itens: 'array'
 };
 
-var props_obj$f = {
+var Level = function Level(props) {
+  var code = /*#__PURE__*/React.createElement(React.Fragment, null);
+  validate(props, props_obj$k, "Level");
+
+  if (props.itens != undefined) {
+    code = assembleItens$1(props);
+  }
+
+  return code;
+};
+
+function assembleItens$1(props) {
+  var left = props.itens.filter(function (item) {
+    return isLeft(item);
+  });
+  var right = props.itens.filter(function (item) {
+    return isRight(item);
+  });
+  var definition = props.definition == undefined ? "level" : "level " + props.definition;
+  var code = /*#__PURE__*/React.createElement("nav", {
+    className: definition
+  }, props.center == true || left.length <= 0 && right.length <= 0 ? /*#__PURE__*/React.createElement(React.Fragment, null, assembleCenter(props.itens)) : /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement("div", {
+    className: "level-left"
+  }, assembleLeftItens(left)), /*#__PURE__*/React.createElement("div", {
+    className: "level-right"
+  }, assembleRightItens(right))));
+  return code;
+}
+
+function isRight(item) {
+  if (item['right'] == true) {
+    return item;
+  }
+}
+
+function isLeft(item) {
+  if (item['left'] == true) {
+    return item;
+  }
+}
+
+function assembleLeftItens(left) {
+  var code = left.map(function (item) {
+    return assembleLevelItem(item);
+  });
+  return code;
+}
+
+function assembleRightItens(right) {
+  var code = right.map(function (item) {
+    return assembleLevelItem(item);
+  });
+  return code;
+}
+
+function assembleCenter(itens) {
+  var code = itens.map(function (item) {
+    return assembleLevelItem(item);
+  });
+  return code;
+}
+
+function assembleLevelItem(item) {
+  return /*#__PURE__*/React.createElement("p", {
+    key: item["key"],
+    style: pointer,
+    onClick: item["onClick"],
+    className: item["definition"] == undefined ? "level-item" : "level-item " + item["definition"]
+  }, item["value"]);
+}
+
+var _props_obj;
+var props_obj$l = (_props_obj = {
+  definition: 'string',
+  image_definition: 'string',
+  figure_definition: 'string',
+  content_definition: 'string',
+  src: 'string',
+  itens: 'array',
+  level_definition: 'string',
+  left_definition: 'string',
+  right_definition: 'string'
+}, _defineProperty(_props_obj, "content_definition", 'string'), _defineProperty(_props_obj, "onClickDelete", 'function'), _props_obj);
+
+var props_obj$m = {
   definition: "string"
 };
 
 var Menu = function Menu(props) {
-  validate(props, props_obj$f);
+  validate(props, props_obj$m, "Menu");
   var definition = props.definition == undefined ? "menu" : "menu " + props.definition;
   return /*#__PURE__*/React.createElement("aside", {
     className: definition
   }, props.children);
 };
 
-Menu.propTypes = {
-  menu_itens: propTypes.array,
-  sub_itens: propTypes.array
-};
-
-/*
-    Menu Item foi desenvolvido para representar uma parte de um menu, 
-    representando não somente o menu em si, mas também o label de cada item/itens
-
-    Funcionamento: Para criar um menu é possível passar como props.itens um objeto ou um array
-    Objeto -> Informar quando for necessário somente um item
-    Ex: 
-     GENERAL -> label
-        Manage your team -> item
-            Member  -> subitem
-            Plugin  -> subitem
-            Add a member -> subitem
-
-    Nota-se que nesse caso é informado junto com o item, seus subitens(que são opcionais)
-
-    Array-> Informar quando necessário mais de um item
-    Ex:
-    ADMINISTRATION -> label
-        Dashboard -> item
-        Customers -> item
-
-    Existem a possibilidade de mesclar itens com subitens
-
-
-
-*/
-
-var props_obj$g = {
+var props_obj$n = {
   itens: "array",
   label: "string"
 };
 
 var MenuItem = function MenuItem(props) {
-  validate(props, props_obj$g);
+  validate(props, props_obj$n, "MenuItem");
   return /*#__PURE__*/React__default.createElement("div", null, props.itens != undefined && /*#__PURE__*/React__default.createElement(React__default.Fragment, null, assembleLabel(props.label), /*#__PURE__*/React__default.createElement("ul", {
     className: "menu-list"
   }, props.itens != undefined && assembleItem(props.itens))));
@@ -2468,19 +1291,16 @@ function assembleLabel(label) {
 
 
 function assembleItem(itens) {
-  var item_code = ""; // item é um array²z
+  var item_code = "";
 
   if (Array.isArray(itens)) {
-    // [sim] = monta o item baseado em um array
     item_code = assembleItemWithSubList(itens);
   } else {
-    // [não] = monta um item normal, o item mais simples
     item_code = assembleSingleItem$1(itens);
   }
 
   return item_code;
-} // caso simples onde apenas um item é desejado, informando apenas um objeto
-
+}
 
 function assembleSingleItem$1(item) {
   var item_code = "";
@@ -2504,19 +1324,16 @@ function assembleSubItens(item) {
     className: definition,
     onClick: item["onClick"]
   }, item["value"]));
-} // caso mais complexo onde um item possui uma sublista
-
+}
 
 function assembleItemWithSubList(itens) {
   return itens.map(function (item) {
     return decideTypeOfItem(item);
   });
-} // método usado para retornar o código referente a um item de um array de forma simples
-// ou um item de um array que contenha uma sublista
-
+}
 
 function decideTypeOfItem(item) {
-  var item_code = ""; // se possuir sub_itens
+  var item_code = "";
 
   if (item["sub_itens"] != undefined) {
     var definition = item["definition"];
@@ -2533,11 +1350,6 @@ function decideTypeOfItem(item) {
   return item_code;
 }
 
-MenuItem.propTypes = {
-  label: propTypes.string,
-  itens: propTypes.array
-};
-
 var prop_obj = {
   definition: "string",
   header: "string",
@@ -2546,11 +1358,11 @@ var prop_obj = {
 };
 
 var Message = function Message(props) {
-  validate(props, prop_obj);
+  validate(props, prop_obj, "Message");
   var definition = props.definition == undefined ? "message" : "message " + props.definition;
   return /*#__PURE__*/React.createElement("article", {
     className: definition
-  }, assembleHeader$1(props.header, props.delete, props.onClickDelete), assembleBody(props.children));
+  }, assembleHeader$1(props.header, props.delete, props.onClickDelete, props.header_definition), assembleBody(props.children));
 };
 
 function assembleDelete(onClickDelete) {
@@ -2560,7 +1372,7 @@ function assembleDelete(onClickDelete) {
   });
 }
 
-function assembleHeader$1(name_header, isDelete, onClickDelete) {
+function assembleHeader$1(name_header, isDelete, onClickDelete, header_definition) {
   var header = "";
 
   if (name_header != undefined) {
@@ -2578,42 +1390,19 @@ function assembleBody(message) {
   }, message);
 }
 
-Message.propTypes = {
-  definition: propTypes.string,
-  delete: propTypes.bool,
-  onClickDelete: propTypes.func,
-  header: propTypes.string
-};
-
-/*
-Existem algumas maneira de fornecer os itens de "start" e "end" ao usar o presente componente 
-1 - Fornecer através da props itens_start ou itens_end um objeto contendo um atributo "value"
-2 - Fornecer um array de objetos contendo em cada objeto o atributo value
-3 - Fornecer um array de objetos com um dropdown, nesse caso o um array de objetos dentro do array em que está contido
-4 - É possível fornecer componentes diversos, como Botões no start ou end da barra, para tal faz-se necessário
-    informar o código do elemento.
-    Exemplo:
-
-    var itens_end = [{value: <Button>Login</Button>}, {value: <Button>Log Out</Button>}] 
-
-    <NavigationBar
-            itens_end={itens_start_3}
-        />
-*/
-
-var props_obj$h = {
+var props_obj$o = {
   definition: "string",
-  link_brand: "string",
-  src_brand: "string",
-  width_brand: "string",
+  link: "string",
+  src: "string",
+  width_brand: "number",
   alt: "string",
-  height_brand: "string",
+  height_brand: "number",
   itens_start: "array",
   itens_end: "array"
 };
 
 var NavigationBar = function NavigationBar(props) {
-  validate(props, props_obj$h);
+  validate(props, props_obj$o, "NavigationBar");
   var definition = props.definition == undefined ? "navbar" : "navbar " + props.definition;
   return /*#__PURE__*/React__default.createElement("nav", {
     className: definition
@@ -2621,9 +1410,9 @@ var NavigationBar = function NavigationBar(props) {
     className: "navbar-brand"
   }, /*#__PURE__*/React__default.createElement("a", {
     className: "navbar-item",
-    href: props.link_brand
+    href: props.link
   }, /*#__PURE__*/React__default.createElement("img", {
-    src: props.src_brand,
+    src: props.src,
     alt: props.alt,
     width: props.width_brand,
     height: props.height_brand
@@ -2643,7 +1432,7 @@ function assemble$4(itens) {
     // elimina vazio
     if (itens.length > 0) {
       // se não estiver vazio monta uma lista de itens
-      itens_code = assembleItens$1(itens);
+      itens_code = assembleItens$2(itens);
     }
   } else if (_typeof(itens) == 'object' && itens != undefined) {
     //se não for array, não for undefined e for objeto realiza operação
@@ -2653,7 +1442,7 @@ function assemble$4(itens) {
   return itens_code;
 }
 
-function assembleItens$1(itens) {
+function assembleItens$2(itens) {
   var size = itens.length;
   var itens_code = itens.map(function (item) {
     return decideTypeOfItem$1(item);
@@ -2713,27 +1502,16 @@ function assembleItem$1(item, definition) {
   return item_code;
 }
 
-NavigationBar.propTypes = {
-  src_brand: propTypes.string,
-  link_brand: propTypes.string,
-  width_brand: propTypes.number,
-  height_brand: propTypes.number,
-  alt_brand: propTypes.string,
-  itens_start: propTypes.array,
-  itens_end: propTypes.array,
-  definition: propTypes.string
-};
-
-var _props_obj;
-var props_obj$i = (_props_obj = {
+var _props_obj$1;
+var props_obj$p = (_props_obj$1 = {
   delete: 'boolean',
   title: "string",
   onClickDelete: "function",
   definition: "string"
-}, _defineProperty(_props_obj, "title", "string"), _defineProperty(_props_obj, "subtitle", "string"), _props_obj);
+}, _defineProperty(_props_obj$1, "title", "string"), _defineProperty(_props_obj$1, "subtitle", "string"), _props_obj$1);
 
 var Notification = function Notification(props) {
-  validate(props, props_obj$i);
+  validate(props, props_obj$p, "Notification");
   var definition = props.definition == undefined ? "notification" : "notification " + props.definition;
   return /*#__PURE__*/React.createElement("div", {
     className: definition
@@ -2755,14 +1533,7 @@ function assembleDelete$1(onClickDelete) {
   });
 }
 
-Notification.propTypes = {
-  definition: propTypes.string,
-  delete: propTypes.bool,
-  onClickDelete: propTypes.func,
-  title: propTypes.string
-};
-
-var props_obj$j = {
+var props_obj$q = {
   definition: "string",
   href_previous: "string",
   href_next: "string",
@@ -2774,7 +1545,7 @@ var props_obj$j = {
 };
 
 var Pagination = function Pagination(props) {
-  validate(props, props_obj$j);
+  validate(props, props_obj$q, "Pagination");
   var definition = props.definition == undefined ? "pagination" : "pagination " + props.definition;
   return /*#__PURE__*/React__default.createElement("nav", {
     className: definition
@@ -2795,7 +1566,7 @@ function assemble$5(itens) {
   var code_itens = "";
 
   if (Array.isArray(itens)) {
-    code_itens = assembleItens$2(itens);
+    code_itens = assembleItens$3(itens);
   } else if (_typeof(itens) == 'object') {
     code_itens = assembleItem$2(itens);
   }
@@ -2803,7 +1574,7 @@ function assemble$5(itens) {
   return code_itens;
 }
 
-function assembleItens$2(itens) {
+function assembleItens$3(itens) {
   return itens.map(function (item) {
     return assembleItem$2(item);
   });
@@ -2820,29 +1591,19 @@ function assembleItem$2(item) {
   return item_code;
 }
 
-Pagination.propTypes = {
-  definition: propTypes.string.isRequired,
-  previous_name: propTypes.string.isRequired,
-  next_name: propTypes.string.isRequired,
-  href_previous: propTypes.string,
-  href_next: propTypes.string,
-  previous_disabled: propTypes.string,
-  next_disabled: propTypes.string
-};
-
-var props_obj$k = {
+var props_obj$r = {
   onClick: "function"
 };
 
 var PanelItem = function PanelItem(props) {
-  validate(props, props_obj$k);
+  validate(props, props_obj$r, "PanelItem");
   return /*#__PURE__*/React.createElement("div", {
     className: "panel-block",
     onClick: props.onClick
   }, props.children);
 };
 
-var props_obj$l = {
+var props_obj$s = {
   header: "string",
   itens_tabs: "array",
   itens_blocks: "array",
@@ -2854,7 +1615,7 @@ var props_obj$l = {
 }; // v.01
 
 var Panel = function Panel(props) {
-  validate(props, props_obj$l);
+  validate(props, props_obj$s, "Panel");
   var definition = props.definition == undefined ? "panel" : "panel " + props.definition;
   return /*#__PURE__*/React__default.createElement("nav", {
     class: definition
@@ -2910,7 +1671,7 @@ function assembleSearch(props) {
   return /*#__PURE__*/React__default.createElement(Field, {
     input_definition: props.search_definition == undefined ? "" : props.search_definition,
     icon_name: "fas fa-search",
-    control_definition: "icons-left",
+    control_definition: "has-icons-left",
     placeholder: props.search_placeholder == undefined ? "" : props.search_placeholder,
     icon_definition: props.search_icon_definition == undefined ? "" : props.search_icon_definition,
     onChange: props.onChangeSearch,
@@ -2922,18 +1683,7 @@ function haveSearch(props) {
   return props.search_definition != undefined || props.search_placeholder != undefined || props.search_icon_definition != undefined;
 }
 
-Panel.propTypes = {
-  definition: propTypes.string,
-  header: propTypes.string,
-  itens_tabs: propTypes.array,
-  itens_blocks: propTypes.array,
-  onChangeSearch: propTypes.func,
-  search_definition: propTypes.string,
-  search_placeholder: propTypes.string,
-  search_icon_definition: propTypes.string
-};
-
-var props_obj$m = {
+var props_obj$t = {
   onChange: "function",
   max: "number",
   value: "number",
@@ -2941,7 +1691,7 @@ var props_obj$m = {
 };
 
 var ProgressBar = function ProgressBar(props) {
-  validate(props, props_obj$m);
+  validate(props, props_obj$t, "ProgressBar");
   var definition = props.definition == undefined ? "progress" : "progress " + props.definition;
   return /*#__PURE__*/React__default.createElement("progress", {
     onChange: props.onChange,
@@ -2951,24 +1701,17 @@ var ProgressBar = function ProgressBar(props) {
   });
 };
 
-ProgressBar.propTypes = {
-  definition: propTypes.string,
-  max: propTypes.string,
-  value: propTypes.string,
-  onChange: propTypes.func
-};
-
-var props_obj$n = {
+var props_obj$u = {
   itens: "array",
   name: "string"
 };
 
 var Radio = function Radio(props) {
-  validate(props, props_obj$n);
-  return /*#__PURE__*/React__default.createElement(Control, null, assembleItens$3(props));
+  validate(props, props_obj$u, "Radio");
+  return /*#__PURE__*/React__default.createElement(Control, null, assembleItens$4(props));
 };
 
-function assembleItens$3(props) {
+function assembleItens$4(props) {
   var code = "";
   var itens = props.itens;
 
@@ -2993,17 +1736,10 @@ function assembleRadio(item, name) {
   }), item["value"]);
 }
 
-Radio.propTypes = {
-  itens: propTypes.array,
-  name: propTypes.string
-};
-
-// cursor ao passar com o mouse em cima de uma linha da table
-
 var style_cursor = {
   cursor: "pointer"
 };
-var props_obj$o = {
+var props_obj$v = {
   itens_body: "array",
   itens_header: "array",
   itens_footer: "array",
@@ -3013,11 +1749,11 @@ var props_obj$o = {
 };
 
 var Table = function Table(props) {
+  validate(props, props_obj$v, "Table");
   return assembleTable(props);
 };
 
 function assembleTable(props) {
-  validate(props, props_obj$o);
   var definition = props.definition == undefined ? "table" : "table " + props.definition;
   var code = /*#__PURE__*/React__default.createElement("table", {
     className: definition
@@ -3094,18 +1830,27 @@ function assembleRowHeaderFooter(item) {
   return /*#__PURE__*/React__default.createElement("th", null, item["value"]);
 }
 
-Table.propTypes = {
-  itens_body: propTypes.array,
-  itens_header: propTypes.array,
-  itens_footer: propTypes.array,
-  // função para quando clicar na tabela
-  // executar alguma ação
-  // evento global para todas as linhas
-  onClickRow: propTypes.func,
-  header_definition: propTypes.string
+var props_obj$w = {
+  onChange: 'function',
+  label: 'string',
+  control_definition: 'string',
+  placeholder: 'string',
+  icon_name: 'string',
+  icon_definition: 'string',
+  input_definition: 'string',
+  table_definition: 'string',
+  itens_header: 'array',
+  itens_body: 'array',
+  header_definition: 'string',
+  itens_footer: 'array',
+  button_definition: 'string',
+  onClick: 'function',
+  value: 'string',
+  onClickRow: 'function'
 };
 
 var SearchTable = function SearchTable(props) {
+  validate(props, props_obj$w, "SearchTable");
   return /*#__PURE__*/React__default.createElement("div", {
     className: "container"
   }, /*#__PURE__*/React__default.createElement(Field, {
@@ -3125,38 +1870,26 @@ var SearchTable = function SearchTable(props) {
     onClickRow: props.onClickRow
   }), /*#__PURE__*/React__default.createElement(ButtonList, null, /*#__PURE__*/React__default.createElement(Button, {
     definition: props.button_definition,
-    onClick: props.onClick
-  }, props.value)));
+    onClick: props.onClick,
+    label: props.value
+  })));
 };
 
-SearchTable.propTypes = {
-  label: propTypes.string,
-  onChange: propTypes.func,
-  placeholder: propTypes.func,
-  itens_header: propTypes.array,
-  itens_body: propTypes.array,
-  control_definition: propTypes.string,
-  table_definition: propTypes.string,
-  icon_name: propTypes.string,
-  icon_definition: propTypes.string,
-  header_definition: propTypes.string,
-  itens_footer: propTypes.array,
-  button_definition: propTypes.string,
-  // onclick de button
-  onClick: propTypes.func,
-  // value de button
-  value: propTypes.string
+var props_obj$x = {
+  definition: 'string'
 };
 
 var Section = function Section(props) {
+  validate(props, props_obj$x, "Section");
+  var definition = props.definition == undefined ? "section" : "section " + props.definition;
   return /*#__PURE__*/React.createElement("section", {
-    className: "section"
+    className: definition
   }, React.Children.map(props.children, function (child, i) {
     return child;
   }));
 };
 
-var props_obj$p = {
+var props_obj$y = {
   definition: "string",
   onChange: "function",
   multiple_size: "number",
@@ -3164,23 +1897,23 @@ var props_obj$p = {
 };
 
 var Select = function Select(props) {
-  validate(props, props_obj$p);
+  validate(props, props_obj$y, "Select");
   var definition = props.definition == undefined ? "select" : "select " + props.definition;
   var code = /*#__PURE__*/React__default.createElement("div", {
     className: definition
   }, props.multiple_size == undefined ? /*#__PURE__*/React__default.createElement("select", {
     onChange: props.onChange,
     className: definition
-  }, " ", assembleItens$4(props.itens)) : /*#__PURE__*/React__default.createElement("select", {
+  }, " ", assembleItens$5(props.itens)) : /*#__PURE__*/React__default.createElement("select", {
     onChange: props.onChange,
     className: definition,
     multiple: true,
     size: props.multiple_size
-  }, " ", assembleItens$4(props.itens)));
+  }, " ", assembleItens$5(props.itens)));
   return code;
 };
 
-function assembleItens$4(itens) {
+function assembleItens$5(itens) {
   var code = "";
 
   if (Array.isArray(itens) && itens != undefined) {
@@ -3194,19 +1927,13 @@ function assembleItens$4(itens) {
   return code;
 }
 
-Select.propTypes = {
-  multiple_size: propTypes.number,
-  itens: propTypes.array,
-  onChange: propTypes.func
-};
-
-var props_obj$q = {
+var props_obj$z = {
   definition: "number",
   p: "boolean"
 };
 
 var SubTitle = function SubTitle(props) {
-  validate(props, props_obj$q);
+  validate(props, props_obj$z, "Subtitle");
   return assembleSubTitle(props);
 };
 
@@ -3232,8 +1959,7 @@ function getTitle(props) {
   }
 
   return title;
-} // p ==  paragráfo, se a tag a ser utilizada é parágrafo ou tag de título
-
+}
 
 var assemble1 = function assemble1(props) {
   var code = "";
@@ -3353,15 +2079,7 @@ function getDefinition$1(props) {
   return definition;
 }
 
-SubTitle.propTypes = {
-  // exceção: Definition como number se encaixa melhor ao presente componente
-  definition: propTypes.number.isRequired,
-  // p é usado para determinar se um título é construído com tag <p> ou com as tags
-  // h1,h2,h3,h4,h5 ou h6
-  p: propTypes.bool
-};
-
-var props_obj$r = {
+var props_obj$A = {
   itens: "array",
   header: "boolean",
   footer: "boolean",
@@ -3369,11 +2087,12 @@ var props_obj$r = {
 };
 
 var TableQuery = function TableQuery(props) {
+  validate(props, props_obj$A, "TableQuery");
   return assembleTable$1(props);
 };
 
 function assembleTable$1(props) {
-  validate(props, props_obj$r);
+  // validate(props,props_obj);
   var definition = props.definition == undefined ? "table" : "table " + props.definition;
   var code = /*#__PURE__*/React__default.createElement(React__default.Fragment, null); // elimina vazio e não array
 
@@ -3425,40 +2144,29 @@ function assembleBody$2(itens) {
 }
 
 function makeArray(itens) {
-  // intera sobre os itens da query e retira deles todos os atributos possíveis
   var allAttributes = itens.map(function (obj) {
     return Object.keys(obj);
-  }); // cria um set para possuir uma estrutura que mantenha a propriedade de singularidade
-
-  var set = new Set(); // intera sobre cada valor encontrado - Sendo uma estrutura de array de objetos
-
+  });
+  var set = new Set();
   allAttributes.forEach(function (element) {
-    // intera sobre cada objeto pegando seus valores e adicionando ao set
-    // que irá mantê-lo único
     element.map(function (item) {
       return set.add(item);
     });
   });
-  return _toConsumableArray(set); // converte o set em array novamente;
+  return _toConsumableArray(set);
 }
 
 function assembleRow$1(item) {
   return /*#__PURE__*/React__default.createElement("th", null, item);
 }
 
-TableQuery.propTypes = {
-  itens: propTypes.array,
-  footer: propTypes.bool,
-  header: propTypes.bool
-};
-
-var props_obj$s = {
+var props_obj$B = {
   definition: "string",
   itens: "array"
 };
 
 var Tabs = function Tabs(props) {
-  validate(props, props_obj$s);
+  validate(props, props_obj$B, "Tabs");
   var definition = props.definition == undefined ? "tabs" : "tabs " + props.definition;
   return /*#__PURE__*/React__default.createElement("div", {
     className: definition
@@ -3483,19 +2191,14 @@ function assembleListTabs(itens) {
   return tabs_code;
 }
 
-Tabs.propTypes = {
-  definition: propTypes.string,
-  itens: propTypes.array
-};
-
-var props_obj$t = {
+var props_obj$C = {
   definition: "string",
   onClickDelete: "function",
   delete: "boolean"
 };
 
 var Tag = function Tag(props) {
-  validate(props, props_obj$t);
+  validate(props, props_obj$C, "Tag");
   var definition = props.definition == undefined ? "tag" : "tag " + props.definition;
   return /*#__PURE__*/React.createElement("span", {
     className: definition
@@ -3505,19 +2208,13 @@ var Tag = function Tag(props) {
   }));
 };
 
-Tag.propTypes = {
-  definition: propTypes.string,
-  onClickDelete: propTypes.func,
-  delete: propTypes.bool
-};
-
-var props_obj$u = {
+var props_obj$D = {
   itens: "array",
   definition: "string"
 };
 
 var TagList = function TagList(props) {
-  validate(props, props_obj$u);
+  validate(props, props_obj$D, "TagList");
   return assembleTagList(props);
 };
 
@@ -3529,9 +2226,7 @@ function assembleTagList(props) {
   }
 
   return code;
-} // monta lista caso seja informado os itens como props
-// monta lista quando props.itens == array && props.itens != undefined
-
+}
 
 function assembleListWithItens(props) {
   var itens = props.itens;
@@ -3547,8 +2242,7 @@ function assembleListWithItens(props) {
   }
 
   return code;
-} // monta a tag 
-
+}
 
 function assembleTag(definition, value, onClick) {
   var definitionTag = "tag " + definition;
@@ -3556,18 +2250,14 @@ function assembleTag(definition, value, onClick) {
     onClick: onClick,
     className: definitionTag
   }, value);
-} // monta lista conforme as props.children
+}
 
-TagList.propTypes = {
-  itens: propTypes.array
-};
-
-var props_obj$v = {
+var props_obj$E = {
   definition: "string",
   loading: "boolean",
   onChange: "function",
-  placeholder: "function",
-  rows: "function",
+  placeholder: "string",
+  rows: "string",
   readonly: "boolean",
   disabled: "boolean",
   label: "string",
@@ -3575,12 +2265,12 @@ var props_obj$v = {
 };
 
 var TextArea = function TextArea(props) {
-  validate(props, props_obj$v);
+  validate(props, props_obj$E, "TextArea");
   return assembleTextArea(props);
 };
 
 function assembleTextArea(props) {
-  validate(props, props_obj$v);
+  validate(props, props_obj$E);
   var definition = props.definition == undefined ? "textarea" : "textarea " + props.definition;
   var definitionControl = props.loading == true ? "is-loading" : "";
   return /*#__PURE__*/React__default.createElement(Control, {
@@ -3598,25 +2288,13 @@ function assembleTextArea(props) {
   }));
 }
 
-TextArea.propTypes = {
-  definition: propTypes.string,
-  placeholder: propTypes.string,
-  rows: propTypes.string,
-  loading: propTypes.bool,
-  disabled: propTypes.bool,
-  readonly: propTypes.bools,
-  onChange: propTypes.func,
-  label: propTypes.string,
-  value: propTypes.string
-};
-
-var props_obj$w = {
+var props_obj$F = {
   definition: "number",
   p: "boolean"
 };
 
 var Title = function Title(props) {
-  validate(props, props_obj$w);
+  validate(props, props_obj$F, "Title");
   return assembleTitle(props);
 };
 
@@ -3770,16 +2448,16 @@ function getDefinition$2(props) {
   return definition;
 }
 
-Title.propTypes = {
-  // exceção: Definition como number se encaixa melhor ao presente componente
-  definition: propTypes.number.isRequired,
-  // p é usado para determinar se um título é construído com tag <p> ou com as tags
-  // h1,h2,h3,h4,h5 ou h6
-  p: propTypes.bool
-};
+var props_obj$G = {
+  label: 'string',
+  onChange: 'function',
+  definition: 'string',
+  ref_data: 'object',
+  onClick: 'function'
+}; // Definition Equivalente a de Button, ou seja, o definition vai para Button
 
-// Definition Equivalente a de Button, ou seja, o definition vai para Button
 var FileButton = function FileButton(props) {
+  validate(props, props_obj$G, "FileButton");
   return /*#__PURE__*/React.createElement("div", {
     className: "field"
   }, /*#__PURE__*/React.createElement("label", {
@@ -3795,8 +2473,9 @@ var FileButton = function FileButton(props) {
     ref: props.ref_data
   }), /*#__PURE__*/React.createElement(Button, {
     definition: props.definition,
-    onClick: props.onClick
-  }, props.children)));
+    onClick: props.onClick,
+    label: props.children
+  })));
 };
 
 exports.BreadCrumb = BreadCrumb;
@@ -3819,6 +2498,7 @@ exports.HeroThreeParts = HeroThreeParts;
 exports.Icon = Icon;
 exports.Image = Image;
 exports.Input = Input;
+exports.Level = Level;
 exports.List = List;
 exports.Menu = Menu;
 exports.MenuItem = MenuItem;

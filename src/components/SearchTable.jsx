@@ -4,7 +4,7 @@ import Table from './Table';
 import ButtonList from './ButtonList';
 import Button from './Button';
 import Field from './Field'
-import PropTypes from 'prop-types';
+import {validate} from '../tools/type_validations';
 
 type Props ={
     onChange?: ()=>void,
@@ -25,8 +25,29 @@ type Props ={
     onClickRow?: ()=>void
 }
 
+const props_obj ={
+    onChange: 'function',
+    label:'string',
+    control_definition:'string',
+    placeholder:'string',
+    icon_name:'string',
+    icon_definition:'string',
+    input_definition:'string',
+    table_definition:'string',
+    itens_header:'array',
+    itens_body:'array',
+    header_definition:'string',
+    itens_footer: 'array',
+    button_definition:'string',
+    onClick: 'function',
+    value: 'string',
+    onClickRow: 'function'
+}
+
 const SearchTable = (props:Props)=>{
 
+    validate(props,props_obj,"SearchTable");
+    
        return  <div className="container">
             <Field onChange={props.onChange} 
                   label={props.label} 
@@ -44,28 +65,9 @@ const SearchTable = (props:Props)=>{
                    itens_footer={props.itens_footer}
                    onClickRow={props.onClickRow}/>
             <ButtonList>
-                <Button definition={props.button_definition} onClick={props.onClick}>{props.value}</Button>
+                <Button definition={props.button_definition} onClick={props.onClick} label={props.value}/>
             </ButtonList>
         </div>
-}
-
-SearchTable.propTypes ={
-    label: PropTypes.string,
-    onChange: PropTypes.func,
-    placeholder: PropTypes.func,
-    itens_header: PropTypes.array,
-    itens_body: PropTypes.array,
-    control_definition: PropTypes.string,
-    table_definition: PropTypes.string,
-    icon_name: PropTypes.string,
-    icon_definition: PropTypes.string,
-    header_definition: PropTypes.string,
-    itens_footer: PropTypes.array,
-    button_definition: PropTypes.string,
-    // onclick de button
-    onClick: PropTypes.func,
-    // value de button
-    value: PropTypes.string,
 }
 
 export default SearchTable;

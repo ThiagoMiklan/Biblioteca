@@ -1,8 +1,14 @@
+
+
+
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Button from './components/Button.jsx';
 import NavigationBar from './components/NavigationBar.jsx';
 import 'bulma/css/bulma.css';
+
+
+
 
 var object_item = {
     "value": "More",
@@ -44,10 +50,10 @@ var itens_end = [ { "value": <Button value="testando" definition="primary button
 
 ReactDOM.render(
     <div className="container is-fluid">
-        <NavigationBar src_brand="https://versions.bulma.io/0.7.2/images/bulma-logo.png"
+        <NavigationBar src="https://versions.bulma.io/0.7.2/images/bulma-logo.png"
             link_brand="https://bulma.io"
-            width_brand={"112"}
-            height_brand={"28"}
+            width_brand={112}
+            height_brand={28}
             alt_brand="Bulma: a modern CSS framework based on Flexbox"
             itens_start={itens_start_3}
             itens_end={itens_start_3}
@@ -56,6 +62,8 @@ ReactDOM.render(
     ,
     document.getElementById('root')
 );
+
+
 
  /*
 import React from 'react';

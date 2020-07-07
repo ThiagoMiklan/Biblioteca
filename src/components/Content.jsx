@@ -12,10 +12,10 @@ const props_obj ={
 }
 
 const Content = (props: Props) =>{
-    validate(props, props_obj);
+    validate(props, props_obj,"Content");
     var definition =  (props.definition == undefined) ? "content": "content "+ props.definition;
      return (
-        <div class={definition}>
+        <div className={definition}>
             {props.children}
         </div>
         );

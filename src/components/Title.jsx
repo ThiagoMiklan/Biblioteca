@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import { validate } from '../tools/type_validations';
 
 const props_obj={
@@ -8,7 +7,7 @@ const props_obj={
 }
 
 const Title = (props)=>{
-    validate(props,props_obj);
+    validate(props,props_obj,"Title");
     return assembleTitle(props)
 };
      
@@ -125,16 +124,6 @@ function getDefinition(props){
     }
 
     return definition;
-}
-
-
-Title.propTypes ={
-    // exceção: Definition como number se encaixa melhor ao presente componente
-    definition: PropTypes.number.isRequired,
-    // p é usado para determinar se um título é construído com tag <p> ou com as tags
-    // h1,h2,h3,h4,h5 ou h6
-    p: PropTypes.bool
-
 }
 
 export default Title;

@@ -2,7 +2,7 @@
 
 exports[`test list 1`] = `
 <div
-  class="content"
+  className="content"
 >
   <ol
     className="is-lower-alpha"

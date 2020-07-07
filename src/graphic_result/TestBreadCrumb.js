@@ -76,26 +76,26 @@ var itens_with_id = [
 // Informar um redirecionamento para o link quando for clicado, através de href
 
 var itens_merge = [
-    { value: <Icon icon_name="fas fa-home" onClick={onClickItem}>Bulma</Icon>, key: "bulma_item", onClick: onClickItem, href: "https://ufsc.br" },
-    { value: <Icon icon_name="fas fa-book" onClick={onClickItem}>Documentation</Icon>, key: "documentation_item", onClick: onClickItem, href: "https://ufsc.br" },
-    { value: <Icon icon_name="fas fa-puzzle-piece" onClick={onClickItem}>Componentes</Icon>, key: "components_item", onClick: onClickItem, href: "https://ufsc.br" },
-    { value: <Icon icon_name="fas fa-thumbs-up" onClick={onClickItem}>BreadCrumb</Icon>, key: "breadcrumb_item", onClick: onClickItem, href: "https://ufsc.br" }
+    { value: <Icon icon_name="fas fa-home" >Bulma</Icon>, key: "bulma_item", onClick: onClickItem, href: "https://ufsc.br" },
+    { value: <Icon icon_name="fas fa-book" >Documentation</Icon>, key: "documentation_item", onClick: onClickItem, href: "https://ufsc.br" },
+    { value: <Icon icon_name="fas fa-puzzle-piece" >Componentes</Icon>, key: "components_item", onClick: onClickItem, href: "https://ufsc.br" },
+    { value: <Icon icon_name="fas fa-thumbs-up" >BreadCrumb</Icon>, key: "breadcrumb_item", onClick: onClickItem, href: "https://ufsc.br" }
 ];
 
 ReactDOM.render(
     <div className="container is-fluid">
         <BreadCrumb itens={itens} />
         <BreadCrumb itens={itens} />
-        <BreadCrumb definition="centered" itens={itens} />,
-        <BreadCrumb definition="right" itens={itens} />
+        <BreadCrumb definition="is-centered" itens={itens} />,
+        <BreadCrumb definition="is-right" itens={itens} />
         <BreadCrumb itens={itens_with_icons} />
-        <BreadCrumb definition="arrow" itens={itens} />
-        <BreadCrumb definition="bullet" itens={itens} />
-        <BreadCrumb definition="dot" itens={itens} />
-        <BreadCrumb definition="succeeds" itens={itens} />
-        <BreadCrumb definition="small" itens={itens} />
-        <BreadCrumb definition="medium" itens={itens} />
-        <BreadCrumb definition="large" itens={itens} />
+        <BreadCrumb definition="has-arrow-separator" itens={itens} />
+        <BreadCrumb definition="has-bullet-separator" itens={itens} />
+        <BreadCrumb definition="has-dot-separator" itens={itens} />
+        <BreadCrumb definition="has-succeeds-separator" itens={itens} />
+        <BreadCrumb definition="is-small" itens={itens} />
+        <BreadCrumb definition="is-medium" itens={itens} />
+        <BreadCrumb definition="is-large" itens={itens} />
         <h1>Usando Href Abaixo</h1>
         <BreadCrumb itens={itens_with_href} />
         <h1>Usando onClick Abaixo</h1>

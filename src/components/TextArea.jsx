@@ -1,6 +1,5 @@
 // @flow
 import React from 'react'
-import PropTypes from 'prop-types';
 import Control from './Control';
 import { validate } from '../tools/type_validations';
 
@@ -20,8 +19,8 @@ const props_obj = {
     definition: "string",
     loading: "boolean",
     onChange: "function",
-    placeholder: "function",
-    rows: "function",
+    placeholder: "string",
+    rows: "string",
     readonly: "boolean",
     disabled: "boolean",
     label: "string",
@@ -29,7 +28,7 @@ const props_obj = {
 }
 
 const TextArea = (props: Props) => {
-    validate(props, props_obj);
+    validate(props, props_obj,"TextArea");
     return assembleTextArea(props);
 }
 
@@ -53,16 +52,5 @@ function assembleTextArea(props) {
     </Control>
 }
 
-TextArea.propTypes = {
-    definition: PropTypes.string,
-    placeholder: PropTypes.string,
-    rows: PropTypes.string,
-    loading: PropTypes.bool,
-    disabled: PropTypes.bool,
-    readonly: PropTypes.bools,
-    onChange: PropTypes.func,
-    label: PropTypes.string,
-    value: PropTypes.string
-}
 
 export default TextArea;

@@ -1,13 +1,24 @@
 // @flow 
 import * as React from 'react';
+import {validate} from '../tools/type_validations';
 
 type Props = {
     definition?: string,
     itens?: Array<Object>
 }
 
+const pointer = {
+    cursor: "pointer"
+}
+
+const props_obj = {
+    definition: 'string',
+    itens: 'array'
+}
+
 const Level = (props:Props)=>{
     var code = <></>
+    validate(props,props_obj, "Level");
 
     if(props.itens != undefined){
         code = assembleItens(props);
@@ -17,18 +28,19 @@ const Level = (props:Props)=>{
 }
 
 function assembleItens(props: Object){
+    
     var left =   props.itens.filter(item => isLeft(item));
     var right =  props.itens.filter(item => isRight(item));
     var definition = (props.definition == undefined) ? "level" : "level "+ props.definition;
    
-    var code = <nav class={definition}>
+    var code = <nav className={definition}>
                     {
                     (props.center == true || (left.length <= 0  && right.length <= 0 ))
                     ? <>{assembleCenter(props.itens)}</>
                     :
                     <>
-                        <div class="level-left">{assembleLeftItens(left)}</div>
-                        <div class="level-right">{assembleRightItens(right)}</div>
+                        <div className="level-left">{assembleLeftItens(left)}</div>
+                        <div className="level-right">{assembleRightItens(right)}</div>
                     </>
                     }
                 </nav>
@@ -69,7 +81,7 @@ function assembleCenter(itens: Array<Object>){
 }
 
 function assembleLevelItem(item: Object){
-    return <p onClick={item["onClick"]} class={item["definition"] == undefined ? "level-item" : "level-item "+item["definition"]}>{item["value"]}</p>
+    return <p key={item["key"]} style={pointer} onClick={item["onClick"]} className={item["definition"] == undefined ? "level-item" : "level-item "+item["definition"]}>{item["value"]}</p>
 }
 
 

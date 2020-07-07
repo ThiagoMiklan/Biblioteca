@@ -1,14 +1,19 @@
 // @flow
 import * as React from 'react'
-import PropTypes from 'prop-types';
+import {validate} from '../tools/type_validations.js'
 
 type Props ={
     definition?:string,
     children?: React.Node
 }
 
+const props_obj = {
+    definition: 'string'
+}
+
 const Control = (props:Props)=>{
-    var definition = (props.definition ==  undefined || props.definition == '') ? "control icons-left": "control "+props.definition
+    validate(props,props_obj,"Control");
+    var definition = (props.definition ==  undefined || props.definition == '') ? "control": "control "+props.definition
     
     return(
         <div className={definition}>
@@ -19,10 +24,6 @@ const Control = (props:Props)=>{
                 }
         </div>
     );
-}
-
-Control.propTypes = {
-    definition: PropTypes.string
 }
 
 export default Control;

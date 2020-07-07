@@ -1,6 +1,5 @@
 // @flow
 import React from 'react';
-import PropTypes from 'prop-types';
 import Icon from './Icon';
 import { validate } from '../tools/type_validations';
 
@@ -15,7 +14,7 @@ const props_obj = {
 }
 
 const Tabs = (props:Props)=>{
-    validate(props,props_obj);
+    validate(props,props_obj,"Tabs");
 
     var definition = (props.definition == undefined)? "tabs": "tabs "+ props.definition;
     return (<div className={definition}>
@@ -44,9 +43,5 @@ function assembleListTabs(itens){
         return tabs_code;  
 }
 
-Tabs.propTypes = {
-    definition: PropTypes.string,
-    itens: PropTypes.array
-}
 
 export default Tabs;

@@ -1,6 +1,5 @@
 // @flow
 import React from 'react'
-import PropTypes from 'prop-types';
 import Icon from './Icon';
 import PanelItem from './PanelItem';
 import Field from './Field';
@@ -30,7 +29,7 @@ const props_obj = {
 }
 // v.01
 const Panel = (props:Props) => {
-    validate(props,props_obj);
+    validate(props,props_obj,"Panel");
     var definition = (props.definition == undefined)?"panel" : "panel "+props.definition;
     return (
         <nav class={definition}>
@@ -94,18 +93,6 @@ function haveSearch(props){
     return props.search_definition != undefined ||
            props.search_placeholder != undefined ||
            props.search_icon_definition != undefined
-}
-
-
-Panel.propTypes = {
-    definition: PropTypes.string,
-    header: PropTypes.string,
-    itens_tabs: PropTypes.array,
-    itens_blocks: PropTypes.array,
-    onChangeSearch: PropTypes.func,
-    search_definition: PropTypes.string,
-    search_placeholder: PropTypes.string,
-    search_icon_definition: PropTypes.string
 }
 
 export default Panel;

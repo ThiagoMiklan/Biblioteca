@@ -54,16 +54,15 @@ exports[`hero three parts fullheight success 1`] = `
               className="button is-primary is-inverted"
               disabled={false}
             >
-              <span>
-                Github
-              </span>
               <span
                 className="icon"
               >
                 <i
-                  aria-hidden="true"
                   className="fab fa-github"
                 />
+              </span>
+              <span>
+                Github
               </span>
             </button>
           </a>
@@ -188,16 +187,15 @@ exports[`hero three parts fullheight success 2`] = `
               className="button is-primary is-inverted"
               disabled={false}
             >
-              <span>
-                Github
-              </span>
               <span
                 className="icon"
               >
                 <i
-                  aria-hidden="true"
                   className="fab fa-github"
                 />
+              </span>
+              <span>
+                Github
               </span>
             </button>
           </a>
@@ -322,16 +320,15 @@ exports[`hero three parts medium primary 1`] = `
               className="button is-primary is-inverted"
               disabled={false}
             >
-              <span>
-                Github
-              </span>
               <span
                 className="icon"
               >
                 <i
-                  aria-hidden="true"
                   className="fab fa-github"
                 />
+              </span>
+              <span>
+                Github
               </span>
             </button>
           </a>

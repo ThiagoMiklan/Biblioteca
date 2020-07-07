@@ -11,7 +11,7 @@ const props_obj ={
 }
 
 const PanelItem = (props:Props) => {
-    validate(props,props_obj);
+    validate(props,props_obj,"PanelItem");
     return <div className="panel-block" onClick={props.onClick}>
        {props.children}
     </div>

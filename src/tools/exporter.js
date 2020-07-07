@@ -19,6 +19,7 @@ import Image from '../components/Image';
 import Input from '../components/Input';
 import List from '../components/List';
 import Level from '../components/Level';
+import MediaObject from '../components/MediaObject';
 import Menu from '../components/Menu';
 import MenuItem from '../components/MenuItem';
 import Message from '../components/Message';

@@ -1,11 +1,9 @@
 // @flow
 import * as React from 'react';
-import PropTypes from 'prop-types';
 import {validate} from '../tools/type_validations.js';
 
 type Props ={
     definition?: string,
-    field?: bool,
     children?:React.Node
 }
 
@@ -21,6 +19,7 @@ return assembleButtonList(props);
 
 
 function assembleButtonList(props) {
+    validate(props,props_obj,"ButtonList");
     var code_icon = "";
     var definition = (props.definition ==  undefined)? "buttons": "buttons "+props.definition;
     
@@ -50,9 +49,5 @@ function assembleButtonList(props) {
     return code_icon;
 }
 
-ButtonList.propTypes = {
-    definition: PropTypes.string,
-    field: PropTypes.bool
-};
 
 export default ButtonList;

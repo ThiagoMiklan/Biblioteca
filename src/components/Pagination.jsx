@@ -1,33 +1,32 @@
 // @flow
 import React from 'react';
-import PropTypes from 'prop-types';
 import { validate } from '../tools/type_validations';
 
 type Props = {
-    definition?:string,
+    definition?: string,
     href_previous?: string,
-    href_next?:string,
-    next_disabled?:bool,
+    href_next?: string,
+    next_disabled?: bool,
     next_name?: string,
-    previous_disabled?:bool,
+    previous_disabled?: bool,
     itens?: Array<Object>,
-    previous_name?:string
+    previous_name?: string
 }
 
 const props_obj = {
-    definition:"string",
+    definition: "string",
     href_previous: "string",
-    href_next:"string",
-    next_disabled:"boolean",
+    href_next: "string",
+    next_disabled: "boolean",
     next_name: "string",
-    previous_disabled:"boolean",
+    previous_disabled: "boolean",
     itens: "array",
-    previous_name:"string"
+    previous_name: "string"
 }
 
-const Pagination = (props:Props) => {
-    validate(props, props_obj);
-    var definition = (props.definition == undefined) ? "pagination" : "pagination "+ props.definition;
+const Pagination = (props: Props) => {
+    validate(props, props_obj, "Pagination");
+    var definition = (props.definition == undefined) ? "pagination" : "pagination " + props.definition;
     return (
         <nav className={definition}>
             <a className="pagination-previous" href={props.href_previous} disabled={props.previous_disabled}>{props.previous_name}</a>
@@ -38,34 +37,24 @@ const Pagination = (props:Props) => {
         </nav>)
 }
 
-function assemble(itens){
-    var code_itens =  "";
-    if(Array.isArray(itens)){
+function assemble(itens) {
+    var code_itens = "";
+    if (Array.isArray(itens)) {
         code_itens = assembleItens(itens);
-    }else if(typeof itens == 'object'){
+    } else if (typeof itens == 'object') {
         code_itens = assembleItem(itens);
     }
     return code_itens;
 }
 
-function assembleItens(itens){
+function assembleItens(itens) {
     return itens.map(item => assembleItem(item));
 }
 
 function assembleItem(item) {
-    var definition =  "pagination-link "+item["definition"];
-    var item_code = item_code = <li><a onClick={item["onClick"]} disabled={item["disabled"]} href={item["href"]}className={definition}>{item["value"]}</a></li>;
+    var definition = "pagination-link " + item["definition"];
+    var item_code = item_code = <li><a onClick={item["onClick"]} disabled={item["disabled"]} href={item["href"]} className={definition}>{item["value"]}</a></li>;
     return item_code;
-}
-
-Pagination.propTypes = {
-    definition: PropTypes.string.isRequired,
-    previous_name: PropTypes.string.isRequired,
-    next_name: PropTypes.string.isRequired,
-    href_previous: PropTypes.string,
-    href_next: PropTypes.string,
-    previous_disabled: PropTypes.string,
-    next_disabled: PropTypes.string
 }
 
 export default Pagination;

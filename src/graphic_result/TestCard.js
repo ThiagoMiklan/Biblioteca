@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import ReactDOM from 'react-dom';
 import 'bulma/css/bulma.css';
@@ -7,7 +8,7 @@ import Columns from './components/Columns';
 import Content from './components/Content';
 
 var itens_footer = [
-  { value: "Save" }, { value: "Edit" }, { value: "Delete" }
+  { value: "Save" , onClick: ()=> alert('Clicked')}, { value: "Edit" }, { value: "Delete" }
 ]
 
 var itens_footer_2 = [

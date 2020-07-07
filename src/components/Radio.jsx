@@ -1,6 +1,5 @@
 // @flow
 import React from 'react'
-import PropTypes from 'prop-types';
 import Control from './Control';
 import Input from './Input';
 import { validate } from '../tools/type_validations';
@@ -15,7 +14,7 @@ const props_obj={
 }
 
 const Radio = (props: Props) => {
-    validate(props,props_obj);
+    validate(props,props_obj,"Radio");
     return <Control>
         {assembleItens(props)}
     </Control>
@@ -43,8 +42,4 @@ function assembleRadio(item,name){
             </label>
 }
 
-Radio.propTypes = {
-    itens: PropTypes.array,
-    name: PropTypes.string
-}
 export default Radio;

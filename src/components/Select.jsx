@@ -1,8 +1,6 @@
 // @flow
 import React from 'react'
-import PropTypes from 'prop-types';
 import { validate } from '../tools/type_validations';
-
 
 type Props = {
     definition?: string,
@@ -19,7 +17,7 @@ const props_obj = {
 }
 
 const Select = (props:Props) => {
-    validate(props,props_obj);
+    validate(props,props_obj,"Select");
     var definition = (props.definition == undefined) ? "select" : "select "+ props.definition;
     var code = <div className={definition}>
         {props.multiple_size == undefined
@@ -56,10 +54,5 @@ function assembleItens(itens) {
     return code;
 }
 
-Select.propTypes = {
-    multiple_size: PropTypes.number,
-    itens: PropTypes.array,
-    onChange: PropTypes.func
-}
 
 export default Select;

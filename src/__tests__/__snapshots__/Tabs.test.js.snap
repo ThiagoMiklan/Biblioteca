@@ -102,57 +102,53 @@ exports[`value correctly 1`] = `
             className="is-active"
           >
             <a>
-              <span />
               <span
                 className="icon"
               >
                 <i
-                  aria-hidden="true"
                   className="fas fa-image"
                 />
               </span>
+              <span />
               Pictures
             </a>
           </li>
           <li>
             <a>
-              <span />
               <span
                 className="icon"
               >
                 <i
-                  aria-hidden="true"
                   className="fas fa-music"
                 />
               </span>
+              <span />
               Musica
             </a>
           </li>
           <li>
             <a>
-              <span />
               <span
                 className="icon has-text-success"
               >
                 <i
-                  aria-hidden="true"
                   className="fas fa-film"
                 />
               </span>
+              <span />
               Videos
             </a>
           </li>
           <li>
             <a>
-              <span />
               <span
                 className="icon"
               >
                 <i
-                  aria-hidden="true"
                   className="far fa-file-alt"
                 />
               </span>
+              <span />
               Documents
             </a>
           </li>
@@ -250,57 +246,53 @@ exports[`value correctly 1`] = `
             className="is-active"
           >
             <a>
-              <span />
               <span
                 className="icon"
               >
                 <i
-                  aria-hidden="true"
                   className="fas fa-image"
                 />
               </span>
+              <span />
               Pictures
             </a>
           </li>
           <li>
             <a>
-              <span />
               <span
                 className="icon"
               >
                 <i
-                  aria-hidden="true"
                   className="fas fa-music"
                 />
               </span>
+              <span />
               Musica
             </a>
           </li>
           <li>
             <a>
-              <span />
               <span
                 className="icon has-text-success"
               >
                 <i
-                  aria-hidden="true"
                   className="fas fa-film"
                 />
               </span>
+              <span />
               Videos
             </a>
           </li>
           <li>
             <a>
-              <span />
               <span
                 className="icon"
               >
                 <i
-                  aria-hidden="true"
                   className="far fa-file-alt"
                 />
               </span>
+              <span />
               Documents
             </a>
           </li>
@@ -314,57 +306,53 @@ exports[`value correctly 1`] = `
             className="is-active"
           >
             <a>
-              <span />
               <span
                 className="icon"
               >
                 <i
-                  aria-hidden="true"
                   className="fas fa-image"
                 />
               </span>
+              <span />
               Pictures
             </a>
           </li>
           <li>
             <a>
-              <span />
               <span
                 className="icon"
               >
                 <i
-                  aria-hidden="true"
                   className="fas fa-music"
                 />
               </span>
+              <span />
               Musica
             </a>
           </li>
           <li>
             <a>
-              <span />
               <span
                 className="icon has-text-success"
               >
                 <i
-                  aria-hidden="true"
                   className="fas fa-film"
                 />
               </span>
+              <span />
               Videos
             </a>
           </li>
           <li>
             <a>
-              <span />
               <span
                 className="icon"
               >
                 <i
-                  aria-hidden="true"
                   className="far fa-file-alt"
                 />
               </span>
+              <span />
               Documents
             </a>
           </li>
@@ -378,57 +366,53 @@ exports[`value correctly 1`] = `
             className="is-active"
           >
             <a>
-              <span />
               <span
                 className="icon"
               >
                 <i
-                  aria-hidden="true"
                   className="fas fa-image"
                 />
               </span>
+              <span />
               Pictures
             </a>
           </li>
           <li>
             <a>
-              <span />
               <span
                 className="icon"
               >
                 <i
-                  aria-hidden="true"
                   className="fas fa-music"
                 />
               </span>
+              <span />
               Musica
             </a>
           </li>
           <li>
             <a>
-              <span />
               <span
                 className="icon has-text-success"
               >
                 <i
-                  aria-hidden="true"
                   className="fas fa-film"
                 />
               </span>
+              <span />
               Videos
             </a>
           </li>
           <li>
             <a>
-              <span />
               <span
                 className="icon"
               >
                 <i
-                  aria-hidden="true"
                   className="far fa-file-alt"
                 />
               </span>
+              <span />
               Documents
             </a>
           </li>
@@ -440,43 +424,40 @@ exports[`value correctly 1`] = `
         <ul>
           <li>
             <a>
-              <span />
               <span
                 className="icon"
               >
                 <i
-                  aria-hidden="true"
                   className="fas fa-angle-left"
                 />
               </span>
+              <span />
               Left
             </a>
           </li>
           <li>
             <a>
-              <span />
               <span
                 className="icon"
               >
                 <i
-                  aria-hidden="true"
                   className="fas fa-angle-up"
                 />
               </span>
+              <span />
               Up
             </a>
           </li>
           <li>
             <a>
-              <span />
               <span
                 className="icon"
               >
                 <i
-                  aria-hidden="true"
                   className="fas fa-angle-right"
                 />
               </span>
+              <span />
               Right
             </a>
           </li>
@@ -490,57 +471,53 @@ exports[`value correctly 1`] = `
             className="is-active"
           >
             <a>
-              <span />
               <span
                 className="icon"
               >
                 <i
-                  aria-hidden="true"
                   className="fas fa-image"
                 />
               </span>
+              <span />
               Pictures
             </a>
           </li>
           <li>
             <a>
-              <span />
               <span
                 className="icon"
               >
                 <i
-                  aria-hidden="true"
                   className="fas fa-music"
                 />
               </span>
+              <span />
               Musica
             </a>
           </li>
           <li>
             <a>
-              <span />
               <span
                 className="icon has-text-success"
               >
                 <i
-                  aria-hidden="true"
                   className="fas fa-film"
                 />
               </span>
+              <span />
               Videos
             </a>
           </li>
           <li>
             <a>
-              <span />
               <span
                 className="icon"
               >
                 <i
-                  aria-hidden="true"
                   className="far fa-file-alt"
                 />
               </span>
+              <span />
               Documents
             </a>
           </li>
@@ -554,57 +531,53 @@ exports[`value correctly 1`] = `
             className="is-active"
           >
             <a>
-              <span />
               <span
                 className="icon"
               >
                 <i
-                  aria-hidden="true"
                   className="fas fa-image"
                 />
               </span>
+              <span />
               Pictures
             </a>
           </li>
           <li>
             <a>
-              <span />
               <span
                 className="icon"
               >
                 <i
-                  aria-hidden="true"
                   className="fas fa-music"
                 />
               </span>
+              <span />
               Musica
             </a>
           </li>
           <li>
             <a>
-              <span />
               <span
                 className="icon has-text-success"
               >
                 <i
-                  aria-hidden="true"
                   className="fas fa-film"
                 />
               </span>
+              <span />
               Videos
             </a>
           </li>
           <li>
             <a>
-              <span />
               <span
                 className="icon"
               >
                 <i
-                  aria-hidden="true"
                   className="far fa-file-alt"
                 />
               </span>
+              <span />
               Documents
             </a>
           </li>
@@ -618,57 +591,53 @@ exports[`value correctly 1`] = `
             className="is-active"
           >
             <a>
-              <span />
               <span
                 className="icon"
               >
                 <i
-                  aria-hidden="true"
                   className="fas fa-image"
                 />
               </span>
+              <span />
               Pictures
             </a>
           </li>
           <li>
             <a>
-              <span />
               <span
                 className="icon"
               >
                 <i
-                  aria-hidden="true"
                   className="fas fa-music"
                 />
               </span>
+              <span />
               Musica
             </a>
           </li>
           <li>
             <a>
-              <span />
               <span
                 className="icon has-text-success"
               >
                 <i
-                  aria-hidden="true"
                   className="fas fa-film"
                 />
               </span>
+              <span />
               Videos
             </a>
           </li>
           <li>
             <a>
-              <span />
               <span
                 className="icon"
               >
                 <i
-                  aria-hidden="true"
                   className="far fa-file-alt"
                 />
               </span>
+              <span />
               Documents
             </a>
           </li>
@@ -682,57 +651,53 @@ exports[`value correctly 1`] = `
             className="is-active"
           >
             <a>
-              <span />
               <span
                 className="icon"
               >
                 <i
-                  aria-hidden="true"
                   className="fas fa-image"
                 />
               </span>
+              <span />
               Pictures
             </a>
           </li>
           <li>
             <a>
-              <span />
               <span
                 className="icon"
               >
                 <i
-                  aria-hidden="true"
                   className="fas fa-music"
                 />
               </span>
+              <span />
               Musica
             </a>
           </li>
           <li>
             <a>
-              <span />
               <span
                 className="icon has-text-success"
               >
                 <i
-                  aria-hidden="true"
                   className="fas fa-film"
                 />
               </span>
+              <span />
               Videos
             </a>
           </li>
           <li>
             <a>
-              <span />
               <span
                 className="icon"
               >
                 <i
-                  aria-hidden="true"
                   className="far fa-file-alt"
                 />
               </span>
+              <span />
               Documents
             </a>
           </li>

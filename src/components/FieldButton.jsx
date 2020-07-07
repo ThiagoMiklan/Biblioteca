@@ -2,14 +2,7 @@
 import * as React from 'react';
 import FieldContent from './FieldContent';
 import Button from './Button';
-import PropTypes from 'prop-types';
-
-// FieldButton oferece um botão entre duas divs que são
-// className ="field" e className="control"
-
-// Vantagem em relação a Button, um pequeno espaçamento entre o elemento
-// FieldButton e seus elementos superior, além de ser alocado abaixo do elemento
-// e não ao lado, como é o caso de button
+import {validate} from '../tools/type_validations';
 
 // Para ver a diferença entre FieldButton e Button, basta alocar dois buttons em sequencia
 // e um button e um fieldbutton, que será possível ver uma diferença de espaçamento
@@ -20,26 +13,28 @@ type Props ={
     button_definition?: string,
     onClick?: ()=> void,
     disabled?: bool,
-    value?: React.Node
+    value?: React.Node,
+    children: string 
+}
+
+const props_obj = {
+    field_definition: 'string',
+    label:'string',
+    button_definition: 'string',
+    onClick: 'function',
+    disabled: 'boolean',
 }
 
 const FieldButton = (props:Props) => {
+    validate(props,props_obj,"FieldButton");
    return <FieldContent definition={props.field_definition} label={props.label}>
         <Button definition={props.button_definition}
             onClick={props.onClick}
-            disabled={props.disabled}>
-            {props.value}
-        </Button>
+            disabled={props.disabled}
+            label= {props.children}
+            />
     </FieldContent>
 }
 
-FieldButton.propTypes ={
-    button_definition: PropTypes.string,
-    label: PropTypes.string,
-    field_definition: PropTypes.string,
-    onClick: PropTypes.func,
-    disabled: PropTypes.bool,
-    value: PropTypes.string
-}
 
 export default FieldButton;

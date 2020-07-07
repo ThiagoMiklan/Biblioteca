@@ -15,7 +15,6 @@ exports[`dropdown normal 1`] = `
         className="icon "
       >
         <i
-          aria-hidden="true"
           className="fas fa-angle-down"
         />
       </span>
@@ -26,8 +25,6 @@ exports[`dropdown normal 1`] = `
   </div>
   <div
     class="dropdown-menu"
-    id="dropdown-menu"
-    role="menu"
   >
     <div
       class="dropdown-content"
@@ -89,7 +86,6 @@ exports[`dropdown with any type of content 1`] = `
         className="icon "
       >
         <i
-          aria-hidden="true"
           className="fas fa-angle-down"
         />
       </span>
@@ -106,8 +102,6 @@ exports[`dropdown with any type of content 1`] = `
   </div>
   <div
     class="dropdown-menu"
-    id="dropdown-menu"
-    role="menu"
   >
     <div
       class="dropdown-content"

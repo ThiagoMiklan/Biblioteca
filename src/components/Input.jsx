@@ -1,7 +1,7 @@
 // @flow
 import React, { useState } from 'react'
-import PropTypes from 'prop-types';
 import { validate } from '../tools/type_validations.js';
+import Control from './Control';
 
 type Props = {
     definition?: string,
@@ -25,7 +25,7 @@ const props_obj = {
 
 
 const Input = (props: Props) => {
-    validate(props, props_obj);
+    validate(props, props_obj,"Input");
     return (
         assemble(props)
     );
@@ -37,7 +37,7 @@ function assemble(props) {
     if (props.definition != undefined) {
         if (props.definition.includes("is-loading")) {
             code = assembleInputLoading(props);
-        }else{
+        } else {
             code = assembleInput(props);
         }
     } else {
@@ -49,7 +49,7 @@ function assemble(props) {
 }
 function assembleInputLoading(props) {
     var definition_input = (props.definition == undefined) ? "" : props.definition;
-    var definition = 'control '+ definition_input;
+    var definition = 'control ' + definition_input;
     return <div className={definition}>
         {assembleInput(props)}
 
@@ -58,40 +58,27 @@ function assembleInputLoading(props) {
 
 function assembleInput(props) {
     var input_code = "";
-    var definition = (props.definition == undefined )?'input': "input " + props.definition;
+    var definition = (props.definition == undefined) ? 'input' : "input " + props.definition;
 
     if (props.disabled) {
         if (props.readonly) {
             input_code =
-                <div className="control">
+                <Control>
                     <input onChange={props.onChangeEvent} className={definition} type={props.type} placeholder={props.placeholder} value={props.value} disabled readonly></input>
-
-                </div>
+                </Control>
         } else {
             input_code =
-                <div className="control">
+                <Control>
                     <input onChange={props.onChangeEvent} className={definition} type={props.type} placeholder={props.placeholder} value={props.value} disabled></input>
-
-                </div>
+                </Control>
         }
     } else {
         input_code =
-            <div className="control">
+            <Control>
                 <input onChange={props.onChangeEvent} className={definition} type={props.type} placeholder={props.placeholder} value={props.value}></input>
-
-            </div>
+            </Control>
     }
     return input_code;
 }
-
-Input.propTypes = {
-    definition: PropTypes.string.isRequired,
-    type: PropTypes.string.isRequired,
-    placeholder: PropTypes.string,
-    value: PropTypes.string,
-    readonly: PropTypes.bool,
-    onChangeEvent: PropTypes.func
-};
-
 
 export default Input;

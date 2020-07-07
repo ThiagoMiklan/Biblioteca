@@ -5,7 +5,7 @@ exports[`value correctly 1`] = `
   className="container is-fluid"
 >
   <div
-    className="control icons-left"
+    className="control"
   >
     <label
       className="radio"

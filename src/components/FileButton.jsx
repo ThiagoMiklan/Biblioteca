@@ -1,27 +1,36 @@
 // @flow
 import * as  React from 'react';
 import Button from './Button';
+import {validate} from '../tools/type_validations';
 
-type Props ={
+type Props = {
     label?: string,
-    onChange?: ()=>void,
+    onChange?: () => void,
     definition?: string,
-    ref_data?: string,
-    onClick?: ()=>void,
-    children?: React.Node
+    ref_data?: Object,
+    onClick?: () => void,
+    children?: string
+}
+
+const props_obj ={
+    label: 'string',
+    onChange: 'function',
+    definition: 'string',
+    ref_data: 'object',
+    onClick: 'function'
 }
 
 // Definition Equivalente a de Button, ou seja, o definition vai para Button
-const FileButton = (props:Props) => {
-
+const FileButton = (props: Props) => {
+    validate(props,props_obj,"FileButton");
     return (
         <div className='field'>
-        <label className='label'>{props.label}</label>
+            <label className='label'>{props.label}</label>
             <div className='control'>
-                <input type='file'onChange={props.onChange} style={{ display: 'none' }} ref={props.ref_data}/>
-                    <Button definition={props.definition} onClick={props.onClick}>{props.children}</Button>
+                <input type='file' onChange={props.onChange} style={{ display: 'none' }} ref={props.ref_data} />
+                <Button definition={props.definition} onClick={props.onClick} label={props.children} />
+            </div>
         </div>
-</div>
     );
 }
 

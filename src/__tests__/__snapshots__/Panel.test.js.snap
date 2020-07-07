@@ -25,7 +25,7 @@ exports[`value correctly 1`] = `
             className="label"
           />
           <div
-            className="control icons-left"
+            className="control has-icons-left"
           >
             <div
               className="control"
@@ -36,15 +36,14 @@ exports[`value correctly 1`] = `
                 type="text"
               />
             </div>
-            <span />
             <span
               className="icon info"
             >
               <i
-                aria-hidden="true"
                 className="fas fa-search"
               />
             </span>
+            <span />
           </div>
         </div>
         <p
@@ -80,60 +79,56 @@ exports[`value correctly 1`] = `
           className="panel-block"
           onClick={[Function]}
         >
-          <span />
           <span
             className="icon has-text-warning"
           >
             <i
-              aria-hidden="true"
               className="fab fa-css3-alt"
             />
           </span>
+          <span />
           Bulma
         </div>
         <div
           className="panel-block"
           onClick={[Function]}
         >
-          <span />
           <span
             className="icon"
           >
             <i
-              aria-hidden="true"
               className="fab fa-github"
             />
           </span>
+          <span />
           Github
         </div>
         <div
           className="panel-block"
           onClick={[Function]}
         >
-          <span />
           <span
             className="icon has-text-info"
           >
             <i
-              aria-hidden="true"
               className="fab fa-twitter"
             />
           </span>
+          <span />
           Twitter
         </div>
         <div
           className="panel-block"
           onClick={[Function]}
         >
-          <span />
           <span
             className="icon has-text-info"
           >
             <i
-              aria-hidden="true"
               className="fab fa-facebook"
             />
           </span>
+          <span />
           Facebook
         </div>
         <div
@@ -202,60 +197,56 @@ exports[`value correctly 1`] = `
           className="panel-block"
           onClick={[Function]}
         >
-          <span />
           <span
             className="icon has-text-warning"
           >
             <i
-              aria-hidden="true"
               className="fab fa-css3-alt"
             />
           </span>
+          <span />
           Bulma
         </div>
         <div
           className="panel-block"
           onClick={[Function]}
         >
-          <span />
           <span
             className="icon"
           >
             <i
-              aria-hidden="true"
               className="fab fa-github"
             />
           </span>
+          <span />
           Github
         </div>
         <div
           className="panel-block"
           onClick={[Function]}
         >
-          <span />
           <span
             className="icon has-text-info"
           >
             <i
-              aria-hidden="true"
               className="fab fa-twitter"
             />
           </span>
+          <span />
           Twitter
         </div>
         <div
           className="panel-block"
           onClick={[Function]}
         >
-          <span />
           <span
             className="icon has-text-info"
           >
             <i
-              aria-hidden="true"
               className="fab fa-facebook"
             />
           </span>
+          <span />
           Facebook
         </div>
         <div
@@ -324,60 +315,56 @@ exports[`value correctly 1`] = `
           className="panel-block"
           onClick={[Function]}
         >
-          <span />
           <span
             className="icon has-text-warning"
           >
             <i
-              aria-hidden="true"
               className="fab fa-css3-alt"
             />
           </span>
+          <span />
           Bulma
         </div>
         <div
           className="panel-block"
           onClick={[Function]}
         >
-          <span />
           <span
             className="icon"
           >
             <i
-              aria-hidden="true"
               className="fab fa-github"
             />
           </span>
+          <span />
           Github
         </div>
         <div
           className="panel-block"
           onClick={[Function]}
         >
-          <span />
           <span
             className="icon has-text-info"
           >
             <i
-              aria-hidden="true"
               className="fab fa-twitter"
             />
           </span>
+          <span />
           Twitter
         </div>
         <div
           className="panel-block"
           onClick={[Function]}
         >
-          <span />
           <span
             className="icon has-text-info"
           >
             <i
-              aria-hidden="true"
               className="fab fa-facebook"
             />
           </span>
+          <span />
           Facebook
         </div>
         <div
@@ -446,60 +433,56 @@ exports[`value correctly 1`] = `
           className="panel-block"
           onClick={[Function]}
         >
-          <span />
           <span
             className="icon has-text-warning"
           >
             <i
-              aria-hidden="true"
               className="fab fa-css3-alt"
             />
           </span>
+          <span />
           Bulma
         </div>
         <div
           className="panel-block"
           onClick={[Function]}
         >
-          <span />
           <span
             className="icon"
           >
             <i
-              aria-hidden="true"
               className="fab fa-github"
             />
           </span>
+          <span />
           Github
         </div>
         <div
           className="panel-block"
           onClick={[Function]}
         >
-          <span />
           <span
             className="icon has-text-info"
           >
             <i
-              aria-hidden="true"
               className="fab fa-twitter"
             />
           </span>
+          <span />
           Twitter
         </div>
         <div
           className="panel-block"
           onClick={[Function]}
         >
-          <span />
           <span
             className="icon has-text-info"
           >
             <i
-              aria-hidden="true"
               className="fab fa-facebook"
             />
           </span>
+          <span />
           Facebook
         </div>
         <div
@@ -568,60 +551,56 @@ exports[`value correctly 1`] = `
           className="panel-block"
           onClick={[Function]}
         >
-          <span />
           <span
             className="icon has-text-warning"
           >
             <i
-              aria-hidden="true"
               className="fab fa-css3-alt"
             />
           </span>
+          <span />
           Bulma
         </div>
         <div
           className="panel-block"
           onClick={[Function]}
         >
-          <span />
           <span
             className="icon"
           >
             <i
-              aria-hidden="true"
               className="fab fa-github"
             />
           </span>
+          <span />
           Github
         </div>
         <div
           className="panel-block"
           onClick={[Function]}
         >
-          <span />
           <span
             className="icon has-text-info"
           >
             <i
-              aria-hidden="true"
               className="fab fa-twitter"
             />
           </span>
+          <span />
           Twitter
         </div>
         <div
           className="panel-block"
           onClick={[Function]}
         >
-          <span />
           <span
             className="icon has-text-info"
           >
             <i
-              aria-hidden="true"
               className="fab fa-facebook"
             />
           </span>
+          <span />
           Facebook
         </div>
         <div
@@ -690,60 +669,56 @@ exports[`value correctly 1`] = `
           className="panel-block"
           onClick={[Function]}
         >
-          <span />
           <span
             className="icon has-text-warning"
           >
             <i
-              aria-hidden="true"
               className="fab fa-css3-alt"
             />
           </span>
+          <span />
           Bulma
         </div>
         <div
           className="panel-block"
           onClick={[Function]}
         >
-          <span />
           <span
             className="icon"
           >
             <i
-              aria-hidden="true"
               className="fab fa-github"
             />
           </span>
+          <span />
           Github
         </div>
         <div
           className="panel-block"
           onClick={[Function]}
         >
-          <span />
           <span
             className="icon has-text-info"
           >
             <i
-              aria-hidden="true"
               className="fab fa-twitter"
             />
           </span>
+          <span />
           Twitter
         </div>
         <div
           className="panel-block"
           onClick={[Function]}
         >
-          <span />
           <span
             className="icon has-text-info"
           >
             <i
-              aria-hidden="true"
               className="fab fa-facebook"
             />
           </span>
+          <span />
           Facebook
         </div>
         <div
@@ -812,60 +787,56 @@ exports[`value correctly 1`] = `
           className="panel-block"
           onClick={[Function]}
         >
-          <span />
           <span
             className="icon has-text-warning"
           >
             <i
-              aria-hidden="true"
               className="fab fa-css3-alt"
             />
           </span>
+          <span />
           Bulma
         </div>
         <div
           className="panel-block"
           onClick={[Function]}
         >
-          <span />
           <span
             className="icon"
           >
             <i
-              aria-hidden="true"
               className="fab fa-github"
             />
           </span>
+          <span />
           Github
         </div>
         <div
           className="panel-block"
           onClick={[Function]}
         >
-          <span />
           <span
             className="icon has-text-info"
           >
             <i
-              aria-hidden="true"
               className="fab fa-twitter"
             />
           </span>
+          <span />
           Twitter
         </div>
         <div
           className="panel-block"
           onClick={[Function]}
         >
-          <span />
           <span
             className="icon has-text-info"
           >
             <i
-              aria-hidden="true"
               className="fab fa-facebook"
             />
           </span>
+          <span />
           Facebook
         </div>
         <div

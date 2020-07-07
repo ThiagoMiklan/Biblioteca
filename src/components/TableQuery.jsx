@@ -1,6 +1,5 @@
 // @flow
 import React from 'react';
-import PropTypes from 'prop-types';
 import {validate} from '../tools/type_validations';
 
 type Props = {
@@ -18,11 +17,12 @@ const props_obj = {
 }
 
 const TableQuery = (props:Props)=>{
+    validate(props,props_obj,"TableQuery");
     return assembleTable(props);
 }
 
 function assembleTable(props){
-    validate(props,props_obj);
+   // validate(props,props_obj);
     var definition = (props.definition ==  undefined)? "table": "table " + props.definition;
     var code = <></>;
     // elimina vazio e não array
@@ -83,30 +83,19 @@ function assembleBody(itens) {
 }
 
 function makeArray(itens){
-    // intera sobre os itens da query e retira deles todos os atributos possíveis
     var allAttributes =  itens.map(obj => Object.keys(obj));
-    // cria um set para possuir uma estrutura que mantenha a propriedade de singularidade
     var set = new Set();
-    // intera sobre cada valor encontrado - Sendo uma estrutura de array de objetos
+    
     allAttributes.forEach(element => {
-        // intera sobre cada objeto pegando seus valores e adicionando ao set
-        // que irá mantê-lo único
         element.map(item =>set.add(item));
     });
     
-    return [...set];// converte o set em array novamente;
+    return [...set];
 }
 
 function assembleRow(item) {
     return <th>{item}</th>
 
 }
-
-TableQuery.propTypes ={
-    itens: PropTypes.array,
-    footer: PropTypes.bool,
-    header: PropTypes.bool
-}
-
 
 export default TableQuery;

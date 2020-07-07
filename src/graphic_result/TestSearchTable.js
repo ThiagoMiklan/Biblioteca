@@ -1,8 +1,9 @@
+
 import React, { useState } from 'react';
 import ReactDOM from 'react-dom';
-import Table from './biblioteca/Table.jsx';
+import Table from './components/Table.jsx';
 import 'bulma/css/bulma.min.css'
-import SearchTable from './biblioteca/SearchTable';
+import SearchTable from './components/SearchTable';
 
 var itens_header = [
   { value: "Pos" }, { value: "Team" }, { value: "Pld" }, { value: "W" },

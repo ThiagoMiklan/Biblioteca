@@ -1,7 +1,6 @@
 // @flow
 
 import React from 'react';
-import PropTypes from 'prop-types';
 import { validate } from '../tools/type_validations.js';
 
 type Props = {
@@ -15,11 +14,10 @@ const props_obj = {
 }
 
 const List = (props:Props)=> {
-    validate(props, props_obj);
+    validate(props, props_obj,"List");
     return (assembleList(props));    
 }
 
- // monta o esqueleto da(s) lista(s) através do map e depois monta cada linha de cada lista
 function assembleList(props) {
     var list = props.itens;
     var list_tags = "";
@@ -36,13 +34,7 @@ function assembleList(props) {
 }
 
 function assembleRow(list){
-    return (list.map(item =><li onClick={item["onClick"]}>{item["value"]}</li> ));
-}
-
-List.propTypes ={
-    definition: PropTypes.string,
-    itens: PropTypes.array.isRequired
-
+    return (list.map(item =><li key={item["key"]} onClick={item["onClick"]}>{item["value"]}</li> ));
 }
 
 

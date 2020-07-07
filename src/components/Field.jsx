@@ -1,6 +1,5 @@
 // @flow
 import React from 'react';
-import PropTypes from 'prop-types'
 import Icon from './Icon';
 import Control from './Control';
 import Input from './Input';
@@ -32,15 +31,18 @@ const props_obj ={
 
 
 const Field = (props: Props) => {
-    validate(props, props_obj);
+    validate(props,props_obj, "Field");
     return <div className="field">
         <label className="label">{props.label}</label>
         <Control definition={props.control_definition == undefined ? "has-icons-left" : props.control_definition}>
-            <Input definition={props.input_definition} onChangeEvent={props.onChange} placeholder={props.placeholder} type={props.type} value={props.value}></Input>
+            <Input  definition={props.input_definition} 
+                    onChangeEvent={props.onChange}
+                    placeholder={props.placeholder} 
+                    type={props.type} 
+                    value={props.value}></Input>
             {assembleIcon(props)}
         </Control>
     </div>
-
 }
 
 function assembleIcon(props) {
@@ -59,55 +61,6 @@ function assembleIcon(props) {
     }
 
     return code;
-}
-
-
-Field.propTypes = {
-    /*
-    Nome do rótulo que irá aparecer sobre o 
-    input
-    */
-    label: PropTypes.string,
-    /*
-    definition do componente control,
-    qual característica pré-defininada do 
-    componente, é desejada que apareça no 
-    componente Field.
-    */
-    control_definition: PropTypes.string,
-    /*
-    definition do componente input,
-    qual característica pré-defininada do 
-    componente, é desejada que apareça no 
-    componente Field.
-    */
-    input_definition: PropTypes.string,
-    /*
-    definition do componente control,
-    qual característica pré-defininada do 
-    componente, é desejada que apareça no 
-    componente Field.
-    Essa propriedade é importante pois
-    caso deseje-se colocar o icon no lado 
-    direito e/ou esquerdo, deve se utilizar essa propriedade
-    e informar "right" ou "left"
-    */
-    icon_definition: PropTypes.string,
-    /*
-    Referente ao nome do ícone segundo
-    o Font Awesome
-    */
-    icon_name: PropTypes.string,
-    /*
-    Função onChange do componente Input
-    */
-    onChange: PropTypes.func,
-    // Placeholder Input
-    placeholder: PropTypes.string,
-    // Type Input
-    type: PropTypes.string,
-    // Valor opcional de valor do input do field
-    value: PropTypes.string
 }
 
 

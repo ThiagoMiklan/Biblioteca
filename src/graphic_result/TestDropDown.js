@@ -1,10 +1,12 @@
+//@flow
+
 import React,{useState} from 'react';
 import ReactDOM from 'react-dom';
 import DropDown from './components/DropDown';
 import 'bulma/css/bulma.css'
 
 
-var itens_link =[{value: "Dropdown Button" ,link:true, href:"https://ufsc.br", onClick:()=>{alert("Clicou")}},
+var itens_link =[{value: "Dropdown Button" ,link:true, href:"https://ufsc.br", onClick:()=>{alert("Clicou")},icon_name:"fas-home"},
             {value: "Dropdown Item",link:true, href:"https://ufsc.br"},
             {value: "Other Dropdown Item",link:true, href:"https://ufsc.br"},
             {value: "Active Dropdown Item", link:true , definition:"is-active", href:"https://ufsc.br"},

@@ -44,19 +44,19 @@ exports[`progressbar inderminate 1`] = `
 Array [
   <progress
     className="progress is-small is-primary"
-    max="100"
+    max={100}
   />,
   <progress
     className="progress is-danger"
-    max="100"
+    max={100}
   />,
   <progress
     className="progress is-medium is-dark"
-    max="100"
+    max={100}
   />,
   <progress
     className="progress is-large is-info"
-    max="100"
+    max={100}
   />,
 ]
 `;
@@ -65,18 +65,18 @@ exports[`progressbar sizes 1`] = `
 Array [
   <progress
     className="progress is-small"
-    max="100"
-    value="15"
+    max={100}
+    value={15}
   />,
   <progress
     className="progress is-medium"
-    max="100"
-    value="15"
+    max={100}
+    value={15}
   />,
   <progress
     className="progress is-large"
-    max="100"
-    value="15"
+    max={100}
+    value={15}
   />,
 ]
 `;

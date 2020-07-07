@@ -1,8 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Tag from './biblioteca/Tag';
-import TagList from './biblioteca/TagList';
-import Control from './biblioteca/Control';
+import Tag from './components/Tag';
+import TagList from './components/TagList';
+import Control from './components/Control';
 import 'bulma/css/bulma.css';
 
 

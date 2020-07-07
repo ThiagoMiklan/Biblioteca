@@ -1,49 +1,45 @@
 // @flow
 import * as React from 'react';
-import PropTypes from 'prop-types';
 import Image from './Image';
 import Icon from './Icon';
-import {validate} from '../tools/type_validations.js';
+import { validate } from '../tools/type_validations.js';
 
-type Props ={
-    title?:string,
+type Props = {
+    title?: string,
     title_definition?: string,
-    definition?:string,
-    src?:string,
-    custom_header?:React.Node,
+    definition?: string,
+    src?: string,
+    custom_header?: React.Node,
     itens_footer?: Array<Object>,
-    footer_definition: ?string,
-    icon_name?:string,
-    icon_definition?:string,
+    footer_definition?: string,
+    icon_name?: string,
+    icon_definition?: string,
     header_definition?: string,
-    card_header_definition?:string,
-    image_definition?:string,
-    children?:React.Node,
+    card_header_definition?: string,
+    image_definition?: string,
+    children?: React.Node,
     card_image_definition?: string
 
 }
 
 var props_obj = {
-    title:"string",
+    title: "string",
     title_definition: "string",
-    definition:"string",
-    src:"string",
-    itens_footer:"array",
+    definition: "string",
+    src: "string",
+    itens_footer: "array",
     footer_definition: "string",
-    icon_name:"string",
-    icon_definition:"string",
+    icon_name: "string",
+    icon_definition: "string",
     header_definition: "string",
-    card_header_definition:"string",
-    image_definition:"string",
+    card_header_definition: "string",
+    image_definition: "string",
     card_image_definition: "string"
 }
 
-const Card = (props:Props) => {
-    // se title for undefined não tem motivo para criar header
-    // se src for undefined não tem motivo para criar card image
-    // se itens_footer for undefined não tem pq criar footer
-    validate(props,props_obj);
-	var definition = (props.definition == undefined) ? "card" : "card "+ props.definition;
+const Card = (props: Props) => {
+    validate(props, props_obj,"Card");
+    var definition = (props.definition == undefined) ? "card" : "card " + props.definition;
     return (
         <div className={definition}>
             {assembleHeader(props)}
@@ -54,26 +50,23 @@ const Card = (props:Props) => {
     );
 }
 
-//  Essa função server para adicionar uma propriedade de customização do header de Card
-// Com ela é possível tanto usar o Header Padrão, como informar seu próprio componente para header
-// através da props custom.header;
+
 function assembleHeader(props) {
     var header = <></>;
     if (props.custom_header != undefined) {
         header = assembleHeaderCustom(props);
     } else {
         if (props.title != undefined) {
-        header = assembleHeaderDefault(props);
+            header = assembleHeaderDefault(props);
         }
     }
     return header;
 }
 
-// title: Testando,  icon_name: "fas fa-angle-down", icon_definition: "info", href
-// expandido para diversos tipos de valores
+
 function assembleHeaderDefault(props) {
-    var header_definition = (props.header_definition == undefined)?"card-header" :"card-header "+ props.header_definition;
-    var card_header_definition =(props.card_header_definition == undefined) ? "card-header-icon" : "card-header-icon " + props.card_header_definition;
+    var header_definition = (props.header_definition == undefined) ? "card-header" : "card-header " + props.header_definition;
+    var card_header_definition = (props.card_header_definition == undefined) ? "card-header-icon" : "card-header-icon " + props.card_header_definition;
     var title_definition = (props.title_definition == undefined) ? "card-header-title" : "card-header-title " + props.title_definition;
 
     return <header className={header_definition}>
@@ -89,39 +82,36 @@ function assembleHeaderDefault(props) {
 }
 
 function assembleHeaderCustom(props) {
-    var header_definition =(props.header_definition ==  undefined)? "card-header" : "card-header " + props.header_definition;
+    var header_definition = (props.header_definition == undefined) ? "card-header" : "card-header " + props.header_definition;
 
     return <header className={header_definition}>
         {props.custom_header}
     </header>
 }
 
-// src(props):  image_definition(props): 
-// Limite de uma imagem
+
 function assembleCardImage(props) {
-    
-    var card_image_definition =(props.card_image_definition == undefined)? "card-image":"card-image " + props.card_image_definition
+
+    var card_image_definition = (props.card_image_definition == undefined) ? "card-image" : "card-image " + props.card_image_definition
     return <div className={card_image_definition}>
         <Image definition={props.image_definition} src={props.src}></Image>
     </div>
 }
 
-// content
 function assembleContent(props) {
     return <div className="card-content ">
         {props.children}
     </div>;
 }
 
-// itens_footer(props) footer_definition
-// Limitado apenas nessa formado de lista
+
 function assembleFooter(props) {
-    var footer_definition = (props.footer_definition == undefined)? "card-footer": "card-footer " + props.footer_definition
+    var footer_definition = (props.footer_definition == undefined) ? "card-footer" : "card-footer " + props.footer_definition
     var code = <></>;
-    if(props.itens_footer != undefined){
-        code =  <footer className={footer_definition}>
-        {props.itens_footer.map(item => assembleItemFooter(item))}
-    </footer>
+    if (props.itens_footer != undefined) {
+        code = <footer className={footer_definition}>
+            {props.itens_footer.map(item => assembleItemFooter(item))}
+        </footer>
     }
     return code;
 }
@@ -133,23 +123,6 @@ function assembleItemFooter(item) {
         </span>
     </p>
 }
-
-Card.propTypes = {
-    title: PropTypes.string,
-    header_definition: PropTypes.string,
-    card_header_definition: PropTypes.string,
-    content_definition: PropTypes.string,
-    itens_footer: PropTypes.array,
-    footer_definition: PropTypes.string,
-    image_definition: PropTypes.string,
-    src: PropTypes.string,
-    icon_definition: PropTypes.string,
-    icon_name: PropTypes.string,
-    card_image_definition: PropTypes.string,
-    custom_header: PropTypes.any,
-	definition: PropTypes.string
-}
-
 
 
 export default Card;

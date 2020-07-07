@@ -2,7 +2,7 @@
 
 exports[`teste content large 1`] = `
 <div
-  class="content is-large"
+  className="content is-large"
 >
   <h1>
     Hello World
@@ -39,7 +39,7 @@ exports[`teste content large 1`] = `
 
 exports[`teste content medium 1`] = `
 <div
-  class="content is-medium"
+  className="content is-medium"
 >
   <h1>
     Hello World
@@ -76,7 +76,7 @@ exports[`teste content medium 1`] = `
 
 exports[`teste content small 1`] = `
 <div
-  class="content small"
+  className="content small"
 >
   <h1>
     Hello World

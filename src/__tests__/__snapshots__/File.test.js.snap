@@ -17,15 +17,14 @@ exports[`test files 1`] = `
       <span
         className="file-cta"
       >
-        <span />
         <span
           className="icon"
         >
           <i
-            aria-hidden="true"
             className="fas fa-upload"
           />
         </span>
+        <span />
         <span
           className="file-label"
         >
@@ -48,15 +47,14 @@ exports[`test files 1`] = `
       <span
         className="file-cta"
       >
-        <span />
         <span
           className="icon"
         >
           <i
-            aria-hidden="true"
             className="fas fa-upload"
           />
         </span>
+        <span />
         <span
           className="file-label"
         >
@@ -84,15 +82,14 @@ exports[`test files 1`] = `
       <span
         className="file-cta"
       >
-        <span />
         <span
           className="icon"
         >
           <i
-            aria-hidden="true"
             className="fas fa-upload"
           />
         </span>
+        <span />
         <span
           className="file-label"
         >
@@ -120,15 +117,14 @@ exports[`test files 1`] = `
       <span
         className="file-cta"
       >
-        <span />
         <span
           className="icon"
         >
           <i
-            aria-hidden="true"
             className="fas fa-upload"
           />
         </span>
+        <span />
         <span
           className="file-label"
         >
@@ -156,15 +152,14 @@ exports[`test files 1`] = `
       <span
         className="file-cta"
       >
-        <span />
         <span
           className="icon"
         >
           <i
-            aria-hidden="true"
             className="fas fa-upload"
           />
         </span>
+        <span />
         <span
           className="file-label"
         >
@@ -187,15 +182,14 @@ exports[`test files 1`] = `
       <span
         className="file-cta"
       >
-        <span />
         <span
           className="icon"
         >
           <i
-            aria-hidden="true"
             className="fas fa-upload"
           />
         </span>
+        <span />
         <span
           className="file-label"
         >
@@ -223,15 +217,14 @@ exports[`test files 1`] = `
       <span
         className="file-cta"
       >
-        <span />
         <span
           className="icon"
         >
           <i
-            aria-hidden="true"
             className="fas fa-upload"
           />
         </span>
+        <span />
         <span
           className="file-label"
         >
@@ -254,15 +247,14 @@ exports[`test files 1`] = `
       <span
         className="file-cta"
       >
-        <span />
         <span
           className="icon"
         >
           <i
-            aria-hidden="true"
             className="fas fa-upload"
           />
         </span>
+        <span />
         <span
           className="file-label"
         >
@@ -290,15 +282,14 @@ exports[`test files 1`] = `
       <span
         className="file-cta"
       >
-        <span />
         <span
           className="icon"
         >
           <i
-            aria-hidden="true"
             className="fas fa-upload"
           />
         </span>
+        <span />
         <span
           className="file-label"
         >
@@ -321,15 +312,14 @@ exports[`test files 1`] = `
       <span
         className="file-cta"
       >
-        <span />
         <span
           className="icon"
         >
           <i
-            aria-hidden="true"
             className="fas fa-upload"
           />
         </span>
+        <span />
         <span
           className="file-label"
         >
@@ -357,15 +347,14 @@ exports[`test files 1`] = `
       <span
         className="file-cta"
       >
-        <span />
         <span
           className="icon"
         >
           <i
-            aria-hidden="true"
             className="fas fa-upload"
           />
         </span>
+        <span />
         <span
           className="file-label"
         >
@@ -388,15 +377,14 @@ exports[`test files 1`] = `
       <span
         className="file-cta"
       >
-        <span />
         <span
           className="icon"
         >
           <i
-            aria-hidden="true"
             className="fas fa-upload"
           />
         </span>
+        <span />
         <span
           className="file-label"
         >
@@ -419,15 +407,14 @@ exports[`test files 1`] = `
       <span
         className="file-cta"
       >
-        <span />
         <span
           className="icon"
         >
           <i
-            aria-hidden="true"
             className="fas fa-upload"
           />
         </span>
+        <span />
         <span
           className="file-label"
         >
@@ -450,15 +437,14 @@ exports[`test files 1`] = `
       <span
         className="file-cta"
       >
-        <span />
         <span
           className="icon"
         >
           <i
-            aria-hidden="true"
             className="fas fa-upload"
           />
         </span>
+        <span />
         <span
           className="file-label"
         >
@@ -481,15 +467,14 @@ exports[`test files 1`] = `
       <span
         className="file-cta"
       >
-        <span />
         <span
           className="icon"
         >
           <i
-            aria-hidden="true"
             className="fas fa-upload"
           />
         </span>
+        <span />
         <span
           className="file-label"
         >
@@ -517,15 +502,14 @@ exports[`test files 1`] = `
       <span
         className="file-cta"
       >
-        <span />
         <span
           className="icon"
         >
           <i
-            aria-hidden="true"
             className="fas fa-upload"
           />
         </span>
+        <span />
         <span
           className="file-label"
         >
@@ -553,15 +537,14 @@ exports[`test files 1`] = `
       <span
         className="file-cta"
       >
-        <span />
         <span
           className="icon"
         >
           <i
-            aria-hidden="true"
             className="fas fa-upload"
           />
         </span>
+        <span />
         <span
           className="file-label"
         >
@@ -589,15 +572,14 @@ exports[`test files 1`] = `
       <span
         className="file-cta"
       >
-        <span />
         <span
           className="icon"
         >
           <i
-            aria-hidden="true"
             className="fas fa-upload"
           />
         </span>
+        <span />
         <span
           className="file-label"
         >
@@ -625,15 +607,14 @@ exports[`test files 1`] = `
       <span
         className="file-cta"
       >
-        <span />
         <span
           className="icon"
         >
           <i
-            aria-hidden="true"
             className="fas fa-upload"
           />
         </span>
+        <span />
         <span
           className="file-label"
         >
@@ -656,15 +637,14 @@ exports[`test files 1`] = `
       <span
         className="file-cta"
       >
-        <span />
         <span
           className="icon"
         >
           <i
-            aria-hidden="true"
             className="fas fa-upload"
           />
         </span>
+        <span />
         <span
           className="file-label"
         >
@@ -687,15 +667,14 @@ exports[`test files 1`] = `
       <span
         className="file-cta"
       >
-        <span />
         <span
           className="icon"
         >
           <i
-            aria-hidden="true"
             className="fas fa-upload"
           />
         </span>
+        <span />
         <span
           className="file-label"
         >
@@ -718,15 +697,14 @@ exports[`test files 1`] = `
       <span
         className="file-cta"
       >
-        <span />
         <span
           className="icon"
         >
           <i
-            aria-hidden="true"
             className="fas fa-upload"
           />
         </span>
+        <span />
         <span
           className="file-label"
         >
@@ -749,15 +727,14 @@ exports[`test files 1`] = `
       <span
         className="file-cta"
       >
-        <span />
         <span
           className="icon"
         >
           <i
-            aria-hidden="true"
             className="fas fa-upload"
           />
         </span>
+        <span />
         <span
           className="file-label"
         >
@@ -785,15 +762,14 @@ exports[`test files 1`] = `
       <span
         className="file-cta"
       >
-        <span />
         <span
           className="icon"
         >
           <i
-            aria-hidden="true"
             className="fas fa-upload"
           />
         </span>
+        <span />
         <span
           className="file-label"
         >
@@ -821,15 +797,14 @@ exports[`test files 1`] = `
       <span
         className="file-cta"
       >
-        <span />
         <span
           className="icon"
         >
           <i
-            aria-hidden="true"
             className="fas fa-upload"
           />
         </span>
+        <span />
         <span
           className="file-label"
         >
@@ -857,15 +832,14 @@ exports[`test files 1`] = `
       <span
         className="file-cta"
       >
-        <span />
         <span
           className="icon"
         >
           <i
-            aria-hidden="true"
             className="fas fa-upload"
           />
         </span>
+        <span />
         <span
           className="file-label"
         >
@@ -893,15 +867,14 @@ exports[`test files 1`] = `
       <span
         className="file-cta"
       >
-        <span />
         <span
           className="icon"
         >
           <i
-            aria-hidden="true"
             className="fas fa-upload"
           />
         </span>
+        <span />
         <span
           className="file-label"
         >
@@ -928,15 +901,14 @@ exports[`test files 1`] = `
       <span
         className="file-cta"
       >
-        <span />
         <span
           className="icon"
         >
           <i
-            aria-hidden="true"
             className="fas fa-upload"
           />
         </span>
+        <span />
         <span
           className="file-label"
         >

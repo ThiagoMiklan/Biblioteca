@@ -1,6 +1,6 @@
 // @flow 
 import React from 'react';
-import PropTypes from 'prop-types';
+import {validate} from '../tools/type_validations';
 
 type Props ={
     definition?:string,
@@ -8,18 +8,19 @@ type Props ={
     src?:string
 }
 
+const props_obj ={
+    definition:'string',
+    image_definition: 'string',
+    src:'string'
+}
+
 const Image = (props:Props)=>{
-    var definition = (props.definition ==  undefined) ? "image" : "imagem "+ props.definition;
+    validate(props,props_obj,"Image");
+    var definition = (props.definition ==  undefined) ? "image" : "image "+ props.definition;
     
     return (<figure className={definition} >
             <img className={props.image_definition} src={props.src}/>
         </figure>);
-}
-
-Image.propTypes = {
-    definition: PropTypes.string.isRequired,
-    image_definition: PropTypes.string,
-    src: PropTypes.string.isRequired
 }
 
 export default Image;

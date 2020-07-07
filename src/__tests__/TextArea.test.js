@@ -17,7 +17,7 @@ test('value correctly', () => {
           
           <TextArea placeholder="e.g. Hello world"></TextArea>
 
-          <TextArea rows="10" placeholder="10 lines of text"></TextArea>
+          <TextArea rows={10} placeholder="10 lines of text"></TextArea>
 
           <Control>
             <TextArea definition="is-primary" placeholder="e.g. Hello world"></TextArea>

@@ -21,15 +21,14 @@ Array [
           placeholder="testing"
         />
       </div>
-      <span />
       <span
         className="icon is-primary is-right"
       >
         <i
-          aria-hidden="true"
           className="fas fa-user"
         />
       </span>
+      <span />
     </div>
   </div>,
   <div
@@ -51,15 +50,14 @@ Array [
           placeholder="testing"
         />
       </div>
-      <span />
       <span
         className="icon is-info is-right"
       >
         <i
-          aria-hidden="true"
           className="fas fa-user"
         />
       </span>
+      <span />
     </div>
   </div>,
   <div
@@ -81,15 +79,14 @@ Array [
           placeholder="testing"
         />
       </div>
-      <span />
       <span
         className="icon is-success is-right"
       >
         <i
-          aria-hidden="true"
           className="fas fa-user"
         />
       </span>
+      <span />
     </div>
   </div>,
   <div
@@ -111,15 +108,14 @@ Array [
           placeholder="testing"
         />
       </div>
-      <span />
       <span
         className="icon is-danger is-right"
       >
         <i
-          aria-hidden="true"
           className="fas fa-user"
         />
       </span>
+      <span />
     </div>
   </div>,
   <div
@@ -141,15 +137,14 @@ Array [
           placeholder="testing"
         />
       </div>
-      <span />
       <span
         className="icon is-warning is-right"
       >
         <i
-          aria-hidden="true"
           className="fas fa-user"
         />
       </span>
+      <span />
     </div>
   </div>,
 ]
@@ -175,15 +170,14 @@ Array [
           className="input is-small"
         />
       </div>
-      <span />
       <span
         className="icon is-warning is-right"
       >
         <i
-          aria-hidden="true"
           className="fas fa-user"
         />
       </span>
+      <span />
     </div>
   </div>,
   <div
@@ -204,15 +198,14 @@ Array [
           className="input is-medium"
         />
       </div>
-      <span />
       <span
         className="icon is-warning is-right"
       >
         <i
-          aria-hidden="true"
           className="fas fa-user"
         />
       </span>
+      <span />
     </div>
   </div>,
   <div
@@ -233,15 +226,14 @@ Array [
           className="input is-large"
         />
       </div>
-      <span />
       <span
         className="icon is-warning is-right"
       >
         <i
-          aria-hidden="true"
           className="fas fa-user"
         />
       </span>
+      <span />
     </div>
   </div>,
 ]
@@ -267,14 +259,12 @@ Array [
           className="input is-small is-rounded"
         />
       </div>
-      <span />
       <span
         className="icon  is-right"
       >
-        <i
-          aria-hidden="true"
-        />
+        <i />
       </span>
+      <span />
     </div>
   </div>,
   <div
@@ -295,14 +285,12 @@ Array [
           className="input is-medium is-rounded"
         />
       </div>
-      <span />
       <span
         className="icon  is-right"
       >
-        <i
-          aria-hidden="true"
-        />
+        <i />
       </span>
+      <span />
     </div>
   </div>,
   <div
@@ -323,14 +311,12 @@ Array [
           className="input is-large is-rounded"
         />
       </div>
-      <span />
       <span
         className="icon  is-right"
       >
-        <i
-          aria-hidden="true"
-        />
+        <i />
       </span>
+      <span />
     </div>
   </div>,
 ]

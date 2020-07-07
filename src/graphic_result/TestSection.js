@@ -1,11 +1,13 @@
+
+
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Tabs from './biblioteca/components/Tabs';
+import Tabs from './components/Tabs';
  
-import Section from './biblioteca/layout/Section';
-import Title from './biblioteca/elements/Title';
-import Subtitle from './biblioteca/elements/Subtitle';
-import SubTitle from './biblioteca/elements/Subtitle';
+import Section from './components/Section';
+import Title from './components/Title';
+import Subtitle from './components/Subtitle';
+import SubTitle from './components/Subtitle';
 
 ReactDOM.render(
     <Section>

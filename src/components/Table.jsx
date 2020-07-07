@@ -1,10 +1,7 @@
 // @flow
 import React from 'react';
-import PropTypes from 'prop-types';
 import { validate } from '../tools/type_validations';
 
-// style cursor default pointer
-// cursor ao passar com o mouse em cima de uma linha da table
 var style_cursor = {
     cursor:"pointer"
 }
@@ -28,12 +25,12 @@ const props_obj = {
 }
 
 const Table = (props: Props) => {
+    validate(props,props_obj,"Table");
     return assembleTable(props);
 }
 
 function assembleTable(props) {
-    validate(props,props_obj);
-    var definition = (props.definition ==  undefined)? "table": "table " + props.definition;
+   var definition = (props.definition ==  undefined)? "table": "table " + props.definition;
     
     var code =  <table className={definition}>
                 {isArrayOk(props.itens_header) && assembleHeader(props)}
@@ -101,17 +98,6 @@ function assembleBody(itens,onClickRow) {
 function assembleRowHeaderFooter(item) {
     return <th>{item["value"]}</th>
 
-}
-
-Table.propTypes = {
-    itens_body: PropTypes.array,
-    itens_header: PropTypes.array,
-    itens_footer: PropTypes.array,
-    // função para quando clicar na tabela
-    // executar alguma ação
-    // evento global para todas as linhas
-    onClickRow: PropTypes.func,
-    header_definition: PropTypes.string
 }
 
 

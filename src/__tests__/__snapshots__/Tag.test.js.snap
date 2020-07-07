@@ -58,7 +58,7 @@ Array [
     Tag label
   </span>,
   <div
-    className="control icons-left"
+    className="control"
   />,
   <span
     className="tag is-primary is-light"
@@ -91,7 +91,7 @@ Array [
     Tag label
   </span>,
   <div
-    className="control icons-left"
+    className="control"
   />,
   <span
     className="tag is-link"
@@ -109,7 +109,7 @@ Array [
     Normal
   </span>,
   <div
-    className="control icons-left"
+    className="control"
   />,
   <span
     className="tag is-primary is-rounded"
