@@ -5,6 +5,7 @@ import Content from './Content';
 import Button from './Button';
 import Level from './Level';
 import { validate } from '../tools/type_validations';
+import {MediaObjectItem} from '../tools/types';
 
 type Props = {
     definition?: string,
@@ -14,7 +15,7 @@ type Props = {
     children?: React.Node,
     src?: string,
     right?: React.Node,
-    itens?: Array<Object>,
+    itens?: Array<MediaObjectItem>,
     level_definition?: string,
     left_definition?: string,
     right_definition?: string,

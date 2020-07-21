@@ -1,3 +1,6 @@
+
+
+/*
 import React, { useState } from 'react';
 import ReactDOM from 'react-dom'
 import NavigationBar from './components/NavigationBar';
@@ -8,19 +11,19 @@ import Tabs from './components/Tabs';
 import Container from './components/Container';
 import 'bulma/css/bulma.css';
 
-const itens_navbar_start = [
+var itens_navbar_start = [
     {value:"Administration"},
     {value:"General"},
     {value:"About"}
 ]
 
-const itens_navbar_end = [
+var itens_navbar_end = [
     {value:"Administration"},
     {value:"General"},
     {value:"About"}
 ]
 
-const itens_tabs = [
+var itens_tabs = [
     {value:"Clients"},
     {value:"Users"},
     {value:"Requires"}
@@ -34,3 +37,5 @@ ReactDOM.render(<HeroThreeParts definition="is-fullheight">
     </Container>
     <Tabs itens={itens_tabs}></Tabs>
 </HeroThreeParts>, document.getElementById('root'));
+
+*/

@@ -1,7 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import File from './biblioteca/File';
+import File from './components/File';
 import 'bulma/css/bulma.css';
+
+const custom = {
+    accept : "image/*",
+}
 
 
 ReactDOM.render(
@@ -9,7 +13,9 @@ ReactDOM.render(
     <File 
       filename="Screenshot 2020/01/01"
       label="Choose a File"
-      icon_name="fas fa-upload"/>
+      icon_name="fas fa-upload"
+      custom={custom}
+      />
       <br></br>
     <File
       definition="has-name"

@@ -3,11 +3,13 @@ import * as React from 'react';
 import Button from './Button';
 import Icon from './Icon';
 import { validate } from '../tools/type_validations.js';
+import {DropDownItem} from '../tools/types';
 
+// custom (on itens)
 
 type Props = {
     definition?: string,
-    itens?: Array<Object>,
+    itens?: Array<DropDownItem>,
     onClick?: () => void,
 }
 const props_obj = {
@@ -77,12 +79,12 @@ function decideTypeOfItens(item) {
 
 function assembleItensLinks(item) {
     var definition = (item["definition"] == undefined) ? "dropdown-item" : "dropdown-item " + item["definition"];
-    return <a className={definition} onClick={item["onClick"]} href={item["href"]}>{item["value"]}</a>;
+    return <a className={definition} onClick={item["onClick"]} href={item["href"]} {...item["custom"]} >{item["value"]}</a>;
 }
 
 function assembleComponentsItens(item) {
     var definition = (item["definition"] == undefined) ? "dropdown-item" : "dropdown-item " + item["definition"];
-    return <div className={definition} onClick={item["onClick"]} href={item["href"]} >{item["value"]}</div>;
+    return <div className={definition} onClick={item["onClick"]} href={item["href"]} {...item["custom"]} >{item["value"]}</div>;
 }
 
 

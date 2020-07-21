@@ -4,12 +4,12 @@ import Icon from './Icon';
 import PanelItem from './PanelItem';
 import Field from './Field';
 import { validate } from '../tools/type_validations';
-
+import {PanelItemItem} from '../tools/types';
 
 type Props = {
     header?: string,
     itens_tabs?: Array<Object>,
-    itens_blocks?:Array<Object>,
+    itens_blocks?:Array<PanelItemItem>,
     definition?: string,
     search_definition?:string,
     search_placeholder?:string,

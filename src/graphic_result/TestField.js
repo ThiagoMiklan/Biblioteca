@@ -3,6 +3,10 @@ import ReactDOM from 'react-dom';
 import Field from './components/Field'
 import 'bulma/css/bulma.css';
 
+const custom = {
+  draggable: true
+}
+
 ReactDOM.render(<div className="container is-fluid">
        
         <Field label="Example"
@@ -10,7 +14,9 @@ ReactDOM.render(<div className="container is-fluid">
                icon_definition="is-primary"
                icon_name="fas fa-user"
                placeholder="testing"
-               control_definition="has-icons-right">
+               control_definition="has-icons-right"
+              
+               >
         </Field>
         <Field label="Example"
                input_definition="is-info"
@@ -73,8 +79,10 @@ ReactDOM.render(<div className="container is-fluid">
         </Field>
 
         <Field label="Example"
-               input_definition="is-large is-rounded"
-               control_definition="has-icons-right">
+               input_definition="is-large is-rounded is-loading"
+               control_definition="has-icons-right"
+               custom={custom}
+               >
         </Field>
 
         <br></br>

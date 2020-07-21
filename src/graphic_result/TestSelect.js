@@ -26,7 +26,7 @@ const itens_2 = [
 ReactDOM.render(
   <>
     <div className="field">
-      <Select  onChange={click} definition="is-rounded" itens={itens_1}></Select>
+      <Select  onChange={click} definition="is-rounded" custom={{disabled: true}} itens={itens_1}></Select>
     </div>
 
     <div className="field">

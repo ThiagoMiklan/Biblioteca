@@ -3,9 +3,10 @@ import React from 'react'
 import Control from './Control';
 import Input from './Input';
 import { validate } from '../tools/type_validations';
+import {RadioItem} from '../tools/types';
 
 type Props = {
-    itens?: Array<Object>,
+    itens?: Array<RadioItem>,
     name?: string
 }
 const props_obj={
@@ -37,9 +38,11 @@ function assembleItens(props) {
 
 function assembleRadio(item,name){
     return <label className="radio" disabled={item["disabled"]} >
-            <input type="radio" onClick={item["onClick"]} name={name} checked={item["checked"]} />
+            <input type="radio" onClick={item["onClick"]} name={name} checked={item["checked"]} {...item["custom"]} />
                 {item["value"]}
             </label>
 }
+
+
 
 export default Radio;

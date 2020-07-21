@@ -34,7 +34,7 @@ function assembleList(props) {
 }
 
 function assembleRow(list){
-    return (list.map(item =><li key={item["key"]} onClick={item["onClick"]}>{item["value"]}</li> ));
+    return (list.map(item =><li key={item["key"]} onClick={item["onClick"]} {...item["custom"]}>{item["value"]}</li> ));
 }
 
 

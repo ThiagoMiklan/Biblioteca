@@ -16,7 +16,7 @@ var itens_tabs = [{ value: "Modifiers" }, { value: "Grid" }, { value: "Elements"
 ReactDOM.render(
   <>
     <Hero title="Hero Title" subtitle="Hero Subtitle" />
-    <Hero definition={"is-primary" }title="Primary Title" subtitle="Primary Subtitle" />
+    <Hero definition="is-primary" title="Primary Title" subtitle="Primary Subtitle" />
     <Hero definition="is-info" title="Info Title" subtitle="Info Subtitle" />
     <Hero definition="is-success" title="Success Title" subtitle="Success Subtitle" />
     <Hero definition="is-warning" title="Warning Title" subtitle="Warning Subtitle" />

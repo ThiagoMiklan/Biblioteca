@@ -2,11 +2,15 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import Radio from './components/Radio';
 import Control from './components/Control';
- 
+
+const custom = {
+  checked: true
+}
+
 var itens = [
-              {value:"Yes",disabled: false, onClick:()=>{alert("Yes")}},
-              {value:"No",checked: true, onClick:()=>{alert("No")}},
-              {value:"Maybe",checked: true, onClick:()=>{alert("Maybe")},disabled:true }
+              {value:"Yes",disabled: false, onClick:()=>{alert("Yes")}, custom: {checked:true}},
+              {value:"No",checked: false, onClick:()=>{alert("No")}},
+              {value:"Maybe",checked: false, onClick:()=>{alert("Maybe")},disabled:true }
 ]
 
 ReactDOM.render(

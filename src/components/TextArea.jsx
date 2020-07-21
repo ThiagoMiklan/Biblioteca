@@ -12,7 +12,8 @@ type Props = {
     readonly?: bool,
     disabled?: bool,
     label?: string,
-    value?: string
+    value?: string,
+    custom?: Object
 }
 
 const props_obj = {
@@ -24,7 +25,8 @@ const props_obj = {
     readonly: "boolean",
     disabled: "boolean",
     label: "string",
-    value: "string"
+    value: "string",
+    custom: "object"
 }
 
 const TextArea = (props: Props) => {
@@ -36,18 +38,11 @@ function assembleTextArea(props) {
     validate(props, props_obj);
     var definition = (props.definition == undefined) ? "textarea" : "textarea " + props.definition;
 
-    var definitionControl = props.loading == true ? "is-loading" : "";
+    var definitionControl = props.definition != undefined && props.definition.includes("is-loading") ? "is-loading" : "";
 
     return <Control definition={definitionControl}>
         <label className="label"> {props.label}</label>
-        <textarea
-            onChange={props.onChange}
-            className={definition}
-            placeholder={props.placeholder}
-            rows={props.rows}
-            readOnly={props.readonly}
-            disabled={props.disabled}
-            value={props.value}
+        <textarea onChange={props.onChange} className={definition} placeholder={props.placeholder} rows={props.rows} readOnly={props.readonly} disabled={props.disabled}  value={props.value}
         ></textarea>
     </Control>
 }

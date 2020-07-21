@@ -4,12 +4,12 @@ import {validate} from '../tools/type_validations.js';
 
 type Props ={
     definition?: string,
-    children?:React.Node
+    children?:React.Node,
+    custom?: Object 
 }
 
 const props_obj ={
     definition: "string",
-    field: "boolean"
 }
 
 const ButtonList = (props:Props) => {
@@ -25,7 +25,7 @@ function assembleButtonList(props) {
     
         if (definition.includes("addons")) {
         code_icon =
-            <div className={props.definition}>
+            <div className={props.definition} {...props.custom}>
                 {
                     React.Children.map(props.children, (child, i) => {
                         return <p className="control">

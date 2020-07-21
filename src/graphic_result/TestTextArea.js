@@ -1,32 +1,10 @@
 import React,{useState} from 'react';
 import ReactDOM from 'react-dom';
-import TextArea from './biblioteca/TextArea';
+import TextArea from './components/TextArea';
 import 'bulma/css/bulma.css';
-import Control from './biblioteca/Control';
+import Control from './components/Control';
 
 
-const TextAreaHook = ()=>{
-  var initial = {
-    definition : '',
-    count: 0
-  }
-  
-  const [state,setState] = useState(initial);
-    
-    function onChange() {
-      if(state.count == 0){
-        setState({ ...state, definition: "primary", count:state.count+1});
-      }else if(state.count == 1){
-        setState({ ...state, definition: "info", count:state.count+1});
-      }else if(state.count == 2){
-        setState({ ...state, definition: "warning", count:state.count+1});
-      }else if(state.count == 3){
-        setState({ ...state, definition: "danger", count:state.count+1});
-      }
-      
-    }
-  return  <TextArea definition={state.definition} onChange={onChange} placeholder="Testando onChange"></TextArea>
-}
 
 ReactDOM.render(
   <>
@@ -57,13 +35,14 @@ ReactDOM.render(
           <TextArea definition="is-large" placeholder="e.g. Hello world"></TextArea>
 
           <br></br>
-          <TextArea placeholder="e.g. Hello world" loading={true} readonly={true}></TextArea>
-          <TextArea placeholder="e.g. Hello world" loading={true} disabled={true}></TextArea>
+          <TextArea placeholder="e.g. Hello world" definition="is-loadingr" readonly={true}></TextArea>
+          <TextArea placeholder="e.g. Hello world" definition="is-loading" disabled={true}></TextArea>
           </div>
       </div>
      </div>
   </>
   ,document.getElementById("root"))
+
 
 
   /*

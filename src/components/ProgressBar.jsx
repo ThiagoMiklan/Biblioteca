@@ -22,8 +22,8 @@ const ProgressBar = (props: Props)=>{
         return (
             <progress onChange={props.onChange} className={definition}
              max={props.max} 
-             value ={props.value}>  
-            </progress>
+             value ={props.value}/>  
+           
         );
 }
 

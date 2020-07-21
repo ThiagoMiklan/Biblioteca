@@ -1,11 +1,13 @@
 // @flow
-import React from 'react';
+import * as React from 'react';
 import Icon from './Icon';
 import { validate } from '../tools/type_validations';
+import {TabItem} from '../tools/types';
+
 
 type Props = {
     definition?:string,
-    itens?: Array<Object>
+    itens?: Array<TabItem> 
 }
 
 const props_obj = {
@@ -39,7 +41,7 @@ function assembleListTabs(itens){
                 </li>)}
             </ul>
         }
-        
+    
         return tabs_code;  
 }
 

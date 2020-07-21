@@ -3,6 +3,8 @@ import React, { useState } from 'react'
 import { validate } from '../tools/type_validations.js';
 import Control from './Control';
 
+// Custom
+
 type Props = {
     definition?: string,
     type?: string,
@@ -10,7 +12,8 @@ type Props = {
     value?: string,
     readonly?: bool,
     disabled?: bool,
-    onChangeEvent?: () => void
+    onChangeEvent?: () => void,
+    custom?: Object
 }
 
 const props_obj = {
@@ -64,18 +67,18 @@ function assembleInput(props) {
         if (props.readonly) {
             input_code =
                 <Control>
-                    <input onChange={props.onChangeEvent} className={definition} type={props.type} placeholder={props.placeholder} value={props.value} disabled readonly></input>
+                    <input onChange={props.onChangeEvent} {...props.custom} className={definition} type={props.type} placeholder={props.placeholder} value={props.value} disabled readonly></input>
                 </Control>
         } else {
             input_code =
                 <Control>
-                    <input onChange={props.onChangeEvent} className={definition} type={props.type} placeholder={props.placeholder} value={props.value} disabled></input>
+                    <input onChange={props.onChangeEvent}  {...props.custom} className={definition} type={props.type} placeholder={props.placeholder} value={props.value} disabled></input>
                 </Control>
         }
     } else {
         input_code =
             <Control>
-                <input onChange={props.onChangeEvent} className={definition} type={props.type} placeholder={props.placeholder} value={props.value}></input>
+                <input onChange={props.onChangeEvent}  {...props.custom} className={definition} type={props.type} placeholder={props.placeholder} value={props.value}></input>
             </Control>
     }
     return input_code;

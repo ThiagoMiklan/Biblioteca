@@ -4,9 +4,8 @@ import ReactDOM from 'react-dom';
 import Content from './components/Content';
 import List from './components/List';
  
-
-var itens = [{value:"Item 1",onClick:()=>{alert("Clicked")}}
-            ,{value:"Item 2",onClick:()=>{alert("Clicked")}},
+var itens = [{value:"Item 1",custom: {onDoubleClick: ()=>{alert("Duplo clique")}}},
+            {value:"Item 2",onClick:()=>{alert("Clicked")}},
              {value:"Item 3",onClick:()=>{alert("Clicked")}}]
 
 ReactDOM.render(

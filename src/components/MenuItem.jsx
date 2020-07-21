@@ -1,9 +1,10 @@
 // @flow
 import React from 'react';
 import { validate } from '../tools/type_validations';
+import {MenuItemItem} from '../tools/types';
 
 type Props = {
-    itens?: Array<Object>,
+    itens?: Array<MenuItemItem>,
     label?: string
 }
 

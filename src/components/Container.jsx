@@ -1,6 +1,12 @@
-import React from 'react';
+// @flow
+import  * as React from 'react';
 
-const Container = (props) => {
+type Props = {
+    definition?: string,
+    children?: React.Node
+}
+
+const Container = (props: Props) => {
     var definition = (props.definition == undefined) ? "container" : "container " + props.definition;
     return <div className={definition}>
         {props.children}

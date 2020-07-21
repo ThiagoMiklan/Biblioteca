@@ -1,15 +1,16 @@
 // @flow
 import React from 'react';
 import { validate } from '../tools/type_validations';
+import {TableItem} from '../tools/types';
 
 var style_cursor = {
     cursor:"pointer"
 }
 
 type Props = {
-    itens_body?: Array<Object>,
-    itens_header?: Array<Object>,
-    itens_footer?: Array<Object>,
+    itens_body?: Array<TableItem>,
+    itens_header?: Array<TableItem>,
+    itens_footer?: Array<TableItem>,
     definition?: string,
     onClickRow?: ()=> void,
     header_definition?: string
@@ -32,7 +33,7 @@ const Table = (props: Props) => {
 function assembleTable(props) {
    var definition = (props.definition ==  undefined)? "table": "table " + props.definition;
     
-    var code =  <table className={definition}>
+    var code =  <table className={definition}> 
                 {isArrayOk(props.itens_header) && assembleHeader(props)}
                 {isArrayOk(props.itens_body) && assembleBody(props.itens_body,props.onClickRow)}
                 {isArrayOk(props.itens_footer) && assembleFooter(props.itens_footer)}

@@ -1,6 +1,7 @@
 // @flow
 import React from 'react';
 import { validate } from '../tools/type_validations';
+import {NavigationBarItem} from '../tools/types';
 
 type Props = {
     definition?: string,
@@ -9,8 +10,8 @@ type Props = {
     width_brand?: number,
     alt?: string,
     height_brand?: number,
-    itens_start?: Array<Object>,
-    itens_end?: Array<Object>
+    itens_start?: Array<NavigationBarItem>,
+    itens_end?: Array<NavigationBarItem>
 }
 
 const props_obj = {
@@ -61,7 +62,7 @@ function assemble(itens) {
         }
     } else if (typeof itens == 'object' && itens != undefined) {
         //se não for array, não for undefined e for objeto realiza operação
-        itens_code = assembleItem(itens, itens["definition"]);
+        itens_code = assembleItem(itens);
     }
     return itens_code;
 }
@@ -80,7 +81,7 @@ function decideTypeOfItem(item) {
         itens_code = assembleItensDropDown(item);
     } else {
         // se não ele conjunto de itens encadeados
-        itens_code = assembleItem(item, "");
+        itens_code = assembleItem(item);
     }
     return itens_code;
 }
@@ -96,7 +97,7 @@ function assembleItensDropDown(itens) {
         <div className="navbar-item has-dropdown is-hoverable">
             {firstitemDropDown}
             <div className="navbar-dropdown">
-                {itens.map(item => assembleItem(item, ""))}
+                {itens.map(item => assembleItem(item))}
             </div>
         </div>;
 
@@ -108,7 +109,7 @@ function assembleItensDropDown(itens) {
 function assembleFirstItemDropDown(item) {
     var first_item = "";
     if (item != undefined) {
-        first_item = <a className="navbar-link">
+        first_item = <a className="navbar-link" onClick={item["onClick"]} {...item["custom"]}>
             {item["value"]}
         </a>
     }
@@ -117,9 +118,9 @@ function assembleFirstItemDropDown(item) {
     return first_item;
 }
 
-function assembleItem(item, definition) {
-    var def = "navbar-item " + item["definition"];
-    var item_code = <a onClick={item["onClick"]} className={def}>{item["value"]}</a>;
+function assembleItem(item) {
+    var definition = ( item["definition"] == undefined) ? "navbar-item ": "navbar-item "+ item["definition"];
+    var item_code = <a onClick={item["onClick"]} className={definition} {...item["custom"]}>{item["value"]}</a>;
     return item_code;
 }
 

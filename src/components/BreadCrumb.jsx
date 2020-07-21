@@ -1,10 +1,13 @@
 // @flow
 import React from 'react';
 import {validate} from '../tools/type_validations';
+import {BreadCrumbItem} from '../tools/types';
+
+// custom <li>
 
 type Props = {
   definition?: string,
-  itens?: string,
+  itens?: Array<BreadCrumbItem>,
 }
 
 const props_obj = {
@@ -42,9 +45,10 @@ function assembleItens(itens) {
 
 function assembleSingleItem(item) {
   var definition =  item["definition"];
+  var custom = item["custom"];
     return (
-        <li key={item["key"]} className={definition}>
-            <a  onClick={item["onClick"]} href={item["href"]}>{item["value"]}</a>
+        <li key={item["key"]} className={definition} {...custom}>
+            <a  onClick={item["onClick"]} href={item["href"]} >{item["value"]}</a>
         </li>);
 }
 

@@ -4,12 +4,15 @@ import CheckBox from './components/CheckBox';
 import Control from './components/Control';
 import 'bulma/css/bulma.css' 
 
+const custom = {
+  checked: true
+}
 
 ReactDOM.render(
   <div className="container is-fluid">
     
     <Control>
-      <CheckBox>
+      <CheckBox custom={custom}>
         normal
       </CheckBox>
     </Control>

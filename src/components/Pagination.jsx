@@ -1,6 +1,7 @@
 // @flow
 import React from 'react';
 import { validate } from '../tools/type_validations';
+import {PaginationItem} from '../tools/types';
 
 type Props = {
     definition?: string,
@@ -9,7 +10,7 @@ type Props = {
     next_disabled?: bool,
     next_name?: string,
     previous_disabled?: bool,
-    itens?: Array<Object>,
+    itens?: Array<PaginationItem>,
     previous_name?: string
 }
 
@@ -52,7 +53,7 @@ function assembleItens(itens) {
 }
 
 function assembleItem(item) {
-    var definition = "pagination-link " + item["definition"];
+    var definition =(item["definition"] == undefined) ? "pagination-link":"pagination-link " + item["definition"];
     var item_code = item_code = <li><a onClick={item["onClick"]} disabled={item["disabled"]} href={item["href"]} className={definition}>{item["value"]}</a></li>;
     return item_code;
 }

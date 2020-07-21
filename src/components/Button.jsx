@@ -2,6 +2,8 @@
 import * as React from 'react';
 import { validate } from '../tools/type_validations.js';
 
+// custom
+
 type Props = {
     disabled?: bool,
     delete?: bool,

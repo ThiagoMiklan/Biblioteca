@@ -7,11 +7,11 @@ import Column from './components/Column';
 import Columns from './components/Columns';
 import Content from './components/Content';
 
-var itens_footer = [
+const itens_footer = [
   { value: "Save" , onClick: ()=> alert('Clicked')}, { value: "Edit" }, { value: "Delete" }
 ]
 
-var itens_footer_2 = [
+const itens_footer_2 = [
   {value: <span>
           View on <a href="https://twitter.com/codinghorror/status/506010907021828096">Twitter</a>
           </span>},
@@ -20,12 +20,17 @@ var itens_footer_2 = [
           </span>}
 ]
 
+function imageClick(){
+  alert("Clicou na imagem");
+}
 ReactDOM.render(
   <Columns definition="is-multiline">
     <Column definition="is-one-quarter">
       <Card definition="has-background-light"
-            image_definition="4by3"
-            src="https://bulma.io/images/placeholders/1280x960.png">
+            image_definition="is-4by3"
+            src="https://bulma.io/images/placeholders/1280x960.png" 
+            image_onClick={()=>{alert("Clicou na imagem")}}
+            >
 
         <div class="media">
           <div class="media-left">
@@ -60,8 +65,8 @@ ReactDOM.render(
       </Card>
     </Column>
 
-    <Column definition="is-one-quarter">
-      <Card itens_footer={itens_footer_2}>
+    <Column definition="is-one-quarter" >
+      <Card itens_footer={itens_footer_2} title="Component" icon_name="fas fa-home" icon_onClick={()=>{alert("Clicou no ícone")}}>
         <p class="title">
           “There are two hard things in computer science: cache invalidation, naming things, and off-by-one errors.”
         </p>

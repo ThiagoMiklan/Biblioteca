@@ -6,14 +6,16 @@ type Props = {
     definition?: string,
     onChange?: ()=>void,
     multiple_size?: number,
-    itens?: Array<Object>
+    itens?: Array<Object>,
+    custom?: Object
 }
 
 const props_obj = {
     definition: "string",
     onChange: "function",
     multiple_size: "number",
-    itens: "array"
+    itens: "array",
+    custon: 'object'
 }
 
 const Select = (props:Props) => {
@@ -21,8 +23,8 @@ const Select = (props:Props) => {
     var definition = (props.definition == undefined) ? "select" : "select "+ props.definition;
     var code = <div className={definition}>
         {props.multiple_size == undefined
-            ? <select onChange={props.onChange} className={definition}> {assembleItens(props.itens)}</select>
-            : <select onChange={props.onChange} className={definition} multiple size={props.multiple_size}> {assembleItens(props.itens)}</select>
+            ? <select onChange={props.onChange} className={definition} {...props.custom}> {assembleItens(props.itens)}</select>
+            : <select onChange={props.onChange} className={definition} {...props.custom} multiple size={props.multiple_size}> {assembleItens(props.itens)}</select>
         }
     </div>
     return code;

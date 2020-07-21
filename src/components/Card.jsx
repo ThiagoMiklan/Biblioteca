@@ -3,6 +3,7 @@ import * as React from 'react';
 import Image from './Image';
 import Icon from './Icon';
 import { validate } from '../tools/type_validations.js';
+import {CardItem} from '../tools/types';
 
 type Props = {
     title?: string,
@@ -10,7 +11,7 @@ type Props = {
     definition?: string,
     src?: string,
     custom_header?: React.Node,
-    itens_footer?: Array<Object>,
+    itens_footer?: Array<CardItem>,
     footer_definition?: string,
     icon_name?: string,
     icon_definition?: string,
@@ -18,7 +19,10 @@ type Props = {
     card_header_definition?: string,
     image_definition?: string,
     children?: React.Node,
-    card_image_definition?: string
+    card_image_definition?: string,
+    // abaixo adicionado posterior apêndice B
+    icon_onClick?: ()=> void,
+    image_onClick?: ()=> void,
 
 }
 
@@ -34,7 +38,10 @@ var props_obj = {
     header_definition: "string",
     card_header_definition: "string",
     image_definition: "string",
-    card_image_definition: "string"
+    card_image_definition: "string",
+
+    icon_onClick: "function",
+    image_onClick: "function"
 }
 
 const Card = (props: Props) => {
@@ -74,7 +81,7 @@ function assembleHeaderDefault(props) {
             {props.title}
         </div>
         {props.icon_name != undefined && <a href="#" className={card_header_definition} >
-            <Icon definition={props.icon_definition} icon_name={props.icon_name}></Icon>
+            <Icon definition={props.icon_definition} icon_name={props.icon_name} onClick={props.icon_onClick}></Icon>
         </a>
         }
 
@@ -94,7 +101,7 @@ function assembleCardImage(props) {
 
     var card_image_definition = (props.card_image_definition == undefined) ? "card-image" : "card-image " + props.card_image_definition
     return <div className={card_image_definition}>
-        <Image definition={props.image_definition} src={props.src}></Image>
+        <Image definition={props.image_definition} src={props.src} onClick={props.image_onClick} ></Image>
     </div>
 }
 
@@ -118,7 +125,7 @@ function assembleFooter(props) {
 
 function assembleItemFooter(item) {
     return <p className="card-footer-item">
-        <span onClick={item["onClick"]} style={{ cursor: "pointer" }}>
+        <span onClick={item["onClick"]} style={{ cursor: "pointer" }} {...item["custom"]}>
             {item["value"]}
         </span>
     </p>

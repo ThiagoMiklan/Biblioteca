@@ -5,6 +5,8 @@ import Control from './Control';
 import Input from './Input';
 import { validate } from '../tools/type_validations.js';
 
+// Custom
+
 type Props = {
     label?: string,
     control_definition?: string,
@@ -14,7 +16,8 @@ type Props = {
     onChange?: () => void,
     placeholder?: string,
     type?: string,
-    value?: string
+    value?: string,
+    custom?: Object
 }
 
 const props_obj ={
@@ -39,7 +42,9 @@ const Field = (props: Props) => {
                     onChangeEvent={props.onChange}
                     placeholder={props.placeholder} 
                     type={props.type} 
-                    value={props.value}></Input>
+                    value={props.value}
+                    custom={props.custom}
+                    ></Input>
             {assembleIcon(props)}
         </Control>
     </div>
