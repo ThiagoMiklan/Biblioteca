@@ -2,7 +2,7 @@
 import * as React from 'react';
 import Icon from './Icon';
 import { validate } from '../tools/type_validations';
-import {TabItem} from '../tools/types';
+import type {TabItem} from '../tools/types';
 
 
 type Props = {

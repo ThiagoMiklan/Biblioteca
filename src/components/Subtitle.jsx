@@ -1,6 +1,12 @@
-
+// @flow
 import * as React from 'react';
 import { validate } from '../tools/type_validations';
+
+type Props = {
+    definition: number,
+    p?: bool,
+    children?: React.Node
+}
 
 const props_obj={
     definition: "number",
@@ -27,8 +33,10 @@ function getTitle(props){
     var title = "";
     var definition = props.definition;
     if(definition >= 1 && definition <= 6){
-            var assemble: ()=> void = assemble_functions.get(definition);
-            title = assemble(props);
+            var assemble= assemble_functions.get(definition);
+            if(assemble != undefined){
+                 title = assemble(props);
+            }
     }
     
     return title;

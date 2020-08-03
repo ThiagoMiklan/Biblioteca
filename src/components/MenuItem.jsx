@@ -1,7 +1,7 @@
 // @flow
 import React from 'react';
 import { validate } from '../tools/type_validations';
-import {MenuItemItem} from '../tools/types';
+import type {MenuItemItem} from '../tools/types';
 
 type Props = {
     itens?: Array<MenuItemItem>,

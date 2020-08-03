@@ -1,23 +1,22 @@
+
 import React, { useState } from 'react';
 import ReactDOM from 'react-dom';
 import Field from './components/Field'
 import 'bulma/css/bulma.css';
+import Columns from './components/Columns';
+import Column from './components/Column';
 
 const custom = {
   draggable: true
 }
 
 ReactDOM.render(<div className="container is-fluid">
-       
-        <Field label="Example"
+       <Field label="Example"
                input_definition="is-primary"
                icon_definition="is-primary"
                icon_name="fas fa-user"
                placeholder="testing"
-               control_definition="has-icons-right"
-               help_definition = "is-success"
-               help_value = "OK - Continue"
-               >
+               control_definition="has-icons-right">
         </Field>
         <Field label="Example"
                input_definition="is-info"
@@ -69,7 +68,7 @@ ReactDOM.render(<div className="container is-fluid">
                control_definition="has-icons-right">
         </Field>
 
-        <Field label="Example"
+         <Field label="Example"
                input_definition="is-small is-rounded"
                control_definition="has-icons-right">
         </Field>
@@ -80,11 +79,23 @@ ReactDOM.render(<div className="container is-fluid">
         </Field>
 
         <Field label="Example"
-               input_definition="is-large is-rounded is-loading"
+               input_definition="is-large is-rounded"
+               control_definition="has-icons-right">
+        </Field>
+        
+        <Columns>
+          <Column definition="is-half">
+         <Field label="Example Help"
+               input_definition="is-large is-rounded"
                control_definition="has-icons-right"
-               custom={custom}
+               help_value="This is a help message"
+               help_definition="is-success"
                >
         </Field>
+        </Column>
+        </Columns>
+
+        
 
         <br></br>
       </div>

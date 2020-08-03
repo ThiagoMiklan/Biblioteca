@@ -1,7 +1,7 @@
 // @flow
 import React from 'react';
 import { validate } from '../tools/type_validations';
-import {NavigationBarItem} from '../tools/types';
+import type {NavigationBarItem} from '../tools/types';
 
 type Props = {
     definition?: string,

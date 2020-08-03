@@ -2,9 +2,10 @@
 
 import React from 'react';
 import { validate } from '../tools/type_validations.js';
+import type {ListItem} from '../tools/types';
 
 type Props = {
-    itens?: Array<Object>,
+    itens?: Array<ListItem>,
     definition?: string
 }
 

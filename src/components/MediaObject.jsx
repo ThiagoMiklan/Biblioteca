@@ -5,7 +5,7 @@ import Content from './Content';
 import Button from './Button';
 import Level from './Level';
 import { validate } from '../tools/type_validations';
-import {MediaObjectItem} from '../tools/types';
+import type {MediaObjectItem} from '../tools/types';
 
 type Props = {
     definition?: string,

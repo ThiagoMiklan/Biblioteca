@@ -1,7 +1,7 @@
 // @flow 
 import * as React from 'react';
 import {validate} from '../tools/type_validations';
-import {LevelItem,MediaObjecItem} from '../tools/types';
+import type {LevelItem,MediaObjectItem} from '../tools/types';
 
 type Props = {
     definition?: string,

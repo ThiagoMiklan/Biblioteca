@@ -17,7 +17,9 @@ type Props = {
     placeholder?: string,
     type?: string,
     value?: string,
-    custom?: Object
+    custom?: Object,
+    help_definition?: string,
+    help_value?: string
 }
 
 const props_obj ={
@@ -35,6 +37,7 @@ const props_obj ={
 
 const Field = (props: Props) => {
     validate(props,props_obj, "Field");
+    let help_definition = (props.help_definition == undefined) ? "help": "help "+props.help_definition;
     return <div className="field">
         <label className="label">{props.label}</label>
         <Control definition={props.control_definition == undefined ? "has-icons-left" : props.control_definition}>
@@ -46,6 +49,9 @@ const Field = (props: Props) => {
                     custom={props.custom}
                     ></Input>
             {assembleIcon(props)}
+            {props.help_value != undefined &&
+            <p className={help_definition}>{props.help_value}</p>
+            }
         </Control>
     </div>
 }

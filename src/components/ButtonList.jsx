@@ -10,10 +10,11 @@ type Props ={
 
 const props_obj ={
     definition: "string",
+    custom: 'object'
 }
 
 const ButtonList = (props:Props) => {
-    validate(props,props_obj)
+    validate(props,props_obj,"ButtonList")
 return assembleButtonList(props);
 }
 

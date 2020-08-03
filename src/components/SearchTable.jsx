@@ -5,6 +5,7 @@ import ButtonList from './ButtonList';
 import Button from './Button';
 import Field from './Field'
 import {validate} from '../tools/type_validations';
+import type {TableItem} from '../tools/types';
 
 type Props ={
     onChange?: ()=>void,
@@ -15,10 +16,10 @@ type Props ={
     icon_definition?:string,
     input_definition?:string,
     table_definition?:string,
-    itens_header:Array<Object>,
+    itens_header:Array<TableItem>,
     itens_body?:Array<Object>,
     header_definition?:string,
-    itens_footer?: Array<Object>,
+    itens_footer?: Array<TableItem>,
     button_definition?:string,
     onClick?: ()=> void ,
     value?: string,

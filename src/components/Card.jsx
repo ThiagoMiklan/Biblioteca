@@ -3,7 +3,7 @@ import * as React from 'react';
 import Image from './Image';
 import Icon from './Icon';
 import { validate } from '../tools/type_validations.js';
-import {CardItem} from '../tools/types';
+import type {CardItem} from '../tools/types';
 
 type Props = {
     title?: string,
@@ -20,7 +20,6 @@ type Props = {
     image_definition?: string,
     children?: React.Node,
     card_image_definition?: string,
-    // abaixo adicionado posterior apêndice B
     icon_onClick?: ()=> void,
     image_onClick?: ()=> void,
 
@@ -39,7 +38,6 @@ var props_obj = {
     card_header_definition: "string",
     image_definition: "string",
     card_image_definition: "string",
-
     icon_onClick: "function",
     image_onClick: "function"
 }

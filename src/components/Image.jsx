@@ -6,7 +6,6 @@ type Props ={
     definition?:string,
     image_definition?: string,
     src?:string,
-     // abaixo adicionado posterior apêndice B
     onClick?: ()=> void,
 }
 

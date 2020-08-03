@@ -1,19 +1,12 @@
 //@flow
 
-export type TabItem = {|
-    onClick?: ()=>void,
-    definition?: string,
-    icon_name?: string,
-    icon_definition?: string,
-    value: string
-|}
-
 export type BreadCrumbItem = {|
     key?: Object,
     definition?:string,
     href?: string,
     value:Object,
-    onClick?: ()=>void
+    onClick?: ()=>void,
+    custom?: Object
 |}
 
 export type CardItem = {|
@@ -43,6 +36,13 @@ export type LevelItem ={|
     value: Object
 |}
 
+export type ListItem = {|
+    key?: number,
+    onClick?: function,
+    custom?: Object,
+    value?: Object
+|}
+
 export type MediaObjectItem = {|
     key?: number,
     left?: boolean,
@@ -51,12 +51,11 @@ export type MediaObjectItem = {|
 |}
 
 
-
 export type MenuItemItem = {|
     onClick?: ()=> void,
     value?: Object,
     definition?: string,
-    sub_itens?: Array<|{| onClick: () => void, value: string |}| {| value: string |}>
+    sub_itens?: Array<{definition?:string, value?: Object, onClick: ()=> void}>
 |}
 
 
@@ -103,12 +102,27 @@ export type RadioItem = {|
     disabled?: boolean
 |}
 
+export type SelectItem = {|
+    value?: Object
+|}
+
 export type TableItem ={|
     key?: number,
     value?: Object
 |}
 
+export type TabItem = {|
+    onClick?: ()=>void,
+    definition?: string,
+    icon_name?: string,
+    icon_definition?: string,
+    value: string
+|}
+
+
 export type TagItem = {|
     value?: Object,
-    definition?: string
+    definition?: string,
+    onClick?: ()=> void,
+    custom?: Object
 |}

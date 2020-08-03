@@ -1,12 +1,13 @@
 // @flow
 import React from 'react'
 import { validate } from '../tools/type_validations';
+import type {SelectItem} from '../tools/types';
 
 type Props = {
     definition?: string,
     onChange?: ()=>void,
     multiple_size?: number,
-    itens?: Array<Object>,
+    itens?: Array<SelectItem>,
     custom?: Object
 }
 

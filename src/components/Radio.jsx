@@ -3,7 +3,7 @@ import React from 'react'
 import Control from './Control';
 import Input from './Input';
 import { validate } from '../tools/type_validations';
-import {RadioItem} from '../tools/types';
+import type {RadioItem} from '../tools/types';
 
 type Props = {
     itens?: Array<RadioItem>,

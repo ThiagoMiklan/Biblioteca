@@ -4,7 +4,7 @@ import Icon from './Icon';
 import PanelItem from './PanelItem';
 import Field from './Field';
 import { validate } from '../tools/type_validations';
-import {PanelItemItem} from '../tools/types';
+import type {PanelItemItem} from '../tools/types';
 
 type Props = {
     header?: string,

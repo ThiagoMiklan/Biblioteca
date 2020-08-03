@@ -9,9 +9,9 @@ import Title from './components/Title';
 import Subtitle from './components/Subtitle';
 import Tabs from './components/Tabs';
 
-var itens_navbar_start = [{ value: "Home" }, { value: "Documentation" }]
-var itens_navbar_end = [{ value: <Button definition="is-dark">Github</Button> },{ value: <Button definition="is-link">Download</Button> }]
-var itens_tabs = [{ value: "Modifiers" }, { value: "Grid" }, { value: "Elements" },{ value: "Components" }, { value: "Layout" }]
+const itens_navbar_start = [{ value: "Home" }, { value: "Documentation" }]
+const itens_navbar_end = [{ value: <Button definition="is-dark" label="Github"/> },{ value: <Button definition="is-link" label="Download"/>}]
+const itens_tabs = [{ value: "Modifiers" }, { value: "Grid" }, { value: "Elements" },{ value: "Components" }, { value: "Layout" }]
 
 ReactDOM.render(
   <>

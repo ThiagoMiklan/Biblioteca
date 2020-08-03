@@ -3,7 +3,7 @@ import * as React from 'react';
 import Button from './Button';
 import Icon from './Icon';
 import { validate } from '../tools/type_validations.js';
-import {DropDownItem} from '../tools/types';
+import type {DropDownItem} from '../tools/types';
 
 // custom (on itens)
 

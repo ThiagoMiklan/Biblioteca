@@ -1,9 +1,10 @@
 // @flow
 import React from 'react';
 import { validate } from '../tools/type_validations';
+import type {TagItem} from '../tools/types';
 
 type Props = {
-    itens?: Array<Object>,
+    itens?: Array<TagItem>,
     definition?: string
 }
 
@@ -34,15 +35,15 @@ function assembleListWithItens(props) {
 
     if (itens != undefined) {
         code = <div className={definition}>
-            {itens.map(item => assembleTag(item["definition"], item["value"], item["onClick"]))}
+            {itens.map(item => assembleTag(item["definition"], item["value"], item["onClick"],item["custom"]))}
         </div>
     }
     return code;
 }
 
-function assembleTag(definition, value, onClick) {
-    var definitionTag = "tag " + definition;
-    return <span onClick={onClick} className={definitionTag}>{value}</span>
+function assembleTag(definition, value, onClick,custom) {
+    var definitionTag = (definition ==  undefined)? "tag":"tag " + definition;
+    return <span onClick={onClick} className={definitionTag} {...custom}>{value}</span>
 }
 
 

@@ -386,10 +386,11 @@ function assembleItens(itens) {
 
 function assembleSingleItem(item) {
   var definition = item["definition"];
-  return /*#__PURE__*/React__default.createElement("li", {
+  var custom = item["custom"];
+  return /*#__PURE__*/React__default.createElement("li", _extends({
     key: item["key"],
     className: definition
-  }, /*#__PURE__*/React__default.createElement("a", {
+  }, custom), /*#__PURE__*/React__default.createElement("a", {
     onClick: item["onClick"],
     href: item["href"]
   }, item["value"]));
@@ -426,8 +427,7 @@ function getDefinition(props) {
 }
 
 var props_obj$2 = {
-  definition: "string",
-  field: "boolean"
+  definition: "string"
 };
 
 var ButtonList = function ButtonList(props) {
@@ -441,9 +441,9 @@ function assembleButtonList(props) {
   var definition = props.definition == undefined ? "buttons" : "buttons " + props.definition;
 
   if (definition.includes("addons")) {
-    code_icon = /*#__PURE__*/React.createElement("div", {
+    code_icon = /*#__PURE__*/React.createElement("div", _extends({
       className: props.definition
-    }, React.Children.map(props.children, function (child, i) {
+    }, props.custom), React.Children.map(props.children, function (child, i) {
       return /*#__PURE__*/React.createElement("p", {
         className: "control"
       }, /*#__PURE__*/React.createElement("div", {
@@ -469,7 +469,8 @@ var Image = function Image(props) {
   validate(props, props_obj$3, "Image");
   var definition = props.definition == undefined ? "image" : "image " + props.definition;
   return /*#__PURE__*/React__default.createElement("figure", {
-    className: definition
+    className: definition,
+    onClick: props.onClick
   }, /*#__PURE__*/React__default.createElement("img", {
     className: props.image_definition,
     src: props.src
@@ -569,7 +570,9 @@ var props_obj$5 = {
   header_definition: "string",
   card_header_definition: "string",
   image_definition: "string",
-  card_image_definition: "string"
+  card_image_definition: "string",
+  icon_onClick: "function",
+  image_onClick: "function"
 };
 
 var Card = function Card(props) {
@@ -607,7 +610,8 @@ function assembleHeaderDefault(props) {
     className: card_header_definition
   }, /*#__PURE__*/React.createElement(Icon, {
     definition: props.icon_definition,
-    icon_name: props.icon_name
+    icon_name: props.icon_name,
+    onClick: props.icon_onClick
   })));
 }
 
@@ -624,7 +628,8 @@ function assembleCardImage(props) {
     className: card_image_definition
   }, /*#__PURE__*/React.createElement(Image, {
     definition: props.image_definition,
-    src: props.src
+    src: props.src,
+    onClick: props.image_onClick
   }));
 }
 
@@ -652,30 +657,31 @@ function assembleFooter(props) {
 function assembleItemFooter(item) {
   return /*#__PURE__*/React.createElement("p", {
     className: "card-footer-item"
-  }, /*#__PURE__*/React.createElement("span", {
+  }, /*#__PURE__*/React.createElement("span", _extends({
     onClick: item["onClick"],
     style: {
       cursor: "pointer"
     }
-  }, item["value"]));
+  }, item["custom"]), item["value"]));
 }
 
 var props_obj$6 = {
   disabled: 'boolean',
-  onClick: 'function'
+  onClick: 'function',
+  custom: 'object'
 };
 
 var CheckBox = function CheckBox(props) {
   validate(props, props_obj$6, "CheckBox");
   var definition = props.definition == undefined ? "checkbox" : "checkbox " + props.definition;
-  return /*#__PURE__*/React__default.createElement("label", {
+  return /*#__PURE__*/React.createElement("label", {
     className: definition,
     disabled: props.disabled
-  }, /*#__PURE__*/React__default.createElement("input", {
+  }, /*#__PURE__*/React.createElement("input", _extends({
     type: "checkbox",
     onClick: props.onClick,
     disabled: props.disabled
-  }), props.children);
+  }, props.custom)), props.children);
 };
 
 var props_obj$7 = {
@@ -810,20 +816,20 @@ function decideTypeOfItens(item) {
 
 function assembleItensLinks(item) {
   var definition = item["definition"] == undefined ? "dropdown-item" : "dropdown-item " + item["definition"];
-  return /*#__PURE__*/React.createElement("a", {
+  return /*#__PURE__*/React.createElement("a", _extends({
     className: definition,
     onClick: item["onClick"],
     href: item["href"]
-  }, item["value"]);
+  }, item["custom"]), item["value"]);
 }
 
 function assembleComponentsItens(item) {
   var definition = item["definition"] == undefined ? "dropdown-item" : "dropdown-item " + item["definition"];
-  return /*#__PURE__*/React.createElement("div", {
+  return /*#__PURE__*/React.createElement("div", _extends({
     className: definition,
     onClick: item["onClick"],
     href: item["href"]
-  }, item["value"]);
+  }, item["custom"]), item["value"]);
 }
 
 var props_obj$c = {
@@ -871,33 +877,36 @@ function assembleInput(props) {
 
   if (props.disabled) {
     if (props.readonly) {
-      input_code = /*#__PURE__*/React__default.createElement(Control, null, /*#__PURE__*/React__default.createElement("input", {
-        onChange: props.onChangeEvent,
+      input_code = /*#__PURE__*/React__default.createElement(Control, null, /*#__PURE__*/React__default.createElement("input", _extends({
+        onChange: props.onChangeEvent
+      }, props.custom, {
         className: definition,
         type: props.type,
         placeholder: props.placeholder,
         value: props.value,
         disabled: true,
         readonly: true
-      }));
+      })));
     } else {
-      input_code = /*#__PURE__*/React__default.createElement(Control, null, /*#__PURE__*/React__default.createElement("input", {
-        onChange: props.onChangeEvent,
+      input_code = /*#__PURE__*/React__default.createElement(Control, null, /*#__PURE__*/React__default.createElement("input", _extends({
+        onChange: props.onChangeEvent
+      }, props.custom, {
         className: definition,
         type: props.type,
         placeholder: props.placeholder,
         value: props.value,
         disabled: true
-      }));
+      })));
     }
   } else {
-    input_code = /*#__PURE__*/React__default.createElement(Control, null, /*#__PURE__*/React__default.createElement("input", {
-      onChange: props.onChangeEvent,
+    input_code = /*#__PURE__*/React__default.createElement(Control, null, /*#__PURE__*/React__default.createElement("input", _extends({
+      onChange: props.onChangeEvent
+    }, props.custom, {
       className: definition,
       type: props.type,
       placeholder: props.placeholder,
       value: props.value
-    }));
+    })));
   }
 
   return input_code;
@@ -917,6 +926,7 @@ var props_obj$d = {
 
 var Field = function Field(props) {
   validate(props, props_obj$d, "Field");
+  var help_definition = props.help_definition == undefined ? "help" : "help " + props.help_definition;
   return /*#__PURE__*/React__default.createElement("div", {
     className: "field"
   }, /*#__PURE__*/React__default.createElement("label", {
@@ -928,8 +938,11 @@ var Field = function Field(props) {
     onChangeEvent: props.onChange,
     placeholder: props.placeholder,
     type: props.type,
-    value: props.value
-  }), assembleIcon(props)));
+    value: props.value,
+    custom: props.custom
+  }), assembleIcon(props), props.help_value != undefined && /*#__PURE__*/React__default.createElement("p", {
+    className: help_definition
+  }, props.help_value)));
 };
 
 function assembleIcon(props) {
@@ -1006,7 +1019,8 @@ var props_obj$g = {
   label: 'string',
   filename: 'string',
   ref: 'string',
-  onChange: 'function'
+  onChange: 'function',
+  custom: 'object'
 };
 
 var File = function File(props) {
@@ -1016,12 +1030,12 @@ var File = function File(props) {
     className: definition
   }, /*#__PURE__*/React__default.createElement("label", {
     className: "file-label"
-  }, /*#__PURE__*/React__default.createElement("input", {
+  }, /*#__PURE__*/React__default.createElement("input", _extends({
     onChange: props.onChange,
     className: "file-input",
     type: "file",
     ref: props.ref
-  }), /*#__PURE__*/React__default.createElement("span", {
+  }, props.custom)), /*#__PURE__*/React__default.createElement("span", {
     className: "file-cta"
   }, props.icon_name != undefined && /*#__PURE__*/React__default.createElement(Icon, {
     definition: props.icon_definition,
@@ -1035,7 +1049,7 @@ var File = function File(props) {
 
 var Container = function Container(props) {
   var definition = props.definition == undefined ? "container" : "container " + props.definition;
-  return /*#__PURE__*/React__default.createElement("div", {
+  return /*#__PURE__*/React.createElement("div", {
     className: definition
   }, props.children);
 };
@@ -1157,10 +1171,10 @@ function assembleList(props) {
 
 function assembleRow(list) {
   return list.map(function (item) {
-    return /*#__PURE__*/React__default.createElement("li", {
+    return /*#__PURE__*/React__default.createElement("li", _extends({
       key: item["key"],
       onClick: item["onClick"]
-    }, item["value"]);
+    }, item["custom"]), item["value"]);
   });
 }
 
@@ -1436,7 +1450,7 @@ function assemble$4(itens) {
     }
   } else if (_typeof(itens) == 'object' && itens != undefined) {
     //se não for array, não for undefined e for objeto realiza operação
-    itens_code = assembleItem$1(itens, itens["definition"]);
+    itens_code = assembleItem$1(itens);
   }
 
   return itens_code;
@@ -1485,20 +1499,21 @@ function assembleFirstItemDropDown(item) {
   var first_item = "";
 
   if (item != undefined) {
-    first_item = /*#__PURE__*/React__default.createElement("a", {
-      className: "navbar-link"
-    }, item["value"]);
+    first_item = /*#__PURE__*/React__default.createElement("a", _extends({
+      className: "navbar-link",
+      onClick: item["onClick"]
+    }, item["custom"]), item["value"]);
   }
 
   return first_item;
 }
 
-function assembleItem$1(item, definition) {
-  var def = "navbar-item " + item["definition"];
-  var item_code = /*#__PURE__*/React__default.createElement("a", {
+function assembleItem$1(item) {
+  var definition = item["definition"] == undefined ? "navbar-item " : "navbar-item " + item["definition"];
+  var item_code = /*#__PURE__*/React__default.createElement("a", _extends({
     onClick: item["onClick"],
-    className: def
-  }, item["value"]);
+    className: definition
+  }, item["custom"]), item["value"]);
   return item_code;
 }
 
@@ -1581,7 +1596,7 @@ function assembleItens$3(itens) {
 }
 
 function assembleItem$2(item) {
-  var definition = "pagination-link " + item["definition"];
+  var definition = item["definition"] == undefined ? "pagination-link" : "pagination-link " + item["definition"];
   var item_code = item_code = /*#__PURE__*/React__default.createElement("li", null, /*#__PURE__*/React__default.createElement("a", {
     onClick: item["onClick"],
     disabled: item["disabled"],
@@ -1728,12 +1743,12 @@ function assembleRadio(item, name) {
   return /*#__PURE__*/React__default.createElement("label", {
     className: "radio",
     disabled: item["disabled"]
-  }, /*#__PURE__*/React__default.createElement("input", {
+  }, /*#__PURE__*/React__default.createElement("input", _extends({
     type: "radio",
     onClick: item["onClick"],
     name: name,
     checked: item["checked"]
-  }), item["value"]);
+  }, item["custom"])), item["value"]);
 }
 
 var style_cursor = {
@@ -1893,7 +1908,8 @@ var props_obj$y = {
   definition: "string",
   onChange: "function",
   multiple_size: "number",
-  itens: "array"
+  itens: "array",
+  custon: 'object'
 };
 
 var Select = function Select(props) {
@@ -1901,15 +1917,16 @@ var Select = function Select(props) {
   var definition = props.definition == undefined ? "select" : "select " + props.definition;
   var code = /*#__PURE__*/React__default.createElement("div", {
     className: definition
-  }, props.multiple_size == undefined ? /*#__PURE__*/React__default.createElement("select", {
+  }, props.multiple_size == undefined ? /*#__PURE__*/React__default.createElement("select", _extends({
     onChange: props.onChange,
     className: definition
-  }, " ", assembleItens$5(props.itens)) : /*#__PURE__*/React__default.createElement("select", {
+  }, props.custom), " ", assembleItens$5(props.itens)) : /*#__PURE__*/React__default.createElement("select", _extends({
     onChange: props.onChange,
-    className: definition,
+    className: definition
+  }, props.custom, {
     multiple: true,
     size: props.multiple_size
-  }, " ", assembleItens$5(props.itens)));
+  }), " ", assembleItens$5(props.itens)));
   return code;
 };
 
@@ -1955,7 +1972,10 @@ function getTitle(props) {
 
   if (definition >= 1 && definition <= 6) {
     var assemble = assemble_functions.get(definition);
-    title = assemble(props);
+
+    if (assemble != undefined) {
+      title = assemble(props);
+    }
   }
 
   return title;
@@ -2168,7 +2188,7 @@ var props_obj$B = {
 var Tabs = function Tabs(props) {
   validate(props, props_obj$B, "Tabs");
   var definition = props.definition == undefined ? "tabs" : "tabs " + props.definition;
-  return /*#__PURE__*/React__default.createElement("div", {
+  return /*#__PURE__*/React.createElement("div", {
     className: definition
   }, assembleListTabs(props.itens));
 };
@@ -2177,11 +2197,11 @@ function assembleListTabs(itens) {
   var tabs_code = "";
 
   if (Array.isArray(itens)) {
-    tabs_code = /*#__PURE__*/React__default.createElement("ul", null, itens.map(function (item) {
-      return /*#__PURE__*/React__default.createElement("li", {
+    tabs_code = /*#__PURE__*/React.createElement("ul", null, itens.map(function (item) {
+      return /*#__PURE__*/React.createElement("li", {
         onClick: item["onClick"],
         className: item["definition"]
-      }, /*#__PURE__*/React__default.createElement("a", null, item["icon_name"] != undefined && /*#__PURE__*/React__default.createElement(Icon, {
+      }, /*#__PURE__*/React.createElement("a", null, item["icon_name"] != undefined && /*#__PURE__*/React.createElement(Icon, {
         definition: item["icon_definition"],
         icon_name: item["icon_name"]
       }), item["value"]));
@@ -2237,19 +2257,19 @@ function assembleListWithItens(props) {
     code = /*#__PURE__*/React__default.createElement("div", {
       className: definition
     }, itens.map(function (item) {
-      return assembleTag(item["definition"], item["value"], item["onClick"]);
+      return assembleTag(item["definition"], item["value"], item["onClick"], item["custom"]);
     }));
   }
 
   return code;
 }
 
-function assembleTag(definition, value, onClick) {
-  var definitionTag = "tag " + definition;
-  return /*#__PURE__*/React__default.createElement("span", {
+function assembleTag(definition, value, onClick, custom) {
+  var definitionTag = definition == undefined ? "tag" : "tag " + definition;
+  return /*#__PURE__*/React__default.createElement("span", _extends({
     onClick: onClick,
     className: definitionTag
-  }, value);
+  }, custom), value);
 }
 
 var props_obj$E = {
@@ -2261,7 +2281,8 @@ var props_obj$E = {
   readonly: "boolean",
   disabled: "boolean",
   label: "string",
-  value: "string"
+  value: "string",
+  custom: "object"
 };
 
 var TextArea = function TextArea(props) {
@@ -2272,7 +2293,7 @@ var TextArea = function TextArea(props) {
 function assembleTextArea(props) {
   validate(props, props_obj$E);
   var definition = props.definition == undefined ? "textarea" : "textarea " + props.definition;
-  var definitionControl = props.loading == true ? "is-loading" : "";
+  var definitionControl = props.definition != undefined && props.definition.includes("is-loading") ? "is-loading" : "";
   return /*#__PURE__*/React__default.createElement(Control, {
     definition: definitionControl
   }, /*#__PURE__*/React__default.createElement("label", {
@@ -2316,7 +2337,10 @@ function getTitle$1(props) {
 
   if (definition >= 1 && definition <= 6) {
     var assemble = assemble_functions.get(definition);
-    title = assemble(props);
+
+    if (assemble != undefined) {
+      title = assemble(props);
+    }
   }
 
   return title;
@@ -2328,11 +2352,11 @@ var assemble1$1 = function assemble1(props) {
   var definition = getDefinition$2(props);
 
   if (props.p == true) {
-    code = /*#__PURE__*/React__default.createElement("p", {
+    code = /*#__PURE__*/React.createElement("p", {
       className: definition
     }, props.children);
   } else {
-    code = /*#__PURE__*/React__default.createElement("h1", {
+    code = /*#__PURE__*/React.createElement("h1", {
       className: definition
     }, props.children);
   }
@@ -2345,11 +2369,11 @@ var assemble2$1 = function assemble2(props) {
   var definition = getDefinition$2(props);
 
   if (props.p == true) {
-    code = /*#__PURE__*/React__default.createElement("p", {
+    code = /*#__PURE__*/React.createElement("p", {
       className: definition
     }, props.children);
   } else {
-    code = /*#__PURE__*/React__default.createElement("h2", {
+    code = /*#__PURE__*/React.createElement("h2", {
       className: definition
     }, props.children);
   }
@@ -2362,11 +2386,11 @@ var assemble3$1 = function assemble3(props) {
   var definition = getDefinition$2(props);
 
   if (props.p == true) {
-    code = /*#__PURE__*/React__default.createElement("p", {
+    code = /*#__PURE__*/React.createElement("p", {
       className: definition
     }, props.children);
   } else {
-    code = /*#__PURE__*/React__default.createElement("h3", {
+    code = /*#__PURE__*/React.createElement("h3", {
       className: definition
     }, props.children);
   }
@@ -2379,11 +2403,11 @@ var assemble4$1 = function assemble4(props) {
   var definition = getDefinition$2(props);
 
   if (props.p == true) {
-    code = /*#__PURE__*/React__default.createElement("p", {
+    code = /*#__PURE__*/React.createElement("p", {
       className: definition
     }, props.children);
   } else {
-    code = /*#__PURE__*/React__default.createElement("h4", {
+    code = /*#__PURE__*/React.createElement("h4", {
       className: definition
     }, props.children);
   }
@@ -2396,11 +2420,11 @@ var assemble5$1 = function assemble5(props) {
   var definition = getDefinition$2(props);
 
   if (props.p == true) {
-    code = /*#__PURE__*/React__default.createElement("p", {
+    code = /*#__PURE__*/React.createElement("p", {
       className: definition
     }, props.children);
   } else {
-    code = /*#__PURE__*/React__default.createElement("h5", {
+    code = /*#__PURE__*/React.createElement("h5", {
       className: definition
     }, props.children);
   }
@@ -2413,11 +2437,11 @@ var assemble6$1 = function assemble6(props) {
   var definition = getDefinition$2(props);
 
   if (props.p == true) {
-    code = /*#__PURE__*/React__default.createElement("p", {
+    code = /*#__PURE__*/React.createElement("p", {
       className: definition
     }, props.children);
   } else {
-    code = /*#__PURE__*/React__default.createElement("h6", {
+    code = /*#__PURE__*/React.createElement("h6", {
       className: definition
     }, props.children);
   }
@@ -2454,7 +2478,21 @@ var props_obj$G = {
   definition: 'string',
   ref_data: 'object',
   onClick: 'function'
-}; // Definition Equivalente a de Button, ou seja, o definition vai para Button
+};
+/*
+// Definition Equivalente a de Button, ou seja, o definition vai para Button
+const FileButton = (props: Props) => {
+    validate(props,props_obj,"FileButton");
+    return (
+        <div className='field'>
+            <label className='label'>{props.label}</label>
+            <div className='control'>
+                <input type='file' onChange={props.onChange} style={{ display: 'none' }} ref={props.ref_data} />
+                <Button definition={props.definition} onClick={props.onClick} label={props.children} />
+            </div>
+        </div>
+    );
+}*/
 
 var FileButton = function FileButton(props) {
   validate(props, props_obj$G, "FileButton");
@@ -2464,8 +2502,7 @@ var FileButton = function FileButton(props) {
     className: "label"
   }, props.label), /*#__PURE__*/React.createElement("div", {
     className: "control"
-  }, /*#__PURE__*/React.createElement("input", {
-    type: "file",
+  }, /*#__PURE__*/React.createElement(File, {
     onChange: props.onChange,
     style: {
       display: 'none'

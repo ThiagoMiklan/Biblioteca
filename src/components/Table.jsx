@@ -1,7 +1,7 @@
 // @flow
 import React from 'react';
 import { validate } from '../tools/type_validations';
-import {TableItem} from '../tools/types';
+import type {TableItem} from '../tools/types';
 
 var style_cursor = {
     cursor:"pointer"

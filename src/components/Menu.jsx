@@ -21,4 +21,4 @@ const Menu = (props:Props) =>{
         );
 }
 
-export default Menu;
+export default Menu;  

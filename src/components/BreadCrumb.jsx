@@ -1,9 +1,12 @@
 // @flow
 import React from 'react';
 import {validate} from '../tools/type_validations';
-import {BreadCrumbItem} from '../tools/types';
+import type {BreadCrumbItem} from '../tools/types';
 
-// custom <li>
+
+// validate
+// props
+
 
 type Props = {
   definition?: string,
@@ -13,6 +16,15 @@ type Props = {
 const props_obj = {
     definition: "string",
     itens: "array"
+}
+
+const props_obj_item = {
+    key: "object",
+    definition:"string",
+    href: "string",
+    value:"object",
+    onClick: "function",
+    custom: "object"
 }
 
 const BreadCrumb = (props: Props) => {
@@ -28,18 +40,15 @@ const BreadCrumb = (props: Props) => {
 }
 
 
-function assemble(item) {
-    var itens_code = "";
-    if (Array.isArray(item)) {
-        itens_code = assembleItens(item);
-    } else if (typeof item == 'object') {
-        itens_code = assembleSingleItem(item);
-    }
+function assemble(itens) {
+    validate(props_obj_item,itens,"BreadCrumbItem");
+    let itens_code = "";
+    itens_code = assembleItens(itens);
     return itens_code;
 }
 
 function assembleItens(itens) {
-    var itens_code = itens.map(item => assembleSingleItem(item));
+    var itens_code = (itens == undefined) ? <></> : itens.map(item => assembleSingleItem(item));
     return itens_code;
 }
 

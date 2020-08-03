@@ -1,7 +1,7 @@
 // @flow
 import React from 'react';
 import { validate } from '../tools/type_validations';
-import {PaginationItem} from '../tools/types';
+import type {PaginationItem} from '../tools/types';
 
 type Props = {
     definition?: string,
