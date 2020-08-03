@@ -9,48 +9,49 @@
  - Questions, suggestions, errors and improvements please send an email to miklanthiago@hotmail.com and I will answe
  
 #  Available Components
- BreadCrumb
- Button
- ButtonList
- Card
- CheckBox
- Column
- Columns
- Content
- Control
- DropDown
- Field
- FieldContent
- FieldButton
- File 
- FileButton
- Hero 
- HeroThreeParts
- Icon 
- Image 
- Input 
- List 
- Menu
- MenuItem 
- Message 
- NavigationBar 
- Notification 
- Pagination
- Panel 
- PanelItem 
- ProgressBar 
- Radio 
- SearchTable
- Section 
- Select
- Subtitle 
- Table
- TableQuery
- Tabs 
- Tag
- TagList
- TextArea 
- Title
+ - Box
+ - BreadCrumb
+ - Button
+ - ButtonList
+ - Card
+ - CheckBox
+ - Column
+ - Columns
+ - Content
+ - Control
+ - DropDown
+ - Field
+ - FieldContent
+ - FieldButton
+ - File 
+ - FileButton
+ - Hero 
+ - HeroThreeParts
+ - Icon 
+ - Image 
+ - Input 
+ - List 
+ - Menu
+ - MenuItem 
+ - Message 
+ - NavigationBar 
+ - Notification 
+ - Pagination
+ - Panel 
+ - PanelItem 
+ - ProgressBar 
+ - Radio 
+ - SearchTable
+ - Section 
+ - Select
+ - Subtitle 
+ - Table
+ - TableQuery
+ - Tabs 
+ - Tag
+ - TagList
+ - TextArea 
+ - Title
 
 
 

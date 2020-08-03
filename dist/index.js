@@ -355,6 +355,14 @@ var props_obj = {
   definition: "string",
   itens: "array"
 };
+var props_obj_item = {
+  key: "object",
+  definition: "string",
+  href: "string",
+  value: "object",
+  onClick: "function",
+  custom: "object"
+};
 
 var BreadCrumb = function BreadCrumb(props) {
   validate(props, props_obj, "BreadCrumb");
@@ -365,20 +373,15 @@ var BreadCrumb = function BreadCrumb(props) {
   }, /*#__PURE__*/React__default.createElement("ul", null, assemble(props.itens)));
 };
 
-function assemble(item) {
+function assemble(itens) {
+  validate(props_obj_item, itens, "BreadCrumbItem");
   var itens_code = "";
-
-  if (Array.isArray(item)) {
-    itens_code = assembleItens(item);
-  } else if (_typeof(item) == 'object') {
-    itens_code = assembleSingleItem(item);
-  }
-
+  itens_code = assembleItens(itens);
   return itens_code;
 }
 
 function assembleItens(itens) {
-  var itens_code = itens.map(function (item) {
+  var itens_code = itens == undefined ? /*#__PURE__*/React__default.createElement(React__default.Fragment, null) : itens.map(function (item) {
     return assembleSingleItem(item);
   });
   return itens_code;
@@ -395,6 +398,9 @@ function assembleSingleItem(item) {
     href: item["href"]
   }, item["value"]));
 }
+
+// validate = OK
+// props= OK
 
 var props_obj$1 = {
   disabled: 'boolean',
@@ -427,11 +433,12 @@ function getDefinition(props) {
 }
 
 var props_obj$2 = {
-  definition: "string"
+  definition: "string",
+  custom: 'object'
 };
 
 var ButtonList = function ButtonList(props) {
-  validate(props, props_obj$2);
+  validate(props, props_obj$2, "ButtonList");
   return assembleButtonList(props);
 };
 
