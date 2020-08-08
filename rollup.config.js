@@ -26,7 +26,7 @@ export default {
     svgr(),
     babel({
       exclude: 'node_modules/**',
-      plugins: [ '@babel/plugin-external-helpers' ]
+      plugins: [ '@babel/plugin-external-helpers', "@babel/plugin-transform-flow-strip-types"]
     }),
     resolve({
       mainFields: ['module', 'main', 'jsnext:main', 'browser'],

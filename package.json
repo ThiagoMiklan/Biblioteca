@@ -7,7 +7,7 @@
     "React",
     "Components"
   ],
-  "version": "0.0.16",
+  "version": "0.0.15",
   "author": {
     "name": "Thiago Miklan Moreira"
   },
@@ -21,8 +21,12 @@
   "scripts": {
     "start": "react-scripts start",
     "dev": "webpack-dev-server --mode development --open",
-    "build_flow": "babel src/ -d lib/",
+    "build_flow": "babel ./src -d ./lib",
+    "prepack": "npm run prepack:babel && npm run prepack:flow",
+    "prepack:babel": "babel src/ -d lib",
+    "prepack:flow": "flow-copy-source src lib",
     "flow": "flow",
+    "cmd": "babel",
     "build": "rollup -c",
     "test": "jest",
     "eject": "react-scripts eject"
@@ -43,14 +47,16 @@
     ]
   },
   "devDependencies": {
-    "@babel/core": "^7.9.0",
+    "@babel/cli": "^7.10.5",
+    "@babel/core": "^7.11.1",
+    "@babel/node": "^7.10.5",
     "@babel/plugin-external-helpers": "^7.8.3",
-    "@babel/preset-env": "^7.9.0",
+    "@babel/preset-env": "^7.11.0",
     "@babel/preset-flow": "^7.9.0",
     "@babel/preset-react": "^7.9.4",
     "@svgr/rollup": "^5.3.1",
-    "babel-loader": "^8.1.0",
     "flow-bin": "^0.122.0",
+    "flow-copy-source": "^2.0.9",
     "html-webpack-plugin": "^4.2.0",
     "jest": "^24.9.0",
     "react": "^16.13.1",
@@ -71,6 +77,6 @@
     "react": ">= 16.x.x",
     "styled-jsx": ">= 3.x.x"
   },
-  "main": "dist/index.js",
+  "main": "lib/tools/exporter.js",
   "license": "MIT"
 }
