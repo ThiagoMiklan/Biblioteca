@@ -18,9 +18,6 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "prepack": "npm run prepack:babel && npm run prepack:flow",
-    "prepack:babel": "babel ./src -d ./lib",
-    "prepack:flow": "flow-copy-source ./src ./lib",
     "cmd": "babel",
     "test": "jest",
     "eject": "react-scripts eject"
