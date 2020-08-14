@@ -1,0 +1,603 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`hero bold 1`] = `
+Array [
+  <section
+    className="hero is-primary is-bold"
+  >
+    <div
+      className="hero-body"
+    >
+      <div
+        className="container"
+      >
+        <h1
+          className="title"
+        >
+          Primary Title
+        </h1>
+        <h2
+          className="subtitle"
+        >
+          Primary Subtitle
+        </h2>
+      </div>
+    </div>
+  </section>,
+  <section
+    className="hero is-info is-bold"
+  >
+    <div
+      className="hero-body"
+    >
+      <div
+        className="container"
+      >
+        <h1
+          className="title"
+        >
+          Info Title
+        </h1>
+        <h2
+          className="subtitle"
+        >
+          Info Subtitle
+        </h2>
+      </div>
+    </div>
+  </section>,
+  <section
+    className="hero is-success  is-bold"
+  >
+    <div
+      className="hero-body"
+    >
+      <div
+        className="container"
+      >
+        <h1
+          className="title"
+        >
+          Success Title
+        </h1>
+        <h2
+          className="subtitle"
+        >
+          Success Subtitle
+        </h2>
+      </div>
+    </div>
+  </section>,
+  <section
+    className="hero is-warning is-bold"
+  >
+    <div
+      className="hero-body"
+    >
+      <div
+        className="container"
+      >
+        <h1
+          className="title"
+        >
+          Warning Title
+        </h1>
+        <h2
+          className="subtitle"
+        >
+          Warning Subtitle
+        </h2>
+      </div>
+    </div>
+  </section>,
+  <section
+    className="hero is-danger is-bold"
+  >
+    <div
+      className="hero-body"
+    >
+      <div
+        className="container"
+      >
+        <h1
+          className="title"
+        >
+          Danger Title
+        </h1>
+        <h2
+          className="subtitle"
+        >
+          Danger Subtitle
+        </h2>
+      </div>
+    </div>
+  </section>,
+  <section
+    className="hero is-light is-bold"
+  >
+    <div
+      className="hero-body"
+    >
+      <div
+        className="container"
+      >
+        <h1
+          className="title"
+        >
+          Light Title
+        </h1>
+        <h2
+          className="subtitle"
+        >
+          Light Subtitle
+        </h2>
+      </div>
+    </div>
+  </section>,
+  <section
+    className="hero is-dark is-bold"
+  >
+    <div
+      className="hero-body"
+    >
+      <div
+        className="container"
+      >
+        <h1
+          className="title"
+        >
+          Dark Title
+        </h1>
+        <h2
+          className="subtitle"
+        >
+          Dark Subtitle
+        </h2>
+      </div>
+    </div>
+  </section>,
+]
+`;
+
+exports[`hero colors 1`] = `
+Array [
+  <section
+    className="hero"
+  >
+    <div
+      className="hero-body"
+    >
+      <div
+        className="container"
+      >
+        <h1
+          className="title"
+        >
+          Hero Title
+        </h1>
+        <h2
+          className="subtitle"
+        >
+          Hero Subtitle
+        </h2>
+      </div>
+    </div>
+  </section>,
+  <section
+    className="hero is-primary"
+  >
+    <div
+      className="hero-body"
+    >
+      <div
+        className="container"
+      >
+        <h1
+          className="title"
+        >
+          Primary Title
+        </h1>
+        <h2
+          className="subtitle"
+        >
+          Primary Subtitle
+        </h2>
+      </div>
+    </div>
+  </section>,
+  <section
+    className="hero is-info"
+  >
+    <div
+      className="hero-body"
+    >
+      <div
+        className="container"
+      >
+        <h1
+          className="title"
+        >
+          Info Title
+        </h1>
+        <h2
+          className="subtitle"
+        >
+          Info Subtitle
+        </h2>
+      </div>
+    </div>
+  </section>,
+  <section
+    className="hero is-success"
+  >
+    <div
+      className="hero-body"
+    >
+      <div
+        className="container"
+      >
+        <h1
+          className="title"
+        >
+          Success Title
+        </h1>
+        <h2
+          className="subtitle"
+        >
+          Success Subtitle
+        </h2>
+      </div>
+    </div>
+  </section>,
+  <section
+    className="hero is-warning"
+  >
+    <div
+      className="hero-body"
+    >
+      <div
+        className="container"
+      >
+        <h1
+          className="title"
+        >
+          Warning Title
+        </h1>
+        <h2
+          className="subtitle"
+        >
+          Warning Subtitle
+        </h2>
+      </div>
+    </div>
+  </section>,
+  <section
+    className="hero is-danger"
+  >
+    <div
+      className="hero-body"
+    >
+      <div
+        className="container"
+      >
+        <h1
+          className="title"
+        >
+          Danger Title
+        </h1>
+        <h2
+          className="subtitle"
+        >
+          Danger Subtitle
+        </h2>
+      </div>
+    </div>
+  </section>,
+  <section
+    className="hero is-light"
+  >
+    <div
+      className="hero-body"
+    >
+      <div
+        className="container"
+      >
+        <h1
+          className="title"
+        >
+          Light Title
+        </h1>
+        <h2
+          className="subtitle"
+        >
+          Light Subtitle
+        </h2>
+      </div>
+    </div>
+  </section>,
+  <section
+    className="hero is-dark"
+  >
+    <div
+      className="hero-body"
+    >
+      <div
+        className="container"
+      >
+        <h1
+          className="title"
+        >
+          Dark Title
+        </h1>
+        <h2
+          className="subtitle"
+        >
+          Dark Subtitle
+        </h2>
+      </div>
+    </div>
+  </section>,
+]
+`;
+
+exports[`hero merge 1`] = `
+Array [
+  <section
+    className="hero is-primary is-medium"
+  >
+    <div
+      className="hero-body"
+    >
+      <div
+        className="container"
+      >
+        <h1
+          className="title"
+        >
+          Primary Title
+        </h1>
+        <h2
+          className="subtitle"
+        >
+          Primary Subtitle
+        </h2>
+      </div>
+    </div>
+  </section>,
+  <section
+    className="hero is-info is-large"
+  >
+    <div
+      className="hero-body"
+    >
+      <div
+        className="container"
+      >
+        <h1
+          className="title"
+        >
+          Info Title
+        </h1>
+        <h2
+          className="subtitle"
+        >
+          Info Subtitle
+        </h2>
+      </div>
+    </div>
+  </section>,
+  <section
+    className="hero is-success is-large"
+  >
+    <div
+      className="hero-body"
+    >
+      <div
+        className="container"
+      >
+        <h1
+          className="title"
+        >
+          Success Title
+        </h1>
+        <h2
+          className="subtitle"
+        >
+          Success Subtitle
+        </h2>
+      </div>
+    </div>
+  </section>,
+]
+`;
+
+exports[`navigation bar 1`] = `
+Array [
+  <nav
+    className="navbar"
+  >
+    <div
+      className="navbar-brand"
+    >
+      <a
+        className="navbar-item"
+      >
+        <img />
+      </a>
+    </div>
+    <div
+      className="navbar-menu"
+    >
+      <div
+        className="navbar-start"
+      >
+        <a
+          className="navbar-item "
+        >
+          Home
+        </a>
+        <a
+          className="navbar-item "
+        >
+          Documentation
+        </a>
+      </div>
+      <div
+        className="navbar-end"
+      >
+        <a
+          className="navbar-item "
+        >
+          <button
+            className="button is-dark"
+            disabled={false}
+          />
+        </a>
+        <a
+          className="navbar-item "
+        >
+          <button
+            className="button is-link"
+            disabled={false}
+          />
+        </a>
+      </div>
+    </div>
+  </nav>,
+  <section
+    className="hero is-link is-fullheight-with-navbar"
+  >
+    <div
+      className="hero-body"
+    >
+      <div
+        className="container"
+      >
+        <h1
+          className="title"
+        >
+          With navbar
+        </h1>
+        <h2
+          className="subtitle"
+        />
+      </div>
+    </div>
+  </section>,
+]
+`;
+
+exports[`three parts 1`] = `
+<section
+  className="hero is-fullheight"
+>
+  <div
+    class="hero-head"
+  >
+    <nav
+      className="navbar"
+    >
+      <div
+        className="navbar-brand"
+      >
+        <a
+          className="navbar-item"
+        >
+          <img />
+        </a>
+      </div>
+      <div
+        className="navbar-menu"
+      >
+        <div
+          className="navbar-start"
+        >
+          <a
+            className="navbar-item "
+          >
+            Home
+          </a>
+          <a
+            className="navbar-item "
+          >
+            Documentation
+          </a>
+        </div>
+        <div
+          className="navbar-end"
+        >
+          <a
+            className="navbar-item "
+          >
+            <button
+              className="button is-dark"
+              disabled={false}
+            />
+          </a>
+          <a
+            className="navbar-item "
+          >
+            <button
+              className="button is-link"
+              disabled={false}
+            />
+          </a>
+        </div>
+      </div>
+    </nav>
+  </div>
+  <div
+    className="hero-body"
+  >
+    <div
+      className="container has-text-centered"
+    >
+      <h1
+        className="title is-1"
+      >
+        Title
+      </h1>
+      <h2
+        className="subtitle is-2"
+      >
+        Subtitle
+      </h2>
+    </div>
+  </div>
+  <div
+    class="hero-foot"
+  >
+    <div
+      className="tabs"
+    >
+      <ul>
+        <li>
+          <a>
+            Modifiers
+          </a>
+        </li>
+        <li>
+          <a>
+            Grid
+          </a>
+        </li>
+        <li>
+          <a>
+            Elements
+          </a>
+        </li>
+        <li>
+          <a>
+            Components
+          </a>
+        </li>
+        <li>
+          <a>
+            Layout
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+`;

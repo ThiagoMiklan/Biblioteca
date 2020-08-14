@@ -5,8 +5,6 @@ import Control from './Control';
 import Input from './Input';
 import { validate } from '../tools/type_validations.js';
 
-// Custom
-
 type Props = {
     label?: string,
     control_definition?: string,

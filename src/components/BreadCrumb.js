@@ -3,11 +3,6 @@ import React from 'react';
 import {validate} from '../tools/type_validations';
 import type {BreadCrumbItem} from '../tools/types';
 
-
-// validate
-// props
-
-
 type Props = {
   definition?: string,
   itens?: Array<BreadCrumbItem>,

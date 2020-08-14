@@ -22,10 +22,9 @@ const TableQuery = (props:Props)=>{
 }
 
 function assembleTable(props){
-   // validate(props,props_obj);
     var definition = (props.definition ==  undefined)? "table": "table " + props.definition;
     var code = <></>;
-    // elimina vazio e não array
+   
     if(props.itens !=undefined && Array.isArray(props.itens)){
         if(props.itens.length > 0 ){
             code = <table className={definition}>

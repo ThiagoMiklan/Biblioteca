@@ -1,0 +1,870 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`value correctly 1`] = `
+<div
+  className="columns"
+>
+  <div
+    className="column is-two-fifths"
+  >
+    <div
+      className="container is-fluid"
+    >
+      <nav
+        class="panel"
+      >
+        <p
+          class="panel-heading"
+        >
+          Repositories
+        </p>
+        <div
+          className="field"
+        >
+          <label
+            className="label"
+          />
+          <div
+            className="control has-icons-left"
+          >
+            <div
+              className="control"
+            >
+              <input
+                className="input "
+                placeholder="Search"
+                type="text"
+              />
+            </div>
+            <span
+              className="icon info"
+            >
+              <i
+                className="fas fa-search"
+              />
+            </span>
+            <span />
+          </div>
+        </div>
+        <p
+          className="panel-tabs"
+        >
+          <a
+            onClick={[Function]}
+          >
+            All
+          </a>
+          <a
+            onClick={[Function]}
+          >
+            Public
+          </a>
+          <a
+            onClick={[Function]}
+          >
+            Private
+          </a>
+          <a
+            onClick={[Function]}
+          >
+            Sources
+          </a>
+          <a
+            onClick={[Function]}
+          >
+            Forks
+          </a>
+        </p>
+        <div
+          className="panel-block"
+          onClick={[Function]}
+        >
+          <span
+            className="icon has-text-warning"
+          >
+            <i
+              className="fab fa-css3-alt"
+            />
+          </span>
+          <span />
+          Bulma
+        </div>
+        <div
+          className="panel-block"
+          onClick={[Function]}
+        >
+          <span
+            className="icon"
+          >
+            <i
+              className="fab fa-github"
+            />
+          </span>
+          <span />
+          Github
+        </div>
+        <div
+          className="panel-block"
+          onClick={[Function]}
+        >
+          <span
+            className="icon has-text-info"
+          >
+            <i
+              className="fab fa-twitter"
+            />
+          </span>
+          <span />
+          Twitter
+        </div>
+        <div
+          className="panel-block"
+          onClick={[Function]}
+        >
+          <span
+            className="icon has-text-info"
+          >
+            <i
+              className="fab fa-facebook"
+            />
+          </span>
+          <span />
+          Facebook
+        </div>
+        <div
+          className="panel-block"
+        >
+          <label
+            className="checkbox"
+          >
+            <input
+              onClick={[Function]}
+              type="checkbox"
+            />
+            remember me
+          </label>
+        </div>
+        <div
+          className="panel-block"
+        >
+          <button
+            className="button is-primary light fullwidth"
+            disabled={false}
+            onClick={[Function]}
+          >
+            Reset All
+          </button>
+        </div>
+      </nav>
+      <nav
+        class="panel is-primary"
+      >
+        <p
+          class="panel-heading"
+        >
+          Primary
+        </p>
+        <p
+          className="panel-tabs"
+        >
+          <a
+            onClick={[Function]}
+          >
+            All
+          </a>
+          <a
+            onClick={[Function]}
+          >
+            Public
+          </a>
+          <a
+            onClick={[Function]}
+          >
+            Private
+          </a>
+          <a
+            onClick={[Function]}
+          >
+            Sources
+          </a>
+          <a
+            onClick={[Function]}
+          >
+            Forks
+          </a>
+        </p>
+        <div
+          className="panel-block"
+          onClick={[Function]}
+        >
+          <span
+            className="icon has-text-warning"
+          >
+            <i
+              className="fab fa-css3-alt"
+            />
+          </span>
+          <span />
+          Bulma
+        </div>
+        <div
+          className="panel-block"
+          onClick={[Function]}
+        >
+          <span
+            className="icon"
+          >
+            <i
+              className="fab fa-github"
+            />
+          </span>
+          <span />
+          Github
+        </div>
+        <div
+          className="panel-block"
+          onClick={[Function]}
+        >
+          <span
+            className="icon has-text-info"
+          >
+            <i
+              className="fab fa-twitter"
+            />
+          </span>
+          <span />
+          Twitter
+        </div>
+        <div
+          className="panel-block"
+          onClick={[Function]}
+        >
+          <span
+            className="icon has-text-info"
+          >
+            <i
+              className="fab fa-facebook"
+            />
+          </span>
+          <span />
+          Facebook
+        </div>
+        <div
+          className="panel-block"
+        >
+          <label
+            className="checkbox"
+          >
+            <input
+              onClick={[Function]}
+              type="checkbox"
+            />
+            remember me
+          </label>
+        </div>
+        <div
+          className="panel-block"
+        >
+          <button
+            className="button is-primary light fullwidth"
+            disabled={false}
+            onClick={[Function]}
+          >
+            Reset All
+          </button>
+        </div>
+      </nav>
+      <nav
+        class="panel is-link"
+      >
+        <p
+          class="panel-heading"
+        >
+          Link
+        </p>
+        <p
+          className="panel-tabs"
+        >
+          <a
+            onClick={[Function]}
+          >
+            All
+          </a>
+          <a
+            onClick={[Function]}
+          >
+            Public
+          </a>
+          <a
+            onClick={[Function]}
+          >
+            Private
+          </a>
+          <a
+            onClick={[Function]}
+          >
+            Sources
+          </a>
+          <a
+            onClick={[Function]}
+          >
+            Forks
+          </a>
+        </p>
+        <div
+          className="panel-block"
+          onClick={[Function]}
+        >
+          <span
+            className="icon has-text-warning"
+          >
+            <i
+              className="fab fa-css3-alt"
+            />
+          </span>
+          <span />
+          Bulma
+        </div>
+        <div
+          className="panel-block"
+          onClick={[Function]}
+        >
+          <span
+            className="icon"
+          >
+            <i
+              className="fab fa-github"
+            />
+          </span>
+          <span />
+          Github
+        </div>
+        <div
+          className="panel-block"
+          onClick={[Function]}
+        >
+          <span
+            className="icon has-text-info"
+          >
+            <i
+              className="fab fa-twitter"
+            />
+          </span>
+          <span />
+          Twitter
+        </div>
+        <div
+          className="panel-block"
+          onClick={[Function]}
+        >
+          <span
+            className="icon has-text-info"
+          >
+            <i
+              className="fab fa-facebook"
+            />
+          </span>
+          <span />
+          Facebook
+        </div>
+        <div
+          className="panel-block"
+        >
+          <label
+            className="checkbox"
+          >
+            <input
+              onClick={[Function]}
+              type="checkbox"
+            />
+            remember me
+          </label>
+        </div>
+        <div
+          className="panel-block"
+        >
+          <button
+            className="button is-primary light fullwidth"
+            disabled={false}
+            onClick={[Function]}
+          >
+            Reset All
+          </button>
+        </div>
+      </nav>
+      <nav
+        class="panel is-info"
+      >
+        <p
+          class="panel-heading"
+        >
+          Info
+        </p>
+        <p
+          className="panel-tabs"
+        >
+          <a
+            onClick={[Function]}
+          >
+            All
+          </a>
+          <a
+            onClick={[Function]}
+          >
+            Public
+          </a>
+          <a
+            onClick={[Function]}
+          >
+            Private
+          </a>
+          <a
+            onClick={[Function]}
+          >
+            Sources
+          </a>
+          <a
+            onClick={[Function]}
+          >
+            Forks
+          </a>
+        </p>
+        <div
+          className="panel-block"
+          onClick={[Function]}
+        >
+          <span
+            className="icon has-text-warning"
+          >
+            <i
+              className="fab fa-css3-alt"
+            />
+          </span>
+          <span />
+          Bulma
+        </div>
+        <div
+          className="panel-block"
+          onClick={[Function]}
+        >
+          <span
+            className="icon"
+          >
+            <i
+              className="fab fa-github"
+            />
+          </span>
+          <span />
+          Github
+        </div>
+        <div
+          className="panel-block"
+          onClick={[Function]}
+        >
+          <span
+            className="icon has-text-info"
+          >
+            <i
+              className="fab fa-twitter"
+            />
+          </span>
+          <span />
+          Twitter
+        </div>
+        <div
+          className="panel-block"
+          onClick={[Function]}
+        >
+          <span
+            className="icon has-text-info"
+          >
+            <i
+              className="fab fa-facebook"
+            />
+          </span>
+          <span />
+          Facebook
+        </div>
+        <div
+          className="panel-block"
+        >
+          <label
+            className="checkbox"
+          >
+            <input
+              onClick={[Function]}
+              type="checkbox"
+            />
+            remember me
+          </label>
+        </div>
+        <div
+          className="panel-block"
+        >
+          <button
+            className="button is-primary light fullwidth"
+            disabled={false}
+            onClick={[Function]}
+          >
+            Reset All
+          </button>
+        </div>
+      </nav>
+      <nav
+        class="panel is-success"
+      >
+        <p
+          class="panel-heading"
+        >
+          Success
+        </p>
+        <p
+          className="panel-tabs"
+        >
+          <a
+            onClick={[Function]}
+          >
+            All
+          </a>
+          <a
+            onClick={[Function]}
+          >
+            Public
+          </a>
+          <a
+            onClick={[Function]}
+          >
+            Private
+          </a>
+          <a
+            onClick={[Function]}
+          >
+            Sources
+          </a>
+          <a
+            onClick={[Function]}
+          >
+            Forks
+          </a>
+        </p>
+        <div
+          className="panel-block"
+          onClick={[Function]}
+        >
+          <span
+            className="icon has-text-warning"
+          >
+            <i
+              className="fab fa-css3-alt"
+            />
+          </span>
+          <span />
+          Bulma
+        </div>
+        <div
+          className="panel-block"
+          onClick={[Function]}
+        >
+          <span
+            className="icon"
+          >
+            <i
+              className="fab fa-github"
+            />
+          </span>
+          <span />
+          Github
+        </div>
+        <div
+          className="panel-block"
+          onClick={[Function]}
+        >
+          <span
+            className="icon has-text-info"
+          >
+            <i
+              className="fab fa-twitter"
+            />
+          </span>
+          <span />
+          Twitter
+        </div>
+        <div
+          className="panel-block"
+          onClick={[Function]}
+        >
+          <span
+            className="icon has-text-info"
+          >
+            <i
+              className="fab fa-facebook"
+            />
+          </span>
+          <span />
+          Facebook
+        </div>
+        <div
+          className="panel-block"
+        >
+          <label
+            className="checkbox"
+          >
+            <input
+              onClick={[Function]}
+              type="checkbox"
+            />
+            remember me
+          </label>
+        </div>
+        <div
+          className="panel-block"
+        >
+          <button
+            className="button is-primary light fullwidth"
+            disabled={false}
+            onClick={[Function]}
+          >
+            Reset All
+          </button>
+        </div>
+      </nav>
+      <nav
+        class="panel is-warning"
+      >
+        <p
+          class="panel-heading"
+        >
+          Warning
+        </p>
+        <p
+          className="panel-tabs"
+        >
+          <a
+            onClick={[Function]}
+          >
+            All
+          </a>
+          <a
+            onClick={[Function]}
+          >
+            Public
+          </a>
+          <a
+            onClick={[Function]}
+          >
+            Private
+          </a>
+          <a
+            onClick={[Function]}
+          >
+            Sources
+          </a>
+          <a
+            onClick={[Function]}
+          >
+            Forks
+          </a>
+        </p>
+        <div
+          className="panel-block"
+          onClick={[Function]}
+        >
+          <span
+            className="icon has-text-warning"
+          >
+            <i
+              className="fab fa-css3-alt"
+            />
+          </span>
+          <span />
+          Bulma
+        </div>
+        <div
+          className="panel-block"
+          onClick={[Function]}
+        >
+          <span
+            className="icon"
+          >
+            <i
+              className="fab fa-github"
+            />
+          </span>
+          <span />
+          Github
+        </div>
+        <div
+          className="panel-block"
+          onClick={[Function]}
+        >
+          <span
+            className="icon has-text-info"
+          >
+            <i
+              className="fab fa-twitter"
+            />
+          </span>
+          <span />
+          Twitter
+        </div>
+        <div
+          className="panel-block"
+          onClick={[Function]}
+        >
+          <span
+            className="icon has-text-info"
+          >
+            <i
+              className="fab fa-facebook"
+            />
+          </span>
+          <span />
+          Facebook
+        </div>
+        <div
+          className="panel-block"
+        >
+          <label
+            className="checkbox"
+          >
+            <input
+              onClick={[Function]}
+              type="checkbox"
+            />
+            remember me
+          </label>
+        </div>
+        <div
+          className="panel-block"
+        >
+          <button
+            className="button is-primary light fullwidth"
+            disabled={false}
+            onClick={[Function]}
+          >
+            Reset All
+          </button>
+        </div>
+      </nav>
+      <nav
+        class="panel is-danger"
+      >
+        <p
+          class="panel-heading"
+        >
+          Danger
+        </p>
+        <p
+          className="panel-tabs"
+        >
+          <a
+            onClick={[Function]}
+          >
+            All
+          </a>
+          <a
+            onClick={[Function]}
+          >
+            Public
+          </a>
+          <a
+            onClick={[Function]}
+          >
+            Private
+          </a>
+          <a
+            onClick={[Function]}
+          >
+            Sources
+          </a>
+          <a
+            onClick={[Function]}
+          >
+            Forks
+          </a>
+        </p>
+        <div
+          className="panel-block"
+          onClick={[Function]}
+        >
+          <span
+            className="icon has-text-warning"
+          >
+            <i
+              className="fab fa-css3-alt"
+            />
+          </span>
+          <span />
+          Bulma
+        </div>
+        <div
+          className="panel-block"
+          onClick={[Function]}
+        >
+          <span
+            className="icon"
+          >
+            <i
+              className="fab fa-github"
+            />
+          </span>
+          <span />
+          Github
+        </div>
+        <div
+          className="panel-block"
+          onClick={[Function]}
+        >
+          <span
+            className="icon has-text-info"
+          >
+            <i
+              className="fab fa-twitter"
+            />
+          </span>
+          <span />
+          Twitter
+        </div>
+        <div
+          className="panel-block"
+          onClick={[Function]}
+        >
+          <span
+            className="icon has-text-info"
+          >
+            <i
+              className="fab fa-facebook"
+            />
+          </span>
+          <span />
+          Facebook
+        </div>
+        <div
+          className="panel-block"
+        >
+          <label
+            className="checkbox"
+          >
+            <input
+              onClick={[Function]}
+              type="checkbox"
+            />
+            remember me
+          </label>
+        </div>
+        <div
+          className="panel-block"
+        >
+          <button
+            className="button is-primary light fullwidth"
+            disabled={false}
+            onClick={[Function]}
+          >
+            Reset All
+          </button>
+        </div>
+      </nav>
+    </div>
+  </div>
+</div>
+`;

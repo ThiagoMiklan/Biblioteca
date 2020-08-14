@@ -7,3 +7,4 @@
 /.flowconfig
 /rollup.config.js
 /src
+/tests

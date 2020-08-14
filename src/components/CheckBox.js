@@ -2,8 +2,6 @@
 import * as React from 'react'
 import {validate} from '../tools/type_validations.js';
 
-// custom
-
 type Props = {
     definition?: string,
     disabled?: string,

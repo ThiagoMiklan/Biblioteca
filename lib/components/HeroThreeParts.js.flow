@@ -2,14 +2,7 @@
 import * as React from 'react';
 import { InvalidNumberChilds, assembleDefaultMessage } from '../exception/InvalidNumberChilds';
 import { validate } from '../tools/type_validations.js';
-// Com filhos
-// Sem eventos
-// Especialização do componente Hero
-// Suporte a header,body and footer
-// Deve ser informar como filhos em sequência header,body e footer
-// Caso seja informado 1 filho : Será montado apenas o header
-// Caso sejam informados 2 filhos : Será montado header e body
-// Caso sejam informados 3 filhos: Será montado header,body e footer
+
 
 type Props = {
   definition?: string,

@@ -1,0 +1,198 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`value correctly 1`] = `
+<div
+  className="container is-fluid"
+>
+  <div
+    className="columns"
+  >
+    <div
+      className="column is-half"
+    >
+      <div
+        className="control"
+      >
+        <label
+          className="label"
+        >
+           
+        </label>
+        <textarea
+          className="textarea"
+          placeholder="e.g. Hello world"
+        />
+      </div>
+      <div
+        className="control"
+      >
+        <label
+          className="label"
+        >
+           
+        </label>
+        <textarea
+          className="textarea"
+          placeholder="10 lines of text"
+          rows="10"
+        />
+      </div>
+      <div
+        className="control"
+      >
+        <div
+          className="control"
+        >
+          <label
+            className="label"
+          >
+             
+          </label>
+          <textarea
+            className="textarea is-primary"
+            placeholder="e.g. Hello world"
+          />
+        </div>
+        <br />
+        <div
+          className="control"
+        >
+          <label
+            className="label"
+          >
+             
+          </label>
+          <textarea
+            className="textarea is-info"
+            placeholder="e.g. Hello world"
+          />
+        </div>
+        <br />
+        <div
+          className="control"
+        >
+          <label
+            className="label"
+          >
+             
+          </label>
+          <textarea
+            className="textarea is-success"
+            placeholder="e.g. Hello world"
+          />
+        </div>
+        <br />
+        <div
+          className="control"
+        >
+          <label
+            className="label"
+          >
+             
+          </label>
+          <textarea
+            className="textarea is-warning"
+            placeholder="e.g. Hello world"
+          />
+        </div>
+        <br />
+        <div
+          className="control"
+        >
+          <label
+            className="label"
+          >
+             
+          </label>
+          <textarea
+            className="textarea is-danger"
+            placeholder="e.g. Hello world"
+          />
+        </div>
+        <br />
+      </div>
+      <div
+        className="control"
+      >
+        <label
+          className="label"
+        >
+           
+        </label>
+        <textarea
+          className="textarea is-small"
+          placeholder="e.g. Hello world"
+        />
+      </div>
+      <div
+        className="control"
+      >
+        <label
+          className="label"
+        >
+           
+        </label>
+        <textarea
+          className="textarea"
+          placeholder="e.g. Hello world"
+        />
+      </div>
+      <div
+        className="control"
+      >
+        <label
+          className="label"
+        >
+           
+        </label>
+        <textarea
+          className="textarea is-medium"
+          placeholder="e.g. Hello world"
+        />
+      </div>
+      <div
+        className="control"
+      >
+        <label
+          className="label"
+        >
+           
+        </label>
+        <textarea
+          className="textarea is-large"
+          placeholder="e.g. Hello world"
+        />
+      </div>
+      <br />
+      <div
+        className="control"
+      >
+        <label
+          className="label"
+        >
+           
+        </label>
+        <textarea
+          className="textarea"
+          placeholder="e.g. Hello world"
+          readOnly={true}
+        />
+      </div>
+      <div
+        className="control"
+      >
+        <label
+          className="label"
+        >
+           
+        </label>
+        <textarea
+          className="textarea"
+          disabled={true}
+          placeholder="e.g. Hello world"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+`;

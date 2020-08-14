@@ -47,7 +47,6 @@ function getTitle(props){
 }
 
 
-// p ==  paragráfo, se a tag a ser utilizada é parágrafo ou tag de título
 var assemble1 = (props) =>{
     var code = "";
     var definition = getDefinition(props);

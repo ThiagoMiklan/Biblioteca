@@ -53,15 +53,12 @@ const NavigationBar = (props: Props) => {
 
 function assemble(itens) {
     var itens_code = "";
-    // verifica se array
+    
     if (Array.isArray(itens)) {
-        // elimina vazio
         if (itens.length > 0) {
-            // se não estiver vazio monta uma lista de itens
             itens_code = assembleItens(itens);
         }
     } else if (typeof itens == 'object' && itens != undefined) {
-        //se não for array, não for undefined e for objeto realiza operação
         itens_code = assembleItem(itens);
     }
     return itens_code;
@@ -76,17 +73,14 @@ function assembleItens(itens) {
 
 function decideTypeOfItem(item) {
     var itens_code = "";
-    // se um item for um array (array dentro do array), então ele é um dropdown
     if (Array.isArray(item)) {
         itens_code = assembleItensDropDown(item);
     } else {
-        // se não ele conjunto de itens encadeados
         itens_code = assembleItem(item);
     }
     return itens_code;
 }
 
-// default : hoverable
 function assembleItensDropDown(itens) {
     var firstitemDropDown = assembleFirstItemDropDown(itens[0]);
 

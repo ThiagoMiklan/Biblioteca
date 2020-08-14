@@ -17,29 +17,12 @@
     "react": "^16.13.1"
   },
   "scripts": {
-    "start": "webpack --watch",
-    "start:dev": "webpack-dev-server --open",
+    "start": "webpack-dev-server --open",
     "cmd": "babel",
-    "test": "jest",
-    "eject": "react-scripts eject",
+    "test": "jest ",
     "build": "npm run build_babel && npm run build_flow",
     "build_babel": "babel ./src -d ./lib",
     "build_flow": "flow-copy-source ./src ./lib"
-  },
-  "eslintConfig": {
-    "extends": "react-app"
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
   },
   "devDependencies": {
     "@babel/cli": "^7.10.5",
@@ -57,6 +40,7 @@
     "html-webpack-plugin": "^4.3.0",
     "jest": "^24.9.0",
     "react-dom": "^16.13.1",
+    "react-test-renderer": "^16.13.1",
     "style-loader": "^1.2.1",
     "webpack": "^4.44.1",
     "webpack-cli": "^3.3.12",

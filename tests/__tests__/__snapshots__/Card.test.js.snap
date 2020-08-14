@@ -1,0 +1,281 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`card 1 with media object 1`] = `
+<div
+  className="card has-background-light"
+>
+  <div
+    className="card-image"
+  >
+    <figure
+      className="image is-4by3"
+      onClick={[Function]}
+    >
+      <img
+        src="https://bulma.io/images/placeholders/1280x960.png"
+      />
+    </figure>
+  </div>
+  <div
+    className="card-content "
+  >
+    <div
+      class="media"
+    >
+      <div
+        class="media-left"
+      >
+        <figure
+          class="image is-48x48"
+        >
+          <img
+            alt="Placeholder image"
+            src="https://bulma.io/images/placeholders/96x96.png"
+          />
+        </figure>
+      </div>
+      <div
+        class="media-content"
+      >
+        <p
+          class="title is-4"
+        >
+          John Smith
+        </p>
+        <p
+          class="subtitle is-6"
+        >
+          @johnsmith
+        </p>
+      </div>
+    </div>
+    <div
+      class="content"
+    >
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec iaculis mauris. 
+      <a>
+        @bulmaio
+      </a>
+      .
+      <a
+        href="#"
+      >
+        #css
+      </a>
+       
+      <a
+        href="#"
+      >
+        #responsive
+      </a>
+      <br />
+      <time
+        datetime="2016-1-1"
+      >
+        11:09 PM - 1 Jan 2016
+      </time>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`card with content 1`] = `
+<div
+  className="card is-one-quarter"
+>
+  <div
+    className="card-content "
+  >
+    <div
+      className="card"
+    >
+      <header
+        className="card-header"
+      >
+        <div
+          className="card-header-title"
+        >
+          Component
+        </div>
+        <a
+          className="card-header-icon"
+          href="#"
+        >
+          <span
+            className="icon"
+          >
+            <i
+              className="fas fa-angle-down"
+            />
+          </span>
+          <span />
+        </a>
+      </header>
+      <div
+        className="card-content "
+      >
+        <div
+          className="content"
+        >
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec iaculis mauris.
+          <a
+            href="#"
+          >
+            @bulmaio
+          </a>
+          . 
+          <a
+            href="#"
+          >
+            #css
+          </a>
+           
+          <a
+            href="#"
+          >
+            #responsive
+          </a>
+          <br />
+          <time
+            datetime="2016-1-1"
+          >
+            11:09 PM - 1 Jan 2016
+          </time>
+        </div>
+      </div>
+      <footer
+        className="card-footer"
+      >
+        <p
+          className="card-footer-item"
+        >
+          <span
+            onClick={[Function]}
+            style={
+              Object {
+                "cursor": "pointer",
+              }
+            }
+          >
+            Save
+          </span>
+        </p>
+        <p
+          className="card-footer-item"
+        >
+          <span
+            style={
+              Object {
+                "cursor": "pointer",
+              }
+            }
+          >
+            Edit
+          </span>
+        </p>
+        <p
+          className="card-footer-item"
+        >
+          <span
+            style={
+              Object {
+                "cursor": "pointer",
+              }
+            }
+          >
+            Delete
+          </span>
+        </p>
+      </footer>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`card with title and subtitle 1`] = `
+<div
+  className="card"
+>
+  <header
+    className="card-header"
+  >
+    <div
+      className="card-header-title"
+    >
+      Component
+    </div>
+    <a
+      className="card-header-icon"
+      href="#"
+    >
+      <span
+        className="icon"
+        onClick={[Function]}
+      >
+        <i
+          className="fas fa-home"
+        />
+      </span>
+      <span />
+    </a>
+  </header>
+  <div
+    className="card-content "
+  >
+    <p
+      class="title"
+    >
+      “There are two hard things in computer science: cache invalidation, naming things, and off-by-one errors.”
+    </p>
+    <p
+      class="subtitle"
+    >
+      Jeff Atwood
+    </p>
+  </div>
+  <footer
+    className="card-footer"
+  >
+    <p
+      className="card-footer-item"
+    >
+      <span
+        style={
+          Object {
+            "cursor": "pointer",
+          }
+        }
+      >
+        <span>
+          View on 
+          <a
+            href="https://twitter.com/codinghorror/status/506010907021828096"
+          >
+            Twitter
+          </a>
+        </span>
+      </span>
+    </p>
+    <p
+      className="card-footer-item"
+    >
+      <span
+        style={
+          Object {
+            "cursor": "pointer",
+          }
+        }
+      >
+        <span>
+          Share on 
+          <a
+            href="#"
+          >
+            Facebook
+          </a>
+        </span>
+      </span>
+    </p>
+  </footer>
+</div>
+`;

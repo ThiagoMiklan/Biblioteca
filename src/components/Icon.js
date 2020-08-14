@@ -1,6 +1,5 @@
 // @flow
 import * as React from 'react'
-import '../css/all';
 import { validate } from '../tools/type_validations.js';
 
 type Props = {

@@ -1,0 +1,789 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`button list size correctly 1`] = `
+<div
+  className="buttons are-small"
+>
+  <button
+    className="button"
+    disabled={false}
+  >
+    Small
+  </button>
+  <button
+    className="button"
+    disabled={false}
+  >
+    Small
+  </button>
+  <button
+    className="button"
+    disabled={false}
+  >
+    Small
+  </button>
+</div>
+`;
+
+exports[`button list size correctly 2`] = `
+<div
+  className="buttons are-medium"
+>
+  <button
+    className="button"
+    disabled={false}
+  >
+    Medium
+  </button>
+  <button
+    className="button"
+    disabled={false}
+  >
+    Medium
+  </button>
+  <button
+    className="button"
+    disabled={false}
+  >
+    Medium
+  </button>
+</div>
+`;
+
+exports[`button list size correctly 3`] = `
+<div
+  className="buttons are-large"
+>
+  <button
+    className="button"
+    disabled={false}
+  >
+    Large
+  </button>
+  <button
+    className="button"
+    disabled={false}
+  >
+    Large
+  </button>
+  <button
+    className="button"
+    disabled={false}
+  >
+    Large
+  </button>
+</div>
+`;
+
+exports[`buttons size correctly 1`] = `
+<div
+  className="buttons"
+>
+  <button
+    className="button button is-small"
+    disabled={false}
+  >
+    Small
+  </button>
+  <button
+    className="button"
+    disabled={false}
+  >
+    Normal
+  </button>
+  <button
+    className="button button is-medium"
+    disabled={false}
+  >
+    Medium
+  </button>
+  <button
+    className="button button is-large"
+    disabled={false}
+  >
+    Large
+  </button>
+</div>
+`;
+
+exports[`buttons with icons 1`] = `
+<div
+  className="buttons"
+>
+  <button
+    className="button"
+    disabled={false}
+  >
+    <span
+      className="icon"
+    >
+      <i
+        className="fas fa-bold"
+      />
+    </span>
+    <span />
+  </button>
+  <button
+    className="button"
+    disabled={false}
+  >
+    <span
+      className="icon"
+    >
+      <i
+        className="fas fa-italic"
+      />
+    </span>
+    <span />
+  </button>
+  <button
+    className="button"
+    disabled={false}
+  >
+    <span
+      className="icon"
+    >
+      <i
+        className="fas fa-underline"
+      />
+    </span>
+    <span />
+  </button>
+  <button
+    className="button"
+    disabled={false}
+  >
+    <span
+      className="icon"
+    >
+      <i
+        className="fab fa-github"
+      />
+    </span>
+    <span>
+      Github
+    </span>
+  </button>
+  <button
+    className="button is-primary"
+    disabled={false}
+  >
+    <span
+      className="icon"
+    >
+      <i
+        className="fab fa-twitter"
+      />
+    </span>
+    <span>
+      Twitter
+    </span>
+  </button>
+  <button
+    className="button is-success"
+    disabled={false}
+  >
+    <span
+      className="icon"
+    >
+      <i
+        className="fas fa-check"
+      />
+    </span>
+    <span>
+      Save
+    </span>
+  </button>
+  <button
+    className="button is-danger is-outlined"
+    disabled={false}
+  >
+    <span
+      className="icon"
+    >
+      <i
+        className="fas fa-times"
+      />
+    </span>
+    <span>
+      Delete
+    </span>
+  </button>
+  <button
+    className="button is-small"
+    disabled={false}
+  >
+    <span
+      className="icon"
+    >
+      <i
+        className="fab fa-github"
+      />
+    </span>
+    <span>
+      Github
+    </span>
+  </button>
+  <button
+    className="button"
+    disabled={false}
+  >
+    <span
+      className="icon"
+    >
+      <i
+        className="fab fa-github"
+      />
+    </span>
+    <span>
+      Github
+    </span>
+  </button>
+  <button
+    className="button is-medium"
+    disabled={false}
+  >
+    <span
+      className="icon"
+    >
+      <i
+        className="fab fa-github"
+      />
+    </span>
+    <span>
+      Github
+    </span>
+  </button>
+  <button
+    className="button is-large"
+    disabled={false}
+  >
+    <span
+      className="icon"
+    >
+      <i
+        className="fab fa-github"
+      />
+    </span>
+    <span>
+       Github
+    </span>
+  </button>
+</div>
+`;
+
+exports[`color correctly 1`] = `
+<div
+  className="buttons"
+>
+  <button
+    className="button is-primary"
+    disabled={false}
+  >
+    Primary
+  </button>
+  <button
+    className="button is-link"
+    disabled={false}
+  >
+    Link
+  </button>
+  <button
+    className="button is-info"
+    disabled={false}
+  >
+    Info
+  </button>
+  <button
+    className="button is-success"
+    disabled={false}
+  >
+    Success
+  </button>
+  <button
+    className="button is-warning"
+    disabled={false}
+  >
+    Warning
+  </button>
+  <button
+    className="button is-danger"
+    disabled={false}
+  >
+    Danger
+  </button>
+</div>
+`;
+
+exports[`color secundary correctly 1`] = `
+<div
+  className="buttons"
+>
+  <button
+    className="button is-white"
+    disabled={false}
+  >
+    White
+  </button>
+  <button
+    className="button is-light"
+    disabled={false}
+  >
+    Light
+  </button>
+  <button
+    className="button is-dark"
+    disabled={false}
+  >
+    Dark
+  </button>
+  <button
+    className="button is-black"
+    disabled={false}
+  >
+    Black
+  </button>
+  <button
+    className="button is-text"
+    disabled={false}
+  >
+    Text
+  </button>
+</div>
+`;
+
+exports[`colors light correctly 1`] = `
+<div
+  className="buttons"
+>
+  <button
+    className="button is-primary is-light"
+    disabled={false}
+  >
+    primary light
+  </button>
+  <button
+    className="button is-link is-light"
+    disabled={false}
+  >
+    link light
+  </button>
+  <button
+    className="button is-info is-light"
+    disabled={false}
+  >
+    info light
+  </button>
+  <button
+    className="button is-success is-light"
+    disabled={false}
+  >
+    success light
+  </button>
+  <button
+    className="button is-warning is-light"
+    disabled={false}
+  >
+    warning light
+  </button>
+  <button
+    className="button is-danger is-light"
+    disabled={false}
+  >
+    danger light
+  </button>
+</div>
+`;
+
+exports[`disabled corretly 1`] = `
+<div
+  className="buttons"
+>
+  <button
+    className="button is-primary"
+    disabled={true}
+  >
+    primary disabled
+  </button>
+  <button
+    className="button is-link"
+    disabled={true}
+  >
+    link disabled
+  </button>
+  <button
+    className="button is-info"
+    disabled={true}
+  >
+    info disabled
+  </button>
+  <button
+    className="button is-uccess"
+    disabled={true}
+  >
+    success disabled
+  </button>
+  <button
+    className="button is-warning"
+    disabled={true}
+  >
+    warning disabled
+  </button>
+  <button
+    className="button is-danger"
+    disabled={true}
+  >
+    danger disabled
+  </button>
+</div>
+`;
+
+exports[`fullwidth  correctly 1`] = `
+Array [
+  <button
+    className="button is-small is-fullwidth"
+    disabled={false}
+  >
+    small fullwidt
+  </button>,
+  <button
+    className="button is-fullwidth"
+    disabled={false}
+  >
+    normal fullwidth
+  </button>,
+  <button
+    className="button is-medium is-fullwidth"
+    disabled={false}
+  >
+    medium fullwidth
+  </button>,
+  <button
+    className="button is-large is-fullwidth"
+    disabled={false}
+  >
+    large fullwidth
+  </button>,
+]
+`;
+
+exports[`inverted  correctly 1`] = `
+<div
+  className="buttons is-primary"
+>
+  <button
+    className="button is-primary is-inverted"
+    disabled={false}
+  >
+    primary inverted
+  </button>
+  <button
+    className="button is-link is-inverted"
+    disabled={false}
+  >
+    link inverted
+  </button>
+  <button
+    className="button is-info is-inverted"
+    disabled={false}
+  >
+    info inverted
+  </button>
+  <button
+    className="button is-success is-inverted"
+    disabled={false}
+  >
+    success inverted
+  </button>
+  <button
+    className="button is-danger is-inverted"
+    disabled={false}
+  >
+    danger inverted
+  </button>
+</div>
+`;
+
+exports[`loading corretly 1`] = `
+<div
+  className="buttons"
+>
+  <button
+    className="button is-loading"
+    disabled={false}
+  >
+    loading
+  </button>
+  <button
+    className="button is-primary is-loading"
+    disabled={false}
+  >
+    loading
+  </button>
+  <button
+    className="button is-link is-loading"
+    disabled={false}
+  >
+    loading
+  </button>
+  <button
+    className="button is-info is-loading"
+    disabled={false}
+  >
+    loading
+  </button>
+  <button
+    className="button is-success is-loading"
+    disabled={false}
+  >
+    loading
+  </button>
+  <button
+    className="button is-warning is-loading"
+    disabled={false}
+  >
+    loading
+  </button>
+  <button
+    className="button is-danger is-loading"
+    disabled={false}
+  >
+    loading
+  </button>
+</div>
+`;
+
+exports[`outlined  correctly 1`] = `
+<div
+  className="buttons"
+>
+  <button
+    className="button is-primary is-outlined"
+    disabled={false}
+  >
+    primary outlined
+  </button>
+  <button
+    className="button is-link is-outlined"
+    disabled={false}
+  >
+     link outlined
+  </button>
+  <button
+    className="button is-info is-outlined"
+    disabled={false}
+  >
+    info outlined
+  </button>
+  <button
+    className="button is-success is-outlined"
+    disabled={false}
+  >
+    success outlined
+  </button>
+  <button
+    className="button is-warning is-outlined"
+    disabled={false}
+  >
+    warning outlined
+  </button>
+  <button
+    className="button is-danger is-outlined"
+    disabled={false}
+  >
+    danger outlined
+  </button>
+</div>
+`;
+
+exports[`rounded  correctly 1`] = `
+<div
+  className="buttons"
+>
+  <button
+    className="button is-primary is-rounded"
+    disabled={false}
+  >
+    primary rounded
+  </button>
+  <button
+    className="button is-link is-rounded"
+    disabled={false}
+  >
+    link rounded
+  </button>
+  <button
+    className="button is-info is-rounded"
+    disabled={false}
+  >
+     info rounded
+  </button>
+  <button
+    className="button is-success is-rounded"
+    disabled={false}
+  >
+    success rounded
+  </button>
+  <button
+    className="button is-warning is-rounded"
+    disabled={false}
+  >
+    warning rounded
+  </button>
+  <button
+    className="button is-danger is-rounded"
+    disabled={false}
+  >
+    danger rounded
+  </button>
+</div>
+`;
+
+exports[`state  correctly 1`] = `
+<div
+  className="buttons"
+>
+  <button
+    className="button"
+    disabled={false}
+  />
+  <button
+    className="button is-primary is-hovered"
+    disabled={false}
+  >
+    Testando
+  </button>
+  <button
+    className="button is-link is-hovered"
+    disabled={false}
+  >
+    Testando
+  </button>
+  <button
+    className="button is-info is-hovered"
+    disabled={false}
+  >
+    Testando
+  </button>
+  <button
+    className="button is-success is-hovered"
+    disabled={false}
+  >
+    Testando
+  </button>
+  <button
+    className="button is-warning is-hovered"
+    disabled={false}
+  >
+    Testando
+  </button>
+  <button
+    className="button is-danger is-hovered"
+    disabled={false}
+  >
+    Testando
+  </button>
+</div>
+`;
+
+exports[`state  correctly 2`] = `
+<div
+  className="buttons"
+>
+  <button
+    className="button is-primary is-focused"
+    disabled={false}
+  >
+    primary focused
+  </button>
+  <button
+    className="button is-link is-focused"
+    disabled={false}
+  >
+    link focused
+  </button>
+  <button
+    className="button is-info is-focused"
+    disabled={false}
+  >
+    info focused
+  </button>
+  <button
+    className="button is-success is-focused"
+    disabled={false}
+  >
+    success focused
+  </button>
+  <button
+    className="button is-warning is-focused"
+    disabled={false}
+  >
+    warning focused
+  </button>
+  <button
+    className="button is-danger is-focused"
+    disabled={false}
+  >
+    danger focused
+  </button>
+</div>
+`;
+
+exports[`state  correctly 3`] = `
+<div
+  className="buttons"
+>
+  <button
+    className="button is-primary is-active"
+    disabled={false}
+  >
+    primary active
+  </button>
+  <button
+    className="button is-link is-active"
+    disabled={false}
+  >
+    link active
+  </button>
+  <button
+    className="button is-info is-active"
+    disabled={false}
+  >
+    info active
+  </button>
+  <button
+    className="button is-success is-active"
+    disabled={false}
+  >
+    success active
+  </button>
+  <button
+    className="button is-warning is-active"
+    disabled={false}
+  >
+    warning active
+  </button>
+  <button
+    className="button is-danger is-active"
+    disabled={false}
+  >
+    danger active
+  </button>
+</div>
+`;
+
+exports[`value correctly 1`] = `
+<button
+  className="button"
+  disabled={false}
+>
+  Value
+</button>
+`;
+
+exports[`value correctly 2`] = `
+<button
+  className="button"
+  disabled={false}
+/>
+`;

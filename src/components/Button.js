@@ -2,10 +2,7 @@
 import * as React from 'react';
 import { validate } from '../tools/type_validations.js';
 
-// custom
 
-// validate = OK
-// props= OK
 type Props = {
     disabled?: bool,
     delete?: bool,

@@ -1,5 +1,4 @@
 // @flow
-import 'bulma/css/bulma.css';
 import Box from '../components/Box';
 import BreadCrumb from '../components/BreadCrumb';
 import Button from '../components/Button';

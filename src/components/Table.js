@@ -42,7 +42,6 @@ function assembleTable(props) {
     return code;
 }
 
-// verifica se é viável utilizar o array
 function isArrayOk(array) {
     var output = false;
 

@@ -3,7 +3,6 @@ import React, { useState } from 'react'
 import { validate } from '../tools/type_validations.js';
 import Control from './Control';
 
-// Custom
 
 type Props = {
     definition?: string,

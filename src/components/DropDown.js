@@ -5,8 +5,6 @@ import Icon from './Icon';
 import { validate } from '../tools/type_validations.js';
 import type {DropDownItem} from '../tools/types';
 
-// custom (on itens)
-
 type Props = {
     definition?: string,
     itens?: Array<DropDownItem>,

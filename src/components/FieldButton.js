@@ -4,9 +4,6 @@ import FieldContent from './FieldContent';
 import Button from './Button';
 import {validate} from '../tools/type_validations';
 
-// Para ver a diferença entre FieldButton e Button, basta alocar dois buttons em sequencia
-// e um button e um fieldbutton, que será possível ver uma diferença de espaçamento
-
 type Props ={
     field_definition?: string,
     label?:string,
