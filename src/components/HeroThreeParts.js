@@ -1,8 +1,6 @@
 // @flow
 import * as React from 'react';
-import { InvalidNumberChilds, assembleDefaultMessage } from '../exception/InvalidNumberChilds';
 import { validate } from '../tools/type_validations.js';
-
 
 type Props = {
   definition?: string,
@@ -22,17 +20,11 @@ const HeroThreeParts = (props: Props) => {
   return assemble(childrens, props);
 }
 
-function assemble(childrens, props) {
-  var validChildrensNumber = (childrens.length <= 3) ? true : false;;
-  var code = <></>;
-  if (validChildrensNumber) {
-    code = assembleThreePartsHero(props, childrens);
-  } else {
-    throw new InvalidNumberChilds(assembleDefaultMessage(childrens.length));
-  }
-
+function assemble(childrens,props){
+  let code = assembleThreePartsHero(props, childrens);
   return code;
 }
+
 
 function assembleThreePartsHero(props, childrens) {
   var definition = (props.definition == undefined) ? "hero" : "hero " + props.definition;

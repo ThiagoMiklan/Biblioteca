@@ -1,3 +1,0 @@
-function InvalidArgument(message){
-    
-}

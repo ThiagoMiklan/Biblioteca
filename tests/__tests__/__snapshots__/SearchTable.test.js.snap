@@ -1,0 +1,213 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`searchtable normal 1`] = `
+<div
+  className="container"
+>
+  <div
+    className="field"
+  >
+    <label
+      className="label"
+    >
+      Find Team
+    </label>
+    <div
+      className="control has-icons-right"
+    >
+      <div
+        className="control"
+      >
+        <input
+          className="input is-warning"
+          onChange={[Function]}
+        />
+      </div>
+      <span
+        className="icon is-info is-right"
+      >
+        <i
+          className="fas fa-search"
+        />
+      </span>
+      <span />
+    </div>
+  </div>
+  <br />
+  <table
+    className="table has-background-grey-lighter is-fullwidth is-bordered is-hoverable"
+  >
+    <thead
+      className="has-background-grey-light"
+    >
+      <tr>
+        <th>
+          Pos
+        </th>
+        <th>
+          Team
+        </th>
+        <th>
+          Pld
+        </th>
+        <th>
+          W
+        </th>
+        <th>
+          D
+        </th>
+        <th>
+          L
+        </th>
+        <th>
+          GF
+        </th>
+        <th>
+          GA
+        </th>
+        <th>
+          GD
+        </th>
+        <th>
+          Pts
+        </th>
+        <th>
+          Qualification or relegation
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr
+        style={
+          Object {
+            "cursor": "pointer",
+          }
+        }
+      >
+        <td>
+          2
+        </td>
+        <td>
+          Flamengo
+        </td>
+        <td>
+          38
+        </td>
+        <td>
+          20
+        </td>
+        <td>
+          11
+        </td>
+        <td>
+          7
+        </td>
+        <td>
+          65
+        </td>
+        <td>
+          36
+        </td>
+        <td>
+          +29
+        </td>
+        <td>
+          71
+        </td>
+        <td>
+          Qualification for the Libertadores
+        </td>
+      </tr>
+      <tr
+        style={
+          Object {
+            "cursor": "pointer",
+          }
+        }
+      >
+        <td>
+          3
+        </td>
+        <td>
+          Palmeiras
+        </td>
+        <td>
+          23
+        </td>
+        <td>
+          20
+        </td>
+        <td>
+          11
+        </td>
+        <td>
+          7
+        </td>
+        <td>
+          65
+        </td>
+        <td>
+          36
+        </td>
+        <td>
+          +29
+        </td>
+        <td>
+          65
+        </td>
+        <td>
+          Qualification for the Libertadores
+        </td>
+      </tr>
+    </tbody>
+    <tfoot>
+      <tr>
+        <th>
+          Pos
+        </th>
+        <th>
+          Team
+        </th>
+        <th>
+          Pld
+        </th>
+        <th>
+          W
+        </th>
+        <th>
+          D
+        </th>
+        <th>
+          L
+        </th>
+        <th>
+          GF
+        </th>
+        <th>
+          GA
+        </th>
+        <th>
+          GD
+        </th>
+        <th>
+          Pts
+        </th>
+        <th>
+          Qualification or relegation
+        </th>
+      </tr>
+    </tfoot>
+  </table>
+  <div
+    className="buttons"
+  >
+    <button
+      className="button is-success"
+      disabled={false}
+      onClick={[Function]}
+    >
+      Back
+    </button>
+  </div>
+</div>
+`;

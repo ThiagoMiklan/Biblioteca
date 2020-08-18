@@ -1,0 +1,85 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`control normal 1`] = `
+<div
+  className="container is-fluid"
+>
+  <div
+    className="columns"
+  >
+    <div
+      className="column is-half is-centered"
+    >
+      <div
+        class="field"
+      >
+        <label
+          class="label"
+        >
+          Name
+        </label>
+        <div
+          className="control"
+        >
+          <input
+            class="input"
+            placeholder="Text input"
+            type="text"
+          />
+        </div>
+      </div>
+      <div
+        class="field"
+      >
+        <label
+          class="label"
+        >
+          Subject
+        </label>
+        <div
+          className="control"
+        >
+          <div
+            class="select"
+          >
+            <select>
+              <option>
+                Select dropdown
+              </option>
+              <option>
+                With options
+              </option>
+            </select>
+          </div>
+        </div>
+      </div>
+      <div
+        class="field"
+      >
+        <div
+          className="control"
+        >
+          <label
+            class="radio"
+          >
+            <input
+              name="question"
+              type="radio"
+            />
+            Yes
+          </label>
+          <label
+            class="radio"
+          >
+            <input
+              name="question"
+              type="radio"
+            />
+            No
+          </label>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

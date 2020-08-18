@@ -1,0 +1,78 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`image event 1`] = `
+<figure
+  className="image is-128x128"
+  onClick={[Function]}
+>
+  <img
+    className="is-rounded"
+    src="https://bulma.io/images/placeholders/128x128.png"
+  />
+</figure>
+`;
+
+exports[`image rounded 1`] = `
+<figure
+  className="image is-128x128"
+>
+  <img
+    className="is-rounded"
+    src="https://bulma.io/images/placeholders/128x128.png"
+  />
+</figure>
+`;
+
+exports[`images normal 1`] = `
+Array [
+  <figure
+    className="image is-16x16"
+  >
+    <img
+      src="https://bulma.io/images/placeholders/128x128.png"
+    />
+  </figure>,
+  <figure
+    className="image is-24x24"
+  >
+    <img
+      src="https://bulma.io/images/placeholders/128x128.png"
+    />
+  </figure>,
+  <figure
+    className="image is-32x32"
+  >
+    <img
+      src="https://bulma.io/images/placeholders/128x128.png"
+    />
+  </figure>,
+  <figure
+    className="image is-48x48"
+  >
+    <img
+      src="https://bulma.io/images/placeholders/128x128.png"
+    />
+  </figure>,
+  <figure
+    className="image is-64x64"
+  >
+    <img
+      src="https://bulma.io/images/placeholders/128x128.png"
+    />
+  </figure>,
+  <figure
+    className="image is-96x96"
+  >
+    <img
+      src="https://bulma.io/images/placeholders/128x128.png"
+    />
+  </figure>,
+  <figure
+    className="image is-128x128"
+  >
+    <img
+      src="https://bulma.io/images/placeholders/128x128.png"
+    />
+  </figure>,
+]
+`;

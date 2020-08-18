@@ -1,0 +1,298 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`columns narrow 1`] = `
+<div
+  className="columns"
+>
+  <div
+    className="column is-narrow"
+  >
+    <p
+      class="title is-5"
+    >
+      Narrow column
+    </p>
+    <p
+      class="subtitle"
+    >
+      This column is only 200px wide.
+    </p>
+  </div>
+</div>
+`;
+
+exports[`columns normal 1`] = `
+<div
+  className="columns"
+>
+  <div
+    className="column has-background-primary"
+  >
+    First column
+  </div>
+  <div
+    className="column has-background-primary"
+  >
+    Second column
+  </div>
+  <div
+    className="column has-background-primary"
+  >
+    Third column
+  </div>
+  <div
+    className="column has-background-primary"
+  >
+    Fourth column
+  </div>
+</div>
+`;
+
+exports[`columns offset 1`] = `
+Array [
+  <div
+    className="columns is-mobile"
+  >
+    <div
+      className="column is-half is-offset-one-quarter has-background-primary"
+    >
+      half offset-one-quarter
+    </div>
+  </div>,
+  <div
+    className="columns is-mobile"
+  >
+    <div
+      className="column is-three-fifths is-offset-one-fifth has-background-primary"
+    >
+      three-fifths offset-one-fifth
+    </div>
+  </div>,
+  <div
+    className="columns is-mobile"
+  >
+    <div
+      className="column is-4 is-offset-8 has-background-primary"
+    >
+      4 offset-8
+    </div>
+  </div>,
+  <div
+    className="columns is-mobile"
+  >
+    <div
+      className="column is-11 is-offset-1 has-background-primary"
+    >
+      11 offset-1
+    </div>
+  </div>,
+]
+`;
+
+exports[`columns with name 1`] = `
+Array [
+  <div
+    className="columns"
+  >
+    <div
+      className="column is-full has-background-primary"
+    >
+      full
+    </div>
+  </div>,
+  <div
+    className="columns"
+  >
+    <div
+      className="column is-four-fifths has-background-primary"
+    >
+      four-fifths
+    </div>
+  </div>,
+  <div
+    className="columns"
+  >
+    <div
+      className="column is-three-quarters has-background-primary"
+    >
+      three-quarters
+    </div>
+  </div>,
+  <div
+    className="columns"
+  >
+    <div
+      className="column is-two-thirds has-background-primary"
+    >
+      two-thirds
+    </div>
+  </div>,
+  <div
+    className="columns"
+  >
+    <div
+      className="column is-three-fifths has-background-primary"
+    >
+      three-fifths
+    </div>
+  </div>,
+  <div
+    className="columns"
+  >
+    <div
+      className="column is-half has-background-primary"
+    >
+      half
+    </div>
+  </div>,
+  <div
+    className="columns"
+  >
+    <div
+      className="column is-two-fifths has-background-primary"
+    >
+      two-fifths
+    </div>
+  </div>,
+  <div
+    className="columns"
+  >
+    <div
+      className="column is-one-third has-background-primary"
+    >
+      one-third
+    </div>
+  </div>,
+  <div
+    className="columns"
+  >
+    <div
+      className="column is-one-quarter has-background-primary"
+    >
+      one-quarter
+    </div>
+  </div>,
+  <div
+    className="columns"
+  >
+    <div
+      className="column is-one-fifth has-background-primary"
+    >
+      one-fifth
+    </div>
+  </div>,
+]
+`;
+
+exports[`columns with numbers 1`] = `
+Array [
+  <div
+    className="columns"
+  >
+    <div
+      className="column is-1 has-background-primary"
+    >
+      1
+    </div>
+  </div>,
+  <div
+    className="columns"
+  >
+    <div
+      className="column is-2 has-background-primary"
+    >
+      2
+    </div>
+  </div>,
+  <div
+    className="columns"
+  >
+    <div
+      className="column is-3 has-background-primary"
+    >
+      3
+    </div>
+  </div>,
+  <div
+    className="columns"
+  >
+    <div
+      className="column is-4  has-background-primary"
+    >
+      4
+    </div>
+  </div>,
+  <div
+    className="columns"
+  >
+    <div
+      className="column is-5  has-background-primary"
+    >
+      5
+    </div>
+  </div>,
+  <div
+    className="columns"
+  >
+    <div
+      className="column is-6  has-background-primary"
+    >
+      6
+    </div>
+  </div>,
+  <div
+    className="columns"
+  >
+    <div
+      className="column is-7 has-background-primary"
+    >
+      7
+    </div>
+  </div>,
+  <div
+    className="columns"
+  >
+    <div
+      className="column is-8 has-background-primary"
+    >
+      8
+    </div>
+  </div>,
+  <div
+    className="columns"
+  >
+    <div
+      className="column is-9 has-background-primary"
+    >
+      9
+    </div>
+  </div>,
+  <div
+    className="columns"
+  >
+    <div
+      className="column is-10 has-background-primary"
+    >
+      10
+    </div>
+  </div>,
+  <div
+    className="columns"
+  >
+    <div
+      className="column is-11 has-background-primary"
+    >
+      11
+    </div>
+  </div>,
+  <div
+    className="columns"
+  >
+    <div
+      className="column is-12  has-background-primary"
+    >
+      12
+    </div>
+  </div>,
+]
+`;

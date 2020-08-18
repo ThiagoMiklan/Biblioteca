@@ -1,0 +1,114 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`images normal 1`] = `
+<article
+  className="media"
+>
+  <figure
+    className="media-left"
+  >
+    <figure
+      className="image"
+    >
+      <img
+        className="is-64x64"
+        src="https://bulma.io/images/placeholders/128x128.png"
+      />
+    </figure>
+  </figure>
+  <div
+    className="media-content"
+  >
+    <div
+      className="content media-content"
+    >
+      <p>
+        <strong>
+          John Smith
+        </strong>
+         
+        <small>
+          @johnsmith
+        </small>
+         
+        <small>
+          31m
+        </small>
+        <br />
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare magna eros, eu pellentesque tortor vestibulum ut. Maecenas non massa sem. Etiam finibus odio quis feugiat facilisis.
+      </p>
+    </div>
+    <nav
+      className="level is-mobile"
+    >
+      <div
+        className="level-left"
+      >
+        <p
+          className="level-item"
+          onClick={[Function]}
+          style={
+            Object {
+              "cursor": "pointer",
+            }
+          }
+        >
+          <span
+            className="icon is-small has-text-info"
+          >
+            <i
+              className="fas fa-reply"
+            />
+          </span>
+          <span />
+        </p>
+        <p
+          className="level-item"
+          style={
+            Object {
+              "cursor": "pointer",
+            }
+          }
+        >
+          <span
+            className="icon is-small has-text-info"
+          >
+            <i
+              className="fas fa-retweet"
+            />
+          </span>
+          <span />
+        </p>
+        <p
+          className="level-item"
+          style={
+            Object {
+              "cursor": "pointer",
+            }
+          }
+        >
+          <span
+            className="icon is-small has-text-info"
+          >
+            <i
+              className="fas fa-heart"
+            />
+          </span>
+          <span />
+        </p>
+      </div>
+      <div
+        className="level-right"
+      />
+    </nav>
+  </div>
+  <div
+    className="media-right"
+  >
+    <button
+      className="delete"
+      disabled={false}
+    />
+  </div>
+</article>
+`;
