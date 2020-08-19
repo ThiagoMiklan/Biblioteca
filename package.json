@@ -17,6 +17,7 @@
   },
   "scripts": {
     "start": "webpack-dev-server --open",
+    "postinstall": "node ./scripts/postInstall.js",
     "cmd": "babel",
     "test": "jest ",
     "build": "npm run build_babel && npm run build_flow",
@@ -33,6 +34,7 @@
     "@babel/preset-react": "^7.9.4",
     "babel-loader": "^8.1.0",
     "clean-webpack-plugin": "^3.0.0",
+    "colors": "^1.4.0",
     "css-loader": "^4.2.1",
     "flow-bin": "^0.122.0",
     "flow-copy-source": "^2.0.9",
