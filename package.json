@@ -12,6 +12,7 @@
     "name": "Thiago Miklan Moreira"
   },
   "homepage": "https://github.com/ThiagoMiklan/ARB_DOC/wiki",
+  "repository": "https://github.com/ThiagoMiklan/Biblioteca",
   "dependencies": {
     "colors": "^1.4.0",
     "react": "^16.13.1"

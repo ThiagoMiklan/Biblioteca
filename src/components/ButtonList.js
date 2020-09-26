@@ -18,7 +18,6 @@ const ButtonList = (props:Props) => {
 return assembleButtonList(props);
 }
 
-
 function assembleButtonList(props) {
     validate(props,props_obj,"ButtonList");
     var code_icon = "";
@@ -44,11 +43,8 @@ function assembleButtonList(props) {
                 {props.children}
             </div>;
     }
-
-    
-    
+  
     return code_icon;
 }
-
 
 export default ButtonList;

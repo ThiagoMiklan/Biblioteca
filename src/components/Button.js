@@ -43,6 +43,4 @@ function getDefinition(props) {
     return definition;
 }
 
-
-
 export default Button;
