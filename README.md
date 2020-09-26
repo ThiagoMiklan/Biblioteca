@@ -1,4 +1,4 @@
-# Assemble React Bulma (1.0.1)
+# Assemble React Bulma (1.0.3)
 
  - Set of React components created to assist in development using the Bulma framework
  - Final work to complete the Information System course at the Federal University of Santa Catarina (Brazil)
